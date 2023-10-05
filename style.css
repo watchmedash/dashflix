@@ -171,6 +171,32 @@ li[data-tooltip]:hover::after {
   transform: scale(1.05);
 }
 
+
+#cookieConsentBanner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;  /* Changed to red */
+    color: white;  /* Font color is white */
+    text-align: center;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#acceptCookiesButton {
+    margin-left: 20px;
+    padding: 5px 20px;
+    background-color: darkred;  /* Changed to red */
+    color: white;  /* Font color is white */
+    border: none;
+    cursor: pointer;
+}
+
+#acceptCookiesButton:hover {
+    background-color: #b30000;
+}
+
 .dropdown-wrapper {
   margin-top: 15px;
     display: flex;
