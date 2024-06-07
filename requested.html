@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property="og:title" content="Movies - Watch Free Movies and TV Series Online"/>
+    <meta property="og:description" content="Explore a world of free movies and TV series online at Wacth Me Now. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+    <meta property="og:url" content="https://dashflix.xyz/home.html"/>
+    <meta property="og:image" content="https://i.postimg.cc/ZRKdmK0f/tn.webp"/>
+    <meta name="description" content="Watch free movies and TV series online with multiple genres at WatchMeNow. Discover classics and the latest releases for streaming."/>
+    <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="icon" href="https://i.postimg.cc/ZYycgWSj/favicon.webp" type="image/png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Requested - Watch Free Movies and TV Series Online</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2412399424552673"
+         crossorigin="anonymous"></script>
+       </head>
+
+<body oncontextmenu="return false;">
+<header>
+<nav>
+<div class="logo-title-container">
+<div class="logo-container">
+<img alt="Watch Me Now Logo"  src="https://i.postimg.cc/85H56CW3/logo-copy1.webp"/>
+</div>
+<div class="nav-title">
+<h1>Watch Me Now</h1>
+<p>Free Movies For You</p>
+</div>
+<div class="menu-icon">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+</div>
+<div class="nav-links">
+<ul>
+<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+<li><a href="home.html"><i class="fas fa-info-circle"></i> Movies</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<div class="announcement-banner">
+  <p>Looking for certain movie?</p>
+<p>REQUEST IT NOW BY <a href="request.html">>>CLICKING HERE<<</a></p>
+</div>
+
+
+         <div class="gallery" id="requested-items">
+                 <!-- Requested items will be displayed here -->
+             </div>
+             <script>
+             // Define the URL of your home.html page
+             const homePageURL = 'home.html';
+
+             // Function to fetch and process the content
+             async function fetchAndDisplayRequestedItems() {
+                 try {
+                     const response = await fetch(homePageURL);
+                     if (response.ok) {
+                         const htmlContent = await response.text();
+                         const parser = new DOMParser();
+                         const doc = parser.parseFromString(htmlContent, 'text/html');
+                         const requestedItems = doc.querySelectorAll('figure[data-requested="true"]');
+                         const requestedItemsContainer = document.getElementById('requested-items');
+
+                         requestedItems.forEach((item) => {
+                             requestedItemsContainer.appendChild(item.cloneNode(true));
+                         });
+                     }
+                 } catch (error) {
+                     console.error('Error fetching and processing content:', error);
+                 }
+             }
+
+             // Call the function to fetch and display requested items
+             fetchAndDisplayRequestedItems();
+
+</script>
+
+         <div id="go-to-top-button" class="floating-button">
+                 <div class="arrow-up"></div>
+             </div>
+             <script>
+               function redirectTo(destinationUrl) {
+                 // window.open('https://intorterraon.com/4/6786901', '_blank');
+                 var redirectUrl = 'redirect.html?url=' + encodeURIComponent(destinationUrl);
+                 window.open(redirectUrl, '_self');
+               }
+             </script>
+<footer>
+<nav class="footer-nav">
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="privacy policy.html">Privacy Policy</a></li>
+<li><a href="dmca.html">DMCA</a></li>
+</ul>
+<div class="social-icons">
+<a class="social-icon" href="https://www.instagram.com/watchmenow_x"><i class="fab fa-instagram"></i></a>
+<a class="social-icon" href="https://www.youtube.com/channel/UCTEJdVnBHiiSUizkTAen0xA"><i class="fab fa-youtube"></i></a>
+<a class="social-icon" href="https://www.facebook.com/profile.php?id=100094443101398"><i class="fab fa-facebook"></i></a>
+<a class="social-icon" href="https://twitter.com/_WatchMeNow"><i class="fab fa-twitter"></i></a>
+</div>
+</nav>
+<p class="copyright">WatchMeNow 2023. All rights reserved.</p>
+</footer>
+<script>function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function loadImages() {
+    const imagesToLoad = document.querySelectorAll('.defer-image');
+
+    imagesToLoad.forEach((image) => {
+        if (isInViewport(image)) {
+            const imgUrl = image.getAttribute('data-src');
+            if (imgUrl) {
+                const img = new Image();
+                img.src = imgUrl;
+                img.onload = () => {
+                    image.setAttribute('src', imgUrl);
+                    image.classList.remove('defer-image');
+                };
+            }
+        }
+    });
+}
+
+window.addEventListener('scroll', loadImages);
+window.addEventListener('resize', loadImages);
+
+loadImages();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="redirection.js" defer></script>
+<script>
+        const goToTopButton = document.getElementById('go-to-top-button');
+
+        // Show or hide the button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) { // Adjust the value to control when the button appears
+                goToTopButton.style.display = 'block';
+            } else {
+                goToTopButton.style.display = 'none';
+            }
+        });
+
+        goToTopButton.addEventListener('click', function() {
+            // Scroll to the top of the page smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>domo</title>
+</head>
+<body>
+
+<script>
+
+var userID = "123456";
+var transactionID = "987654";
+var revenue = "25.00";
+var currencyAmount = "500";
+var hash = "abcdef1234567890";
+var ip = "123.456.789.012";
+var type = "credit";
+
+
+var postbackURL = "https://dashflix.xyz/domo" +
+    "?userID=" + userID +
+    "&transactionID=" + transactionID +
+    "&revenue=" + revenue +
+    "&currencyAmount=" + currencyAmount +
+    "&hash=" + hash +
+    "&ip=" + ip +
+    "&type=" + type;
+
+
+window.location.href = postbackURL;
+</script>
+
+</body>
+</html>

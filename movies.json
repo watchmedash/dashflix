@@ -1,0 +1,19 @@
+{
+  "movies": [
+    {
+      "title": "Anyone But You",
+      "url": "https://watchmenow.live/movies/Anyone But You",
+      "image": "https://i.postimg.cc/wjKTZ4Cx/000000529.webp"
+    },
+    {
+      "title": "Salitan",
+      "url": "https://watchmenow.live/movies/Salitan",
+      "image": "https://i.postimg.cc/g07Kxh1M/000000538.webp"
+    },
+    {
+      "title": "The Iron Claw",
+      "url": "https://watchmenow.live/movies/The Iron Claw",
+      "image": "https://i.postimg.cc/V63jBsBm/000000442.webp"
+    }
+  ]
+}

@@ -13,7 +13,7 @@ window.onload = function() {
 
   // Countdown timer function
   function countdown() {
-    var seconds = 10; // Adjust the countdown duration here
+    var seconds = 5; // Adjust the countdown duration here
     var countdownElement = document.getElementById('countdown');
     var linkElement = document.getElementById('link');
 

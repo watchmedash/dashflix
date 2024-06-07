@@ -1,1 +1,126 @@
-function setCookie(e,t,n){var o=new Date,n=(o.setTime(o.getTime()+24*n*60*60*1e3),"expires="+o.toUTCString());document.cookie=e+"="+t+";"+n+";path=/"}function getCookie(n){var o=document.cookie.split(";");for(let t=0;t<o.length;t++){let e=o[t];for(;" "===e.charAt(0);)e=e.substring(1);if(0===e.indexOf(n))return e.substring(n.length+1,e.length)}return""}document.addEventListener("DOMContentLoaded",()=>{let n;function o(e){var t=document.getElementById("searchInput"),n=document.getElementById("searchResults");const o=t.value.toLowerCase();if((n.innerHTML="")===o.trim())n.style.display="none";else{t=e.filter(e=>e.title.toLowerCase().includes(o));if(0===t.length)n.innerHTML="<p>No results found.</p>";else{e=t;t=n;const r=document.createElement("ul");e.forEach(e=>{var t=document.createElement("li"),n=document.createElement("a");const o=e.title.trim();n.textContent=o,n.href=`../movies/${encodeURIComponent(o)}.html`,n.addEventListener("click",e=>{e.preventDefault();e=o;e=`redirect.html?url=../movies/${encodeURIComponent(e)}.html`,window.location.href=e}),t.dataset.tooltip=e.imageSrc,t.appendChild(n),r.appendChild(t)}),t.appendChild(r),function(){var e=document.querySelectorAll("li[data-tooltip]");e.forEach(e=>{e.querySelector("a");const t=e.dataset.tooltip,n=document.createElement("div");n.className="tooltip",n.textContent="Loading...",e.addEventListener("mouseenter",()=>{n.textContent="Loading...",n.style.display="block";const e=document.createElement("img");e.src=t,e.onload=()=>{n.textContent="",n.appendChild(e),e.style.maxWidth="20%",e.style.maxHeight="20%"}}),e.addEventListener("mouseleave",()=>{n.style.display="none"}),e.appendChild(n)})}()}n.style.display="block"}}fetch("home.html").then(e=>{if(e.ok)return e.text();throw new Error("Network response was not ok")}).then(e=>{var t=document.createElement("div"),e=(t.innerHTML=e,t.querySelectorAll("figure[data-genre][data-release-year]"));n=Array.from(e).map(e=>{return{title:e.querySelector("figcaption").textContent,imageSrc:e.querySelector("img.defer-image").getAttribute("data-src")}}),console.log("Movie Data Loaded:",n),o(n)}).catch(e=>{console.error("Error loading movie data:",e)}),document.getElementById("searchInput").addEventListener("input",()=>o(n)),document.getElementById("searchResults").style.display="none"}),"true"===getCookie("cookieConsent")?document.getElementById("cookieConsentBanner").style.display="none":document.getElementById("cookieConsentBanner").style.display="block",document.getElementById("acceptCookiesButton").addEventListener("click",function(){setCookie("cookieConsent","true",365),document.getElementById("cookieConsentBanner").style.display="none"});
+document.addEventListener('DOMContentLoaded', () => {
+  let movieData; // Declare movieData here
+
+  // Function to load movie data from "home.html"
+  function loadMovieData() {
+    fetch('home.html')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then((html) => {
+        const tempElement = document.createElement('div');
+        tempElement.innerHTML = html;
+
+        // Include figures with and without the data-requested attribute
+        const movieFigures = tempElement.querySelectorAll('figure');
+        movieData = Array.from(movieFigures).map((figure) => {
+          const title = figure.querySelector("figcaption").textContent;
+          const imageSrc = figure.querySelector("img.defer-image").getAttribute("data-src");
+          return { title, imageSrc };
+        });
+
+        // Debugging: Log the loaded movie data
+        console.log("Movie Data Loaded:", movieData);
+
+        // Perform initial search
+        performSearch(movieData);
+      })
+      .catch((error) => {
+        console.error('Error loading movie data:', error);
+      });
+  }
+
+  // Function to perform movie search
+  function performSearch(movieData) {
+    const searchInput = document.getElementById("searchInput");
+    const searchResults = document.getElementById("searchResults");
+    const searchTerm = searchInput.value.toLowerCase();
+    searchResults.innerHTML = "";
+
+    if (searchTerm.trim() === "") {
+      searchResults.style.display = "none";
+    } else {
+      const filteredMovies = movieData.filter((movie) =>
+        movie.title.toLowerCase().includes(searchTerm)
+      );
+      if (filteredMovies.length === 0) {
+        searchResults.innerHTML = "<p>No results found.</p>";
+      } else {
+        displayItemList(filteredMovies, searchResults);
+      }
+      searchResults.style.display = "block";
+    }
+  }
+
+  // Function to display filtered movie data with tooltips
+  function displayItemList(items, container) {
+    const ul = document.createElement("ul");
+    items.forEach((item) => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      const trimmedTitle = item.title.trim(); // Trim leading and trailing whitespaces
+      link.textContent = trimmedTitle;
+      // Use the trimmed title to construct the image URL and link
+      link.href = `../movies/${encodeURIComponent(trimmedTitle)}.html`;
+
+      // Add a click event listener to redirect to redirect.html
+      link.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent the default link behavior
+        redirectToRedirectPage(trimmedTitle);
+      });
+
+      li.dataset.tooltip = item.imageSrc; // Use the imageSrc property for the tooltip
+      li.appendChild(link);
+      ul.appendChild(li);
+    });
+    container.appendChild(ul);
+    addTooltipListeners(); // Add tooltip listeners after updating the list
+  }
+
+  // Function to add tooltip listeners
+  function addTooltipListeners() {
+    const listItems = document.querySelectorAll("li[data-tooltip]");
+    listItems.forEach((li) => {
+      const link = li.querySelector("a");
+      const tooltipUrl = li.dataset.tooltip;
+      const tooltip = document.createElement("div");
+      tooltip.className = "tooltip";
+      tooltip.textContent = "Loading...";
+      li.addEventListener("mouseenter", () => {
+        tooltip.textContent = "Loading...";
+        tooltip.style.display = "block";
+        const tooltipImage = document.createElement("img");
+        tooltipImage.src = tooltipUrl;
+        tooltipImage.onload = () => {
+          tooltip.textContent = "";
+          tooltip.appendChild(tooltipImage);
+
+          // Set the maximum width and height of the image here
+          tooltipImage.style.maxWidth = "20%";
+          tooltipImage.style.maxHeight = "20%";
+        };
+      });
+      li.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+      });
+      li.appendChild(tooltip);
+    });
+  }
+
+  function redirectToRedirectPage(movieTitle) {
+    // Set the destination URL and redirect to redirect.html
+    const destinationUrl = `redirect.html?url=../movies/${encodeURIComponent(movieTitle)}.html`;
+    window.location.href = destinationUrl;
+  }
+
+  // Load movie data when the page loads
+  loadMovieData();
+
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("input", () => performSearch(movieData));
+  const searchResults = document.getElementById("searchResults");
+  searchResults.style.display = "none";
+});

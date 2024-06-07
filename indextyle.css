@@ -1,23 +1,28 @@
+.button-container a:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .image-container {
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
 }
 
 .image-link {
-    display: inline-block; /* Ensure the link wraps around the image and text */
-    text-decoration: none; /* Remove underline from the link */
-    color: white; /* Font color for the link */
+    display: inline-block;
+    text-decoration: none;
+    color: white;
 }
 
 .shaking-image {
-    margin-top: 5px; /* Adjust the margin to bring the image and text closer */
-    font-size: 1.2rem; /* Adjust the font size as needed */
-    color: white; /* Font color for the image */
-    animation: shake 2s infinite; /* Shake animation */
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: white;
+    animation: shake 2s infinite;
 }
 
 .join-text {
-    font-size: 1.2rem; /* Adjust the font size as needed */
-    color: white; /* Font color for the text */
+    font-size: 1.2rem;
+    color: white;
 }
 
 @keyframes shake {
@@ -53,41 +58,11 @@
     }
 }
 
-
-.link-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 15px;
-    border-radius: 5px;
-    overflow: hidden; /* Hide overflow for the animation */
-}
-
-.directory-link {
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: popInOut 1.9s ease-in-out infinite alternate; /* Faster and larger animation */
-}
-
-@keyframes popInOut {
-    0% {
-        transform: scale(1); /* Original size */
-    }
-    100% {
-        transform: scale(1.2); /* 20% larger size */
-    }
-}
-
 .watch-now-butt {
     margin-top: 10px;
     display: inline-block;
     padding: 12px 30px;
-    background: linear-gradient(45deg, #ff5555, #ff0000); /* Gradient background with red hues */
+    background: linear-gradient(45deg, #ff5555, #ff0000);
     color: #fff;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
@@ -95,27 +70,25 @@
     border: 2px solid #cc0000;
     border-radius: 25px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .watch-now-butt:hover {
-    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
+    background: linear-gradient(45deg, #cc0000, #aa0000);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* Style for the container div */
 .social-icons-container {
-  text-align: center; /* Center-align the icons */
-  margin-top: 1px; /* Add some top margin for spacing */
+  text-align: center;
+  margin-top: 1px;
 }
 
-/* Style for individual social media icons */
 .social-icon {
-  display: inline-block; /* Display icons in a row */
-  margin: 0 5px; /* Add horizontal spacing between icons */
+  display: inline-block;
+  margin: 0 5px;
   position: relative;
-  transition: transform 0.2s ease-in-out; /* Add a smooth transition for the hover effect */
+  transition: transform 0.2s ease-in-out;
 }
 
 .social-icon::before {
@@ -126,114 +99,27 @@
   transform: translate(-47%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Adjust the shadow color and opacity */
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
-  z-index: -1; /* Place the shadow behind the icon */
-  transition: background-color 0.2s ease-in-out; /* Add a smooth transition for the hover effect */
+  z-index: -1;
+  transition: background-color 0.2s ease-in-out;
 }
 
-/* Style for the social media icon images */
 .social-icon img {
-  width: 60px; /* Adjust the width of the icons */
-  height: auto; /* Maintain aspect ratio */
+  width: 60px;
+  height: auto;
 }
 
-/* Hover effect: change the background color of the icons */
 .social-icon:hover::before {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the hover color and opacity */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Hover effect: scale up the icon slightly on hover */
 .social-icon:hover {
-  transform: scale(1.1); /* Increase the size by 10% on hover */
+  transform: scale(1.1);
 }
 
-.book-icon {
-  font-size: 18px; /* Adjust the size as needed */
-  margin-left: 5px; /* Add spacing between the text and the icon */
-}
-
-.directory-link {
-  text-decoration: none; /* Remove underline */
-  color: white; /* Set font color to white */
-  font-size: 18px; /* Font size */
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-.hand-icon {
-  font-size: 1.2em; /* Adjust the size as needed */
-  margin: 0 5px; /* Add some spacing between icons and text */
-}
-.directory-link:hover {
-  color: black; /* Set hover font color to black */
-}
 
 .tok {
   margin-top: 1px;
     text-align: center;
-}
-
-.hot-movies-gallery {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.movie-item {
-    flex: 1;
-    width: calc(25% - 10px); /* Deducting 10px for consistent gaps between images */
-    margin: 0 5px; /* Half of the 10px gap on each side */
-    box-sizing: border-box;
-    position: relative;
-}
-
-.movie-item::before {
-    content: "";
-    display: block;
-    padding-top: 133.33%; /* For 9:12 aspect ratio */
-}
-
-.movie-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-    @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-.hot-movies-section h1 {
-    animation: blink 2s linear infinite;
-    display: flex;
-    justify-content: center;
-}
-
-.upcoming-movies-section h1 {
-    display: flex;
-    justify-content: center;
-}
-
-.big-title {
-    font-size: 3em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.download-app {
-  display: flex;
-  justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.note {
-  display: flex;
-  justify-content: center;
-    margin-top: 1px;
-    margin-bottom: 10px;
 }

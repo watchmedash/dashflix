@@ -1,40 +1,35 @@
 import os
 from bs4 import BeautifulSoup
 
-# Get the current directory where this script is located
-current_directory = os.path.dirname(os.path.abspath(__file__))
-
-# Directory where your HTML files are stored (same as the script's directory)
-html_directory = current_directory
-
-# Function to extract and format data from an HTML file
-def process_html_file(file_path):
+def remove_script_tag(file_path, script_src):
     with open(file_path, 'r', encoding='utf-8') as file:
-        html_code = file.read()
+        content = file.read()
 
-    # Parse the HTML using Beautiful Soup
-    soup = BeautifulSoup(html_code, 'html.parser')
+    soup = BeautifulSoup(content, 'html.parser')
 
-    # Find the <div> with class "content"
-    content_div = soup.find('div', class_='content')
+    # Find all script tags with the specified src attribute
+    script_tags = soup.find_all('script', src=script_src)
 
-    if content_div:
-        # Find the <h1> tag within the "content" section and extract the link name
-        link_name = content_div.find('h1').text.strip()
+    # Remove each found script tag
+    for script_tag in script_tags:
+        script_tag.extract()
 
-        # Find the <source> tag and extract the link address
-        link_address = soup.find('source')['src']
+    # Update the file with the modified content
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(str(soup))
 
-        # Format the data as an HTML <li> element with an <a> link
-        formatted_output = f'<li><a href="{link_address}">{link_name}</a></li>'
-        return formatted_output
+def process_html_files(directory_path, script_src):
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".html"):
+            file_path = os.path.join(directory_path, filename)
+            remove_script_tag(file_path, script_src)
+            print(f"Script tag removed from {filename}")
 
-    return None
+# Get the current working directory
+current_directory = os.getcwd()
 
-# Process all HTML files in the directory
-for filename in os.listdir(html_directory):
-    if filename.endswith('.html'):
-        file_path = os.path.join(html_directory, filename)
-        formatted_data = process_html_file(file_path)
-        if formatted_data:
-            print(formatted_data)
+# Specify the script source that needs to be removed
+script_src_to_remove = "https://alwingulla.com/88/tag.min.js"
+
+# Use the current directory as the base path
+process_html_files(current_directory, script_src_to_remove)
