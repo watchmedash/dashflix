@@ -1,10 +1,10 @@
 .floating-button {
     position: fixed;
     bottom: 20px;
-    left: 20px; /* Changed from 'right' to 'left' */
+    right: 20px; /* Changed from 'right' to 'left' */
     width: 50px;
     height: 50px;
-    background-color: #FF0000;
+    background-color: grey;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -16,7 +16,7 @@
 }
 
 .floating-button:hover {
-    background-color: #DD0000;
+    background-color: red;
     transform: scale(1.1);
 }
 
@@ -37,19 +37,19 @@
     margin-top: 10px;
     display: inline-block;
     padding: 6px 15px;
-    background: linear-gradient(45deg, #ff5555, #ff0000); /* Gradient background with red hues */
+    background: linear-gradient(45deg, #D8D8D8, #000000); /* Gradient background with red hues */
     color: #fff;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     font-size: 1.2rem;
-    border: 2px solid #cc0000;
+    border: 2px solid #B1B1B1;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
 .watch-now-bur:hover {
-    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
+    background: linear-gradient(45deg, #B1B1B1, #666666); /* Darker gradient on hover */
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
@@ -86,7 +86,7 @@
 .custom-tab {
   display: inline-block;
       padding: 10px 20px;
-      background-color: #FF0000; /* Red background color */
+      background-color: #000000; /* Red background color */
       color: #FFFFFF; /* White text color */
       font-family: 'Exo 2', sans-serif;
       cursor: pointer;
@@ -95,7 +95,7 @@
           }
 
           .custom-tab:hover {
-            background-color: #FF3333; /* Slightly lighter red on hover */
+            background-color: #4D4D4D; /* Slightly lighter red on hover */
       transform: scale(1.1); /* Scale up on hover */
           }
 li[data-tooltip] {
@@ -138,7 +138,7 @@ li[data-tooltip]:hover::after {
 }
 
 .announcement-banner {
-    background-color: rgba(0, 255, 0, 0.7); /* Yellow background with transparency */
+    background-color: rgba(255, 53, 53, 0.7); /* Yellow background with transparency */
     color: #000000;
     padding: 10px;
     text-align: center;
@@ -289,7 +289,7 @@ li[data-tooltip]:hover::after {
 .episode-tab {
   margin: 5px;
   padding: 8px 15px;
-  background-color: #ff0000;
+  background-color: #000000;
   color: #fff;
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
@@ -301,12 +301,12 @@ li[data-tooltip]:hover::after {
 }
 
 .episode-tab:hover {
-  background-color: #cc0000;
+  background-color: #B1B1B1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .episode-tab.active {
-  background-color: #cc0000;
+  background-color: #B1B1B1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
@@ -370,7 +370,7 @@ li[data-tooltip]:hover::after {
 .filter-button {
   margin: 5px;
   padding: 8px 15px;
-  background-color: #ff0000;
+  background-color: #000000;
   color: #fff;
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
@@ -382,12 +382,12 @@ li[data-tooltip]:hover::after {
 }
 
 .filter-button:hover {
-  background-color: #cc0000;
+  background-color: #B1B1B1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .filter-button.active {
-  background-color: #cc0000;
+  background-color: #B1B1B1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
@@ -438,7 +438,7 @@ li[data-tooltip]:hover::after {
 
 .search-container button i {
   font-size: 20px;
-  color: red;
+  color: black;
 
 }
 
@@ -454,7 +454,7 @@ li[data-tooltip]:hover::after {
   padding: 10px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
-  color: red;
+  color: black;
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
 }
@@ -472,7 +472,7 @@ li[data-tooltip]:hover::after {
 #searchResults a {
   font-weight: bold;
   text-decoration: none;
-  color: red; /* Set the font color of the links to red */
+  color: black; /* Set the font color of the links to red */
   font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the list items */
 }
 
@@ -481,13 +481,13 @@ li[data-tooltip]:hover::after {
 }
 
 #searchResults p {
-  color: red; /* Set the font color of "No results found" to red */
+  color: black; /* Set the font color of "No results found" to red */
 }
 
 
 .about-container {
       padding: 10px;
-      background: linear-gradient(to right, red, darkred);
+      background: linear-gradient(to right, grey, black);
       border-radius: 8px;
       color: white; /* text color */
       font-weight: bold;
@@ -544,7 +544,7 @@ figure img {
 
 /* Reset margin and padding for the whole page */
 body {
-  background: radial-gradient(circle, #FF3333, #770000);
+  background: radial-gradient(circle, #4D4D4D, #000000);
   margin: 0;
   padding: 0;
 }
@@ -557,7 +557,7 @@ body {
 
 nav {
   font-family: 'Exo 2', sans-serif;
-  background: radial-gradient(circle, #FF3333, #770000);
+  background: radial-gradient(circle, #4D4D4D, #000000);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -611,7 +611,7 @@ h1, h2, h3, p, li {
   margin-top: 5px;
     display: inline-block;
     padding: 8px 15px;
-    background-color: #ff0000;
+    background-color: #000000;
     color: #fff;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
@@ -621,7 +621,7 @@ h1, h2, h3, p, li {
 }
 
 .watch-now-button:hover {
-    background-color: #cc0000;
+    background-color: #B1B1B1;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
@@ -633,7 +633,6 @@ body::after {
   left: 0;
   width: 100%;
   height: calc(100% - 80px); /* Adjust the height to cover the remaining space between footer and page body */
-  background-image: url("https://i.postimg.cc/g2WS39dH/doggie.webp");
   background-repeat: repeat-y;
   background-size: cover; /* Set background-size to "cover" to make the image cover the entire container */
   opacity: 0.3;
@@ -675,7 +674,7 @@ body::after {
 
 .nav-title h1 {
     font-size: calc(4vw); /* Set the font size using viewport width units (vw) */
-    color: #fff; /* Set the font color to white */
+    color: #EF0000; /* Set the font color to white */
 }
 
 .nav-title p {
@@ -687,7 +686,7 @@ body::after {
 
 nav {
   font-family: 'Exo 2', sans-serif;
-  background: radial-gradient(circle, #FF3333, #770000);
+  background: radial-gradient(circle, #4D4D4D, #000000);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -725,7 +724,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: black;
+  color: red;
 }
 
 /* Add the following CSS to align the icons to the right side */
@@ -791,7 +790,7 @@ nav .nav-links li {
 }
 
 footer {
-  background-color: radial-gradient(circle, #FF3333, #770000);
+  background-color: radial-gradient(circle, #4D4D4D, #000000);
   padding: 10px 0;
   width: 100%;
   bottom: 0; /* Position the footer at the bottom */
@@ -836,7 +835,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: black;
+  color: red;
 }
 
 .social-icons {
@@ -852,7 +851,7 @@ footer {
 }
 
 .social-icons a:hover {
-  color: black;
+  color: red;
 }
 
 /* Add margins to create space between the links and icons */
@@ -895,7 +894,7 @@ footer .copyright {
     padding: 0; /* Reduce padding to 5px */
     box-sizing: border-box;
     background: none; /* Add a red to dark red gradient background */
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
     position: relative; /* Make corners rounded */
 }
@@ -908,13 +907,13 @@ footer .copyright {
     left: 0;
     right: 0;
     background: none; /* Semi-transparent light red to red gradient */
-    border-radius: 10px; /* Make corners rounded */
+    border-radius: 5px; /* Make corners rounded */
     z-index: -1; /* Place the pseudo-element behind the content */
 }
 .gallery figure img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
      /* Make image corners rounded */
 }
 
@@ -931,7 +930,7 @@ footer .copyright {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 100;
             pointer-events: none;
-            border-radius: 10px;
+            border-radius: 5px;
             max-width: 240px; /* Set a maximum width */
             text-align: center; /* Center text */
         }
@@ -987,7 +986,7 @@ footer .copyright {
 .pagination a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff0000;
+  background-color: #000000;
   color: #fff;
   text-decoration: none;
   font-family: 'Exo 2', sans-serif;
@@ -996,7 +995,7 @@ footer .copyright {
 }
 
 .pagination a:hover {
-  background-color: #cc0000;
+  background-color: #B1B1B1;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 

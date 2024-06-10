@@ -62,19 +62,19 @@
     margin-top: 10px;
     display: inline-block;
     padding: 12px 30px;
-    background: linear-gradient(45deg, #ff5555, #ff0000);
+    background-color: #000000;
     color: #fff;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     font-size: 1.2rem;
-    border: 2px solid #cc0000;
+    border: 2px solid #ffffff;
     border-radius: 25px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .watch-now-butt:hover {
-    background: linear-gradient(45deg, #cc0000, #aa0000);
+    background: linear-gradient(45deg, #B1B1B1, #000000);
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
