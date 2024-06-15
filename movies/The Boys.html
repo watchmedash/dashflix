@@ -99,6 +99,22 @@
 </div><div class="button-container"><a class="watch-now-bur" href="../contact.html">Report Error!</a></div>
 <div class="content"><div class="watchmenow-info"><h1>What to watch next? 🎥</h1></div></div><div class="related-movies-gallery">
 </div>
+
+<script>
+    document.getElementById('video-player').addEventListener('click', function() {
+      var iframe = this;
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      } else if (iframe.mozRequestFullScreen) { // Firefox
+        iframe.mozRequestFullScreen();
+      } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        iframe.webkitRequestFullscreen();
+      } else if (iframe.msRequestFullscreen) { // IE/Edge
+        iframe.msRequestFullscreen();
+      }
+    });
+  </script>
+
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
