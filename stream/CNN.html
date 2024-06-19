@@ -44,12 +44,16 @@
 <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
 <style>
   .vjs-big-play-button {
-    font-size: 3em; /* Adjust the size as needed */
+    font-size: 2em; /* Adjust the size as needed */
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
 </style>
 <script>
   var player = videojs('my-video');
 </script>
+
 <div class="sharethis-inline-share-buttons">
 <footer>
 <nav class="footer-nav">
