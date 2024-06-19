@@ -14,9 +14,6 @@
 <link href="https://i.postimg.cc/g2n9TLBn/favicon.png" rel="icon" type="image/png"/>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="../style.css" rel="stylesheet"/><link href=" " rel="stylesheet"/><link href="../video-js.css" rel="stylesheet"/>
-<link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
-<script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
 <title>CNN - Watch Free Movies and TV Series Online</title>
 <script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=66695941c861e90019a22817&amp;product=sticky-share-buttons">
 </script>
@@ -37,10 +34,14 @@
 <h1>CNN</h1>
 </div>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 95%; margin: 0 auto;">
-  <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{}'>
+  <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" data-setup='{}'>
     <source src="https://cnn-cnninternational-1-eu.rakuten.wurl.tv/f93b9a949a4a8651dd5a2f42e3a2b6f9.m3u8" type="application/x-mpegURL">
   </video>
 </div>
+
+<link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
 <script>
   var player = videojs('my-video');
 </script>
