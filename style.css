@@ -138,7 +138,7 @@ li[data-tooltip]:hover::after {
 }
 
 .announcement-banner {
-    background-color: rgba(255, 53, 53, 0.7); /* Yellow background with transparency */
+    background-color: rgba(0, 255, 0, 0.7); /* Yellow background with transparency */
     color: #000000;
     padding: 10px;
     text-align: center;
