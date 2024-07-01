@@ -1220,7 +1220,7 @@
 
         function showMovieDetails(movieTitle, figure) {
             function getMovieDetails(movieTitle) {
-                const endpoint = '/search/movie';
+                const endpoint = '/search/series';
                 const params = { api_key: apiKey, query: movieTitle };
 
                 fetch(baseApiUrl + endpoint + '?' + new URLSearchParams(params))
