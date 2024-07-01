@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const trimmedTitle = item.title.trim(); // Trim leading and trailing whitespaces
       link.textContent = trimmedTitle;
       // Use the trimmed title to construct the image URL and link
-      link.href = `../movies/${encodeURIComponent(trimmedTitle)}.html`;
+      link.href = `../series/${encodeURIComponent(trimmedTitle)}.html`;
 
       // Add a click event listener to redirect to redirect.html
       link.addEventListener("click", (e) => {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function redirectToRedirectPage(movieTitle) {
     // Set the destination URL and redirect to redirect.html
-    const destinationUrl = `redirect.html?url=../movies/${encodeURIComponent(movieTitle)}.html`;
+    const destinationUrl = `redirectr.html?url=../series/${encodeURIComponent(movieTitle)}.html`;
     window.location.href = destinationUrl;
   }
 
