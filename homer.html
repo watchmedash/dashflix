@@ -896,11 +896,11 @@
 
 
     <figure>
-        <a class="movie-link" href="#" onclick='redirectTo("series/The Flash.html")'>
+        <a class="movie-link" href="#" onclick='redirectTo("series/The Flash TV.html")'>
             <img alt="The Flash" class="defer-image" data-src="https://m.media-amazon.com/images/M/MV5BYmMxNGQ4NzYtYmQzNC00N2I2LWI5NzUtMTU5MDczZGEzNDBlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_SX300.jpg" height="320" width="240"/>
             <span class="tag tv">S9 E13</span>
         </a>
-        <figcaption>The Flash</figcaption>
+        <figcaption>The Flash TV</figcaption>
     </figure>
 
 
@@ -968,11 +968,11 @@
 
 
     <figure>
-        <a class="movie-link" href="#" onclick='redirectTo("series/Watchmen.html")'>
+        <a class="movie-link" href="#" onclick='redirectTo("series/Watchmen TV.html")'>
             <img alt="Watchmen" class="defer-image" data-src="https://m.media-amazon.com/images/M/MV5BOWU3ODM4ZTEtNjI5Ni00ODc0LTg3MTctOTNmZDVkNzU5YzA3XkEyXkFqcGdeQXVyNTI2MzI4NTU@._V1_.jpg" height="320" width="240"/>
             <span class="tag tv">S1 E9</span>
         </a>
-        <figcaption>Watchmen</figcaption>
+        <figcaption>Watchmen TV</figcaption>
     </figure>
 
 
@@ -1220,7 +1220,7 @@
 
         function showMovieDetails(movieTitle, figure) {
             function getMovieDetails(movieTitle) {
-                const endpoint = '/search/series';
+                const endpoint = '/search/movie';
                 const params = { api_key: apiKey, query: movieTitle };
 
                 fetch(baseApiUrl + endpoint + '?' + new URLSearchParams(params))
