@@ -32,6 +32,10 @@
             color: #ffcc00;
             margin-bottom: 20px;
         }
+        p.instructions {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
         input[type="text"], input[type="submit"], button {
             width: 100%;
             padding: 10px;
@@ -73,6 +77,7 @@
     <div class="login-container">
         <h1>Enter Access Code</h1>
         <p class="warning">Warning: You are about to enter a restricted section containing adult content.</p>
+        <p class="instructions">To get an access code, please review our app on the Google Play Store. Search for "dashflixtop", leave a review, and send a screenshot of your review to <a href="mailto:support@dashflix.top" style="color: #ffcc00;">support@dashflix.top</a></p>
         <form id="loginForm">
             <input type="text" id="accessCode" placeholder="Enter Code">
             <input type="submit" value="Submit">
@@ -81,7 +86,7 @@
         <p id="errorMessage"></p>
     </div>
     <script>
-        const validCodes = ["CODE1", "CODE2", "CODE3"]; // Replace with your actual codes
+        const validCodes = ["GOBILAM", "KAYNAM", "TARUB"]; // Replace with your actual codes
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
