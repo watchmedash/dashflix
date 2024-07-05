@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Section Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .login-container {
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        p.warning {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="submit"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="text"] {
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }
+        input[type="submit"] {
+            background-color: #6200ea;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #3700b3;
+        }
+        button {
+            background-color: #333333;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #555555;
+        }
+        #errorMessage {
+            color: #cf6679;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Enter Access Code</h1>
+        <p class="warning">Warning: You are about to enter a restricted section containing adult content.</p>
+        <form id="loginForm">
+            <input type="text" id="accessCode" placeholder="Enter Code">
+            <input type="submit" value="Submit">
+        </form>
+        <button onclick="goBack()">Go Back</button>
+        <p id="errorMessage"></p>
+    </div>
+    <script>
+        const validCodes = ["CODE1", "CODE2", "CODE3"]; // Replace with your actual codes
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const enteredCode = document.getElementById("accessCode").value;
+            if (validCodes.includes(enteredCode)) {
+                sessionStorage.setItem("accessGranted", "true");
+                window.location.href = "adult.html";
+            } else {
+                document.getElementById("errorMessage").textContent = "Invalid code. Please try again.";
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

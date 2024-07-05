@@ -13,7 +13,11 @@
     <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
 
     <title>Adult Section - Watch Free Movies and TV Series Online</title>
-
+    <style>
+        .restricted {
+            display: none;
+        }
+    </style>
 </head>
 <div class="terra">
 <script type="text/javascript">
@@ -75,6 +79,10 @@
    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></scr' + 'ipt>');
    </script>
 </div>
+<div class="terra">
+<div id="restrictedContent" class="restricted">
+     <h1>Welcome to the Adult Section</h1>
+ </div></div>
 
 <div class="gallery" id="gallery-container">
 
@@ -96,7 +104,7 @@
   </figure>
   <figure>
     <a href="adult/Bath Time with Uncle">
-    <img alt="Bath Time with Uncle" class="defer-image" data-src="https://i.postimg.cc/SNbkSHqZ/ss.webp" height="320" width="240"/>
+    <img alt="Bath Time with Uncle" class="defer-image" data-src="https://i.postimg.cc/G2FpM3C3/image.jpg" height="320" width="240"/>
    <span class="tag cam">HD</span></a>
    <figcaption>
     Bath Time with Uncle
@@ -422,6 +430,16 @@ loadImages();
         goToTopButton.addEventListener('click', function() {
             // Scroll to the top of the page smoothly
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accessGranted = sessionStorage.getItem("accessGranted");
+            if (accessGranted === "true") {
+                document.getElementById("restrictedContent").classList.remove("restricted");
+            } else {
+                window.location.href = "login.html";
+            }
         });
     </script>
     <script src="script.js"></script>
