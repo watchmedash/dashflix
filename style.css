@@ -40,7 +40,7 @@
     background: linear-gradient(45deg, #D8D8D8, #000000); /* Gradient background with red hues */
     color: #fff;
     text-decoration: none;
-    font-family: 'Exo 2', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.2rem;
     border: 2px solid #B1B1B1;
     border-radius: 12px;
@@ -88,7 +88,7 @@
       padding: 10px 20px;
       background-color: #000000; /* Red background color */
       color: #FFFFFF; /* White text color */
-      font-family: 'Exo 2', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       cursor: pointer;
       margin: auto 10px; /* Increase margin for more space */
       transition: background-color 0.3s, color 0.3s;
@@ -143,7 +143,7 @@ li[data-tooltip]:hover::after {
     padding: 10px;
     text-align: center;
     font-size: 18px;
-    font-family: 'Exo 2', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     position: relative;
     border: 2px solid #FFFFFF; /* White border */
     border-left: 1px solid #FFFFFF; /* White border on the left side */
@@ -216,7 +216,7 @@ li[data-tooltip]:hover::after {
 .related-movies-gallery figcaption {
   text-align: center;
   color: #fff;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   padding: 2px;
 }
 
@@ -249,7 +249,7 @@ li[data-tooltip]:hover::after {
     right: 3px;
     background-color: rgba(0, 0, 0, 0.4); /* Transparent background with some opacity */
     color: #fff;
-    font-family: 'Exo 2', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     padding: 2px 5px;
     border-radius: 5px;
 }
@@ -292,7 +292,7 @@ li[data-tooltip]:hover::after {
   background-color: #000000;
   color: #fff;
   text-decoration: none;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -341,7 +341,7 @@ li[data-tooltip]:hover::after {
   padding: 10px 12px;
   text-decoration: none;
   display: block;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   background-color: transparent; /* No background */
 }
@@ -373,7 +373,7 @@ li[data-tooltip]:hover::after {
   background-color: #000000;
   color: #fff;
   text-decoration: none;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -422,7 +422,7 @@ li[data-tooltip]:hover::after {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 18px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .search-container button {
@@ -455,7 +455,7 @@ li[data-tooltip]:hover::after {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
   color: black;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -473,7 +473,7 @@ li[data-tooltip]:hover::after {
   font-weight: bold;
   text-decoration: none;
   color: black; /* Set the font color of the links to red */
-  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the list items */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply the "Exo 2" font to the list items */
 }
 
 #searchResults a:hover {
@@ -493,7 +493,7 @@ li[data-tooltip]:hover::after {
       font-weight: bold;
       max-width: 85%;
       margin: 20px auto;
-      font-family: 'Exo 2', sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
 
 
@@ -534,7 +534,7 @@ figure img {
             border-radius: 5px;
             cursor: pointer;
             text-align: center;
-            font-family: 'Exo 2', sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: white; /* Change font color to red */
             font-weight: bold; /* Make the font bold */
             text-decoration: none;
@@ -556,7 +556,7 @@ body {
 }
 
 nav {
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: radial-gradient(circle, #4D4D4D, #000000);
   color: #fff;
   display: flex;
@@ -598,7 +598,7 @@ nav {
 
 h1, h2, h3, p, li {
     color: #fff; /* White font color */
-    font-family: 'Exo 2', sans-serif; /* Apply "Exo 2" font to all text */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply "Exo 2" font to all text */
 }
 
 
@@ -614,7 +614,7 @@ h1, h2, h3, p, li {
     background-color: #000000;
     color: #fff;
     text-decoration: none;
-    font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Change the font to Exo 2 */
     font-size: 1.2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
@@ -666,7 +666,7 @@ body::after {
 }
 
 .nav-title h1, .nav-title p {
-    font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the title and tagline */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply the "Exo 2" font to the title and tagline */
     margin: 0; /* Remove margin for precise spacing */
     text-align: center; /* Center the title and tagline horizontally */
     white-space: nowrap; /* Prevent the title and tagline from wrapping to a second line */
@@ -685,7 +685,7 @@ body::after {
 /* Existing styles */
 
 nav {
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: radial-gradient(circle, #4D4D4D, #000000);
   color: #fff;
   display: flex;
@@ -877,7 +877,7 @@ footer .copyright {
   font-size: 14px;
   color: #fff;
   margin-top: 20px;
-  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply the "Exo 2" font to the copyright text */
 }
 
 
@@ -963,7 +963,7 @@ footer .copyright {
 
 .gallery figcaption {
     text-align: center;
-    font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Set font family to Exo 2 */
     color: #fff; /* Change the font color to white */
     width: 100%; /* Make the caption width same as image width */
     word-wrap: break-word;
@@ -973,7 +973,7 @@ footer .copyright {
 .title {
   margin-top: 10px;
   color: #fff;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -989,7 +989,7 @@ footer .copyright {
   background-color: #000000;
   color: #fff;
   text-decoration: none;
-  font-family: 'Exo 2', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
