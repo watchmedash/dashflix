@@ -12,7 +12,6 @@
 <meta content="Free movies, Watch free TV series, Online streaming, Iron Fist, Movie genres, Latest releases, Classic films" name="keywords"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 <link href="https://i.postimg.cc/g2n9TLBn/favicon.png" rel="icon" type="image/png"/>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="../style.css" rel="stylesheet"/><link href=" " rel="stylesheet"/><link href="../video-js.css" rel="stylesheet"/>
 <title>
    Iron Fist - Watch Free Movies and TV Series Online
@@ -128,7 +127,7 @@
    </h1>
 </div>
 <div class="custom-video-container">
-<iframe allow="autoplay" allowfullscreen="true" allowtransparency="true" class="custom-iframe" frameborder="0" id="video-player" scrolling="no" src="https://vidsrc.to/embed/tv/tt3322310/2/10"></iframe>
+<iframe allow="autoplay" allowfullscreen="true" allowtransparency="true" class="custom-iframe" frameborder="0" id="video-player" scrolling="no" src="https://vidsrc.me/embed/tv/tt3322310/2/10" referrerpolicy="origin"></iframe>
 </div>
 <div class="hot"><select id="episodeDropdown" onchange="selectEpisode()">
 <!-- Options will be dynamically populated -->
@@ -163,7 +162,7 @@
 
         function switchVideo(season, episode) {
             const videoPlayer = document.getElementById('video-player');
-            videoPlayer.src = `https://vidsrc.to/embed/tv/tt11126994/${season}/${episode}`;
+            videoPlayer.src = `https://vidsrc.me/embed/tv/tt11126994/${season}/${episode}`;
         }
 
         function selectEpisode() {
