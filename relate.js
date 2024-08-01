@@ -41,3 +41,56 @@ function loadRelatedMovies() {
 
 // Call the function to load and display related movies when the page loads
 window.onload = loadRelatedMovies;
+
+function redirectToHomepage() {
+    window.location.href = "https://dashflix.top";
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+        redirectToHomepage();
+    }
+});
+
+(function() {
+    const devtools = { open: false };
+    const threshold = 160;
+
+    const emitEvent = (state) => {
+        window.dispatchEvent(new CustomEvent('devtoolschange', {
+            detail: {
+                open: state
+            }
+        }));
+    };
+
+    const main = (t) => {
+        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        const orientation = widthThreshold ? 'vertical' : 'horizontal';
+
+        if (!(heightThreshold && widthThreshold) &&
+            ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
+            if (!devtools.open || devtools.orientation !== orientation) {
+                emitEvent(true);
+            }
+            devtools.open = true;
+            devtools.orientation = orientation;
+        } else {
+            if (devtools.open) {
+                emitEvent(false);
+            }
+            devtools.open = false;
+            devtools.orientation = undefined;
+        }
+        setTimeout(main, t);
+    };
+
+    main(500);
+
+    window.addEventListener('devtoolschange', event => {
+        if (event.detail.open) {
+            redirectToHomepage();
+        }
+    });
+})();
