@@ -43,54 +43,29 @@ function loadRelatedMovies() {
 window.onload = loadRelatedMovies;
 
 function redirectToHomepage() {
-    window.location.href = "https://dashflix.top";
-}
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
-        redirectToHomepage();
-    }
-});
-
-(function() {
-    const devtools = { open: false };
-    const threshold = 160;
-
-    const emitEvent = (state) => {
-        window.dispatchEvent(new CustomEvent('devtoolschange', {
-            detail: {
-                open: state
-            }
-        }));
-    };
-
-    const main = (t) => {
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-        const orientation = widthThreshold ? 'vertical' : 'horizontal';
-
-        if (!(heightThreshold && widthThreshold) &&
-            ((window.Firebug && window.Firebug.chrome && window.Firebug.chrome.isInitialized) || widthThreshold || heightThreshold)) {
-            if (!devtools.open || devtools.orientation !== orientation) {
-                emitEvent(true);
-            }
-            devtools.open = true;
-            devtools.orientation = orientation;
-        } else {
-            if (devtools.open) {
-                emitEvent(false);
-            }
-            devtools.open = false;
-            devtools.orientation = undefined;
+            window.location.href = "https://dashflix.top";
         }
-        setTimeout(main, t);
-    };
 
-    main(500);
-
-    window.addEventListener('devtoolschange', event => {
-        if (event.detail.open) {
-            redirectToHomepage();
+        // Detecting devtools opening by checking console.log time interval
+        function detectDevTools() {
+            var threshold = 160;
+            var check = function() {
+                var before = new Date();
+                debugger;
+                var after = new Date();
+                if (after - before > threshold) {
+                    redirectToHomepage();
+                }
+            };
+            setInterval(check, 1000);
         }
-    });
-})();
+
+        // Listen for key events to detect F12 or Ctrl+Shift+I
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+                redirectToHomepage();
+            }
+        });
+
+        // Call the function to start detecting dev tools
+        detectDevTools();
