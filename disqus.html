@@ -66,7 +66,7 @@
             const data = await response.json();
             const messagesContainer = document.getElementById('messages');
             messagesContainer.innerHTML = data.content.map(submission => `
-                <p>${submission.answers['YOUR_MESSAGE_FIELD_ID'].answer}</p>
+                <p>${submission.answers['#input_3'].answer}</p>
             `).join('');
         } catch (error) {
             console.error('Error fetching messages:', error);
