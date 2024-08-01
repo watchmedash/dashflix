@@ -159,6 +159,28 @@ li[data-tooltip]:hover::after {
     text-decoration: underline;
 }
 
+.announcement-banned {
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black font color */
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    border: 2px solid #000000; /* Black border */
+    border-left: 1px solid #000000; /* Black border on the left side */
+    border-right: 1px solid #000000;
+}
+
+.announcement-banned p {
+    margin: 0;
+}
+
+.announcement-banned a {
+    color: #000000; /* Black link font color */
+    text-decoration: underline;
+}
+
 .hot {
     display: flex;
     justify-content: space-around;
