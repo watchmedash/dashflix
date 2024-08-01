@@ -41,31 +41,3 @@ function loadRelatedMovies() {
 
 // Call the function to load and display related movies when the page loads
 window.onload = loadRelatedMovies;
-
-function redirectToHomepage() {
-            window.location.href = "https://dashflix.top";
-        }
-
-        // Detecting devtools opening by checking console.log time interval
-        function detectDevTools() {
-            var threshold = 160;
-            var check = function() {
-                var before = new Date();
-                debugger;
-                var after = new Date();
-                if (after - before > threshold) {
-                    redirectToHomepage();
-                }
-            };
-            setInterval(check, 1000);
-        }
-
-        // Listen for key events to detect F12 or Ctrl+Shift+I
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
-                redirectToHomepage();
-            }
-        });
-
-        // Call the function to start detecting dev tools
-        detectDevTools();
