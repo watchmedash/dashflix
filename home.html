@@ -11,7 +11,17 @@
     <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
 <link rel="stylesheet" href="style.css"/>
     <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-
+    <style>
+            #ad-block-message {
+                display: none;
+                background-color: #f8d7da;
+                color: #721c24;
+                padding: 20px;
+                border: 1px solid #f5c6cb;
+                border-radius: 5px;
+                margin: 20px;
+            }
+        </style>
     <title>Movies - Watch Free Movies and TV Series Online</title>
     <script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2412399424552673"crossorigin="anonymous"></script>
@@ -53,6 +63,10 @@
 <!--<div class="announcement-banner">
 <p><h3>MOST WATCHED OF THE MONTH</h3></p>
 </div>-->
+<div id="ad-block-message">
+        <h1>Adblocker Detected</h1>
+        <p>Please disable your adblocker to access our site.</p>
+    </div>
 <div class="announcement-banner">
 <p>Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.</p>
 </div>
@@ -16198,5 +16212,24 @@ loadImages();
         });
     </script>
     <script src="script.js"></script>
+    <script>
+        function detectAdBlock() {
+            const adBlockEnabled = !(document.querySelector('.adsbox') || false);
+
+            if (adBlockEnabled) {
+                document.getElementById('ad-block-message').style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Optional: Prevent scrolling
+            }
+        }
+
+        window.onload = function() {
+            const bait = document.createElement('div');
+            bait.className = 'adsbox';
+            bait.style.display = 'none';
+            document.body.appendChild(bait);
+
+            setTimeout(detectAdBlock, 100); // Wait a bit to ensure detection
+        };
+    </script>
 </body>
 </html>
