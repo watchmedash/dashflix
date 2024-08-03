@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css"/>
     <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
     <style>
-            #ad-block-message {
+    #ad-block-message {
                 display: none;
                 background-color: #f8d7da;
                 color: #721c24;
@@ -20,6 +20,7 @@
                 border: 1px solid #f5c6cb;
                 border-radius: 5px;
                 margin: 20px;
+                text-align: center;
             }
         </style>
     <title>Movies - Watch Free Movies and TV Series Online</title>
@@ -16214,22 +16215,30 @@ loadImages();
     <script src="script.js"></script>
     <script>
         function detectAdBlock() {
-            const adBlockEnabled = !(document.querySelector('.adsbox') || false);
+            let adBlockDetected = false;
 
-            if (adBlockEnabled) {
+            // Create bait elements
+            const bait = document.createElement('div');
+            bait.className = 'ad-banner';
+            document.body.appendChild(bait);
+
+            // Check if the bait elements are blocked
+            if (window.getComputedStyle(bait).display === 'none' || bait.offsetHeight === 0) {
+                adBlockDetected = true;
+            }
+
+            // Remove the bait elements
+            document.body.removeChild(bait);
+
+            // Show the message if adblocker is detected
+            if (adBlockDetected) {
                 document.getElementById('ad-block-message').style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Optional: Prevent scrolling
             }
         }
 
-        window.onload = function() {
-            const bait = document.createElement('div');
-            bait.className = 'adsbox';
-            bait.style.display = 'none';
-            document.body.appendChild(bait);
-
-            setTimeout(detectAdBlock, 100); // Wait a bit to ensure detection
-        };
+        // Run the detection after the window loads
+        window.onload = detectAdBlock;
     </script>
 </body>
 </html>
