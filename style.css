@@ -138,16 +138,13 @@ li[data-tooltip]:hover::after {
 }
 
 .announcement-banner {
-    background-color: rgba(0, 255, 0, 0.7); /* Yellow background with transparency */
+    background-color: rgba(0, 255, 0, 0.7); /* Green background with transparency */
     color: #000000;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     position: relative;
-    border: 2px solid #FFFFFF; /* White border */
-    border-left: 1px solid #FFFFFF; /* White border on the left side */
-    border-right: 1px solid #FFFFFF;
 }
 
 .announcement-banner p {
@@ -158,6 +155,11 @@ li[data-tooltip]:hover::after {
     color: #FFFFFF; /* Red link font color */
     text-decoration: underline;
 }
+
+.announcement-slider .slick-slide {
+    outline: none; /* Remove outline for carousel items */
+}
+
 
 .announcement-banned {
     background-color: #FFFFFF; /* White background */
