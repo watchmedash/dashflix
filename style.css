@@ -1,7 +1,8 @@
 .video-contained {
     max-width: 80%;
     margin: auto;
-    position: relative; /* Ensure that the iframe is positioned relative to this container */
+    position: relative; /* Make sure the iframe is positioned relative to this container */
+    padding-top: 56.25%; /* This maintains a 16:9 aspect ratio for the video */
 }
 
 .video-contained iframe {
@@ -11,6 +12,7 @@
     width: 100%;
     height: 100%;
 }
+
 
 
 .floating-button {
