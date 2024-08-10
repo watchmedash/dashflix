@@ -1,8 +1,14 @@
+.parent-container {
+    display: flex;
+    justify-content: center; /* Horizontally center .video-contained */
+    align-items: center; /* Optionally, vertically center .video-contained */
+    height: 100vh; /* Optional: height to center vertically */
+}
+
 .video-contained {
     max-width: 80%;
-    margin: auto;
     position: relative; /* Make sure the iframe is positioned relative to this container */
-    padding-top: 56.25%; /* This maintains a 16:9 aspect ratio for the video */
+    padding-top: 56.25%; /* Maintains a 16:9 aspect ratio */
 }
 
 .video-contained iframe {
@@ -12,8 +18,6 @@
     width: 100%;
     height: 100%;
 }
-
-
 
 .floating-button {
     position: fixed;
