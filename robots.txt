@@ -1,1 +1,20 @@
 Sitemap: https://dashflix.top/sitemap.xml
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: *
+Disallow: /movies/
+Disallow: /series/
+Disallow: /dump/
+Disallow: /anime/
+Disallow: /stream/
+Disallow: /images/
+
+Disallow: /ads.txt
+Disallow: /shoot.html
+Disallow: /ids.txt
+
+# Allow all other access
+User-agent: *
+Allow: /
