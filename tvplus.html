@@ -1,416 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
-    <meta property="og:description" content="Explore a world of free movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
-    <meta property="og:url" content="https://dashflix.top/home.html"/>
-    <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-    <meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Discover classics and the latest releases for streaming."/>
-    <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
-<link rel="stylesheet" href="style.css"/>
-    <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-
-    <title>Live Broadcast - Watch Free Movies and TV Series Online</title>
-    <script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamer</title>
+  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styly.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2412399424552673"crossorigin="anonymous"></script>
 </head>
-<!--<div class="terra">
-<script type="text/javascript">
-         	atOptions = {
-         		'key' : '31659dfd382d23627d3b20f3dae9ec68',
-         		'format' : 'iframe',
-         		'height' : 90,
-         		'width' : 728,
-         		'params' : {}
-         	};
-         	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></scr' + 'ipt>');
-        </script></div>-->
 <body oncontextmenu="return false;">
 <header>
 <nav>
-<div class="logo-title-container">
-<div class="logo-container">
-<img alt="Dashflix Logo"  src="https://i.postimg.cc/qMFTZzvm/logodf.webp"/>
-</div>
-</div>
-<div class="nav-links">
-<ul>
-<li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-<li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-</ul>
-</div>
+  <div class="logo-title-container">
+  <div class="logo-container">
+  <img alt="Dashflix Logo"  src="https://i.postimg.cc/qMFTZzvm/logodf.webp"/>
+  </div>
+  </div>
+  <div class="nav-links">
+  <ul>
+  <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+  </ul>
+  </div>
 </nav>
-</header>
-<!--<div class="terra">
-<script type="text/javascript">
-    atOptions = {
-            'key' : '31659dfd382d23627d3b20f3dae9ec68',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-          document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></scr' + 'ipt>');
-   </script>
-</div>-->
+  </header>
+  <div class="sharethis-inline-share-buttons"></div>
+  <main class="channel-layout">
+    <div class="player-wrapper">
+      <div class="sticky">
+        <div class="video-wrapper">
+          <video preload="none" id="player" autoplay controls crossorigin></video>
+        </div>
+        <div class="label">Now Playing</div>
+        <h2 id="channel-playing"> </h2>
+      </div>
+    </div>
 
-<!--<div class="terra">
-<script type="text/javascript">
-    atOptions = {
-     'key' : '29a679982b44db55fa95b90dfb3fac2f',
-     'format' : 'iframe',
-     'height' : 50,
-     'width' : 320,
-     'params' : {}
-   };
-   document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></scr' + 'ipt>');
-   </script>
-</div>-->
-<div class="sharethis-inline-share-buttons"></div>
-<div class="gallery" id="gallery-container">
-
-  <figure data-requested="true">
-    <!--<a href="https://play.google.com/store/apps/details?id=com.dashtroyer.dashflix">-->
-      <a href="appdown.html">
-    <img alt="Dashflix Android App" class="defer-image" data-src="https://i.postimg.cc/zB9gYVV9/DOWN-APP.png" height="320" width="240"/>
-   </a>
-   <figcaption>
-    Download our APP
-   </figcaption>
-  </figure>
-
-  <!--<figure>
-    <a href="stream/CNN">
-    <img alt="CNN Live News" class="defer-image" data-src="https://i.postimg.cc/jqPXPVWT/cnn-i.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    CNN Live News 🇺🇸
-   </figcaption>
- </figure>-->
-  <figure>
-    <a href="stream/BBC">
-    <img alt="BBC Live News" class="defer-image" data-src="https://i.postimg.cc/XqFMwsRJ/bbc-uk.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    BBC News 🇬🇧
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/Sky Sports">
-    <img alt="Sky Sports" class="defer-image" data-src="https://i.postimg.cc/SNbkSHqZ/ss.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Sky Sports 🇬🇧
-   </figcaption>
-  </figure>-->
-  <figure>
-    <a href="stream/Cartoon Network SEA">
-    <img alt="Cartoon Network SEA" class="defer-image" data-src="https://i.postimg.cc/ZRb4N3gg/cn.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Cartoon Network
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Animax">
-    <img alt="Animax" class="defer-image" data-src="https://i.postimg.cc/VNL4xkbM/animax.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Animax
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Fox News">
-    <img alt="Fox News" class="defer-image" data-src="https://i.postimg.cc/Ss8LpPHk/fox-news.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Fox News 🇺🇸
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/PBS Kids">
-    <img alt="PBS Kids" class="defer-image" data-src="https://i.postimg.cc/tgfmXXqM/pbsk.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    PBS Kids 🇺🇸
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/BBC One">
-    <img alt="BBC One" class="defer-image" data-src="https://i.postimg.cc/QMmsYYYn/bbc-one.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    BBC One 🇬🇧
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Sky News UK">
-    <img alt="Sky News" class="defer-image" data-src="https://i.postimg.cc/T3L3CyXh/sn.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Sky News 🇬🇧
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/Channel 5">
-    <img alt="Channel 5" class="defer-image" data-src="https://i.postimg.cc/RVVxFZ1P/ch-5.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Channel 5 🇬🇧
-   </figcaption>
- </figure>
-  <figure>
-    <a href="stream/PBS">
-    <img alt="PBS" class="defer-image" data-src="https://i.postimg.cc/SsxNpfKr/pbs.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    PBS
-   </figcaption>
-  </figure>-->
-  <figure>
-    <a href="stream/HBO">
-    <img alt="HBO" class="defer-image" data-src="https://i.postimg.cc/4ytRTXQw/hbo.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    HBO 🇺🇸
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Bloomberg TV">
-    <img alt="Bloomberg TV" class="defer-image" data-src="https://i.postimg.cc/WbV66RFJ/bb.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Bloomberg TV 🇺🇸
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/AMG TV">
-    <img alt="AMG TV" class="defer-image" data-src="https://i.postimg.cc/ncCGnkJz/amg.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    AMG TV 🇺🇸
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/RT">
-    <img alt="Russia Today" class="defer-image" data-src="https://i.postimg.cc/N0KKrP8T/RT.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Russia Today 🇷🇺
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/MSNBC">
-    <img alt="MSNBC" class="defer-image" data-src="https://i.postimg.cc/Gp1Tyj2m/msnbc.webp" height="320" width="240"/>
-    <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    MSNBC 🇺🇸
-   </figcaption>
- </figure>-->
-  <figure>
-    <a href="stream/CNBC">
-    <img alt="CNBC" class="defer-image" data-src="https://i.postimg.cc/dt7rzBS5/cnbc.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    CNBC 🇺🇸
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/CBS">
-    <img alt="CBS" class="defer-image" data-src="https://i.postimg.cc/qBX92Bvc/cbs.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    CBS 🇺🇸
-   </figcaption>
- </figure>
-  <figure>
-    <a href="stream/MTV">
-    <img alt="MTV" class="defer-image" data-src="https://i.postimg.cc/90pD54Ht/mtv.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    MTV 🇺🇸
-   </figcaption>
-  </figure>-->
-  <figure>
-    <a href="stream/Al Jazeera E">
-    <img alt="Al Jazeera English" class="defer-image" data-src="https://i.postimg.cc/vmr4x9mR/al-jazeera-e.png" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Al Jazeera English 🇶🇦
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Al Jazeera A">
-    <img alt="Al Jazeera Arabic" class="defer-image" data-src="https://i.postimg.cc/FzMppq2C/al-jazeera-a.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Al Jazeera Arabic 🇶🇦
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Dubai Sports 1">
-    <img alt="Dubai Sports 1" class="defer-image" data-src="https://i.postimg.cc/9fMH9wV8/dxbs1.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Dubai Sports 1 🇦🇪
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Sharjah Sports">
-    <img alt="Sharjah Sports" class="defer-image" data-src="https://i.postimg.cc/QtBpkBR8/sharjah.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Sharjah Sports 🇦🇪
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/Al Arabiya">
-    <img alt="Al Arabiya" class="defer-image" data-src="https://i.postimg.cc/v8SHWHwT/aa.png" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Al Arabiya
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/MBC 1">
-    <img alt="MBC 1" class="defer-image" data-src="https://i.postimg.cc/HkmC0Ld1/mbc.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    MBC 1
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/Cartoon Network">
-    <img alt="Cartoon Network" class="defer-image" data-src="https://i.postimg.cc/NM66LsGf/Cartoon-Network.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Cartoon Network 🇵🇭
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/GMA">
-    <img alt="GMA Pinoy TV" class="defer-image" data-src="https://i.postimg.cc/wBxFCs9c/gma.png" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    GMA Pinoy TV 🇵🇭
-   </figcaption>
- </figure>-->
-  <figure>
-    <a href="stream/Myx">
-    <img alt="Myx" class="defer-image" data-src="https://i.postimg.cc/NG1cSBsL/myx.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    Myx 🇵🇭
-   </figcaption>
-  </figure>
-  <!--<figure>
-    <a href="stream/TV 5">
-    <img alt="TV 5" class="defer-image" data-src="https://i.postimg.cc/yWqSrBsF/tv5.png" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    TV 5 🇵🇭
-   </figcaption>
-  </figure>
-  <figure>
-    <a href="stream/NASA">
-    <img alt="NASA TV Live Space Station" class="defer-image" data-src="https://i.postimg.cc/t4PLX8gJ/NASA.webp" height="320" width="240"/>
-   <span class="tag cam">Live🔥</span></a>
-   <figcaption>
-    NASA TV Live Space Station
-   </figcaption>
- </figure>-->
-
-</div>
+    <div class="channel-list-wrapper">
+      <h1>Channels</h1>
+      <ul class="channel-list"></ul>
+    </div>
+  </main>
 <div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
-<script>
-const items = document.querySelectorAll('figure');
-const itemsToShow = 16; // Number of items to reveal on each scroll
-let lastShownIndex = 0;
-
-function revealItems() {
-  for (let i = lastShownIndex; i < lastShownIndex + itemsToShow; i++) {
-    if (i < items.length) {
-      items[i].style.display = 'block';
-    }
-  }
-  lastShownIndex += itemsToShow;
-}
-
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const documentHeight = document.body.clientHeight;
-
-  if (scrollPosition >= documentHeight - 300) {
-    revealItems();
-  }
-});
-
-// Initially reveal the first set of items
-revealItems();
-    </script>
-<script>function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function loadImages() {
-    const imagesToLoad = document.querySelectorAll('.defer-image');
-
-    imagesToLoad.forEach((image) => {
-        if (isInViewport(image)) {
-            const imgUrl = image.getAttribute('data-src');
-            if (imgUrl) {
-                const img = new Image();
-                img.src = imgUrl;
-                img.onload = () => {
-                    image.setAttribute('src', imgUrl);
-                    image.classList.remove('defer-image');
-                };
-            }
-        }
-    });
-}
-
-window.addEventListener('scroll', loadImages);
-window.addEventListener('resize', loadImages);
-
-loadImages();
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  function loadStylesheets() {
-    function loadStylesheet(href) {
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = href;
-      link.type = 'text/css';
-      link.media = 'all';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    }
-
-    // Load Font Awesome stylesheet
-    loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    // Load Google Fonts stylesheet
-    loadStylesheet('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap');
-  }
-
-  if (window.addEventListener) {
-    window.addEventListener('load', loadStylesheets, false);
-  } else if (window.attachEvent) {
-    window.attachEvent('onload', loadStylesheets);
-  } else {
-    window.onload = loadStylesheets;
-  }
-</script>
 <script>
         const goToTopButton = document.getElementById('go-to-top-button');
 
@@ -428,6 +64,9 @@ loadImages();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script src="hls.js"></script>
+<script src="scripty.js"></script>
 </body>
 </html>
