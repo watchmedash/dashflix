@@ -10,11 +10,8 @@ Disallow: /dump/
 Disallow: /anime/
 Disallow: /stream/
 Disallow: /images/
-
-Disallow: /ads.txt
 Disallow: /shoot.html
-Disallow: /ids.txt
 
 # Allow all other access
 User-agent: *
-Allow: /
+Allow: /ads.txt
