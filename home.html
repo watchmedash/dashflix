@@ -17373,12 +17373,9 @@
   }
 </script>
 
-
-         <div id="go-to-top-button" class="floating-button">
-                 <div class="arrow-up"></div>
-             </div>
-             <script>
-             const items = document.querySelectorAll('figure');
+<div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
+<script>
+const items = document.querySelectorAll('figure');
 const itemsToShow = 16; // Number of items to reveal on each scroll
 let lastShownIndex = 0;
 
@@ -17400,7 +17397,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Initially reveal the first set of items
 revealItems();
     </script>
 <script>function isInViewport(element) {
@@ -17466,23 +17462,22 @@ loadImages();
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
-        const goToTopButton = document.getElementById('go-to-top-button');
+const goToTopButton = document.getElementById('go-to-top-button');
 
-        // Show or hide the button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) { // Adjust the value to control when the button appears
-                goToTopButton.style.display = 'block';
-            } else {
-                goToTopButton.style.display = 'none';
-            }
-        });
+window.addEventListener('scroll', function() {
+if (window.scrollY > 300) { // Adjust the value to control when the button appears
+goToTopButton.style.display = 'block';
+} else {
+goToTopButton.style.display = 'none';
+}
+});
 
-        goToTopButton.addEventListener('click', function() {
-            // Scroll to the top of the page smoothly
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
-    <script src="script.js"></script>
+goToTopButton.addEventListener('click', function() {
+
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+<script src="script.js"></script>
 <script type='text/javascript' src='//perilastronaut.com/2c/b3/58/2cb358f01e92d538b457df693b8d24e8.js'></script>
 </body>
 </html>
