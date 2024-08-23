@@ -4,12 +4,7 @@ User-agent: ia_archiver
 Disallow: /
 
 User-agent: *
-Disallow: /movies/
-Disallow: /series/
-Disallow: /dump/
-Disallow: /anime/
 Disallow: /stream/
-Disallow: /images/
 Disallow: /shoot.html
 
 # Allow all other access
