@@ -10,3 +10,4 @@ Disallow: /shoot.html
 # Allow all other access
 User-agent: *
 Allow: /ads.txt
+Allow: /home.html
