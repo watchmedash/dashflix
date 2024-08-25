@@ -17689,6 +17689,81 @@ goToTopButton.addEventListener('click', function() {
 window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.hot');
+    const items = Array.from(container.children);
+
+    function initializePositions() {
+        items.forEach(item => {
+            item.style.transform = ''; // Reset any transformations
+            item.classList.remove('glow'); // Remove glow class initially
+        });
+    }
+
+    function shuffleItems() {
+        const [firstIndex, secondIndex] = getRandomPair(items.length);
+
+        const firstItem = items[firstIndex];
+        const secondItem = items[secondIndex];
+
+        // Calculate position differences
+        const firstRect = firstItem.getBoundingClientRect();
+        const secondRect = secondItem.getBoundingClientRect();
+        const deltaX = secondRect.left - firstRect.left;
+        const deltaY = secondRect.top - firstRect.top;
+
+        // Apply glow class to both items
+        firstItem.classList.add('glow');
+        secondItem.classList.add('glow');
+
+        // Apply the translation transforms for both items
+        firstItem.style.transition = 'transform 2s ease';
+        secondItem.style.transition = 'transform 2s ease';
+        firstItem.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        secondItem.style.transform = `translate(${-deltaX}px, ${-deltaY}px)`;
+
+        // Function to handle end of transition
+        function handleTransitionEnd() {
+            // Reset transformations and remove glow effect
+            firstItem.style.transform = '';
+            secondItem.style.transform = '';
+            firstItem.classList.remove('glow');
+            secondItem.classList.remove('glow');
+
+            // Swap elements in the DOM
+            container.insertBefore(secondItem, firstItem);
+
+            // Update items array to reflect new order
+            [items[firstIndex], items[secondIndex]] = [items[secondIndex], items[firstIndex]];
+
+            // Remove transition end event listeners to avoid multiple triggers
+            firstItem.removeEventListener('transitionend', handleTransitionEnd);
+            secondItem.removeEventListener('transitionend', handleTransitionEnd);
+        }
+
+        // Attach transition end events
+        firstItem.addEventListener('transitionend', handleTransitionEnd);
+        secondItem.addEventListener('transitionend', handleTransitionEnd);
+    }
+
+    function getRandomPair(length) {
+        const first = Math.floor(Math.random() * length);
+        let second = Math.floor(Math.random() * length);
+        while (second === first) {
+            second = Math.floor(Math.random() * length);
+        }
+        return [first, second];
+    }
+
+    // Shuffle items every 5 seconds
+    setInterval(shuffleItems, 5000);
+
+    // Initialize positions on load
+    initializePositions();
+});
+
+</script>
 <script src="script.js"></script>
 <script type='text/javascript' src='//perilastronaut.com/2c/b3/58/2cb358f01e92d538b457df693b8d24e8.js'></script>
 </body>
