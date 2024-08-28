@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const popups = {
         popup1: new Popup({
             id: "popup1",
-            title: "TV Shows",
+            title: "",
             content: `
                 1. We've moved our TV shows to {a-https://dash-tv.com}[Dash TV].
                 2. Go to {a-https://dash-tv.com}[dash-tv.com] and start watching.
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup3: new Popup({
             id: "popup3",
-            title: "Disclaimer",
+            title: "",
             content: `
                 Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.
                 `,
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup8: new Popup({
             id: "popup8",
-            title: "18+",
+            title: "",
             backgroundColor: "#FF0000",
             titleColor: "#FFF",
             textColor: "#FFF",
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }),
         countdown: new Popup({
             id: "countdown",
-            title: "Redirecting...",
+            title: "",
             content: "You will be redirected shortly. Please wait...",
             backgroundColor: "#000",
             titleColor: "#fff",
