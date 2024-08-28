@@ -29,20 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000); // Redirect after 3 seconds
             }
         },
-        popup3: new Popup({
+        popup3: {
             id: "popup3",
-            title: "",
-            content: `
-                Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.
-                `,
-            sideMargin: "2.9vw",
-            titleColor: "#fff",
-            textColor: "#fff",
-            backgroundColor: "#222",
-            closeColor: "#fff",
-            fontSizeMultiplier: 1.2,
-            linkColor: "#888",
-        }),
+            redirectUrl: "https://kabayan.top", // Replace with your desired URL
+            redirect: function() {
+                window.location.href = this.redirectUrl;
+            }
+        },
         popup4: {
             id: "popup4",
             redirectUrl: "tvplus.html", // Replace with your desired URL
@@ -124,6 +117,16 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           });
       });
+      document.querySelectorAll('.popup-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const popupId = this.getAttribute('data-popup');
+                if (popupId === 'popup3') {
+                    popups.popup3.redirect();
+                } else if (popups[popupId]) {
+                    popups[popupId].show();
+                }
+            });
+        });
       document.querySelectorAll('.popup-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const popupId = this.getAttribute('data-popup');
