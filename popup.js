@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
             id: "popup1",
             title: "",
             content: `
-                1. We've moved our TV shows to {a-https://dash-tv.com}[Dash TV].
-                2. Go to {a-https://dash-tv.com}[dash-tv.com] and start watching.
-                3. Download Dash TV app {a-https://www.mediafire.com/file/o4w5p75zp2bzrau/Dash-TV.apk/file}[here].
+                We've moved our TV shows to {a-https://dash-tv.com}[Dash TV].
+                Go to {a-https://dash-tv.com}[dash-tv.com] and start watching.
+                Download Dash TV app {a-https://www.mediafire.com/file/o4w5p75zp2bzrau/Dash-TV.apk/file}[here].
                 `,
             backgroundColor: "#000",
             titleColor: "#fff",
