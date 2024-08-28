@@ -62,9 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup7: {
             id: "popup7",
-            redirectUrl: "appdown.html", // Replace with your desired URL
-            redirect: function() {
-                window.location.href = this.redirectUrl;
+            redirectUrl: "https://dashtoons.xyz", // Replace with your desired URL
+            showCountdown: function() {
+                popups.countdown.show(); // Show countdown popup
+                setTimeout(() => {
+                    window.location.href = this.redirectUrl;
+                }, 3000); // Redirect after 3 seconds
             }
         },
         popup8: new Popup({
@@ -131,6 +134,16 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       });
       document.querySelectorAll('.popup-btn').forEach(button => {
+          button.addEventListener('click', function() {
+              const popupId = this.getAttribute('data-popup');
+              if (popupId === 'popup7') {
+                  popups.popup7.showCountdown();
+              } else if (popups[popupId]) {
+                  popups[popupId].show();
+              }
+          });
+      });
+      document.querySelectorAll('.popup-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const popupId = this.getAttribute('data-popup');
                 if (popupId === 'popup5') {
@@ -150,14 +163,4 @@ document.addEventListener('DOMContentLoaded', function() {
                   }
               });
           });
-          document.querySelectorAll('.popup-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    const popupId = this.getAttribute('data-popup');
-                    if (popupId === 'popup7') {
-                        popups.popup7.redirect();
-                    } else if (popups[popupId]) {
-                        popups[popupId].show();
-                    }
-                });
-            });
 });
