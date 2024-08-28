@@ -31,9 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup3: {
             id: "popup3",
-            redirectUrl: "https://kabayan.top", // Replace with your desired URL
-            redirect: function() {
-                window.location.href = this.redirectUrl;
+            redirectUrl: "https://freedomwall.top", // Replace with your desired URL
+            showCountdown: function() {
+                popups.countdown.show(); // Show countdown popup
+                setTimeout(() => {
+                    window.location.href = this.redirectUrl;
+                }, 3000); // Redirect after 3 seconds
             }
         },
         popup4: {
@@ -118,15 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
           });
       });
       document.querySelectorAll('.popup-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const popupId = this.getAttribute('data-popup');
-                if (popupId === 'popup3') {
-                    popups.popup3.redirect();
-                } else if (popups[popupId]) {
-                    popups[popupId].show();
-                }
-            });
-        });
+          button.addEventListener('click', function() {
+              const popupId = this.getAttribute('data-popup');
+              if (popupId === 'popup3') {
+                  popups.popup3.showCountdown();
+              } else if (popups[popupId]) {
+                  popups[popupId].show();
+              }
+          });
+      });
       document.querySelectorAll('.popup-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const popupId = this.getAttribute('data-popup');
