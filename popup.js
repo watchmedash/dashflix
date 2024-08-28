@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup3: {
             id: "popup3",
-            redirectUrl: "https://freedomwall.top", // Replace with your desired URL
+            redirectUrl: "https://kabayan.top", // Replace with your desired URL
             showCountdown: function() {
                 popups.countdown.show(); // Show countdown popup
                 setTimeout(() => {
