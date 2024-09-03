@@ -2,10 +2,3 @@ Sitemap: https://dashflix.top/sitemap.xml
 
 User-agent: ia_archiver
 Disallow: /
-
-User-agent: *
-Disallow: /stream/
-Disallow: /shoot.html
-
-User-agent: *
-Allow: /ads.txt
