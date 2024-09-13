@@ -47,23 +47,6 @@
 </nav>
 </header>
 <!--<div class="image-contained"><a href="https://dash-tv.com"><img src="https://i.postimg.cc/T11ZV59f/dash-tv-ad.gif" alt="Watch TV Shows Online Free"></a></div>-->
-<div class="hot">
-<a class="movie-link" href="#" onclick='redirectTo("https://emirati.top/movies/Trap")'>
-<img alt="Trap" class="defer-image" data-src="https://images.justwatch.com/poster/318282031/s718/trap-2024.jpg" height="320" width="240"/>
-</a>
-<a class="movie-link" href="#" onclick='redirectTo("https://emirati.top/movies/Paluwagan")'>
-<img alt="Paluwagan" class="defer-image" data-src="https://image.tmdb.org/t/p/original/fRitRV90rkSlGQICZO7xUMjnVx7.jpg" height="320" width="240"/>
-</a>
-<a class="movie-link" href="#" onclick='redirectTo("https://dashflix.top/movies/Deadpool and Wolverine")'>
-<img alt="Deadpool and Wolverine" class="defer-image" data-src="https://m.media-amazon.com/images/M/MV5BNDA3MmYzOWEtYWZhNS00ZmU3LWJkYmUtODBjMzQyNzMxYmZhXkEyXkFqcGc@._V1_SX300.jpg" height="320" width="240"/>
-</a>
-<a class="movie-link" href="#" onclick='redirectTo("https://emirati.top/movies/Beetlejuice Beetlejuice")'>
-<img alt="Beetlejuice Beetlejuice" class="defer-image" data-src="https://m.media-amazon.com/images/M/MV5BNjdiMjk1NzItZDk2ZS00ODc1LTg2ZGEtYjIwNmVmNGJlZmU0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg" height="320" width="240"/>
-</a>
-<a class="movie-link" href="#" onclick='redirectTo("https://emirati.top/movies/Rebel Ridge")'>
-<img alt="Rebel Ridge" class="defer-image" data-src="https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster.png/0/images/masterrepository/Fandango/237368/rebel_ridge.jpg" height="320" width="240"/>
-</a>
-</div>
 <div class="announcement-banner">
 <p>Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.</p>
 </div>
@@ -1818,7 +1801,6 @@ window.addEventListener('resize', loadImages);
 
 loadImages();
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 function loadStylesheets() {
 function loadStylesheet(href) {
@@ -1842,8 +1824,6 @@ window.attachEvent('onload', loadStylesheets);
 window.onload = loadStylesheets;
 }
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
 const goToTopButton = document.getElementById('go-to-top-button');
 
@@ -1860,81 +1840,8 @@ goToTopButton.addEventListener('click', function() {
 window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.hot');
-    const items = Array.from(container.children);
-
-    function initializePositions() {
-        items.forEach(item => {
-            item.style.transform = ''; // Reset any transformations
-            item.classList.remove('glow'); // Remove glow class initially
-        });
-    }
-
-    function shuffleItems() {
-        const [firstIndex, secondIndex] = getRandomPair(items.length);
-
-        const firstItem = items[firstIndex];
-        const secondItem = items[secondIndex];
-
-        // Calculate position differences
-        const firstRect = firstItem.getBoundingClientRect();
-        const secondRect = secondItem.getBoundingClientRect();
-        const deltaX = secondRect.left - firstRect.left;
-        const deltaY = secondRect.top - firstRect.top;
-
-        // Apply glow class to both items
-        firstItem.classList.add('glow');
-        secondItem.classList.add('glow');
-
-        // Apply the translation transforms for both items
-        firstItem.style.transition = 'transform 2s ease';
-        secondItem.style.transition = 'transform 2s ease';
-        firstItem.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-        secondItem.style.transform = `translate(${-deltaX}px, ${-deltaY}px)`;
-
-        // Function to handle end of transition
-        function handleTransitionEnd() {
-            // Reset transformations and remove glow effect
-            firstItem.style.transform = '';
-            secondItem.style.transform = '';
-            firstItem.classList.remove('glow');
-            secondItem.classList.remove('glow');
-
-            // Swap elements in the DOM
-            container.insertBefore(secondItem, firstItem);
-
-            // Update items array to reflect new order
-            [items[firstIndex], items[secondIndex]] = [items[secondIndex], items[firstIndex]];
-
-            // Remove transition end event listeners to avoid multiple triggers
-            firstItem.removeEventListener('transitionend', handleTransitionEnd);
-            secondItem.removeEventListener('transitionend', handleTransitionEnd);
-        }
-
-        // Attach transition end events
-        firstItem.addEventListener('transitionend', handleTransitionEnd);
-        secondItem.addEventListener('transitionend', handleTransitionEnd);
-    }
-
-    function getRandomPair(length) {
-        const first = Math.floor(Math.random() * length);
-        let second = Math.floor(Math.random() * length);
-        while (second === first) {
-            second = Math.floor(Math.random() * length);
-        }
-        return [first, second];
-    }
-
-    // Shuffle items every 5 seconds
-    setInterval(shuffleItems, 5000);
-
-    // Initialize positions on load
-    initializePositions();
-});
-
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
 <script src="popup.js"></script>
 </body>
