@@ -66,12 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Use the trimmed title to construct the image URL and link
       link.href = `https://emirati.top/movies/${encodeURIComponent(trimmedTitle)}.html`;
 
-      // Add a click event listener to redirect to redirect.html
-      link.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent the default link behavior
-        redirectToRedirectPage(trimmedTitle);
-      });
-
       li.dataset.tooltip = item.imageSrc; // Use the imageSrc property for the tooltip
       li.appendChild(link);
       ul.appendChild(li);
@@ -108,12 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       li.appendChild(tooltip);
     });
-  }
-
-  function redirectToRedirectPage(movieTitle) {
-    // Set the destination URL and redirect to redirect.html
-    const destinationUrl = `redirect.html?url=https://emirati.top/movies/${encodeURIComponent(movieTitle)}.html`;
-    window.location.href = destinationUrl;
   }
 
   // Load movie data when the page loads
