@@ -1,31 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let movieData; // Declare movieData here
+  let movieData = []; // Initialize an empty array to hold all movie data
 
-  // Function to load movie data from "home.html"
-  function loadMovieData() {
-    fetch('home.html')
+  // Function to load a single movie part JSON file
+  function loadMoviePart(partUrl) {
+    return fetch(partUrl)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        return response.text();
+        return response.json();
       })
-      .then((html) => {
-        const tempElement = document.createElement('div');
-        tempElement.innerHTML = html;
+      .then((json) => json.movies)
+      .catch((error) => {
+        console.error(`Error loading ${partUrl}:`, error);
+        return []; // Return an empty array if there's an error
+      });
+  }
 
-        // Include figures with and without the data-requested attribute
-        const movieFigures = tempElement.querySelectorAll('figure');
-        movieData = Array.from(movieFigures).map((figure) => {
-          const title = figure.querySelector("figcaption").textContent;
-          const imageSrc = figure.querySelector("img.defer-image").getAttribute("data-src");
-          return { title, imageSrc };
-        });
+  // Function to load all movie parts and merge the data
+  function loadAllMovieData() {
+    const movieParts = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json']; // Add more parts if needed
 
-        // Debugging: Log the loaded movie data
-        console.log("Movie Data Loaded:", movieData);
+    // Use Promise.all to load all parts asynchronously
+    Promise.all(movieParts.map(loadMoviePart))
+      .then((allParts) => {
+        // Merge all parts into movieData array
+        movieData = allParts.flat();
 
-        // Perform initial search
+        // Debugging: Log the merged movie data
+        console.log("All Movie Data Loaded:", movieData);
+
+        // Perform initial search (if needed)
         performSearch(movieData);
       })
       .catch((error) => {
@@ -66,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Use the trimmed title to construct the image URL and link
       link.href = `https://emirati.top/movies/${encodeURIComponent(trimmedTitle)}.html`;
 
-      li.dataset.tooltip = item.imageSrc; // Use the imageSrc property for the tooltip
+      li.dataset.tooltip = item.image; // Use the image property for the tooltip
       li.appendChild(link);
       ul.appendChild(li);
     });
@@ -104,8 +109,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Load movie data when the page loads
-  loadMovieData();
+  // Load all movie data when the page loads
+  loadAllMovieData();
 
   const searchInput = document.getElementById("searchInput");
   searchInput.addEventListener("input", () => performSearch(movieData));
