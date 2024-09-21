@@ -1,6 +1,18 @@
 {
     "movies": [
-        {
+      {
+          "title": "Kiskisan",
+          "link": "https://emirati.top/movies/Kiskisan",
+          "image": "https://image.tmdb.org/t/p/original/tMnohkladWXhNN69F9uHQ2cOKhG.jpg",
+          "tag": "HD"
+      },
+      {
+          "title": "Hellboy The Crooked Man",
+          "link": "https://emirati.top/movies/Hellboy The Crooked Man",
+          "image": "https://image.tmdb.org/t/p/original/iz2GabtToVB05gLTVSH7ZvFtsMM.jpg",
+          "tag": "cam"
+      },
+      {
             "title": "The Crow",
             "link": "https://emirati.top/movies/The Crow",
             "image": "https://m.media-amazon.com/images/M/MV5BMjEyOWJjMWQtZTY4Yi00ZjYyLWJhNDktZmRkNzEwMjlhZjQ3XkEyXkFqcGc@._V1_.jpg",
@@ -148,6 +160,42 @@
             "title": "Jackpot",
             "link": "https://emirati.top/movies/Jackpot",
             "image": "https://image.tmdb.org/t/p/original/fOsamTFIyGxjw1jLSKdZYxQBJOT.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "Land of Happiness",
+            "link": "https://emirati.top/movies/Land of Happiness",
+            "image": "https://image.tmdb.org/t/p/original/c5xAVbSdJYNVjAqBm9ejjA5BCkI.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "Curse of the Sin Eater",
+            "link": "https://emirati.top/movies/Curse of the Sin Eater",
+            "image": "https://image.tmdb.org/t/p/original/usae85RrxTYNEMwKYnmUXpXdgUU.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "This Time Next Year",
+            "link": "https://emirati.top/movies/This Time Next Year",
+            "image": "https://image.tmdb.org/t/p/original/ckLPzRl9ZDHzNt4tDjkTGUyCYg7.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "Omni Loop",
+            "link": "https://emirati.top/movies/Omni Loop",
+            "image": "https://image.tmdb.org/t/p/original/aKrwq3HeyFcl5MXb7tcsileoF9I.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "Arap Kadri",
+            "link": "https://emirati.top/movies/Arap Kadri",
+            "image": "https://image.tmdb.org/t/p/original/4JnfCypNLU2zQFWqp96elodAA20.jpg",
+            "tag": "HD"
+        },
+        {
+            "title": "Britains Atomic Bomb Scandal",
+            "link": "https://emirati.top/movies/Britains Atomic Bomb Scandal",
+            "image": "https://image.tmdb.org/t/p/original/mhW1psNeQUE9TnqWpaDu9NDA0BI.jpg",
             "tag": "HD"
         },
         {
