@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="og:title" content="Movies - Watch Free Movies and TV Series Online"/>
-    <meta property="og:description" content="Explore a world of free movies and TV series online at Wacth Me Now. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
-    <meta property="og:url" content="https://dashflix.top"/>
-    <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-    <meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Discover classics and the latest releases for streaming."/>
-    <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Movies - Watch Free Movies and TV Series Online"/>
+<meta property="og:description" content="Explore a world of free movies and TV series online at Wacth Me Now. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+<meta property="og:url" content="https://dashflix.top"/>
+<meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+<meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Discover classics and the latest releases for streaming."/>
+<meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-    <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap"/>
-    <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+<link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap"/>
+<link rel="stylesheet" href="style.css"/>
 
-    <title>Requested - Watch Free Movies and TV Series Online</title>
-    <script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
-    <script type="text/javascript" data-cfasync="false">
-    /*<![CDATA[/* */
-    (function(){var e=window,b="c00d3228cec853e09a9ac08c94ff4e51",u=[["siteId",844-716+886+5126975],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],s=["d3d3LmJldHRlcmFkc3lzdGVtLmNvbS9jSmNyb3AubWluLmNzcw==","ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvQy9iYW1hemV1aS5taW4uanM="],p=-1,x,r,v=function(){clearTimeout(r);p++;if(s[p]&&!(1751341755000<(new Date).getTime()&&1<p)){x=e.document.createElement("script");x.type="text/javascript";x.async=!0;var o=e.document.getElementsByTagName("script")[0];x.src="https://"+atob(s[p]);x.crossOrigin="anonymous";x.onerror=v;x.onload=function(){clearTimeout(r);e[b.slice(0,16)+b.slice(0,16)]||v()};r=setTimeout(v,5E3);o.parentNode.insertBefore(x,o)}};if(!e[b]){try{Object.freeze(e[b]=u)}catch(e){}v()}})();
-    /*]]>/* */
-    </script>
+<title>Requested - Watch Free Movies and TV Series Online</title>
+<script async="" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
 </head>
 <body oncontextmenu="return false;">
 <header>
@@ -44,46 +39,111 @@
   <p>Looking for certain movie?</p>
 <p>REQUEST IT NOW BY <a href="request.html">>>CLICKING HERE<<</a></p>
 </div>
-<!--<div class="image-contained">
-<a href="contact.html"><img src="https://i.postimg.cc/qBNZLRC8/YOUR-AD-HERE.png" alt="ad"></a>
- </div>-->
- <!-- Yandex.RTB R-A-11706018-1 -->
+
 <div class="sharethis-inline-share-buttons"></div>
-         <div class="gallery" id="requested-items">
-                 <!-- Requested items will be displayed here -->
-             </div>
-             <script>
-             // Define the URL of your home.html page
-             const homePageURL = 'home.html';
+ <div class="gallery" id="requested-items">
 
-             // Function to fetch and process the content
-             async function fetchAndDisplayRequestedItems() {
-                 try {
-                     const response = await fetch(homePageURL);
-                     if (response.ok) {
-                         const htmlContent = await response.text();
-                         const parser = new DOMParser();
-                         const doc = parser.parseFromString(htmlContent, 'text/html');
-                         const requestedItems = doc.querySelectorAll('figure[data-requested="true"]');
-                         const requestedItemsContainer = document.getElementById('requested-items');
+ </div>
+ <div class="gallery" id="requested-items">
+ </div>
 
-                         requestedItems.forEach((item) => {
-                             requestedItemsContainer.appendChild(item.cloneNode(true));
-                         });
-                     }
-                 } catch (error) {
-                     console.error('Error fetching and processing content:', error);
+ <div class="gallery" id="requested-items"></div>
+
+ <script>
+     // Array of JSON file URLs
+     const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
+
+     // Function to fetch and merge JSON data
+     async function fetchAndMergeJSON(files) {
+         try {
+             const responses = await Promise.all(files.map(file => fetch(file)));
+             const data = await Promise.all(responses.map(response => response.json()));
+             // Merge all movie data arrays into one
+             return data.flatMap(data => data.movies);
+         } catch (error) {
+             console.error('Error fetching JSON files:', error);
+             return [];
+         }
+     }
+
+     // Function to display requested movies
+     async function fetchAndDisplayRequestedItems() {
+         try {
+             // Fetch and merge the JSON data
+             const movies = await fetchAndMergeJSON(jsonFiles);
+             const requestedItemsContainer = document.getElementById('requested-items');
+
+             // Filter movies that have the 'requested' field set to true
+             const requestedMovies = movies.filter(movie => movie.requested);
+
+             // Loop through requested movies and create figure elements for each one
+             requestedMovies.forEach(movie => {
+                 // Create a figure element
+                 const figure = document.createElement('figure');
+                 figure.classList.add('movie-figure');
+                 figure.dataset.title = movie.title.toLowerCase();
+                 figure.dataset.requested = "true";  // Set the requested attribute
+
+                 // Create the link (a) element
+                 const anchor = document.createElement('a');
+                 anchor.href = movie.link;
+                 anchor.className = 'movie-link';
+
+                 // Create the image element
+                 const img = document.createElement('img');
+                 img.alt = movie.title;
+                 img.src = movie.image; // Directly set the src since it's requested items page
+                 img.width = 240;
+                 img.height = 320;
+
+                 // Create the tag span element (e.g., HD, TS, CAM)
+                 const span = document.createElement('span');
+                 span.className = 'tag';
+                 switch (movie.tag.toLowerCase()) {
+                     case 'hd':
+                         span.classList.add('hd');
+                         span.textContent = 'HD';
+                         break;
+                     case 'ts':
+                         span.classList.add('ts');
+                         span.textContent = 'TS';
+                         break;
+                     case 'cam':
+                         span.classList.add('cam');
+                         span.textContent = 'CAM';
+                         break;
+                     default:
+                         span.textContent = movie.tag;  // Fallback for unknown tags
                  }
-             }
 
-             // Call the function to fetch and display requested items
-             fetchAndDisplayRequestedItems();
+                 // Create the caption (figcaption) element
+                 const caption = document.createElement('figcaption');
+                 caption.textContent = movie.title;
 
-</script>
+                 // Append the image and tag to the anchor (a)
+                 anchor.appendChild(img);
+                 anchor.appendChild(span);
 
-         <div id="go-to-top-button" class="floating-button">
-                 <div class="arrow-up"></div>
-             </div>
+                 // Append the anchor and caption to the figure
+                 figure.appendChild(anchor);
+                 figure.appendChild(caption);
+
+                 // Append the figure to the requested items container
+                 requestedItemsContainer.appendChild(figure);
+             });
+
+         } catch (error) {
+             console.error('Error fetching and processing requested items:', error);
+         }
+     }
+
+     // Call the function to fetch and display requested items
+     fetchAndDisplayRequestedItems();
+ </script>
+
+ <div id="go-to-top-button" class="floating-button">
+ <div class="arrow-up"></div>
+ </div>
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
@@ -102,31 +162,31 @@
 <p class="copyright">Dashflix 2024. All rights reserved.</p>
 </footer>
 <script>function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+const rect = element.getBoundingClientRect();
+return (
+rect.top >= 0 &&
+rect.left >= 0 &&
+rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
 }
 
 function loadImages() {
-    const imagesToLoad = document.querySelectorAll('.defer-image');
+const imagesToLoad = document.querySelectorAll('.defer-image');
 
-    imagesToLoad.forEach((image) => {
-        if (isInViewport(image)) {
-            const imgUrl = image.getAttribute('data-src');
-            if (imgUrl) {
-                const img = new Image();
-                img.src = imgUrl;
-                img.onload = () => {
-                    image.setAttribute('src', imgUrl);
-                    image.classList.remove('defer-image');
-                };
-            }
-        }
-    });
+imagesToLoad.forEach((image) => {
+if (isInViewport(image)) {
+const imgUrl = image.getAttribute('data-src');
+if (imgUrl) {
+const img = new Image();
+img.src = imgUrl;
+img.onload = () => {
+image.setAttribute('src', imgUrl);
+image.classList.remove('defer-image');
+};
+}
+}
+});
 }
 
 window.addEventListener('scroll', loadImages);
@@ -135,23 +195,22 @@ window.addEventListener('resize', loadImages);
 loadImages();
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="redirection.js" defer></script>
 <script>
-        const goToTopButton = document.getElementById('go-to-top-button');
+const goToTopButton = document.getElementById('go-to-top-button');
 
-        // Show or hide the button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) { // Adjust the value to control when the button appears
-                goToTopButton.style.display = 'block';
-            } else {
-                goToTopButton.style.display = 'none';
-            }
-        });
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', function() {
+if (window.scrollY > 300) { // Adjust the value to control when the button appears
+goToTopButton.style.display = 'block';
+} else {
+goToTopButton.style.display = 'none';
+}
+});
 
-        goToTopButton.addEventListener('click', function() {
-            // Scroll to the top of the page smoothly
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+goToTopButton.addEventListener('click', function() {
+// Scroll to the top of the page smoothly
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 </script>
 </body>
 </html>

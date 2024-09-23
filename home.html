@@ -129,51 +129,74 @@ atOptions = {
             const figures = [];
 
             movies.forEach(movie => {
-                // Create a figure element
-                const figure = document.createElement('figure');
-                figure.classList.add('movie-figure');
-                figure.dataset.title = movie.title.toLowerCase();  // Store the title for easy search
+    // Create a figure element
+    const figure = document.createElement('figure');
+    figure.classList.add('movie-figure');
+    figure.dataset.title = movie.title.toLowerCase();  // Store the title for easy search
 
-                // Create the link (a) element
-                const anchor = document.createElement('a');
-                anchor.href = movie.link;
-                anchor.className = 'movie-link';
+    // Add the data-requested attribute if the movie is requested
+    if (movie.requested) {
+        figure.dataset.requested = "true";
+    }
 
-                // Create the image element with lazy loading
-                const img = document.createElement('img');
-                img.alt = movie.title;
-                img.dataset.src = movie.image; // Use data-src for lazy load
-                img.className = 'defer-image';
-                img.width = 240;
-                img.height = 320;
+    // Create the link (a) element
+    const anchor = document.createElement('a');
+    anchor.href = movie.link;
+    anchor.className = 'movie-link';
 
-                // Create the tag span element (e.g., HD)
-                const span = document.createElement('span');
-                span.className = 'tag hd';
-                span.textContent = movie.tag;
+    // Create the image element with lazy loading
+    const img = document.createElement('img');
+    img.alt = movie.title;
+    img.dataset.src = movie.image; // Use data-src for lazy load
+    img.className = 'defer-image';
+    img.width = 240;
+    img.height = 320;
 
-                // Create the caption (figcaption) element with click event
-                const caption = document.createElement('figcaption');
-                caption.textContent = movie.title;
-                caption.style.cursor = "pointer";
-                caption.addEventListener('click', () => {
-                    window.location.href = movie.link;  // Redirect to movie link on title click
-                });
+    // Create the tag span element (e.g., HD, TS, CAM)
+    const span = document.createElement('span');
+    span.className = 'tag';  // Base tag class
 
-                // Append the image and tag to the link
-                anchor.appendChild(img);
-                anchor.appendChild(span);
+    // Dynamically assign the class based on the movie's tag value
+    switch (movie.tag.toLowerCase()) {
+        case 'hd':
+            span.classList.add('hd');
+            span.textContent = 'HD';
+            break;
+        case 'ts':
+            span.classList.add('ts');
+            span.textContent = 'TS';
+            break;
+        case 'cam':
+            span.classList.add('cam');
+            span.textContent = 'CAM';
+            break;
+        default:
+            span.textContent = movie.tag;  // Fallback, in case of unknown tags
+    }
 
-                // Append the link and caption to the figure
-                figure.appendChild(anchor);
-                figure.appendChild(caption);
+    // Create the caption (figcaption) element with click event
+    const caption = document.createElement('figcaption');
+    caption.textContent = movie.title;
+    caption.style.cursor = "pointer";
+    caption.addEventListener('click', () => {
+        window.location.href = movie.link;  // Redirect to movie link on title click
+    });
 
-                // Append the figure to the gallery container
-                galleryContainer.appendChild(figure);
+    // Append the image and tag to the link
+    anchor.appendChild(img);
+    anchor.appendChild(span);
 
-                // Store the figure for search functionality
-                figures.push(figure);
-            });
+    // Append the link and caption to the figure
+    figure.appendChild(anchor);
+    figure.appendChild(caption);
+
+    // Append the figure to the gallery container
+    galleryContainer.appendChild(figure);
+
+    // Store the figure for search functionality
+    figures.push(figure);
+});
+
 
             // Implement lazy loading
             const lazyLoad = () => {
