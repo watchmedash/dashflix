@@ -1013,13 +1013,13 @@ footer .copyright {
             -webkit-box-orient: vertical;
         }
 
-/* Adjust to 4 items per row for screens smaller than 600px */
-@media screen and (max-width: 600px) {
-    .gallery figure {
-        flex: 1 0 calc(25% - 2%);
-        max-width: calc(25% - 2%);
-    }
-}
+        @media screen and (max-width: 600px) {
+            .gallery figure {
+                flex: 1 0 calc(33.33% - 2%);
+                max-width: calc(33.33% - 2%);
+            }
+        }
+
 
 /* Styles for the image and the caption */
 .gallery img {
