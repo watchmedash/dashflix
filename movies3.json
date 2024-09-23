@@ -1216,115 +1216,134 @@
             "title": "Gloria, Gloria Labandera",
             "link": "https://emirati.top/movies/Gloria Gloria Labandera",
             "image": "https://i.postimg.cc/Kv8t217R/000000375.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Tubero",
             "link": "https://emirati.top/movies/Tubero",
             "image": "https://i.postimg.cc/tgG38Nbm/000000368.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Panibugho",
             "link": "https://emirati.top/movies/Panibugho",
             "image": "https://i.postimg.cc/CL5RG68G/000000371.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Mang Kanor",
             "link": "https://emirati.top/movies/Mang Kanor",
             "image": "https://i.postimg.cc/4xhnM7Bn/000000372.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Bula",
             "link": "https://emirati.top/movies/Bula",
             "image": "https://i.postimg.cc/VLhdDB93/000000373.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Relyebo",
             "link": "https://emirati.top/movies/Relyebo",
             "image": "https://i.postimg.cc/jqZWJrDq/000000374.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Sugar Baby",
             "link": "https://emirati.top/movies/Sugar Baby",
             "image": "https://i.postimg.cc/qMyJMDvk/000000367.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Salakab",
             "link": "https://emirati.top/movies/Salakab",
             "image": "https://i.postimg.cc/W1DgbGCr/000000356.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Japino",
             "link": "https://emirati.top/movies/Japino",
             "image": "https://i.postimg.cc/kM8mrvPk/000000351.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Dos Maria\u2019s (Tunay na Kulay ng Lantang Gulay)",
             "link": "https://emirati.top/movies/Dos Marias",
             "image": "https://i.postimg.cc/DySxLT8F/000000337.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Tuhog",
             "link": "https://emirati.top/movies/Tuhog",
             "image": "https://i.postimg.cc/4xjtQytx/000000335.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Sila Ay Akin",
             "link": "https://emirati.top/movies/Sila Ay Akin",
             "image": "https://i.postimg.cc/1tM6Mjht/000000329.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Stuck in Love",
             "link": "https://emirati.top/movies/Stuck in Love",
             "image": "https://i.postimg.cc/kXGNYq5d/000000325.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "The Others",
             "link": "https://emirati.top/movies/The Others",
             "image": "https://i.postimg.cc/prGfV1q7/000000323.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Haliparot",
             "link": "https://emirati.top/movies/Haliparot",
             "image": "https://i.postimg.cc/GthPC1JG/000000322.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Ahasss",
             "link": "https://emirati.top/movies/Ahasss",
             "image": "https://i.postimg.cc/PxbKHyGs/000000311.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "The Portable Door",
             "link": "https://emirati.top/movies/The Portable Door",
             "image": "https://i.postimg.cc/YSWbnkbS/000000309.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Summer of 84",
             "link": "https://emirati.top/movies/Summer of 84",
             "image": "https://i.postimg.cc/nrkd4kTY/000000302.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "BJJ - Woman on Top",
             "link": "https://emirati.top/movies/BJJ - Woman on Top",
             "image": "https://i.postimg.cc/fRgrq8s8/000000298.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Mission - Impossible",
@@ -1444,7 +1463,8 @@
             "title": "Ligaw na Bulaklak",
             "link": "https://emirati.top/movies/Ligaw na Bulaklak",
             "image": "https://i.postimg.cc/h46Rh46C/000000257.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Grown Ups",
@@ -1690,37 +1710,43 @@
             "title": "Bisyo! Adik Ka Ba?",
             "link": "https://emirati.top/movies/Bisyo! Adik Ka Ba",
             "image": "https://i.postimg.cc/d3xsV8dn/000000238.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Sandwich",
             "link": "https://emirati.top/movies/Sandwich",
             "image": "https://i.postimg.cc/2y6jYHqV/000000237.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Manyak",
             "link": "https://emirati.top/movies/Manyak",
             "image": "https://i.postimg.cc/QtSNRLd2/000000236.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Litsoneras",
             "link": "https://emirati.top/movies/Litsoneras",
             "image": "https://i.postimg.cc/JnR467M3/000000235.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "AFAM",
             "link": "https://emirati.top/movies/AFAM",
             "image": "https://i.postimg.cc/N06jk2qf/000000234.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Hilom",
             "link": "https://emirati.top/movies/Hilom",
             "image": "https://i.postimg.cc/0NRNSd4B/000000233.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Solo A Star Wars Story",
@@ -1792,25 +1818,29 @@
             "title": "Hosto",
             "link": "https://emirati.top/movies/Hosto",
             "image": "https://i.postimg.cc/MpjTXr9B/000000232.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Lagaslas",
             "link": "https://emirati.top/movies/Lagaslas",
             "image": "https://i.postimg.cc/sDLxjR4y/000000231.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Lawa",
             "link": "https://emirati.top/movies/Lawa",
             "image": "https://i.postimg.cc/65qTxQRY/000000230.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Paupahan",
             "link": "https://emirati.top/movies/Paupahan",
             "image": "https://i.postimg.cc/T2ChsbyK/000000229.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Tayuan",
@@ -1822,97 +1852,113 @@
             "title": "Hugot",
             "link": "https://emirati.top/movies/Hugot",
             "image": "https://i.postimg.cc/6qj3Gssr/000000227.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Sugapa",
             "link": "https://emirati.top/movies/Sugapa",
             "image": "https://i.postimg.cc/mrGnCtyw/000000143.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Suki",
             "link": "https://emirati.top/movies/Suki",
             "image": "https://i.postimg.cc/zGdLRgNm/000000094.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Salamat Daks",
             "link": "https://emirati.top/movies/Salamat Daks",
             "image": "https://i.postimg.cc/vZy7v9Cc/000000074.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Summer",
             "link": "https://emirati.top/movies/Summer",
             "image": "https://i.postimg.cc/XqDK8zSW/000000040.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Kabayo",
             "link": "https://emirati.top/movies/Kabayo",
             "image": "https://i.postimg.cc/hPLZgSBQ/000000181.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Nightbird",
             "link": "https://emirati.top/movies/Nightbird",
             "image": "https://i.postimg.cc/vBxXKyhB/000000186.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Sex Games",
             "link": "https://emirati.top/movies/Sex Games",
             "image": "https://i.postimg.cc/vTRXFK2v/000000187.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Fall Guy",
             "link": "https://emirati.top/movies/Fall Guy",
             "image": "https://i.postimg.cc/J7Bd6NYq/000000179.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Kahalili",
             "link": "https://emirati.top/movies/Kahalili",
             "image": "https://i.postimg.cc/TYJ0FCVr/000000191.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Kamadora",
             "link": "https://emirati.top/movies/Kamadora",
             "image": "https://i.postimg.cc/fRWCNmC1/000000192.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Bugaw",
             "link": "https://emirati.top/movies/Bugaw",
             "image": "https://i.postimg.cc/0NbC6vLf/000000194.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Home Service",
             "link": "https://emirati.top/movies/Home Service",
             "image": "https://i.postimg.cc/W4CwgKVP/000000195.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Call Me Alma",
             "link": "https://emirati.top/movies/Call Me Alma",
             "image": "https://i.postimg.cc/prZjGcwr/000000208.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Punit na Langit",
             "link": "https://emirati.top/movies/Punit na Langit",
             "image": "https://i.postimg.cc/GtrYjnS6/000000207.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Patikim-tikim",
             "link": "https://emirati.top/movies/Patikim-tikim",
             "image": "https://i.postimg.cc/0NDbXHmv/000000224.webp",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "The Godfather Part II",

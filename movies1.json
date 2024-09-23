@@ -4,7 +4,8 @@
           "title": "Kiskisan",
           "link": "https://emirati.top/movies/Kiskisan",
           "image": "https://image.tmdb.org/t/p/original/tMnohkladWXhNN69F9uHQ2cOKhG.jpg",
-          "tag": "HD"
+          "tag": "HD",
+          "requested": true
       },
       {
           "title": "Hellboy The Crooked Man",
@@ -52,20 +53,21 @@
             "title": "Pilya",
             "link": "https://emirati.top/movies/Pilya",
             "image": "https://image.tmdb.org/t/p/original/aQCJba6669KSTHrreNlrZuLPwWQ.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Longlegs",
             "link": "https://dashflix.top/movies/Longlegs",
             "image": "https://m.media-amazon.com/images/M/MV5BMmVkZWY2ODEtYTMyYy00MDg2LWFkMGUtMjYwOTBhOGViODQzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Deadpool and Wolverine",
             "link": "https://dashflix.top/movies/Deadpool and Wolverine",
             "image": "https://m.media-amazon.com/images/M/MV5BNDA3MmYzOWEtYWZhNS00ZmU3LWJkYmUtODBjMzQyNzMxYmZhXkEyXkFqcGc@._V1_SX300.jpg",
-            "tag": "TS",
-            "requested": true
+            "tag": "TS"
         },
         {
             "title": "Inside Out 2",
@@ -635,7 +637,8 @@
             "title": "Paluwagan",
             "link": "https://emirati.top/movies/Paluwagan",
             "image": "https://image.tmdb.org/t/p/original/fRitRV90rkSlGQICZO7xUMjnVx7.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "50 kmh",
@@ -1445,7 +1448,8 @@
             "title": "Daniel Sloss Jigsaw",
             "link": "https://emirati.top/movies/Daniel%20Sloss%20Jigsaw",
             "image": "https://cdn.unifiedcommerce.com/content/product/media/large/TOM100-283_1.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Hustlers Take All",
@@ -1889,7 +1893,8 @@
             "title": "Private Tutor",
             "link": "https://emirati.top/movies/Private Tutor",
             "image": "https://image.tmdb.org/t/p/original/pi8j7lZpMa8tQOd4ylvPkSgSVRG.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Nice Girls",
@@ -2429,13 +2434,15 @@
             "title": "Ang pintor at ang paraluman",
             "link": "https://emirati.top/movies/Ang pintor at ang paraluman",
             "image": "https://m.media-amazon.com/images/M/MV5BN2IwODY1NDktMWFiZC00MmQxLWE0M2EtNDZlY2FjZTQ0MzNiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Backrider",
             "link": "https://emirati.top/movies/Backrider",
             "image": "https://m.media-amazon.com/images/M/MV5BNjU3YzA1NTYtMDRjYi00Mjc1LThhZmEtMWZhZDZmZTdjNTYzXkEyXkFqcGc@._V1_.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Annie",
@@ -2579,7 +2586,8 @@
             "title": "Package Deal",
             "link": "https://emirati.top/movies/Package Deal",
             "image": "https://image.tmdb.org/t/p/original//vjBb7DjMzutb6KqTb95JLIenvA6.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Hijack 1971",
@@ -2753,13 +2761,15 @@
             "title": "Daddysitter",
             "link": "https://emirati.top/movies/Daddysitter",
             "image": "https://m.media-amazon.com/images/M/MV5BYjMyMDdlYTMtNWQ5OC00ZDc1LThlY2EtZWU4ZWM0ZTFlNDEwXkEyXkFqcGc@._V1_SX300.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Init",
             "link": "https://emirati.top/movies/Init",
             "image": "https://d1qfpvemzhsbpm.cloudfront.net/images/C00433_KA_MAIN_VERT_LM_INIT.ori.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Asleep in My Palm",
@@ -2801,7 +2811,8 @@
             "title": "Kaskasero",
             "link": "https://emirati.top/movies/Kaskasero",
             "image": "https://juksun.com/wp-content/uploads/elementor/thumbs/Kaskasero-Movie-Poster-qqxqee7ldjwl97svolgtk4rt4h18d07wtsg8sahtew.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "All the Long Nights",
@@ -2831,13 +2842,15 @@
             "title": "Maharot",
             "link": "https://emirati.top/movies/Maharot",
             "image": "https://m.media-amazon.com/images/M/MV5BZDQwM2VhZGYtNDYyNi00MTdjLTg2MjctODc4MWI3MTAxZWQxXkEyXkFqcGc@._V1_.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Kaulayaw",
             "link": "https://emirati.top/movies/Kaulayaw",
             "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmJaqdFroueahr5-_tF_tR-qaJ1xgOXL83ryKU7o7TFNvI79c04Pmjy-dWJOqeZUXngE5UF8RffuDFLXTYNycCt-442aHwe0TSlNEQyKUzU1KC6RUhlCDgmFF-Y24LQ6XPuCeu3isj1QV0QBS7g9t0lrb1t5gm9MUv0NhYJ6HC3xua80T5YCsUbhPN1eE/s750/532331dc72aa68531400e11f246acdfd.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Rite Here Rite Now",
@@ -3023,7 +3036,8 @@
             "title": "Hiraya",
             "link": "https://emirati.top/movies/Hiraya",
             "image": "https://m.media-amazon.com/images/M/MV5BMDFiYWZkMzQtMzRiYi00OTEzLTllMDYtOTRkYzY2OWE3ZDg3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-            "tag": "HD"
+            "tag": "HD",
+            "requested": true
         },
         {
             "title": "Star Wars The Clone Wars",
