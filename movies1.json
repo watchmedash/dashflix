@@ -8,6 +8,13 @@
           "requested": true
       },
       {
+          "title": "It Ends with Us",
+          "link": "https://emirati.top/movies/It Ends with Us",
+          "image": "https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_SX300.jpg",
+          "tag": "HD",
+          "requested": true
+      },
+      {
           "title": "Kiskisan",
           "link": "https://emirati.top/movies/Kiskisan",
           "image": "https://image.tmdb.org/t/p/original/tMnohkladWXhNN69F9uHQ2cOKhG.jpg",
@@ -1546,13 +1553,6 @@
             "link": "https://emirati.top/movies/Uncharted",
             "image": "https://i.postimg.cc/tCpHQvxk/000000005.webp",
             "tag": "HD"
-        },
-        {
-            "title": "It Ends with Us",
-            "link": "https://emirati.top/movies/It Ends with Us",
-            "image": "https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_SX300.jpg",
-            "tag": "CAM",
-            "requested": true
         },
         {
             "title": "Mission Cross",
