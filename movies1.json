@@ -8,13 +8,6 @@
           "requested": true
       },
       {
-          "title": "",
-          "link": "https://www.mediafire.com/file/f9ljdiqn91zdd6r/Dashflix_Setup_1.0.0.exe/file",
-          "image": "https://i.imgur.com/sc6MDxy.jpeg",
-          "tag": "",
-          "requested": true
-      },
-      {
           "title": "It Ends with Us",
           "link": "https://emirati.top/movies/It Ends with Us",
           "image": "https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_SX300.jpg",
@@ -169,12 +162,6 @@
             "tag": "CAM"
         },
         {
-            "title": "Aracane Leak",
-            "link": "https://emirati.top/movies/Aracane Leak",
-            "image": "https://i.postimg.cc/cHRDcvyh/GUe-Yd1-CXIAAJLCb-copy.webp",
-            "tag": "leak"
-        },
-        {
             "title": "Cuckoo",
             "link": "https://emirati.top/movies/Cuckoo",
             "image": "https://image.tmdb.org/t/p/original/4bGP5cnSZbfBJfIidZNSEIKnav7.jpg",
@@ -185,6 +172,48 @@
             "link": "https://emirati.top/movies/Jackpot",
             "image": "https://image.tmdb.org/t/p/original/fOsamTFIyGxjw1jLSKdZYxQBJOT.jpg",
             "tag": "HD"
+        },
+        {
+            "title": "Beezel",
+            "link": "https://emirati.top/movies/Beezel",
+            "image": "https://image.tmdb.org/t/p/originalNone",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Major Grom The Game",
+            "link": "https://emirati.top/movies/Major Grom The Game",
+            "image": "https://image.tmdb.org/t/p/original/5eeTiSa35Z0LGItpDCvABGPY3zF.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "The Captives",
+            "link": "https://emirati.top/movies/The Captives",
+            "image": "https://image.tmdb.org/t/p/original/g0BMPT5HcFhrN23Ovrqv0nSs5ci.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "The Room Next Door",
+            "link": "https://emirati.top/movies/The Room Next Door",
+            "image": "https://image.tmdb.org/t/p/original/786Uu8eHfctp2TkII7ga1AnTBSs.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Lost in the Shuffle",
+            "link": "https://emirati.top/movies/Lost in the Shuffle",
+            "image": "https://image.tmdb.org/t/p/original/sP8Hm82yjcLbupqWFYSiSAk92Mw.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Sharkers",
+            "link": "https://emirati.top/movies/Sharkers",
+            "image": "https://image.tmdb.org/t/p/original/5a6uRsb77XUXccufJeJ2Vytubil.jpg",
+            "tag": "HD",
+            "requested": false
         },
         {
             "title": "Focus",
