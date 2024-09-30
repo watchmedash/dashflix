@@ -41,7 +41,6 @@
 </div>
 </nav>
 </header>
-<!--<div class="image-contained"><a href="https://dash-tv.com"><img src="https://i.postimg.cc/T11ZV59f/dash-tv-ad.gif" alt="Watch TV Shows Online Free"></a></div>-->
 <div class="announcement-banner">
 <p>Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.</p>
 </div>
@@ -100,43 +99,59 @@ atOptions = {
 };
 </script>
 <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script></div>
-<style>
-    /* Dropdown styling for dark theme */
-    #page-dropdown {
-        background-color: #121212; /* Dark background */
-        color: #fff; /* Light text color */
-        border: 1px solid #333; /* Border color */
-    }
-
-    /* Optional: Add a hover effect */
-    #page-dropdown:hover {
-        border-color: #1db954; /* Change border color on hover */
-    }
-
-    /* Optional: Style for options */
-    #page-dropdown option {
-        background-color: #121212; /* Dark background for options */
-        color: #fff; /* Light text color for options */
-    }
-</style>
-<div style="text-align: center; margin-bottom: 20px;">
-    <select id="page-dropdown" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #121212; color: #fff;">
-        <option value="" disabled selected>Select View</option>
-        <option value="home.html">Gallery</option>
-        <option value="homer.html">List</option>
-    </select>
-</div>
 
 <div class="gallery" id="gallery-container"></div>
 
-<script>
+<style>
+    .movie-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        margin: 10px auto;
+        text-decoration: none;
+        color: #fff; /* Light text color */
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #1f1f1f; /* Darker background for the link */
+        border: 2px solid #333;
+        border-radius: 5px;
+        transition: transform 0.2s, background-color 0.2s;
+        width: 95%;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        position: relative;
+    }
 
-document.getElementById('page-dropdown').addEventListener('change', function() {
-       const selectedPage = this.value;
-       if (selectedPage) {
-           window.location.href = selectedPage; // Navigate to the selected page
-       }
-   });
+    /* Styling for hover effect */
+    .movie-link:hover {
+        background-color: #333;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styling for the play icon */
+    .movie-link .play-icon {
+        font-size: 20px;
+        color: white; /* Color for the play icon */
+    }
+
+    .movie-link::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 2px;
+        width: 95%;
+    }
+</style>
+
+<script>
     // Array of JSON file URLs
     const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
 
@@ -153,118 +168,47 @@ document.getElementById('page-dropdown').addEventListener('change', function() {
         }
     }
 
+    let movies = [];
+
+    // Function to display movies
+    function displayMovies(movieArray) {
+        const galleryContainer = document.getElementById('gallery-container');
+        galleryContainer.innerHTML = ''; // Clear previous content
+
+        movieArray.forEach(movie => {
+            // Create a link (a) element
+            const anchor = document.createElement('a');
+            anchor.href = movie.link;
+            anchor.className = 'movie-link';
+
+            // Set the movie title as the text content of the anchor
+            anchor.textContent = movie.title;
+
+            // Create the play icon
+            const playIcon = document.createElement('span');
+            playIcon.className = 'play-icon';
+            playIcon.innerHTML = '&#9654;';  // Play icon (HTML code for a triangle)
+
+            // Append the play icon to the link
+            anchor.appendChild(playIcon);
+
+            // Append the link to the gallery container
+            galleryContainer.appendChild(anchor);
+        });
+    }
+
     // Fetch, merge, and load the movies JSON data
     fetchAndMergeJSON(jsonFiles)
-        .then(movies => {
-            const galleryContainer = document.getElementById('gallery-container');
-
-            // Create a container to store figure elements for searching
-            const figures = [];
-
-            movies.forEach(movie => {
-    // Create a figure element
-    const figure = document.createElement('figure');
-    figure.classList.add('movie-figure');
-    figure.dataset.title = movie.title.toLowerCase();  // Store the title for easy search
-
-    // Add the data-requested attribute if the movie is requested
-    if (movie.requested) {
-        figure.dataset.requested = "true";
-    }
-
-    // Create the link (a) element
-    const anchor = document.createElement('a');
-    anchor.href = movie.link;
-    anchor.className = 'movie-link';
-
-    // Create the image element with lazy loading
-    const img = document.createElement('img');
-    img.alt = movie.title;
-    img.dataset.src = movie.image; // Use data-src for lazy load
-    img.className = 'defer-image';
-    img.width = 240;
-    img.height = 320;
-
-    // Create the tag span element (e.g., HD, TS, CAM)
-    const span = document.createElement('span');
-    span.className = 'tag';  // Base tag class
-
-    // Dynamically assign the class based on the movie's tag value
-    switch (movie.tag.toLowerCase()) {
-        case 'hd':
-            span.classList.add('hd');
-            span.textContent = 'HD';
-            break;
-        case 'ts':
-            span.classList.add('ts');
-            span.textContent = 'TS';
-            break;
-        case 'cam':
-            span.classList.add('cam');
-            span.textContent = 'CAM';
-            break;
-        default:
-            span.textContent = movie.tag;  // Fallback, in case of unknown tags
-    }
-
-    // Create the caption (figcaption) element with click event
-    const caption = document.createElement('figcaption');
-    caption.textContent = movie.title;
-    caption.style.cursor = "pointer";
-    caption.addEventListener('click', () => {
-        window.location.href = movie.link;  // Redirect to movie link on title click
-    });
-
-    // Append the image and tag to the link
-    anchor.appendChild(img);
-    anchor.appendChild(span);
-
-    // Append the link and caption to the figure
-    figure.appendChild(anchor);
-    figure.appendChild(caption);
-
-    // Append the figure to the gallery container
-    galleryContainer.appendChild(figure);
-
-    // Store the figure for search functionality
-    figures.push(figure);
-});
-
-
-            // Implement lazy loading
-            const lazyLoad = () => {
-                const lazyImages = document.querySelectorAll('.defer-image');
-                lazyImages.forEach(img => {
-                    if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
-                        img.src = img.dataset.src;  // Assign the image src when in view
-                    }
-                });
-            };
-
-            // Lazy load on scroll
-            window.addEventListener('scroll', lazyLoad);
-            // Initial check in case some images are in view at the start
-            lazyLoad();
-
-            // Implement search functionality
-            const searchBar = document.getElementById('search-bar');
-            searchBar.addEventListener('input', function() {
-                const query = searchBar.value.toLowerCase();
-
-                figures.forEach(figure => {
-                    const title = figure.dataset.title;
-                    if (title.includes(query)) {
-                        figure.classList.remove('hidden');
-                    } else {
-                        figure.classList.add('hidden');
-                    }
-                });
-            });
+        .then(data => {
+            movies = data;
+            displayMovies(movies);
         })
         .catch(error => {
             console.error('Error processing the JSON data:', error);
         });
 </script>
+
+
 
 
 <div id="customTooltip" class="custom-tooltip">
@@ -425,5 +369,6 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="script.js"></script>
 <script src="popup.js"></script>
+<script type='text/javascript' src='//perilastronaut.com/2c/b3/58/2cb358f01e92d538b457df693b8d24e8.js'></script>
 </body>
 </html>
