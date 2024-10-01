@@ -8,6 +8,13 @@
           "requested": true
       },
       {
+          "title": "Tahong",
+          "link": "https://emirati.top/movies/Tahong",
+          "image": "https://image.tmdb.org/t/p/original/u6ugUUzxtvU8uxxto1rWkjS2SiM.jpg",
+          "tag": "HD",
+          "requested": true
+      },
+      {
           "title": "It Ends with Us",
           "link": "https://emirati.top/movies/It Ends with Us",
           "image": "https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_SX300.jpg",
@@ -172,6 +179,55 @@
             "link": "https://emirati.top/movies/Jackpot",
             "image": "https://image.tmdb.org/t/p/original/fOsamTFIyGxjw1jLSKdZYxQBJOT.jpg",
             "tag": "HD"
+        },
+        {
+            "title": "I Want to Be Neenja the Movie",
+            "link": "https://emirati.top/movies/I Want to Be Neenja the Movie",
+            "image": "https://image.tmdb.org/t/p/original/owQ0hyt6OhiZVz71mFGzlcv4W2t.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Teaches of Peaches",
+            "link": "https://emirati.top/movies/Teaches of Peaches",
+            "image": "https://image.tmdb.org/t/p/original/56QQ39agZt6S5oz9QMspn2stjW7.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Bharathanatyam",
+            "link": "https://emirati.top/movies/Bharathanatyam",
+            "image": "https://image.tmdb.org/t/p/original/roEHh97z7KaigdoWWk3S6SJc0UK.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Free Falling",
+            "link": "https://emirati.top/movies/Free Falling",
+            "image": "https://image.tmdb.org/t/p/original/9EdGBz7SWudhGMlvucVebiczLrq.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Wolf",
+            "link": "https://emirati.top/movies/Wolf",
+            "image": "https://image.tmdb.org/t/p/originalNone",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "The Star City Murders",
+            "link": "https://emirati.top/movies/The Star City Murders",
+            "image": "https://image.tmdb.org/t/p/original/kiRbFwEU5gfmysWHPOTVTNZuwBT.jpg",
+            "tag": "HD",
+            "requested": false
+        },
+        {
+            "title": "Supersized Sharks",
+            "link": "https://emirati.top/movies/Supersized Sharks",
+            "image": "https://image.tmdb.org/t/p/original/sET9FyT0aADDXVBt25vldyWRKW8.jpg",
+            "tag": "HD",
+            "requested": false
         },
         {
             "title": "Bagman",
