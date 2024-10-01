@@ -20,7 +20,7 @@
 <link rel="canonical" href="https://dashflix.xyz/homer"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-<title>Movies - Watch Free Movies and TV Series Online</title>
+<title>Movie List - Watch Free Movies and TV Series Online</title>
 <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
 <script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
 </head>
@@ -100,17 +100,49 @@ atOptions = {
 </script>
 <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script></div>
 
-<div style="text-align: center; margin-bottom: 20px;">
-    <select id="page-dropdown" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #121212; color: #fff;">
-        <option value="" disabled selected>Select View</option>
-        <option value="home.html">Gallery</option>
-        <option value="homer.html">List</option>
-    </select>
-</div>
-
-<div class="gallery" id="gallery-container"></div>
-
 <style>
+    body {
+        background-color: #121212;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .movie-figure {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .movie-figure:hover {
+        transform: scale(1.05);
+    }
+
+    .tag {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #page-dropdown,
+    #genre-dropdown {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: #121212;
+        color: #fff;
+        margin: 10px;
+    }
+
     .movie-link {
         display: flex;
         align-items: center;
@@ -127,8 +159,6 @@ atOptions = {
         transition: transform 0.2s, background-color 0.2s;
         width: 95%;
         max-width: 95%;
-        margin-left: auto;
-        margin-right: auto;
         box-sizing: border-box;
         position: relative;
     }
@@ -157,89 +187,136 @@ atOptions = {
         height: 2px;
         width: 95%;
     }
-
-    /* Dropdown styling for dark theme */
-    #page-dropdown {
-        background-color: #121212; /* Dark background */
-        color: #fff; /* Light text color */
-        border: 1px solid #333; /* Border color */
-    }
-
-    /* Optional: Add a hover effect */
-    #page-dropdown:hover {
-        border-color: #1db954; /* Change border color on hover */
-    }
-
-    /* Optional: Style for options */
-    #page-dropdown option {
-        background-color: #121212; /* Dark background for options */
-        color: #fff; /* Light text color for options */
-    }
-
 </style>
+
+<div style="text-align: center; margin-bottom: 20px;">
+    <select id="page-dropdown">
+      <option value="" disabled selected>Select View</option>
+      <option value="home.html">Gallery</option>
+      <option value="homer.html">List</option>
+      <option value="requested.html">Requested</option>
+    </select>
+
+    <select id="genre-dropdown">
+        <option value="" disabled selected>Select Genre</option>
+        <option value="all">All</option>
+        <!-- Genre options will be dynamically populated here -->
+    </select>
+</div>
+
+<div class="gallery" id="gallery-container"></div>
 
 <script>
 document.getElementById('page-dropdown').addEventListener('change', function() {
-       const selectedPage = this.value;
-       if (selectedPage) {
-           window.location.href = selectedPage; // Navigate to the selected page
-       }
-   });
+    const selectedPage = this.value;
+    if (selectedPage) {
+        window.location.href = selectedPage; // Navigate to the selected page
+    }
+});
 
-    // Array of JSON file URLs
-    const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
+// Array of JSON file URLs
+const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
 
-    // Function to fetch and merge JSON data
-    async function fetchAndMergeJSON(files) {
-        try {
-            const responses = await Promise.all(files.map(file => fetch(file)));
-            const data = await Promise.all(responses.map(response => response.json()));
-            // Merge all movie data arrays into one
-            return data.flatMap(data => data.movies);
-        } catch (error) {
-            console.error('Error fetching JSON files:', error);
-            return [];
+// Function to fetch and merge JSON data
+async function fetchAndMergeJSON(files) {
+    try {
+        const responses = await Promise.all(files.map(file => fetch(file)));
+        const data = await Promise.all(responses.map(response => {
+            if (!response.ok) {
+                console.error('Error fetching file:', file, response.status);
+                return { movies: [] }; // Return an empty array for error cases
+            }
+            return response.json();
+        }));
+        // Merge all movie data arrays into one
+        return data.flatMap(data => data.movies);
+    } catch (error) {
+        console.error('Error fetching JSON files:', error);
+        return [];
+    }
+}
+
+let movies = [];
+
+// Function to display movies
+function displayMovies(movieArray) {
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryContainer.innerHTML = ''; // Clear previous content
+
+    movieArray.forEach(movie => {
+        // Create a link (a) element
+        const anchor = document.createElement('a');
+        anchor.href = movie.link;
+        anchor.className = 'movie-link';
+
+        // Create the tag span
+        const span = document.createElement('span');
+        span.className = 'tag';
+
+        switch (movie.tag.toLowerCase()) {
+            case 'hd':
+                span.classList.add('hd');
+                span.textContent = '✅'; // HD tag icon
+                break;
+            case 'ts':
+                span.classList.add('ts');
+                span.textContent = '👀'; // TS tag icon
+                break;
+            case 'cam':
+                span.classList.add('cam');
+                span.textContent = '❌'; // CAM tag icon
+                break;
+            default:
+                span.textContent = movie.tag || '🔥'; // Default tag icon
         }
-    }
 
-    let movies = [];
+        // Append the tag icon to the link
+        anchor.appendChild(span);
 
-    // Function to display movies
-    function displayMovies(movieArray) {
-        const galleryContainer = document.getElementById('gallery-container');
-        galleryContainer.innerHTML = ''; // Clear previous content
+        // Append the movie title to the link
+        anchor.appendChild(document.createTextNode(movie.title));
 
-        movieArray.forEach(movie => {
-            // Create a link (a) element
-            const anchor = document.createElement('a');
-            anchor.href = movie.link;
-            anchor.className = 'movie-link';
+        // Append the link to the gallery container
+        galleryContainer.appendChild(anchor);
+    });
+}
 
-            // Set the movie title as the text content of the anchor
-            anchor.textContent = movie.title;
+// Fetch, merge, and load the movies JSON data
+fetchAndMergeJSON(jsonFiles)
+    .then(data => {
+        movies = data;
+        displayMovies(movies);
 
-            // Create the play icon
-            const playIcon = document.createElement('span');
-            playIcon.className = 'play-icon';
-            playIcon.innerHTML = '&#9654;';  // Play icon (HTML code for a triangle)
-
-            // Append the play icon to the link
-            anchor.appendChild(playIcon);
-
-            // Append the link to the gallery container
-            galleryContainer.appendChild(anchor);
+        // Populate genre dropdown
+        const genreSet = new Set(); // To store unique genres
+        movies.forEach(movie => {
+            if (Array.isArray(movie.genres)) {
+                movie.genres.forEach(genre => genreSet.add(genre.toLowerCase()));
+            }
         });
-    }
 
-    // Fetch, merge, and load the movies JSON data
-    fetchAndMergeJSON(jsonFiles)
-        .then(data => {
-            movies = data;
-            displayMovies(movies);
-        })
-        .catch(error => {
-            console.error('Error processing the JSON data:', error);
+        const genreDropdown = document.getElementById('genre-dropdown');
+        genreSet.forEach(genre => {
+            const option = document.createElement('option');
+            option.value = genre;
+            option.textContent = genre.charAt(0).toUpperCase() + genre.slice(1); // Capitalize genre name
+            genreDropdown.appendChild(option);
         });
+
+        // Implement genre filtering
+        genreDropdown.addEventListener('change', function() {
+            const selectedGenre = this.value;
+            const filteredMovies = selectedGenre === "all"
+                ? movies
+                : movies.filter(movie =>
+                    Array.isArray(movie.genres) && movie.genres.map(g => g.toLowerCase()).includes(selectedGenre)
+                );
+            displayMovies(filteredMovies);
+        });
+    })
+    .catch(error => {
+        console.error('Error processing the JSON data:', error);
+    });
 </script>
 
 <div id="customTooltip" class="custom-tooltip">

@@ -40,106 +40,210 @@
 <p>REQUEST IT NOW BY <a href="request.html">>>CLICKING HERE<<</a></p>
 </div>
 
-<div class="sharethis-inline-share-buttons"></div>
- <div class="gallery" id="requested-items">
+<style>
+    body {
+        background-color: #121212;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
 
- </div>
- <div class="gallery" id="requested-items">
- </div>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
- <div class="gallery" id="requested-items"></div>
+    .movie-figure {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
 
- <script>
-     // Array of JSON file URLs
-     const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
+    .movie-figure:hover {
+        transform: scale(1.05);
+    }
 
-     // Function to fetch and merge JSON data
-     async function fetchAndMergeJSON(files) {
-         try {
-             const responses = await Promise.all(files.map(file => fetch(file)));
-             const data = await Promise.all(responses.map(response => response.json()));
-             // Merge all movie data arrays into one
-             return data.flatMap(data => data.movies);
-         } catch (error) {
-             console.error('Error fetching JSON files:', error);
-             return [];
-         }
-     }
+    .tag {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+    }
 
-     // Function to display requested movies
-     async function fetchAndDisplayRequestedItems() {
-         try {
-             // Fetch and merge the JSON data
-             const movies = await fetchAndMergeJSON(jsonFiles);
-             const requestedItemsContainer = document.getElementById('requested-items');
+    .hidden {
+        display: none;
+    }
 
-             // Filter movies that have the 'requested' field set to true
-             const requestedMovies = movies.filter(movie => movie.requested);
+    #page-dropdown,
+    #genre-dropdown {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: #121212;
+        color: #fff;
+        margin: 10px;
+    }
+</style>
 
-             // Loop through requested movies and create figure elements for each one
-             requestedMovies.forEach(movie => {
-                 // Create a figure element
-                 const figure = document.createElement('figure');
-                 figure.classList.add('movie-figure');
-                 figure.dataset.title = movie.title.toLowerCase();
-                 figure.dataset.requested = "true";  // Set the requested attribute
+<div style="text-align: center; margin-bottom: 20px;">
+    <select id="page-dropdown">
+        <option value="" disabled selected>Select View</option>
+        <option value="home.html">Gallery</option>
+        <option value="homer.html">List</option>
+        <option value="requested.html">Requested</option>
+    </select>
 
-                 // Create the link (a) element
-                 const anchor = document.createElement('a');
-                 anchor.href = movie.link;
-                 anchor.className = 'movie-link';
+    <select id="genre-dropdown">
+        <option value="" disabled selected>Select Genre</option>
+        <option value="all">All</option>
+        <!-- Genre options will be dynamically populated here -->
+    </select>
+</div>
 
-                 // Create the image element
-                 const img = document.createElement('img');
-                 img.alt = movie.title;
-                 img.src = movie.image; // Directly set the src since it's requested items page
-                 img.width = 240;
-                 img.height = 320;
+<div class="gallery" id="gallery-container"></div>
 
-                 // Create the tag span element (e.g., HD, TS, CAM)
-                 const span = document.createElement('span');
-                 span.className = 'tag';
-                 switch (movie.tag.toLowerCase()) {
-                     case 'hd':
-                         span.classList.add('hd');
-                         span.textContent = 'HD';
-                         break;
-                     case 'ts':
-                         span.classList.add('ts');
-                         span.textContent = 'TS';
-                         break;
-                     case 'cam':
-                         span.classList.add('cam');
-                         span.textContent = 'CAM';
-                         break;
-                     default:
-                         span.textContent = movie.tag;  // Fallback for unknown tags
-                 }
+<script>
+document.getElementById('page-dropdown').addEventListener('change', function() {
+    const selectedPage = this.value;
+    if (selectedPage) {
+        window.location.href = selectedPage; // Navigate to the selected page
+    }
+});
 
-                 // Create the caption (figcaption) element
-                 const caption = document.createElement('figcaption');
-                 caption.textContent = movie.title;
+// Array of JSON file URLs
+const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
 
-                 // Append the image and tag to the anchor (a)
-                 anchor.appendChild(img);
-                 anchor.appendChild(span);
+// Function to fetch and merge JSON data
+async function fetchAndMergeJSON(files) {
+    try {
+        const responses = await Promise.all(files.map(file => fetch(file)));
+        const data = await Promise.all(responses.map(response => {
+            if (!response.ok) {
+                console.error('Error fetching file:', file, response.status);
+                return { movies: [] }; // Return an empty array for error cases
+            }
+            return response.json();
+        }));
+        // Merge all movie data arrays into one
+        return data.flatMap(data => data.movies);
+    } catch (error) {
+        console.error('Error fetching JSON files:', error);
+        return [];
+    }
+}
 
-                 // Append the anchor and caption to the figure
-                 figure.appendChild(anchor);
-                 figure.appendChild(caption);
+// Fetch, merge, and load the movies JSON data
+fetchAndMergeJSON(jsonFiles)
+    .then(movies => {
+        const galleryContainer = document.getElementById('gallery-container');
+        const figures = [];
+        const genreSet = new Set(); // To store unique genres
 
-                 // Append the figure to the requested items container
-                 requestedItemsContainer.appendChild(figure);
-             });
+        // Filter for movies with "requested": true
+        const requestedMovies = movies.filter(movie => movie.requested === true);
 
-         } catch (error) {
-             console.error('Error fetching and processing requested items:', error);
-         }
-     }
+        requestedMovies.forEach(movie => {
+            if (!movie.title || !movie.link || !movie.image) {
+                console.warn('Skipping movie due to missing data:', movie);
+                return; // Skip movies with missing data
+            }
 
-     // Call the function to fetch and display requested items
-     fetchAndDisplayRequestedItems();
- </script>
+            // Check if genres exist and is an array
+            const genres = Array.isArray(movie.genres) ? movie.genres : []; // Default to empty array if not defined
+
+            // Create a figure element
+            const figure = document.createElement('figure');
+            figure.classList.add('movie-figure');
+            figure.dataset.title = movie.title.toLowerCase();
+            figure.dataset.genres = genres.join(',').toLowerCase(); // Store genres for filtering
+
+            const anchor = document.createElement('a');
+            anchor.href = movie.link;
+            anchor.className = 'movie-link';
+
+            const img = document.createElement('img');
+            img.alt = movie.title;
+            img.dataset.src = movie.image;
+            img.className = 'defer-image';
+            img.width = 240;
+            img.height = 320;
+
+            const span = document.createElement('span');
+            span.className = 'tag';
+
+            switch (movie.tag.toLowerCase()) {
+                case 'hd':
+                    span.classList.add('hd');
+                    span.textContent = '✅';
+                    break;
+                case 'ts':
+                    span.classList.add('ts');
+                    span.textContent = '👀';
+                    break;
+                case 'cam':
+                    span.classList.add('cam');
+                    span.textContent = '❌';
+                    break;
+                default:
+                    span.textContent = movie.tag || '🔥';
+            }
+
+            const caption = document.createElement('figcaption');
+            caption.textContent = movie.title;
+            caption.style.cursor = "pointer";
+            caption.addEventListener('click', () => {
+                window.location.href = movie.link;
+            });
+
+            anchor.appendChild(img);
+            anchor.appendChild(span);
+            figure.appendChild(anchor);
+            figure.appendChild(caption);
+            galleryContainer.appendChild(figure);
+            figures.push(figure);
+
+            // Collect unique genres
+            genres.forEach(genre => genreSet.add(genre.toLowerCase()));
+        });
+
+        // Populate genre dropdown
+        const genreDropdown = document.getElementById('genre-dropdown');
+        genreSet.forEach(genre => {
+            const option = document.createElement('option');
+            option.value = genre;
+            option.textContent = genre.charAt(0).toUpperCase() + genre.slice(1); // Capitalize genre name
+            genreDropdown.appendChild(option);
+        });
+
+        // Implement lazy loading
+        const lazyLoad = () => {
+            const lazyImages = document.querySelectorAll('.defer-image');
+            lazyImages.forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
+                    img.src = img.dataset.src;
+                }
+            });
+        };
+
+        window.addEventListener('scroll', lazyLoad);
+        lazyLoad();
+
+        // Implement genre filtering
+        genreDropdown.addEventListener('change', function() {
+            const selectedGenre = this.value;
+            figures.forEach(figure => {
+                const genres = figure.dataset.genres.split(',');
+                if (selectedGenre === "all" || genres.includes(selectedGenre)) {
+                    figure.classList.remove('hidden');
+                } else {
+                    figure.classList.add('hidden');
+                }
+            });
+        });
+    })
+    .catch(error => {
+        console.error('Error processing the JSON data:', error);
+    });
+</script>
 
  <div id="go-to-top-button" class="floating-button">
  <div class="arrow-up"></div>

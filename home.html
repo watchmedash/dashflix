@@ -101,169 +101,209 @@ atOptions = {
 </script>
 <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script></div>
 <style>
-    /* Dropdown styling for dark theme */
-    #page-dropdown {
-        background-color: #121212; /* Dark background */
-        color: #fff; /* Light text color */
-        border: 1px solid #333; /* Border color */
+    body {
+        background-color: #121212;
+        color: #fff;
+        font-family: Arial, sans-serif;
     }
 
-    /* Optional: Add a hover effect */
-    #page-dropdown:hover {
-        border-color: #1db954; /* Change border color on hover */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    /* Optional: Style for options */
-    #page-dropdown option {
-        background-color: #121212; /* Dark background for options */
-        color: #fff; /* Light text color for options */
+    .movie-figure {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .movie-figure:hover {
+        transform: scale(1.05);
+    }
+
+    .tag {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #page-dropdown,
+    #genre-dropdown {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: #121212;
+        color: #fff;
+        margin: 10px;
     }
 </style>
+
 <div style="text-align: center; margin-bottom: 20px;">
-    <select id="page-dropdown" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #121212; color: #fff;">
-        <option value="" disabled selected>Select View</option>
-        <option value="home.html">Gallery</option>
-        <option value="homer.html">List</option>
+    <select id="page-dropdown">
+      <option value="" disabled selected>Select View</option>
+      <option value="home.html">Gallery</option>
+      <option value="homer.html">List</option>
+      <option value="requested.html">Requested</option>
+    </select>
+
+    <select id="genre-dropdown">
+        <option value="" disabled selected>Select Genre</option>
+        <option value="all">All</option>
+        <!-- Genre options will be dynamically populated here -->
     </select>
 </div>
 
 <div class="gallery" id="gallery-container"></div>
 
 <script>
-
 document.getElementById('page-dropdown').addEventListener('change', function() {
-       const selectedPage = this.value;
-       if (selectedPage) {
-           window.location.href = selectedPage; // Navigate to the selected page
-       }
-   });
-    // Array of JSON file URLs
-    const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
-
-    // Function to fetch and merge JSON data
-    async function fetchAndMergeJSON(files) {
-        try {
-            const responses = await Promise.all(files.map(file => fetch(file)));
-            const data = await Promise.all(responses.map(response => response.json()));
-            // Merge all movie data arrays into one
-            return data.flatMap(data => data.movies);
-        } catch (error) {
-            console.error('Error fetching JSON files:', error);
-            return [];
-        }
+    const selectedPage = this.value;
+    if (selectedPage) {
+        window.location.href = selectedPage; // Navigate to the selected page
     }
-
-    // Fetch, merge, and load the movies JSON data
-    fetchAndMergeJSON(jsonFiles)
-        .then(movies => {
-            const galleryContainer = document.getElementById('gallery-container');
-
-            // Create a container to store figure elements for searching
-            const figures = [];
-
-            movies.forEach(movie => {
-    // Create a figure element
-    const figure = document.createElement('figure');
-    figure.classList.add('movie-figure');
-    figure.dataset.title = movie.title.toLowerCase();  // Store the title for easy search
-
-    // Add the data-requested attribute if the movie is requested
-    if (movie.requested) {
-        figure.dataset.requested = "true";
-    }
-
-    // Create the link (a) element
-    const anchor = document.createElement('a');
-    anchor.href = movie.link;
-    anchor.className = 'movie-link';
-
-    // Create the image element with lazy loading
-    const img = document.createElement('img');
-    img.alt = movie.title;
-    img.dataset.src = movie.image; // Use data-src for lazy load
-    img.className = 'defer-image';
-    img.width = 240;
-    img.height = 320;
-
-    // Create the tag span element (e.g., HD, TS, CAM)
-    const span = document.createElement('span');
-    span.className = 'tag';  // Base tag class
-
-    // Dynamically assign the class based on the movie's tag value
-    switch (movie.tag.toLowerCase()) {
-        case 'hd':
-            span.classList.add('hd');
-            span.textContent = 'HD';
-            break;
-        case 'ts':
-            span.classList.add('ts');
-            span.textContent = 'TS';
-            break;
-        case 'cam':
-            span.classList.add('cam');
-            span.textContent = 'CAM';
-            break;
-        default:
-            span.textContent = movie.tag;  // Fallback, in case of unknown tags
-    }
-
-    // Create the caption (figcaption) element with click event
-    const caption = document.createElement('figcaption');
-    caption.textContent = movie.title;
-    caption.style.cursor = "pointer";
-    caption.addEventListener('click', () => {
-        window.location.href = movie.link;  // Redirect to movie link on title click
-    });
-
-    // Append the image and tag to the link
-    anchor.appendChild(img);
-    anchor.appendChild(span);
-
-    // Append the link and caption to the figure
-    figure.appendChild(anchor);
-    figure.appendChild(caption);
-
-    // Append the figure to the gallery container
-    galleryContainer.appendChild(figure);
-
-    // Store the figure for search functionality
-    figures.push(figure);
 });
 
+// Array of JSON file URLs
+const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
 
-            // Implement lazy loading
-            const lazyLoad = () => {
-                const lazyImages = document.querySelectorAll('.defer-image');
-                lazyImages.forEach(img => {
-                    if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
-                        img.src = img.dataset.src;  // Assign the image src when in view
-                    }
-                });
-            };
+// Function to fetch and merge JSON data
+async function fetchAndMergeJSON(files) {
+    try {
+        const responses = await Promise.all(files.map(file => fetch(file)));
+        const data = await Promise.all(responses.map(response => {
+            if (!response.ok) {
+                console.error('Error fetching file:', file, response.status);
+                return { movies: [] }; // Return an empty array for error cases
+            }
+            return response.json();
+        }));
+        // Merge all movie data arrays into one
+        return data.flatMap(data => data.movies);
+    } catch (error) {
+        console.error('Error fetching JSON files:', error);
+        return [];
+    }
+}
 
-            // Lazy load on scroll
-            window.addEventListener('scroll', lazyLoad);
-            // Initial check in case some images are in view at the start
-            lazyLoad();
+// Fetch, merge, and load the movies JSON data
+fetchAndMergeJSON(jsonFiles)
+    .then(movies => {
+        const galleryContainer = document.getElementById('gallery-container');
+        const figures = [];
+        const genreSet = new Set(); // To store unique genres
 
-            // Implement search functionality
-            const searchBar = document.getElementById('search-bar');
-            searchBar.addEventListener('input', function() {
-                const query = searchBar.value.toLowerCase();
+        movies.forEach(movie => {
+            if (!movie.title || !movie.link || !movie.image) {
+                console.warn('Skipping movie due to missing data:', movie);
+                return; // Skip movies with missing data
+            }
 
-                figures.forEach(figure => {
-                    const title = figure.dataset.title;
-                    if (title.includes(query)) {
-                        figure.classList.remove('hidden');
-                    } else {
-                        figure.classList.add('hidden');
-                    }
-                });
+            // Check if genres exist and is an array
+            const genres = Array.isArray(movie.genres) ? movie.genres : []; // Default to empty array if not defined
+
+            // Create a figure element
+            const figure = document.createElement('figure');
+            figure.classList.add('movie-figure');
+            figure.dataset.title = movie.title.toLowerCase();
+            figure.dataset.genres = genres.join(',').toLowerCase(); // Store genres for filtering
+
+            if (movie.requested) {
+                figure.dataset.requested = "true";
+            }
+
+            const anchor = document.createElement('a');
+            anchor.href = movie.link;
+            anchor.className = 'movie-link';
+
+            const img = document.createElement('img');
+            img.alt = movie.title;
+            img.dataset.src = movie.image;
+            img.className = 'defer-image';
+            img.width = 240;
+            img.height = 320;
+
+            const span = document.createElement('span');
+            span.className = 'tag';
+
+            switch (movie.tag.toLowerCase()) {
+                case 'hd':
+                    span.classList.add('hd');
+                    span.textContent = '✅';
+                    break;
+                case 'ts':
+                    span.classList.add('ts');
+                    span.textContent = '👀';
+                    break;
+                case 'cam':
+                    span.classList.add('cam');
+                    span.textContent = '❌';
+                    break;
+                default:
+                    span.textContent = movie.tag || '🔥';
+            }
+
+            const caption = document.createElement('figcaption');
+            caption.textContent = movie.title;
+            caption.style.cursor = "pointer";
+            caption.addEventListener('click', () => {
+                window.location.href = movie.link;
             });
-        })
-        .catch(error => {
-            console.error('Error processing the JSON data:', error);
+
+            anchor.appendChild(img);
+            anchor.appendChild(span);
+            figure.appendChild(anchor);
+            figure.appendChild(caption);
+            galleryContainer.appendChild(figure);
+            figures.push(figure);
+
+            // Collect unique genres
+            genres.forEach(genre => genreSet.add(genre.toLowerCase()));
         });
+
+        // Populate genre dropdown
+        const genreDropdown = document.getElementById('genre-dropdown');
+        genreSet.forEach(genre => {
+            const option = document.createElement('option');
+            option.value = genre;
+            option.textContent = genre.charAt(0).toUpperCase() + genre.slice(1); // Capitalize genre name
+            genreDropdown.appendChild(option);
+        });
+
+        // Implement lazy loading
+        const lazyLoad = () => {
+            const lazyImages = document.querySelectorAll('.defer-image');
+            lazyImages.forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
+                    img.src = img.dataset.src;
+                }
+            });
+        };
+
+        window.addEventListener('scroll', lazyLoad);
+        lazyLoad();
+
+        // Implement genre filtering
+        genreDropdown.addEventListener('change', function() {
+            const selectedGenre = this.value;
+            figures.forEach(figure => {
+                const genres = figure.dataset.genres.split(',');
+                if (selectedGenre === "all" || genres.includes(selectedGenre)) {
+                    figure.classList.remove('hidden');
+                } else {
+                    figure.classList.add('hidden');
+                }
+            });
+        });
+    })
+    .catch(error => {
+        console.error('Error processing the JSON data:', error);
+    });
 </script>
 
 
