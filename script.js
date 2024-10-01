@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const trimmedTitle = item.title.trim(); // Trim leading and trailing whitespaces
       link.textContent = trimmedTitle;
       // Use the trimmed title to construct the image URL and link
-      link.href = `https://emirati.top/movies/${encodeURIComponent(trimmedTitle)}.html`;
+      link.href = `https://dash-tv.com/movies/${encodeURIComponent(trimmedTitle)}.html`;
 
       li.dataset.tooltip = item.image; // Use the image property for the tooltip
       li.appendChild(link);
