@@ -1518,6 +1518,18 @@
             ]
         },
         {
+            "title": "Dont Breathe",
+            "link": "https://dash-tv.com/movies/Dont Breathe",
+            "image": "https://image.tmdb.org/t/p/original/kkUMGON2uFRlxI3zIMFdjqARnbb.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2016",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
             "title": "Deon Cole Ok Mister",
             "link": "https://dash-tv.com/movies/Deon Cole Ok Mister",
             "image": "https://image.tmdb.org/t/p/original/etPL3G9i8WsqUXW1n8IiouErwCP.jpg",
