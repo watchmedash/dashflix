@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const trimmedTitle = item.title.trim(); // Trim leading and trailing whitespaces
       link.textContent = trimmedTitle;
       // Use the trimmed title to construct the image URL and link
-      link.href = `https://emirati.top/movies/${encodeURIComponent(trimmedTitle)}.html`;
+      link.href = `https://dash-tv.com/movies/${encodeURIComponent(trimmedTitle)}.html`;
 
       // Add a click event listener to redirect to redirect.html
       link.addEventListener("click", (e) => {
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function redirectToRedirectPage(movieTitle) {
     // Set the destination URL and redirect to redirect.html
-    const destinationUrl = `redirectr.html?url=https://emirati.top/movies/${encodeURIComponent(movieTitle)}.html`;
+    const destinationUrl = `redirectr.html?url=https://dash-tv.com/movies/${encodeURIComponent(movieTitle)}.html`;
     window.location.href = destinationUrl;
   }
 
