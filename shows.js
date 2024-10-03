@@ -22,28 +22,49 @@ function fetchTVShows() {
     const d = l.value,
         i = h.value,
         a = n.value.toLowerCase();
-    o.innerHTML = "", e.forEach((e => {
-        fetch(`https://api.themoviedb.org/3/find/${e}?api_key=${t}&external_source=imdb_id`).then((t => t.json())).then((t => {
-            const n = t.tv_results[0];
-            if (n) {
-                const t = n.genre_ids,
-                    s = n.name.toLowerCase(),
-                    c = new Date(n.first_air_date).getFullYear(),
-                    r = !d || t.includes(Number(d)),
-                    l = !a || s.includes(a),
-                    h = !i || c === Number(i);
-                if (r && h && l) {
-                    const t = document.createElement("img");
-                    t.src = `https://image.tmdb.org/t/p/w500${n.poster_path}`, t.alt = n.name, t.dataset.tmdbId = n.id, t.dataset.imdbId = e, t.loading = "lazy", t.style.width = "100%", t.style.height = "auto", t.style.display = "block", t.style.borderRadius = "8px", t.addEventListener("click", (t => {
-                        redirectWithCountdown(t.target.dataset.imdbId)
-                    }));
-                    const d = document.createElement("div");
-                    d.className = "grid-item", d.appendChild(t), o.appendChild(d)
+    o.innerHTML = "";
+
+    e.forEach((e) => {
+        fetch(`https://api.themoviedb.org/3/find/${e}?api_key=${t}&external_source=imdb_id`)
+            .then((t) => t.json())
+            .then((t) => {
+                const n = t.tv_results[0];
+                if (n) {
+                    const t = n.genre_ids,
+                        s = n.name.toLowerCase(),
+                        c = new Date(n.first_air_date).getFullYear(),
+                        r = !d || t.includes(Number(d)),
+                        l = !a || s.includes(a),
+                        h = !i || c === Number(i);
+
+                    if (r && h && l) {
+                        const img = document.createElement("img");
+                        // Use a smaller size for the poster
+                        img.src = `https://image.tmdb.org/t/p/w200${n.poster_path}`; // Adjusted size
+                        img.alt = n.name;
+                        img.dataset.tmdbId = n.id;
+                        img.dataset.imdbId = e;
+                        img.loading = "lazy"; // Lazy loading attribute
+                        img.style.width = "100%";
+                        img.style.height = "auto";
+                        img.style.display = "block";
+                        img.style.borderRadius = "8px";
+
+                        img.addEventListener("click", (t) => {
+                            redirectWithCountdown(t.target.dataset.imdbId);
+                        });
+
+                        const gridItem = document.createElement("div");
+                        gridItem.className = "grid-item";
+                        gridItem.appendChild(img);
+                        o.appendChild(gridItem);
+                    }
                 }
-            }
-        })).catch((t => console.error("Error fetching TV show:", t)))
-    }))
+            })
+            .catch((t) => console.error("Error fetching TV show:", t));
+    });
 }
+
 
 function playEpisode(t, e) {
     const n = `https://vidsrc.xyz/embed/tv/${p}/${t}-${e}`;
