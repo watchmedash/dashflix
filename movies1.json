@@ -358,6 +358,30 @@
             ]
         },
         {
+            "title": "Harom Hara",
+            "link": "https://emirati.top/movies/Harom Hara",
+            "image": "https://image.tmdb.org/t/p/original/lxofVmNULRo3920pEW8zn2HYzdU.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Crime",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Sebastian",
+            "link": "https://emirati.top/movies/Sebastian",
+            "image": "https://image.tmdb.org/t/p/original/2ZbQjEQjvFdHXOJsxmUEAV3xVLI.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
             "title": "The Miu Miu Affair",
             "link": "https://emirati.top/movies/The Miu Miu Affair",
             "image": "https://image.tmdb.org/t/p/original/xBDWotM7p3TsTZZ6z0Y5jboOiXc.jpg",
