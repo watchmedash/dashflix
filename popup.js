@@ -1,24 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const popups = {
-        popup1: new Popup({
-            id: "popup1",
-            title: "",
-            content: `
-                We've moved our TV shows to {a-https://dash-tv.com}[Dash TV].
-                Go to {a-https://dash-tv.com}[dash-tv.com] and start watching.
-                Download Dash TV app {a-https://www.mediafire.com/file/o4w5p75zp2bzrau/Dash-TV.apk/file}[here].
-                `,
-            backgroundColor: "#000",
-            titleColor: "#fff",
-            textColor: "#fff",
-            closeColor: "#fff",
-            borderWidth: ".2em",
-            borderColor: "#fff",
-            linkColor: "#fff",
-            fontSizeMultiplier: 1.2,
-            titleMargin: "4%",
-            underlineLinks: true,
-        }),
+      popup1: {
+          id: "popup1",
+          redirectUrl: "shows.html", // Replace with your desired URL
+          redirect: function() {
+              window.location.href = this.redirectUrl;
+          }
+      },
         popup2: {
             id: "popup2",
             redirectUrl: "https://freedomwall.top", // Replace with your desired URL
@@ -101,6 +89,17 @@ document.addEventListener('DOMContentLoaded', function() {
             fontSizeMultiplier: 1.2,
         })
     };
+
+    document.querySelectorAll('.popup-btn').forEach(button => {
+          button.addEventListener('click', function() {
+              const popupId = this.getAttribute('data-popup');
+              if (popupId === 'popup1') {
+                  popups.popup1.redirect();
+              } else if (popups[popupId]) {
+                  popups[popupId].show();
+              }
+          });
+      });
 
     document.querySelectorAll('.popup-btn').forEach(button => {
         button.addEventListener('click', function() {
