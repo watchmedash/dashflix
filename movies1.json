@@ -358,6 +358,68 @@
             ]
         },
         {
+            "title": "The Greatest of All Time",
+            "link": "https://emirati.top/movies/The Greatest of All Time",
+            "image": "https://image.tmdb.org/t/p/original/kk9SmNt6QcP5thvSYELWvO0NWuC.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Drama",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Hold Your Breath",
+            "link": "https://emirati.top/movies/Hold Your Breath",
+            "image": "https://image.tmdb.org/t/p/original/kuzw7lXL9NJZpSL1B9ckwT8Z2ss.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "The Initiated Written from the Shadows",
+            "link": "https://emirati.top/movies/The Initiated Written from the Shadows",
+            "image": "https://image.tmdb.org/t/p/original/6340ZG3qHfS7q8ES5rwf4AQ0U1w.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller"
+            ]
+        },
+        {
+            "title": "House of Spoils",
+            "link": "https://emirati.top/movies/House of Spoils",
+            "image": "https://image.tmdb.org/t/p/original/udfMAdiyKhgAS47dRXEnXo6tHt6.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Trouble",
+            "link": "https://emirati.top/movies/Trouble",
+            "image": "https://image.tmdb.org/t/p/original/sfgUwFSocC1oPNrQyCDi0eDGetG.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Comedy",
+                "Crime"
+            ]
+        },
+        {
             "title": "Harom Hara",
             "link": "https://emirati.top/movies/Harom Hara",
             "image": "https://image.tmdb.org/t/p/original/lxofVmNULRo3920pEW8zn2HYzdU.jpg",
