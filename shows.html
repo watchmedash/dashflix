@@ -62,6 +62,13 @@
   };
   </script>
 <script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
+<div id="search-container">
+      <div id="search-wrapper">
+          <input type="text" id="search-input" placeholder="Search TV Show">
+          <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <button id="refreshButton" onclick="refreshPage()"><i class="fas fa-sync-alt"></i></button>
+  </div>
     <div id="filters">
         <select id="release-year">
             <option value="">Release Year</option>
@@ -128,6 +135,7 @@ function refreshPage() {
     location.reload(); // Reloads the current page
 }
 </script>
+
 <script>
 // Show the button when the user scrolls down 100px from the top
 window.onscroll = function() {
