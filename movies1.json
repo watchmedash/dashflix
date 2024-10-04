@@ -8,6 +8,19 @@
             "requested": true
         },
         {
+            "title": "Joker Folie a Deux",
+            "link": "https://emirati.top/movies/Joker Folie a Deux",
+            "image": "https://image.tmdb.org/t/p/original/if8QiqCI7WAGImKcJCfzp6VTyKA.jpg",
+            "tag": "CAM",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
             "title": "Deadpool and Wolverine",
             "link": "https://emirati.top/movies/Deadpool and Wolverine",
             "image": "https://m.media-amazon.com/images/M/MV5BNDA3MmYzOWEtYWZhNS00ZmU3LWJkYmUtODBjMzQyNzMxYmZhXkEyXkFqcGc@._V1_SX300.jpg",
@@ -355,6 +368,40 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "Striking The Palace",
+            "link": "https://emirati.top/movies/Striking The Palace",
+            "image": "https://image.tmdb.org/t/p/original/7OHAuk4tpYGNOG1osjbItr0HTkY.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Aurora Teagarden Mysteries A Lesson in Murder",
+            "link": "https://emirati.top/movies/Aurora Teagarden Mysteries A Lesson in Murder",
+            "image": "https://image.tmdb.org/t/p/original/66VwqNmaJ2m0CzGDPQx6I4f5DZx.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Mystery",
+                "TV Movie"
+            ]
+        },
+        {
+            "title": "The Rebellious",
+            "link": "https://emirati.top/movies/The Rebellious",
+            "image": "https://image.tmdb.org/t/p/original/2fAWX7M0zK1vPbXWsH7uMlCyzmN.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
             ]
         },
         {
