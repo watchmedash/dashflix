@@ -46,6 +46,19 @@
             ]
         },
         {
+            "title": "The Platform 2",
+            "link": "https://emirati.top/movies/The Platform 2",
+            "image": "https://image.tmdb.org/t/p/original/izuzUb0sDokqp9o8utVfsrSJuy5.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller",
+                "Science Fiction",
+                "Drama"
+            ]
+        },
+        {
             "title": "Tahong",
             "link": "https://emirati.top/movies/Tahong",
             "image": "https://image.tmdb.org/t/p/original/u6ugUUzxtvU8uxxto1rWkjS2SiM.jpg",
@@ -368,6 +381,223 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "The Face I Cant Forget",
+            "link": "https://emirati.top/movies/The Face I Cant Forget",
+            "image": "https://image.tmdb.org/t/p/original/9nR7p3ynHpmBbczEM1Fg76BylN.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller",
+                "TV Movie"
+            ]
+        },
+        {
+            "title": "Lambran da Laana",
+            "link": "https://emirati.top/movies/Lambran da Laana",
+            "image": "https://image.tmdb.org/t/p/original/az6EXSpbelGDjICyIfnwwrQBxJk.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Fantasy"
+            ]
+        },
+        {
+            "title": "Love on the Danube Kissing Stars",
+            "link": "https://emirati.top/movies/Love on the Danube Kissing Stars",
+            "image": "https://image.tmdb.org/t/p/original/pyeArDj6KnTPuAFOwqezhhXGRaQ.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "TV Movie",
+                "Romance"
+            ]
+        },
+        {
+            "title": "The Holiday Exchange",
+            "link": "https://emirati.top/movies/The Holiday Exchange",
+            "image": "https://image.tmdb.org/t/p/original/pO6KWHekzeVUBP95gx1BeACNzpG.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Romance"
+            ]
+        },
+        {
+            "title": "Spin the Bottle",
+            "link": "https://emirati.top/movies/Spin the Bottle",
+            "image": "https://image.tmdb.org/t/p/original/knZo3KnD7mT4aXwLDbYyQw7ZA8Z.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
+            ]
+        },
+        {
+            "title": "Goebbels and the Fuhrer",
+            "link": "https://emirati.top/movies/Goebbels and the Fuhrer",
+            "image": "https://image.tmdb.org/t/p/original/iK5rrNUSNUMOWyPUQAHo6WsjOho.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "History",
+                "Drama"
+            ]
+        },
+        {
+            "title": "The Diary",
+            "link": "https://emirati.top/movies/The Diary",
+            "image": "https://image.tmdb.org/t/p/original/8yx3EK6omL8mD8mcmHR7nmiboex.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Crayon Shin-chan Oras Dinosaur Diary",
+            "link": "https://emirati.top/movies/Crayon Shin-chan Oras Dinosaur Diary",
+            "image": "https://image.tmdb.org/t/p/original/nVUZBgpWxGDiKHMI6ymm4neoBsE.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Animation",
+                "Adventure",
+                "Comedy",
+                "Family"
+            ]
+        },
+        {
+            "title": "V H S Beyond",
+            "link": "https://emirati.top/movies/V H S Beyond",
+            "image": "https://image.tmdb.org/t/p/original/wXaf6VGNHIGU7qivapGOF7o4o4N.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Science Fiction",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "CTRL",
+            "link": "https://emirati.top/movies/CTRL",
+            "image": "https://image.tmdb.org/t/p/original/6bdKunzqqadZwiDd8FYHXlRMlJc.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Little Bites",
+            "link": "https://emirati.top/movies/Little Bites",
+            "image": "https://image.tmdb.org/t/p/original/6GwLtviFmRq1utIJUAxlfE3hcrg.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
+            ]
+        },
+        {
+            "title": "Gods Not Dead In God We Trust",
+            "link": "https://emirati.top/movies/Gods Not Dead In God We Trust",
+            "image": "https://image.tmdb.org/t/p/original/ei4DJPswJ2s2tSyhVLbm1EHVxVJ.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "title": "Things Will Be Different",
+            "link": "https://emirati.top/movies/Things Will Be Different",
+            "image": "https://image.tmdb.org/t/p/original/oXg4MGeXn8wIQQP1oGqprGl9aYM.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Science Fiction",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "The Radleys",
+            "link": "https://emirati.top/movies/The Radleys",
+            "image": "https://image.tmdb.org/t/p/original/kaEc9t2CjHddXJyJLd9GQcDURcX.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Its Whats Inside",
+            "link": "https://emirati.top/movies/Its Whats Inside",
+            "image": "https://image.tmdb.org/t/p/original/lnYn5X6vWFbw9CLzcuP56Svjksm.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller",
+                "Comedy",
+                "Science Fiction"
+            ]
+        },
+        {
+            "title": "Childs Play 3",
+            "link": "https://emirati.top/movies/Childs Play 3",
+            "image": "https://image.tmdb.org/t/p/original/4Ojqn25cDodhljBWrE76tZ93PRu.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "1991",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Childs Play 2",
+            "link": "https://emirati.top/movies/Childs Play 2",
+            "image": "https://image.tmdb.org/t/p/original/tFcol3qTcL5ImNRbcGLSsLPTTv1.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "1990",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Childs Play",
+            "link": "https://emirati.top/movies/Childs Play",
+            "image": "https://image.tmdb.org/t/p/original/tiGJO2QHEqZcq5cPNGmqViswzpy.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "1988",
+            "genres": [
+                "Horror"
             ]
         },
         {
