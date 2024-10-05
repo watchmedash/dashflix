@@ -177,6 +177,19 @@
             ]
         },
         {
+            "title": "Kill em All 2",
+            "link": "https://emirati.top/movies/Kill em All 2",
+            "image": "https://image.tmdb.org/t/p/original/wCESzMHGkQoVTUNCpH72zuIewWH.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
             "title": "Pilya",
             "link": "https://emirati.top/movies/Pilya",
             "image": "https://image.tmdb.org/t/p/original/aQCJba6669KSTHrreNlrZuLPwWQ.jpg",
@@ -1462,19 +1475,6 @@
             "genres": [
                 "Science Fiction",
                 "Horror"
-            ]
-        },
-        {
-            "title": "Kill em All 2",
-            "link": "https://emirati.top/movies/Kill em All 2",
-            "image": "https://image.tmdb.org/t/p/original/wCESzMHGkQoVTUNCpH72zuIewWH.jpg",
-            "tag": "HD",
-            "requested": false,
-            "release_year": "2024",
-            "genres": [
-                "Action",
-                "Crime",
-                "Thriller"
             ]
         },
         {
