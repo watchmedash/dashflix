@@ -625,6 +625,44 @@
             ]
         },
         {
+            "title": "Autumn at Apple Hill",
+            "link": "https://emirati.top/movies/Autumn at Apple Hill",
+            "image": "https://image.tmdb.org/t/p/original/yNHN88QVgFWC1lMoqXqrHyeCAXK.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "TV Movie",
+                "Romance",
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Citizen of a Kind",
+            "link": "https://emirati.top/movies/Citizen of a Kind",
+            "image": "https://image.tmdb.org/t/p/original/h9Kdc6o7v3d7tVXyT6QndVYlaeD.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Azrael",
+            "link": "https://emirati.top/movies/Azrael",
+            "image": "https://image.tmdb.org/t/p/original/qpdFKDvJS7oLKTcBLXOaMwUESbs.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
             "title": "Aurora Teagarden Mysteries A Lesson in Murder",
             "link": "https://emirati.top/movies/Aurora Teagarden Mysteries A Lesson in Murder",
             "image": "https://image.tmdb.org/t/p/original/66VwqNmaJ2m0CzGDPQx6I4f5DZx.jpg",
