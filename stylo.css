@@ -1,0 +1,159 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f1f4fd;
+}
+
+/* Container Styles */
+.container {
+  max-width: 100%;
+  width: 95%;
+}
+
+/* Slider Wrapper Styles */
+.slider-wrapper {
+  position: relative;
+}
+
+/* Slide Button Styles */
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #fff;
+  background: red; /* Button background color */
+  border: 2px solid royalblue; /* Royal blue border */
+  border-radius: 50%; /* Circular button */
+  cursor: pointer;
+  outline: none;
+  z-index: 5;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background: darkred; /* Darker red on hover */
+}
+
+/* Positioning Slide Buttons */
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px; /* Left side positioning */
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px; /* Right side positioning */
+}
+
+/* Image List Styles */
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  font-size: 0;
+  list-style: none;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+/* Image Item Styles */
+.slider-wrapper .image-list .image-item {
+  width: 150px; /* Reduced width */
+  height: 225px; /* Reduced height */
+  object-fit: cover;
+}
+
+/* Scrollbar Track and Thumb Styles */
+.container .slider-scrollbar {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  width: 100%;
+}
+
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px; /* Increase track height on hover */
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: red; /* Thumb color matches button */
+  cursor: grab;
+  border-radius: inherit;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px; /* Increase thumb height on active */
+  top: -2px;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+/* Responsive Styles for Mobile and Tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important; /* Hide slide buttons */
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory; /* Snap scrolling */
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 120px; /* Smaller width for mobile */
+    height: 180px; /* Smaller height for mobile */
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%; /* Adjust thumb size on smaller screens */
+  }
+}
+
+/* Image Hover Effect */
+.slider-wrapper .image-list .image-item {
+  transition: transform 0.5s ease, filter 0.5s ease; /* Smooth transition */
+}
+
+.slider-wrapper .image-list .image-item:hover {
+  transform: scale(1.02); /* Slight enlargement */
+  filter: grayscale(100%); /* Convert to grayscale */
+}
