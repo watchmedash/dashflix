@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         popup6: {
             id: "popup6",
-            redirectUrl: "requested.html", // Replace with your desired URL
+            redirectUrl: "donate.html", // Replace with your desired URL
             redirect: function() {
                 window.location.href = this.redirectUrl;
             }
