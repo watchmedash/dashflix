@@ -8,6 +8,18 @@
             "requested": true
         },
         {
+            "title": "Tatsulok Tatlo Magkasalo",
+            "link": "https://emirati.top/movies/Tatsulok Tatlo Magkasalo",
+            "image": "https://image.tmdb.org/t/p/original/15B2oabjTSiydkqsV05jX2IV1Dq.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Romance"
+            ]
+        },
+        {
             "title": "Joker Folie a Deux",
             "link": "https://emirati.top/movies/Joker Folie a Deux",
             "image": "https://image.tmdb.org/t/p/original/if8QiqCI7WAGImKcJCfzp6VTyKA.jpg",
@@ -394,6 +406,19 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "A Place Called Silence",
+            "link": "https://emirati.top/movies/A Place Called Silence",
+            "image": "https://image.tmdb.org/t/p/original/uKThqY2oRYSHOPxYryTp2550fuZ.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Crime",
+                "Mystery",
+                "Thriller"
             ]
         },
         {
