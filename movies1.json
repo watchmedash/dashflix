@@ -32,6 +32,19 @@
             ]
         },
         {
+            "title": "The Killers Game",
+            "link": "https://emirati.top/movies/The Killers Game",
+            "image": "https://image.tmdb.org/t/p/original/4bKlTeOUr5AKrLky8mwWvlQqyVd.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Comedy",
+                "Crime"
+            ]
+        }
+        {
             "title": "Undergrads",
             "link": "https://emirati.top/movies/Undergrads",
             "image": "https://image.tmdb.org/t/p/original/6rgGSKOwCurf1a9j4CHwTYHX21e.jpg",
