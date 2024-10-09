@@ -43,7 +43,19 @@
                 "Comedy",
                 "Crime"
             ]
-        }
+        },
+        {
+            "title": "I Heart Robots",
+            "link": "https://emirati.top/movies/I Heart Robots",
+            "image": "https://image.tmdb.org/t/p/original/knd85FajslJuehXKldfQzlsdEMo.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Adventure"
+            ]
+        },
         {
             "title": "Undergrads",
             "link": "https://emirati.top/movies/Undergrads",
