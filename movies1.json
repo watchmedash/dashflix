@@ -8,6 +8,17 @@
             "requested": true
         },
         {
+            "title": "Undergrads",
+            "link": "https://emirati.top/movies/Undergrads",
+            "image": "https://image.tmdb.org/t/p/original/6rgGSKOwCurf1a9j4CHwTYHX21e.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
             "title": "Tatsulok Tatlo Magkasalo",
             "link": "https://emirati.top/movies/Tatsulok Tatlo Magkasalo",
             "image": "https://image.tmdb.org/t/p/original/15B2oabjTSiydkqsV05jX2IV1Dq.jpg",
@@ -510,17 +521,6 @@
             "genres": [
                 "Drama",
                 "Family"
-            ]
-        },
-        {
-            "title": "Undergrads",
-            "link": "https://emirati.top/movies/Undergrads",
-            "image": "https://image.tmdb.org/t/p/original/6rgGSKOwCurf1a9j4CHwTYHX21e.jpg",
-            "tag": "HD",
-            "requested": false,
-            "release_year": "2024",
-            "genres": [
-                "Drama"
             ]
         },
         {
