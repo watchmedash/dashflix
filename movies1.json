@@ -8,6 +8,30 @@
             "requested": true
         },
         {
+            "title": "Hellboy The Crooked Man",
+            "link": "https://emirati.top/movies/Hellboy The Crooked Man",
+            "image": "https://image.tmdb.org/t/p/original/iz2GabtToVB05gLTVSH7ZvFtsMM.jpg",
+            "tag": "HD",
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Action",
+                "Adventure"
+            ]
+        },
+        {
+            "title": "Beetlejuice Beetlejuice",
+            "link": "https://emirati.top/movies/Beetlejuice Beetlejuice",
+            "image": "https://m.media-amazon.com/images/M/MV5BNjdiMjk1NzItZDk2ZS00ODc1LTg2ZGEtYjIwNmVmNGJlZmU0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
+            "tag": "HD",
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Fantasy",
+                "Horror"
+            ]
+        },
+        {
             "title": "Undergrads",
             "link": "https://emirati.top/movies/Undergrads",
             "image": "https://image.tmdb.org/t/p/original/6rgGSKOwCurf1a9j4CHwTYHX21e.jpg",
@@ -112,18 +136,6 @@
             "requested": true,
             "release_year": "2003",
             "genres": []
-        },
-        {
-            "title": "Hellboy The Crooked Man",
-            "link": "https://emirati.top/movies/Hellboy The Crooked Man",
-            "image": "https://image.tmdb.org/t/p/original/iz2GabtToVB05gLTVSH7ZvFtsMM.jpg",
-            "tag": "CAM",
-            "release_year": "2024",
-            "genres": [
-                "Horror",
-                "Action",
-                "Adventure"
-            ]
         },
         {
             "title": "The Crow",
@@ -274,18 +286,6 @@
                 "Family",
                 "Comedy",
                 "Action"
-            ]
-        },
-        {
-            "title": "Beetlejuice Beetlejuice",
-            "link": "https://emirati.top/movies/Beetlejuice Beetlejuice",
-            "image": "https://m.media-amazon.com/images/M/MV5BNjdiMjk1NzItZDk2ZS00ODc1LTg2ZGEtYjIwNmVmNGJlZmU0XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg",
-            "tag": "TS",
-            "release_year": "2024",
-            "genres": [
-                "Comedy",
-                "Fantasy",
-                "Horror"
             ]
         },
         {
