@@ -247,15 +247,15 @@ function displayMovies(movieArray) {
         switch (movie.tag.toLowerCase()) {
             case 'hd':
                 span.classList.add('hd');
-                span.textContent = '✅'; // HD tag icon
+                span.textContent = 'HD'; // HD tag icon
                 break;
             case 'ts':
                 span.classList.add('ts');
-                span.textContent = '♻️'; // TS tag icon
+                span.textContent = 'TS'; // TS tag icon
                 break;
             case 'cam':
                 span.classList.add('cam');
-                span.textContent = '❌'; // CAM tag icon
+                span.textContent = 'CAM'; // CAM tag icon
                 break;
             default:
                 span.textContent = movie.tag || '🔥'; // Default tag icon

@@ -179,15 +179,15 @@ fetchAndMergeJSON(jsonFiles)
             switch (movie.tag.toLowerCase()) {
                 case 'hd':
                     span.classList.add('hd');
-                    span.textContent = '✅';
+                    span.textContent = 'HD';
                     break;
                 case 'ts':
                     span.classList.add('ts');
-                    span.textContent = '♻️';
+                    span.textContent = 'TS';
                     break;
                 case 'cam':
                     span.classList.add('cam');
-                    span.textContent = '❌';
+                    span.textContent = 'CAM';
                     break;
                 default:
                     span.textContent = movie.tag || '🔥';

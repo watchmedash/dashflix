@@ -1,3 +1,32 @@
+.tag {
+    display: inline-block; /* Ensures the tags are displayed inline */
+    padding: 5px 10px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    color: #FFFFFF; /* Default text color for tags */
+}
+
+/* HD tag styles */
+.hd {
+    background-color: rgba(211, 211, 211, 0.4); /* Bright green background */
+}
+
+/* TS tag styles */
+.ts {
+    background-color: rgba(211, 211, 211, 0.4); /* Cyan background */
+}
+
+/* CAM tag styles */
+.cam {
+    background-color: rgba(255, 0, 0, 0.2); /* Bright red background */
+}
+
+/* Default tag styles for unrecognized tags */
+.default {
+    background-color: rgba(211, 211, 211, 0.4); /* Orange background */
+}
+
+
 .button-contained {
 display: flex; /* Align buttons horizontally */
 justify-content: center; /* Center the buttons horizontally */
@@ -39,38 +68,40 @@ height: 100%;
 }
 
 .floating-button {
-position: fixed;
-bottom: 20px;
-right: 20px; /* Changed from 'right' to 'left' */
-width: 50px;
-height: 50px;
-background-color: grey;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
-opacity: 0.8;
-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Position on the right */
+    width: 60px; /* Increased width for better touch target */
+    height: 60px; /* Increased height for better touch target */
+    background: linear-gradient(135deg, #1a1a1a, #333333); /* Dark gradient background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.9;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7); /* More prominent shadow */
+    transition: transform 0.2s ease, opacity 0.3s ease;
 }
 
 .floating-button:hover {
-background-color: red;
-transform: scale(1.1);
+    background: linear-gradient(135deg, #333333, #1a1a1a); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    opacity: 1; /* Fully opaque on hover */
 }
 
 .arrow-up {
-width: 0;
-height: 0;
-border-left: 12px solid transparent;
-border-right: 12px solid transparent;
-border-bottom: 25px solid white;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 25px solid #f0f0f0; /* Bright green arrow */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the arrow */
 }
+
 
 .watch-now-bur {
 margin-top: 10px;
@@ -126,7 +157,7 @@ margin-bottom: 10px;
 display: inline-block;
 padding: 10px 20px;
 background-color: #000000; /* Red background color */
-color: #FFFFFF; /* White text color */
+color: #grey; /* White text color */
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 cursor: pointer;
 margin: auto 10px; /* Increase margin for more space */
@@ -172,39 +203,39 @@ visibility: visible;
 }
 
 .announcement-banner {
-background-color: rgba(0, 255, 0, 0.7); /* Green background with transparency */
-color: #000000;
-padding: 5px;
-text-align: center;
-font-size: 14px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-position: relative;
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: #FFFFFF; /* White text color */
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: relative;
 }
 
 .announcement-banner p {
-margin: 0;
+    margin: 0;
 }
 
 .announcement-banner a {
-color: #FFFFFF; /* Red link font color */
-text-decoration: underline;
+    color: #c9c9c9; /* Green link font color */
+    text-decoration: underline;
 }
 
 .announcement-slider .slick-slide {
-outline: none; /* Remove outline for carousel items */
+    outline: none; /* Remove outline for carousel items */
 }
 
 .announcement-banned {
-background-color: #FFFFFF; /* White background */
-color: #000000; /* Black font color */
-padding: 10px;
-text-align: center;
-font-size: 18px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-position: relative;
-border: 2px solid #000000; /* Black border */
-border-left: 1px solid #000000; /* Black border on the left side */
-border-right: 1px solid #000000;
+    background-color: #1F1F1F; /* Dark background */
+    color: #FFFFFF; /* White font color */
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    border: 2px solid #FFFFFF; /* White border */
+    border-left: 1px solid #FFFFFF; /* White border on the left side */
+    border-right: 1px solid #FFFFFF; /* White border on the right side */
 }
 
 .announcement-banned p {
@@ -214,42 +245,6 @@ margin: 0;
 .announcement-banned a {
 color: #000000; /* Black link font color */
 text-decoration: underline;
-}
-
-.hot {
-display: flex;
-justify-content: space-around;
-align-items: center;
-background-color: rgba(0, 0, 0, 0); /* Transparent background */
-color: #000000;
-padding: 10px;
-text-align: center;
-position: relative;
-}
-
-.hot a {
-color: #FFFFFF; /* White link font color */
-text-decoration: none;
-}
-
-.hot img {
-height: auto;
-width: 100%; /* Make images take 100% of the container width */
-max-width: 240px; /* Limit maximum width of each image */
-max-height: 320px; /* Limit maximum height of each image */
-}
-
-.glow {
-animation: glowAnimation 2s infinite alternate; /* Glow animation during movement */
-}
-
-@keyframes glowAnimation {
-from {
-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
-}
-to {
-box-shadow: 0 0 40px rgba(255, 255, 255, 1); /* Stronger glow */
-}
 }
 
 .related-movies-gallery {
@@ -476,7 +471,7 @@ display: none;
 width: 80%;
 margin: 0 auto;
 padding: 10px;
-background-color: rgba(255, 255, 255, 1);
+background-color: rgba(211, 211, 211, 1);
 border-radius: 5px;
 color: black;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -510,9 +505,9 @@ color: black; /* Set the font color of "No results found" to red */
 
 .about-container {
 padding: 10px;
-background: linear-gradient(to right, grey, black);
+background: black;
 border-radius: 2px;
-color: white; /* text color */
+color: grey; /* text color */
 font-weight: bold;
 max-width: 85%;
 margin: 20px auto;
@@ -556,7 +551,7 @@ border-radius: 2px;
 cursor: pointer;
 text-align: center;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-color: white; /* Change font color to red */
+color: grey; /* Change font color to red */
 font-weight: bold; /* Make the font bold */
 text-decoration: none;
 }
@@ -576,7 +571,7 @@ flex: 1; /* Allow the content to expand and fill the remaining vertical space */
 nav {
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 background: radial-gradient(circle at 20% 20%, #2E2E2E, #000000 70%);
-color: #fff;
+color: #e2e2e2;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -614,7 +609,7 @@ margin: 0 auto; /* Center the content horizontally and remove all margins */
 }
 
 h1, h2, h3, p, li {
-color: #fff; /* White font color */
+color: #grey; /* White font color */
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply "Exo 2" font to all text */
 }
 
@@ -701,7 +696,7 @@ color: #f0f0f0;
 nav {
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 background: radial-gradient(circle at 20% 20%, #2E2E2E, #000000 70%);
-color: #fff;
+color: #e2e2e2;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -737,7 +732,7 @@ transition: color 0.3s ease;
 }
 
 nav li a:hover {
-color: red;
+color: grey;
 }
 
 nav .icons {
@@ -769,7 +764,7 @@ padding: 10px;
 .bar {
 width: 30px;
 height: 3px;
-background-color: white;
+background-color: grey;
 margin: 6px 0;
 }
 
@@ -838,7 +833,7 @@ margin-right: 5px;
 }
 
 .footer-links a:hover {
-color: red;
+color: grey;
 }
 
 .social-icons {
@@ -854,7 +849,7 @@ text-decoration: none;
 }
 
 .social-icons a:hover {
-color: red;
+color: grey;
 }
 
 .footer-nav {
@@ -913,7 +908,7 @@ z-index: -1; /* Place the pseudo-element behind the content */
 .gallery figure img {
 width: 100%;
 height: auto;
-border-radius: 1px;
+border-radius: 10px;
  /* Make image corners rounded */
 }
 
@@ -963,15 +958,14 @@ height: auto;
 .gallery figcaption {
 text-align: center;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Set font family to Exo 2 */
-color: #fff; /* Change the font color to white */
+color: #e2e2e2; /* Change the font color to white */
 width: 100%; /* Make the caption width same as image width */
 word-wrap: break-word;
- /* Wrap the long titles to next line */
 }
 
 .title {
 margin-top: 10px;
-color: #fff;
+color: #e2e2e2;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-size: 18px;
 }
