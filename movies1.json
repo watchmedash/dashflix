@@ -45,6 +45,18 @@
             ]
         },
         {
+            "title": "Caddo Lake",
+            "link": "https://emirati.top/movies/Caddo Lake",
+            "image": "https://image.tmdb.org/t/p/original/sv1IoM6xlCdAoOzUmgB9XTnADC.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Mystery",
+                "Thriller"
+            ]
+        },
+        {
             "title": "I Heart Robots",
             "link": "https://emirati.top/movies/I Heart Robots",
             "image": "https://image.tmdb.org/t/p/original/knd85FajslJuehXKldfQzlsdEMo.jpg",
@@ -454,6 +466,17 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "Brothers",
+            "link": "https://emirati.top/movies/Brothers",
+            "image": "https://image.tmdb.org/t/p/original/5FmRJCoCmPWxZhJ0gE6vwSzx4pP.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
             ]
         },
         {
