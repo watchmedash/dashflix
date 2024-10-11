@@ -469,6 +469,44 @@
             ]
         },
         {
+            "title": "That Kind of Love",
+            "link": "https://emirati.top/movies/That Kind of Love",
+            "image": "https://image.tmdb.org/t/p/original/iVMwyRxkHVuBeiOMSJk9AwU3KIc.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Romance",
+                "Comedy",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Temurun",
+            "link": "https://emirati.top/movies/Temurun",
+            "image": "https://image.tmdb.org/t/p/original/onWoi4BlMWgM6GIGSLBA8qQqTNM.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Maid Droid Origins",
+            "link": "https://emirati.top/movies/Maid Droid Origins",
+            "image": "https://image.tmdb.org/t/p/original/iFbLeH8c42HHykkkqkFdr2J0vRi.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Science Fiction",
+                "Drama",
+                "Thriller"
+            ]
+        },
+        {
             "title": "Brothers",
             "link": "https://emirati.top/movies/Brothers",
             "image": "https://image.tmdb.org/t/p/original/5FmRJCoCmPWxZhJ0gE6vwSzx4pP.jpg",
