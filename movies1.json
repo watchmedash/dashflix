@@ -8,6 +8,15 @@
             "requested": true
         },
         {
+            "title": "Halinghing",
+            "link": "https://emirati.top/movies/Halinghing",
+            "image": "https://image.tmdb.org/t/p/original/8eMW4CSTjTAyPf1Zt70myJFXx7f.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "2024",
+            "genres": []
+        },
+        {
             "title": "Hellboy The Crooked Man",
             "link": "https://emirati.top/movies/Hellboy The Crooked Man",
             "image": "https://image.tmdb.org/t/p/original/iz2GabtToVB05gLTVSH7ZvFtsMM.jpg",
@@ -466,6 +475,200 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "Abracadaver",
+            "link": "https://emirati.top/movies/Abracadaver",
+            "image": "https://image.tmdb.org/t/p/original/xxzLBJnywBitYc0fLcRJ0hujU5b.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Vedaa",
+            "link": "https://emirati.top/movies/Vedaa",
+            "image": "https://image.tmdb.org/t/p/original/3m5U6NXU0W8o4ghDAECxPgrdCmc.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Drama",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "SpongeBob Squarepants Kreepaway Kamp",
+            "link": "https://emirati.top/movies/SpongeBob Squarepants Kreepaway Kamp",
+            "image": "https://image.tmdb.org/t/p/original/blRsgsexoBqnjcEJkV8beKAVT6J.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "TV Movie",
+                "Family",
+                "Comedy",
+                "Horror"
+            ]
+        },
+        {
+            "title": "Kalinga",
+            "link": "https://emirati.top/movies/Kalinga",
+            "image": "https://image.tmdb.org/t/p/original/y62MzCi3Auwb1T4aGDPNE2gLyIE.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
+            ]
+        },
+        {
+            "title": "In Her Place",
+            "link": "https://emirati.top/movies/In Her Place",
+            "image": "https://image.tmdb.org/t/p/original/jlnmzV9w2w85ch91HDnukQz1ynl.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Lonely Planet",
+            "link": "https://emirati.top/movies/Lonely Planet",
+            "image": "https://image.tmdb.org/t/p/original/sH7Orig1yqa6ojMLIzLDxA2GRkH.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Romance",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Uprising",
+            "link": "https://emirati.top/movies/Uprising",
+            "image": "https://image.tmdb.org/t/p/original/hg9OeaCRSpazrfqYyEFr6BDaZW8.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Drama",
+                "History"
+            ]
+        },
+        {
+            "title": "Daddys Head",
+            "link": "https://emirati.top/movies/Daddys Head",
+            "image": "https://image.tmdb.org/t/p/original/nEWbEBs8BalwasA4Un8rll3kauT.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
+            ]
+        },
+        {
+            "title": "Khel Khel Mein",
+            "link": "https://emirati.top/movies/Khel Khel Mein",
+            "image": "https://image.tmdb.org/t/p/original/32P0oQf41HXbENRGtu2h0rqBF2k.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Mathu Vadalara 2",
+            "link": "https://emirati.top/movies/Mathu Vadalara 2",
+            "image": "https://image.tmdb.org/t/p/original/istPXyZrPtB0o4WGxBJpjc8lCqV.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "The Last of the Sea Women",
+            "link": "https://emirati.top/movies/The Last of the Sea Women",
+            "image": "https://image.tmdb.org/t/p/original/8jhTnfQh9lWmRf0eAX1GNXYuIs5.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
+            ]
+        },
+        {
+            "title": "Sarfira",
+            "link": "https://emirati.top/movies/Sarfira",
+            "image": "https://image.tmdb.org/t/p/original/b1FA9I8c12UTU3a5YCi1MUtAWnu.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "title": "Girl Haunts Boy",
+            "link": "https://emirati.top/movies/Girl Haunts Boy",
+            "image": "https://image.tmdb.org/t/p/original/3sqPy0QzJGEYcpxLaV2w3BJyH04.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Fantasy",
+                "Romance"
+            ]
+        },
+        {
+            "title": "The Silent Hour",
+            "link": "https://emirati.top/movies/The Silent Hour",
+            "image": "https://image.tmdb.org/t/p/original/j736cRzBtEPCm0nHnpRN1prqiqj.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "TMZ Presents The Downfall of Diddy The Indictment",
+            "link": "https://emirati.top/movies/TMZ Presents The Downfall of Diddy The Indictment",
+            "image": "https://image.tmdb.org/t/p/original/v8s7gfawBjnaF0GbjG8pVx0v6dU.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Mr Crocket",
+            "link": "https://emirati.top/movies/Mr Crocket",
+            "image": "https://image.tmdb.org/t/p/original/t5TV6Y8yKZXTtg8Abf4uBGVH9mD.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
             ]
         },
         {
