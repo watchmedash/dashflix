@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Discover classics and the latest releases for streaming."/>
+<meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres, Latest releases, Classic films"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
+<meta property="og:description" content="Explore a world of free movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+<meta property="og:url" content="https://dashflix.xyz/home"/>
+<meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+<meta property="og:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/> <!-- Alt text for the image -->
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
+<meta name="twitter:description" content="Explore a world of free movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+<meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+<meta name="twitter:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
+<link rel="canonical" href="https://dashflix.xyz/home"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+<title>Movies - Watch Free Movies and TV Series Online</title>
+<script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
+</head>
+<body oncontextmenu="return false;">
+<header>
+<nav>
+<div class="logo-title-container">
+<div class="logo-container">
+<img alt="Dashflix Logo"  src="https://i.postimg.cc/qMFTZzvm/logodf.webp"/>
+</div>
+</div>
+<div class="nav-links">
+<ul>
+<li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+<li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+<li><a href="https://t.me/dashflixtop"><i class="fas fa-info-circle"></i> Telegram</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<!--<div class="image-contained"><a href="https://dash-tv.com"><img src="https://i.postimg.cc/T11ZV59f/dash-tv-ad.gif" alt="Watch TV Shows Online Free"></a></div>-->
+<div class="announcement-banner">
+<p>Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.</p>
+</div>
+<div class="terra"><script type="text/javascript">
+atOptions = {
+'key' : '31659dfd382d23627d3b20f3dae9ec68',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
+</script>
+<script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
+<div class="terra">
+<script type="text/javascript">
+atOptions = {
+'key' : '6b01e67100c2170e766afcf1bec51d6a',
+'format' : 'iframe',
+'height' : 60,
+'width' : 468,
+'params' : {}
+};
+</script>
+<script type="text/javascript" src="//perilastronaut.com/6b01e67100c2170e766afcf1bec51d6a/invoke.js"></script>
+</div>
+<div class="search-container">
+<form>
+<input type="text" id="searchInput" placeholder="Search Movie..." autocomplete="off">
+<button type="submit"><i class="fas fa-search"></i></button>
+</form>
+<div id="searchResults"></div>
+<div class="sharethis-inline-share-buttons"></div>
+<div class="terra"><script type="text/javascript">
+atOptions = {
+'key' : '29a679982b44db55fa95b90dfb3fac2f',
+'format' : 'iframe',
+'height' : 50,
+'width' : 320,
+'params' : {}
+};
+</script>
+<script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script></div>
+<style>
+    body {
+        background-color: #121212;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .movie-figure {
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+
+    .movie-figure:hover {
+        transform: scale(1.05);
+    }
+
+    .tag {
+        display: block;
+        margin-top: 5px;
+        font-weight: bold;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #page-dropdown,
+    #genre-dropdown {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #333;
+        background-color: #121212;
+        color: #fff;
+        margin: 10px;
+    }
+</style>
+
+<div style="text-align: center; margin-bottom: 20px;">
+    <select id="page-dropdown">
+      <option value="" disabled selected>Menu</option>
+      <option value="https://freedomwall.top">Anime</option>
+      <option value="https://dashtoons.xyz">Comics</option>
+      <option value="https://kabayan.top">Drama</option>
+      <option value="home.html">Gallery</option>
+      <option value="homer.html">List</option>
+      <option value="tvplus.html">Live</option>
+      <option value="home.html">Request</option>
+      <option value="requested.html">Requested</option>
+      <option value="shows.html">TV Shows</option>
+      <option value="login.html">18+</option>
+    </select>
+
+    <select id="genre-dropdown">
+        <option value="" disabled selected>Select Genre</option>
+        <option value="all">All</option>
+        <!-- Genre options will be dynamically populated here -->
+    </select>
+</div>
+
+<div class="gallery" id="gallery-container"></div>
+<div class="pagination" id="pagination-controls"></div>
+
+<script>
+document.getElementById('page-dropdown').addEventListener('change', function() {
+    const selectedPage = this.value;
+    if (selectedPage) {
+        window.location.href = selectedPage; // Navigate to the selected page
+    }
+});
+
+// Array of JSON file URLs
+const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
+const moviesPerPage = 20;  // Set the number of movies per page
+let currentPage = 1;       // Current page number
+
+// Function to fetch and merge JSON data
+async function fetchAndMergeJSON(files) {
+    try {
+        const responses = await Promise.all(files.map(file => fetch(file)));
+        const data = await Promise.all(responses.map(response => {
+            if (!response.ok) {
+                console.error('Error fetching file:', file, response.status);
+                return { movies: [] }; // Return an empty array for error cases
+            }
+            return response.json();
+        }));
+        return data.flatMap(data => data.movies);  // Merge all movie data into one array
+    } catch (error) {
+        console.error('Error fetching JSON files:', error);
+        return [];
+    }
+}
+
+// Function to create pagination controls
+function createPagination(totalMovies, moviesPerPage) {
+    const totalPages = Math.ceil(totalMovies / moviesPerPage);
+    const paginationControls = document.getElementById('pagination-controls');
+    paginationControls.innerHTML = '';  // Clear previous controls
+
+    console.log('Total Pages:', totalPages); // Debugging
+    console.log('Current Page:', currentPage); // Debugging
+
+    // Create Previous button
+    if (currentPage > 1) {
+        console.log('Creating Previous button'); // Debugging
+        const prevButton = document.createElement('button');
+        prevButton.textContent = 'Previous';
+        prevButton.addEventListener('click', () => {
+            currentPage--;
+            console.log('Previous clicked, new Current Page:', currentPage); // Debugging
+            loadPage(currentPage);
+        });
+        paginationControls.appendChild(prevButton);
+    }
+
+    // Create page number buttons
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i;
+        pageButton.classList.toggle('active', i === currentPage);  // Highlight current page
+        pageButton.addEventListener('click', () => {
+            currentPage = i;
+            console.log('Page', i, 'clicked, new Current Page:', currentPage); // Debugging
+            loadPage(currentPage);
+        });
+        paginationControls.appendChild(pageButton);
+    }
+
+    // Create Next button
+    if (currentPage < totalPages) {
+        console.log('Creating Next button'); // Debugging
+        const nextButton = document.createElement('button');
+        nextButton.textContent = 'Next';
+        nextButton.addEventListener('click', () => {
+            currentPage++;
+            console.log('Next clicked, new Current Page:', currentPage); // Debugging
+            loadPage(currentPage);
+        });
+        paginationControls.appendChild(nextButton);
+    }
+
+    console.log('Pagination controls updated. Current Page:', currentPage); // Debugging
+}
+
+// Function to load movies for a specific page
+function loadPage(pageNumber) {
+    const start = (pageNumber - 1) * moviesPerPage;
+    const end = start + moviesPerPage;
+    const moviesToShow = movies.slice(start, end);  // Movies for the current page
+
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryContainer.innerHTML = '';  // Clear the gallery for the new page
+
+    console.log('Loading Movies for Page:', pageNumber); // Debugging
+
+    // Add the movies for the current page to the gallery
+    moviesToShow.forEach(movie => {
+        const figure = document.createElement('figure');
+        figure.classList.add('movie-figure');
+        figure.dataset.title = movie.title.toLowerCase();
+        figure.dataset.genres = (movie.genres || []).join(',').toLowerCase();
+
+        const anchor = document.createElement('a');
+        anchor.href = movie.link;
+        anchor.className = 'movie-link';
+
+        const img = document.createElement('img');
+        img.alt = movie.title;
+        img.dataset.src = movie.image.replace('/w500/', '/w92/');
+        img.className = 'defer-image';
+        img.width = 92;
+        img.height = 123;
+        img.loading = 'lazy';
+
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = movie.tag || '🔥';
+
+        const caption = document.createElement('figcaption');
+        caption.textContent = movie.title;
+        caption.style.cursor = 'pointer';
+        caption.addEventListener('click', () => window.location.href = movie.link);
+
+        anchor.appendChild(img);
+        anchor.appendChild(span);
+        figure.appendChild(anchor);
+        figure.appendChild(caption);
+        galleryContainer.appendChild(figure);
+    });
+
+    // Lazy load images
+    lazyLoad();
+
+    // Update pagination controls after loading the page
+    createPagination(movies.length, moviesPerPage);
+}
+
+// Fetch and load the movies, then create pagination
+fetchAndMergeJSON(jsonFiles)
+    .then(mergedMovies => {
+        window.movies = mergedMovies;  // Save all movies globally
+        createPagination(mergedMovies.length, moviesPerPage);  // Create pagination based on movie count
+        loadPage(currentPage);  // Load the first page
+    })
+    .catch(error => {
+        console.error('Error processing the JSON data:', error);
+    });
+
+</script>
+
+
+<div id="customTooltip" class="custom-tooltip">
+<h2 id="movieTitle"></h2>
+<p id="movieOverview"></p>
+<p id="movieReleaseDate"></p>
+</div>
+
+<div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
+<script>
+const items = document.querySelectorAll('figure');
+const itemsToShow = 16; // Number of items to reveal on each scroll
+let lastShownIndex = 0;
+
+function revealItems() {
+for (let i = lastShownIndex; i < lastShownIndex + itemsToShow; i++) {
+if (i < items.length) {
+items[i].style.display = 'block';
+}
+}
+lastShownIndex += itemsToShow;
+}
+
+window.addEventListener('scroll', () => {
+const scrollPosition = window.scrollY + window.innerHeight;
+const documentHeight = document.body.clientHeight;
+
+if (scrollPosition >= documentHeight - 300) {
+revealItems();
+}
+});
+
+revealItems();
+</script>
+<script>function isInViewport(element) {
+const rect = element.getBoundingClientRect();
+return (
+rect.top >= 0 &&
+rect.left >= 0 &&
+rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
+}
+
+function loadImages() {
+const imagesToLoad = document.querySelectorAll('.defer-image');
+
+imagesToLoad.forEach((image) => {
+if (isInViewport(image)) {
+const imgUrl = image.getAttribute('data-src');
+if (imgUrl) {
+const img = new Image();
+img.src = imgUrl;
+img.onload = () => {
+image.setAttribute('src', imgUrl);
+image.classList.remove('defer-image');
+};
+}
+}
+});
+}
+
+window.addEventListener('scroll', loadImages);
+window.addEventListener('resize', loadImages);
+
+loadImages();
+</script>
+<script>
+function loadStylesheets() {
+function loadStylesheet(href) {
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = href;
+link.type = 'text/css';
+link.media = 'all';
+document.getElementsByTagName('head')[0].appendChild(link);
+}
+// Load Font Awesome stylesheet
+loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+// Load Google Fonts stylesheet
+loadStylesheet('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&amp;display=swap');
+}
+if (window.addEventListener) {
+window.addEventListener('load', loadStylesheets, false);
+} else if (window.attachEvent) {
+window.attachEvent('onload', loadStylesheets);
+} else {
+window.onload = loadStylesheets;
+}
+</script>
+<script>
+const goToTopButton = document.getElementById('go-to-top-button');
+
+window.addEventListener('scroll', function() {
+if (window.scrollY > 300) { // Adjust the value to control when the button appears
+goToTopButton.style.display = 'block';
+} else {
+goToTopButton.style.display = 'none';
+}
+});
+
+goToTopButton.addEventListener('click', function() {
+
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+<script src="tooltip.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
