@@ -19,6 +19,7 @@
 <meta name="twitter:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
 <link rel="canonical" href="https://dashflix.xyz/homer"/>
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="indextyle.css">
 <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
 <title>Movie List - Watch Free Movies and TV Series Online</title>
 <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&amp;product=sticky-share-buttons"></script>
@@ -135,8 +136,7 @@ atOptions = {
         margin: 10px auto;
         text-decoration: none;
         color: #fff; /* Light text color */
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 14px;
         background-color: #1f1f1f; /* Darker background for the link */
         border: 2px solid #333;
         border-radius: 5px;
@@ -156,7 +156,7 @@ atOptions = {
 
     /* Styling for the play icon */
     .movie-link .play-icon {
-        font-size: 20px;
+        font-size: 16px;
         color: white; /* Color for the play icon */
     }
 
@@ -179,8 +179,6 @@ atOptions = {
       <option value="https://freedomwall.top">Anime</option>
       <option value="https://dashtoons.xyz">Comics</option>
       <option value="https://kabayan.top">Drama</option>
-      <option value="home.html">Gallery</option>
-      <option value="homer.html">List</option>
       <option value="tvplus.html">Live</option>
       <option value="home.html">Request</option>
       <option value="requested.html">Requested</option>
@@ -193,6 +191,11 @@ atOptions = {
         <option value="all">All</option>
         <!-- Genre options will be dynamically populated here -->
     </select>
+</div>
+
+<div class="button-container" style="text-align: center; margin: 5px 0;">
+<a href="home.html" class="watch-now-butt" style="padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #121212; color: #fff; text-decoration: none; cursor: pointer;">
+Change View</a>
 </div>
 
 <div class="gallery" id="gallery-container"></div>
