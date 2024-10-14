@@ -130,17 +130,17 @@ atOptions = {
 
 <div style="text-align: center; margin-bottom: 20px;">
     <select id="page-dropdown">
-      <option value="" disabled selected>Menu</option>
-      <option value="https://freedomwall.top">Anime</option>
-      <option value="https://dashtoons.xyz">Comics</option>
-      <option value="https://kabayan.top">Drama</option>
-      <option value="home.html">Gallery</option>
-      <option value="homer.html">List</option>
-      <option value="tvplus.html">Live</option>
-      <option value="home.html">Request</option>
-      <option value="requested.html">Requested</option>
-      <option value="shows.html">TV Shows</option>
-      <option value="login.html">18+</option>
+        <option value="" disabled selected>Menu</option>
+        <option value="https://freedomwall.top">Anime</option>
+        <option value="https://dashtoons.xyz">Comics</option>
+        <option value="https://kabayan.top">Drama</option>
+        <option value="home.html">Gallery</option>
+        <option value="homer.html">List</option>
+        <option value="tvplus.html">Live</option>
+        <option value="home.html">Request</option>
+        <option value="requested.html">Requested</option>
+        <option value="shows.html">TV Shows</option>
+        <option value="login.html">18+</option>
     </select>
 
     <select id="genre-dropdown">
@@ -160,8 +160,9 @@ document.getElementById('page-dropdown').addEventListener('change', function() {
     }
 });
 
-// Array of JSON file URLs
 const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
+let filteredMovies = [];   // Store filtered movies
+let allMovies = [];        // Store all movies
 
 // Function to fetch and merge JSON data
 async function fetchAndMergeJSON(files) {
@@ -174,127 +175,98 @@ async function fetchAndMergeJSON(files) {
             }
             return response.json();
         }));
-        // Merge all movie data arrays into one
-        return data.flatMap(data => data.movies);
+        return data.flatMap(data => data.movies);  // Merge all movie data into one array
     } catch (error) {
         console.error('Error fetching JSON files:', error);
         return [];
     }
 }
 
-// Fetch, merge, and load the movies JSON data
+// Function to populate the genre dropdown with unique genres
+function populateGenreDropdown(movies) {
+    const genreDropdown = document.getElementById('genre-dropdown');
+    const genres = new Set();
+    movies.forEach(movie => {
+        (movie.genres || []).forEach(genre => genres.add(genre));
+    });
+    genres.forEach(genre => {
+        const option = document.createElement('option');
+        option.value = genre.toLowerCase();
+        option.textContent = genre;
+        genreDropdown.appendChild(option);
+    });
+}
+
+// Function to filter movies by genre
+function filterMoviesByGenre(genre) {
+    if (genre === 'all') {
+        filteredMovies = allMovies; // Reset to all movies if 'All' is selected
+    } else {
+        filteredMovies = allMovies.filter(movie =>
+            (movie.genres || []).map(g => g.toLowerCase()).includes(genre)
+        );
+    }
+    loadMovies();  // Load the filtered results
+}
+
+// Function to load movies
+function loadMovies() {
+    const galleryContainer = document.getElementById('gallery-container');
+    galleryContainer.innerHTML = '';  // Clear the gallery for new movies
+
+    // Add the movies to the gallery
+    filteredMovies.forEach(movie => {
+        const figure = document.createElement('figure');
+        figure.classList.add('movie-figure');
+        figure.dataset.title = movie.title.toLowerCase();
+        figure.dataset.genres = (movie.genres || []).join(',').toLowerCase();
+
+        const anchor = document.createElement('a');
+        anchor.href = movie.link;
+        anchor.className = 'movie-link';
+
+        const img = document.createElement('img');
+        img.alt = movie.title;
+        img.dataset.src = movie.image.replace('/w500/', '/w92/');
+        img.className = 'defer-image';
+        img.width = 92;
+        img.height = 123;
+        img.loading = 'lazy';
+
+        const span = document.createElement('span');
+        span.className = 'tag';
+        span.textContent = movie.tag || '🔥';
+
+        const caption = document.createElement('figcaption');
+        caption.textContent = movie.title;
+        caption.style.cursor = 'pointer';
+        caption.addEventListener('click', () => window.location.href = movie.link);
+
+        anchor.appendChild(img);
+        anchor.appendChild(span);
+        figure.appendChild(anchor);
+        figure.appendChild(caption);
+        galleryContainer.appendChild(figure);
+    });
+}
+
+// Fetch and load the movies, then set up genre filter
 fetchAndMergeJSON(jsonFiles)
-    .then(movies => {
-        const galleryContainer = document.getElementById('gallery-container');
-        const figures = [];
-        const genreSet = new Set(); // To store unique genres
-
-        movies.forEach(movie => {
-            if (!movie.title || !movie.link || !movie.image) {
-                console.warn('Skipping movie due to missing data:', movie);
-                return; // Skip movies with missing data
-            }
-
-            // Check if genres exist and is an array
-            const genres = Array.isArray(movie.genres) ? movie.genres : []; // Default to empty array if not defined
-
-            // Create a figure element
-            const figure = document.createElement('figure');
-            figure.classList.add('movie-figure');
-            figure.dataset.title = movie.title.toLowerCase();
-            figure.dataset.genres = genres.join(',').toLowerCase(); // Store genres for filtering
-
-            if (movie.requested) {
-                figure.dataset.requested = "true";
-            }
-
-            const anchor = document.createElement('a');
-            anchor.href = movie.link;
-            anchor.className = 'movie-link';
-
-            const img = document.createElement('img');
-            img.alt = movie.title;
-            img.dataset.src = movie.image;
-            img.className = 'defer-image';
-            img.width = 240;
-            img.height = 320;
-
-            const span = document.createElement('span');
-            span.className = 'tag';
-
-            switch (movie.tag.toLowerCase()) {
-                case 'hd':
-                    span.classList.add('hd');
-                    span.textContent = 'HD';
-                    break;
-                case 'ts':
-                    span.classList.add('ts');
-                    span.textContent = 'TS';
-                    break;
-                case 'cam':
-                    span.classList.add('cam');
-                    span.textContent = 'CAM';
-                    break;
-                default:
-                    span.textContent = movie.tag || '🔥';
-            }
-
-            const caption = document.createElement('figcaption');
-            caption.textContent = movie.title;
-            caption.style.cursor = "pointer";
-            caption.addEventListener('click', () => {
-                window.location.href = movie.link;
-            });
-
-            anchor.appendChild(img);
-            anchor.appendChild(span);
-            figure.appendChild(anchor);
-            figure.appendChild(caption);
-            galleryContainer.appendChild(figure);
-            figures.push(figure);
-
-            // Collect unique genres
-            genres.forEach(genre => genreSet.add(genre.toLowerCase()));
-        });
-
-        // Populate genre dropdown
-        const genreDropdown = document.getElementById('genre-dropdown');
-        genreSet.forEach(genre => {
-            const option = document.createElement('option');
-            option.value = genre;
-            option.textContent = genre.charAt(0).toUpperCase() + genre.slice(1); // Capitalize genre name
-            genreDropdown.appendChild(option);
-        });
-
-        // Implement lazy loading
-        const lazyLoad = () => {
-            const lazyImages = document.querySelectorAll('.defer-image');
-            lazyImages.forEach(img => {
-                if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
-                    img.src = img.dataset.src;
-                }
-            });
-        };
-
-        window.addEventListener('scroll', lazyLoad);
-        lazyLoad();
-
-        // Implement genre filtering
-        genreDropdown.addEventListener('change', function() {
-            const selectedGenre = this.value;
-            figures.forEach(figure => {
-                const genres = figure.dataset.genres.split(',');
-                if (selectedGenre === "all" || genres.includes(selectedGenre)) {
-                    figure.classList.remove('hidden');
-                } else {
-                    figure.classList.add('hidden');
-                }
-            });
-        });
+    .then(mergedMovies => {
+        allMovies = mergedMovies;  // Save all movies globally
+        filteredMovies = allMovies; // Initially, filtered movies are all movies
+        populateGenreDropdown(allMovies);  // Populate the genre dropdown
+        loadMovies();  // Load all movies
     })
     .catch(error => {
         console.error('Error processing the JSON data:', error);
     });
+
+// Handle genre change
+document.getElementById('genre-dropdown').addEventListener('change', function() {
+    const selectedGenre = this.value;
+    filterMoviesByGenre(selectedGenre);  // Filter movies based on selected genre
+});
 </script>
 
 

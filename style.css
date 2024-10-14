@@ -883,8 +883,8 @@ justify-content: start;
 }
 
 .gallery figure {
-flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
-max-width: calc(12.5% - 2%);
+flex: 1 0 calc(16.66% - 2%); /* 6 items per row */
+max-width: calc(16.66% - 2%);
 margin: 1%;
 padding: 0; /* Reduce padding to 5px */
 box-sizing: border-box;
@@ -893,6 +893,7 @@ border-radius: 1px;
 box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
 position: relative; /* Make corners rounded */
 }
+
 .gallery figure::before {
 content: "";
 display: block;
@@ -901,19 +902,18 @@ top: 0;
 bottom: 0;
 left: 0;
 right: 0;
-background: none; /* Semi-transparent light red to red gradient */
-border-radius: 1px; /* Make corners rounded */
-z-index: -1; /* Place the pseudo-element behind the content */
+background: none;
+border-radius: 1px;
+z-index: -1;
 }
 .gallery figure img {
 width: 100%;
 height: auto;
 border-radius: 10px;
- /* Make image corners rounded */
 }
 
 .gallery figure:hover img {
-transform: scale(1.1); /* Add hover effect */
+transform: scale(1.1);
 }
 
 .custom-tooltip {
@@ -956,11 +956,12 @@ height: auto;
 }
 
 .gallery figcaption {
-text-align: center;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Set font family to Exo 2 */
-color: #e2e2e2; /* Change the font color to white */
-width: 100%; /* Make the caption width same as image width */
-word-wrap: break-word;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #e2e2e2;
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 12px;
 }
 
 .title {
@@ -969,32 +970,6 @@ color: #e2e2e2;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 font-size: 18px;
 }
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.pagination button {
-    margin: 0 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-}
-
-.pagination button.active {
-    background-color: #007bff;
-    color: white;
-}
-
-.pagination button:hover {
-    background-color: #007bff;
-    color: white;
-}
-
 
 .dropdown-wrapper {
 display: flex;

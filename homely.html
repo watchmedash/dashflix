@@ -120,7 +120,7 @@ atOptions = {
     #page-dropdown,
     #genre-dropdown {
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
         border: 1px solid #333;
         background-color: #121212;
         color: #fff;
@@ -130,17 +130,17 @@ atOptions = {
 
 <div style="text-align: center; margin-bottom: 20px;">
     <select id="page-dropdown">
-      <option value="" disabled selected>Menu</option>
-      <option value="https://freedomwall.top">Anime</option>
-      <option value="https://dashtoons.xyz">Comics</option>
-      <option value="https://kabayan.top">Drama</option>
-      <option value="home.html">Gallery</option>
-      <option value="homer.html">List</option>
-      <option value="tvplus.html">Live</option>
-      <option value="home.html">Request</option>
-      <option value="requested.html">Requested</option>
-      <option value="shows.html">TV Shows</option>
-      <option value="login.html">18+</option>
+        <option value="" disabled selected>Menu</option>
+        <option value="https://freedomwall.top">Anime</option>
+        <option value="https://dashtoons.xyz">Comics</option>
+        <option value="https://kabayan.top">Drama</option>
+        <option value="home.html">Gallery</option>
+        <option value="homer.html">List</option>
+        <option value="tvplus.html">Live</option>
+        <option value="home.html">Request</option>
+        <option value="requested.html">Requested</option>
+        <option value="shows.html">TV Shows</option>
+        <option value="login.html">18+</option>
     </select>
 
     <select id="genre-dropdown">
@@ -151,7 +151,6 @@ atOptions = {
 </div>
 
 <div class="gallery" id="gallery-container"></div>
-<div class="pagination" id="pagination-controls"></div>
 
 <script>
 document.getElementById('page-dropdown').addEventListener('change', function() {
@@ -161,10 +160,9 @@ document.getElementById('page-dropdown').addEventListener('change', function() {
     }
 });
 
-// Array of JSON file URLs
 const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
-const moviesPerPage = 20;  // Set the number of movies per page
-let currentPage = 1;       // Current page number
+let filteredMovies = [];   // Store filtered movies
+let allMovies = [];        // Store all movies
 
 // Function to fetch and merge JSON data
 async function fetchAndMergeJSON(files) {
@@ -184,70 +182,40 @@ async function fetchAndMergeJSON(files) {
     }
 }
 
-// Function to create pagination controls
-function createPagination(totalMovies, moviesPerPage) {
-    const totalPages = Math.ceil(totalMovies / moviesPerPage);
-    const paginationControls = document.getElementById('pagination-controls');
-    paginationControls.innerHTML = '';  // Clear previous controls
-
-    console.log('Total Pages:', totalPages); // Debugging
-    console.log('Current Page:', currentPage); // Debugging
-
-    // Create Previous button
-    if (currentPage > 1) {
-        console.log('Creating Previous button'); // Debugging
-        const prevButton = document.createElement('button');
-        prevButton.textContent = 'Previous';
-        prevButton.addEventListener('click', () => {
-            currentPage--;
-            console.log('Previous clicked, new Current Page:', currentPage); // Debugging
-            loadPage(currentPage);
-        });
-        paginationControls.appendChild(prevButton);
-    }
-
-    // Create page number buttons
-    for (let i = 1; i <= totalPages; i++) {
-        const pageButton = document.createElement('button');
-        pageButton.textContent = i;
-        pageButton.classList.toggle('active', i === currentPage);  // Highlight current page
-        pageButton.addEventListener('click', () => {
-            currentPage = i;
-            console.log('Page', i, 'clicked, new Current Page:', currentPage); // Debugging
-            loadPage(currentPage);
-        });
-        paginationControls.appendChild(pageButton);
-    }
-
-    // Create Next button
-    if (currentPage < totalPages) {
-        console.log('Creating Next button'); // Debugging
-        const nextButton = document.createElement('button');
-        nextButton.textContent = 'Next';
-        nextButton.addEventListener('click', () => {
-            currentPage++;
-            console.log('Next clicked, new Current Page:', currentPage); // Debugging
-            loadPage(currentPage);
-        });
-        paginationControls.appendChild(nextButton);
-    }
-
-    console.log('Pagination controls updated. Current Page:', currentPage); // Debugging
+// Function to populate the genre dropdown with unique genres
+function populateGenreDropdown(movies) {
+    const genreDropdown = document.getElementById('genre-dropdown');
+    const genres = new Set();
+    movies.forEach(movie => {
+        (movie.genres || []).forEach(genre => genres.add(genre));
+    });
+    genres.forEach(genre => {
+        const option = document.createElement('option');
+        option.value = genre.toLowerCase();
+        option.textContent = genre;
+        genreDropdown.appendChild(option);
+    });
 }
 
-// Function to load movies for a specific page
-function loadPage(pageNumber) {
-    const start = (pageNumber - 1) * moviesPerPage;
-    const end = start + moviesPerPage;
-    const moviesToShow = movies.slice(start, end);  // Movies for the current page
+// Function to filter movies by genre
+function filterMoviesByGenre(genre) {
+    if (genre === 'all') {
+        filteredMovies = allMovies; // Reset to all movies if 'All' is selected
+    } else {
+        filteredMovies = allMovies.filter(movie =>
+            (movie.genres || []).map(g => g.toLowerCase()).includes(genre)
+        );
+    }
+    loadMovies();  // Load the filtered results
+}
 
+// Function to load movies
+function loadMovies() {
     const galleryContainer = document.getElementById('gallery-container');
-    galleryContainer.innerHTML = '';  // Clear the gallery for the new page
+    galleryContainer.innerHTML = '';  // Clear the gallery for new movies
 
-    console.log('Loading Movies for Page:', pageNumber); // Debugging
-
-    // Add the movies for the current page to the gallery
-    moviesToShow.forEach(movie => {
+    // Add the movies to the gallery
+    filteredMovies.forEach(movie => {
         const figure = document.createElement('figure');
         figure.classList.add('movie-figure');
         figure.dataset.title = movie.title.toLowerCase();
@@ -280,27 +248,26 @@ function loadPage(pageNumber) {
         figure.appendChild(caption);
         galleryContainer.appendChild(figure);
     });
-
-    // Lazy load images
-    lazyLoad();
-
-    // Update pagination controls after loading the page
-    createPagination(movies.length, moviesPerPage);
 }
 
-// Fetch and load the movies, then create pagination
+// Fetch and load the movies, then set up genre filter
 fetchAndMergeJSON(jsonFiles)
     .then(mergedMovies => {
-        window.movies = mergedMovies;  // Save all movies globally
-        createPagination(mergedMovies.length, moviesPerPage);  // Create pagination based on movie count
-        loadPage(currentPage);  // Load the first page
+        allMovies = mergedMovies;  // Save all movies globally
+        filteredMovies = allMovies; // Initially, filtered movies are all movies
+        populateGenreDropdown(allMovies);  // Populate the genre dropdown
+        loadMovies();  // Load all movies
     })
     .catch(error => {
         console.error('Error processing the JSON data:', error);
     });
 
+// Handle genre change
+document.getElementById('genre-dropdown').addEventListener('change', function() {
+    const selectedGenre = this.value;
+    filterMoviesByGenre(selectedGenre);  // Filter movies based on selected genre
+});
 </script>
-
 
 <div id="customTooltip" class="custom-tooltip">
 <h2 id="movieTitle"></h2>
