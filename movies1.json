@@ -8,6 +8,18 @@
             "requested": true
         },
         {
+            "title": "Alien Romulus",
+            "link": "https://emirati.top/movies/Alien Romulus",
+            "image": "https://image.tmdb.org/t/p/original/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg",
+            "tag": "HD",
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Science Fiction",
+                "Action"
+            ]
+        },
+        {
             "title": "Halinghing",
             "link": "https://emirati.top/movies/Halinghing",
             "image": "https://image.tmdb.org/t/p/original/8eMW4CSTjTAyPf1Zt70myJFXx7f.jpg",
@@ -468,18 +480,6 @@
             ]
         },
         {
-            "title": "Alien Romulus",
-            "link": "https://emirati.top/movies/Alien Romulus",
-            "image": "https://image.tmdb.org/t/p/original/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg",
-            "tag": "CAM",
-            "release_year": "2024",
-            "genres": [
-                "Horror",
-                "Science Fiction",
-                "Action"
-            ]
-        },
-        {
             "title": "Cuckoo",
             "link": "https://emirati.top/movies/Cuckoo",
             "image": "https://image.tmdb.org/t/p/original/4bGP5cnSZbfBJfIidZNSEIKnav7.jpg",
@@ -501,6 +501,87 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "Stream",
+            "link": "https://emirati.top/movies/Stream",
+            "image": "https://image.tmdb.org/t/p/original/az0k8pzdeqrrEO9iu8vL081bjA0.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Action",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Deadly Justice",
+            "link": "https://emirati.top/movies/Deadly Justice",
+            "image": "https://image.tmdb.org/t/p/original/eDMuybkHJkb2W6PriVo4XLG0e77.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Curious Caterer Forbidden Fruit",
+            "link": "https://emirati.top/movies/Curious Caterer Forbidden Fruit",
+            "image": "https://image.tmdb.org/t/p/original/g0ggQ1hWvMsJTMPCkBCH0fojh1Q.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "TV Movie",
+                "Mystery"
+            ]
+        },
+        {
+            "title": "Adam Conover Unmedicated",
+            "link": "https://emirati.top/movies/Adam Conover Unmedicated",
+            "image": "https://image.tmdb.org/t/p/original/gix5x3TYxkWGS5bfzuJ0tMUqEgY.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Chris Grace As Scarlett Johansson",
+            "link": "https://emirati.top/movies/Chris Grace As Scarlett Johansson",
+            "image": "https://image.tmdb.org/t/p/original/l7NmY0uNDIP3SBGv1GiPZ3xoHod.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Bheema",
+            "link": "https://emirati.top/movies/Bheema",
+            "image": "https://image.tmdb.org/t/p/original/nv8rsLyTQldLdFdcglMLFkCeZEz.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action"
+            ]
+        },
+        {
+            "title": "Children of the Cult",
+            "link": "https://emirati.top/movies/Children of the Cult",
+            "image": "https://image.tmdb.org/t/p/original/t7420IFPylrxcphN9nuGp1WfzwI.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary",
+                "Crime"
             ]
         },
         {
