@@ -8,6 +8,18 @@
             "requested": true
         },
         {
+            "title": "The Wild Robot",
+            "link": "https://emirati.top/movies/The Wild Robot",
+            "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+            "tag": "HD",
+            "release_year": "2024",
+            "genres": [
+                "Animation",
+                "Science Fiction",
+                "Family"
+            ]
+        },
+        {
             "title": "Alien Romulus",
             "link": "https://emirati.top/movies/Alien Romulus",
             "image": "https://image.tmdb.org/t/p/original/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg",
@@ -3960,18 +3972,6 @@
                 "Horror",
                 "Science Fiction",
                 "Thriller"
-            ]
-        },
-        {
-            "title": "The Wild Robot",
-            "link": "https://emirati.top/movies/The Wild Robot",
-            "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
-            "tag": "HD",
-            "release_year": "2024",
-            "genres": [
-                "Animation",
-                "Science Fiction",
-                "Family"
             ]
         },
         {
