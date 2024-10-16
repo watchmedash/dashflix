@@ -1,0 +1,107 @@
+/* Main layout */
+.channel-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.channel-layout > * {
+  flex-basis: 100%;
+}
+
+.channel-list-wrapper {
+  padding: var(--space-sm);
+}
+
+.channel-list-wrapper h1 {
+  font-size: 1.75rem;
+}
+
+.channel {
+  display: grid;
+  grid-template-columns: 1rem 4rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: var(--color-background-card);
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: all 250ms;
+  border: var(--border-width) solid var(--color-background-card);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.channel[data-playing="true"] {
+  border-color: var(--color-link-default);
+}
+
+.play-channel {
+  all: unset;
+  cursor: pointer;
+  height: 100%;
+  background: var(--color-background);
+}
+
+.channel-title {
+  font-weight: 800;
+}
+
+.channel-language {
+  color: var(--color-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.handle {
+  text-align: center;
+  opacity: 0.2;
+  cursor: ns-resize;
+}
+
+.label {
+  color: var(--color-ui);
+  margin: var(--space-sm) 0 0.25rem 0;
+}
+
+.player-wrapper {
+  background: var(--color-background-intense);
+  padding: var(--space-sm);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+  position: sticky;
+  top: var(--space-sm);
+}
+
+.video-wrapper {
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 100%; /* Ensure it takes full width of the parent */
+  max-width: 800px; /* Optional: Limit max width */
+  margin: 0 auto; /* Center it */
+}
+
+.video-wrapper iframe {
+  height: 100%; /* Maintain full height */
+  width: 100%; /* Maintain full width */
+  border: none; /* Remove any default border */
+  object-fit: cover; /* Cover the entire container */
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .channel-layout {
+    flex-direction: column; /* Stack player above channel list */
+  }
+
+  .player-wrapper {
+    width: 90%; /* Player takes 90% of screen width */
+    margin: 0 auto; /* Center player horizontally */
+    order: -1; /* Move player to the top */
+  }
+
+  .channel-list-wrapper {
+    width: 100%; /* Ensure channel list takes full width */
+  }
+}

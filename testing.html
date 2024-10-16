@@ -6,7 +6,7 @@
   <title>Streamer</title>
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styly.css">
+  <link rel="stylesheet" href="styling.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
@@ -31,20 +31,20 @@
   <div class="sharethis-inline-share-buttons"></div>
   <main class="channel-layout">
     <div class="player-wrapper">
-      <div class="sticky">
-        <div class="video-wrapper">
-          <video preload="none" id="player" autoplay controls crossorigin></video>
-        </div>
-        <div class="label">Now Playing</div>
-        <h2 id="channel-playing"> </h2>
-      </div>
+  <div class="sticky">
+    <div class="video-wrapper">
+      <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
     </div>
-
+    <div class="label">Now Playing</div>
+    <h2 id="channel-playing"></h2>
+  </div>
+</div>
     <div class="channel-list-wrapper">
       <h1>Channels</h1>
       <ul class="channel-list"></ul>
     </div>
   </main>
+
 <div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
 <script>
         const goToTopButton = document.getElementById('go-to-top-button');
@@ -66,6 +66,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="hls.js"></script>
-<script src="scripty.js"></script>
+<script src="scripting.js"></script>
 </body>
 </html>
