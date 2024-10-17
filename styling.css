@@ -105,3 +105,26 @@
     width: 100%; /* Ensure channel list takes full width */
   }
 }
+.thumbnail-wrapper {
+  position: relative; /* Position relative for the icon */
+}
+
+.channel-poster {
+  width: 100%; /* Ensure thumbnail takes full width */
+  border-radius: var(--border-radius); /* Match the border radius of the card */
+}
+
+.play-icon {
+  position: absolute; /* Position the icon over the thumbnail */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust positioning */
+  font-size: 2rem; /* Adjust size as needed */
+  color: white; /* Icon color */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s; /* Smooth transition for visibility */
+}
+
+.play-channel:hover .play-icon {
+  opacity: 1; /* Show icon on hover */
+}
