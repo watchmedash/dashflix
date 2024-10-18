@@ -8,6 +8,18 @@
             "requested": true
         },
         {
+            "title": "Salems Lot",
+            "link": "https://emirati.top/movies/Salems Lot",
+            "image": "https://image.tmdb.org/t/p/original/j7ncdqBVufydVzVtxmXu8Ago4ox.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Mystery"
+            ]
+        },
+        {
             "title": "The Wild Robot",
             "link": "https://emirati.top/movies/The Wild Robot",
             "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
