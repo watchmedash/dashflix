@@ -67,6 +67,19 @@
             "genres": []
         },
         {
+            "title": "Azrael",
+            "link": "https://emirati.top/movies/Azrael",
+            "image": "https://image.tmdb.org/t/p/original/qpdFKDvJS7oLKTcBLXOaMwUESbs.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
             "title": "TMZ Presents The Downfall of Diddy The Indictment",
             "link": "https://emirati.top/movies/TMZ Presents The Downfall of Diddy The Indictment",
             "image": "https://image.tmdb.org/t/p/original/v8s7gfawBjnaF0GbjG8pVx0v6dU.jpg",
@@ -1748,19 +1761,6 @@
             "genres": [
                 "Comedy",
                 "Crime"
-            ]
-        },
-        {
-            "title": "Azrael",
-            "link": "https://emirati.top/movies/Azrael",
-            "image": "https://image.tmdb.org/t/p/original/qpdFKDvJS7oLKTcBLXOaMwUESbs.jpg",
-            "tag": "HD",
-            "requested": false,
-            "release_year": "2024",
-            "genres": [
-                "Action",
-                "Horror",
-                "Thriller"
             ]
         },
         {
