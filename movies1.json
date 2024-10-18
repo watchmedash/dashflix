@@ -32,6 +32,20 @@
             ]
         },
         {
+            "title": "Sing Thriller",
+            "link": "https://emirati.top/movies/Sing Thriller",
+            "image": "https://image.tmdb.org/t/p/original/i77OInTKcrnRlAozFOaB6D5mk15.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Animation",
+                "Family",
+                "Comedy",
+                "Horror"
+            ]
+        },
+        {
             "title": "Halinghing",
             "link": "https://emirati.top/movies/Halinghing",
             "image": "https://image.tmdb.org/t/p/original/8eMW4CSTjTAyPf1Zt70myJFXx7f.jpg",
@@ -513,6 +527,210 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "The Yin-Yang Master Zero",
+            "link": "https://emirati.top/movies/The Yin-Yang Master Zero",
+            "image": "https://image.tmdb.org/t/p/original/lnXPR9I0EtLPbnX2slhzxQFFaIp.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Fantasy",
+                "History",
+                "Mystery"
+            ]
+        },
+        {
+            "title": "Untapped Closing Americas Opportunity Gap",
+            "link": "https://emirati.top/movies/Untapped Closing Americas Opportunity Gap",
+            "image": "https://image.tmdb.org/t/p/original/8cVqcWHsI6PrS2X4fZ33vRBGj1H.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": []
+        },
+        {
+            "title": "Jumping The Fence",
+            "link": "https://emirati.top/movies/Jumping The Fence",
+            "image": "https://image.tmdb.org/t/p/original/zcocSbt6mjJ2QTFuzRue5OXGclK.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "title": "Haunted Universities 3",
+            "link": "https://emirati.top/movies/Haunted Universities 3",
+            "image": "https://image.tmdb.org/t/p/original/wrgcEz7En3yqe2ZvNQV5zKR3uuI.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror"
+            ]
+        },
+        {
+            "title": "Love Stuck",
+            "link": "https://emirati.top/movies/Love Stuck",
+            "image": "https://image.tmdb.org/t/p/original/6XnXvJ3bgT6vDIJKibldt0RTv89.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Fantasy",
+                "Romance"
+            ]
+        },
+        {
+            "title": "Corey Rodrigues Not Complaining Just Explaining",
+            "link": "https://emirati.top/movies/Corey Rodrigues Not Complaining Just Explaining",
+            "image": "https://image.tmdb.org/t/p/original/djBvwB3dnqzytnsZQCVI4Mu8S6z.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy"
+            ]
+        },
+        {
+            "title": "Seven Cemeteries",
+            "link": "https://emirati.top/movies/Seven Cemeteries",
+            "image": "https://image.tmdb.org/t/p/original/jHdmMiS35fN0zLJBXNg3VHLJk9y.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Action",
+                "Fantasy",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "9 Windows",
+            "link": "https://emirati.top/movies/9 Windows",
+            "image": "https://image.tmdb.org/t/p/original/1gNop1GGtfn3p0sx6XdZszDmJP7.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Crime",
+                "Mystery",
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Outside",
+            "link": "https://emirati.top/movies/Outside",
+            "image": "https://image.tmdb.org/t/p/original/33S6yUnEWueNVZABJeFPKUd7Rmz.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "The Shadow Strays",
+            "link": "https://emirati.top/movies/The Shadow Strays",
+            "image": "https://image.tmdb.org/t/p/original/7UYeDUzFIscGVr0mo7isvnrVYvO.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Crime",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Brothers",
+            "link": "https://emirati.top/movies/Brothers",
+            "image": "https://image.tmdb.org/t/p/original/nM1uXAoOxJdp7oEr9RUaVviNyzD.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Action",
+                "Comedy",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Romance on the Ranch",
+            "link": "https://emirati.top/movies/Romance on the Ranch",
+            "image": "https://image.tmdb.org/t/p/original/uRqzyMd8o5RW75rES9so6GQCbXZ.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "TV Movie",
+                "Comedy",
+                "Romance",
+                "Drama"
+            ]
+        },
+        {
+            "title": "The Gardeners Year",
+            "link": "https://emirati.top/movies/The Gardeners Year",
+            "image": "https://image.tmdb.org/t/p/original/t6TbzsDOi3x0KlQhgESs7hcNtLo.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Comedy",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Expedition Amazon",
+            "link": "https://emirati.top/movies/Expedition Amazon",
+            "image": "https://image.tmdb.org/t/p/original/r1g5HOrT34bnME3p5aeAmOdkWm8.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
+            ]
+        },
+        {
+            "title": "Justice",
+            "link": "https://emirati.top/movies/Justice",
+            "image": "https://image.tmdb.org/t/p/original/zrzKoiLUdKuKqtYOKS2orLRoUhv.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Crime",
+                "Drama"
+            ]
+        },
+        {
+            "title": "Sweet Bobby My Catfish Nightmare",
+            "link": "https://emirati.top/movies/Sweet Bobby My Catfish Nightmare",
+            "image": "https://image.tmdb.org/t/p/original/vOYSWDkW3lKOZNHkR4WdHG0sb8R.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
+            ]
+        },
+        {
+            "title": "State of Silence",
+            "link": "https://emirati.top/movies/State of Silence",
+            "image": "https://image.tmdb.org/t/p/original/pRExNpFhF6Im1VEUQOIHJcIZFcF.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
             ]
         },
         {
@@ -1102,17 +1320,6 @@
                 "Science Fiction",
                 "Drama",
                 "Thriller"
-            ]
-        },
-        {
-            "title": "Brothers",
-            "link": "https://emirati.top/movies/Brothers",
-            "image": "https://image.tmdb.org/t/p/original/5FmRJCoCmPWxZhJ0gE6vwSzx4pP.jpg",
-            "tag": "HD",
-            "requested": false,
-            "release_year": "2024",
-            "genres": [
-                "Drama"
             ]
         },
         {
