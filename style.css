@@ -620,7 +620,7 @@ text-decoration: none;
 body {
 background: radial-gradient(circle at 20% 20%, #2E2E2E, #000000 70%);
 margin: 0;
-padding-bottom: 80px;
+padding-bottom: 100px;
 }
 
 .content {
