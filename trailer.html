@@ -47,9 +47,6 @@
 <input type="text" id="search-box" placeholder="Search trailer...">
 <button id="clear-search" style="display: none;">Clear</button>
 <div class="sharethis-inline-share-buttons"></div>
-<div class="button-container" style="text-align: center; margin: 5px 0;">
-  <a href="home.html" class="watch-now-but">Go to Movies</a>
-</div>
       <ul class="channel-list"></ul>
       <button id="load-more">Load More</button>
     </div>
@@ -77,5 +74,75 @@
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="hls.js"></script>
 <script src="trailer.js"></script>
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="home.html" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+  <a href="shows.html" class="nav-item">
+    <i class="fas fa-tv"></i> Shows
+  </a>
+  <a href="trailer.html" class="nav-item">
+    <i class="fas fa-video"></i> Trailers
+  </a>
+  <a href="requested.html" class="nav-item">
+    <i class="fas fa-list"></i> Requested
+  </a>
+  <a href="#" class="nav-item" id="more-menu">
+    <i class="fas fa-ellipsis-h"></i> More
+  </a>
+
+  <div id="more-links" class="more-links">
+    <a href="https://freedomwall.top">
+      <i class="fas fa-otter"></i> Anime
+    </a>
+    <a href="https://dashtoons.xyz">
+      <i class="fas fa-book-open"></i> Comics
+    </a>
+    <a href="https://kabayan.top">
+      <i class="fas fa-theater-masks"></i> Drama
+    </a>
+    <a href="request.html">
+      <i class="fas fa-paper-plane"></i> Request
+    </a>
+    <a href="tvplus.html">
+      <i class="fas fa-broadcast-tower"></i> Live TV
+    </a>
+    <a href="#" class="nav-item" onclick="checkPassword(event)">
+🔒 18+
+    </a>
+    <a href="appdown.html">
+      <i class="fas fa-mobile-alt"></i> APP
+    </a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const moreMenu = document.getElementById('more-menu');
+    const moreLinks = document.getElementById('more-links');
+
+    moreMenu.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor action
+      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
+    });
+  });
+</script>
+
+<script>
+  function checkPassword(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const password = prompt("Warning: This page contains adult content. Please enter 'GOBILAM' to proceed:");
+
+    // Check if the entered password is correct
+    if (password === "GOBILAM") {
+      window.location.href = "adult.html"; // Redirect to the login page
+    } else {
+      alert("Incorrect password. Access denied."); // Show alert for incorrect password
+    }
+  }
+</script>
 </body>
 </html>

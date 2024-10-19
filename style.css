@@ -1,3 +1,64 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  padding: 5px;
+  border-top: 2px solid #333;
+  z-index: 1000;
+}
+
+.nav-item {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.nav-item i {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.nav-item:hover {
+  color: #929292;
+}
+
+.more-links {
+  display: none; /* Initially hide the more links */
+  position: absolute; /* Use absolute positioning */
+  bottom: 80px; /* Adjust this to position it directly above the "More" button */
+  left: 0; /* Align it to the left edge of the nav bar */
+  right: 0; /* Align it to the right edge of the nav bar */
+  background-color: #1a1a1a; /* Same background color as the nav bar */
+  padding: 10px; /* Add padding for a cleaner look */
+  border: 1px solid #333; /* Optional: border for better visibility */
+  z-index: 1001; /* Ensure it stays on top */
+}
+
+.more-links a {
+  display: block; /* Make links block-level for easier clicking */
+  color: white; /* Text color */
+  padding: 3px 0; /* Space around the text */
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center the text */
+}
+
+.more-links a:hover {
+  color: #929292; /* Hover color for links */
+}
+
+/* When the menu is active, show the more links */
+.more-links.show {
+  display: block; /* Show the links when the 'show' class is added */
+}
+
+
 .tag {
     display: inline-block; /* Ensures the tags are displayed inline */
     padding: 5px 10px; /* Add some padding */
