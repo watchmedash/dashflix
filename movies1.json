@@ -1,13 +1,6 @@
 {
     "movies": [
         {
-            "title": "Dashflix App",
-            "link": "https://dashflix.xyz/appdown",
-            "image": "https://i.postimg.cc/zB9gYVV9/DOWN-APP.png",
-            "tag": "",
-            "requested": true
-        },
-        {
             "title": "Krista",
             "link": "https://emirati.top/movies/Krista",
             "image": "https://image.tmdb.org/t/p/original/hRmOpNm6uLjrayjrBgWp2B9q5wa.jpg",
