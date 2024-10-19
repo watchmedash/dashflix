@@ -8,6 +8,18 @@
             "requested": true
         },
         {
+            "title": "Krista",
+            "link": "https://emirati.top/movies/Krista",
+            "image": "https://image.tmdb.org/t/p/original/hRmOpNm6uLjrayjrBgWp2B9q5wa.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Romance"
+            ]
+        },
+        {
             "title": "Salems Lot",
             "link": "https://emirati.top/movies/Salems Lot",
             "image": "https://image.tmdb.org/t/p/original/j7ncdqBVufydVzVtxmXu8Ago4ox.jpg",
@@ -552,6 +564,177 @@
                 "Comedy",
                 "Science Fiction",
                 "Action"
+            ]
+        },
+        {
+            "title": "The Turnaround",
+            "link": "https://emirati.top/movies/The Turnaround",
+            "image": "https://image.tmdb.org/t/p/original/n0NdoG6pmH0DuseW5DM4FIFEIAx.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
+            ]
+        },
+        {
+            "title": "LEGO Marvel Avengers Mission Demolition",
+            "link": "https://emirati.top/movies/LEGO Marvel Avengers Mission Demolition",
+            "image": "https://image.tmdb.org/t/p/original/k3LGf9afqmUZiAJ9nffBinpOhOI.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Animation",
+                "Comedy",
+                "Science Fiction"
+            ]
+        },
+        {
+            "title": "Happiness Is",
+            "link": "https://emirati.top/movies/Happiness Is",
+            "image": "https://image.tmdb.org/t/p/original/6JCCqXL1BBRqfENJsZDnwtO5GHB.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Romance",
+                "Comedy",
+                "Drama"
+            ]
+        },
+        {
+            "title": "The Stoic",
+            "link": "https://emirati.top/movies/The Stoic",
+            "image": "https://image.tmdb.org/t/p/original/2Acp8gjDQQs1IVlH3cQe5Fs9OdC.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Crime",
+                "Thriller",
+                "Action"
+            ]
+        },
+        {
+            "title": "The Park Maniac",
+            "link": "https://emirati.top/movies/The Park Maniac",
+            "image": "https://image.tmdb.org/t/p/original/xUIaDutJAWyfWEyZRcqaNWcoR55.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Thriller",
+                "Crime"
+            ]
+        },
+        {
+            "title": "Die Alone",
+            "link": "https://emirati.top/movies/Die Alone",
+            "image": "https://image.tmdb.org/t/p/original/vaGEm6r3HGIkGQffCV6cTqYtLFf.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Rippy",
+            "link": "https://emirati.top/movies/Rippy",
+            "image": "https://image.tmdb.org/t/p/original/5aCsT4mV1whg4AhtIOpWsHAeLUz.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Mystery"
+            ]
+        },
+        {
+            "title": "The Man Who Loved UFOs",
+            "link": "https://emirati.top/movies/The Man Who Loved UFOs",
+            "image": "https://image.tmdb.org/t/p/original/6pdYPkWzzGPTo9efmCIBOScGlCQ.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Comedy"
+            ]
+        },
+        {
+            "title": "MadS",
+            "link": "https://emirati.top/movies/MadS",
+            "image": "https://image.tmdb.org/t/p/original/3xgcQHcYxGOrJNbwgXRGPPHCXVu.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Horror",
+                "Thriller"
+            ]
+        },
+        {
+            "title": "Its Only A Story",
+            "link": "https://emirati.top/movies/Its Only A Story",
+            "image": "https://image.tmdb.org/t/p/original/jJDg4A0yDWIh2FSQZPrg1wbym6K.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama",
+                "Mystery"
+            ]
+        },
+        {
+            "title": "Fanatical The Catfishing of Tegan and Sara",
+            "link": "https://emirati.top/movies/Fanatical The Catfishing of Tegan and Sara",
+            "image": "https://image.tmdb.org/t/p/original/jKTAFU3QLXqlSAmGhPP6eckhZPX.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Documentary"
+            ]
+        },
+        {
+            "title": "Blue Cave",
+            "link": "https://emirati.top/movies/Blue Cave",
+            "image": "https://image.tmdb.org/t/p/original/yT7VYxdyAH7SCBnCwPBY2NqGDQr.jpg",
+            "tag": "HD",
+            "requested": false,
+            "release_year": "2024",
+            "genres": [
+                "Drama"
+            ]
+        },
+        {
+            "title": "Con Air",
+            "link": "https://emirati.top/movies/Con Air",
+            "image": "https://image.tmdb.org/t/p/original/kOKjgrEzGOP92rVQ6srA9jtp60l.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "1997",
+            "genres": [
+                "Action",
+                "Thriller",
+                "Crime"
+            ]
+        },
+        {
+            "title": "City of Angels",
+            "link": "https://emirati.top/movies/City of Angels",
+            "image": "https://image.tmdb.org/t/p/original/iuzxpUjHsbQJXV3kB9ZAdCimM60.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "1998",
+            "genres": [
+                "Romance",
+                "Drama",
+                "Fantasy"
             ]
         },
         {
