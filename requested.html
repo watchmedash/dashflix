@@ -144,8 +144,27 @@ fetchAndMergeJSON(jsonFiles)
             img.width = 240;
             img.height = 320;
 
+            // Create spinner
+            const spinner = document.createElement('div');
+            spinner.className = 'spinner';
+
+            // Add spinner to anchor before the image
+            anchor.appendChild(spinner);
+            anchor.appendChild(img);
+
+            // Hide spinner once the image loads
+            img.onload = () => {
+                spinner.style.display = 'none';
+            };
+
+            // Show spinner if the image fails to load
+            img.onerror = () => {
+                spinner.style.display = 'none';
+                console.error('Failed to load image:', movie.image);
+            };
+
             const span = document.createElement('span');
-            span.className = 'tag';
+            span.className = 'tag positioned'; // Add a 'positioned' class for better styling control
 
             switch (movie.tag.toLowerCase()) {
                 case 'hd':
@@ -171,9 +190,8 @@ fetchAndMergeJSON(jsonFiles)
                 window.location.href = movie.link;
             });
 
-            anchor.appendChild(img);
-            anchor.appendChild(span);
             figure.appendChild(anchor);
+            figure.appendChild(span);
             figure.appendChild(caption);
             galleryContainer.appendChild(figure);
             figures.push(figure);
@@ -181,6 +199,7 @@ fetchAndMergeJSON(jsonFiles)
             // Collect unique genres
             genres.forEach(genre => genreSet.add(genre.toLowerCase()));
         });
+
 
         // Populate genre dropdown
         const genreDropdown = document.getElementById('genre-dropdown');
