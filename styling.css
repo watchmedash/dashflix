@@ -2,6 +2,8 @@
 .channel-layout {
   display: flex;
   min-height: 100vh;
+  background-color: #121212; /* Dark background for the entire layout */
+  color: #e0e0e0; /* Light gray text for better readability */
 }
 
 .channel-layout > * {
@@ -14,117 +16,225 @@
 
 .channel-list-wrapper h1 {
   font-size: 1.75rem;
+  color: #f5f5f5; /* Slightly lighter for headings */
 }
 
+/* Channel card styling */
 .channel {
   display: grid;
   grid-template-columns: 1rem 4rem 1fr;
   gap: 1rem;
   align-items: center;
-  background: var(--color-background-card);
+  background: #1e1e1e; /* Dark card background */
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  transition: all 250ms;
-  border: var(--border-width) solid var(--color-background-card);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
+  border: var(--border-width) solid #1e1e1e; /* Matching card color */
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for dark mode */
+}
+
+.channel:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  animation: neonPulse 1s infinite alternate; /* Neon pulse animation */
 }
 
 .channel[data-playing="true"] {
-  border-color: var(--color-link-default);
+  border-color: #00e5ff; /* Lighter glow for playing channels */
 }
 
+/* Play button styling */
 .play-channel {
   all: unset;
   cursor: pointer;
   height: 100%;
-  background: var(--color-background);
+  background: #2a2a2a; /* Lighter dark background */
 }
 
+/* Channel text styling */
 .channel-title {
   font-weight: 800;
+  color: #ffffff; /* White text for better contrast */
 }
 
 .channel-language {
-  color: var(--color-ui);
+  color: #bdbdbd; /* Light gray for less prominent text */
   font-size: 0.9rem;
   font-weight: 600;
 }
 
+/* Handle styling */
 .handle {
   text-align: center;
-  opacity: 0.2;
+  opacity: 0.5;
   cursor: ns-resize;
 }
 
+/* Label styling */
 .label {
-  color: var(--color-ui);
+  color: #9e9e9e;
   margin: var(--space-sm) 0 0.25rem 0;
 }
 
+/* Player wrapper */
 .player-wrapper {
-  background: var(--color-background-intense);
+  background: #181818; /* Darker background for the player */
   padding: var(--space-sm);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
+/* Sticky positioning for the player */
 .sticky {
   position: sticky;
   top: var(--space-sm);
 }
 
+/* Video wrapper styling */
 .video-wrapper {
-  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  aspect-ratio: 16 / 9;
   border-radius: var(--border-radius);
   overflow: hidden;
-  width: 100%; /* Ensure it takes full width of the parent */
-  max-width: 800px; /* Optional: Limit max width */
-  margin: 0 auto; /* Center it */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .video-wrapper iframe {
-  height: 100%; /* Maintain full height */
-  width: 100%; /* Maintain full width */
-  border: none; /* Remove any default border */
-  object-fit: cover; /* Cover the entire container */
+  height: 100%;
+  width: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+/* Thumbnail and play icon styling */
+.thumbnail-wrapper {
+  position: relative;
+}
+
+.channel-poster {
+  width: 100%;
+  border-radius: var(--border-radius);
+  filter: brightness(0.8); /* Darken thumbnail for a unified look */
+  transition: filter 0.3s;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #00e5ff; /* Lighter teal color for the play icon */
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.play-channel:hover .play-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2); /* Scale icon on hover */
+}
+
+.play-channel:hover .channel-poster {
+  filter: brightness(1); /* Lighten the thumbnail on hover */
 }
 
 /* Media query for small screens */
 @media (max-width: 768px) {
   .channel-layout {
-    flex-direction: column; /* Stack player above channel list */
+    flex-direction: column;
   }
 
   .player-wrapper {
-    width: 90%; /* Player takes 90% of screen width */
-    margin: 0 auto; /* Center player horizontally */
-    order: -1; /* Move player to the top */
+    width: 90%;
+    margin: 0 auto;
+    order: -1;
   }
 
   .channel-list-wrapper {
-    width: 100%; /* Ensure channel list takes full width */
+    width: 100%;
   }
 }
+
+/* Animation for neon pulse */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff, 0 0 60px #00e5ff;
+  }
+  50% {
+    box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff, 0 0 90px #00e5ff;
+  }
+}
+
+/* Animation for appearing content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.channel,
+.player-wrapper,
 .thumbnail-wrapper {
-  position: relative; /* Position relative for the icon */
+  animation: fadeIn 0.5s ease-out;
 }
 
-.channel-poster {
-  width: 100%; /* Ensure thumbnail takes full width */
-  border-radius: var(--border-radius); /* Match the border radius of the card */
+/* Search bar styling */
+#search-box {
+  width: 100%;
+  padding: 10px 15px; /* Increased padding for better touch targets */
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: #2a2a2a; /* Lighter dark background */
+  color: #e0e0e0; /* Light gray text */
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
 }
 
-.play-icon {
-  position: absolute; /* Position the icon over the thumbnail */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust positioning */
-  font-size: 2rem; /* Adjust size as needed */
-  color: white; /* Icon color */
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.3s; /* Smooth transition for visibility */
+#search-box:focus {
+  outline: none; /* Remove default outline */
+  background-color: #3a3a3a; /* Slightly lighter on focus */
+  box-shadow: 0 0 10px #00e5ff; /* Neon glow effect on focus */
 }
 
-.play-channel:hover .play-icon {
-  opacity: 1; /* Show icon on hover */
+/* Clear search button styling */
+#clear-search {
+  background: none; /* Transparent background */
+  border: none;
+  color: #00e5ff; /* Lighter teal color */
+  font-size: 1rem;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  transition: color 0.3s;
+}
+
+#clear-search:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+/* Load more button styling */
+#load-more {
+  display: block; /* Ensure it shows by default */
+  padding: 10px 15px; /* Sufficient padding */
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: #2a2a2a; /* Lighter dark background */
+  color: #00e5ff; /* Lighter teal color */
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#load-more:hover {
+  background-color: #3a3a3a; /* Slightly lighter background on hover */
+  box-shadow: 0 0 10px #00e5ff; /* Neon glow effect on hover */
 }

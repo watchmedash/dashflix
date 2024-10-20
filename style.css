@@ -26,6 +26,7 @@ img.loaded + .spinner {
   display: none;
 }
 
+/* Bottom navigation styling */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -33,20 +34,20 @@ img.loaded + .spinner {
   right: 0;
   display: flex;
   justify-content: space-around;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Dark background */
   padding: 5px;
-  border-top: 2px solid #333;
+  border-top: 2px solid #333; /* Darker border for contrast */
   z-index: 1000;
   transition: background-color 0.3s ease-in-out;
 }
 
 .nav-item {
-  color: #fff;
+  color: #e0e0e0; /* Light gray text for better contrast */
   text-align: center;
   text-decoration: none;
   font-size: 14px;
   flex-grow: 1;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
   position: relative;
 }
 
@@ -58,9 +59,9 @@ img.loaded + .spinner {
 }
 
 .nav-item:hover {
-  color: #929292;
+  color: #64ffda; /* Light teal color on hover */
   transform: scale(1.1);
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 3D effect with shadow */
+  text-shadow: 0 0 8px rgba(100, 255, 218, 0.8), 0 0 16px rgba(100, 255, 218, 0.6); /* Glow effect */
 }
 
 .nav-item:hover i {
@@ -73,9 +74,9 @@ img.loaded + .spinner {
   bottom: 80px;
   left: 0;
   right: 0;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Dark background */
   padding: 10px;
-  border: 1px solid #333;
+  border: 1px solid #333; /* Darker border for contrast */
   z-index: 1001;
   opacity: 0;
   transform: translateY(30px); /* More exaggerated start position */
@@ -84,16 +85,17 @@ img.loaded + .spinner {
 
 .more-links a {
   display: block;
-  color: white;
+  color: #e0e0e0; /* Light gray for links */
   padding: 3px 0;
   text-decoration: none;
   text-align: center;
-  transition: color 0.3s ease-in-out, transform 0.3s;
+  transition: color 0.3s ease-in-out, transform 0.3s, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
 }
 
 .more-links a:hover {
-  color: #929292;
+  color: #64ffda; /* Light teal color on hover */
   transform: scale(1.05); /* Slight scaling for links */
+  text-shadow: 0 0 8px rgba(100, 255, 218, 0.8), 0 0 16px rgba(100, 255, 218, 0.6); /* Glow effect */
 }
 
 .more-links.show {
@@ -134,10 +136,9 @@ img.loaded + .spinner {
 
 /* Additional hover effect for .bottom-nav */
 .bottom-nav:hover {
-  background-color: #2a2a2a;
+  background-color: #2a2a2a; /* Slightly lighter on hover */
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow effect on hover */
 }
-
 
 
 .tag {
