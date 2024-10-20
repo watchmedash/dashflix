@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -43,5 +46,23 @@
             videoContainer.innerHTML = '<p>Video not found</p>';
         }
     </script>
+  </nav>
+  <nav class="bottom-nav">
+    <a href="https://dashflix.top/adult" class="nav-item">
+      <i class="fas fa-home"></i> Back
+    </a>
+  </nav>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const moreMenu = document.getElementById('more-menu');
+      const moreLinks = document.getElementById('more-links');
+
+      moreMenu.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor action
+        moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
+      });
+    });
+  </script>
 </body>
 </html>
