@@ -37,6 +37,7 @@ img.loaded + .spinner {
   padding: 5px;
   border-top: 2px solid #333;
   z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .nav-item {
@@ -45,46 +46,98 @@ img.loaded + .spinner {
   text-decoration: none;
   font-size: 14px;
   flex-grow: 1;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative;
 }
 
 .nav-item i {
   display: block;
   font-size: 18px;
   margin-bottom: 5px;
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
 }
 
 .nav-item:hover {
   color: #929292;
+  transform: scale(1.1);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 3D effect with shadow */
+}
+
+.nav-item:hover i {
+  transform: scale(1.4); /* Enlarge the icon */
 }
 
 .more-links {
-  display: none; /* Initially hide the more links */
-  position: absolute; /* Use absolute positioning */
-  bottom: 80px; /* Adjust this to position it directly above the "More" button */
-  left: 0; /* Align it to the left edge of the nav bar */
-  right: 0; /* Align it to the right edge of the nav bar */
-  background-color: #1a1a1a; /* Same background color as the nav bar */
-  padding: 10px; /* Add padding for a cleaner look */
-  border: 1px solid #333; /* Optional: border for better visibility */
-  z-index: 1001; /* Ensure it stays on top */
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border: 1px solid #333;
+  z-index: 1001;
+  opacity: 0;
+  transform: translateY(30px); /* More exaggerated start position */
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
 
 .more-links a {
-  display: block; /* Make links block-level for easier clicking */
-  color: white; /* Text color */
-  padding: 3px 0; /* Space around the text */
-  text-decoration: none; /* Remove underline */
-  text-align: center; /* Center the text */
+  display: block;
+  color: white;
+  padding: 3px 0;
+  text-decoration: none;
+  text-align: center;
+  transition: color 0.3s ease-in-out, transform 0.3s;
 }
 
 .more-links a:hover {
-  color: #929292; /* Hover color for links */
+  color: #929292;
+  transform: scale(1.05); /* Slight scaling for links */
 }
 
-/* When the menu is active, show the more links */
 .more-links.show {
-  display: block; /* Show the links when the 'show' class is added */
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* Adding animation keyframes for attention-drawing effects */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animations conditionally */
+.more-links.show {
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.nav-item:hover {
+  animation: pulse 1s infinite;
+}
+
+/* Additional hover effect for .bottom-nav */
+.bottom-nav:hover {
+  background-color: #2a2a2a;
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow effect on hover */
+}
+
 
 
 .tag {
@@ -593,15 +646,123 @@ color: black; /* Set the font color of "No results found" to red */
 }
 
 .about-container {
-padding: 10px;
-background: black;
-border-radius: 2px;
-color: grey; /* text color */
-font-weight: bold;
-max-width: 85%;
-margin: 20px auto;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 20px; /* Increase padding for better content spacing */
+  background: radial-gradient(circle at 20% 20%, #2e2e2e, #000000 70%);
+  border-radius: 10px; /* More rounded corners for a softer look */
+  color: white;
+  max-width: 95%;
+  margin: 20px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Depth effect */
+  position: relative;
+  overflow: hidden; /* Hide overflow for animated background */
 }
+
+/* Animated background gradient */
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, #2e2e2e, #1a1a1a 70%);
+  animation: gradientMove 5s infinite alternate; /* Animation effect */
+  z-index: -1; /* Send the background behind the text */
+  opacity: 0.5; /* Add slight transparency for a more subtle effect */
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 20%;
+  }
+  100% {
+    background-position: 80% 80%;
+  }
+}
+
+/* Text shadow for better readability */
+.about-container p, .about-container h1, .about-container h2, .about-container h3 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle entrance animation for text */
+.about-container p, .about-contained h1, .about-container h2, .about-container h3 {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Keyframes for text fade-in effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-contained {
+  padding: 20px; /* Increase padding for better content spacing */
+  background: radial-gradient(circle at 20% 20%, #2e2e2e, #000000 70%);
+  border-radius: 10px; /* More rounded corners for a softer look */
+  color: white;
+  max-width: 95%;
+  margin: 20px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Depth effect */
+  position: relative;
+  overflow: hidden; /* Hide overflow for animated background */
+}
+
+/* Animated background gradient */
+.about-contained::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, #2e2e2e, #1a1a1a 70%);
+  animation: gradientMove 5s infinite alternate; /* Animation effect */
+  z-index: -1; /* Send the background behind the text */
+  opacity: 0.5; /* Add slight transparency for a more subtle effect */
+}
+
+/* Keyframes for animated gradient */
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 20%;
+  }
+  100% {
+    background-position: 80% 80%;
+  }
+}
+
+/* Text shadow for better readability */
+.about-contained p, .about-contained h1, .about-contained h2, .about-contained h3 {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtle entrance animation for text */
+.about-contained p, .about-contained h1, .about-contained h2, .about-contained h3 {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Keyframes for text fade-in effect */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 figure {
 position: relative;
