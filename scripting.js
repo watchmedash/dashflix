@@ -142,14 +142,19 @@ async function fetchMostViewed() {
 
     const searchBox = document.querySelector("#search-box");
     const clearSearchButton = document.querySelector("#clear-search");
+    const mostViewedSection = document.querySelector(".most-viewed-list"); // Get the Most Viewed section
 
     searchBox && searchBox.addEventListener("input", (e => {
       const query = e.target.value;
       if (query.length < 3) {
+        mostViewedSection.style.display = "block"; // Show Most Viewed section if query is less than 3
         o(t);
         document.querySelector("#load-more").style.display = "block";
         return;
       }
+
+      // Hide Most Viewed section when searching
+      mostViewedSection.style.display = "none";
 
       const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${n}&query=${encodeURIComponent(query)}`;
       fetch(searchUrl)
@@ -175,6 +180,7 @@ async function fetchMostViewed() {
     clearSearchButton.addEventListener("click", () => {
       searchBox.value = "";
       clearSearchButton.style.display = "none";
+      mostViewedSection.style.display = "block"; // Show Most Viewed section when search is cleared
       o(t);
       document.querySelector("#load-more").style.display = "block";
     });
