@@ -31,17 +31,17 @@
   border-radius: var(--border-radius);
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
   border: var(--border-width) solid #1e1e1e; /* Matching card color */
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for dark mode */
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for dark mode */
 }
 
 .channel:hover {
   transform: scale(1.02); /* Slight zoom on hover */
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
   animation: neonPulse 1s infinite alternate; /* Neon pulse animation */
 }
 
 .channel[data-playing="true"] {
-  border-color: #00e5ff; /* Lighter glow for playing channels */
+  border-color: rgba(0, 229, 255, 0.5); /* Lighter glow for playing channels, more subtle */
 }
 
 /* Play button styling */
@@ -127,7 +127,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
-  color: #00e5ff; /* Lighter teal color for the play icon */
+  color: rgba(0, 229, 255, 0.7); /* Lighter teal color for the play icon, more subtle */
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -161,10 +161,10 @@
 /* Animation for neon pulse */
 @keyframes neonPulse {
   0%, 100% {
-    box-shadow: 0 0 20px #00e5ff, 0 0 40px #00e5ff, 0 0 60px #00e5ff;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 229, 255, 0.5);
   }
   50% {
-    box-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff, 0 0 90px #00e5ff;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 229, 255, 0.5), 0 0 45px rgba(0, 229, 255, 0.5);
   }
 }
 
@@ -202,14 +202,14 @@
 #search-box:focus {
   outline: none; /* Remove default outline */
   background-color: #3a3a3a; /* Slightly lighter on focus */
-  box-shadow: 0 0 10px #00e5ff; /* Neon glow effect on focus */
+  box-shadow: 0 0 5px rgba(0, 229, 255, 0.5); /* More subtle glow effect on focus */
 }
 
 /* Clear search button styling */
 #clear-search {
   background: none; /* Transparent background */
   border: none;
-  color: #00e5ff; /* Lighter teal color */
+  color: rgba(0, 229, 255, 0.7); /* Lighter teal color */
   font-size: 1rem;
   cursor: pointer;
   display: none; /* Initially hidden */
@@ -223,18 +223,25 @@
 /* Load more button styling */
 #load-more {
   display: block; /* Ensure it shows by default */
-  padding: 10px 15px; /* Sufficient padding */
+  padding: 10px 16px; /* Increased padding for a better touch target */
   border: none;
   border-radius: var(--border-radius);
-  background-color: #2a2a2a; /* Lighter dark background */
-  color: #00e5ff; /* Lighter teal color */
-  font-size: 1rem;
+  background-color: #333; /* Darker background for better contrast */
+  color: #grey; /* Lighter teal color */
+  font-size: 0.875rem; /* Reduced font size */
+  text-align: center; /* Center the text */
   cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Soft shadow */
-  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* Add a scale transform on hover */
 }
 
 #load-more:hover {
-  background-color: #3a3a3a; /* Slightly lighter background on hover */
-  box-shadow: 0 0 10px #00e5ff; /* Neon glow effect on hover */
+  background-color: #444; /* Slightly lighter background on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+#load-more:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); /* Soft focus glow */
 }
