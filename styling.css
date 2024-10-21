@@ -31,17 +31,17 @@
   border-radius: var(--border-radius);
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth animation for hover effects */
   border: var(--border-width) solid #1e1e1e; /* Matching card color */
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3); /* Slightly stronger shadow for dark mode */
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.3); /* Slightly stronger shadow for dark mode with white glow */
 }
 
 .channel:hover {
   transform: scale(1.02); /* Slight zoom on hover */
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-  animation: neonPulse 1s infinite alternate; /* Neon pulse animation */
+  box-shadow: 0 0 1.5rem rgba(255, 255, 255, 0.5); /* Stronger white glow on hover */
+  animation: neonPulse 1s infinite alternate; /* Neon pulse animation with white glow */
 }
 
 .channel[data-playing="true"] {
-  border-color: rgba(0, 229, 255, 0.5); /* Lighter glow for playing channels, more subtle */
+  border-color: rgba(255, 255, 255, 0.5); /* Subtle white glow for playing channels */
 }
 
 /* Play button styling */
@@ -81,7 +81,7 @@
 .player-wrapper {
   background: #181818; /* Darker background for the player */
   padding: var(--space-sm);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.4); /* White glow */
   border-radius: var(--border-radius);
   transition: background-color 0.3s; /* Smooth transition */
 }
@@ -127,7 +127,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2rem;
-  color: rgba(0, 229, 255, 0.7); /* Lighter teal color for the play icon, more subtle */
+  color: rgba(255, 255, 255, 0.7); /* White for play icon */
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
 }
@@ -161,10 +161,10 @@
 /* Animation for neon pulse */
 @keyframes neonPulse {
   0%, 100% {
-    box-shadow: 0 0 10px rgba(0, 229, 255, 0.5), 0 0 20px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5); /* White glow */
   }
   50% {
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.5), 0 0 30px rgba(0, 229, 255, 0.5), 0 0 45px rgba(0, 229, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5), 0 0 45px rgba(255, 255, 255, 0.5); /* Pulsing white glow */
   }
 }
 
@@ -196,20 +196,20 @@
   color: #e0e0e0; /* Light gray text */
   font-size: 1rem;
   transition: background-color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White shadow for depth */
 }
 
 #search-box:focus {
   outline: none; /* Remove default outline */
   background-color: #3a3a3a; /* Slightly lighter on focus */
-  box-shadow: 0 0 5px rgba(0, 229, 255, 0.5); /* More subtle glow effect on focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* White glow on focus */
 }
 
 /* Clear search button styling */
 #clear-search {
   background: none; /* Transparent background */
   border: none;
-  color: rgba(0, 229, 255, 0.7); /* Lighter teal color */
+  color: rgba(255, 255, 255, 0.7); /* White color */
   font-size: 1rem;
   cursor: pointer;
   display: none; /* Initially hidden */
@@ -227,21 +227,21 @@
   border: none;
   border-radius: var(--border-radius);
   background-color: #333; /* Darker background for better contrast */
-  color: #grey; /* Lighter teal color */
+  color: #e0e0e0; /* Lighter text color */
   font-size: 0.875rem; /* Reduced font size */
   text-align: center; /* Center the text */
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3); /* Soft white shadow for depth */
   transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* Add a scale transform on hover */
 }
 
 #load-more:hover {
   background-color: #444; /* Slightly lighter background on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Enhanced white shadow on hover */
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 #load-more:focus {
   outline: none; /* Remove default outline */
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5); /* Soft focus glow */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft white glow on focus */
 }
