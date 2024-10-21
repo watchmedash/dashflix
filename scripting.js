@@ -1,7 +1,7 @@
 let e = 1;
 let t = [];
 const n = "4f599baa15d072c9de346b2816a131b8";
-const priorityIds = [1336941, 978796, 1306764];
+const priorityIds = [1002398, 1124641, 1336941, 978796, 1306764];
 
 async function l() {
   const l = `https://api.themoviedb.org/3/discover/movie?api_key=${n}&page=${e}`;
