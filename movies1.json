@@ -13,6 +13,18 @@
           ]
       },
       {
+          "title": "Bagman",
+          "link": "https://emirati.top/movies/Bagman",
+          "image": "https://image.tmdb.org/t/p/original/53IK9rlZJbwFYbNnJZiLq7UWxkT.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Krista",
           "link": "https://emirati.top/movies/Krista",
           "image": "https://image.tmdb.org/t/p/original/hRmOpNm6uLjrayjrBgWp2B9q5wa.jpg",
