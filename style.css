@@ -30,12 +30,6 @@
   }
 }
 
-:fullscreen {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-
 .spinner {
   position: absolute;
   top: 50%;
@@ -64,7 +58,6 @@ img.loaded + .spinner {
   display: none;
 }
 
-/* Bottom navigation styling */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -97,9 +90,9 @@ img.loaded + .spinner {
 }
 
 .nav-item:hover {
-  color: #64ffda; /* Light teal color on hover */
+  color: #ffffff; /* Change color to normal white on hover */
   transform: scale(1.1);
-  text-shadow: 0 0 8px rgba(100, 255, 218, 0.8), 0 0 16px rgba(100, 255, 218, 0.6); /* Glow effect */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
 }
 
 .nav-item:hover i {
@@ -131,9 +124,9 @@ img.loaded + .spinner {
 }
 
 .more-links a:hover {
-  color: #64ffda; /* Light teal color on hover */
+  color: #ffffff; /* Light teal color on hover */
   transform: scale(1.05); /* Slight scaling for links */
-  text-shadow: 0 0 8px rgba(100, 255, 218, 0.8), 0 0 16px rgba(100, 255, 218, 0.6); /* Glow effect */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
 }
 
 .more-links.show {
@@ -727,7 +720,7 @@ color: black; /* Set the font color of "No results found" to red */
 }
 
 /* Subtle entrance animation for text */
-.about-container p, .about-contained h1, .about-container h2, .about-container h3 {
+.about-container p, .about-container h1, .about-container h2, .about-container h3 {
   animation: fadeInUp 1s ease-out;
 }
 
@@ -780,9 +773,14 @@ color: black; /* Set the font color of "No results found" to red */
   }
 }
 
-/* Text shadow for better readability */
-.about-contained p, .about-contained h1, .about-contained h2, .about-contained h3 {
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+/* Glowing effect on each word */
+.about-contained span {
+  display: inline-block; /* Needed to apply hover effect on each word */
+  transition: text-shadow 0.3s ease-in-out; /* Smooth transition for glow effect */
+}
+
+.about-contained span:hover {
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white; /* White glow effect */
 }
 
 /* Subtle entrance animation for text */
@@ -801,6 +799,15 @@ color: black; /* Set the font color of "No results found" to red */
     transform: translateY(0);
   }
 }
+
+/* Apply the glowing effect only to words */
+.about-contained p span,
+.about-contained h1 span,
+.about-contained h2 span,
+.about-contained h3 span {
+  display: inline-block; /* Required for the hover effect on each word */
+}
+
 
 
 figure {
@@ -870,17 +877,25 @@ height: 80px;
 }
 
 .image-container {
-text-align: center;
-margin-top: 20px;
-position: relative;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden; /* Ensure the image doesn’t overflow the container */
 }
 
 .image-container img {
-width: 25%;
-max-width: 100%; /* Limit the width of the image to its original size */
-opacity: 2;
- /* Adjust the opacity of the image */
+  width: 25%;
+  max-width: 100%; /* Limit the width of the image to its original size */
+  opacity: 0.8; /* Adjust the opacity of the image */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+  border-radius: var(--border-radius); /* Optional: add border-radius for rounded corners */
 }
+
+.image-container img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  opacity: 1; /* Full opacity on hover */
+}
+
 
 .image-contained {
 width: 100%;
