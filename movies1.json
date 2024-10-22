@@ -37,6 +37,45 @@
           ]
       },
       {
+          "title": "The Soul Eater",
+          "link": "https://emirati.top/movies/The Soul Eater",
+          "image": "https://image.tmdb.org/t/p/original/8XsQVmGQukwIVDM88Aa0C7L5hCp.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Thriller",
+              "Horror",
+              "Crime"
+          ]
+      },
+      {
+          "title": "Carved",
+          "link": "https://emirati.top/movies/Carved",
+          "image": "https://image.tmdb.org/t/p/original/9DKH4j80eR4qAcGDoShlUO7D0Is.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Twas the Date Before Christmas",
+          "link": "https://emirati.top/movies/Twas the Date Before Christmas",
+          "image": "https://image.tmdb.org/t/p/original/jxfXnIvMsNJrBZFi9fX9ra8lkdo.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "TV Movie",
+              "Comedy",
+              "Romance",
+              "Drama"
+          ]
+      },
+      {
           "title": "Halinghing",
           "link": "https://emirati.top/movies/Halinghing",
           "image": "https://image.tmdb.org/t/p/original/8eMW4CSTjTAyPf1Zt70myJFXx7f.jpg",
