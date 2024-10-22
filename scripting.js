@@ -37,6 +37,10 @@ function getVideoUrl(movieId) {
             return `https://vidsrc.xyz/embed/movie/${movieId}`;
         case "2embed": // New source added
             return `https://embed.su/embed/movie/${movieId}`;
+            case "icu2": // New source added
+                return `https://vidbinge.dev/embed/movie/${movieId}`;
+                case "icu3": // New source added
+                    return `https://vidsrc.vip/embed/movie/${movieId}`;
             case "icu": // New source added
                 return `https://multiembed.mov/directstream.php?video_id=${movieId}&tmdb=1`;
         default: // Fallback to vidlink
