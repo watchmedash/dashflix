@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix. Enjoy the latest releases, classic films, and popular TV shows for free. Stream high-quality content anytime, anywhere.">
+<meta name="keywords" content="Stream Free, Stream Now, Watch free movies, Online streaming, Dashflix, movie genres, TV series, latest releases, classic films, popular TV shows, high-quality content, streaming platform">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Dashflix - Stream Free, Stream Now" />
+<meta property="og:description" content="Stream free movies and TV series online with Dashflix. Enjoy high-quality content anytime, anywhere." />
+<meta property="og:url" content="https://dashflix.xyz/shows" />
+<meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
+<meta property="og:image:alt" content="Dashflix - Stream Free Movies and TV Series" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Dashflix - Stream Free, Stream Now" />
+<meta name="twitter:description" content="Stream free movies and TV series online with Dashflix. Enjoy high-quality content anytime, anywhere." />
+<meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
+<meta name="twitter:image:alt" content="Dashflix - Stream Free Movies and TV Series" />
+<link rel="canonical" href="https://dashflix.xyz/shows" />
+<link rel="stylesheet" href="shows.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
+<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.2/popup.min.js"></script>
+<title>Shows - Watch Free Movies and TV Series Online</title>
+</head>
+<body oncontextmenu="return false;">
+  <header>
+  <nav>
+  <div class="logo-title-container">
+  <div class="logo-container">
+  <img alt="Dashflix Logo"  src="https://i.postimg.cc/qMFTZzvm/logodf.webp"/>
+  </div>
+  </div>
+  <div class="nav-links">
+<ul><li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li><li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li><li><a href="https://t.me/dashflixtop"><i class="fas fa-paper-plane"></i> Telegram</a></li></ul>
+  </div>
+  </nav>
+  </header>
+  <div class="terra"><script type="text/javascript">
+  atOptions = {
+  'key' : '29a679982b44db55fa95b90dfb3fac2f',
+  'format' : 'iframe',
+  'height' : 50,
+  'width' : 320,
+  'params' : {}
+  };
+  </script>
+  <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script></div>
+  <div class="terra">
+  <script type="text/javascript">
+  atOptions = {
+  'key' : '6b01e67100c2170e766afcf1bec51d6a',
+  'format' : 'iframe',
+  'height' : 60,
+  'width' : 468,
+  'params' : {}
+  };
+  </script>
+  <script type="text/javascript" src="//perilastronaut.com/6b01e67100c2170e766afcf1bec51d6a/invoke.js"></script>
+  </div>
+  <div class="terra"><script type="text/javascript">
+  atOptions = {
+  'key' : '31659dfd382d23627d3b20f3dae9ec68',
+  'format' : 'iframe',
+  'height' : 90,
+  'width' : 728,
+  'params' : {}
+  };
+  </script>
+<script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
+<div id="search-container">
+      <div id="search-wrapper">
+          <input type="text" id="search-input" placeholder="Search TV Show">
+          <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <button id="refreshButton" onclick="refreshPage()"><i class="fas fa-sync-alt"></i></button>
+  </div>
+    <div id="filters">
+        <select id="release-year">
+            <option value="">Release Year</option>
+            <!-- Release year options will be populated dynamically -->
+        </select>
+
+        <select id="genre">
+            <option value="">Genre</option>
+            <!-- Genre options will be populated dynamically -->
+        </select>
+    </div>
+<div class="sharethis-inline-share-buttons"></div>
+<button id="goToTopButton" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="container">
+        <!--<h1>TV Shows Gallery</h1>-->
+        <div id="tv-gallery" class="grid"></div>
+        <div id="tv-player" class="player">
+            <div class="player-content">
+                <button class="close-btn"></button>
+                <iframe id="tv-iframe" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div id="season-episode-selection">
+                <select id="season">
+                    <option value="">Select Season</option>
+                </select>
+                <select id="episode">
+                    <option value="">Select Episode</option>
+                </select>
+            </div>
+        </div>
+    </div>
+<script src="shows.js"></script>
+<script>
+              const closeButton = document.querySelector('.player .close-btn');
+const player = document.getElementById('tv-player');
+
+// Show the close button when the player is touched on mobile
+player.addEventListener('touchstart', () => {
+    closeButton.classList.add('show');
+});
+
+// Hide the close button when the player is not interacted with
+player.addEventListener('touchend', () => {
+    setTimeout(() => {
+        closeButton.classList.remove('show');
+    }, 2000); // Hide after 2 seconds
+});
+
+// Also hide the close button when not hovering on desktop
+player.addEventListener('mouseleave', () => {
+    closeButton.classList.remove('show');
+});
+
+// Show the player when clicked (your existing logic here)
+closeButton.addEventListener('click', () => {
+    player.style.display = 'none';
+    selectionDiv.style.display = 'none';
+    iframe.src = '';
+});
+</script>
+<script>
+function refreshPage() {
+    location.reload(); // Reloads the current page
+}
+</script>
+
+<script>
+// Show the button when the user scrolls down 100px from the top
+window.onscroll = function() {
+    const goToTopButton = document.getElementById("goToTopButton");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goToTopButton.style.display = "block";
+    } else {
+        goToTopButton.style.display = "none";
+    }
+};
+
+// Scroll to the top when the button is clicked
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<nav class="bottom-nav">
+  <a href="https://dashflix.top" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="https://dashflix.top/home" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+  <a href="https://dashflix.top/trailer" class="nav-item">
+    <i class="fas fa-video"></i> Trailers
+  </a>
+  <a href="https://dashflix.top/requested" class="nav-item">
+    <i class="fas fa-list"></i> Requested
+  </a>
+  <a href="#" class="nav-item" id="more-menu">
+    <i class="fas fa-ellipsis-h"></i> More
+  </a>
+
+  <div id="more-links" class="more-links">
+    <a href="https://freedomwall.top">
+      <i class="fas fa-otter"></i> Anime
+    </a>
+    <a href="https://dashtoons.xyz">
+      <i class="fas fa-book-open"></i> Comics
+    </a>
+    <a href="https://kabayan.top">
+      <i class="fas fa-theater-masks"></i> Drama
+    </a>
+    <a href="https://dashflix.top/request">
+      <i class="fas fa-paper-plane"></i> Request
+    </a>
+    <a href="https://dashflix.top/tvplus">
+      <i class="fas fa-broadcast-tower"></i> Live TV
+    </a>
+    <a href="#" class="nav-item" onclick="checkPassword(event)">
+🔒 18+
+    </a>
+    <a href="https://dashflix.top/appdown">
+      <i class="fas fa-mobile-alt"></i> APP
+    </a>
+    <a href="https://dashflix.top/donate">
+      <i class="fas fa-heart"></i> Support Us
+    </a>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const moreMenu = document.getElementById('more-menu');
+    const moreLinks = document.getElementById('more-links');
+
+    moreMenu.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor action
+      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
+    });
+  });
+</script>
+
+<script>
+  function checkPassword(event) {
+    event.preventDefault(); // Prevent the default anchor behavior
+    const password = prompt("Warning: This page contains adult content. Please enter 'GOBILAM' to proceed:");
+
+    // Check if the entered password is correct
+    if (password === "GOBILAM") {
+      window.location.href = "adult.html"; // Redirect to the login page
+    } else {
+      alert("Incorrect password. Access denied."); // Show alert for incorrect password
+    }
+  }
+</script>
+<script src="script.js"></script>
+          </body>
+          </html>

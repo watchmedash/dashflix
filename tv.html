@@ -71,8 +71,6 @@
     </div>
 
     <div class="channel-list-wrapper">
-      <!--<input type="text" id="search-box" placeholder="Search TV show...">
-      <button id="clear-search" style="display: none;">Clear</button>-->
       <div class="terra">
         <script type="text/javascript">
           atOptions = {
@@ -86,7 +84,8 @@
         <script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script>
       </div>
       <div class="sharethis-inline-share-buttons"></div>
-      <ul class="most-viewed-list"></ul>
+    <!--<input type="text" id="search-box" placeholder="Search TV Shows...">
+<button id="clear-search" style="display: none;">Clear</button>-->
       <ul class="channel-list"></ul>
       <button id="load-more">Load More</button>
     </div>
@@ -117,6 +116,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script src="tv.js"></script>
+
   <nav class="bottom-nav">
     <a href="https://dashflix.top" class="nav-item">
       <i class="fas fa-home"></i> Home
@@ -157,53 +157,18 @@
         <i class="fas fa-mobile-alt"></i> APP
       </a>
       <a href="https://dashflix.top/donate">
-        <i class="fas fa-heart"></i> Support Us
+        <i class="fas fa-heart"></i> Donate
       </a>
     </div>
   </nav>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const moreMenu = document.getElementById('more-menu');
-      const moreLinks = document.getElementById('more-links');
+    const moreMenuButton = document.getElementById('more-menu');
+    const moreLinks = document.getElementById('more-links');
 
-      moreMenu.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default anchor action
-        moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-      });
+    moreMenuButton.addEventListener('click', () => {
+      moreLinks.style.display = moreLinks.style.display === 'block' ? 'none' : 'block';
     });
   </script>
-
-  <div class="modal" id="passwordModal">
-      <div class="modal-content">
-          <h2>Warning: This page contains adult content.</h2>
-          <p>Please enter GOBILAM to proceed:</p>
-          <input type="text" id="passwordInput" placeholder="Enter Password">
-          <button onclick="checkPassword()">Submit</button>
-          <button onclick="closeModal()">Cancel</button>
-      </div>
-  </div>
-
-  <script>
-      function showPasswordModal(event) {
-          event.preventDefault(); // Prevent the default link behavior
-          document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-      }
-
-      function closeModal() {
-          document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-      }
-
-      function checkPassword() {
-          const password = document.getElementById('passwordInput').value;
-          if (password === "GOBILAM") {
-              window.location.href = "adult.html"; // Redirect to the adult content page
-          } else {
-              alert("Incorrect password. Access denied."); // Alert for incorrect password
-          }
-      }
-  </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
