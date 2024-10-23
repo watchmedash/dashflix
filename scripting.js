@@ -1,7 +1,7 @@
 let e = 1; // Page number for loading more movies
 let t = []; // Array to hold movie data
 const n = "4f599baa15d072c9de346b2816a131b8"; // TMDB API key
-let currentSource = "vidlink"; // Default video source set to vidlink
+let currentSource = "vidsrc"; // Default video source set to vidsrc
 let currentMovieId = null; // Track currently playing movie ID
 
 async function l() {
@@ -35,14 +35,14 @@ function getVideoUrl(movieId) {
     switch (currentSource) {
         case "vidsrc":
             return `https://vidsrc.xyz/embed/movie/${movieId}`;
-        case "2embed": // New source added
+        case "2embed":
             return `https://embed.su/embed/movie/${movieId}`;
-            case "icu2": // New source added
-                return `https://vidbinge.dev/embed/movie/${movieId}`;
-                case "icu3": // New source added
-                    return `https://vidsrc.vip/embed/movie/${movieId}`;
-            case "icu": // New source added
-                return `https://multiembed.mov/directstream.php?video_id=${movieId}&tmdb=1`;
+        case "icu2":
+            return `https://vidbinge.dev/embed/movie/${movieId}`;
+        case "icu3":
+            return `https://vidsrc.vip/embed/movie/${movieId}`;
+        case "icu":
+            return `https://multiembed.mov/directstream.php?video_id=${movieId}&tmdb=1`;
         default: // Fallback to vidlink
             return `https://vidlink.pro/movie/${movieId}`;
     }
