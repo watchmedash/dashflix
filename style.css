@@ -6,33 +6,32 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 69, 0, 0.8); /* Bright orange-red overlay */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for less intensity */
 }
 
 .modal-content {
-    background-color: #ffcc00; /* Warning yellow background */
+    background-color: #f9c74f; /* Softer warning yellow */
     margin: 15% auto;
     padding: 20px;
-    border: 2px solid #d9534f; /* Bold red border */
+    border: 2px solid #f8b400; /* Softer orange border */
     width: 80%; /* Could be more or less, depending on screen size */
     text-align: center;
     border-radius: 8px; /* Rounded corners */
     color: #333; /* Dark text for readability */
-    font-weight: bold; /* Emphasize text */
 }
 
 input {
     width: 70%; /* Adjust input width */
     padding: 10px;
-    border: 1px solid #d9534f; /* Red border */
+    border: 1px solid #f8b400; /* Softer orange border */
     border-radius: 4px; /* Rounded corners */
-    background-color: #fff3cd; /* Light yellow background */
+    background-color: #fff; /* White background for input */
     color: #333; /* Dark text color for readability */
 }
 
 button {
     padding: 10px 20px;
-    background-color: #d9534f; /* Red button color */
+    background-color: #6c757d; /* Gray button color for a softer touch */
     color: #ffffff; /* Light text color */
     border: none;
     border-radius: 4px; /* Rounded corners */
@@ -40,8 +39,9 @@ button {
 }
 
 button:hover {
-    background-color: #c9302c; /* Darker red shade on hover */
+    background-color: #5a6268; /* Darker gray shade on hover */
 }
+
 
 
 .snow-container {
