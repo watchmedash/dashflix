@@ -1,7 +1,6 @@
 let currentBatch = 1;
 const batchSize = 20;  // Adjust as needed
 let allChannelData = [];  // Store all loaded channels
-let currentMovieId = null;  // Store the currently playing movie's ID
 const apiKey = '4f599baa15d072c9de346b2816a131b8';  // Add your TMDB API key
 
 // Function to load data from the TMDB API
@@ -37,16 +36,6 @@ async function loadChannelData() {
       });
     }
 
-    // Set up video source selector
-    const videoSourceSelect = document.querySelector("#video-source");
-    if (videoSourceSelect) {
-      videoSourceSelect.addEventListener("change", () => {
-        if (currentMovieId) {
-          loadStreamByMovieId(currentMovieId);  // Reload the current movie with the new source
-        }
-      });
-    }
-
   } catch (error) {
     console.error('Error loading channel data:', error);
     alert('Unable to load data. Please try again later.');
@@ -79,28 +68,6 @@ async function loadNextBatch() {
   }
 }
 
-// Function to get the video URL based on the selected video source
-function getVideoUrl(movieId) {
-  const videoSource = document.querySelector("#video-source").value;
-  switch (videoSource) {
-    case "vidsrc":
-      return `https://vidsrc.xyz/embed/movie/${movieId}`;
-    case "vidlink":
-      return `https://vidlink.pro/movie/${movieId}`;
-    case "2embed":
-      return `https://embed.su/embed/movie/${movieId}`;
-    case "icu":
-      return `https://multiembed.mov/directstream.php?video_id=${movieId}&tmdb=1`;
-    case "icu2":
-      return `https://vidbinge.dev/embed/movie/${movieId}`;
-    case "icu3":
-      return `https://vidsrc.vip/embed/movie/${movieId}`;
-    default:
-      return `https://vidsrc.xyz/embed/movie/${movieId}`;  // Fallback to vidsrc
-  }
-}
-
-// Function to render the channels
 function renderChannels(channelData) {
   const channelList = document.querySelector(".channel-list");
   channelList.innerHTML = "";  // Clear previous channels
@@ -148,11 +115,9 @@ function renderChannels(channelData) {
   }
 }
 
-// Function to load the stream into the player
+// Load the stream into the player
 function loadStream(channelPlay) {
-  currentMovieId = channelPlay.dataset.url.split("/").pop();  // Store the movie ID
-  const url = getVideoUrl(currentMovieId);  // Get the video URL based on selected source
-
+  const url = channelPlay.dataset.url || channelPlay.getAttribute('data-url');
   const parent = channelPlay.closest("li");
   const title = parent.querySelector(".channel-title").textContent;
   const plot = parent.querySelector(".channel-plot").textContent; // Get the plot from the channel info
@@ -164,16 +129,6 @@ function loadStream(channelPlay) {
   video.src = url;  // Set iframe source to embed link
   nowPlayingTitle.textContent = title;
   moviePlot.textContent = plot; // Set the plot under the player
-
-  video.scrollIntoView({ behavior: "smooth" });
-}
-
-// Function to load stream by movie ID (for changing the video source)
-function loadStreamByMovieId(movieId) {
-  const url = getVideoUrl(movieId);  // Get the video URL based on selected source
-
-  const video = document.querySelector("#player");
-  video.src = url;  // Set iframe source to embed link
 
   video.scrollIntoView({ behavior: "smooth" });
 }
