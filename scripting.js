@@ -1,170 +1,176 @@
-let e = 1; // Page number for loading more movies
-let t = []; // Array to hold movie data
-const n = "4f599baa15d072c9de346b2816a131b8"; // TMDB API key
-let currentSource = "vidsrc"; // Default video source set to vidsrc
-let currentMovieId = null; // Track currently playing movie ID
+let currentBatch = 1;
+const batchSize = 20;  // Adjust as needed
+let allChannelData = [];  // Store all loaded channels
+const apiKey = '4f599baa15d072c9de346b2816a131b8';  // Add your TMDB API key
 
-async function l() {
-    const l = `https://api.themoviedb.org/3/discover/movie?api_key=${n}&page=${e}`;
-    try {
-        const response = await fetch(l);
-        const results = (await response.json()).results.map(e => ({
-            title: e.title,
-            url: getVideoUrl(e.id), // Get the URL based on the current source
-            image: `https://image.tmdb.org/t/p/original${e.poster_path}`,
-            plot: e.overview,
-            releaseYear: e.release_date.split("-")[0],
-            id: e.id // Add the ID to the movie object
-        }));
+// Function to load data from the TMDB API
+async function loadChannelData() {
+  try {
+    await loadNextBatch();  // Load the first batch when the page loads
 
-        // Push results to the main array, allowing duplicates
-        t.push(...results);
-        o(t); // Display the updated movie list
-        e++;
-
-        // Automatically play the first movie using the current source
-        if (t.length > 0 && e === 1) {
-            a(t[0]); // Play the first movie
-        }
-    } catch (error) {
-        console.error("Error loading batch data:", error);
+    // Set up "Load More" button
+    const loadMoreButton = document.querySelector("#load-more");
+    if (loadMoreButton) {
+      loadMoreButton.addEventListener("click", loadNextBatch);
     }
+
+    // Set up search box
+    const searchBox = document.querySelector("#search-box");
+    const clearSearchButton = document.querySelector("#clear-search");
+
+    if (searchBox) {
+      searchBox.addEventListener("input", (event) => {
+        filterChannels(event);
+        // Show clear button if there is text
+        clearSearchButton.style.display = event.target.value ? "inline-block" : "none";
+      });
+    }
+
+    // Clear search button functionality
+    if (clearSearchButton) {
+      clearSearchButton.addEventListener("click", () => {
+        searchBox.value = "";  // Clear the input
+        clearSearchButton.style.display = "none";  // Hide the clear button
+        renderChannels(allChannelData);  // Show all channels again
+        document.querySelector("#load-more").style.display = "block"; // Show "Load More" button
+      });
+    }
+
+  } catch (error) {
+    console.error('Error loading channel data:', error);
+    alert('Unable to load data. Please try again later.');
+  }
 }
 
-function getVideoUrl(movieId) {
-    switch (currentSource) {
-        case "vidsrc":
-            return `https://vidsrc.xyz/embed/movie/${movieId}`;
-        case "2embed":
-            return `https://embed.su/embed/movie/${movieId}`;
-        case "icu2":
-            return `https://vidbinge.dev/embed/movie/${movieId}`;
-        case "icu3":
-            return `https://vidsrc.vip/embed/movie/${movieId}`;
-        case "icu":
-            return `https://multiembed.mov/directstream.php?video_id=${movieId}&tmdb=1`;
-        default: // Fallback to vidlink
-            return `https://vidlink.pro/movie/${movieId}`;
-    }
+// Load the next batch of movies from TMDB API
+async function loadNextBatch() {
+  const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentBatch}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const channelData = data.results.map(movie => ({
+      title: movie.title,
+      url: `https://vidsrc.xyz/embed/movie/${movie.id}`,  // Replace with your embed URL
+      image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+      plot: movie.overview,  // Movie plot
+      releaseYear: movie.release_date.split('-')[0],  // Extract release year
+    }));
+
+    allChannelData.push(...channelData);  // Add to the master list
+    renderChannels(allChannelData);  // Render the combined data
+
+    currentBatch++;
+  } catch (error) {
+    console.error('Error loading batch data:', error);
+    alert('Unable to load more data. Please try again later.');
+  }
 }
 
-function o(t) {
-    const n = document.querySelector(".channel-list");
-    n.innerHTML = "";
-    t.forEach(e => {
-        const movieHTML = `<li class="channel">
-            <div class="handle">☰</div>
-            <button class="play-channel" title="${e.title}" data-id="${e.id}">
-                <div class="thumbnail-wrapper">
-                    <img class="channel-poster" src="${e.image}" loading="lazy">
-                    <div class="play-icon">▶</div>
-                </div>
-            </button>
-            <div class="channel-info">
-                <div class="channel-title" data-id="${e.id}">${e.title}</div>
-                <div class="channel-plot">${e.plot.substring(0, 100)}...</div>
-                <div class="channel-release-year">${e.releaseYear}</div>
-            </div>
-        </li>`;
-        n.insertAdjacentHTML("beforeend", movieHTML);
+function renderChannels(channelData) {
+  const channelList = document.querySelector(".channel-list");
+  channelList.innerHTML = "";  // Clear previous channels
+
+  channelData.forEach((channel) => {
+    const markup = `
+      <li class="channel">
+        <div class="handle">☰</div>
+        <button class="play-channel" title="${channel.title}" data-url="${channel.url}">
+          <div class="thumbnail-wrapper">
+            <img class="channel-poster" src="${channel.image}" loading="lazy"> <!-- Lazy load attribute -->
+            <div class="play-icon">▶</div> <!-- Play icon -->
+          </div>
+        </button>
+        <div class="channel-info">
+          <div class="channel-title" data-url="${channel.url}">${channel.title}</div>
+          <div class="channel-plot">${channel.plot.substring(0, 100)}...</div> <!-- Snippet of the plot -->
+          <div class="channel-release-year">${channel.releaseYear}</div>
+        </div>
+      </li>
+    `;
+    channelList.insertAdjacentHTML("beforeend", markup);
+  });
+
+  // Set up event listeners
+  const channelPlays = document.querySelectorAll(".play-channel");
+  const channelTitles = document.querySelectorAll(".channel-title");
+
+  channelPlays.forEach((channelPlay) => {
+    channelPlay.addEventListener("click", (e) => {
+      e.stopPropagation();
+      loadStream(channelPlay);
     });
+  });
 
-    addPlayButtonListeners(); // Add listeners to play buttons
-
-    // Automatically play the first movie using the current source
-    if (t.length > 0 && e === 1) {
-        a(t[0]); // Play the first movie
-    }
-}
-
-function a(movie) {
-    const url = getVideoUrl(movie.id); // Get URL based on ID
-    const player = document.querySelector("#player");
-    const channelPlaying = document.querySelector("#channel-playing");
-    const moviePlot = document.querySelector("#movie-plot");
-
-    player.src = url; // Set the player URL
-    channelPlaying.textContent = movie.title; // Update the title
-    moviePlot.textContent = movie.plot; // Update the plot
-    player.scrollIntoView({ behavior: "smooth" }); // Scroll to the player
-    currentMovieId = movie.id; // Update current movie ID
-}
-
-function addPlayButtonListeners() {
-    const playButtons = document.querySelectorAll(".play-channel");
-    playButtons.forEach(button => {
-        button.addEventListener("click", (event) => {
-            event.stopPropagation();
-            const movieId = button.getAttribute("data-id");
-            const movie = t.find(m => m.id == movieId); // Find the movie object
-            if (movie) {
-                a(movie); // Play the selected movie
-            }
-        });
+  channelTitles.forEach((channelTitle) => {
+    channelTitle.addEventListener("click", () => {
+      loadStream(channelTitle);
     });
+  });
+
+  // Load the first channel by default if it's the first batch
+  if (channelPlays.length > 0 && currentBatch === 1) {
+    loadStream(channelPlays[0]);
+  }
 }
 
-// Initialize movie loading and setup event listeners
-(async function() {
-    try {
-        await l(); // Load initial movies
+// Load the stream into the player
+function loadStream(channelPlay) {
+  const url = channelPlay.dataset.url || channelPlay.getAttribute('data-url');
+  const parent = channelPlay.closest("li");
+  const title = parent.querySelector(".channel-title").textContent;
+  const plot = parent.querySelector(".channel-plot").textContent; // Get the plot from the channel info
 
-        const loadMoreButton = document.querySelector("#load-more");
-        loadMoreButton && loadMoreButton.addEventListener("click", l);
+  const video = document.querySelector("#player");
+  const nowPlayingTitle = document.querySelector("#channel-playing");
+  const moviePlot = document.querySelector("#movie-plot"); // Element to display the plot
 
-        const searchBox = document.querySelector("#search-box");
-        const clearSearchButton = document.querySelector("#clear-search");
+  video.src = url;  // Set iframe source to embed link
+  nowPlayingTitle.textContent = title;
+  moviePlot.textContent = plot; // Set the plot under the player
 
-        // Event listener for video source selection
-        document.getElementById("video-source").addEventListener("change", (event) => {
-            currentSource = event.target.value; // Update current source
+  video.scrollIntoView({ behavior: "smooth" });
+}
 
-            // Update the player with the currently selected movie
-            if (currentMovieId) {
-                const movie = t.find(m => m.id == currentMovieId); // Find the currently playing movie
-                if (movie) {
-                    a(movie); // Update the player with the new source
-                }
-            }
-        });
+// Search function to filter channels
+async function filterChannels(event) {
+  const query = event.target.value;
 
-        // Search functionality
-        searchBox && searchBox.addEventListener("input", (e) => {
-            const query = e.target.value;
-            if (query.length < 3) {
-                o(t); // Show all movies
-                document.querySelector("#load-more").style.display = "block";
-                return;
-            }
+  if (query.length < 3) {
+    // If the query is less than 3 characters, do not search
+    renderChannels(allChannelData);  // Reset to original data
+    document.querySelector("#load-more").style.display = "block"; // Show "Load More" button
+    return;
+  }
 
-            const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${n}&query=${encodeURIComponent(query)}`;
-            fetch(searchUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const results = data.results.map(e => ({
-                        title: e.title,
-                        url: getVideoUrl(e.id), // Get the URL based on the current source
-                        image: `https://image.tmdb.org/t/p/original${e.poster_path}`,
-                        plot: e.overview,
-                        releaseYear: e.release_date.split("-")[0],
-                        id: e.id // Add ID for duplicates checking
-                    }));
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
 
-                    o(results);
-                    document.querySelector("#load-more").style.display = results.length > 0 ? "none" : "block";
-                })
-                .catch(error => console.error("Error searching for movies:", error));
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
 
-            clearSearchButton.style.display = query ? "inline-block" : "none";
-        });
+    const channelData = data.results.map(movie => ({
+      title: movie.title,
+      url: `https://vidsrc.xyz/embed/movie/${movie.id}`,  // Replace with your embed URL
+      image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+      plot: movie.overview,  // Movie plot
+      releaseYear: movie.release_date.split('-')[0],  // Extract release year
+    }));
 
-        clearSearchButton.addEventListener("click", () => {
-            searchBox.value = "";
-            clearSearchButton.style.display = "none";
-            o(t); // Show all movies
-            document.querySelector("#load-more").style.display = "block";
-        });
-    } catch (error) {
-        console.error("Error loading channel data:", error);
+    renderChannels(channelData);  // Render the filtered results
+
+    // Hide "Load More" button if there are results
+    if (channelData.length > 0) {
+      document.querySelector("#load-more").style.display = "none";
+    } else {
+      document.querySelector("#load-more").style.display = "block"; // Show if no results
     }
-})();
+  } catch (error) {
+    console.error('Error searching for channels:', error);
+    alert('Unable to search for channels. Please try again later.');
+  }
+}
+
+// Load the channel data when the page loads
+loadChannelData();
