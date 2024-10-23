@@ -38,22 +38,36 @@
   </nav>
       </header>
       <div class="content">
-         <div class="watchmenow-info">
-  <div class="download-app">
-      <div class="button-container">
-          <a href="https://www.mediafire.com/file/f9ljdiqn91zdd6r/Dashflix_Setup_1.0.0.exe/file" class="watch-now-button">Download for Windows</a>
-      </div>
-      <div class="button-container">
-          <a href="https://dashflix.xyz/Dashflix-v1.0.5.apk" class="watch-now-button">Direct Link✅</a>
-      </div>
-      <div class="button-container">
-          <a href="https://www.mediafire.com/file/x6mrft0l8z3q1ca/Dashflix-v1.0.5.apk/file" class="watch-now-button">APK File MediaFire📥</a>
-      </div>
-      <div class="button-container">
-          <a href="https://pixeldrain.com/u/uqCGibkX" class="watch-now-button">APK File PixelDrain📥</a>
-      </div>
-  </div>
-  </div>  </div>
+        <div class="about-container">
+          <h1>Why Download Dashflix App?</h1>
+
+          <p>Experience the best of Dashflix on your favorite device! Whether you’re at home or on the go, our app brings you all the features you love in a streamlined, easy-to-use interface. With Dashflix, you'll get instant access to an extensive collection of TV shows, all in high definition and completely free.</p>
+
+          <p>Downloading the Dashflix app ensures you never miss out on the latest episodes, exclusive features, and a smooth, ad-free viewing experience. Say goodbye to browser hassles and enjoy the convenience of binge-watching your favorite series directly from the app.</p>
+
+          <p>Our app is designed for speed, performance, and reliability, so you can watch anytime, anywhere—whether you’re streaming the latest release or catching up on older episodes. With built-in features like a season and episode selector, intuitive search, and one-click access to your saved shows, Dashflix makes sure you spend less time browsing and more time watching.</p>
+
+          <p>Ready to dive in? Choose your platform below and start your Dashflix experience today!</p>
+        </div>
+
+        <div class="download-app">
+          <div class="button-container">
+            <a href="https://www.mediafire.com/file/f9ljdiqn91zdd6r/Dashflix_Setup_1.0.0.exe/file" class="watch-now-button">Download for Windows</a>
+          </div>
+          <div class="button-container">
+            <a href="https://play.google.com/store/apps/details?id=com.dashtroyer.dashflix" class="watch-now-button">Google Play📲</a>
+          </div>
+          <div class="button-container">
+            <a href="https://dashflix.xyz/Dashflix-v1.0.5.apk" class="watch-now-button">Direct Link✅</a>
+          </div>
+          <div class="button-container">
+            <a href="https://www.mediafire.com/file/x6mrft0l8z3q1ca/Dashflix-v1.0.5.apk/file" class="watch-now-button">APK File MediaFire📥</a>
+          </div>
+          <div class="button-container">
+            <a href="https://pixeldrain.com/u/uqCGibkX" class="watch-now-button">APK File PixelDrain📥</a>
+          </div>
+        </div>
+</div>
 
               <footer>
             <nav class="footer-nav">
@@ -108,7 +122,7 @@
               <a href="https://dashflix.top/tvplus">
                 <i class="fas fa-broadcast-tower"></i> Live TV
               </a>
-              <a href="#" class="nav-item" onclick="checkPassword(event)">
+              <a href="#" class="nav-item" onclick="showPasswordModal(event)">
           🔒 18+
               </a>
               <a href="https://dashflix.top/donate">
@@ -129,18 +143,34 @@
             });
           </script>
 
-          <script>
-            function checkPassword(event) {
-              event.preventDefault(); // Prevent the default anchor behavior
-              const password = prompt("Warning: This page contains adult content. Please enter 'GOBILAM' to proceed:");
+          <div class="modal" id="passwordModal">
+              <div class="modal-content">
+                  <h2>Warning: This page contains adult content.</h2>
+                  <p>Please enter GOBILAM to proceed:</p>
+                  <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
+                  <button onclick="checkPassword()">Submit</button>
+                  <button onclick="closeModal()">Cancel</button>
+              </div>
+          </div>
 
-              // Check if the entered password is correct
-              if (password === "GOBILAM") {
-                window.location.href = "adult.html"; // Redirect to the login page
-              } else {
-                alert("Incorrect password. Access denied."); // Show alert for incorrect password
+          <script>
+              function showPasswordModal(event) {
+                  event.preventDefault(); // Prevent the default link behavior
+                  document.getElementById('passwordModal').style.display = 'block'; // Show the modal
               }
-            }
+
+              function closeModal() {
+                  document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
+              }
+
+              function checkPassword() {
+                  const password = document.getElementById('passwordInput').value;
+                  if (password === "GOBILAM") {
+                      window.location.href = "adult.html"; // Redirect to the adult content page
+                  } else {
+                      alert("Incorrect password. Access denied."); // Alert for incorrect password
+                  }
+              }
           </script>
   <script src="script.js"></script>
 </html>

@@ -35,23 +35,23 @@
 
 
 <div class="about-container">
-  <h1>About Us</h1>
+  <h1>Welcome to Dashflix</h1>
 
-  <p>Welcome to Dashflix, your go-to platform for all movie lovers, cinema enthusiasts, and weekend binge-watchers. Launched in July 2023, our aim is to provide a comprehensive collection of films from all corners of the globe—absolutely free and in crystal-clear HD quality.</p>
+  <p>Step into the world of Dashflix, your ultimate destination for movie lovers, cinema enthusiasts, and weekend binge-watchers. Since our launch in July 2024, we’ve made it our mission to bring you an unparalleled collection of films from every corner of the globe, completely free and always in stunning HD.</p>
 
-  <p>Our mission at Dashflix is to democratize cinema. We truly believe in the transformative power of films—they entertain us, teach us, move us, and open our eyes to new perspectives. Our extensive selection ranges from legendary classics to modern marvels, independent films to big-ticket attractions. No matter what you're in the mood for, you'll find it on Dashflix.</p>
+  <p>At Dashflix, we believe in the power of cinema to inspire, entertain, and transform. Whether you’re in the mood for iconic classics, modern masterpieces, indie gems, or the latest blockbusters, we’ve got you covered. With an extensive library that spans every genre, there’s always something new to discover.</p>
 
-  <p>We understand how frustrating it can be to scour through multiple sites just to find the film you're craving to watch. That’s why we've simplified the process, aggregating the best online content in one easy-to-use platform. With Dashflix, you can discover, watch, and share your favorite movies without ever needing to pay for an expensive subscription.</p>
+  <p>We know how frustrating it can be to hop from site to site searching for the perfect film. That’s why we’ve simplified your journey. Dashflix offers the best content on one seamless platform, making it easy to discover, watch, and share your favorites without the hassle of subscriptions or hidden fees.</p>
 
-  <p>When we say quality, we mean it. All our films are presented in high-definition, ensuring you enjoy the most immersive viewing experience possible. With our commitment to quality, we aim to recreate the magic of the cinema right in your living room.</p>
+  <p>And when we say quality, we mean it. Every movie is streamed in crystal-clear HD, delivering a truly immersive viewing experience. Our goal is to bring the magic of the big screen right into your living room.</p>
 
-  <p>At Dashflix, we are mindful of the immense effort and talent behind each film. As a policy, we do not host videos on our server. Instead, we embed videos from various reputable and legal sources. This means we're respecting and supporting filmmakers and copyright holders. When you choose to watch a film on Dashflix, you're not only getting to enjoy fantastic content, but also contributing towards the film industry.</p>
+  <p>Dashflix is committed to supporting filmmakers and the art of cinema. We do not host videos directly but embed content from trusted, legal sources. By choosing Dashflix, you’re not only enjoying top-tier entertainment, but also supporting the creators and artists behind each film.</p>
 
-  <p>Our dedicated team at Dashflix is always working to enhance your movie-watching experience. We regularly update our database to include the latest releases as well as undiscovered classics. Whether you fancy an adrenaline-pumping action thriller, a laugh-out-loud comedy, an engrossing drama, or a thought-provoking sci-fi, we've got you sorted.</p>
+  <p>Our team is dedicated to constantly enhancing your movie-watching experience. From fresh new releases to hidden gems you might have missed, we keep our library updated regularly. So whether you’re craving heart-racing action, side-splitting comedy, captivating drama, or mind-bending sci-fi, Dashflix is your one-stop shop for all things cinema.</p>
 
-  <p>So, sit back, relax, and let us bring the magic of cinema to you. Thank you for choosing Dashflix—your gateway to a world of cinematic wonders.</p>
+  <p>Thank you for choosing Dashflix. Sit back, relax, and let us transport you into a world of cinematic wonders.</p>
 
-  <p>If you have any queries, suggestions, or comments, please don't hesitate to <a href="contact.html" style="color: white; text-decoration: underline;">contact us</a>.</p>
+  <p>If you have any questions, suggestions, or just want to say hi, feel free to <a href="contact.html" style="color: white; text-decoration: underline;">contact us</a>. We’d love to hear from you!</p>
 
 </div>
 
@@ -108,7 +108,7 @@
               <a href="https://dashflix.top/tvplus">
                 <i class="fas fa-broadcast-tower"></i> Live TV
               </a>
-              <a href="#" class="nav-item" onclick="checkPassword(event)">
+              <a href="#" class="nav-item" onclick="showPasswordModal(event)">
           🔒 18+
               </a>
               <a href="https://dashflix.top/appdown">
@@ -132,18 +132,34 @@
             });
           </script>
 
-          <script>
-            function checkPassword(event) {
-              event.preventDefault(); // Prevent the default anchor behavior
-              const password = prompt("Warning: This page contains adult content. Please enter 'GOBILAM' to proceed:");
+          <div class="modal" id="passwordModal">
+              <div class="modal-content">
+                  <h2>Warning: This page contains adult content.</h2>
+                  <p>Please enter GOBILAM to proceed:</p>
+                  <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
+                  <button onclick="checkPassword()">Submit</button>
+                  <button onclick="closeModal()">Cancel</button>
+              </div>
+          </div>
 
-              // Check if the entered password is correct
-              if (password === "GOBILAM") {
-                window.location.href = "adult.html"; // Redirect to the login page
-              } else {
-                alert("Incorrect password. Access denied."); // Show alert for incorrect password
+          <script>
+              function showPasswordModal(event) {
+                  event.preventDefault(); // Prevent the default link behavior
+                  document.getElementById('passwordModal').style.display = 'block'; // Show the modal
               }
-            }
+
+              function closeModal() {
+                  document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
+              }
+
+              function checkPassword() {
+                  const password = document.getElementById('passwordInput').value;
+                  if (password === "GOBILAM") {
+                      window.location.href = "adult.html"; // Redirect to the adult content page
+                  } else {
+                      alert("Incorrect password. Access denied."); // Alert for incorrect password
+                  }
+              }
           </script>
           <script src="script.js"></script>
 </body>

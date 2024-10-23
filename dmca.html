@@ -104,7 +104,7 @@
               <a href="https://dashflix.top/tvplus">
                 <i class="fas fa-broadcast-tower"></i> Live TV
               </a>
-              <a href="#" class="nav-item" onclick="checkPassword(event)">
+              <a href="#" class="nav-item" onclick="showPasswordModal(event)">
           🔒 18+
               </a>
               <a href="https://dashflix.top/appdown">
@@ -128,18 +128,34 @@
             });
           </script>
 
-          <script>
-            function checkPassword(event) {
-              event.preventDefault(); // Prevent the default anchor behavior
-              const password = prompt("Warning: This page contains adult content. Please enter 'GOBILAM' to proceed:");
+          <div class="modal" id="passwordModal">
+              <div class="modal-content">
+                  <h2>Warning: This page contains adult content.</h2>
+                  <p>Please enter GOBILAM to proceed:</p>
+                  <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
+                  <button onclick="checkPassword()">Submit</button>
+                  <button onclick="closeModal()">Cancel</button>
+              </div>
+          </div>
 
-              // Check if the entered password is correct
-              if (password === "GOBILAM") {
-                window.location.href = "adult.html"; // Redirect to the login page
-              } else {
-                alert("Incorrect password. Access denied."); // Show alert for incorrect password
+          <script>
+              function showPasswordModal(event) {
+                  event.preventDefault(); // Prevent the default link behavior
+                  document.getElementById('passwordModal').style.display = 'block'; // Show the modal
               }
-            }
+
+              function closeModal() {
+                  document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
+              }
+
+              function checkPassword() {
+                  const password = document.getElementById('passwordInput').value;
+                  if (password === "GOBILAM") {
+                      window.location.href = "adult.html"; // Redirect to the adult content page
+                  } else {
+                      alert("Incorrect password. Access denied."); // Alert for incorrect password
+                  }
+              }
           </script>
 <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
 <script src="script.js"></script>
