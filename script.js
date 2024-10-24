@@ -139,7 +139,7 @@ function createSnowflakes(num) {
       snowflake.style.height = size; // Set the snowflake height
 
       // Reduce fall speed (increase duration)
-      const duration = Math.random() * 5 + 5 + 's'; // Random fall speed between 5s and 10s
+      const duration = Math.random() * 7 + 7 + 's'; // Random fall speed between 5s and 10s
       snowflake.style.animationDuration = duration; // Set fall duration
 
       // Adjust animation duration for horizontal wind effect
@@ -152,11 +152,11 @@ function createSnowflakes(num) {
       snowflake.addEventListener('animationend', () => {
         snowflake.remove();
       });
-    }, i * 300); // Staggered start (300ms delay per snowflake)
+    }, i * 400); // Staggered start (300ms delay per snowflake)
   }
 }
 
 // Wait for the page to load before creating snowflakes
 window.addEventListener('load', () => {
-  createSnowflakes(30); // Create 30 snowflakes
+  createSnowflakes(22); // Create 30 snowflakes
 });
