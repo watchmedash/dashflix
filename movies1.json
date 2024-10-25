@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Baligtaran",
+          "link": "https://emirati.top/movies/Baligtaran",
+          "image": "https://image.tmdb.org/t/p/original/cls7f70sZWtKnlKZazOdJE5Ny3y.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "Transformers One",
           "link": "https://emirati.top/movies/Transformers One",
           "image": "https://image.tmdb.org/t/p/original/qbkAqmmEIZfrCO8ZQAuIuVMlWoV.jpg",
@@ -50,6 +62,54 @@
           "genres": [
               "Horror",
               "Thriller"
+          ]
+      },
+      {
+          "title": "Look Back",
+          "link": "https://emirati.top/movies/Look Back",
+          "image": "https://image.tmdb.org/t/p/original/AgBNLcHFEXCRFZuKv0H8RWMxNAJ.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Under Parallel Skies",
+          "link": "https://emirati.top/movies/Under Parallel Skies",
+          "image": "https://image.tmdb.org/t/p/original/7XOwbJSM36zWGGaJCJgj0SytvkE.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Romance",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Myka Fox My Joke My Choice",
+          "link": "https://emirati.top/movies/Myka Fox My Joke My Choice",
+          "image": "https://image.tmdb.org/t/p/original/4EROb7S3TvyK60l5AXxdnMA27BN.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Canary Black",
+          "link": "https://emirati.top/movies/Canary Black",
+          "image": "https://image.tmdb.org/t/p/original/hhiR6uUbTYYvKoACkdAIQPS5c6f.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Thriller",
+              "Crime"
           ]
       },
       {
