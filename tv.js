@@ -165,6 +165,18 @@ function addPlayButtonListeners() {
     });
 }
 
+// Function to sort shows alphabetically
+function sortShowsAlphabetically() {
+    const sortedShows = [...t].sort((a, b) => a.title.localeCompare(b.title));
+    displayShows(sortedShows);
+}
+
+// Function to sort shows by starting letter
+function sortShowsByStartingLetter(letter) {
+    const filteredShows = t.filter(show => show.title.startsWith(letter));
+    displayShows(filteredShows);
+}
+
 // Event listener for season selection
 document.getElementById("season-select").addEventListener("change", async (event) => {
     currentSeason = event.target.value;
@@ -196,6 +208,8 @@ document.getElementById("episode-select").addEventListener("change", (event) => 
 // Event listener for search input
 const searchBox = document.querySelector("#search-box");
 const clearSearchButton = document.querySelector("#clear-search");
+const sortAlphabeticallyButton = document.querySelector("#sort-alphabetically");
+const sortByLetterButton = document.querySelector("#sort-by-letter");
 
 searchBox.addEventListener("input", async () => {
     const query = searchBox.value.toLowerCase();
@@ -211,6 +225,15 @@ clearSearchButton.addEventListener("click", () => {
     searchBox.value = "";
     clearSearchButton.style.display = "none";
     displayShows(t);
+});
+
+// Sort shows when the button is clicked
+sortAlphabeticallyButton.addEventListener("click", sortShowsAlphabetically);
+
+// Sort shows by letter (you can change this to handle user input)
+sortByLetterButton.addEventListener("change", (event) => {
+    const selectedLetter = event.target.value.toUpperCase();
+    sortShowsByStartingLetter(selectedLetter);
 });
 
 // Initialize show loading and setup event listeners
