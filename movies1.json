@@ -1,6 +1,31 @@
 {
     "movies": [
       {
+          "title": "Dont Move",
+          "link": "https://emirati.top/movies/Dont Move",
+          "image": "https://image.tmdb.org/t/p/original/cRDJxdnRb7ikKd6fVJTrGeaL34v.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Venom The Last Dance",
+          "link": "https://emirati.top/movies/Venom The Last Dance",
+          "image": "https://image.tmdb.org/t/p/original/k42Owka8v91trK1qMYwCQCNwJKr.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Science Fiction",
+              "Adventure"
+          ]
+      },
+      {
           "title": "Baligtaran",
           "link": "https://emirati.top/movies/Baligtaran",
           "image": "https://image.tmdb.org/t/p/original/cls7f70sZWtKnlKZazOdJE5Ny3y.jpg",
@@ -50,6 +75,18 @@
           "genres": [
               "Drama",
               "Romance"
+          ]
+      },
+      {
+          "title": "Outside",
+          "link": "https://emirati.top/movies/Outside",
+          "image": "https://image.tmdb.org/t/p/original/sIdczpaO0XXBe6OEIL8NbWMqQrO.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
           ]
       },
       {
