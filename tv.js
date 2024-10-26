@@ -171,11 +171,20 @@ function sortShowsAlphabetically() {
     displayShows(sortedShows);
 }
 
-// Function to sort shows by starting letter
+// Function to sort shows by starting letter and then alphabetically
 function sortShowsByStartingLetter(letter) {
-    const filteredShows = t.filter(show => show.title.startsWith(letter));
-    displayShows(filteredShows);
+    if (letter) {
+        // Filter shows that start with the specified letter (case insensitive)
+        const filteredShows = t.filter(show => show.title.toUpperCase().startsWith(letter));
+        // Sort the filtered shows alphabetically
+        const sortedShows = filteredShows.sort((a, b) => a.title.localeCompare(b.title));
+        displayShows(sortedShows); // Display the sorted filtered shows
+    } else {
+        // If no letter is selected, display all shows
+        displayShows(t);
+    }
 }
+
 
 // Event listener for season selection
 document.getElementById("season-select").addEventListener("change", async (event) => {
