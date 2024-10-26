@@ -1,4 +1,4 @@
-let e = 1; // Page number for loading more shows
+let e = 1; // Page number for loading more shows from TMDB
 let t = []; // Array to hold TV show data
 const n = "4f599baa15d072c9de346b2816a131b8"; // TMDB API key
 let currentSource = "vidsrc"; // Default video source set to vidsrc
@@ -13,9 +13,7 @@ let tmdbIds = [];
 
 // Variable to store loaded shows and their titles for search
 let loadedShows = []; // This will help in managing the search results
-
 let loadedShowCount = 0; // Track the number of currently loaded shows
-const SHOWS_PER_LOAD = 32; // Number of shows to load each time
 
 async function loadTmdbIds() {
     const response = await fetch('tmdb_ids.json');
@@ -23,19 +21,17 @@ async function loadTmdbIds() {
     tmdbIds = data.ids; // Assign the TMDB IDs from JSON file
 }
 
-async function loadShows() {
-    const showsToLoad = Math.min(SHOWS_PER_LOAD, tmdbIds.length - loadedShowCount);
-    console.log(`Loading ${showsToLoad} shows...`);
-    if (showsToLoad <= 0) return; // No more shows to load
+async function loadShows(ids) {
+    const spinnet = document.getElementById("spinnet");
+    spinnet.style.display = "block"; // Show the spinner
 
-    for (let i = loadedShowCount; i < loadedShowCount + showsToLoad; i++) {
-        const id = tmdbIds[i];
+    for (let i = loadedShowCount; i < ids.length; i++) {
+        const id = ids[i];
         const url = `https://api.themoviedb.org/3/tv/${id}?api_key=${n}`;
         try {
             const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
             const e = await response.json();
             if (e) {
                 const show = {
@@ -46,17 +42,22 @@ async function loadShows() {
                     releaseYear: e.first_air_date.split("-")[0],
                     id: e.id
                 };
-                t.push(show); // Add the show to the array
-                loadedShows.push(show.title.toLowerCase()); // Store titles for search
-                console.log(`Loaded show: ${show.title}`); // Log loaded show
+                t.push(show);
+                loadedShows.push(show.title.toLowerCase());
             }
         } catch (error) {
             console.error(`Error loading show with ID ${id}:`, error.message);
         }
     }
 
-    loadedShowCount += showsToLoad; // Update the count of loaded shows
-    displayShows(t.slice(loadedShowCount - showsToLoad, loadedShowCount)); // Display newly loaded shows
+    loadedShowCount = ids.length; // Update the count to total shows loaded
+    displayShows(t); // Display all loaded shows
+    spinnet.style.display = "none"; // Hide the spinner after shows are loaded
+}
+
+async function searchTmdbShows(query) {
+    const filteredShows = t.filter(show => show.title.toLowerCase().includes(query.toLowerCase()));
+    displayShows(filteredShows); // Display the filtered shows
 }
 
 function getVideoUrl(showId, season, episode) {
@@ -98,13 +99,11 @@ async function fetchEpisodes(showId, season) {
         const episodeSelect = document.getElementById("episode-select");
         episodeSelect.innerHTML = ""; // Clear existing options
 
-        // Filter episodes to show only those that have aired
         const airedEpisodes = data.episodes.filter(episode => {
             const airDate = new Date(episode.air_date);
             return airDate <= new Date(); // Only include episodes that have aired
         });
 
-        // Populate the dropdown with aired episodes
         airedEpisodes.forEach(episode => {
             const episodeNumber = episode.episode_number;
             const option = document.createElement("option");
@@ -113,54 +112,42 @@ async function fetchEpisodes(showId, season) {
             episodeSelect.appendChild(option);
         });
 
-        episodeSelect.disabled = airedEpisodes.length === 0; // Disable if no aired episodes
-        episodeSelect.value = airedEpisodes.length > 0 ? airedEpisodes[0].episode_number : ""; // Set to first aired episode if available
+        episodeSelect.disabled = airedEpisodes.length === 0;
+        episodeSelect.value = airedEpisodes.length > 0 ? airedEpisodes[0].episode_number : "";
     } catch (error) {
         console.error("Error fetching episodes:", error);
     }
 }
 
 function displayShows(shows) {
-    console.log(`Displaying ${shows.length} shows...`); // Add this line
+    console.log(`Displaying ${shows.length} shows...`);
     const channelList = document.querySelector(".channel-list");
-    if (loadedShowCount === 0) {
-        channelList.innerHTML = ""; // Clear existing shows on initial load
-    }
+    channelList.innerHTML = ""; // Clear previous shows
 
     shows.forEach(e => {
         const showHTML = `<li class="channel">
             <div class="handle">☰</div>
-            <button class="play-channel" title="${e.title}" data-id="${e.id}">
-                <div class="thumbnail-wrapper">
-                    <img class="channel-poster" src="${e.image}" loading="lazy">
-                    <div class="play-icon">▶</div>
-                </div>
-            </button>
-            <div class="channel-info">
+            <div class="play-channel" title="${e.title}" data-id="${e.id}">
                 <div class="channel-title" data-id="${e.id}">${e.title}</div>
-                <div class="channel-plot">${e.plot.substring(0, 100)}...</div>
-                <div class="channel-release-year">${e.releaseYear}</div>
             </div>
         </li>`;
-        channelList.insertAdjacentHTML("beforeend", showHTML); // Append new shows
+        channelList.insertAdjacentHTML("beforeend", showHTML);
     });
 
-    addPlayButtonListeners(); // Add listeners to play buttons
+    addPlayButtonListeners();
 }
 
 function playShow(show) {
-    const url = getVideoUrl(show.id, currentSeason, currentEpisode);
+    const url = getVideoUrl(show.id, currentSeason, currentEpisode); // Use currentSeason and currentEpisode
     const player = document.querySelector("#player");
     const channelPlaying = document.querySelector("#channel-playing");
     const showPlot = document.querySelector("#tv-show-plot");
 
-    player.src = url; // Set the player URL
-    channelPlaying.textContent = show.title; // Update the title
-    showPlot.textContent = show.plot; // Update the plot
-    player.scrollIntoView({ behavior: "smooth" });
-    currentShowId = show.id;
-
-    fetchSeasonAndEpisodeCount(show.id); // Fetch season and episode count for the selected show
+    player.src = url; // Set the player source to the new URL
+    channelPlaying.textContent = show.title; // Display the show title
+    showPlot.textContent = show.plot; // Display the show plot
+    player.scrollIntoView({ behavior: "smooth" }); // Scroll to player
+    currentShowId = show.id; // Update current show ID
 }
 
 function addPlayButtonListeners() {
@@ -181,55 +168,57 @@ function addPlayButtonListeners() {
 // Event listener for season selection
 document.getElementById("season-select").addEventListener("change", async (event) => {
     currentSeason = event.target.value;
-    await fetchEpisodes(currentShowId, currentSeason);
+    await fetchEpisodes(currentShowId, currentSeason); // Fetch episodes for the newly selected season
+
+    // Automatically play the first episode of the new season (optional)
+    const episodeSelect = document.getElementById("episode-select");
+    if (episodeSelect.options.length > 0) {
+        episodeSelect.value = episodeSelect.options[0].value; // Set to the first episode
+        currentEpisode = episodeSelect.value; // Update the currentEpisode
+        const show = t.find(m => m.id == currentShowId);
+        if (show) {
+            playShow(show); // Play the show with the updated season and episode
+        }
+    }
 });
 
 // Event listener for episode selection
 document.getElementById("episode-select").addEventListener("change", (event) => {
-    currentEpisode = event.target.value;
+    currentEpisode = event.target.value; // Update the currentEpisode
     if (currentShowId) {
         const show = t.find(m => m.id == currentShowId);
         if (show) {
-            playShow(show);
+            playShow(show); // Play the show with the updated currentSeason and currentEpisode
         }
     }
+});
+
+// Event listener for search input
+const searchBox = document.querySelector("#search-box");
+const clearSearchButton = document.querySelector("#clear-search");
+
+searchBox.addEventListener("input", async () => {
+    const query = searchBox.value.toLowerCase();
+    if (query.length >= 3) {
+        await searchTmdbShows(query); // Fetch shows matching the query
+    } else {
+        displayShows(t); // Show all shows again if the query is too short
+    }
+    clearSearchButton.style.display = query ? "inline" : "none";
+});
+
+clearSearchButton.addEventListener("click", () => {
+    searchBox.value = "";
+    clearSearchButton.style.display = "none";
+    displayShows(t);
 });
 
 // Initialize show loading and setup event listeners
 (async function() {
     try {
-        await loadTmdbIds(); // Load TMDB IDs from JSON file
-        await loadShows(); // Load initial shows
-
-        const loadMoreButton = document.querySelector("#load-more");
-        loadMoreButton && loadMoreButton.addEventListener("click", async (event) => {
-            event.preventDefault(); // Prevent default behavior
-            await loadShows(); // Load more shows on button click
-        });
-
-        const searchBox = document.querySelector("#search-box");
-        const clearSearchButton = document.querySelector("#clear-search");
-
-        // Event listener for video source selection
-        document.getElementById("video-source").addEventListener("change", (event) => {
-            currentSource = event.target.value; // Update current video source
-        });
-
-        // Search functionality
-        searchBox.addEventListener("input", () => {
-            const query = searchBox.value.trim();
-            clearSearchButton.style.display = query ? "block" : "none"; // Show clear button if there is input
-            const filteredShows = t.filter(show => show.title.toLowerCase().includes(query.toLowerCase())); // Search through loaded shows
-            displayShows(filteredShows); // Update display with filtered shows
-        });
-
-        // Clear search functionality
-        clearSearchButton && clearSearchButton.addEventListener("click", () => {
-            searchBox.value = ""; // Clear the input field
-            clearSearchButton.style.display = "none"; // Hide clear button
-            displayShows(t); // Show all shows
-        });
+        await loadTmdbIds();
+        await loadShows(tmdbIds); // Load all shows without limits
     } catch (error) {
-        console.error("Error initializing application:", error);
+        console.error("Error initializing show loader:", error);
     }
 })();
