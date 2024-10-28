@@ -1,0 +1,125 @@
+.tedda {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin: 0; /* Remove margins */
+}
+
+.tedda > * {
+    max-width: 100%; /* Prevent child elements from overflowing */
+    flex-shrink: 1; /* Allow child elements to shrink if necessary */
+}
+
+
+/* Body styling */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+}
+
+/* Input, select, and button styling */
+input, select, button {
+    background-color: #1f1f1f; /* Darker background for inputs */
+    color: #ffffff; /* Light text for inputs */
+    border: 1px solid #444444; /* Border color */
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+    width: 350px; /* Set a width for consistency */
+}
+
+input:focus, select:focus, button:focus {
+    outline: none; /* Remove default outline */
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Unordered list styling */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Full width for the list */
+}
+
+/* List item styling */
+li {
+    margin: 10px 0;
+    background-color: #1f1f1f; /* Background color for list items */
+    border: 1px solid #444444; /* Border color for list items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside each item */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between title and link */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+li:hover {
+    background-color: #2a2a2a; /* Darker background on hover */
+    transform: scale(1.02); /* Scale effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+/* Link styling */
+a {
+    color: #cccccc; /* Gray color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Pagination container styling */
+#pagination {
+    margin-top: 20px;
+    display: flex; /* Use flexbox to align pagination buttons */
+    justify-content: center; /* Center pagination buttons */
+    width: 100%; /* Ensure it takes full width for centering */
+}
+
+/* Pagination button styling */
+button {
+    background-color: #444444; /* Change to dark gray for buttons */
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 5px; /* Space between buttons */
+    padding: 8px 12px; /* Add padding for height and width */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    width: auto; /* Allow the button to adjust to its content */
+    min-width: 40px; /* Set a minimum width for consistency */
+}
+
+button:hover {
+    background-color: #555555; /* Slightly lighter gray on hover */
+}
+
+/* Active page button styling */
+button.active {
+    background-color: #007bff; /* Highlight active button in blue */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Dropdown (select) styles */
+select {
+    background-color: #1f1f1f; /* Match the dark theme */
+    color: #ffffff; /* Light text color */
+    border: 1px solid #444444; /* Dark border color */
+    padding: 10px;
+    border-radius: 4px;
+    width: 200px; /* Set the same width as inputs */
+}
+
+select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+}

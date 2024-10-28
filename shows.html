@@ -27,15 +27,12 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>TV Shows - Watch Free TV Series Online</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="tv.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
+  <link rel="stylesheet" href="tt.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
 </head>
 <body oncontextmenu="return false;">
-  <div class="terra">
+  <div class="tedda">
     <script type="text/javascript">
       atOptions = {
         'key': '29a679982b44db55fa95b90dfb3fac2f',
@@ -47,39 +44,7 @@
     </script>
     <script type="text/javascript" src="//perilastronaut.com/29a679982b44db55fa95b90dfb3fac2f/invoke.js"></script>
   </div>
-
-  <main class="channel-layout">
-    <div class="player-wrapper">
-      <p>Dear app users, you can also visit <a href="https://dashflix.top" target="_blank">dashflix.top</a> using any browser.</p>
-      <p>Important Notice: If you encounter an error when entering full screen mode, simply exit and then re-enter full screen to resolve the issue.</p>
-      <div class="sticky">
-        <div class="video-wrapper">
-          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="season-episode-selector">
-    <label for="season-select">Season:</label>
-    <select id="season-select">
-        <option value="">Select Season</option>
-        <!-- Options will be populated dynamically -->
-    </select>
-
-    <label for="episode-select">Episode:</label>
-    <select id="episode-select" disabled>
-        <option value="">Select Episode</option>
-        <!-- Options will be populated dynamically -->
-    </select>
-</div>
-
-        <div class="label">Now Playing</div>
-        <h2 id="channel-playing"></h2>
-        <div id="tv-show-plot" style="margin-top: 10px; font-size: 14px;"></div>
-      </div>
-    </div>
-<div id="spinnet" class="spinnet" style="display: none;"></div>
-    <div class="channel-list-wrapper">
-      <input type="text" id="search-box" placeholder="Search shows..." />
-          <button id="clear-search">Clear Search</button>
-      <div class="terra">
+<div class="tedda">
         <script type="text/javascript">
           atOptions = {
             'key': '31659dfd382d23627d3b20f3dae9ec68',
@@ -90,44 +55,12 @@
           };
         </script>
         <script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script>
-      </div>
-      <div>
-          <button id="sort-alphabetically">Sort Alphabetically</button>
-          <select id="sort-by-letter">
-              <option value="">All Shows</option>
-              <option value="A">A</option>
-              <option value="B">B</option>
-              <option value="C">C</option>
-              <option value="D">D</option>
-              <option value="E">E</option>
-              <option value="F">F</option>
-              <option value="G">G</option>
-              <option value="H">H</option>
-              <option value="I">I</option>
-              <option value="J">J</option>
-              <option value="K">K</option>
-              <option value="L">L</option>
-              <option value="M">M</option>
-              <option value="N">N</option>
-              <option value="O">O</option>
-              <option value="P">P</option>
-              <option value="Q">Q</option>
-              <option value="R">R</option>
-              <option value="S">S</option>
-              <option value="T">T</option>
-              <option value="U">U</option>
-              <option value="V">V</option>
-              <option value="W">W</option>
-              <option value="X">X</option>
-              <option value="Y">Y</option>
-              <option value="Z">Z</option>
-          </select>
-      </div>
-      <div class="sharethis-inline-share-buttons"></div>
-      <ul class="channel-list"></ul>
-    </div>
-  </main>
-  <div class="terra">
+</div>
+      <input type="text" id="searchInput" placeholder="Search titles..." />
+      <select id="sortOptions"></select>
+      <ul id="titleList"></ul>
+      <div id="pagination"></div>
+  <div class="tedda">
     <script async="async" data-cfasync="false" src="//perilastronaut.com/d484cbb1a159c0b78e6b95df88af59b9/invoke.js"></script>
     <div id="container-d484cbb1a159c0b78e6b95df88af59b9"></div>
   </div>
@@ -238,7 +171,7 @@
           }
       }
   </script>
-
+<script src="tt.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
