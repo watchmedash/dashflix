@@ -1,19 +1,6 @@
 {
     "movies": [
       {
-          "title": "Red One",
-          "link": "https://emirati.top/movies/Red One",
-          "image": "https://image.tmdb.org/t/p/original/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Action",
-              "Fantasy"
-          ]
-      },
-      {
           "title": "Dont Move",
           "link": "https://emirati.top/movies/Dont Move",
           "image": "https://image.tmdb.org/t/p/original/cRDJxdnRb7ikKd6fVJTrGeaL34v.jpg",
