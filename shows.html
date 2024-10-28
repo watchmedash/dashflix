@@ -58,6 +58,7 @@
 </div>
       <input type="text" id="searchInput" placeholder="Search titles..." />
       <select id="sortOptions"></select>
+      <div class="sharethis-inline-share-buttons"></div>
       <ul id="titleList"></ul>
       <div id="pagination"></div>
   <div class="tedda">
@@ -65,26 +66,6 @@
     <div id="container-d484cbb1a159c0b78e6b95df88af59b9"></div>
   </div>
 
-  <div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
-
-  <script>
-    const goToTopButton = document.getElementById('go-to-top-button');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        goToTopButton.style.display = 'block';
-      } else {
-        goToTopButton.style.display = 'none';
-      }
-    });
-
-    goToTopButton.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="tv.js"></script>
   <nav class="bottom-nav">
     <a href="https://dashflix.top" class="nav-item">
       <i class="fas fa-home"></i> Home
