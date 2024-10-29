@@ -1,6 +1,19 @@
 {
     "movies": [
       {
+          "title": "Joker Folie \u00e0 Deux",
+          "link": "https://emirati.top/movies/Joker Folie \u00e0 Deux",
+          "image": "https://image.tmdb.org/t/p/original/aciP8Km0waTLXEYf5ybFK5CSUxl.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Dont Move",
           "link": "https://emirati.top/movies/Dont Move",
           "image": "https://image.tmdb.org/t/p/original/cRDJxdnRb7ikKd6fVJTrGeaL34v.jpg",
