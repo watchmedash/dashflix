@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Refresh and Link Loop</title>
+
+  <!-- Load Fonts and Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      align-items: center;
+      justify-content: center;
+      animation: zoomIn 0.5s ease forwards;
+    }
+    .modal-content {
+      background-color: #212121;
+      padding: 1em;
+      width: 90%;
+      max-width: 1200px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      text-align: center;
+      position: relative;
+      color: #e0e0e0;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5em;
+      color: #00e5ff;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #00e5ff;
+    }
+    .modal-header .close {
+      cursor: pointer;
+      font-size: 1.8em;
+      color: #00e5ff;
+      transition: color 0.3s;
+    }
+    .modal-header .close:hover {
+      color: #66ffff;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1em;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    .arrow-btn, .go-btn {
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #ffffff;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      transition: all 0.3s;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .arrow-btn:hover, .go-btn:hover {
+      background-color: #00e5ff;
+      color: #1a1a1a;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+    }
+    .fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3em;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      gap: 10px;
+      flex-direction: column;
+      text-align: center;
+    }
+    .show-modal-btn {
+      cursor: pointer;
+      font-size: 1.3em;
+      color: #ffffff;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .show-modal-btn:hover {
+      background-color: #00e5ff;
+      color: #1a1a1a;
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
+    }
+    /* Modal open animation */
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <script>
+    let links = [
+      'https://freedomwall.top/',
+      'https://dashflix.xyz/',
+      'https://dash-tv.com/',
+      'https://nextflix.top/',
+      'https://dashtoons.xyz/'
+    ];
+    let currentIndex = 0;
+    let autoNavigateInterval;
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+    function refreshPage(interval = 250000) {
+      setInterval(() => {
+        location.reload();
+      }, interval);
+    }
+    function showLink(index) {
+      const iframe = document.getElementById('modalIframe');
+      const modal = document.getElementById('myModal');
+      iframe.src = links[index];
+      modal.style.display = 'flex';
+      document.getElementById('fallback').style.display = 'none';
+
+      clearInterval(autoNavigateInterval);
+      autoNavigateInterval = setInterval(() => {
+        navigate(1);
+      }, Math.floor(Math.random() * (30000 - 20000 + 1) + 20000));
+    }
+    function navigate(direction) {
+      currentIndex = (currentIndex + direction + links.length) % links.length;
+      showLink(currentIndex);
+    }
+    function goToSite() {
+      window.open(links[currentIndex], '_blank');
+    }
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+      document.getElementById('modalIframe').src = '';
+      document.getElementById('fallback').style.display = 'flex';
+      clearInterval(autoNavigateInterval);
+    }
+    function reopenModal() {
+      showLink(currentIndex);
+    }
+    window.onload = function () {
+      shuffleArray(links);
+      refreshPage();
+      showLink(currentIndex);
+    };
+  </script>
+</head>
+
+<body>
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span>Explore Sites</span>
+        <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+      </div>
+      <iframe id="modalIframe" src=""></iframe>
+      <div class="nav-buttons">
+        <button class="arrow-btn" onclick="navigate(-1)"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="go-btn" onclick="goToSite()"><i class="fas fa-external-link-alt"></i> Visit Site</button>
+        <button class="arrow-btn" onclick="navigate(1)">Next <i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fallback content with button to reopen modal -->
+  <div class="fallback" id="fallback">
+    <p>The journey awaits. Click below to explore the next destination!</p>
+    <button class="show-modal-btn" onclick="reopenModal()"><i class="fas fa-eye"></i> Enter Portal</button>
+  </div>
+</body>
+
+</html>
