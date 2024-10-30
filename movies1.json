@@ -1,8 +1,8 @@
 {
     "movies": [
       {
-          "title": "Joker Folie \u00e0 Deux",
-          "link": "https://emirati.top/movies/Joker Folie \u00e0 Deux",
+          "title": "Joker Folie a Deux",
+          "link": "https://emirati.top/movies/Joker Folie a Deux",
           "image": "https://image.tmdb.org/t/p/original/aciP8Km0waTLXEYf5ybFK5CSUxl.jpg",
           "tag": "HD",
           "requested": true,
@@ -11,6 +11,19 @@
               "Drama",
               "Crime",
               "Thriller"
+          ]
+      },
+      {
+          "title": "Piece by Piece",
+          "link": "https://emirati.top/movies/Piece by Piece",
+          "image": "https://image.tmdb.org/t/p/original/9xSjP8B0iZHRzvrtKcYDkaalomS.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Music",
+              "Documentary"
           ]
       },
       {
