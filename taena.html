@@ -5,17 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Auto Refresh and Link Loop</title>
-
-  <!-- Load Fonts and Font Awesome Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Orbitron', sans-serif;
       background-color: #1a1a1a;
@@ -25,7 +23,14 @@
       justify-content: center;
       height: 100vh;
       overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
     }
+
+    .light-theme {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -39,17 +44,25 @@
       justify-content: center;
       animation: zoomIn 0.5s ease forwards;
     }
+
     .modal-content {
       background-color: #212121;
       padding: 1em;
       width: 90%;
       max-width: 1200px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
       text-align: center;
       position: relative;
       color: #e0e0e0;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     }
+
+    .light-theme .modal-content {
+      background-color: #ffffff;
+      color: #333;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
     .modal-header {
       display: flex;
       justify-content: space-between;
@@ -59,15 +72,17 @@
       padding-bottom: 10px;
       border-bottom: 2px solid #00e5ff;
     }
+
     .modal-header .close {
       cursor: pointer;
       font-size: 1.8em;
       color: #00e5ff;
-      transition: color 0.3s;
     }
+
     .modal-header .close:hover {
       color: #66ffff;
     }
+
     iframe {
       width: 100%;
       height: 500px;
@@ -76,31 +91,91 @@
       margin-top: 1em;
       box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
     }
+
+    .spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #00e5ff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 0.8s linear infinite;
+      margin: 20px auto;
+      display: none;
+    }
+
+    .light-theme .spinner {
+      border-top: 4px solid #333;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     .nav-buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 15px;
       gap: 10px;
     }
-    .arrow-btn, .go-btn {
+
+    .arrow-btn,
+    .go-btn {
       cursor: pointer;
+      font-family: 'Orbitron', sans-serif; /* Ensuring consistent font */
       font-size: 1.2em;
       color: #ffffff;
       background-color: #333;
       padding: 10px 20px;
       border-radius: 5px;
       border: none;
-      transition: all 0.3s;
-      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
       display: flex;
       align-items: center;
       gap: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
-    .arrow-btn:hover, .go-btn:hover {
+
+    .light-theme .arrow-btn,
+    .light-theme .go-btn {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    .arrow-btn:hover,
+    .go-btn:hover {
       background-color: #00e5ff;
       color: #1a1a1a;
       box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
     }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+      z-index: 2000;
+    }
+
+    .light-theme .theme-toggle {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
+    .theme-toggle:hover {
+      background-color: #00e5ff;
+      color: #1a1a1a;
+    }
+
     .fallback {
       display: flex;
       align-items: center;
@@ -111,40 +186,44 @@
       padding: 20px;
       gap: 10px;
       flex-direction: column;
-      text-align: center;
     }
+
     .show-modal-btn {
       cursor: pointer;
+      font-family: 'Orbitron', sans-serif; /* Ensuring consistent font */
       font-size: 1.3em;
       color: #ffffff;
       background-color: #333;
       padding: 10px 20px;
       border-radius: 8px;
-      border: none;
-      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
-      transition: all 0.3s;
       display: flex;
       align-items: center;
       gap: 8px;
+      box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
     }
+
+    .light-theme .show-modal-btn {
+      background-color: #e0e0e0;
+      color: #333;
+    }
+
     .show-modal-btn:hover {
       background-color: #00e5ff;
       color: #1a1a1a;
-      box-shadow: 0 0 12px rgba(0, 229, 255, 0.6);
     }
-    /* Modal open animation */
+
     @keyframes zoomIn {
       from {
         transform: scale(0.8);
         opacity: 0;
       }
+
       to {
         transform: scale(1);
         opacity: 1;
       }
     }
   </style>
-
   <script>
     let links = [
       'https://freedomwall.top/',
@@ -162,39 +241,53 @@
         [array[i], array[j]] = [array[j], array[i]];
       }
     }
+
     function refreshPage(interval = 250000) {
       setInterval(() => {
         location.reload();
       }, interval);
     }
+
     function showLink(index) {
       const iframe = document.getElementById('modalIframe');
       const modal = document.getElementById('myModal');
+      const spinner = document.getElementById('spinner');
       iframe.src = links[index];
       modal.style.display = 'flex';
-      document.getElementById('fallback').style.display = 'none';
-
+      spinner.style.display = 'block';
+      iframe.onload = () => {
+        spinner.style.display = 'none';
+      };
       clearInterval(autoNavigateInterval);
       autoNavigateInterval = setInterval(() => {
         navigate(1);
       }, Math.floor(Math.random() * (30000 - 20000 + 1) + 20000));
     }
+
     function navigate(direction) {
       currentIndex = (currentIndex + direction + links.length) % links.length;
       showLink(currentIndex);
     }
+
     function goToSite() {
       window.open(links[currentIndex], '_blank');
     }
+
     function closeModal() {
       document.getElementById('myModal').style.display = 'none';
       document.getElementById('modalIframe').src = '';
       document.getElementById('fallback').style.display = 'flex';
       clearInterval(autoNavigateInterval);
     }
+
     function reopenModal() {
       showLink(currentIndex);
     }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+
     window.onload = function () {
       shuffleArray(links);
       refreshPage();
@@ -204,22 +297,24 @@
 </head>
 
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-sun"></i> Toggle Theme
+  </div>
   <div class="modal" id="myModal">
     <div class="modal-content">
       <div class="modal-header">
         <span>Explore Sites</span>
-        <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+        <span class="close" onclick="closeModal()">×</span>
       </div>
+      <div class="spinner" id="spinner"></div>
       <iframe id="modalIframe" src=""></iframe>
       <div class="nav-buttons">
-        <button class="arrow-btn" onclick="navigate(-1)"><i class="fas fa-arrow-left"></i> Previous</button>
-        <button class="go-btn" onclick="goToSite()"><i class="fas fa-external-link-alt"></i> Visit Site</button>
-        <button class="arrow-btn" onclick="navigate(1)">Next <i class="fas fa-arrow-right"></i></button>
+        <button class="arrow-btn" onclick="navigate(-1)"><i class="fas fa-arrow-circle-left"></i> Back</button>
+        <button class="go-btn" onclick="goToSite()">Venture In <i class="fas fa-door-open"></i></button>
+        <button class="arrow-btn" onclick="navigate(1)">Advance <i class="fas fa-arrow-circle-right"></i></button>
       </div>
     </div>
   </div>
-
-  <!-- Fallback content with button to reopen modal -->
   <div class="fallback" id="fallback">
     <p>The journey awaits. Click below to explore the next destination!</p>
     <button class="show-modal-btn" onclick="reopenModal()"><i class="fas fa-eye"></i> Enter Portal</button>
