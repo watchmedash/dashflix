@@ -1,6 +1,6 @@
 let titles = [];
 let currentPage = 1;
-const titlesPerPage = 20; // Number of titles to display per page
+const titlesPerPage = 30; // Number of titles to display per page
 
 // Function to fetch titles from multiple JSON files
 async function fetchTitles() {
