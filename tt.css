@@ -1,125 +1,152 @@
 .tedda {
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    margin: 0; /* Remove margins */
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 .tedda > * {
-    max-width: 100%; /* Prevent child elements from overflowing */
-    flex-shrink: 1; /* Allow child elements to shrink if necessary */
+    max-width: 100%;
+    flex-shrink: 1;
 }
 
-
-/* Body styling */
 body {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
+    background-color: #121212;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    display: flex; /* Use flexbox to center content */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Input, select, and button styling */
 input, select, button {
-    background-color: #1f1f1f; /* Darker background for inputs */
-    color: #ffffff; /* Light text for inputs */
-    border: 1px solid #444444; /* Border color */
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #444444;
     padding: 10px;
     border-radius: 4px;
     margin: 5px 0;
-    width: 350px; /* Set a width for consistency */
+    width: 350px;
 }
 
 input:focus, select:focus, button:focus {
-    outline: none; /* Remove default outline */
-    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+    border-color: #55b7b3;
 }
 
-/* Unordered list styling */
 ul {
-    list-style-type: none; /* Remove bullet points */
+    list-style-type: none;
     padding: 0;
-    margin: 0; /* Remove default margin */
-    width: 100%; /* Full width for the list */
+    margin: 0;
+    width: 80%;
 }
 
-/* List item styling */
 li {
     margin: 10px 0;
-    background-color: #1f1f1f; /* Background color for list items */
-    border: 1px solid #444444; /* Border color for list items */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding inside each item */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between title and link */
-    align-items: center; /* Center items vertically */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    background-color: #1f1f1f;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 li:hover {
-    background-color: #2a2a2a; /* Darker background on hover */
-    transform: scale(1.02); /* Scale effect on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+    background-color: #333333;
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    animation: shake 0.5s forwards; /* Adding shake animation on hover */
 }
 
-/* Link styling */
+@keyframes shake {
+    0% {
+        transform: scale(1.05) rotate(3deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.05) rotate(3deg);
+    }
+    75% {
+        transform: scale(1.1) rotate(1deg);
+    }
+    100% {
+        transform: scale(1.05) rotate(3deg);
+    }
+}
+
 a {
-    color: #cccccc; /* Gray color for links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text for links */
+    color: #cccccc;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
 
-/* Pagination container styling */
 #pagination {
     margin-top: 20px;
-    display: flex; /* Use flexbox to align pagination buttons */
-    justify-content: center; /* Center pagination buttons */
-    width: 100%; /* Ensure it takes full width for centering */
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-/* Pagination button styling */
 button {
-    background-color: #444444; /* Change to dark gray for buttons */
+    background-color: #444444;
     color: #ffffff;
     cursor: pointer;
-    margin: 0 5px; /* Space between buttons */
-    padding: 8px 12px; /* Add padding for height and width */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Add border radius for rounded corners */
-    width: auto; /* Allow the button to adjust to its content */
-    min-width: 40px; /* Set a minimum width for consistency */
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    width: auto;
+    min-width: 40px;
+    transition: transform 0.2s;
 }
 
 button:hover {
-    background-color: #555555; /* Slightly lighter gray on hover */
+    background-color: #555555;
+    transform: translateY(-3px);
 }
 
-/* Active page button styling */
 button.active {
-    background-color: #007bff; /* Highlight active button in blue */
+    background-color: #55b7b3;
     color: #ffffff;
     font-weight: bold;
 }
 
-/* Dropdown (select) styles */
 select {
-    background-color: #1f1f1f; /* Match the dark theme */
-    color: #ffffff; /* Light text color */
-    border: 1px solid #444444; /* Dark border color */
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #444444;
     padding: 10px;
     border-radius: 4px;
-    width: 200px; /* Set the same width as inputs */
+    width: 200px;
 }
 
 select:focus {
-    border-color: #007bff; /* Blue border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #55b7b3;
+    outline: none;
 }
