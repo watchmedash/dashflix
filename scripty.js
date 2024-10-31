@@ -533,21 +533,23 @@ const channelData = [
 
 const channelList = document.querySelector(".channel-list");
 channelData.forEach((channel) => {
-  const markup = `<li class="channel">
+  const markup = `
+    <li class="channel">
       <div class="handle">☰</div>
       <button class="play-channel" title="${channel.title}" data-m3u8="${channel.url}">
         <img class="channel-poster" src="${channel.image}">
       </button>
       <div class="channel-info">
-        <div class="channel-title">${channel.title}</div>
+        <a href="#" class="channel-title" data-url="${channel.url}">${channel.title}</a>
         <div class="channel-language">${channel.language}</div>
-       </div>
+      </div>
     </li>`;
   channelList.insertAdjacentHTML("beforeend", markup);
 });
 
 const video = document.querySelector("#player");
 const channelPlays = document.querySelectorAll(".play-channel");
+const channelTitles = document.querySelectorAll(".channel-title");
 const channels = document.querySelectorAll(".channel");
 const nowPlayingTitle = document.querySelector("#channel-playing");
 
@@ -555,7 +557,7 @@ function loadStream(channelPlay) {
   channels.forEach((channel) => {
     channel.dataset.playing = "false";
   });
-  const url = channelPlay.dataset.m3u8;
+  const url = channelPlay.dataset.m3u8 || channelPlay.querySelector(".channel-title").dataset.url;
   const parent = channelPlay.closest("li");
   const title = parent.querySelector(".channel-title").textContent;
   parent.dataset.playing = "true";
@@ -566,12 +568,24 @@ function loadStream(channelPlay) {
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
       video.play();
       nowPlayingTitle.textContent = title;
+      // Scroll to the player when a channel is clicked
+      video.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
 }
 
+// Add event listeners for the play buttons
 channelPlays.forEach((channelPlay) => {
   channelPlay.addEventListener("click", (e) => {
+    loadStream(channelPlay);
+  });
+});
+
+// Add event listeners for the titles
+channelTitles.forEach((channelTitle) => {
+  channelTitle.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const channelPlay = channelTitle.closest(".channel").querySelector(".play-channel");
     loadStream(channelPlay);
   });
 });

@@ -1,4 +1,3 @@
-/* Main layout */
 .channel-layout {
   display: flex;
   min-height: 100vh;
@@ -14,6 +13,7 @@
 
 .channel-list-wrapper h1 {
   font-size: 1.75rem;
+  animation: fadeIn 0.5s ease-in; /* Fade-in animation for the header */
 }
 
 .channel {
@@ -25,7 +25,7 @@
   margin: 0.5rem 0;
   padding: 0.5rem;
   border-radius: var(--border-radius);
-  transition: all 250ms;
+  transition: transform 250ms, box-shadow 250ms; /* Transition for transform and shadow */
   border: var(--border-width) solid var(--color-background-card);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
@@ -39,6 +39,12 @@
   cursor: pointer;
   height: 100%;
   background: var(--color-background);
+  transition: background 200ms; /* Transition for background color */
+}
+
+.channel:hover {
+  transform: translateY(-5px) scale(1.02); /* Hover effect to lift the card */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .channel-title {
@@ -55,6 +61,11 @@
   text-align: center;
   opacity: 0.2;
   cursor: ns-resize;
+  transition: opacity 200ms; /* Transition for opacity */
+}
+
+.handle:hover {
+  opacity: 0.5; /* Increase visibility on hover */
 }
 
 .label {
@@ -66,6 +77,11 @@
   background: var(--color-background-intense);
   padding: var(--space-sm);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 250ms; /* Transition for transform */
+}
+
+.player-wrapper:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
 }
 
 .sticky {
@@ -83,21 +99,36 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
+  transition: transform 250ms; /* Transition for video transform */
 }
 
-/* Media query for small screens */
+.video-wrapper:hover video {
+  transform: scale(1.05); /* Slight zoom effect on video hover */
+}
+
 @media (max-width: 768px) {
   .channel-layout {
-    flex-direction: column; /* Stack player above channel list */
+    flex-direction: column;
   }
 
   .player-wrapper {
-    width: 90%; /* Player takes 90% of screen width */
-    margin: 0 auto; /* Center player horizontally */
-    order: -1; /* Move player to the top */
+    width: 90%;
+    margin: 0 auto;
+    order: -1;
   }
 
   .channel-list-wrapper {
-    width: 100%; /* Ensure channel list takes full width */
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
   }
 }
