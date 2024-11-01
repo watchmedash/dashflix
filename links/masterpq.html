@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at top left, rgba(73, 237, 0, 0.3), rgba(0, 0, 0, 0.85));
+      align-items: center;
+      justify-content: center;
+      animation: zoomIn 0.5s ease forwards;
+    }
+
+    .modal-content {
+      background-color: #212121;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      text-align: center;
+      position: relative;
+      color: #e0e0e0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5em;
+      color: #49ed00;
+    }
+
+    .modal-header .close {
+      cursor: pointer;
+      font-size: 1.8em;
+      color: #49ed00;
+      margin-right: 20px;
+    }
+
+    .modal-header .close:hover {
+      color: rgba(73, 237, 0, 0.7);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      margin-top: 0;
+      box-shadow: none;
+    }
+
+    .spinner {
+      border: 4px solid rgba(0, 0, 0, 0.1);
+      border-top: 4px solid #49ed00;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 0.8s linear infinite;
+      margin: 20px auto;
+      display: none;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      gap: 30px;
+    }
+
+    .arrow-btn {
+      cursor: pointer;
+      font-size: 2em;
+      color: #ffffff;
+      background: none;
+      border: none;
+      transition: color 0.3s;
+    }
+
+    .arrow-btn:hover {
+      color: #49ed00;
+    }
+
+    .go-btn {
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3em;
+      color: #ffffff;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 0 8px rgba(73, 237, 0, 0.3);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .go-btn:hover {
+      background-color: #49ed00;
+      color: #1a1a1a;
+    }
+
+    .fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      gap: 10px;
+      flex-direction: column;
+      animation: fadeIn 1s ease forwards;
+      text-shadow: 0 0 5px rgba(73, 237, 0, 0.6), 0 0 10px rgba(73, 237, 0, 0.4), 0 0 15px rgba(73, 237, 0, 0.2);
+      transform: translateY(10px);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .show-modal-btn {
+      cursor: pointer;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5em;
+      color: #ffffff;
+      background-color: transparent;
+      padding: 10px 20px;
+      border: 2px solid #49ed00;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 0 10px rgba(73, 237, 0, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(73, 237, 0, 0.5);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(73, 237, 0, 0.7);
+      }
+    }
+
+    .show-modal-btn:hover {
+      color: #49ed00;
+      background-color: rgba(73, 237, 0, 0.2);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(73, 237, 0, 0.8), 0 0 30px rgba(73, 237, 0, 0.5);
+      border-color: #49ed00;
+    }
+  </style>
+  <script>
+    const referenceCode = 'aHR0cHM6Ly9wZXJpbGFzdHJvbmF1dC5jb20vbmFkbTV2NDF1P2tleT02ZmEzOGYzNTkxYjRjYzZlMTFkNTFlOWM0NjU1ZGZjZQ==';
+
+    let links = [
+      'https://www.profitablecpmrate.com/r5wndvr4?key=a23141290ff3f85d408f6c1f774deb2d', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/k0v4ta53?key=0c3c8192d1911d29a2e04e52a19d2d91', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/su7g82q5?key=066b388cb57b986b8ff27dcc0d9e8990', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/in4ckes1t?key=d04b6d49a64408486035f440e52ed1cd' // Dito ilalagay Direct Link
+    ];
+    let currentIndex = 0;
+    let autoNavigateInterval;
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function decodeBase64(encoded) {
+      return decodeURIComponent(atob(encoded).split('').map(c =>
+        '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    }
+
+    function refreshPage(interval = 250000) {
+      setInterval(() => {
+        location.reload();
+      }, interval);
+    }
+
+    function getCurrentLink() {
+      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+    }
+
+    function showLink(index) {
+      currentIndex = index;
+      const iframe = document.getElementById('modalIframe');
+      const modal = document.getElementById('myModal');
+      const spinner = document.getElementById('spinner');
+      iframe.src = getCurrentLink();
+      modal.style.display = 'flex';
+      spinner.style.display = 'block';
+      iframe.onload = () => {
+        spinner.style.display = 'none';
+      };
+      clearInterval(autoNavigateInterval);
+      autoNavigateInterval = setInterval(() => {
+        navigate(1);
+      }, Math.floor(Math.random() * (30000 - 20000 + 1) + 20000));
+    }
+
+    function navigate(direction) {
+      const totalLinks = links.length + 1;
+      currentIndex = (currentIndex + direction + totalLinks) % totalLinks;
+      showLink(currentIndex);
+    }
+
+    function goToSite() {
+      window.open(getCurrentLink(), '_blank');
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+      document.getElementById('modalIframe').src = '';
+      document.getElementById('fallback').style.display = 'flex';
+      clearInterval(autoNavigateInterval);
+    }
+
+    function reopenModal() {
+      showLink(currentIndex);
+    }
+
+    window.onload = function () {
+      shuffleArray(links);
+      refreshPage();
+      showLink(0);
+    };
+  </script>
+</head>
+
+<body>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="arrow-btn" onclick="navigate(-1)"><i class="fas fa-arrow-left"></i></button>
+        <h2>OMG Link Viewer</h2>
+        <button class="arrow-btn" onclick="navigate(1)"><i class="fas fa-arrow-right"></i></button>
+        <span class="close" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="spinner" id="spinner"></div>
+      <iframe id="modalIframe"></iframe>
+      <div class="nav-buttons">
+        <button class="go-btn" onclick="goToSite()"><i class="fas fa-external-link-alt"></i> Go to Site</button>
+      </div>
+    </div>
+  </div>
+  <div id="fallback" class="fallback">
+    <button class="show-modal-btn" onclick="reopenModal()">View Links</button>
+  </div>
+</body>
+
+</html>
