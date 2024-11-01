@@ -442,6 +442,7 @@
 
   <script>
 
+    
 
 
 
@@ -498,6 +499,11 @@
 
 
 
+    function getCurrentLink() {
+
+      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+
+    }
 
 
 
@@ -537,7 +543,7 @@
 
     function navigate(direction) {
 
-      const totalLinks = links.length;
+      const totalLinks = links.length + 1;
 
       currentIndex = (currentIndex + direction + totalLinks) % totalLinks;
 
@@ -583,7 +589,7 @@
 
       refreshPage();
 
-      showLink(0); document.getElementById('myModal').style.display = 'flex';
+      showLink(0);
 
     };
 

@@ -220,6 +220,7 @@
     }
   </style>
   <script>
+    
 
     let links = [
       'https://www.profitablecpmrate.com/ggcrwqvh?key=e2620f52ad5f84ee54040422d503c7cd', // Dito ilalagay Direct Link
@@ -248,6 +249,9 @@
       }, interval);
     }
 
+    function getCurrentLink() {
+      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+    }
 
     function showLink(index) {
       currentIndex = index;
@@ -267,7 +271,7 @@
     }
 
     function navigate(direction) {
-      const totalLinks = links.length;
+      const totalLinks = links.length + 1;
       currentIndex = (currentIndex + direction + totalLinks) % totalLinks;
       showLink(currentIndex);
     }
@@ -290,7 +294,7 @@
     window.onload = function () {
       shuffleArray(links);
       refreshPage();
-      showLink(0); document.getElementById('myModal').style.display = 'flex';
+      showLink(0);
     };
   </script>
 </head>
