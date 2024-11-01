@@ -1,6 +1,53 @@
 {
     "movies": [
       {
+          "title": "Cellar Door",
+          "link": "https://emirati.top/movies/Cellar Door",
+          "image": "https://image.tmdb.org/t/p/original/rB90k4l1L6G5Ub6Fuhb7viyu6Pj.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Ungol",
+          "link": "https://emirati.top/movies/Ungol",
+          "image": "https://image.tmdb.org/t/p/original/1cYJhi17IELYrqFkfLECKJU80vO.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Kuman Thong",
+          "link": "https://emirati.top/movies/Kuman Thong",
+          "image": "https://image.tmdb.org/t/p/original/zgj6Uh6l8WA7nvXUARrCJ6Vmgcr.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Man and Witch The Dance of a Thousand Steps",
+          "link": "https://emirati.top/movies/Man and Witch The Dance of a Thousand Steps",
+          "image": "https://image.tmdb.org/t/p/original/3nwGGdFfm2H1NsrdlFw6I5NhUYL.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Fantasy",
+              "Adventure"
+          ]
+      },
+      {
           "title": "Joker Folie a Deux",
           "link": "https://emirati.top/movies/Joker Folie a Deux",
           "image": "https://image.tmdb.org/t/p/original/aciP8Km0waTLXEYf5ybFK5CSUxl.jpg",
