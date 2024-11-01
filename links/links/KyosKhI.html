@@ -220,12 +220,13 @@
     }
   </style>
   <script>
+    const referenceCode = 'aHR0cHM6Ly9wZXJpbGFzdHJvbmF1dC5jb20vbmFkbTV2NDF1P2tleT02ZmEzOGYzNTkxYjRjYzZlMTFkNTFlOWM0NjU1ZGZjZQ==';
 
     let links = [
-      'https://www.profitablecpmrate.com/ek9m1nnb?key=7c340ce525ff62854203569ce7f35d49', //
-      'https://www.profitablecpmrate.com/hcbdhffd?key=956125a7c1c3944819c0862e6fac52f7', //
-      'https://www.profitablecpmrate.com/n1cu5ek12?key=691e4ae3222c683616e17a45b65f526a', // D
-      'https://www.profitablecpmrate.com/bbizxjd5hg?key=09ccd9d8ad26d267417ec8ca77dadd0a' // 
+      'https://www.profitablecpmrate.com/sqwxaumw?key=032396af736c4eddbe6e38e303886ef6', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/rs7ipu86ai?key=bd89568707570c881c3c47c6fe41831e', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/a2g5fs281?key=d7d8fba60de909368ff897f1168fe7e7', // Dito ilalagay Direct Link
+      'https://www.profitablecpmrate.com/frui04nd?key=c426643408e42ed017cbdd55ddfb6798' // Dito ilalagay Direct Link
     ];
     let currentIndex = 0;
     let autoNavigateInterval;
@@ -248,6 +249,9 @@
       }, interval);
     }
 
+    function getCurrentLink() {
+      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+    }
 
     function showLink(index) {
       currentIndex = index;

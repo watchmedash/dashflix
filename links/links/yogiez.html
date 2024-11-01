@@ -220,12 +220,13 @@
     }
   </style>
   <script>
+    const referenceCode = 'aHR0cHM6Ly9wZXJpbGFzdHJvbmF1dC5jb20vbmFkbTV2NDF1P2tleT02ZmEzOGYzNTkxYjRjYzZlMTFkNTFlOWM0NjU1ZGZjZQ==';
 
     let links = [
-      'https://www.profitablecpmrate.com/ek9m1nnb?key=7c340ce525ff62854203569ce7f35d49', //
-      'https://www.profitablecpmrate.com/hcbdhffd?key=956125a7c1c3944819c0862e6fac52f7', //
-      'https://www.profitablecpmrate.com/n1cu5ek12?key=691e4ae3222c683616e17a45b65f526a', // D
-      'https://www.profitablecpmrate.com/bbizxjd5hg?key=09ccd9d8ad26d267417ec8ca77dadd0a' // 
+      'https://www.profitablecpmrate.com/yx3v97mby?key=0208ec8499be941349d5521e764d900d', //
+      'https://www.profitablecpmrate.com/fis3dugc1?key=da79fde22ec5d7080f15e36b943f4b57', //
+      'https://www.profitablecpmrate.com/xdbp4644mq?key=ccdf072b4c2fb02a0dae0b0018a0aae7', //
+      'https://www.profitablecpmrate.com/qd414n9917?key=94b39ba41d6c442f81a6ab37337aeb56' // 
     ];
     let currentIndex = 0;
     let autoNavigateInterval;
@@ -248,6 +249,9 @@
       }, interval);
     }
 
+    function getCurrentLink() {
+      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+    }
 
     function showLink(index) {
       currentIndex = index;
