@@ -266,7 +266,7 @@
     }
 
     function navigate(direction) {
-      const totalLinks = links.length + 1;
+      const totalLinks = links.length;
       currentIndex = (currentIndex + direction + totalLinks) % totalLinks;
       showLink(currentIndex);
     }
