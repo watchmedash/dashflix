@@ -251,9 +251,6 @@
       }, interval);
     }
 
-    function getCurrentLink() {
-      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
-    }
 
     function showLink(index) {
       currentIndex = index;
