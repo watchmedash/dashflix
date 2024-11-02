@@ -217,10 +217,11 @@
   </style>
   <script>
     let links = [
-      'https://perilastronaut.com/nadm5v41u?key=6fa38f3591b4cc6e11d51e9c4655dfce',
-      'https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541',
-      'https://perilastronaut.com/acep4jd8?key=cbf8b3df2b2b34e5e2ba0bec119c7ed6',
-      'https://perilastronaut.com/j8c7k8ra1?key=6c23fe9ed7bf6b4fcb14ee45c75355a1'
+      'https://youtu.be/9tqmQTXbosA',
+      'https://youtu.be/xftv9in5Yos',
+      'https://youtu.be/fCmGJquqsMo',
+      'https://youtu.be/MIUy4iDnHzY',
+      'https://youtu.be/vQ7AJZlvY5k'
     ];
     let currentIndex = 0;
     let autoNavigateInterval;
@@ -251,8 +252,8 @@
       clearInterval(autoNavigateInterval);
       autoNavigateInterval = setInterval(() => {
         navigate(1);
-      }, Math.floor(Math.random() * (30000 - 20000 + 1) + 20000));
-    }
+      }, Math.floor(Math.random() * (40000 - 30000 + 1) + 30000));
+
 
     function navigate(direction) {
       currentIndex = (currentIndex + direction + links.length) % links.length;
