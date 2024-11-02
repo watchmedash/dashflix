@@ -240,46 +240,47 @@
     }
 
     function showLink(index) {
-      const iframe = document.getElementById('modalIframe');
-      const modal = document.getElementById('myModal');
-      const spinner = document.getElementById('spinner');
-      iframe.src = links[index];
-      modal.style.display = 'flex';
-      spinner.style.display = 'block';
-      iframe.onload = () => {
-        spinner.style.display = 'none';
-      };
-      clearInterval(autoNavigateInterval);
-      autoNavigateInterval = setInterval(() => {
-        navigate(1);
-      }, Math.floor(Math.random() * (40000 - 30000 + 1) + 30000));
-
-
-    function navigate(direction) {
-      currentIndex = (currentIndex + direction + links.length) % links.length;
-      showLink(currentIndex);
-    }
-
-    function goToSite() {
-      window.open(links[currentIndex], '_blank');
-    }
-
-    function closeModal() {
-      document.getElementById('myModal').style.display = 'none';
-      document.getElementById('modalIframe').src = '';
-      document.getElementById('fallback').style.display = 'flex';
-      clearInterval(autoNavigateInterval);
-    }
-
-    function reopenModal() {
-      showLink(currentIndex);
-    }
-
-    window.onload = function () {
-      shuffleArray(links);
-      refreshPage();
-      showLink(currentIndex);
+    const iframe = document.getElementById('modalIframe');
+    const modal = document.getElementById('myModal');
+    const spinner = document.getElementById('spinner');
+    iframe.src = links[index];
+    modal.style.display = 'flex';
+    spinner.style.display = 'block';
+    iframe.onload = () => {
+      spinner.style.display = 'none';
     };
+    clearInterval(autoNavigateInterval);
+    autoNavigateInterval = setInterval(() => {
+      navigate(1);
+    }, Math.floor(Math.random() * (40000 - 30000 + 1) + 30000));
+  } // <-- Missing closing brace added here
+
+  function navigate(direction) {
+    currentIndex = (currentIndex + direction + links.length) % links.length;
+    showLink(currentIndex);
+  }
+
+  function goToSite() {
+    window.open(links[currentIndex], '_blank');
+  }
+
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+    document.getElementById('modalIframe').src = '';
+    document.getElementById('fallback').style.display = 'flex';
+    clearInterval(autoNavigateInterval);
+  }
+
+  function reopenModal() {
+    showLink(currentIndex);
+  }
+
+  window.onload = function () {
+    shuffleArray(links);
+    refreshPage();
+    showLink(currentIndex);
+  };
+
   </script>
 </head>
 
