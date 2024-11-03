@@ -220,13 +220,12 @@
     }
   </style>
   <script>
-    const referenceCode = 'aHR0cHM6Ly93d3cueW91dHViZS5jb20vZW1iZWQvOXRxbVFUWGJvc0E/YXV0b3BsYXk9MSZtdXRlPTEm';
-
     let links = [
-      'https://borrowhourglass.com/tzbjzsujb?key=5458144578c97caa7179780f31fd9da0', //
-      'https://borrowhourglass.com/d2a85hv9?key=e0947b220f4d233d53c12c37bab0bf0b', //
-      'https://borrowhourglass.com/efwwhjqr?key=594fbb4c71475924eeef2ea4cfb68a40', //
-      'https://borrowhourglass.com/mmnudqkj?key=700e01a0a705db885092f00b89098823' // 
+      'https://www.profitablecpmrate.com/mysrp0jh?key=f5f6d720528f7ae8e6966f24f61c5353',
+      'https://borrowhourglass.com/mmnudqkj?key=700e01a0a705db885092f00b89098823',
+      'https://borrowhourglass.com/efwwhjqr?key=594fbb4c71475924eeef2ea4cfb68a40',
+      'https://borrowhourglass.com/tzbjzsujb?key=5458144578c97caa7179780f31fd9da0',
+      'https://www.profitablecpmrate.com/kvrdhfkh?key=b4558626761a31bf34bccceefad020e2'
     ];
     let currentIndex = 0;
     let autoNavigateInterval;
@@ -238,11 +237,6 @@
       }
     }
 
-    function decodeBase64(encoded) {
-      return decodeURIComponent(atob(encoded).split('').map(c =>
-        '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
-    }
-
     function refreshPage(interval = 250000) {
       setInterval(() => {
         location.reload();
@@ -250,7 +244,7 @@
     }
 
     function getCurrentLink() {
-      return currentIndex === 0 ? decodeBase64(referenceCode) : links[currentIndex - 1];
+      return links[currentIndex];
     }
 
     function showLink(index) {
@@ -271,7 +265,7 @@
     }
 
     function navigate(direction) {
-      const totalLinks = links.length + 1;
+      const totalLinks = links.length;
       currentIndex = (currentIndex + direction + totalLinks) % totalLinks;
       showLink(currentIndex);
     }
@@ -296,7 +290,8 @@
       refreshPage();
       showLink(0);
     };
-  </script>
+</script>
+
 </head>
 
 <body>
