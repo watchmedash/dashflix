@@ -968,22 +968,50 @@ text-align: center;
 }
 
 .watch-now-button {
-margin-top: 5px;
-display: inline-block;
-padding: 8px 15px;
-background-color: #000000;
-color: #fff;
-text-decoration: none;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Change the font to Exo 2 */
-font-size: 1.2rem;
-border-radius: 5px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
-}
+            margin-top: 5px;
+            display: inline-block;
+            padding: 12px 20px;
+            background: linear-gradient(145deg, #232323, #000000); /* Gradient dark background */
+            color: #ffffff;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 255, 255, 0.1); /* Deep shadow with subtle outer glow */
+            transition: all 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+            position: relative;
+            overflow: hidden; /* Ensure inner animations stay within button */
+            cursor: pointer;
+        }
 
-.watch-now-button:hover {
-background-color: #B1B1B1;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-}
+        .watch-now-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-25deg); /* Diagonal gradient effect */
+            transition: 0.5s;
+        }
+
+        .watch-now-button:hover::before {
+            left: 100%;
+        }
+
+        .watch-now-button:hover {
+            background: linear-gradient(145deg, #1f1f1f, #292929); /* Slightly lighter gradient on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+
+        .watch-now-button:active {
+            transform: translateY(1px); /* Slightly lower on click */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Slightly reduce shadow on click */
+        }
 
 body::after {
 content: "";

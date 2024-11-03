@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "The Penguin",
+          "link": "https://emirati.top/tv/The Penguin 194764",
+          "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hmIjNwPRv01eVW1aLrP0A4WvFCC.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Cellar Door",
           "link": "https://emirati.top/movies/Cellar Door",
           "image": "https://image.tmdb.org/t/p/original/rB90k4l1L6G5Ub6Fuhb7viyu6Pj.jpg",
