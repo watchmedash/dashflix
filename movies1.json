@@ -86,6 +86,34 @@
           ]
       },
       {
+          "title": "A Legend",
+          "link": "https://emirati.top/movies/A Legend",
+          "image": "https://image.tmdb.org/t/p/original/qbImUt1d3itXcB81BCItPZlfbyr.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Fantasy",
+              "Adventure",
+              "Romance"
+          ]
+      },
+      {
+          "title": "Miraculous World London At the Edge of Time",
+          "link": "https://emirati.top/movies/Miraculous World London At the Edge of Time",
+          "image": "https://image.tmdb.org/t/p/original/g4ShHhp0WOnVlpaOo3A8pKQlj3r.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Adventure",
+              "Action",
+              "Fantasy"
+          ]
+      },
+      {
           "title": "Dont Move",
           "link": "https://emirati.top/movies/Dont Move",
           "image": "https://image.tmdb.org/t/p/original/cRDJxdnRb7ikKd6fVJTrGeaL34v.jpg",
