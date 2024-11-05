@@ -36,6 +36,9 @@
 /*]]>/* */
 </script>
   <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <!-- Yandex.RTB -->
+  <script>window.yaContextCb=window.yaContextCb||[]</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 <body oncontextmenu="return false;">
       <input type="text" id="searchInput" placeholder="Search titles..." />
@@ -44,7 +47,17 @@
        <div id="pagination"></div>
       <ul id="titleList"></ul>
       <div id="pagination"></div>
-
+      <!-- Yandex.RTB R-A-11706018-3 -->
+      <div id="yandex_rtb_R-A-11706018-3"></div>
+      <script>
+      window.yaContextCb.push(() => {
+          Ya.Context.AdvManager.render({
+              "blockId": "R-A-11706018-3",
+              "renderTo": "yandex_rtb_R-A-11706018-3",
+              "type": "feed"
+          })
+      })
+      </script>
   <nav class="bottom-nav">
     <a href="index.html" class="nav-item">
       <i class="fas fa-home"></i> Home

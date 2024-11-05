@@ -27,6 +27,9 @@
 /*]]>/* */
 </script>
 <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
 </head>
 <body oncontextmenu="return false;">
   <main class="channel-layout">
@@ -48,24 +51,17 @@
       <button id="load-more">Load More</button>
     </div>
   </main>
-<div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
-<script>
-        const goToTopButton = document.getElementById('go-to-top-button');
-
-        // Show or hide the button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) { // Adjust the value to control when the button appears
-                goToTopButton.style.display = 'block';
-            } else {
-                goToTopButton.style.display = 'none';
-            }
-        });
-
-        goToTopButton.addEventListener('click', function() {
-            // Scroll to the top of the page smoothly
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+  <!-- Yandex.RTB R-A-11706018-3 -->
+  <div id="yandex_rtb_R-A-11706018-3"></div>
+  <script>
+  window.yaContextCb.push(() => {
+      Ya.Context.AdvManager.render({
+          "blockId": "R-A-11706018-3",
+          "renderTo": "yandex_rtb_R-A-11706018-3",
+          "type": "feed"
+      })
+  })
+  </script>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="hls.js"></script>
