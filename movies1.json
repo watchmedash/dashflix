@@ -1,6 +1,19 @@
 {
     "movies": [
       {
+          "title": "The Wild Robot",
+          "link": "https://emirati.top/movies/The Wild Robot",
+          "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Science Fiction",
+              "Family"
+          ]
+      },
+      {
           "title": "The Penguin",
           "link": "https://emirati.top/tv/The Penguin 194764",
           "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hmIjNwPRv01eVW1aLrP0A4WvFCC.jpg",
