@@ -1,188 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Watch free movies and TV series online at Dashflix. Discover a diverse library of genres, including classics, the latest releases, anime, live sports, and trending TV shows—all available for seamless streaming."/>
-  <meta name="keywords" content="Free Movies, Watch Free TV Series, Online Streaming, Movie Genres, Latest Releases, Classic Films, Watch Anime, Live Sports Streaming,Trending TV Shows, Drama Series, Action Movies, Comedy Films,
-    Horror Movies, Family Movies, Free Entertainment, Stream Movies Online,
-    Binge-Watch TV Series, Free Documentaries, Anime Series,
-    Watch Movies Anytime, Free Streaming, Stream Free Live News,
-    Popular TV Shows, Watch Online for Free, Free Movie Downloads,
-    Stream High-Quality Content, Latest Anime Episodes,
-    Movies for Free, TV Series Online, On-Demand Streaming,
-    Live Sports Coverage, Watch Movies Without Registration,
-    Top Rated Movies, Free Streaming Platform,
-    Discover Classic Movies, Best Anime Shows, Family-Friendly Streaming,
-    Free Movies HD, Free TV Show Episodes"/>
-  <meta name="robots" content="index, follow"/>
-  <meta property="og:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta property="og:description" content="Explore a world of free movies and TV series at Dashflix. Enjoy a variety of genres, from classics to the latest releases, anime, and live sports—all available for streaming anytime, anywhere."/>
-  <meta property="og:url" content="https://dashflix.xyz/home"/>
-  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-  <meta property="og:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta name="twitter:description" content="Enjoy a vast selection of free movies and TV series online at Dashflix. From classics to the latest releases, discover your next favorite film or show—all available for streaming."/>
-  <meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-  <meta name="twitter:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <link rel="canonical" href="https://dashflix.xyz/home"/>
-  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-  <title>Movies - Watch Free Movies and TV Series Online</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styling.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
-  <script type="text/javascript" data-cfasync="false">
-/*<![CDATA[/* */
-(function(){var u=window,l="c00d3228cec853e09a9ac08c94ff4e51",d=[["siteId",309-481*906-651+5564117],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],v=["d3d3LmJldHRlcmFkc3lzdGVtLmNvbS9hanNmb3JjZS5taW4uY3Nz","ZDJrazBvM2ZyN2VkMDEuY2xvdWRmcm9udC5uZXQvaG1GU2wvZnBob25vbi1jb3JlLm1pbi5qcw=="],s=-1,k,z,b=function(){clearTimeout(z);s++;if(v[s]&&!(1756689765000<(new Date).getTime()&&1<s)){k=u.document.createElement("script");k.type="text/javascript";k.async=!0;var c=u.document.getElementsByTagName("script")[0];k.src="https://"+atob(v[s]);k.crossOrigin="anonymous";k.onerror=b;k.onload=function(){clearTimeout(z);u[l.slice(0,16)+l.slice(0,16)]||b()};z=setTimeout(b,5E3);c.parentNode.insertBefore(k,c)}};if(!u[l]){try{Object.freeze(u[l]=d)}catch(e){}b()}})();
-/*]]>/* */
-</script>
-<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-<!-- Yandex.RTB -->
-<script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Home</title>
+ <style>
+     /* Dark theme styling */
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+
+     body, html {
+         width: 100%;
+         height: 100%;
+         color: #f0f0f0;
+         font-family: Arial, sans-serif;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+         position: relative; /* Allow absolute positioning of child elements */
+     }
+
+     /* Fullscreen background image styling */
+     .background-container {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100vw;
+         height: 100vh;
+         z-index: -1;
+     }
+
+     .background-image {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover; /* Ensures the image covers the entire area */
+         opacity: 0; /* Start hidden */
+         transition: opacity 1s ease-in-out; /* Fade transition */
+     }
+
+     .visible {
+         opacity: 1; /* Fully visible */
+     }
+
+     /* Container for ad content */
+     .ad-content {
+         background-color: rgba(0, 0, 0, 0.3); /* 50% opacity white */
+         padding: 10px;
+         border-radius: 8px;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 80%;
+         max-width: 400px;
+         text-align: center;
+         z-index: 1;
+         position: absolute; /* Position absolute to the bottom */
+         bottom: 20px; /* Space from bottom */
+         left: 50%; /* Center horizontally */
+         transform: translateX(-50%); /* Center alignment */
+     }
+
+     h1 {
+         font-size: 2rem;
+         color: #fff;
+         margin-bottom: 10px;
+         font-weight: bold;
+     }
+
+     p {
+         font-size: 1.2rem;
+         color: #fff;
+         margin-bottom: 40px;
+     }
+
+     /* Countdown timer styling */
+     .countdown {
+         position: absolute; /* Position absolute to allow spacing */
+         bottom: 50px; /* Position below the ad content */
+         left: 50%;
+         transform: translateX(-50%); /* Center horizontally */
+         text-align: center;
+     }
+
+     .countdown .number {
+         font-size: 3rem;
+         font-weight: bold;
+         color: #fff;
+     }
+ </style>
+ <script>
+     // Image sets for portrait and landscape, with corresponding links
+     const portraitImages = [
+         { src: "../images/ad1.webp", link: "https://dashflix.top" },
+         { src: "../images/ad2.webp", link: "https://dashflix.top" },
+         { src: "../images/ad3.webp", link: "https://dashflix.top" }
+     ];
+     const landscapeImages = [
+         { src: "../images/ad4.png", link: "https://dashflix.top" },
+         { src: "../images/ad5.png", link: "https://dashflix.top" },
+         { src: "../images/ad6.png", link: "https://dashflix.top" }
+     ];
+
+     let currentImageIndex = 0;
+     let currentImageSet = []; // Track the current image set
+
+     // Function to update the background image with fade transition
+     function updateBackgroundImage() {
+         const bgImage = document.getElementById("background-image");
+         const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+         const images = isPortrait ? portraitImages : landscapeImages;
+
+         // Fade out the current image
+         bgImage.classList.remove("visible");
+
+         // Wait for fade-out to complete, then update image
+         setTimeout(() => {
+             // Set the image source
+             bgImage.src = images[currentImageIndex].src;
+             bgImage.onclick = function() {
+                 window.location.href = images[currentImageIndex].link; // Redirect to the link
+             };
+
+             // Fade in the new image
+             bgImage.classList.add("visible");
+
+             // Update the index for the next image
+             currentImageIndex = (currentImageIndex + 1) % images.length;
+         }, 1000); // Sync with transition duration (1s)
+     }
+
+     // Set interval to change the image every 5 seconds
+     setInterval(updateBackgroundImage, 3000);
+
+     // Set a timer to redirect after 9 seconds
+     setTimeout(function() {
+         window.location.href = "index.html";
+     }, 9000);
+
+     // Countdown timer logic
+     let timeLeft = 9; // Set countdown to 9 seconds
+     function updateCountdown() {
+         const countdownElement = document.getElementById('countdown-number');
+         countdownElement.textContent = timeLeft;
+         if (timeLeft > 0) {
+             timeLeft--;
+             setTimeout(updateCountdown, 1000);
+         }
+     }
+
+     window.onload = function() {
+         const bgImage = document.getElementById("background-image");
+         const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+         // Set the initial image based on orientation
+         currentImageSet = isPortrait ? portraitImages : landscapeImages;
+         bgImage.src = currentImageSet[0].src;
+         bgImage.onclick = function() {
+             window.location.href = currentImageSet[0].link; // Redirect to the initial link
+         };
+         bgImage.classList.add("visible"); // Show the first image
+
+         updateCountdown(); // Start countdown timer
+         setTimeout(updateBackgroundImage, 3000); // Start image update after initial load
+     };
+ </script>
 </head>
-<body oncontextmenu="return false;">
-  <main class="channel-layout">
-    <div class="player-wrapper">
-<p>Dear app users, you can also visit <a href="https://dashflix.top" target="_blank">dashflix.top</a> using any browser.</a></p>
-<p>Important Notice: If you encounter an error when entering full screen mode, simply exit and then re-enter full screen to resolve the issue.</p>
-      <div class="sticky">
-        <div class="video-wrapper">
-          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <label for="video-source">Select Video Source:</label>
-        <select id="video-source">
-            <option value="vidsrc">Server 1</option>
-            <option value="vidlink">Server 2</option>
-            <option value="2embed">Server 3</option>
-            <option value="icu">Server 4</option>
-            <option value="icu2">Server 5</option>
-            <option value="icu3">Server 6</option>
-        </select>
-        <div class="label">Now Playing</div>
-        <h2 id="channel-playing"></h2>
-        <div id="movie-plot" style="margin-top: 10px; font-size: 14px;"></div>
-      </div>
-    </div>
-<div class="channel-list-wrapper">
-<input type="text" id="search-box" placeholder="Search movie...">
-<button id="clear-search" style="display: none;">Clear</button>
-<div class="sharethis-inline-share-buttons"></div>
-<ul class="most-viewed-list"></ul>
-      <ul class="channel-list"></ul>
-      <button id="load-more">Load More</button>
-    </div>
-  </main>
-  <!-- Yandex.RTB R-A-11706018-3 -->
-  <div id="yandex_rtb_R-A-11706018-3"></div>
-  <script>
-  window.yaContextCb.push(() => {
-      Ya.Context.AdvManager.render({
-          "blockId": "R-A-11706018-3",
-          "renderTo": "yandex_rtb_R-A-11706018-3",
-          "type": "feed"
-      })
-  })
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="hls.js"></script>
-<script src="scripting.js"></script>
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="tvplus.html" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="shows.html" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="trailer.html" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
-  <a href="requested.html" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
-  <a href="#" class="nav-item" id="more-menu">
-    <i class="fas fa-ellipsis-h"></i> More
-  </a>
+<body>
+ <!-- Background container with fading image -->
+ <div class="background-container">
+     <img id="background-image" class="background-image" src="" alt="Background Image">
+ </div>
 
-  <div id="more-links" class="more-links">
-    <a href="https://freedomwall.top">
-      <i class="fas fa-otter"></i> Anime
-    </a>
-    <a href="https://dashtoons.xyz">
-      <i class="fas fa-book-open"></i> Comics
-    </a>
-    <a href="https://kabayan.top">
-      <i class="fas fa-theater-masks"></i> Drama
-    </a>
-    <a href="request.html">
-      <i class="fas fa-paper-plane"></i> Request
-    </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-        🔒 18+
-    </a>
-    <a href="appdown.html">
-      <i class="fas fa-mobile-alt"></i> APP
-    </a>
-  </div>
-</nav>
+ <!-- Container for ad content -->
+ <div class="ad-content">
+   <h1>Advertise with Us!</h1>
+       <p>Join us in reaching a wider audience. Advertise here and elevate your brand!</p></br></br></br>
+     <div class="countdown">
+         <div id="countdown-number" class="number">9</div>
+     </div>
+ </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const moreMenu = document.getElementById('more-menu');
-    const moreLinks = document.getElementById('more-links');
-
-    moreMenu.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default anchor action
-      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-    });
-  });
-</script>
-
-<div class="modal" id="passwordModal">
-    <div class="modal-content">
-        <h2>Warning: This page contains adult content.</h2>
-        <p>Please enter GOBILAM to proceed:</p>
-        <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-        <button onclick="checkPassword()">Submit</button>
-        <button onclick="closeModal()">Cancel</button>
-    </div>
-</div>
-
-<script>
-    function showPasswordModal(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-    }
-
-    function closeModal() {
-        document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-    }
-
-    function checkPassword() {
-        const password = document.getElementById('passwordInput').value;
-        if (password === "GOBILAM") {
-            window.location.href = "adult.html"; // Redirect to the adult content page
-        } else {
-            alert("Incorrect password. Access denied."); // Alert for incorrect password
-        }
-    }
-</script>
-
-<script src="script.js"></script>
-<script type="text/javascript">
-    aclib.runInterstitial({
-        zoneId: '8972618',
-    });
-</script>
+ <!-- Countdown timer at the bottom -->
 </body>
 </html>
