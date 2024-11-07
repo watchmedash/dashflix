@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoutbox</title>
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         /* Advanced Dark Theme Styles */
         body {
@@ -95,9 +97,15 @@
             font-size: 1em;
             transition: background-color 0.3s ease;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .message-input button:hover {
             background-color: #777;
+        }
+        .message-input button i {
+            margin-right: 8px; /* Space between the icon and text */
         }
     </style>
 </head>
@@ -108,7 +116,7 @@
         <div class="message-input">
             <input type="text" id="usernameInput" placeholder="Username" required>
             <input type="text" id="messageInput" placeholder="Type your message..." required>
-            <button onclick="addMessage()">Send</button>
+            <button onclick="addMessage()"><i class="fas fa-paper-plane"></i> Send</button>
         </div>
     </div>
 
