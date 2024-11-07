@@ -12,153 +12,61 @@
     <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
     <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        .form-container {
-            width: 80%;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body oncontextmenu="return false;">
+    <link rel="stylesheet" href="styler.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="shoutbox-container">
+        <h1 class="shoutbox-title">Request Box</h1>
+        <div class="messages" id="messages"></div>
+        <div class="message-input">
+            <input type="text" id="usernameInput" placeholder="Title" required>
+            <input type="text" id="messageInput" placeholder="Genre and Year" required>
+            <button onclick="addMessage()"><i class="fas fa-paper-plane"></i> Request</button>
+        </div>
+    </div>
 
-  <header>
-        <nav>
-    <div class="logo-title-container">
-      <div class="logo-container">
-        <img src="https://i.postimg.cc/qMFTZzvm/logodf.webp" alt="Dashflix Logo">
-      </div>
-      </div>
-      <div class="nav-links">
-<ul><li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li></ul>
-      </div>
-  </nav>
-      </header>
+    <script>
+        // Fetch messages from kabayan.top
+        async function loadMessages() {
+            try {
+                const response = await fetch("https://kabayan.top/shoutbox.php");
+                const messages = await response.json();
+                const messagesDiv = document.getElementById("messages");
+                messagesDiv.innerHTML = messages.map(
+                    msg => `<div class="message"><strong>${msg.username}</strong>: ${msg.message} <br><small>${msg.timestamp}</small></div>`
+                ).join('');
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            } catch (error) {
+                console.error("Error loading messages:", error);
+            }
+        }
 
-                   <iframe
-                     id="JotFormIFrame-232413066026446"
-                     title="Movie Request"
-                     onload="window.parent.scrollTo(0,0)"
-                     allowtransparency="true"
-                     allowfullscreen="true"
-                     allow="geolocation; microphone; camera"
-                     src="https://form.jotform.com/232413066026446"
-                     frameborder="0"
-                     style="min-width:100%;max-width:100%;height:539px;border:none;"
-                     scrolling="no"
-                   >
-                   </iframe>
-                   <script type="text/javascript">
-                   var ifr = document.getElementById("JotFormIFrame-232413066026446");
-                   if (ifr) {
-                     var src = ifr.src;
-                     var iframeParams = [];
-                     if (window.location.href && window.location.href.indexOf("?") > -1) {
-                       iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-                     }
-                     if (src && src.indexOf("?") > -1) {
-                       iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-                       src = src.substr(0, src.indexOf("?"))
-                     }
-                     iframeParams.push("isIframeEmbed=1");
-                     ifr.src = src + "?" + iframeParams.join('&');
-                   }
-                   window.handleIFrameMessage = function(e) {
-                     if (typeof e.data === 'object') { return; }
-                     var args = e.data.split(":");
-                     if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-                     if (!iframe) { return; }
-                     switch (args[0]) {
-                       case "scrollIntoView":
-                         iframe.scrollIntoView();
-                         break;
-                       case "setHeight":
-                         iframe.style.height = args[1] + "px";
-                         if (!isNaN(args[1]) && parseInt(iframe.style.minHeight) > parseInt(args[1])) {
-                           iframe.style.minHeight = args[1] + "px";
-                         }
-                         break;
-                       case "collapseErrorPage":
-                         if (iframe.clientHeight > window.innerHeight) {
-                           iframe.style.height = window.innerHeight + "px";
-                         }
-                         break;
-                       case "reloadPage":
-                         window.location.reload();
-                         break;
-                       case "loadScript":
-                         if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-                         var src = args[1];
-                         if (args.length > 3) {
-                             src = args[1] + ':' + args[2];
-                         }
-                         var script = document.createElement('script');
-                         script.src = src;
-                         script.type = 'text/javascript';
-                         document.body.appendChild(script);
-                         break;
-                       case "exitFullscreen":
-                         if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-                         else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-                         else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-                         else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-                         else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-                         break;
-                     }
-                     var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-                     if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-                       var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-                       iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-                     }
-                   };
-                   window.isPermitted = function(originUrl, whitelisted_domains) {
-                     var url = document.createElement('a');
-                     url.href = originUrl;
-                     var hostname = url.hostname;
-                     var result = false;
-                     if( typeof hostname !== 'undefined' ) {
-                       whitelisted_domains.forEach(function(element) {
-                           if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-                               result = true;
-                           }
-                       });
-                       return result;
-                     }
-                   };
-                   if (window.addEventListener) {
-                     window.addEventListener("message", handleIFrameMessage, false);
-                   } else if (window.attachEvent) {
-                     window.attachEvent("onmessage", handleIFrameMessage);
-                   }
-                   </script>
-              <footer>
-            <nav class="footer-nav">
-              <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="privacy policy.html">Privacy Policy</a></li>
-                <li><a href="dmca.html">DMCA</a></li>
-              </ul>
-              <div class="social-icons">
-                <a href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541" class="social-icon"><i class="fab fa-youtube"></i></a>
-                <a href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541" class="social-icon"><i class="fab fa-twitter"></i></a>
-              </div>
-            </nav>
-            <p class="copyright">Dashflix 2024. All rights reserved.</p>
-          </footer>
+        // Send a new message to kabayan.top
+        async function addMessage() {
+            const usernameInput = document.getElementById("usernameInput");
+            const messageInput = document.getElementById("messageInput");
+            const username = usernameInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (username && message) {
+                try {
+                    await fetch("https://kabayan.top/shoutbox.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: `username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`
+                    });
+                    messageInput.value = "";
+                    loadMessages();
+                } catch (error) {
+                    console.error("Error sending message:", error);
+                }
+            }
+        }
+
+        // Load messages every 5 seconds
+        setInterval(loadMessages, 5000);
+    </script>
           <nav class="bottom-nav">
             <a href="index.html" class="nav-item">
               <i class="fas fa-home"></i> Home

@@ -111,25 +111,16 @@
 </head>
 <body>
     <div class="shoutbox-container">
-        <h1 class="shoutbox-title">Shoutbox</h1>
+        <h1 class="shoutbox-title">Request Box</h1>
         <div class="messages" id="messages"></div>
         <div class="message-input">
-            <input type="text" id="usernameInput" placeholder="Username" required>
-            <input type="text" id="messageInput" placeholder="Type your message..." required>
+            <input type="text" id="usernameInput" placeholder="Title" required>
+            <input type="text" id="messageInput" placeholder="Genre and Year" required>
             <button onclick="addMessage()"><i class="fas fa-paper-plane"></i> Send</button>
         </div>
     </div>
 
     <script>
-        // Check for saved username on page load
-        document.addEventListener("DOMContentLoaded", () => {
-            const savedUsername = localStorage.getItem("username");
-            if (savedUsername) {
-                document.getElementById("usernameInput").value = savedUsername;
-            }
-            loadMessages();
-        });
-
         // Fetch messages from kabayan.top
         async function loadMessages() {
             try {
@@ -153,9 +144,6 @@
             const message = messageInput.value.trim();
 
             if (username && message) {
-                // Save username to localStorage
-                localStorage.setItem("username", username);
-
                 try {
                     await fetch("https://kabayan.top/shoutbox.php", {
                         method: "POST",
