@@ -1,6 +1,15 @@
 {
     "movies": [
       {
+            "title": "Kabitan",
+            "link": "https://emirati.top/movies/Kabitan",
+            "image": "https://image.tmdb.org/t/p/original/gnlJ1gosGtWJCv90O8QIjOQw7Q6.jpg",
+            "tag": "HD",
+            "requested": true,
+            "release_year": "2024",
+            "genres": []
+      },
+      {
           "title": "The Wild Robot",
           "link": "https://emirati.top/movies/The Wild Robot",
           "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
