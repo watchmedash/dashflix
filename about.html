@@ -143,9 +143,13 @@
             const response = await fetch("https://kabayan.top/chat.php");
             const messages = await response.json();
             const messagesDiv = document.getElementById("chatMessages");
-            messagesDiv.innerHTML = messages.map(
+
+            // Display messages in reverse order
+            messagesDiv.innerHTML = messages.reverse().map(
                 msg => `<div><strong>${msg.username}</strong>: ${msg.message}</div>`
             ).join('');
+
+            // Scroll to the bottom of the chat box for new messages
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         } catch (error) {
             console.error("Error loading messages:", error);
@@ -164,7 +168,7 @@
                     body: `username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`
                 });
                 document.getElementById("chatMessage").value = "";
-                loadMessages();
+                loadMessages(); // Refresh messages after sending
             } catch (error) {
                 console.error("Error sending message:", error);
             }
@@ -177,6 +181,7 @@
         setInterval(loadMessages, 5000);
     });
 </script>
+
 
 
 <div class="about-container">
