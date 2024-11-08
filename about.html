@@ -135,8 +135,22 @@
 .chat-input button:hover {
     background-color: #777;
 }
+
+.spoiler {
+    background-color: #333;
+    color: #333;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 2px;
+    transition: color 0.3s;
+}
+
+.spoiler:hover {
+    color: #f5f5f5;
+}
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
     async function loadMessages() {
         try {
@@ -144,10 +158,17 @@
             const messages = await response.json();
             const messagesDiv = document.getElementById("chatMessages");
 
-            // Display messages in reverse order
-            messagesDiv.innerHTML = messages.reverse().map(
-                msg => `<div><strong>${msg.username}</strong>: ${msg.message}</div>`
-            ).join('');
+            // Reverse the messages array for newest at bottom, apply Markdown, and format =spoiler= syntax
+            messagesDiv.innerHTML = messages.reverse().map(msg => {
+                let formattedMessage = marked.parseInline(msg.message);
+
+                // Replace =spoiler= syntax with <span class="spoiler">spoiler text</span>
+                formattedMessage = formattedMessage.replace(
+                    /=([^=]+)=/g,
+                    '<span class="spoiler">$1</span>'
+                );
+                return `<div><strong>${msg.username}</strong>: ${formattedMessage}</div>`;
+            }).join('');
 
             // Scroll to the bottom of the chat box for new messages
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -168,7 +189,7 @@
                     body: `username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`
                 });
                 document.getElementById("chatMessage").value = "";
-                loadMessages(); // Refresh messages after sending
+                loadMessages();
             } catch (error) {
                 console.error("Error sending message:", error);
             }
@@ -181,8 +202,6 @@
         setInterval(loadMessages, 5000);
     });
 </script>
-
-
 
 <div class="about-container">
   <h1>Welcome to Dashflix</h1>
