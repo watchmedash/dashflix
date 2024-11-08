@@ -55,19 +55,6 @@
     position: relative;
 }
 
-/* Container styling */
-.chat-messages {
-    flex: 1;
-    padding: 12px;
-    overflow-y: auto;
-    font-size: 1em;
-    background-color: #2a2a2a;
-    color: #d3d3d3;
-    border-top: 1px solid #333;
-    scrollbar-width: thin;
-    scrollbar-color: #666 #2a2a2a;
-}
-
 /* Styling individual messages */
 .chat-messages div {
     padding: 10px;
@@ -84,19 +71,20 @@
     background-color: #4a4a4a;
 }
 
-/* Username styling */
+/* Specific styling for usernames */
 .chat-messages .username {
     font-size: 0.9em;
-    color: #2cef12; /* Light green specifically for usernames */
+    color: #2cef12; /* Green color for usernames */
     font-weight: bold;
     margin-right: 5px;
 }
 
 /* Bold text within messages */
-.chat-messages div strong {
-    font-weight: bold; /* Bold styling without color */
-    color: inherit;    /* Inherits color from parent, so it remains standard */
+.chat-messages div strong:not(.username) {
+    font-weight: bold; /* Bold styling without specific color */
+    color: inherit;    /* Inherits color from parent */
 }
+
 
 
 .chat-input {
@@ -175,7 +163,8 @@
                     /=([^=]+)=/g,
                     '<span class="spoiler">$1</span>'
                 );
-                return `<div><strong>${msg.username}</strong>: ${formattedMessage}</div>`;
+                // Apply the correct formatting for the username
+                return `<div><strong class="username">${msg.username}</strong>: ${formattedMessage}</div>`;
             }).join('');
 
             // Scroll to the bottom of the chat box for new messages
@@ -210,6 +199,7 @@
         setInterval(loadMessages, 5000);
     });
 </script>
+
 
 <div class="about-container">
   <h1>Welcome to Dashflix</h1>
