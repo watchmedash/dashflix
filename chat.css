@@ -1,7 +1,7 @@
 .chat-widget-container {
-    width: 70%; /* Increased width to 80% of the viewport */
+    width: 85%; /* Increased width to 80% of the viewport */
     max-width: 90vw; /* Maximum width for smaller screens */
-    height: 400px;
+    height: 600px;
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 10px;
@@ -47,13 +47,13 @@
 }
 
 .chat-messages div:hover {
-    background-color: #4a4a4a; /* Highlight on hover */
+    background-color: #4a4a4a;
 }
 
 /* Styling the username */
 .chat-messages div strong {
     font-size: 0.9em;
-    color: #caf9e5; /* Light green for usernames */
+    color: #caf9e5;
     margin-bottom: 4px;
     font-weight: bold;
 }
@@ -65,9 +65,8 @@
     padding: 10px;
 }
 
-/* Shorter username input field */
 #chatUsername {
-    width: 25%; /* Shorter width for username field */
+    width: 25%;
     padding: 8px;
     border: none;
     border-radius: 4px;
@@ -75,9 +74,8 @@
     color: #e0e0e0;
 }
 
-/* Full-width message input field */
 #chatMessage {
-    flex: 1; /* Full width for the message field */
+    flex: 1;
     padding: 8px;
     border: none;
     border-radius: 4px;
@@ -86,7 +84,7 @@
 }
 
 #chatMessage::placeholder {
-    color: #aaa; /* Lighter placeholder text color */
+    color: #aaa;
 }
 
 .chat-input button {
