@@ -32,13 +32,13 @@
 </header>
 <style>
 .chat-widget-container {
-    width: 60%; /* Set width to 60% of the viewport */
-    max-width: 90vw; /* Keep a maximum width for smaller screens */
+    width: 80%; /* Increased width to 80% of the viewport */
+    max-width: 90vw; /* Maximum width for smaller screens */
     height: 400px;
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 10px;
-    padding: 16px;
+    padding: 6px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
@@ -48,41 +48,60 @@
 
 .chat-title {
     text-align: center;
-    font-size: 1.2em;
-    padding: 10px;
-    background-color: #333;
+    font-size: 1.5em;
     color: #f0f0f0; /* Light title color */
+    font-weight: bold; /* Bold for prominence */
+    letter-spacing: 1px; /* Slight letter spacing */
+    position: relative;
 }
 
 .chat-messages {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
     overflow-y: auto;
-    font-size: 0.9em;
+    font-size: 1em;
     background-color: #2a2a2a;
     color: #d3d3d3; /* Lighter text for messages */
+    border-top: 1px solid #333; /* Subtle border for separation */
+    scrollbar-width: thin;
+    scrollbar-color: #666 #2a2a2a;
 }
 
+/* Styling individual messages */
 .chat-messages div {
-    padding: 5px;
-    border-radius: 4px;
-    background: #444;
-    margin-bottom: 4px;
-    color: #f5f5f5; /* Light color for message text */
+    padding: 10px;
+    border-radius: 6px;
+    background: #3c3c3c;
+    margin-bottom: 8px;
+    color: #f5f5f5;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds depth to messages */
+    transition: background-color 0.3s;
 }
 
+.chat-messages div:hover {
+    background-color: #4a4a4a; /* Highlight on hover */
+}
+
+/* Styling the username */
 .chat-messages div strong {
-    color: #a0c0ff; /* Light blue for usernames */
+    display: block;
+    font-size: 0.9em;
+    color: #2cef12; /* Light green for usernames */
+    margin-bottom: 4px;
+    font-weight: bold;
 }
 
 .chat-input {
     display: flex;
-    padding: 10px;
+    align-items: center;
     gap: 5px;
+    padding: 10px;
 }
 
-.chat-input input[type="text"] {
-    flex: 1;
+/* Shorter username input field */
+#chatUsername {
+    width: 25%; /* Shorter width for username field */
     padding: 8px;
     border: none;
     border-radius: 4px;
@@ -90,12 +109,23 @@
     color: #e0e0e0;
 }
 
-.chat-input input::placeholder {
+/* Full-width message input field */
+#chatMessage {
+    flex: 1; /* Full width for the message field */
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+#chatMessage::placeholder {
     color: #aaa; /* Lighter placeholder text color */
 }
 
 .chat-input button {
     padding: 8px;
+    width: 80px; /* Reduced button width */
     background-color: #5a5a5a;
     color: #e0e0e0;
     border: none;
@@ -106,7 +136,6 @@
 .chat-input button:hover {
     background-color: #777;
 }
-
 </style>
 
 <script>
