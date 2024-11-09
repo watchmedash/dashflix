@@ -1,5 +1,5 @@
 .chat-widget-container {
-    width: 93%; /* Increased width to 80% of the viewport */
+    width: 97%; /* Increased width to 80% of the viewport */
     max-width: 90vw; /* Maximum width for smaller screens */
     height: 600px;
     background-color: #1e1e1e;
