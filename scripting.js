@@ -4,6 +4,9 @@ let allChannelData = [];  // Store all loaded channels
 let currentMovieId = null;  // Store the currently playing movie's ID
 const apiKey = '4f599baa15d072c9de346b2816a131b8';  // Add your TMDB API key
 
+// Blocked movie IDs
+const blockedMovieIds = [1163258, 1163258]; // Replace with the movie IDs you want to block
+
 // Function to load data from the TMDB API
 async function loadChannelData() {
   try {
@@ -106,6 +109,11 @@ function renderChannels(channelData) {
   channelList.innerHTML = "";  // Clear previous channels
 
   channelData.forEach((channel) => {
+    // Check if the movie ID is in the blocked list
+    if (blockedMovieIds.includes(channel.url.split('/').pop())) {
+      return;  // Skip rendering this movie
+    }
+
     const markup = `
       <li class="channel">
         <div class="handle">☰</div>
@@ -178,12 +186,12 @@ function loadStreamByMovieId(movieId) {
   video.scrollIntoView({ behavior: "smooth" });
 }
 
-// Search function to filter channels
+// Function to filter and display channels based on search query
 async function filterChannels(event) {
   const query = event.target.value;
 
   if (query.length < 3) {
-    // If the query is less than 3 characters, do not search
+    // If the query is less than 3 characters, reset to original data
     renderChannels(allChannelData);  // Reset to original data
     document.querySelector("#load-more").style.display = "block"; // Show "Load More" button
     return;
@@ -195,27 +203,26 @@ async function filterChannels(event) {
     const response = await fetch(url);
     const data = await response.json();
 
-    const channelData = data.results.map(movie => ({
-      title: movie.title,
-      url: `https://vidsrc.xyz/embed/movie/${movie.id}`,  // Replace with your embed URL
-      image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-      plot: movie.overview,  // Movie plot
-      releaseYear: movie.release_date.split('-')[0],  // Extract release year
-    }));
+    const filteredResults = data.results
+      .filter(movie => !blockedMovieIds.includes(movie.id)) // Filter out blocked movie IDs
+      .map(movie => ({
+        title: movie.title,
+        url: `https://vidsrc.xyz/embed/movie/${movie.id}`,  // Replace with your embed URL
+        image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
+        plot: movie.overview,  // Movie plot
+        releaseYear: movie.release_date.split('-')[0],  // Extract release year
+      }));
 
-    renderChannels(channelData);  // Render the filtered results
+    renderChannels(filteredResults);  // Render the filtered results
 
-    // Hide "Load More" button if there are results
-    if (channelData.length > 0) {
-      document.querySelector("#load-more").style.display = "none";
-    } else {
-      document.querySelector("#load-more").style.display = "block"; // Show if no results
-    }
+    // Show or hide "Load More" button based on results
+    document.querySelector("#load-more").style.display = filteredResults.length > 0 ? "none" : "block";
   } catch (error) {
     console.error('Error searching for channels:', error);
     alert('Unable to search for channels. Please try again later.');
   }
 }
+
 
 // Load the channel data when the page loads
 loadChannelData();
