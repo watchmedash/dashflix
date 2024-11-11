@@ -170,7 +170,7 @@ body {
 .shoutbox-container {
     width: 95vw;
     height: 80vh;
-    max-width: 800px;
+    max-width: 95%;
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 10px;
