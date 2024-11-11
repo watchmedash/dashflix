@@ -44,6 +44,83 @@
           ]
       },
       {
+          "title": "The Gingerdead Man",
+          "link": "https://emirati.top/movies/The Gingerdead Man",
+          "image": "https://image.tmdb.org/t/p/original/tZgIllFk4ncvhuzNipLkStjPjqk.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2005",
+          "genres": [
+              "Fantasy",
+              "Horror",
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Gingerdead Man 2 The Passion of the Crust",
+          "link": "https://emirati.top/movies/Gingerdead Man 2 The Passion of the Crust",
+          "image": "https://image.tmdb.org/t/p/original/foyZxQ68TaUegMxtLnI7JR0q3E7.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2008",
+          "genres": [
+              "Comedy",
+              "Horror",
+              "Fantasy"
+          ]
+      },
+      {
+          "title": "One Million Years BC",
+          "link": "https://emirati.top/movies/One Million Years BC",
+          "image": "https://image.tmdb.org/t/p/original/qVcQpoOqGrgNEdahRRzxEZkEouG.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "1966",
+          "genres": [
+              "Adventure",
+              "Fantasy"
+          ]
+      },
+      {
+          "title": "Breakin 2 Electric Boogaloo",
+          "link": "https://emirati.top/movies/Breakin 2 Electric Boogaloo",
+          "image": "https://image.tmdb.org/t/p/original/3RV0NNZ8p3XcdVnrr8bLILuH1x9.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "1984",
+          "genres": [
+              "Drama",
+              "Music"
+          ]
+      },
+      {
+          "title": "Rollerball",
+          "link": "https://emirati.top/movies/Rollerball",
+          "image": "https://image.tmdb.org/t/p/original/5Wquo3EjfDpK7S1BHcybuC3TZDO.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2002",
+          "genres": [
+              "Action",
+              "Science Fiction",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Harry and the Hendersons",
+          "link": "https://emirati.top/movies/Harry and the Hendersons",
+          "image": "https://image.tmdb.org/t/p/original/5ZNWhOEsuNHIQ1gbtwdTGK7srCr.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "1987",
+          "genres": [
+              "Comedy",
+              "Family",
+              "Fantasy",
+              "Drama"
+          ]
+      },
+      {
           "title": "The Penguin",
           "link": "https://emirati.top/tv/The Penguin 194764",
           "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hmIjNwPRv01eVW1aLrP0A4WvFCC.jpg",
