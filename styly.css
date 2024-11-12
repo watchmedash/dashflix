@@ -42,11 +42,6 @@
   transition: background 200ms; /* Transition for background color */
 }
 
-.channel:hover {
-  transform: translateY(-5px) scale(1.02); /* Hover effect to lift the card */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
-}
-
 .channel-title {
   font-weight: 800;
 }
@@ -80,10 +75,6 @@
   transition: transform 250ms; /* Transition for transform */
 }
 
-.player-wrapper:hover {
-  transform: scale(1.02); /* Slightly enlarge on hover */
-}
-
 .sticky {
   position: sticky;
   top: var(--space-sm);
@@ -100,10 +91,6 @@
   width: 100%;
   object-fit: contain;
   transition: transform 250ms; /* Transition for video transform */
-}
-
-.video-wrapper:hover video {
-  transform: scale(1.05); /* Slight zoom effect on video hover */
 }
 
 @media (max-width: 768px) {
