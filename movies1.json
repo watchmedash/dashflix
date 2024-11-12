@@ -31,6 +31,29 @@
             "genres": []
       },
       {
+          "title": "Magpie",
+          "link": "https://emirati.top/movies/Magpie",
+          "image": "https://image.tmdb.org/t/p/original/1xhUREF5ZhO0KXkrH2obfyFPLZ1.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Thriller",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Daddys Head",
+          "link": "https://emirati.top/movies/Daddys Head",
+          "image": "https://image.tmdb.org/t/p/original/nEWbEBs8BalwasA4Un8rll3kauT.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror"
+          ]
+      },
+      {
           "title": "The Wild Robot",
           "link": "https://emirati.top/movies/The Wild Robot",
           "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
