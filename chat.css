@@ -1,0 +1,115 @@
+.chat-widget-container {
+    width: 97%; /* Increased width to 80% of the viewport */
+    max-width: 90vw; /* Maximum width for smaller screens */
+    height: 600px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #e0e0e0; /* Default text color */
+}
+
+.chat-title {
+    text-align: center;
+    font-size: 1.5em;
+    color: #f0f0f0; /* Light title color */
+    font-weight: bold; /* Bold for prominence */
+    letter-spacing: 1px; /* Slight letter spacing */
+    position: relative;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    font-size: 1em;
+    background-color: #2a2a2a;
+    color: #d3d3d3; /* Lighter text for messages */
+    border-top: 1px solid #333; /* Subtle border for separation */
+    scrollbar-width: thin;
+    scrollbar-color: #666 #2a2a2a;
+}
+
+/* Styling individual messages */
+.chat-messages div {
+    padding: 10px;
+    border-radius: 6px;
+    background: #3c3c3c;
+    margin-bottom: 8px;
+    color: #f5f5f5;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Adds depth to messages */
+    transition: background-color 0.3s;
+}
+
+.chat-messages div:hover {
+    background-color: #4a4a4a;
+}
+
+/* Styling the username */
+.chat-messages div strong {
+    font-size: 0.9em;
+    color: #caf9e5;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+#chatUsername {
+    width: 25%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+#chatMessage {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+#chatMessage::placeholder {
+    color: #aaa;
+}
+
+.chat-input button {
+    padding: 8px;
+    width: 80px; /* Reduced button width */
+    background-color: #5a5a5a;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #777;
+}
+
+.spoiler {
+    background-color: #333;
+    color: #333;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 0 2px;
+    transition: color 0.3s;
+}
+
+.spoiler:hover {
+    color: #f5f5f5;
+}
