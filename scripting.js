@@ -5,7 +5,7 @@ let currentMovieId = null;  // Store the currently playing movie's ID
 const apiKey = '4f599baa15d072c9de346b2816a131b8';  // Add your TMDB API key
 
 // Blocked movie IDs
-const blockedMovieIds = [1163258, 1163258]; // Replace with the movie IDs you want to block
+const blockedMovieIds = [1163258, 179387];
 
 // Function to load data from the TMDB API
 async function loadChannelData() {
@@ -117,12 +117,12 @@ function renderChannels(channelData) {
     const markup = `
       <li class="channel">
         <div class="handle">☰</div>
-        <button class="play-channel" title="${channel.title}" data-url="${channel.url}">
-          <div class="thumbnail-wrapper">
-            <img class="channel-poster" src="${channel.image}" loading="lazy"> <!-- Lazy load attribute -->
-            <div class="play-icon">▶</div> <!-- Play icon -->
-          </div>
-        </button>
+        <div class="play-channel" title="${channel.title}" data-url="${channel.url}">
+  <div class="thumbnail-wrapper">
+    <img class="channel-poster" src="${channel.image}" loading="lazy">
+    <div class="play-icon">▶</div>
+  </div>
+</div>
         <div class="channel-info">
           <div class="channel-title" data-url="${channel.url}">${channel.title}</div>
           <div class="channel-plot">${channel.plot.substring(0, 100)}...</div> <!-- Snippet of the plot -->
