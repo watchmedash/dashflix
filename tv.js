@@ -92,35 +92,23 @@ function renderChannels(channelData) {
   channelData.forEach((channel) => {
     const markup = `
       <li class="channel">
-        <button class="play-channel" title="${channel.title}" data-id="${channel.tmdb_id}">
-          <div class="thumbnail-wrapper">
-            <img class="channel-poster" src="${channel.image}" loading="lazy">
-            <div class="play-icon">▶</div>
-          </div>
-        </button>
-        <div class="channel-info">
-          <div class="channel-title" data-id="${channel.tmdb_id}">${channel.title}</div>
-          <div class="channel-plot">${channel.plot.substring(0, 100)}...</div>
-          <div class="channel-release-year">${channel.firstAirYear}</div>
+      <div class="play-channel" data-id="${channel.tmdb_id}">
+        <div class="thumbnail-wrapper">
+          <img class="channel-poster" src="${channel.image}" loading="lazy">
+          <div class="play-icon">▶</div>
         </div>
+      </div>
       </li>
     `;
     channelList.insertAdjacentHTML("beforeend", markup);
   });
 
   const channelPlays = document.querySelectorAll(".play-channel");
-  const channelTitles = document.querySelectorAll(".channel-title");
 
   channelPlays.forEach((channelPlay) => {
     channelPlay.addEventListener("click", (e) => {
       e.stopPropagation();
       loadSeasonsAndEpisodes(channelPlay.dataset.id);
-    });
-  });
-
-  channelTitles.forEach((channelTitle) => {
-    channelTitle.addEventListener("click", () => {
-      loadSeasonsAndEpisodes(channelTitle.dataset.id);
     });
   });
 }
