@@ -1,226 +1,228 @@
-let e = 1;
-let t = [];
-const n = "4f599baa15d072c9de346b2816a131b8";
-let currentSource = "vidsrc";
+const showIds = [124364, 194764, 94605, 203857, 113962, 73586, 100757, 125988, 273081, 154084, 138501, 116799, 153312, 227496, 107113, 136311, 225634, 243396, 211684, 250923, 1416, 79744, 111800, 247721, 2734, 4057, 1413, 136315];
+let allChannelData = [];
 let currentShowId = null;
 let currentSeason = 1;
 let currentEpisode = 1;
-let totalSeasons = 0;
-let episodeCount = 0;
-let tmdbIds = [];
-let loadedShows = [];
-let loadedShowCount = 0;
+const apiKey = '4f599baa15d072c9de346b2816a131b8';
 
-async function loadTmdbIds() {
-    const response = await fetch('tmdb_ids.json');
+const blockedShowIds = [81329, 94722, 112470, 231344, 256121, 257064, 4682, 248890, 18770, 249010, 237243, 261033, 237019, 243084, 237478, 252373,72879, 274260, 274136, 242722, 91759, 256429, 255150, 206559, 45789, 235484, 234811, 235493, 262364, 212907, 239526, 262831, 242101, 240440, 242931, 242099, 243117, 58141, 239389, 2912, 247885, 154828, 59941, 2051, 95897, 261791, 236994, 12409, 231962, 136166, 2224, 210078, 156899, 13945, 234226];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+async function loadChannelData() {
+  try {
+    await loadShowsByIds();
+    shuffleArray(allChannelData);
+    renderChannels(allChannelData);
+
+    if (allChannelData.length > 0) {
+      const firstShow = allChannelData[0];
+      loadSeasonsAndEpisodes(firstShow.tmdb_id);
+    }
+
+    const loadMoreButton = document.querySelector("#load-more");
+    if (loadMoreButton) {
+      loadMoreButton.style.display = "none";
+    }
+
+    const searchBox = document.querySelector("#search-box");
+    const clearSearchButton = document.querySelector("#clear-search");
+
+    if (searchBox) {
+      searchBox.addEventListener("input", (event) => {
+        if (event.target.value.length > 0) {
+          searchDatabase(event.target.value);
+          clearSearchButton.style.display = "inline-block";
+        } else {
+          clearSearchButton.style.display = "none";
+          renderChannels(allChannelData);
+        }
+      });
+    }
+
+    if (clearSearchButton) {
+      clearSearchButton.addEventListener("click", () => {
+        document.querySelector("#search-box").value = "";
+        clearSearchButton.style.display = "none";
+        renderChannels(allChannelData);
+      });
+    }
+
+  } catch (error) {
+    console.error('Error loading channel data:', error);
+    alert('Unable to load data. Please try again later.');
+  }
+}
+
+async function loadShowsByIds() {
+  for (const showId of showIds) {
+    const url = `https://api.themoviedb.org/3/tv/${showId}?api_key=${apiKey}`;
+
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const channelData = {
+        title: data.name,
+        tmdb_id: data.id,
+        image: `https://image.tmdb.org/t/p/original${data.poster_path}`,
+        plot: data.overview,
+        firstAirYear: data.first_air_date ? data.first_air_date.split('-')[0] : '',
+      };
+
+      if (!blockedShowIds.includes(channelData.tmdb_id)) {
+        allChannelData.push(channelData);
+      }
+
+    } catch (error) {
+      console.error(`Error loading data for show ID ${showId}:`, error);
+    }
+  }
+}
+
+function renderChannels(channelData) {
+  const channelList = document.querySelector(".channel-list");
+  channelList.innerHTML = "";
+
+  channelData.forEach((channel) => {
+    const markup = `
+      <li class="channel">
+        <button class="play-channel" title="${channel.title}" data-id="${channel.tmdb_id}">
+          <div class="thumbnail-wrapper">
+            <img class="channel-poster" src="${channel.image}" loading="lazy">
+            <div class="play-icon">▶</div>
+          </div>
+        </button>
+        <div class="channel-info">
+          <div class="channel-title" data-id="${channel.tmdb_id}">${channel.title}</div>
+          <div class="channel-plot">${channel.plot.substring(0, 100)}...</div>
+          <div class="channel-release-year">${channel.firstAirYear}</div>
+        </div>
+      </li>
+    `;
+    channelList.insertAdjacentHTML("beforeend", markup);
+  });
+
+  const channelPlays = document.querySelectorAll(".play-channel");
+  const channelTitles = document.querySelectorAll(".channel-title");
+
+  channelPlays.forEach((channelPlay) => {
+    channelPlay.addEventListener("click", (e) => {
+      e.stopPropagation();
+      loadSeasonsAndEpisodes(channelPlay.dataset.id);
+    });
+  });
+
+  channelTitles.forEach((channelTitle) => {
+    channelTitle.addEventListener("click", () => {
+      loadSeasonsAndEpisodes(channelTitle.dataset.id);
+    });
+  });
+}
+
+async function searchDatabase(query) {
+  const url = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${encodeURIComponent(query)}&page=1`;
+
+  try {
+    const response = await fetch(url);
     const data = await response.json();
-    tmdbIds = data.ids;
+
+    const searchResults = data.results.map(show => ({
+      title: show.name,
+      tmdb_id: show.id,
+      image: `https://image.tmdb.org/t/p/original${show.poster_path}`,
+      plot: show.overview,
+      firstAirYear: show.first_air_date ? show.first_air_date.split('-')[0] : '',
+    }));
+
+    renderChannels(searchResults);
+  } catch (error) {
+    console.error('Error searching TMDB:', error);
+  }
 }
 
-async function loadShows(ids) {
-    const spinnet = document.getElementById("spinnet");
-    spinnet.style.display = "block";
-    for (let i = loadedShowCount; i < ids.length; i++) {
-        const id = ids[i];
-        const url = `https://api.themoviedb.org/3/tv/${id}?api_key=${n}`;
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const e = await response.json();
-            if (e) {
-                const show = {
-                    title: e.name,
-                    url: getVideoUrl(e.id, currentSeason, currentEpisode),
-                    image: `https://image.tmdb.org/t/p/original${e.poster_path}`,
-                    plot: e.overview,
-                    releaseYear: e.first_air_date.split("-")[0],
-                    id: e.id
-                };
-                t.push(show);
-                loadedShows.push(show.title.toLowerCase());
-            }
-        } catch (error) {
-            console.error(`Error loading show with ID ${id}:`, error.message);
-        }
-    }
-    loadedShowCount = ids.length;
-    displayShows(t);
-    spinnet.style.display = "none";
+async function loadSeasonsAndEpisodes(showId) {
+  currentShowId = showId;
+
+  const url = `https://api.themoviedb.org/3/tv/${showId}?api_key=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const seasons = data.seasons.filter(season => season.air_date);
+    displaySeasons(seasons);
+  } catch (error) {
+    console.error('Error loading seasons:', error);
+  }
 }
 
-async function searchTmdbShows(query) {
-    const filteredShows = t.filter(show => show.title.toLowerCase().includes(query.toLowerCase()));
-    displayShows(filteredShows);
+function displaySeasons(seasons) {
+  const seasonSelect = document.querySelector("#season-select");
+  seasonSelect.innerHTML = "";
+
+  seasons.forEach((season, index) => {
+    const option = document.createElement("option");
+    option.value = season.season_number;
+    option.textContent = `Season ${index + 1}`;
+    seasonSelect.appendChild(option);
+  });
+
+  seasonSelect.addEventListener("change", () => {
+    currentSeason = seasonSelect.value;
+    loadEpisodes(currentShowId, currentSeason);
+  });
+
+  currentSeason = seasons[0].season_number;
+  loadEpisodes(currentShowId, currentSeason);
 }
 
-function getVideoUrl(showId, season, episode) {
-    return `https://vidsrc.xyz/embed/tv/${showId}/${season}/${episode}`;
+async function loadEpisodes(showId, seasonNumber) {
+  const url = `https://api.themoviedb.org/3/tv/${showId}/season/${seasonNumber}?api_key=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const episodes = data.episodes.filter(episode => new Date(episode.air_date) <= new Date());
+    displayEpisodes(episodes);
+  } catch (error) {
+    console.error('Error loading episodes:', error);
+  }
 }
 
-async function fetchSeasonAndEpisodeCount(showId) {
-    const url = `https://api.themoviedb.org/3/tv/${showId}?api_key=${n}`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        totalSeasons = data.seasons.length;
-        const seasonSelect = document.getElementById("season-select");
-        seasonSelect.innerHTML = "";
-        for (let i = 0; i < totalSeasons; i++) {
-            const seasonNumber = data.seasons[i].season_number;
-            const option = document.createElement("option");
-            option.value = seasonNumber;
-            option.textContent = `Season ${seasonNumber}`;
-            seasonSelect.appendChild(option);
-        }
-        seasonSelect.disabled = false;
-        seasonSelect.value = currentSeason;
-        await fetchEpisodes(showId, currentSeason);
-    } catch (error) {
-        console.error("Error fetching season and episode count:", error);
-    }
+function displayEpisodes(episodes) {
+  const episodeSelect = document.querySelector("#episode-select");
+  episodeSelect.innerHTML = "";
+
+  episodes.forEach(episode => {
+    const option = document.createElement("option");
+    option.value = episode.episode_number;
+    option.textContent = `Episode ${episode.episode_number}: ${episode.name}`;
+    episodeSelect.appendChild(option);
+  });
+
+  episodeSelect.addEventListener("change", () => {
+    currentEpisode = episodeSelect.value;
+    loadStream(currentShowId, currentSeason, currentEpisode);
+  });
+
+  currentEpisode = episodes[0].episode_number;
+  loadStream(currentShowId, currentSeason, currentEpisode);
 }
 
-async function fetchEpisodes(showId, season) {
-    const url = `https://api.themoviedb.org/3/tv/${showId}/season/${season}?api_key=${n}`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        episodeCount = data.episodes.length;
-        const episodeSelect = document.getElementById("episode-select");
-        episodeSelect.innerHTML = "";
-        const airedEpisodes = data.episodes.filter(episode => {
-            const airDate = new Date(episode.air_date);
-            return airDate <= new Date();
-        });
-        airedEpisodes.forEach(episode => {
-            const episodeNumber = episode.episode_number;
-            const option = document.createElement("option");
-            option.value = episodeNumber;
-            option.textContent = `Episode ${episodeNumber}`;
-            episodeSelect.appendChild(option);
-        });
-        episodeSelect.disabled = airedEpisodes.length === 0;
-        episodeSelect.value = airedEpisodes.length > 0 ? airedEpisodes[0].episode_number : "";
-    } catch (error) {
-        console.error("Error fetching episodes:", error);
-    }
+function loadStream(showId, season, episode) {
+  const url = `https://vidsrc.xyz/embed/tv?tmdb=${showId}&season=${season}&episode=${episode}`;
+
+  const video = document.querySelector("#player");
+  video.src = url;
+
+  video.scrollIntoView({ behavior: "smooth" });
 }
 
-function displayShows(shows) {
-    console.log(`Displaying ${shows.length} shows...`);
-    const channelList = document.querySelector(".channel-list");
-    channelList.innerHTML = "";
-    shows.forEach(e => {
-        const showHTML = `<li class="channel">
-            <div class="handle">☰</div>
-            <div class="play-channel" title="${e.title}" data-id="${e.id}">
-                <div class="channel-title" data-id="${e.id}">${e.title}</div>
-            </div>
-        </li>`;
-        channelList.insertAdjacentHTML("beforeend", showHTML);
-    });
-    addPlayButtonListeners();
-}
-
-function playShow(show) {
-    const url = getVideoUrl(show.id, currentSeason, currentEpisode);
-    const player = document.querySelector("#player");
-    const channelPlaying = document.querySelector("#channel-playing");
-    const showPlot = document.querySelector("#tv-show-plot");
-    player.src = url;
-    channelPlaying.textContent = show.title;
-    showPlot.textContent = show.plot;
-    player.scrollIntoView({ behavior: "smooth" });
-    currentShowId = show.id;
-}
-
-function addPlayButtonListeners() {
-    const playButtons = document.querySelectorAll(".play-channel");
-    playButtons.forEach(button => {
-        button.addEventListener("click", async (event) => {
-            event.stopPropagation();
-            const showId = button.getAttribute("data-id");
-            const show = t.find(m => m.id == showId);
-            if (show) {
-                await fetchSeasonAndEpisodeCount(show.id);
-                playShow(show);
-            }
-        });
-    });
-}
-
-function sortShowsAlphabetically() {
-    const sortedShows = [...t].sort((a, b) => a.title.localeCompare(b.title));
-    displayShows(sortedShows);
-}
-
-function sortShowsByStartingLetter(letter) {
-    if (letter) {
-        const filteredShows = t.filter(show => show.title.toUpperCase().startsWith(letter));
-        const sortedShows = filteredShows.sort((a, b) => a.title.localeCompare(b.title));
-        displayShows(sortedShows);
-    } else {
-        displayShows(t);
-    }
-}
-
-document.getElementById("season-select").addEventListener("change", async (event) => {
-    currentSeason = event.target.value;
-    await fetchEpisodes(currentShowId, currentSeason);
-    const episodeSelect = document.getElementById("episode-select");
-    if (episodeSelect.options.length > 0) {
-        episodeSelect.value = episodeSelect.options[0].value;
-        currentEpisode = episodeSelect.value;
-        const show = t.find(m => m.id == currentShowId);
-        if (show) {
-            playShow(show);
-        }
-    }
-});
-
-document.getElementById("episode-select").addEventListener("change", (event) => {
-    currentEpisode = event.target.value;
-    if (currentShowId) {
-        const show = t.find(m => m.id == currentShowId);
-        if (show) {
-            playShow(show);
-        }
-    }
-});
-
-const searchBox = document.querySelector("#search-box");
-const clearSearchButton = document.querySelector("#clear-search");
-const sortAlphabeticallyButton = document.querySelector("#sort-alphabetically");
-const sortByLetterButton = document.querySelector("#sort-by-letter");
-
-searchBox.addEventListener("input", async () => {
-    const query = searchBox.value.toLowerCase();
-    if (query.length >= 3) {
-        await searchTmdbShows(query);
-    } else {
-        displayShows(t);
-    }
-    clearSearchButton.style.display = query ? "inline" : "none";
-});
-
-clearSearchButton.addEventListener("click", () => {
-    searchBox.value = "";
-    clearSearchButton.style.display = "none";
-    displayShows(t);
-});
-
-sortAlphabeticallyButton.addEventListener("click", sortShowsAlphabetically);
-
-sortByLetterButton.addEventListener("change", (event) => {
-    const selectedLetter = event.target.value.toUpperCase();
-    sortShowsByStartingLetter(selectedLetter);
-});
-
-(async function() {
-    try {
-        await loadTmdbIds();
-        await loadShows(tmdbIds);
-    } catch (error) {
-        console.error("Error initializing show loader:", error);
-    }
-})();
+document.addEventListener("DOMContentLoaded", loadChannelData);

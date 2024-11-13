@@ -1,229 +1,203 @@
-.spinnet {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    /* Centering styles */
-    position: fixed;
+.tedda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+.tedda > * {
+    max-width: 100%;
+    flex-shrink: 1;
+}
+
+input, select, button {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px 0;
+    width: 350px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li {
+    flex: 1 1 200px;
+    background-color: #1f1f1f;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.channel-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+.channel-list li {
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.channel-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.channel-list li:hover {
+    transform: scale(1.05);
+}
+
+.channel-title {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+.thumbnail-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.channel-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.play-icon {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1000; /* Ensures the spinner appears above other content */
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-:root {
-    --border-radius: 8px; /* Rounded corners */
-    --border-width: 1px; /* Border width */
-    --space-sm: 10px; /* Small spacing */
-}
-
-/* General Layout */
-.channel-layout {
+    font-size: 2em;
+    color: #ffffff;
     display: flex;
-    min-height: 100vh;
-    background-color: #121212; /* Dark background for the layout */
-    color: #e0e0e0; /* Light text color */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.channel-layout > * {
-    flex-basis: 100%; /* Allow all children to take full width */
+.thumbnail-wrapper:hover .play-icon {
+    opacity: 1;
 }
 
-/* Channel List Wrapper */
-.channel-list-wrapper {
-    padding: var(--space-sm);
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for less intensity */
 }
 
-.channel-list-wrapper h1 {
-    font-size: 1.75rem;
-    color: #f5f5f5; /* Light header color */
+.modal-content {
+    background-color: #f9c74f; /* Softer warning yellow */
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #f8b400; /* Softer orange border */
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+    border-radius: 8px; /* Rounded corners */
+    color: #333; /* Dark text for readability */
 }
 
-/* Channel Item */
-.channel {
-  display: flex; /* Use flex to align items */
-  align-items: center; /* Center vertically */
-  background: #1e1e1e; /* Dark background for items */
-  margin: 0.5rem 0; /* Vertical margin between items */
-  padding: 0.5rem; /* Inner padding */
-  border-radius: var(--border-radius); /* Rounded corners */
-  transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
-  border: var(--border-width) solid #1e1e1e; /* Border */
-  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.15); /* Subtle shadow */
-}
-
-/* Channel Title */
-.channel-title {
-  font-weight: 800; /* Bold title */
-  color: #ffffff; /* White title color */
-  white-space: normal; /* Allow text to wrap normally */
-  overflow: visible; /* Allow overflow to be visible */
-  text-overflow: clip; /* No ellipsis for overflow */
-  margin: 0; /* Remove margin to prevent button-like appearance */
-  cursor: default; /* Default cursor to prevent button effect */
-}
-
-/* Additional Styles */
-.channel:hover {
-  transform: scale(1.02); /* Scale effect on hover */
-  box-shadow: 0 0 0.75rem rgba(255, 255, 255, 0.25); /* Shadow effect on hover */
-}
-
-
-/* Handle for Resizing */
-.handle {
-    text-align: center; /* Center the handle */
-    opacity: 0.5; /* Faded appearance */
-    cursor: ns-resize; /* Vertical resize cursor */
-}
-
-/* Player Wrapper */
-.player-wrapper {
-    background: #181818; /* Darker background for player */
-    padding: var(--space-sm); /* Inner padding */
-    box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.2); /* Shadow for player */
-    border-radius: var(--border-radius); /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-/* Video Wrapper */
-.video-wrapper {
-    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-    border-radius: var(--border-radius); /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
-    width: 100%; /* Full width */
-    max-width: 800px; /* Max width */
-    margin: 0 auto; /* Centering */
-}
-
-.video-wrapper iframe {
-    height: 100%; /* Full height for iframe */
-    width: 100%; /* Full width for iframe */
-    border: none; /* No border */
-    object-fit: cover; /* Cover mode */
-}
-
-/* Thumbnail Wrapper */
-.thumbnail-wrapper {
-    position: relative; /* Position relative for child elements */
-}
-
-/* Channel Poster */
-.channel-poster {
-    width: 100%; /* Full width */
-    border-radius: var(--border-radius); /* Rounded corners */
-    filter: brightness(0.8); /* Dimmed brightness */
-    transition: filter 0.3s; /* Smooth transition for filter */
-}
-
-/* Play Icon */
-.play-icon {
-    position: absolute; /* Absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center adjustment */
-    font-size: 2rem; /* Icon size */
-    color: rgba(255, 255, 255, 0.7); /* Faded color */
-    opacity: 0; /* Hidden initially */
-    transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
-}
-
-/* Play Channel */
-.play-channel {
-    cursor: pointer; /* Change cursor to pointer for clickable behavior */
-    /* No default button styles */
-    background: transparent; /* Ensure background is transparent */
-}
-
-/* Remove any button-like hover styles */
-.play-channel:hover .channel-title {
-    background: transparent; /* Keep background transparent on hover */
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .channel-layout {
-        flex-direction: column; /* Stack elements vertically */
-    }
-
-    .player-wrapper {
-        width: 90%; /* Full width for player on mobile */
-        margin: 0 auto; /* Centering */
-        order: -1; /* Reorder player */
-    }
-
-    .channel-list-wrapper {
-        width: 100%; /* Full width for list */
-    }
-}
-
-/* Animations */
-@keyframes neonPulse {
-    0%, 100% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.25), 0 0 10px rgba(255, 255, 255, 0.25), 0 0 15px rgba(255, 255, 255, 0.25); /* Glow effect */
-    }
-    50% {
-        box-shadow: 0 0 7.5px rgba(255, 255, 255, 0.25), 0 0 15px rgba(255, 255, 255, 0.25), 0 0 22.5px rgba(255, 255, 255, 0.25); /* Increased glow */
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Start invisible */
-        transform: translateY(20px); /* Slide in */
-    }
-    to {
-        opacity: 1; /* Fully visible */
-        transform: translateY(0); /* No translation */
-    }
-}
-
-/* Fade In Animation for Elements */
-.channel,
-.player-wrapper,
-.thumbnail-wrapper {
-    animation: fadeIn 0.5s ease-out; /* Fade in effect */
-}
-
-/* Search Box Styles */
-#search-box {
-    width: 100%; /* Full width */
-    padding: 10px 15px; /* Inner padding */
-    border: none; /* No border */
-    border-radius: var(--border-radius); /* Rounded corners */
-    background-color: #2a2a2a; /* Dark background */
-    color: #e0e0e0; /* Light text color */
-    font-size: 1rem; /* Font size */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transition effects */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Light shadow */
-}
-
-#search-box:focus {
-    outline: none; /* Remove outline */
-    background-color: #3a3a3a; /* Darker background on focus */
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Maintain shadow */
-}
-
-/* Clear Search Button Styles */
-#clear-search {
-    background: none; /* No background */
-    border: none; /* No border */
-    color: rgba(255, 255, 255, 0.7); /* Faded color */
-    font-size: 1rem; /* Font size */
+button {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray button color for a softer touch */
+    color: #ffffff; /* Light text color */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor */
-    display: none; /* Hidden initially */
-    transition: color 0.3s; /* Color transition */
 }
 
-#clear-search:hover {
-    color: #ffffff; /* Full color on hover */
+button:hover {
+    background-color: #5a6268; /* Darker gray shade on hover */
+}
+
+.image-contained {
+width: 100%;
+overflow: hidden;
+}
+
+.image-contained img {
+width: 100%;
+height: auto;
+display: block; /* This ensures the image behaves as a block element */
 }
