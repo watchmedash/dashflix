@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Play Button Style */
+        .play-btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .play-btn {
+            font-size: 100px;
+            color: #66ff66;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .player-container {
+            text-align: center;
+            background: #1e1e1e;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            width: 320px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: none; /* Hide the player initially */
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #66ff66;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        audio {
+            width: 100%;
+            height: 4px;
+            opacity: 0;
+        }
+
+        .status-bar {
+            margin-top: 15px;
+            width: 100%;
+            max-width: 300px;
+            background: #333;
+            border-radius: 10px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-display {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .seek-bar {
+            width: 100%;
+            height: 6px;
+            background: #444;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .seek-bar input {
+            width: 100%;
+            background: transparent;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 6px;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .seek-bar input::-webkit-slider-runnable-track {
+            background: #666;
+            height: 6px;
+        }
+
+        .seek-bar input::-webkit-slider-thumb {
+            background: #66ff66;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        .seek-bar input::-moz-range-track {
+            background: #666;
+            height: 6px;
+        }
+
+        .seek-bar input::-moz-range-thumb {
+            background: #66ff66;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .controls button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .controls button:hover {
+            background: #66ff66;
+            transform: scale(1.2);
+        }
+
+        .controls button:active {
+            transform: scale(0.9);
+        }
+
+        .controls button#shuffleBtn {
+            background: #444;
+        }
+
+        .controls button#shuffleBtn.active {
+            background: #ff6600;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="play-btn-container">
+        <button class="play-btn" id="bigPlayBtn"><i class="fas fa-play"></i></button>
+    </div>
+
+    <div class="player-container" id="playerContainer">
+        <audio id="audioPlayer" preload="auto">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="status-bar">
+            <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
+            <div class="seek-bar">
+                <input type="range" id="seekBar" value="0" max="100" step="1">
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn"><i class="fas fa-backward"></i></button>
+            <button id="playPauseBtn"><i class="fas fa-play"></i></button>
+            <button id="nextBtn"><i class="fas fa-forward"></i></button>
+            <button id="shuffleBtn"><i class="fas fa-random"></i></button>
+        </div>
+    </div>
+
+    <script>
+        let currentTrack = 0; // Index of the current track
+        let isShuffle = false; // Shuffle mode flag
+        let mp3Links = [];
+
+        // Load the JSON file with MP3 links and shuffle the tracks
+        fetch('mp3_links.json')
+            .then(response => response.json())
+            .then(data => {
+                mp3Links = shuffleArray(data.mp3_links);
+                loadTrack(currentTrack);
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+
+        // Function to shuffle the array
+        function shuffleArray(array) {
+            let shuffledArray = array.slice();
+            for (let i = shuffledArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+            }
+            return shuffledArray;
+        }
+
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const shuffleBtn = document.getElementById('shuffleBtn');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const seekBar = document.getElementById('seekBar');
+        const bigPlayBtn = document.getElementById('bigPlayBtn');
+        const playerContainer = document.getElementById('playerContainer');
+
+        // Show the player when the big play button is clicked
+        bigPlayBtn.addEventListener('click', () => {
+            document.querySelector('.play-btn-container').style.display = 'none';
+            playerContainer.style.display = 'block';
+            audioPlayer.play();
+            playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        });
+
+        // Play/Pause toggle
+        playPauseBtn.addEventListener('click', () => {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audioPlayer.pause();
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+
+        // Load the track based on the index
+        function loadTrack(index) {
+            if (index < 0) {
+                currentTrack = mp3Links.length - 1;
+            } else if (index >= mp3Links.length) {
+                currentTrack = 0;
+            } else {
+                currentTrack = index;
+            }
+            audioPlayer.src = mp3Links[currentTrack];
+            audioPlayer.play();
+            updateTimeDisplay();
+        }
+
+        // Update time display and seek bar
+        function updateTimeDisplay() {
+            setInterval(() => {
+                const currentTime = audioPlayer.currentTime;
+                const duration = audioPlayer.duration;
+                const elapsed = formatTime(currentTime);
+                const total = formatTime(duration);
+                timeDisplay.textContent = `${elapsed} / ${total}`;
+
+                const progress = (currentTime / duration) * 100;
+                seekBar.value = progress;
+            }, 1000);
+        }
+
+        // Format time from seconds to mm:ss
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs < 10 ? '0' + secs : secs}`;
+        }
+
+        // Seek Bar Interaction
+        seekBar.addEventListener('input', (event) => {
+            const seekTime = (audioPlayer.duration / 100) * event.target.value;
+            audioPlayer.currentTime = seekTime;
+        });
+
+        // Next track
+        nextBtn.addEventListener('click', () => {
+            if (isShuffle) {
+                currentTrack = Math.floor(Math.random() * mp3Links.length);
+            } else {
+                currentTrack++;
+            }
+            loadTrack(currentTrack);
+        });
+
+        // Previous track
+        prevBtn.addEventListener('click', () => {
+            if (isShuffle) {
+                currentTrack = Math.floor(Math.random() * mp3Links.length);
+            } else {
+                currentTrack--;
+            }
+            loadTrack(currentTrack);
+        });
+
+        // Shuffle Toggle
+        shuffleBtn.addEventListener('click', () => {
+            isShuffle = !isShuffle;
+            shuffleBtn.classList.toggle('active', isShuffle);
+        });
+
+    </script>
+</body>
+</html>
