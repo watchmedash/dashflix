@@ -1,160 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Watch free movies and TV series online at Dashflix. Discover a diverse library of genres, including classics, the latest releases, anime, live sports, and trending TV shows—all available for seamless streaming."/>
-  <meta name="keywords" content="Free Movies, Watch Free TV Series, Online Streaming, Movie Genres, Latest Releases, Classic Films, Watch Anime, Live Sports Streaming,Trending TV Shows, Drama Series, Action Movies, Comedy Films,
-    Horror Movies, Family Movies, Free Entertainment, Stream Movies Online,
-    Binge-Watch TV Series, Free Documentaries, Anime Series,
-    Watch Movies Anytime, Free Streaming, Stream Free Live News,
-    Popular TV Shows, Watch Online for Free, Free Movie Downloads,
-    Stream High-Quality Content, Latest Anime Episodes,
-    Movies for Free, TV Series Online, On-Demand Streaming,
-    Live Sports Coverage, Watch Movies Without Registration,
-    Top Rated Movies, Free Streaming Platform,
-    Discover Classic Movies, Best Anime Shows, Family-Friendly Streaming,
-    Free Movies HD, Free TV Show Episodes"/>
-  <meta name="robots" content="index, follow"/>
-  <meta property="og:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta property="og:description" content="Explore a world of free movies and TV series at Dashflix. Enjoy a variety of genres, from classics to the latest releases, anime, and live sports—all available for streaming anytime, anywhere."/>
-  <meta property="og:url" content="https://dashflix.top/movies"/>
-  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-  <meta property="og:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <meta name="twitter:description" content="Enjoy a vast selection of free movies and TV series online at Dashflix. From classics to the latest releases, discover your next favorite film or show—all available for streaming."/>
-  <meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-  <meta name="twitter:image:alt" content="Dashflix - Watch Free Movies and TV Series Online"/>
-  <link rel="canonical" href="https://dashflix.top/movies"/>
-  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
-  <title>Movies - Watch Free Movies and TV Series Online</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styling.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
-</head>
-<body oncontextmenu="return false;">
-  <main class="channel-layout">
-    <div class="player-wrapper">
-<p>Dear app users, you can also visit <a href="https://dashflix.top" target="_blank">dashflix.top</a> using any browser.</a></p>
-<p>Important Notice: If you encounter an error when entering full screen mode, simply exit and then re-enter full screen to resolve the issue.</p>
-      <div class="sticky">
-        <div class="video-wrapper">
-          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <label for="video-source">Select Video Source:</label>
-        <select id="video-source">
-            <option value="vidsrc">Server 1</option>
-            <option value="vidlink">Server 2</option>
-            <option value="2embed">Server 3</option>
-            <option value="icu">Server 4</option>
-            <option value="icu2">Server 5</option>
-            <option value="icu3">Server 6</option>
-        </select>
-        <div class="label">Now Playing</div>
-        <h2 id="channel-playing"></h2>
-        <div id="movie-plot" style="margin-top: 10px; font-size: 14px;"></div>
-      </div>
-    </div>
-<div class="channel-list-wrapper">
-<div class="sharethis-inline-share-buttons"></div>
-<input type="text" id="search-box" placeholder="Search movie...">
-<button id="clear-search" style="display: none;">Clear</button>
-<ul class="most-viewed-list"></ul>
-      <ul class="channel-list"></ul>
-      <button id="load-more">Load More</button>
-    </div>
-  </main>
-<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<script src="hls.js"></script>
-<script src="scripting.js"></script>
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="tvplus.html" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="shows.html" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="trailer.html" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
-  <a href="requested.html" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
-  <a href="#" class="nav-item" id="more-menu">
-    <i class="fas fa-ellipsis-h"></i> More
-  </a>
-
-  <div id="more-links" class="more-links">
-    <a href="https://freedomwall.top">
-      <i class="fas fa-otter"></i> Anime
-    </a>
-    <a href="https://dashtoons.xyz">
-      <i class="fas fa-book-open"></i> Comics
-    </a>
-    <a href="https://kabayan.top">
-      <i class="fas fa-theater-masks"></i> Drama
-    </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-        🔒 18+
-    </a>
-    <a href="appdown.html">
-      <i class="fas fa-mobile-alt"></i> APP
-    </a>
-  </div>
-</nav>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const moreMenu = document.getElementById('more-menu');
-    const moreLinks = document.getElementById('more-links');
-
-    moreMenu.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default anchor action
-      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-    });
-  });
-</script>
-
-<div class="modal" id="passwordModal">
-    <div class="modal-content">
-        <h2>Warning: This page contains adult content.</h2>
-        <p>Please enter GOBILAM to proceed:</p>
-        <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-        <button onclick="checkPassword()">Submit</button>
-        <button onclick="closeModal()">Cancel</button>
-    </div>
-</div>
-
-<script>
-    function showPasswordModal(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-    }
-
-    function closeModal() {
-        document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-    }
-
-    function checkPassword() {
-        const password = document.getElementById('passwordInput').value;
-        if (password === "GOBILAM") {
-            window.location.href = "adult.html"; // Redirect to the adult content page
-        } else {
-            alert("Incorrect password. Access denied."); // Alert for incorrect password
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Destination</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-</script>
 
-<script src="script.js"></script>
+        body {
+            background: #1c1c1c;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            padding: 50px;
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-in-out;
+            max-width: 90%;
+            width: 600px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #dcdcdc;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .option {
+            background: #333;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        .option:hover {
+            background: #444;
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+        }
+
+        .option i {
+            font-size: 3em;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .option:hover i {
+            transform: translateY(-5px);
+        }
+
+        .option span {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.5) 100%);
+            animation: moving-background 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moving-background {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                width: 90%;
+            }
+
+            .option {
+                width: 120px;
+                height: 120px;
+                font-size: 1em;
+            }
+
+            .option i {
+                font-size: 2.5em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <h1>Welcome to Dashflix</h1>
+        <div class="options-container">
+            <a href="movies.html" class="option">
+                <i class="fas fa-film"></i>
+                <span>Movies</span>
+            </a>
+            <a href="shows.html" class="option">
+                <i class="fas fa-tv"></i>
+                <span>TV Show</span>
+            </a>
+            <a href="tvplus.html" class="option">
+                <i class="fas fa-satellite-dish"></i> <!-- Changed the icon for Live TV -->
+                <span>Live TV</span>
+            </a>
+            <a href="requested.html" class="option">
+                <i class="fas fa-search"></i>
+                <span>Requested</span>
+            </a>
+            <a href="trailer.html" class="option">
+                <i class="fas fa-video"></i>
+                <span>Trailers</span>
+            </a>
+            <a href="index.html" class="option">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
