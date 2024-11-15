@@ -36,6 +36,18 @@
         ]
       },
       {
+          "title": "Un/Happy for You",
+          "link": "https://emirati.top/movies/UnHappy for You",
+          "image": "https://image.tmdb.org/t/p/original/wQ80tPzGP5gnrtoXV9JFWVlQVJL.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Romance",
+              "Drama"
+          ]
+      },
+      {
             "title": "Kabitan",
             "link": "https://emirati.top/movies/Kabitan",
             "image": "https://image.tmdb.org/t/p/original/gnlJ1gosGtWJCv90O8QIjOQw7Q6.jpg",
