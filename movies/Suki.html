@@ -1,38 +1,124 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Suki" property="og:title"/>
-<meta content="Explore a world of free movies and TV series online at Suki. Enjoy a variety of genres, from classics to the latest releases, all available for streaming." property="og:description"/>
-<meta content="https://nextflix.top/movies/Suki.html" property="og:url"/>
-<meta content="https://i.ibb.co/vmNgrbm/000000094.webp" property="og:image"/>
-<meta content="Watch free movies and TV series online with multiple genres at Suki. Discover classics and the latest releases for streaming." name="description"/>
-<meta content="Free movies, Watch free TV series, Online streaming, Suki, Movie genres, Latest releases, Classic films" name="keywords"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-<link href="https://i.postimg.cc/Z5SgSyzx/favicon-32x32.png" rel="icon" type="image/png"/>
-<link href="../styles.css" rel="stylesheet"/><link href=" " rel="stylesheet"/><link href="../video-js.css" rel="stylesheet"/>
-<title>
-   Suki
-  </title><meta content="origin" name="referrer"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link href="https://i.postimg.cc/Z5SgSyzx/favicon-32x32.png" rel="icon" type="image/png" />
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <title>Jake Paul vs. Mike Tyson</title>
+  <meta content="origin" name="referrer" />
+  <style>
+    /* General dark theme for the page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    /* Video player container */
+    .video-container {
+      position: relative;
+      width: 80%;
+      height: 450px; /* Adjust height as needed */
+      background-color: #000;
+      display: none; /* Initially hidden */
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Start Watching button */
+    .start-btn-container {
+      margin-bottom: 20px;
+    }
+
+    .start-btn {
+      background-color: #1e88e5;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .start-btn:hover {
+      background-color: #1565c0;
+    }
+
+    /* Home button styling */
+    .home-btn-container {
+      margin-top: 20px;
+    }
+
+    .home-btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body oncontextmenu="return false;">
-<div class="image-contained"><a href="https://anime-x.top"><img src="https://i.postimg.cc/wMqsKcWp/anime-ad.gif" alt="Watch Anime Online Free"></a></div>
-<div class="content">
-<h1>
-    Suki
-   </h1>
-</div>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; width: 95%; margin: 0 auto;">
-<iframe allow="autoplay" allowfullscreen="true" allowtransparency="true" frameborder="0" scrolling="no" src="https://filemoon.sx/e/0z0ppvk283yy" referrerpolicy="origin" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-</script>
-<script src="../video.min.js">
-</script>
-<div class="image-contained"><a href="https://dash-tv.com"><img src="https://i.postimg.cc/T11ZV59f/dash-tv-ad.gif" alt="Watch TV Shows Online Free"></a></div>
-<script src="../relate.js"></script>
-<script src="../defer-images.js"></script><div class="button-container"><a class="watch-now-bur" href="https://dashflix.top/contact">Report Error</a></div>
-<div class="button-container"><a class="watch-now-bur" href="https://dashflix.top/movies">Home</a></div>
+
+  <!-- Start Watching button -->
+  <div class="start-btn-container">
+    <a href="#" class="start-btn" id="startButton">Start Watching</a>
+  </div>
+
+  <!-- Video player container -->
+  <div class="video-container" id="videoContainer">
+    <video id="hls-player" class="video-js vjs-default-skin" controls preload="auto">
+      <source src="https://echocraft.store/live/box/chunks.m3u8?bongls.com" type="application/x-mpegURL" />
+    </video>
+  </div>
+
+  <!-- Home button -->
+  <div class="home-btn-container">
+    <a href="index.html" class="home-btn">Home</a>
+  </div>
+
+  <!-- Include Video.js and HLS.js -->
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"></script>
+
+  <script>
+    // Initialize the Video.js player
+    var player = videojs('hls-player', {
+      autoplay: false, // Don't autoplay initially
+      controls: true,
+      responsive: true,
+      fluid: true
+    });
+
+    // Show video player and start playing when the "Start Watching" button is clicked
+    document.getElementById('startButton').addEventListener('click', function() {
+      document.getElementById('videoContainer').style.display = 'block'; // Show video player
+      player.play(); // Start the video
+      this.style.display = 'none'; // Hide the "Start Watching" button
+    });
+
+    // Handle errors (optional)
+    player.on('error', function () {
+      console.error('Video.js Player Error:', player.error());
+    });
+  </script>
+
 </body>
 </html>
