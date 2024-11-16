@@ -1,0 +1,35 @@
+/* Container styling */
+.glowing-text-container {
+  background-color: #1e88e5;  /* Blue background for the container */
+  padding: 10px 0;
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Glowing effect */
+.glowing-text-container a {
+  color: #f5f5f5;
+  text-decoration: none;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #1e88e5, 0 0 20px #1e88e5, 0 0 25px #1e88e5;  /* Glowing effect */
+  animation: glow 1.5s ease-in-out infinite alternate;  /* Animate glow */
+}
+
+/* Define the glowing animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #1e88e5, 0 0 20px #1e88e5, 0 0 25px #1e88e5;  /* Initial glow */
+  }
+  50% {
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #1e88e5, 0 0 40px #1e88e5, 0 0 50px #1e88e5;  /* Stronger glow */
+  }
+  100% {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #1e88e5, 0 0 20px #1e88e5, 0 0 25px #1e88e5;  /* Return to initial glow */
+  }
+}
+
+/* Hover effect to change color */
+.glowing-text-container a:hover {
+  color: #ffeb3b;  /* Change to yellow when hovered */
+}
