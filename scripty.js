@@ -1,12 +1,5 @@
 const channelData = [
   {
-    title: "Jake Paul vs. Mike Tyson",
-    url:
-      "https://echocraft.store/live/box/chunks.m3u8?bongls.com",
-    image: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2024-11/241114-mike-tyson-slap-jake-paul-ac-1008p-f8b178.jpg",
-    language: "English"
-  },
-  {
     title: "BBC One",
     url:
       "https://rakuten-tvshows-1-eu.rakuten.wurl.tv/3000.m3u8",
