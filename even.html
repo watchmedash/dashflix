@@ -15,38 +15,60 @@
       background-color: #0a0a0a;
       color: #d1d1d1;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh; /* Ensure proper vertical centering */
       flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 20px; /* Adds space at the top */
     }
 
-    /* Video container with aspect ratio */
-    .video-container {
-      position: relative;
-      width: 85%; /* Adjust width as needed */
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      background-color: #1a1a1a;
-      border-radius: 10px;
-      overflow: hidden;
+    /* Styling for iframe with 16:9 aspect ratio */
+    iframe {
+      width: 75%; /* Adjust the width as needed */
+      aspect-ratio: 16 / 9; /* Enforces 16:9 aspect ratio */
+      border: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
 
-    /* Embedded iframe styling */
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
+    /* Spinner styling */
+    .spinner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+    }
+
+    .spinner i {
+      font-size: 50px;
+      color: #f5f5f5;
+    }
+
+    /* Dropdown and Home button container */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 15px; /* Space between dropdown and button */
+      margin-bottom: 20px;
+    }
+
+    /* Dropdown styling */
+    select {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+      background-color: #333;
+      color: #f5f5f5;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    select:focus {
+      outline: none;
     }
 
     /* Home button styling */
-    .home-btn-container {
-      margin-top: 20px;
-    }
-
     .home-btn {
       background-color: #1b1b1b;
       color: #f5f5f5;
@@ -62,27 +84,58 @@
       background-color: #333;
     }
   </style>
+
 </head>
 <body oncontextmenu="return false;">
 
-  <!-- Video player container -->
-  <div class="video-container">
-    <iframe
-      allow="autoplay"
-      allowfullscreen="true"
-      allowtransparency="true"
-      frameborder="0"
-      id="video-player"
-      referrerpolicy="origin"
-      scrolling="no"
-      src="https://vidsrc.me/embed/movie/tt31630905">
-    </iframe>
+  <!-- Video player iframe -->
+  <div class="spinner" id="spinner">
+    <i class="fas fa-spinner fa-spin"></i>
   </div>
+  <iframe
+    allow="autoplay"
+    allowfullscreen="true"
+    allowtransparency="true"
+    frameborder="0"
+    id="video-player"
+    referrerpolicy="origin"
+    scrolling="no"
+    src="https://vidsrc.me/embed/movie/1256599">
+  </iframe>
+  <!-- Dropdown and Home button container -->
+  <div class="controls">
+    <!-- Dropdown for video source selection -->
+    <select id="video-source" onchange="changeSource()">
+      <option value="https://vidsrc.me/embed/movie/1256599">Server 1</option>
+      <option value="https://embed.su/embed/movie/1256599">Server 2</option>
+      <option value="https://vidbinge.dev/embed/movie/1256599">Server 3</option>
+      <option value="https://vidsrc.vip/embed/movie/1256599">Server 4</option>
+      <option value="https://multiembed.mov/directstream.php?video_id=1256599&tmdb=1">Server 5</option>
+      <option value="https://vidlink.pro/movie/1256599">Server 6</option>
+    </select>
 
-  <!-- Home button -->
-  <div class="home-btn-container">
+    <!-- Home button -->
     <a href="index.html" class="home-btn">Home</a>
   </div>
+  <script>
+    // Function to update the iframe source when a new option is selected
+    function changeSource() {
+      const select = document.getElementById('video-source');
+      const iframe = document.getElementById('video-player');
+      const spinner = document.getElementById('spinner');
+
+      // Show the spinner
+      spinner.style.display = 'block';
+
+      // Wait for the iframe to reload before hiding the spinner
+      iframe.onload = () => {
+        spinner.style.display = 'none';
+      };
+
+      // Update iframe src with the selected value
+      iframe.src = select.value;
+    }
+  </script>
 
 </body>
 </html>
