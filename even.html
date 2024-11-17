@@ -23,7 +23,7 @@
 
     /* Styling for iframe with 16:9 aspect ratio */
     iframe {
-      width: 75%; /* Adjust the width as needed */
+      width: 85%; /* Adjust the width as needed */
       aspect-ratio: 16 / 9; /* Enforces 16:9 aspect ratio */
       border: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -39,6 +39,17 @@
       transform: translate(-50%, -50%);
       display: none;
     }
+
+    .about-container {
+  width: 85%; /* Set the width to 75% of the parent/container */
+  margin: 0 auto; /* Horizontally center the container */
+  display: flex; /* Optional: Allows more flexibility for children */
+  flex-direction: column; /* Stack child elements vertically */
+  align-items: center; /* Horizontally center content */
+  justify-content: center; /* Vertically center content */
+  height: 100vh; /* Ensures the container takes the full viewport height (if needed for vertical centering) */
+}
+
 
     .spinner i {
       font-size: 50px;
@@ -87,8 +98,7 @@
 
 </head>
 <body oncontextmenu="return false;">
-
-  <!-- Video player iframe -->
+<div class="about-container">
   <div class="spinner" id="spinner">
     <i class="fas fa-spinner fa-spin"></i>
   </div>
@@ -116,7 +126,7 @@
 
     <!-- Home button -->
     <a href="index.html" class="home-btn">Home</a>
-  </div>
+  </div>  </div>
   <script>
     // Function to update the iframe source when a new option is selected
     function changeSource() {
