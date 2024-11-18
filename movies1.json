@@ -1,6 +1,31 @@
 {
     "movies": [
       {
+          "title": "No Country for Old Men",
+          "link": "https://emirati.top/movies/No Country for Old Men",
+          "image": "https://image.tmdb.org/t/p/original/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2007",
+          "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "A Clockwork Orange",
+          "link": "https://emirati.top/movies/A Clockwork Orange",
+          "image": "https://image.tmdb.org/t/p/original/4sHeTAp65WrSSuc05nRBKddhBxO.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "1971",
+          "genres": [
+              "Science Fiction",
+              "Crime"
+          ]
+      },
+      {
           "title": "The Munsters",
           "link": "https://emirati.top/tv/The Munsters 1712",
           "image": "https://image.tmdb.org/t/p/original/4jkCx8m87aMA89X9KB9Adwgep2t.jpg",
@@ -800,7 +825,7 @@
       },
       {
           "title": "F-Buddies",
-          "link": "https://emirati.top/movies/F-Buddies",
+          "link": "https://emirati.top/movies/FBuddies",
           "image": "https://m.media-amazon.com/images/M/MV5BNjk4ZjRlZGYtM2I0NS00YzZmLTg4NDctODc5NmRmN2ExOWU5XkEyXkFqcGc@._V1_.jpg",
           "tag": "HD",
           "requested": true,
@@ -1710,7 +1735,7 @@
       },
       {
           "title": "Bisyo! Adik Ka Ba?",
-          "link": "https://emirati.top/movies/Bisyo! Adik Ka Ba",
+          "link": "https://emirati.top/movies/Bisyo Adik Ka Ba",
           "image": "https://i.postimg.cc/d3xsV8dn/000000238.webp",
           "tag": "HD",
           "requested": true,
