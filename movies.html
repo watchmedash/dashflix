@@ -31,7 +31,6 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>Movies - Watch Free Movies and TV Series Online</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="ann.css">
   <link rel="stylesheet" href="styling.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -40,9 +39,6 @@
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
 </head>
 <body oncontextmenu="return false;">
-  <div class="glowing-text-container">
-  <a href="even.html" target="_blank">Jake Paul vs. Mike Tyson fight now streaming on our site! Click here to watch!</a>
-  </div>
   <main class="channel-layout">
     <div class="player-wrapper">
 <p>Dear app users, you can also visit <a href="https://dashflix.top" target="_blank">dashflix.top</a> using any browser.</a></p>
@@ -67,7 +63,6 @@
     </div>
 <div class="channel-list-wrapper">
 <div class="sharethis-inline-share-buttons"></div>
-<div class="terra"><a href="https://www.buymeacoffee.com/dashflix"><img src="https://img.buymeacoffee.com/button-api/?text=Give pizza&emoji=🍕&slug=dashflix&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" /></a></div>
 <input type="text" id="search-box" placeholder="Search movie...">
 <button id="clear-search" style="display: none;">Clear</button>
 <ul class="most-viewed-list"></ul>
@@ -75,7 +70,6 @@
       <button id="load-more">Load More</button>
     </div>
   </main>
-  <div class="image-contained"><a href="https://perilastronaut.com/j8c7k8ra1?key=6c23fe9ed7bf6b4fcb14ee45c75355a1"><img src="https://i.postimg.cc/SQHwQk1k/9.gif" alt="Free 50 Dollars"></a></div>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="hls.js"></script>
@@ -118,19 +112,9 @@
     </a>
   </div>
 </nav>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const moreMenu = document.getElementById('more-menu');
-    const moreLinks = document.getElementById('more-links');
-
-    moreMenu.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default anchor action
-      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-    });
-  });
+document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
 </script>
-
 <div class="modal" id="passwordModal">
     <div class="modal-content">
         <h2>Warning: This page contains adult content.</h2>
@@ -140,28 +124,9 @@
         <button onclick="closeModal()">Cancel</button>
     </div>
 </div>
-
 <script>
-    function showPasswordModal(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-    }
-
-    function closeModal() {
-        document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-    }
-
-    function checkPassword() {
-        const password = document.getElementById('passwordInput').value;
-        if (password === "GOBILAM") {
-            window.location.href = "adult.html"; // Redirect to the adult content page
-        } else {
-            alert("Incorrect password. Access denied."); // Alert for incorrect password
-        }
-    }
+function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
 </script>
-
-<script src="snow.js"></script>
 <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 </body>
 </html>

@@ -42,38 +42,6 @@ button:hover {
     background-color: #5a6268; /* Darker gray shade on hover */
 }
 
-.snow-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Allow clicks to pass through */
-  overflow: hidden; /* Prevent scrollbar from appearing */
-  z-index: 9999; /* Make sure it's on top */
-}
-
-.snowflake {
-  position: absolute;
-  top: -10px; /* Start just above the viewport */
-  background-color: white; /* Snowflake color */
-  opacity: 0.8; /* Slight transparency */
-  border-radius: 50%; /* Make it round */
-  animation: fall linear infinite; /* Apply fall animation */
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) translateX(0); /* Start position */
-  }
-  50% {
-    transform: translateY(50vh) translateX(-15px); /* Move slightly left */
-  }
-  100% {
-    transform: translateY(100vh) translateX(15px); /* Move slightly right */
-  }
-}
-
 .spinner {
   position: absolute;
   top: 50%;
@@ -899,7 +867,7 @@ text-decoration: none;
 body {
 background: radial-gradient(circle at 20% 20%, #2E2E2E, #000000 70%);
 margin: 0;
-padding-bottom: 80px;
+padding-bottom: 100px;
 }
 
 .content {

@@ -17,8 +17,7 @@
     </head>
     <body>
       <div class="shoutbox-container">
-      <p>Please refrain from requesting movies that haven't been released yet.And before you request, please try searching it on movies section first if it's a movie and on the shows section if it's a tv show.</p>
-      <div class="messages" id="messages"></div>
+<div class="messages" id="messages"></div>
       <div class="message-input">
           <input type="text" id="usernameInput" placeholder="Title" required>
           <input type="text" id="messageInput" placeholder="Genre and Year" required>
@@ -27,67 +26,7 @@
   </div>
 
   <script>
-      let lastMessageId = null; // Track the latest message ID
-
-      // Function to load messages and update the message container
-async function loadMessages() {
-    try {
-        const response = await fetch("https://kabayan.top/shoutbox.php");
-        const messages = await response.json();
-        const messagesDiv = document.getElementById("messages");
-
-        // Check if user is at the bottom before loading new messages
-        const atBottom = isAtBottom(messagesDiv);
-
-        // Loop through messages and append only new ones
-        messages.forEach(msg => {
-            if (!document.getElementById(`message-${msg.id}`)) {
-                const messageElement = document.createElement("div");
-                messageElement.classList.add("message");
-                messageElement.id = `message-${msg.id}`;
-                messageElement.innerHTML = `<strong>${msg.username}</strong>: ${msg.message} <br><small>${msg.timestamp}</small>`;
-                messagesDiv.appendChild(messageElement);
-            }
-        });
-
-        // Scroll to bottom only if user was already at the bottom
-        if (atBottom) {
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-    } catch (error) {
-        console.error("Error loading messages:", error);
-    }
-}
-
-      function isAtBottom(element) {
-          return element.scrollHeight - element.scrollTop <= element.clientHeight + 1;
-      }
-
-      // Function to send a new message to the server
-      async function addMessage() {
-          const usernameInput = document.getElementById("usernameInput");
-          const messageInput = document.getElementById("messageInput");
-          const username = usernameInput.value.trim();
-          const message = messageInput.value.trim();
-
-          if (username && message) {
-              try {
-                  await fetch("https://kabayan.top/shoutbox.php", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                      body: `username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`
-                  });
-                  messageInput.value = "";
-                  loadMessages(); // Load messages after posting a new one
-              } catch (error) {
-                  console.error("Error sending message:", error);
-              }
-          }
-      }
-
-      // Initial load and periodic refresh every 5 seconds
-      loadMessages(); // Load initially
-      setInterval(loadMessages, 5000); // Refresh every 5 seconds
+  let lastMessageId=null;async function loadMessages(){try{const e=await fetch("https://kabayan.top/shoutbox.php"),t=await e.json(),s=document.getElementById("messages"),n=isAtBottom(s);t.forEach(e=>{if(!document.getElementById(`message-${e.id}`)){const t=document.createElement("div");t.classList.add("message"),t.id=`message-${e.id}`,t.innerHTML=`<strong>${e.username}</strong>: ${e.message} <br><small>${e.timestamp}</small>`,s.appendChild(t)}}),n&&(s.scrollTop=s.scrollHeight)}catch(e){console.error("Error loading messages:",e)}}function isAtBottom(e){return e.scrollHeight-e.scrollTop<=e.clientHeight+1}async function addMessage(){const e=document.getElementById("usernameInput"),t=document.getElementById("messageInput"),s=e.value.trim(),n=t.value.trim();if(s&&n)try{await fetch("https://kabayan.top/shoutbox.php",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:`username=${encodeURIComponent(s)}&message=${encodeURIComponent(n)}`}),t.value="",loadMessages()}catch(e){console.error("Error sending message:",e)}}loadMessages(),setInterval(loadMessages,5e3);
   </script>
 
           <nav class="bottom-nav">
@@ -120,59 +59,11 @@ async function loadMessages() {
               <a href="https://kabayan.top">
                 <i class="fas fa-theater-masks"></i> Drama
               </a>
-              <a href="tvplus.html">
-                <i class="fas fa-broadcast-tower"></i> Live TV
-              </a>
-              <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-          🔒 18+
-              </a>
-              <a href="appdown.html">
-                <i class="fas fa-mobile-alt"></i> APP
-              </a>
             </div>
           </nav>
-
           <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              const moreMenu = document.getElementById('more-menu');
-              const moreLinks = document.getElementById('more-links');
-
-              moreMenu.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default anchor action
-                moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-              });
-            });
+          document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
           </script>
-
-          <div class="modal" id="passwordModal">
-              <div class="modal-content">
-                  <h2>Warning: This page contains adult content.</h2>
-                  <p>Please enter GOBILAM to proceed:</p>
-                  <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-                  <button onclick="checkPassword()">Submit</button>
-                  <button onclick="closeModal()">Cancel</button>
-              </div>
-          </div>
-
-          <script>
-              function showPasswordModal(event) {
-                  event.preventDefault(); // Prevent the default link behavior
-                  document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-              }
-
-              function closeModal() {
-                  document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-              }
-
-              function checkPassword() {
-                  const password = document.getElementById('passwordInput').value;
-                  if (password === "GOBILAM") {
-                      window.location.href = "adult.html"; // Redirect to the adult content page
-                  } else {
-                      alert("Incorrect password. Access denied."); // Alert for incorrect password
-                  }
-              }
-          </script>
-          <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

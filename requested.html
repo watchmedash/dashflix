@@ -19,69 +19,52 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap"/>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="ann.css">
   <title>Requested Movies - Watch Free Movies and TV Series Online</title>
+  <style>
+      body {
+          background-color: #121212;
+          color: #fff;
+          font-family: Arial, sans-serif;
+      }
+
+      .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+      .movie-figure {
+          margin: 10px;
+          text-align: center;
+          transition: transform 0.2s;
+      }
+
+      .movie-figure:hover {
+          transform: scale(1.05);
+      }
+
+      .tag {
+          display: block;
+          margin-top: 5px;
+          font-weight: bold;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      #page-dropdown,
+      #genre-dropdown {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #333;
+          background-color: #121212;
+          color: #fff;
+          margin: 10px;
+      }
+  </style>
 </head>
 <body oncontextmenu="return false;">
-<header>
-<nav>
-<div class="logo-title-container">
-<div class="logo-container">
-<img alt="Dashflix Logo"  src="https://i.postimg.cc/qMFTZzvm/logodf.webp"/>
-</div>
-</div>
-<div class="nav-links">
-<ul><li><a href="request.html"><i class="fas fa-comments"></i> Request</a></li></ul>
-</div>
-</nav>
-</header>
-<style>
-    body {
-        background-color: #121212;
-        color: #fff;
-        font-family: Arial, sans-serif;
-    }
-
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .movie-figure {
-        margin: 10px;
-        text-align: center;
-        transition: transform 0.2s;
-    }
-
-    .movie-figure:hover {
-        transform: scale(1.05);
-    }
-
-    .tag {
-        display: block;
-        margin-top: 5px;
-        font-weight: bold;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    #page-dropdown,
-    #genre-dropdown {
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #333;
-        background-color: #121212;
-        color: #fff;
-        margin: 10px;
-    }
-</style>
-<div class="glowing-text-container">
-<a href="even.html" target="_blank">Jake Paul vs. Mike Tyson fight now streaming on our site! Click here to watch!</a>
-</div>
-<div class="terra"><a href="https://www.buymeacoffee.com/dashflix"><img src="https://img.buymeacoffee.com/button-api/?text=Give pizza&emoji=🍕&slug=dashflix&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" /></a></div>
 <div style="text-align: center; margin-bottom: 20px;">
     <select id="genre-dropdown">
         <option value="" disabled selected>Select Genre</option>
@@ -91,164 +74,9 @@
 </div>
 
 <div class="gallery" id="gallery-container"></div>
-
 <script>
-
-// Array of JSON file URLs
-const jsonFiles = ['movies1.json', 'movies2.json', 'movies3.json', 'movies4.json', 'movies5.json'];
-
-// Function to fetch and merge JSON data
-async function fetchAndMergeJSON(files) {
-    try {
-        const responses = await Promise.all(files.map(file => fetch(file)));
-        const data = await Promise.all(responses.map(response => {
-            if (!response.ok) {
-                console.error('Error fetching file:', file, response.status);
-                return { movies: [] }; // Return an empty array for error cases
-            }
-            return response.json();
-        }));
-        // Merge all movie data arrays into one
-        return data.flatMap(data => data.movies);
-    } catch (error) {
-        console.error('Error fetching JSON files:', error);
-        return [];
-    }
-}
-
-// Fetch, merge, and load the movies JSON data
-fetchAndMergeJSON(jsonFiles)
-    .then(movies => {
-        const galleryContainer = document.getElementById('gallery-container');
-        const figures = [];
-        const genreSet = new Set(); // To store unique genres
-
-        // Filter for movies with "requested": true
-        const requestedMovies = movies.filter(movie => movie.requested === true);
-
-        requestedMovies.forEach(movie => {
-            if (!movie.title || !movie.link || !movie.image) {
-                console.warn('Skipping movie due to missing data:', movie);
-                return; // Skip movies with missing data
-            }
-
-            // Check if genres exist and is an array
-            const genres = Array.isArray(movie.genres) ? movie.genres : []; // Default to empty array if not defined
-
-            // Create a figure element
-            const figure = document.createElement('figure');
-            figure.classList.add('movie-figure');
-            figure.dataset.title = movie.title.toLowerCase();
-            figure.dataset.genres = genres.join(',').toLowerCase(); // Store genres for filtering
-
-            const anchor = document.createElement('a');
-            anchor.href = movie.link;
-            anchor.className = 'movie-link';
-
-            const img = document.createElement('img');
-            img.alt = movie.title;
-            img.dataset.src = movie.image;
-            img.className = 'defer-image';
-            img.width = 240;
-            img.height = 320;
-
-            // Create spinner
-            const spinner = document.createElement('div');
-            spinner.className = 'spinner';
-
-            // Add spinner to anchor before the image
-            anchor.appendChild(spinner);
-            anchor.appendChild(img);
-
-            // Hide spinner once the image loads
-            img.onload = () => {
-                spinner.style.display = 'none';
-            };
-
-            // Show spinner if the image fails to load
-            img.onerror = () => {
-                spinner.style.display = 'none';
-                console.error('Failed to load image:', movie.image);
-            };
-
-            const span = document.createElement('span');
-            span.className = 'tag positioned'; // Add a 'positioned' class for better styling control
-
-            switch (movie.tag.toLowerCase()) {
-                case 'hd':
-                    span.classList.add('hd');
-                    span.textContent = 'HD';
-                    break;
-                case 'ts':
-                    span.classList.add('ts');
-                    span.textContent = 'TS';
-                    break;
-                case 'cam':
-                    span.classList.add('cam');
-                    span.textContent = 'CAM';
-                    break;
-                default:
-                    span.textContent = movie.tag || '🔥';
-            }
-
-            const caption = document.createElement('figcaption');
-            caption.textContent = movie.title;
-            caption.style.cursor = "pointer";
-            caption.addEventListener('click', () => {
-                window.location.href = movie.link;
-            });
-
-            figure.appendChild(anchor);
-            figure.appendChild(span);
-            figure.appendChild(caption);
-            galleryContainer.appendChild(figure);
-            figures.push(figure);
-
-            // Collect unique genres
-            genres.forEach(genre => genreSet.add(genre.toLowerCase()));
-        });
-
-
-        // Populate genre dropdown
-        const genreDropdown = document.getElementById('genre-dropdown');
-        genreSet.forEach(genre => {
-            const option = document.createElement('option');
-            option.value = genre;
-            option.textContent = genre.charAt(0).toUpperCase() + genre.slice(1); // Capitalize genre name
-            genreDropdown.appendChild(option);
-        });
-
-        // Implement lazy loading
-        const lazyLoad = () => {
-            const lazyImages = document.querySelectorAll('.defer-image');
-            lazyImages.forEach(img => {
-                if (img.getBoundingClientRect().top < window.innerHeight && !img.src) {
-                    img.src = img.dataset.src;
-                }
-            });
-        };
-
-        window.addEventListener('scroll', lazyLoad);
-        lazyLoad();
-
-        // Implement genre filtering
-        genreDropdown.addEventListener('change', function() {
-            const selectedGenre = this.value;
-            figures.forEach(figure => {
-                const genres = figure.dataset.genres.split(',');
-                if (selectedGenre === "all" || genres.includes(selectedGenre)) {
-                    figure.classList.remove('hidden');
-                } else {
-                    figure.classList.add('hidden');
-                }
-            });
-        });
-    })
-    .catch(error => {
-        console.error('Error processing the JSON data:', error);
-    });
+const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON(files){try{const responses=await Promise.all(files.map(file=>fetch(file))),data=await Promise.all(responses.map(response=>response.ok?response.json():(console.error("Error fetching file:",file,response.status),{movies:[]})));return data.flatMap(data=>data.movies)}catch(error){return console.error("Error fetching JSON files:",error),[]}}fetchAndMergeJSON(jsonFiles).then(movies=>{const galleryContainer=document.getElementById("gallery-container"),figures=[],genreSet=new Set,requestedMovies=movies.filter(movie=>movie.requested===!0);requestedMovies.forEach(movie=>{if(!movie.title||!movie.link||!movie.image)return void console.warn("Skipping movie due to missing data:",movie);const genres=Array.isArray(movie.genres)?movie.genres:[],figure=document.createElement("figure");figure.classList.add("movie-figure"),figure.dataset.title=movie.title.toLowerCase(),figure.dataset.genres=genres.join(",").toLowerCase();const anchor=document.createElement("a");anchor.href=movie.link,anchor.className="movie-link";const img=document.createElement("img");img.alt=movie.title,img.dataset.src=movie.image,img.className="defer-image",img.width=240,img.height=320;const spinner=document.createElement("div");spinner.className="spinner",anchor.appendChild(spinner),anchor.appendChild(img),img.onload=()=>{spinner.style.display="none"},img.onerror=()=>{spinner.style.display="none",console.error("Failed to load image:",movie.image)};const span=document.createElement("span");span.className="tag positioned";switch(movie.tag.toLowerCase()){case"hd":span.classList.add("hd"),span.textContent="HD";break;case"ts":span.classList.add("ts"),span.textContent="TS";break;case"cam":span.classList.add("cam"),span.textContent="CAM";break;default:span.textContent=movie.tag||"🔥"}const caption=document.createElement("figcaption");caption.textContent=movie.title,caption.style.cursor="pointer",caption.addEventListener("click",()=>{window.location.href=movie.link}),figure.appendChild(anchor),figure.appendChild(span),figure.appendChild(caption),galleryContainer.appendChild(figure),figures.push(figure),genres.forEach(genre=>genreSet.add(genre.toLowerCase()))});const genreDropdown=document.getElementById("genre-dropdown");genreSet.forEach(genre=>{const option=document.createElement("option");option.value=genre,option.textContent=genre.charAt(0).toUpperCase()+genre.slice(1),genreDropdown.appendChild(option)});const lazyLoad=()=>{document.querySelectorAll(".defer-image").forEach(img=>{img.getBoundingClientRect().top<window.innerHeight&&!img.src&&(img.src=img.dataset.src)})};window.addEventListener("scroll",lazyLoad),lazyLoad(),genreDropdown.addEventListener("change",function(){const selectedGenre=this.value;figures.forEach(figure=>{figure.dataset.genres.split(",").includes(selectedGenre)||"all"===selectedGenre?figure.classList.remove("hidden"):figure.classList.add("hidden")})})}).catch(error=>{console.error("Error processing the JSON data:",error)});
 </script>
-
  <div id="go-to-top-button" class="floating-button">
  <div class="arrow-up"></div>
  </div>
@@ -269,57 +97,8 @@ fetchAndMergeJSON(jsonFiles)
 </nav>
 <p class="copyright">Dashflix 2024. All rights reserved.</p>
 </footer>
-<script>function isInViewport(element) {
-const rect = element.getBoundingClientRect();
-return (
-rect.top >= 0 &&
-rect.left >= 0 &&
-rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-);
-}
-
-function loadImages() {
-const imagesToLoad = document.querySelectorAll('.defer-image');
-
-imagesToLoad.forEach((image) => {
-if (isInViewport(image)) {
-const imgUrl = image.getAttribute('data-src');
-if (imgUrl) {
-const img = new Image();
-img.src = imgUrl;
-img.onload = () => {
-image.setAttribute('src', imgUrl);
-image.classList.remove('defer-image');
-};
-}
-}
-});
-}
-
-window.addEventListener('scroll', loadImages);
-window.addEventListener('resize', loadImages);
-
-loadImages();
-</script>
+<script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-const goToTopButton = document.getElementById('go-to-top-button');
-
-// Show or hide the button based on scroll position
-window.addEventListener('scroll', function() {
-if (window.scrollY > 300) { // Adjust the value to control when the button appears
-goToTopButton.style.display = 'block';
-} else {
-goToTopButton.style.display = 'none';
-}
-});
-
-goToTopButton.addEventListener('click', function() {
-// Scroll to the top of the page smoothly
-window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-</script>
 <nav class="bottom-nav">
   <a href="index.html" class="nav-item">
     <i class="fas fa-home"></i> Home
@@ -353,24 +132,11 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     <a href="#" class="nav-item" onclick="showPasswordModal(event)">
 🔒 18+
     </a>
-    <a href="appdown.html">
-      <i class="fas fa-mobile-alt"></i> APP
-    </a>
   </div>
 </nav>
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const moreMenu = document.getElementById('more-menu');
-    const moreLinks = document.getElementById('more-links');
-
-    moreMenu.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default anchor action
-      moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-    });
-  });
+document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
 </script>
-
 <div class="modal" id="passwordModal">
     <div class="modal-content">
         <h2>Warning: This page contains adult content.</h2>
@@ -380,27 +146,9 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
         <button onclick="closeModal()">Cancel</button>
     </div>
 </div>
-
 <script>
-    function showPasswordModal(event) {
-        event.preventDefault(); // Prevent the default link behavior
-        document.getElementById('passwordModal').style.display = 'block'; // Show the modal
-    }
-
-    function closeModal() {
-        document.getElementById('passwordModal').style.display = 'none'; // Hide the modal
-    }
-
-    function checkPassword() {
-        const password = document.getElementById('passwordInput').value;
-        if (password === "GOBILAM") {
-            window.location.href = "adult.html"; // Redirect to the adult content page
-        } else {
-            alert("Incorrect password. Access denied."); // Alert for incorrect password
-        }
-    }
+function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
 </script>
-<script src="snow.js"></script>
 <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 </body>
 </html>
