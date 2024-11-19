@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Smile 2",
+          "link": "https://emirati.top/movies/Smile 2",
+          "image": "https://image.tmdb.org/t/p/original/aE85MnPIsSoSs3978Noo16BRsKN.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Mystery"
+          ]
+      },
+      {
           "title": "No Country for Old Men",
           "link": "https://emirati.top/movies/No Country for Old Men",
           "image": "https://image.tmdb.org/t/p/original/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg",
