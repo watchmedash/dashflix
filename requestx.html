@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Movie | Dashflix</title>
+    <meta name="description" content="Watch free movies and TV series online with multiple genres at Dashflix.">
+    <meta name="keywords" content="Free movies, Watch free TV series, Online streaming">
+    <meta property="og:title" content="Dashflix" />
+    <meta property="og:description" content="Free, Watch free movies, Online streaming" />
+    <meta property="og:url" content="https://dashflix.top/request" />
+    <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
+    <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styler.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="shoutbox-container">
+<div class="messages" id="messages"></div>
+      <div class="message-input">
+          <input type="text" id="usernameInput" placeholder="Title" required>
+          <input type="text" id="messageInput" placeholder="Genre and Year" required>
+          <button onclick="addMessage()"><i class="fas fa-paper-plane"></i> Request</button>
+      </div>
+  </div>
+
+  <script>
+  let lastMessageId=null;async function loadMessages(){try{const e=await fetch("https://kabayan.top/shoutbox.php"),t=await e.json(),s=document.getElementById("messages"),n=isAtBottom(s);t.forEach(e=>{if(!document.getElementById(`message-${e.id}`)){const t=document.createElement("div");t.classList.add("message"),t.id=`message-${e.id}`,t.innerHTML=`<strong>${e.username}</strong>: ${e.message} <br><small>${e.timestamp}</small>`,s.appendChild(t)}}),n&&(s.scrollTop=s.scrollHeight)}catch(e){console.error("Error loading messages:",e)}}function isAtBottom(e){return e.scrollHeight-e.scrollTop<=e.clientHeight+1}async function addMessage(){const e=document.getElementById("usernameInput"),t=document.getElementById("messageInput"),s=e.value.trim(),n=t.value.trim();if(s&&n)try{await fetch("https://kabayan.top/shoutbox.php",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:`username=${encodeURIComponent(s)}&message=${encodeURIComponent(n)}`}),t.value="",loadMessages()}catch(e){console.error("Error sending message:",e)}}loadMessages(),setInterval(loadMessages,5e3);
+  </script>
+
+          <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="movies.html" class="nav-item">
+              <i class="fas fa-film"></i> Movies
+            </a>
+            <a href="shows.html" class="nav-item">
+              <i class="fas fa-tv"></i> Shows
+            </a>
+            <a href="trailer.html" class="nav-item">
+              <i class="fas fa-video"></i> Trailers
+            </a>
+            <a href="requested.html" class="nav-item">
+              <i class="fas fa-list"></i> Requested
+            </a>
+            <a href="#" class="nav-item" id="more-menu">
+              <i class="fas fa-ellipsis-h"></i> More
+            </a>
+
+            <div id="more-links" class="more-links">
+              <a href="https://freedomwall.top">
+                <i class="fas fa-otter"></i> Anime
+              </a>
+              <a href="https://dashtoons.xyz">
+                <i class="fas fa-book-open"></i> Comics
+              </a>
+              <a href="https://kabayan.top">
+                <i class="fas fa-theater-masks"></i> Drama
+              </a>
+            </div>
+          </nav>
+          <script>
+          document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
+          </script>
+<script src="script.js"></script>
+</body>
+</html>
