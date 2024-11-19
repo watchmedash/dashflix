@@ -28,3 +28,31 @@
                 transform: scale(1.1); /* Slightly larger */
             }
         }
+        /* Progress bar container */
+        .progress-bar {
+            position: absolute;
+            bottom: 10%; /* Position it near the bottom of the screen */
+            width: 80%; /* Take up most of the screen width */
+            height: 10px; /* Thin progress bar */
+            background-color: #444; /* Dark background for the bar container */
+            border-radius: 5px; /* Rounded edges */
+            overflow: hidden; /* Ensure the progress stays inside */
+        }
+
+        /* Progress bar itself */
+        .progress-bar .progress {
+            width: 0; /* Start at 0% */
+            height: 100%; /* Full height of the container */
+            background-color: #bcbcbc; /* Green progress bar */
+            transition: width 1s linear; /* Ensure it fills smoothly over 1 second */
+        }
+
+        /* Keyframes for progress animation */
+        @keyframes loading-progress {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
