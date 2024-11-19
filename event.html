@@ -7,6 +7,7 @@
   <link href="https://i.postimg.cc/Z5SgSyzx/favicon-32x32.png" rel="icon" type="image/png" />
   <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
   <title>Jake Paul vs. Mike Tyson</title>
+  <link rel="stylesheet" href="load.css">
   <meta content="origin" name="referrer" />
   <style>
     /* General dark theme for the page */
@@ -80,6 +81,7 @@
   </style>
 </head>
 <body oncontextmenu="return false;">
+  <div id="loaning-screen"><img src="images/logo.webp" alt="Loading..." /></div>
 
   <!-- Start Watching button -->
   <div class="start-btn-container">
@@ -123,6 +125,6 @@
       console.error('Video.js Player Error:', player.error());
     });
   </script>
-
+<script src="load.js"></script>
 </body>
 </html>
