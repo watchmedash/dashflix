@@ -3,18 +3,15 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <meta property="og:title" content="Requested Movies - Watch Free Movies and TV Series Online"/>
   <meta property="og:description" content="Explore a world of free requested movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
   <meta property="og:url" content="https://dashflix.top/requested"/>
   <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
-
   <meta name="description" content="Watch free requested movies and TV series online at Dashflix. Discover your favorite genres, from classics to the latest releases, all available for streaming."/>
   <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres,
     Latest releases, Classic films, Requested movies, Popular TV shows,
     Free streaming, Watch requested content, Film requests, TV series requests,
     Stream movies, Online movie platform, Movie requests, Trending movies"/>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap"/>
@@ -65,6 +62,7 @@
   </style>
 </head>
 <body oncontextmenu="return false;">
+  <div id="loaning-screen"><img src="images/logo.webp" alt="Loading..." /></div>
 <div style="text-align: center; margin-bottom: 20px;">
     <select id="genre-dropdown">
         <option value="" disabled selected>Select Genre</option>
@@ -97,6 +95,7 @@ const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON
 </nav>
 <p class="copyright">Dashflix 2024. All rights reserved.</p>
 </footer>
+<script src="load.js"></script>
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <nav class="bottom-nav">
@@ -129,25 +128,10 @@ const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON
     <a href="https://kabayan.top">
       <i class="fas fa-theater-masks"></i> Drama
     </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-🔒 18+
-    </a>
   </div>
 </nav>
 <script>
 document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
-</script>
-<div class="modal" id="passwordModal">
-    <div class="modal-content">
-        <h2>Warning: This page contains adult content.</h2>
-        <p>Please enter GOBILAM to proceed:</p>
-        <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-        <button onclick="checkPassword()">Submit</button>
-        <button onclick="closeModal()">Cancel</button>
-    </div>
-</div>
-<script>
-function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
 </script>
 <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 </body>
