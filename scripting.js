@@ -110,7 +110,7 @@ function renderChannels(channelData) {
 
   channelData.forEach((channel) => {
     // Check if the movie ID is in the blocked list
-    if (blockedMovieIds.includes(channel.url.split('/').pop())) {
+    if (blockedMovieIds.includes(Number(channel.url.split('/').pop()))) {
       return;  // Skip rendering this movie
     }
 
