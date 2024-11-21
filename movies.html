@@ -80,8 +80,6 @@
       <button id="load-more">Load More</button>
     </div>
   </main>
-<script src="load.js"></script>
-<script src="scripting.js"></script>
 <nav class="bottom-nav">
   <a href="index.html" class="nav-item">
     <i class="fas fa-home"></i> Home
@@ -112,12 +110,6 @@
     <a href="https://kabayan.top">
       <i class="fas fa-theater-masks"></i> Drama
     </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-        🔒 18+
-    </a>
-    <a href="appdown.html">
-      <i class="fas fa-mobile-alt"></i> APP
-    </a>
   </div>
 </nav>
 <script>
@@ -135,6 +127,8 @@ document.addEventListener("DOMContentLoaded",function(){const e=document.getElem
 <script>
 function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
 </script>
+<script src="load.js"></script>
+<script src="scripting.js"></script>
 <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 </body>
 </html>
