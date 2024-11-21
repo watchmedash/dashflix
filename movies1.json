@@ -15,12 +15,25 @@
       {
           "title": "Pukpok",
           "link": "https://emirati.top/movies/Pukpok",
-          "image": "https://m.media-amazon.com/images/M/MV5BM2JiOTk3MTgtOGFhNS00MDYzLWE3NWMtYTliZTI3Y2EzZTc0XkEyXkFqcGc@._V1_.jpg",
+          "image": "https://image.tmdb.org/t/p/original/mwCZjzhnVRW0B33LmREuK6zhwIv.jpg",
           "tag": "HD",
           "requested": true,
           "release_year": "2024",
           "genres": [
               "Drama"
+          ]
+      },
+      {
+          "title": "Paddington in Peru",
+          "link": "https://emirati.top/movies/Paddington in Peru",
+          "image": "https://image.tmdb.org/t/p/original/1ffZAucqfvQu36x1C49XfOdjuOG.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Family",
+              "Adventure"
           ]
       },
       {
