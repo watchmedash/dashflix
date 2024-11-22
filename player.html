@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .movie-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #1e1e1e;
+        }
+        .movie-container h1 {
+            text-align: center;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .movie-details {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .movie-details img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .movie-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .movie-info h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .movie-info p {
+            font-size: 1rem;
+            margin: 5px 0;
+            color: #bbb;
+        }
+        .movie-info .rating {
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 5px;
+        }
+        .genre-list {
+            list-style: none;
+            padding: 0;
+            margin: 5px 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .genre-list li {
+            margin-right: 10px;
+            background-color: #444;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .close-btn {
+            background-color: #ff3333;
+            color: #fff;
+            font-size: 1.5rem;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+        .close-btn:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="movie-container">
+    <!-- Dropdown for video source selection -->
+    <select id="video-source" onchange="changeSource()">
+        <option value="">Select Server</option>
+    </select>
+
+    <div class="video-container">
+        <!-- Video iframe -->
+        <iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <!-- Movie Details -->
+    <div class="movie-details">
+        <img id="movie-poster" src="" alt="Movie Poster">
+        <div class="movie-info">
+            <h2 id="movie-title-info">Loading...</h2>
+            <p><strong>Release Year:</strong> <span id="release-year">Loading...</span></p>
+            <p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
+            <p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
+            <p><strong>Overview:</strong></p>
+            <p id="movie-overview">Loading...</p>
+
+            <p><strong>Director:</strong> <span id="director">Loading...</span></p>
+        </div>
+    </div>
+    <script async="async" data-cfasync="false" src="//perilastronaut.com/d484cbb1a159c0b78e6b95df88af59b9/invoke.js"></script>
+    <div id="container-d484cbb1a159c0b78e6b95df88af59b9"></div>
+    <!-- Close Button -->
+    <button class="close-btn" onclick="goBack()">Go Back</button>
+</div>
+
+<script>
+    const API_KEY = "4f599baa15d072c9de346b2816a131b8";
+    const BASE_URL = "https://api.themoviedb.org/3";
+    const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+
+    // Get movie ID from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const movieId = urlParams.get("id");
+
+    // Fetch Movie Details
+    async function fetchMovieDetails(id) {
+        try {
+            const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`);
+            const movie = await response.json();
+            displayMovieDetails(movie);
+        } catch (error) {
+            console.error("Error fetching movie details:", error);
+        }
+    }
+
+    // Fetch Movie Credits (director)
+    async function fetchMovieCredits(id) {
+        try {
+            const response = await fetch(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`);
+            const credits = await response.json();
+            displayMovieCredits(credits);
+        } catch (error) {
+            console.error("Error fetching movie credits:", error);
+        }
+    }
+
+    // Display Movie Details
+    function displayMovieDetails(movie) {
+        document.getElementById("movie-title-info").textContent = movie.title;
+        document.getElementById("movie-poster").src = IMAGE_BASE_URL + movie.poster_path;
+        document.getElementById("movie-overview").textContent = movie.overview;
+        document.getElementById("release-year").textContent = movie.release_date.split("-")[0];
+        document.getElementById("rating").textContent = movie.vote_average;
+
+        // Format genres
+        const genresList = movie.genres.map(genre => genre.name).join(", ");
+        document.getElementById("genres").textContent = genresList;
+
+        // Dynamically populate the video source dropdown with the movie's available sources
+        const sources = [
+            `https://vidsrc.me/embed/movie/${movie.id}`,
+            `https://embed.su/embed/movie/${movie.id}`,
+            `https://vidbinge.dev/embed/movie/${movie.id}`,
+            `https://vidsrc.vip/embed/movie/${movie.id}`,
+            `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
+            `https://vidlink.pro/movie/${movie.id}`
+        ];
+
+        const videoSourceSelect = document.getElementById("video-source");
+        videoSourceSelect.innerHTML = ""; // Clear the current options
+        sources.forEach((source, index) => {
+            const option = document.createElement("option");
+            option.value = source;
+            option.textContent = `Server ${index + 1}`;
+            videoSourceSelect.appendChild(option);
+        });
+
+        // Set the initial video player source to the first server's URL
+        if (sources.length > 0) {
+            document.getElementById("video-player").src = sources[0];
+        }
+
+        // Fetch credits (director)
+        fetchMovieCredits(movie.id);
+    }
+
+    // Display Movie Credits (director)
+    function displayMovieCredits(credits) {
+        // Display Director
+        const director = credits.crew.find(person => person.job === "Director");
+        document.getElementById("director").textContent = director ? director.name : "Unknown";
+    }
+
+    // Change video source based on dropdown selection
+    function changeSource() {
+        var iframe = document.getElementById("video-player");
+        var dropdown = document.getElementById("video-source");
+        iframe.src = dropdown.value;
+    }
+
+    // Go back to movies.html when the close button is clicked
+    function goBack() {
+        window.location.href = "movies.html";
+    }
+
+    // Fetch details for the selected movie if an ID is provided in the URL
+    if (movieId) {
+        fetchMovieDetails(movieId);
+    }
+</script>
+
+</body>
+</html>

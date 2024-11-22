@@ -30,105 +30,194 @@
   <link rel="canonical" href="https://dashflix.top/movies"/>
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>Movies - Watch Free Movies and TV Series Online</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="ann.css">
-  <link rel="stylesheet" href="styling.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="load.css">
+  <link rel="stylesheet" href="sty.css">
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
-</head>
-<body oncontextmenu="return false;">
-  <div id="loaning-screen">
-      <img src="images/logo.webp" alt="Loading..." />
-      <div class="progress-bar">
-          <div class="progress"></div>
-      </div>
-  </div>
-  <div class="glowing-text-container">
-    <a href="tutorial.html">This is how you find a movie/show! Click here to watch!</a>
-    </div>
-  <main class="channel-layout">
-    <div class="player-wrapper">
-<p>Dear app users, you can also visit <a href="https://dashflix.top" target="_blank">dashflix.top</a> using any browser.</a></p>
-<p>Important Notice: If you encounter an error when entering full screen mode, simply exit and then re-enter full screen to resolve the issue.</p>
-      <div class="sticky">
-        <div class="video-wrapper">
-          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <label for="video-source">Select Video Source:</label>
-        <select id="video-source">
-            <option value="vidsrc">Server 1</option>
-            <option value="vidlink">Server 2</option>
-            <option value="2embed">Server 3</option>
-            <option value="icu">Server 4</option>
-            <option value="icu2">Server 5</option>
-            <option value="icu3">Server 6</option>
-        </select>
-        <div class="label">Now Playing</div>
-        <h2 id="channel-playing"></h2>
-        <div id="movie-plot" style="margin-top: 10px; font-size: 14px;"></div>
-      </div>
-    </div>
-<div class="channel-list-wrapper">
-<div class="sharethis-inline-share-buttons"></div>
-<input type="text" id="search-box" placeholder="Search movie...">
-<button id="clear-search" style="display: none;">Clear</button>
-<ul class="most-viewed-list"></ul>
-      <ul class="channel-list"></ul>
-      <button id="load-more">Load More</button>
-    </div>
-  </main>
-<nav class="bottom-nav">
-  <a href="index.html" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="tvplus.html" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="shows.html" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="trailer.html" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
-  <a href="requested.html" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
-  <a href="#" class="nav-item" id="more-menu">
-    <i class="fas fa-ellipsis-h"></i> More
-  </a>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+      /* Styling for responsive grid and lazy loading */
+      * {
+          box-sizing: border-box;
+      }
 
-  <div id="more-links" class="more-links">
-    <a href="https://freedomwall.top">
-      <i class="fas fa-otter"></i> Anime
-    </a>
-    <a href="https://dashtoons.xyz">
-      <i class="fas fa-book-open"></i> Comics
-    </a>
-    <a href="https://kabayan.top">
-      <i class="fas fa-theater-masks"></i> Drama
-    </a>
-  </div>
-</nav>
-<script>
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
-</script>
-<div class="modal" id="passwordModal">
-    <div class="modal-content">
-        <h2>Warning: This page contains adult content.</h2>
-        <p>Please enter GOBILAM to proceed:</p>
-        <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-        <button onclick="checkPassword()">Submit</button>
-        <button onclick="closeModal()">Cancel</button>
+      body {
+          margin: 0;
+          padding: 18px;
+          font-family: Arial, sans-serif;
+          background-color: #121212;
+          color: #fff;
+      }
+
+      .header {
+          text-align: center;
+          padding: 32px;
+      }
+
+      .search-container {
+          text-align: center;
+          margin: 16px 0;
+      }
+
+      .search-container input {
+          padding: 8px;
+          width: 80%;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color: #333;
+          color: #fff;
+      }
+
+      .search-container input::placeholder {
+          color: #bbb;
+      }
+
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+      }
+
+      .column {
+          position: relative;
+          overflow: hidden;
+          padding: 0 4px;
+          margin-bottom: 16px;
+          transition: transform 0.3s ease;
+      }
+
+      .column:hover {
+          transform: scale(1.05);
+      }
+
+      .column img {
+          width: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+
+      .spinner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 4px solid transparent;
+          border-top: 4px solid #fff;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          animation: spin 1s linear infinite;
+      }
+
+      img.loaded {
+          opacity: 1;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      .tag {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          padding: 4px 8px;
+          font-size: 14px;
+          border-radius: 4px;
+          font-weight: bold;
+      }
+
+      /* Responsive grid layout */
+      @media (min-width: 1200px) {
+          .column {
+              flex: 12.5%;
+              max-width: 12.5%;
+          }
+      }
+
+      @media (min-width: 800px) and (max-width: 1199px) {
+          .column {
+              flex: 16.66%;
+              max-width: 16.66%;
+          }
+      }
+
+      @media (max-width: 799px) {
+          .column {
+              flex: 25%;
+              max-width: 25%;
+          }
+      }
+  </style>
+  </head>
+  <body>
+  <div id="loaning-screen">
+    <img src="images/logo.webp" alt="Loading..." />
+    <div class="progress-bar">
+        <div class="progress"></div>
     </div>
-</div>
-<script>
-function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
-</script>
-<script src="load.js"></script>
-<script src="scripting.js"></script>
-<script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
-</body>
-</html>
+  </div>
+  <script async="async" data-cfasync="false" src="//perilastronaut.com/d484cbb1a159c0b78e6b95df88af59b9/invoke.js"></script>
+  <div id="container-d484cbb1a159c0b78e6b95df88af59b9"></div>
+<div class="sharethis-inline-share-buttons"></div>
+  <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for movies..." oninput="filterMovies()">
+  </div>
+
+  <div class="row" id="gallery"></div> <!-- Dynamically loaded images go here -->
+
+  <div id="loading-spinner" style="text-align:center; display: none;">
+      <div class="spinner"></div>
+      <p>Loading more movies...</p>
+  </div>
+  <button id="goToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 60px; right: 20px; background-color: #333; color: #fff; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 99999;">
+      <!-- Upward Arrow Icon (SVG) -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="15" style="color: #fff;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path>
+      </svg>
+  </button>
+
+  <script>
+      // Show the "Go to Top" button when scrolled down 200px
+      window.onscroll = function() {
+          const button = document.getElementById('goToTop');
+          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+              button.style.display = "block";
+          } else {
+              button.style.display = "none";
+          }
+      };
+
+      // Scroll to the top of the page when the button is clicked
+      function scrollToTop() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+  </script>
+  <script src="load.js"></script>
+  <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="tvplus.html" class="nav-item">
+      <i class="fas fa-broadcast-tower"></i> Live TV
+    </a>
+    <a href="shows.html" class="nav-item">
+      <i class="fas fa-tv"></i> Shows
+    </a>
+    <a href="requested.html" class="nav-item">
+      <i class="fas fa-list"></i> Requested
+    </a>
+    <a href="trailer.html" class="nav-item">
+      <i class="fas fa-video"></i> Trailers
+    </a>
+  </nav>
+  <script src="main.js"></script>
+  <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
+  </body>
+  </html>
