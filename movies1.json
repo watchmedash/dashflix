@@ -24,6 +24,55 @@
           ]
       },
       {
+          "title": "The Fix",
+          "link": "https://emirati.top/movies/The Fix",
+          "image": "https://image.tmdb.org/t/p/original/vY7bY2xZymoIOti4WM5K29OMzCS.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Science Fiction",
+              "Action"
+          ]
+      },
+      {
+          "title": "We Live in Time",
+          "link": "https://emirati.top/movies/We Live in Time",
+          "image": "https://image.tmdb.org/t/p/original/flSncTaSISRqrqoJ18ZBmThR4Ee.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Romance",
+              "Drama",
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Armor",
+          "link": "https://emirati.top/movies/Armor",
+          "image": "https://image.tmdb.org/t/p/original/6wtKfSdx9RTeWGfT2zsYUHM7vDf.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Whispers in the Wind",
+          "link": "https://emirati.top/movies/Whispers in the Wind",
+          "image": "https://image.tmdb.org/t/p/original/4F5lYHfeLxBVBuYNd9TcnXIubOs.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
           "title": "Pukpok",
           "link": "https://emirati.top/movies/Pukpok",
           "image": "https://image.tmdb.org/t/p/original/mwCZjzhnVRW0B33LmREuK6zhwIv.jpg",
