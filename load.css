@@ -15,7 +15,7 @@
         /* Loading image styling */
         #loaning-screen img {
             width: 30%; /* Image takes up 30% of the screen width */
-            max-width: 100%;
+            max-width: 200px;
             animation: pulse 1.5s infinite ease-in-out; /* Pulse animation */
         }
 
