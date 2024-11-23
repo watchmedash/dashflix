@@ -61,63 +61,57 @@ try {
 }
 }
 
-// Display Movies in the gallery
 function displayMovies(moviesList) {
-const gallery = document.getElementById("gallery");
+    const gallery = document.getElementById("gallery");
 
-// Clear the gallery if it's a new search
-if (currentPage === 1) {
-    gallery.innerHTML = "";
-}
+    // Clear the gallery if it's a new search
+    if (currentPage === 1) {
+        gallery.innerHTML = "";
+    }
 
-moviesList.forEach(movie => {
-    const column = document.createElement("div");
-    column.className = "column";
+    moviesList.forEach(movie => {
+        const column = document.createElement("div");
+        column.className = "column";
 
-    // Spinner element
-    const spinner = document.createElement("div");
-    spinner.className = "spinner";
+        // Spinner element
+        const spinner = document.createElement("div");
+        spinner.className = "spinner";
 
-    // Image element
-    const image = document.createElement("img");
-    image.className = "lazy-image";
-    image.setAttribute("data-src", IMAGE_BASE_URL + movie.poster_path);
-    image.alt = movie.title;
+        // Image element
+        const image = document.createElement("img");
+        image.className = "lazy-image";
+        image.setAttribute("data-src", IMAGE_BASE_URL + movie.poster_path);
+        image.alt = movie.title;
 
-    // Lazy load: When the image is loaded
-    image.addEventListener("load", () => {
-        image.classList.add("loaded"); // Add opacity effect
-        spinner.style.display = "none"; // Hide spinner when loaded
+        // Lazy load: When the image is loaded
+        image.addEventListener("load", () => {
+            image.classList.add("loaded"); // Add opacity effect
+            spinner.style.display = "none"; // Hide spinner when loaded
+        });
+
+        // Error handling: If the image fails to load
+        image.addEventListener("error", () => {
+            spinner.style.display = "none"; // Remove spinner
+            console.error(`Failed to load image for movie: ${movie.title}`);
+        });
+
+        // Create anchor link for the image
+        const link = document.createElement("a");
+        link.href = `player.html?id=${movie.id}`; // Change 'movieId' to 'id'
+        link.target = "_self"; // Open in the same tab
+        link.appendChild(image); // Add image to the link
+
+        // Append spinner and link to the column
+        column.appendChild(spinner);
+        column.appendChild(link);
+
+        // Append the column to the gallery
+        gallery.appendChild(column);
     });
 
-    // Error handling: If the image fails to load
-    image.addEventListener("error", () => {
-        spinner.style.display = "none"; // Remove spinner
-        console.error(`Failed to load image for movie: ${movie.title}`);
-    });
-
-    // Create anchor link for the image
-    const link = document.createElement("a");
-    link.href = `player.html?id=${movie.id}`; // Change 'movieId' to 'id'
-    link.target = "_self"; // Open in the same tab
-    link.appendChild(image); // Add image to the link
-
-    // Optional tag
-    const tag = document.createElement("div");
-    tag.className = "tag";
-    tag.textContent = "HD";
-
-    // Append spinner, tag, and link to the column
-    column.appendChild(spinner);
-    column.appendChild(tag);
-    column.appendChild(link);
-
-    // Append the column to the gallery
-    gallery.appendChild(column);
-});
-
-initializeLazyLoad();
+    initializeLazyLoad();
 }
+
 
 // Lazy Load Initialization
 function initializeLazyLoad() {
