@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Watch free TV series online at Dashflix. Discover a diverse library of genres including classic shows, the latest releases, anime, drama, and more—all available for seamless streaming."/>
+  <meta name="keywords" content="Free TV series, Watch free TV shows, Online streaming, TV show genres, Latest TV releases, Classic series, Watch Anime Online, Free Drama Series, Popular TV shows, Family-Friendly TV, Comedy Series, Action TV Shows,
+    Thriller Series, Reality TV, Free Streaming, Watch TV Anytime,
+    Free Streaming Platform, Top Rated TV Shows, Binge-Watch TV,
+    Streaming Live Sports, Watch TV Shows Without Registration,
+    On-Demand TV Series, Watch TV Shows Online, Latest Anime Episodes,
+    Discover Classic TV Shows, Trending TV Series,
+    Free Entertainment, TV Shows for Free, Stream TV Shows Online"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Dashflix - Watch Free TV Series Online"/>
+  <meta property="og:description" content="Explore a vast selection of free TV series at Dashflix. Enjoy genres ranging from classic favorites to the latest releases, all available for streaming anytime, anywhere."/>
+  <meta property="og:url" content="https://dashflix.top/shows"/>
+  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+  <meta property="og:image:alt" content="Dashflix - Watch Free TV Series Online"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Dashflix - Watch Free TV Series Online"/>
+  <meta name="twitter:description" content="Enjoy an extensive library of free TV series online at Dashflix. From classic hits to the latest shows, stream a variety of genres easily and for free."/>
+  <meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+  <meta name="twitter:image:alt" content="Dashflix - Watch Free TV Series Online"/>
+  <link rel="canonical" href="https://dashflix.top/shows"/>
+  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+  <title>TV Shows - Watch Free TV Series Online</title>
+  <link rel="stylesheet" href="load.css">
+  <link rel="stylesheet" href="sty.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
+  <script type='text/javascript' src='//perilastronaut.com/73/9e/4b/739e4b210c84c2fb3f69faa2c57e9547.js'></script>
+  <style>
+      /* Styling for responsive grid and lazy loading */
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+          margin: 0;
+          padding: 18px;
+          font-family: Arial, sans-serif;
+          background-color: #121212;
+          color: #fff;
+      }
+
+      .header {
+          text-align: center;
+          padding: 32px;
+      }
+
+      .search-container {
+          text-align: center;
+          margin: 16px 0;
+      }
+
+      .search-container input {
+          padding: 8px;
+          width: 80%;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color: #333;
+          color: #fff;
+      }
+
+      .search-container input::placeholder {
+          color: #bbb;
+      }
+
+      .row {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+      }
+
+      .column {
+          position: relative;
+          overflow: hidden;
+          padding: 0 4px;
+          margin-bottom: 16px;
+          transition: transform 0.3s ease;
+      }
+
+      .column:hover {
+          transform: scale(1.05);
+      }
+
+      .column img {
+          width: 100%;
+          object-fit: cover;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+
+      .spinner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border: 4px solid transparent;
+          border-top: 4px solid #fff;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          animation: spin 1s linear infinite;
+      }
+
+      img.loaded {
+          opacity: 1;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      .tag {
+          position: absolute;
+          top: 8px;
+          left: 8px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          padding: 4px 8px;
+          font-size: 14px;
+          border-radius: 4px;
+          font-weight: bold;
+      }
+
+      /* Responsive grid layout */
+      @media (min-width: 1200px) {
+          .column {
+              flex: 12.5%;
+              max-width: 12.5%;
+          }
+      }
+
+      @media (min-width: 800px) and (max-width: 1199px) {
+          .column {
+              flex: 16.66%;
+              max-width: 16.66%;
+          }
+      }
+
+      @media (max-width: 799px) {
+          .column {
+              flex: 25%;
+              max-width: 25%;
+          }
+      }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+  <div id="loaning-screen">
+    <img src="images/logo.webp" alt="Loading..." />
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+  </div>
+  <script async="async" data-cfasync="false" src="//perilastronaut.com/d484cbb1a159c0b78e6b95df88af59b9/invoke.js"></script>
+  <div id="container-d484cbb1a159c0b78e6b95df88af59b9"></div>
+<div class="sharethis-inline-share-buttons"></div>
+
+<div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search for TV shows..." oninput="handleSearch()">
+</div>
+
+<!-- Gallery Row -->
+<div class="row" id="gallery"></div> <!-- Dynamically loaded images go here -->
+
+<!-- Loading Spinner -->
+<div id="loading-spinner" style="text-align:center; display: none;">
+    <div class="spinner"></div>
+    <p>Loading more TV shows...</p>
+</div>
+
+
+  <!-- "Go to Top" Button -->
+  <button id="goToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 60px; right: 20px; background-color: #333; color: #fff; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 99999;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="15" style="color: #fff;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path>
+      </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script>
+      // (Same "Go to Top" button script as provided)
+  </script>
+  <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="tvplus.html" class="nav-item">
+      <i class="fas fa-broadcast-tower"></i> Live TV
+    </a>
+    <a href="movies.html" class="nav-item">
+      <i class="fas fa-film"></i> Movies
+    </a>
+    <a href="trailer.html" class="nav-item">
+      <i class="fas fa-video"></i> Trailers
+    </a>
+    <a href="requested.html" class="nav-item">
+      <i class="fas fa-list"></i> Requested
+    </a>
+  </nav>
+  <script src="load.js"></script>
+<script src="mains.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
+</body>
+</html>
