@@ -1,11 +1,11 @@
-const apiKey = '4f599baa15d072c9de346b2816a131b8';  // Your TMDB API key
-let allChannelData = [];  // Store all loaded channels
-let currentBatch = 1;  // Initialize currentBatch
+const apiKey = '4f599baa15d072c9de346b2816a131b8'; // Your TMDB API key
+let allChannelData = [];
+let currentBatch = 1;
 
 // Function to load data from the TMDB API
 async function loadChannelData() {
     try {
-        await loadNextBatch();  // Load the first batch when the page loads
+        await loadNextBatch();
 
         // Set up "Load More" button
         const loadMoreButton = document.querySelector("#load-more");
@@ -38,37 +38,48 @@ async function loadChannelData() {
     }
 }
 
-// Load the next batch of movies from TMDB API
+// Function to load the next batch of data
 async function loadNextBatch() {
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentBatch}`;
+    const movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&page=${currentBatch}`;
+    const tvUrl = `https://api.themoviedb.org/3/discover/tv?api_key=${apiKey}&page=${currentBatch}`;
 
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const [movieResponse, tvResponse] = await Promise.all([fetch(movieUrl), fetch(tvUrl)]);
+        const [movieData, tvData] = await Promise.all([movieResponse.json(), tvResponse.json()]);
 
-        const channelData = await Promise.all(data.results.map(async (movie) => {
-            const trailerUrl = await getTrailerUrl(movie.id);
-            return {
-                title: movie.title,
-                url: trailerUrl,
-                image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-                plot: movie.overview,  // Movie plot
-                releaseYear: movie.release_date.split('-')[0],  // Extract release year
-            };
-        }));
+        const movieChannelData = await mapChannelData(movieData.results, "movie");
+        const tvChannelData = await mapChannelData(tvData.results, "tv");
 
-        allChannelData.push(...channelData);  // Add to the master list
-        renderChannels(allChannelData);  // Render the combined data
+        allChannelData.push(...movieChannelData, ...tvChannelData);  // Combine movie and TV data
+        renderChannels(allChannelData);  // Render all data
 
-        currentBatch++; // Increment batch after loading
+        currentBatch++;  // Increment batch
     } catch (error) {
         console.error('Error loading batch data:', error);
     }
 }
 
-// Fetch the trailer URL for a specific movie
-async function getTrailerUrl(movieId) {
-    const url = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`;
+async function mapChannelData(results, type) {
+    return Promise.all(
+        results
+            .filter(item => item.poster_path) // Exclude items without posters
+            .map(async (item) => {
+                const trailerUrl = await getTrailerUrl(item.id, type);
+                return {
+                    title: type === "movie" ? item.title : item.name,
+                    url: trailerUrl,
+                    image: `https://image.tmdb.org/t/p/original${item.poster_path}`,
+                    plot: item.overview,  // Overview/plot
+                    releaseYear: type === "movie" ? item.release_date.split('-')[0] : item.first_air_date.split('-')[0],
+                };
+            })
+    );
+}
+
+
+// Fetch the trailer URL for a specific movie or TV show
+async function getTrailerUrl(id, type) {
+    const url = `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${apiKey}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -80,6 +91,7 @@ async function getTrailerUrl(movieId) {
     }
 }
 
+// Function to render channels on the page
 function renderChannels(channelData) {
     const channelList = document.querySelector(".channel-list");
     channelList.innerHTML = "";  // Clear previous channels
@@ -125,64 +137,56 @@ function renderChannels(channelData) {
     }
 }
 
-// Load the stream into the player
+// Function to load a stream into the player
 function loadStream(channelPlay) {
     const url = channelPlay.dataset.url || channelPlay.getAttribute('data-url');
     const parent = channelPlay.closest("li");
     const title = parent.querySelector(".channel-title").textContent;
-    const plot = parent.querySelector(".channel-plot").textContent; // Get the plot from the channel info
+    const plot = parent.querySelector(".channel-plot").textContent;
 
     const video = document.querySelector("#player");
     const nowPlayingTitle = document.querySelector("#channel-playing");
-    const moviePlot = document.querySelector("#movie-plot"); // Element to display the plot
+    const moviePlot = document.querySelector("#movie-plot");
 
     video.src = url;  // Set iframe source to trailer link
     nowPlayingTitle.textContent = title;
-    moviePlot.textContent = plot; // Set the plot under the player
+    moviePlot.textContent = plot;  // Set the plot under the player
 
     video.scrollIntoView({ behavior: "smooth" });
 }
 
-// Search function to filter channels
+// Function to filter channels during search
 async function filterChannels(event) {
     const query = event.target.value;
 
     if (query.length < 3) {
-        // If the query is less than 3 characters, do not search
-        renderChannels(allChannelData);  // Reset to original data
-        document.querySelector("#load-more").style.display = "block"; // Show "Load More" button
+        renderChannels(allChannelData);
+        document.querySelector("#load-more").style.display = "block";
         return;
     }
 
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
+    const movieUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
+    const tvUrl = `https://api.themoviedb.org/3/search/tv?api_key=${apiKey}&query=${encodeURIComponent(query)}`;
 
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const [movieResponse, tvResponse] = await Promise.all([fetch(movieUrl), fetch(tvUrl)]);
+        const [movieData, tvData] = await Promise.all([movieResponse.json(), tvResponse.json()]);
 
-        const channelData = await Promise.all(data.results.map(async (movie) => {
-            const trailerUrl = await getTrailerUrl(movie.id);
-            return {
-                title: movie.title,
-                url: trailerUrl,
-                image: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-                plot: movie.overview,  // Movie plot
-                releaseYear: movie.release_date.split('-')[0],  // Extract release year
-            };
-        }));
+        const movieChannelData = await mapChannelData(movieData.results, "movie");
+        const tvChannelData = await mapChannelData(tvData.results, "tv");
 
-        renderChannels(channelData);  // Render the filtered results
+        const channelData = [...movieChannelData, ...tvChannelData];
+        renderChannels(channelData);
 
-        // Hide "Load More" button if there are results
         if (channelData.length > 0) {
             document.querySelector("#load-more").style.display = "none";
         } else {
-            document.querySelector("#load-more").style.display = "block"; // Show if no results
+            document.querySelector("#load-more").style.display = "block";
         }
     } catch (error) {
         console.error('Error searching for channels:', error);
     }
 }
 
-// Load the channel data when the page loads
+// Load channel data on page load
 loadChannelData();
