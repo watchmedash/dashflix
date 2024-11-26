@@ -1,6 +1,20 @@
 {
     "movies": [
       {
+          "title": "Watchmen Chapter II",
+          "link": "https://emirati.top/movies/Watchmen Chapter II",
+          "image": "https://image.tmdb.org/t/p/original/4rBObJFpiWJOG7aIlRrOUniAkBs.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Mystery",
+              "Science Fiction",
+              "Action"
+          ]
+      },
+      {
           "title": "Boss Ma'am",
           "link": "https://emirati.top/movies/Boss Maam",
           "image": "https://m.media-amazon.com/images/M/MV5BNzJlOTU4YmEtZTFjZS00ZjE5LWE1ZDgtMWEzNzU0Mzk4NWY3XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
