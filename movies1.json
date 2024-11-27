@@ -1,6 +1,19 @@
 {
     "movies": [
       {
+          "title": "Elevation",
+          "link": "https://emirati.top/movies/Elevation",
+          "image": "https://image.tmdb.org/t/p/original/uQhYBxOVFU6s9agD49FnGHwJqG5.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Science Fiction",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Watchmen Chapter II",
           "link": "https://emirati.top/movies/Watchmen Chapter II",
           "image": "https://image.tmdb.org/t/p/original/4rBObJFpiWJOG7aIlRrOUniAkBs.jpg",
