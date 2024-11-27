@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Player</title>
+    <link rel="stylesheet" href="load.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type='text/javascript' src='//perilastronaut.com/73/9e/4b/739e4b210c84c2fb3f69faa2c57e9547.js'></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -113,7 +115,12 @@
     </style>
 </head>
 <body>
-
+  <div id="loaning-screen">
+    <img src="images/logo.webp" alt="Loading..." />
+    <div class="progress-bar">
+        <div class="progress"></div>
+    </div>
+  </div>
 <div class="movie-container">
     <!-- Dropdown for video source selection -->
     <select id="video-source" onchange="changeSource()">
@@ -144,102 +151,7 @@
     <!-- Close Button -->
     <button class="close-btn" onclick="goBack()">Go Back</button>
 </div>
-
-<script>
-    const API_KEY = "4f599baa15d072c9de346b2816a131b8";
-    const BASE_URL = "https://api.themoviedb.org/3";
-    const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
-
-    // Get movie ID from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const movieId = urlParams.get("id");
-
-    // Fetch Movie Details
-    async function fetchMovieDetails(id) {
-        try {
-            const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`);
-            const movie = await response.json();
-            displayMovieDetails(movie);
-        } catch (error) {
-            console.error("Error fetching movie details:", error);
-        }
-    }
-
-    // Fetch Movie Credits (director)
-    async function fetchMovieCredits(id) {
-        try {
-            const response = await fetch(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`);
-            const credits = await response.json();
-            displayMovieCredits(credits);
-        } catch (error) {
-            console.error("Error fetching movie credits:", error);
-        }
-    }
-
-    // Display Movie Details
-    function displayMovieDetails(movie) {
-        document.getElementById("movie-title-info").textContent = movie.title;
-        document.getElementById("movie-poster").src = IMAGE_BASE_URL + movie.poster_path;
-        document.getElementById("movie-overview").textContent = movie.overview;
-        document.getElementById("release-year").textContent = movie.release_date.split("-")[0];
-        document.getElementById("rating").textContent = movie.vote_average;
-
-        // Format genres
-        const genresList = movie.genres.map(genre => genre.name).join(", ");
-        document.getElementById("genres").textContent = genresList;
-
-        // Dynamically populate the video source dropdown with the movie's available sources
-        const sources = [
-            `https://vidsrc.me/embed/movie/${movie.id}`,
-            `https://embed.su/embed/movie/${movie.id}`,
-            `https://vidbinge.dev/embed/movie/${movie.id}`,
-            `https://vidsrc.vip/embed/movie/${movie.id}`,
-            `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
-            `https://vidlink.pro/movie/${movie.id}`
-        ];
-
-        const videoSourceSelect = document.getElementById("video-source");
-        videoSourceSelect.innerHTML = ""; // Clear the current options
-        sources.forEach((source, index) => {
-            const option = document.createElement("option");
-            option.value = source;
-            option.textContent = `Server ${index + 1}`;
-            videoSourceSelect.appendChild(option);
-        });
-
-        // Set the initial video player source to the first server's URL
-        if (sources.length > 0) {
-            document.getElementById("video-player").src = sources[0];
-        }
-
-        // Fetch credits (director)
-        fetchMovieCredits(movie.id);
-    }
-
-    // Display Movie Credits (director)
-    function displayMovieCredits(credits) {
-        // Display Director
-        const director = credits.crew.find(person => person.job === "Director");
-        document.getElementById("director").textContent = director ? director.name : "Unknown";
-    }
-
-    // Change video source based on dropdown selection
-    function changeSource() {
-        var iframe = document.getElementById("video-player");
-        var dropdown = document.getElementById("video-source");
-        iframe.src = dropdown.value;
-    }
-
-    // Go back to movies.html when the close button is clicked
-    function goBack() {
-        window.location.href = "movies.html";
-    }
-
-    // Fetch details for the selected movie if an ID is provided in the URL
-    if (movieId) {
-        fetchMovieDetails(movieId);
-    }
-</script>
-<script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
+<script src="load.js"></script>
+<script src="player.js"></script>
 </body>
 </html>
