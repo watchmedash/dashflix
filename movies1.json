@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Pin/ya",
+          "link": "https://emirati.top/movies/Pinya",
+          "image": "https://i.postimg.cc/XJ7thRjz/1.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "Emmanuelle",
           "link": "https://emirati.top/movies/Emmanuelle",
           "image": "https://image.tmdb.org/t/p/original/5vgFhz7UwPnaf4xc73YaCPjyyY2.jpg",
