@@ -1,6 +1,32 @@
 {
     "movies": [
       {
+          "title": "Customs Frontline",
+          "link": "https://emirati.top/movies/Customs Frontline",
+          "image": "https://image.tmdb.org/t/p/original/a869Prbl9FEWeWPWSw0Q3phE4Iv.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Moana 2",
+          "link": "https://emirati.top/movies/Moana 2",
+          "image": "https://image.tmdb.org/t/p/original/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Adventure",
+              "Family",
+              "Comedy"
+          ]
+      },
+      {
           "title": "Pin/ya",
           "link": "https://emirati.top/movies/Pinya",
           "image": "https://i.postimg.cc/XJ7thRjz/1.jpg",
