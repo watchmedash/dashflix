@@ -973,6 +973,7 @@ height: 80px;
 
 .image-contained {
 width: 100%;
+max-width: 720px;
 overflow: hidden;
 }
 

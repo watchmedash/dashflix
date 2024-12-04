@@ -1,3 +1,23 @@
+.terra {
+display: flex;
+justify-content: center; /* centers horizontally */
+align-items: center; /* centers vertically */
+margin-bottom: 5px;
+margin-top: 5px;
+}
+
+.image-contained {
+width: 100%;
+max-width: 720px;
+overflow: hidden;
+}
+
+.image-contained img {
+width: 100%;
+height: auto;
+display: block; /* This ensures the image behaves as a block element */
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
