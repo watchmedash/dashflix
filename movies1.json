@@ -1,6 +1,102 @@
 {
     "movies": [
       {
+          "title": "Exhibiting Forgiveness",
+          "link": "https://emirati.top/movies/Exhibiting Forgiveness",
+          "image": "https://image.tmdb.org/t/p/original/l5iHIbD89nsfjyhjdxZIg25VyjR.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Weekend in Taipei",
+          "link": "https://emirati.top/movies/Weekend in Taipei",
+          "image": "https://image.tmdb.org/t/p/original/qSc0AUvs8mRy00R9y8QYEHWIAQ9.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Mickey and the Very Many Christmases",
+          "link": "https://emirati.top/movies/Mickey and the Very Many Christmases",
+          "image": "https://image.tmdb.org/t/p/original/j8HNzRSIsiiCfSzsU1FU8U60VAd.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Adventure",
+              "Comedy",
+              "Family"
+          ]
+      },
+      {
+          "title": "The Gutter",
+          "link": "https://emirati.top/movies/The Gutter",
+          "image": "https://image.tmdb.org/t/p/original/onyGyEV8tPSi0thqdlsUUErxwrB.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Forgive Me Father",
+          "link": "https://emirati.top/movies/Forgive Me Father",
+          "image": "https://image.tmdb.org/t/p/original/6rk7CGi60CJP4NcKxca57Eu9DHC.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Thriller",
+              "Horror",
+              "Crime"
+          ]
+      },
+      {
+          "title": "The Final Days of Adolf Hitler",
+          "link": "https://emirati.top/movies/The Final Days of Adolf Hitler",
+          "image": "https://image.tmdb.org/t/p/original/d0ljkjQpenEOCjevaalpiEa5Ih3.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Documentary"
+          ]
+      },
+      {
+          "title": "TMZ Presents The Downfall of Diddy Inside the Freak-Offs",
+          "link": "https://emirati.top/movies/TMZ Presents The Downfall of Diddy Inside the Freak-Offs",
+          "image": "https://image.tmdb.org/t/p/original/y6G2sqYljH408z5iAhl9byydDty.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Documentary",
+              "Crime"
+          ]
+      },
+      {
+          "title": "The Desiring",
+          "link": "https://emirati.top/movies/The Desiring",
+          "image": "https://image.tmdb.org/t/p/original/3hDNqv5o2wdnUQcXimNDPCJoKro.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
           "title": "Customs Frontline",
           "link": "https://emirati.top/movies/Customs Frontline",
           "image": "https://image.tmdb.org/t/p/original/a869Prbl9FEWeWPWSw0Q3phE4Iv.jpg",
