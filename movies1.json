@@ -1,6 +1,79 @@
 {
     "movies": [
       {
+          "title": "The Stray",
+          "link": "https://emirati.top/movies/The Stray",
+          "image": "https://image.tmdb.org/t/p/original/bxw9tRRPZHIQ3vYOubS3DVfgnDo.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2017",
+          "genres": [
+              "Drama",
+              "Family"
+          ]
+      },
+      {
+          "title": "Paul Reiser Life Death and Rice Pudding",
+          "link": "https://emirati.top/movies/Paul Reiser Life Death and Rice Pudding",
+          "image": "https://image.tmdb.org/t/p/original/hhUanyVvksP3zgu4njm8o9QpZsU.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Mary",
+          "link": "https://emirati.top/movies/Mary",
+          "image": "https://image.tmdb.org/t/p/original/qLeylh7WLmRNcMW3yuMaMLQG0RX.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "History",
+              "Action"
+          ]
+      },
+      {
+          "title": "Lake George",
+          "link": "https://emirati.top/movies/Lake George",
+          "image": "https://image.tmdb.org/t/p/original/g2X9zAwVMJzu3A6v70bnMSlsybc.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Drama",
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "The Cursed Land",
+          "link": "https://emirati.top/movies/The Cursed Land",
+          "image": "https://image.tmdb.org/t/p/original/h2xI8LpnleyWzIrjtgBLrE3fc13.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "A Nonsense Christmas with Sabrina Carpenter",
+          "link": "https://emirati.top/movies/A Nonsense Christmas with Sabrina Carpenter",
+          "image": "https://image.tmdb.org/t/p/original/w6gBjvivsWwTbvz0bBAIxszOnWL.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Music"
+          ]
+      },
+      {
           "title": "Forbidden Desire",
           "link": "https://emirati.top/movies/Forbidden Desire",
           "image": "https://nsfwph.com/attachments/3005342",
