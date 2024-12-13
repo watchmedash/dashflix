@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Solo Leveling -ReAwakening-",
+          "link": "https://emirati.top/movies/Solo Leveling -ReAwakening-",
+          "image": "https://image.tmdb.org/t/p/w500/uzHMp5heVLR68kbbUEXFPsmxYsM.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Fantasy"
+          ]
+      },
+      {
           "title": "Red One",
           "link": "https://emirati.top/movies/Red One",
           "image": "https://image.tmdb.org/t/p/original/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
