@@ -1,6 +1,31 @@
 {
     "movies": [
       {
+          "title": "Red One",
+          "link": "https://emirati.top/movies/Red One",
+          "image": "https://image.tmdb.org/t/p/original/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Action",
+              "Fantasy"
+          ]
+      },
+      {
+          "title": "Maria",
+          "link": "https://emirati.top/movies/Maria",
+          "image": "https://image.tmdb.org/t/p/original/3oQRG0bwPUqE4N4n8z2kAzr7e40.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Music"
+          ]
+      },
+      {
           "title": "Venom The Last Dance",
           "link": "https://emirati.top/movies/Venom The Last Dance",
           "image": "https://image.tmdb.org/t/p/original/k42Owka8v91trK1qMYwCQCNwJKr.jpg",
