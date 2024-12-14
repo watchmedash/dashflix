@@ -1,6 +1,4 @@
 const BASE_URL = "libog.json"; // Update with actual URL
-const IMAGE_BASE_URL = "https://videothumbs.me/"; // Base URL for images
-
 let movies = [];
 let isLoading = false;
 
@@ -15,8 +13,7 @@ async function fetchMovies() {
     // Generate movie data based on TMDB IDs
     movies = data.tmdbIDs.map(id => ({
       id,
-      title: `Movie ${id}`, // Replace with real movie data if available
-      poster_path: `${id}.jpg`, // Generate the image path dynamically
+      title: `Movie ${id}` // Use movie ID as title
     }));
 
     displayMovies(movies);
@@ -38,50 +35,21 @@ function displayMovies(moviesList) {
     return;
   }
 
+  // Create tab items for movies
   moviesList.forEach(movie => {
-    const item = document.createElement("div");
-    item.className = "gallery-item";
-
-    const image = document.createElement("img");
-    image.className = "lazy-image";
-    image.setAttribute("data-src", IMAGE_BASE_URL + movie.poster_path);
-    image.alt = movie.title;
-
-    image.addEventListener("load", () => {
-      image.classList.add("loaded");
-    });
-
-    image.addEventListener("error", () => {
-      console.error(`Failed to load image for movie: ${movie.title}`);
-    });
+    const tabItem = document.createElement("div");
+    tabItem.className = "tab-item";
 
     const link = document.createElement("a");
     link.href = `pliya.html?id=${movie.id}`;
     link.target = "_self";
-    link.appendChild(image);
+    link.innerHTML = `<i class="fas fa-play"></i> ${movie.id}`; // Add play icon
 
-    item.appendChild(link);
-    gallery.appendChild(item);
+    tabItem.appendChild(link);
+    gallery.appendChild(tabItem);
   });
-
-  initializeLazyLoad();
 }
 
-function initializeLazyLoad() {
-  const lazyImages = document.querySelectorAll("img.lazy-image");
-  const imageObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const lazyImage = entry.target;
-        lazyImage.src = lazyImage.dataset.src;
-        lazyImage.onload = () => lazyImage.classList.add("loaded");
-        imageObserver.unobserve(lazyImage);
-      }
-    });
-  });
-
-  lazyImages.forEach(image => imageObserver.observe(image));
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchMovies(); // Load movies on page load
