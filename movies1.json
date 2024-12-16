@@ -1,6 +1,28 @@
 {
     "movies": [
       {
+          "title": "Getting LOST",
+          "link": "https://emirati.top/movies/Getting LOST",
+          "image": "https://image.tmdb.org/t/p/original/lc4n406XqcLd2OFhub6QQYLhUkr.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Documentary"
+          ]
+      },
+      {
+          "title": "Saturday Nights Main Event XXXVII",
+          "link": "https://emirati.top/movies/Saturday Nights Main Event XXXVII",
+          "image": "https://image.tmdb.org/t/p/original/cS90gS08N2I4LW0dh5omKh2ywiw.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action"
+          ]
+      },
+      {
           "title": "Carry-On",
           "link": "https://emirati.top/movies/Carry-On",
           "image": "https://image.tmdb.org/t/p/original/sjMN7DRi4sGiledsmllEw5HJjPy.jpg",
