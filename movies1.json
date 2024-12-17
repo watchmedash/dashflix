@@ -1,6 +1,44 @@
 {
     "movies": [
       {
+          "title": "Anora",
+          "link": "https://emirati.top/movies/Anora",
+          "image": "https://image.tmdb.org/t/p/original/xXz6ScxPlLRzL3MtzceNY52Neuq.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
+          "title": "Kraven the Hunter",
+          "link": "https://emirati.top/movies/Kraven the Hunter",
+          "image": "https://image.tmdb.org/t/p/original/i47IUSsN126K11JUzqQIOi1Mg1M.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "The Lord of the Rings The War of the Rohirrim",
+          "link": "https://emirati.top/movies/The Lord of the Rings The War of the Rohirrim",
+          "image": "https://image.tmdb.org/t/p/original/vpghpZ16qRX6Vxm2UUv1awwpwwi.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Fantasy"
+          ]
+      },
+      {
           "title": "Getting LOST",
           "link": "https://emirati.top/movies/Getting LOST",
           "image": "https://image.tmdb.org/t/p/original/lc4n406XqcLd2OFhub6QQYLhUkr.jpg",
