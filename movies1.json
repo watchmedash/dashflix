@@ -1,6 +1,29 @@
 {
     "movies": [
       {
+          "title": "Ronny Chieng Love to Hate It",
+          "link": "https://emirati.top/movies/Ronny Chieng Love to Hate It",
+          "image": "https://image.tmdb.org/t/p/original/y5FFEepI4i40E38SLvV56vdIwDh.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "O Cmon All Ye Faithful",
+          "link": "https://emirati.top/movies/O Cmon All Ye Faithful",
+          "image": "https://image.tmdb.org/t/p/original/78aPMsmZsMbLxSn8NY0PA0Hpx8B.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Comedy"
+          ]
+      },
+      {
           "title": "Anora",
           "link": "https://emirati.top/movies/Anora",
           "image": "https://image.tmdb.org/t/p/original/xXz6ScxPlLRzL3MtzceNY52Neuq.jpg",
