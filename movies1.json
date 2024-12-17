@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Lamas",
+          "link": "https://emirati.top/movies/Lamas",
+          "image": "https://i.mydramalist.com/O8yD4x_4f.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "Ronny Chieng Love to Hate It",
           "link": "https://emirati.top/movies/Ronny Chieng Love to Hate It",
           "image": "https://image.tmdb.org/t/p/original/y5FFEepI4i40E38SLvV56vdIwDh.jpg",
