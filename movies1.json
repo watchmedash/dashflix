@@ -1,6 +1,32 @@
 {
     "movies": [
       {
+          "title": "Kraven the Hunter",
+          "link": "https://emirati.top/movies/Kraven the Hunter",
+          "image": "https://image.tmdb.org/t/p/original/i47IUSsN126K11JUzqQIOi1Mg1M.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Gladiator II",
+          "link": "https://emirati.top/movies/Gladiator II",
+          "image": "https://static.wikia.nocookie.net/gladiator2000/images/4/4c/Gladiator_II_Teaser_Poster.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Lamas",
           "link": "https://emirati.top/movies/Lamas",
           "image": "https://i.mydramalist.com/O8yD4x_4f.jpg",
@@ -46,19 +72,6 @@
               "Comedy",
               "Drama",
               "Romance"
-          ]
-      },
-      {
-          "title": "Kraven the Hunter",
-          "link": "https://emirati.top/movies/Kraven the Hunter",
-          "image": "https://image.tmdb.org/t/p/original/i47IUSsN126K11JUzqQIOi1Mg1M.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
           ]
       },
       {
