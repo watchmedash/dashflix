@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Mufasa: The Lion King",
+          "link": "https://emirati.top/movies/Mufasa The Lion King",
+          "image": "https://lumiere-a.akamaihd.net/v1/images/image_e9437eb0.jpeg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Fantasy"
+          ]
+      },
+      {
           "title": "Boy Kaldag",
           "link": "https://emirati.top/movies/Boy Kaldag",
           "image": "https://m.media-amazon.com/images/M/MV5BMDM2NjM5MzEtYmQzZS00NGUxLWIxYmUtYjFjMWU0ZDJmZjgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
