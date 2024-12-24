@@ -1,15 +1,70 @@
 {
     "movies": [
       {
-          "title": "Mufasa: The Lion King",
-          "link": "https://emirati.top/movies/Mufasa The Lion King",
-          "image": "https://lumiere-a.akamaihd.net/v1/images/image_e9437eb0.jpeg",
-          "tag": "CAM",
+          "title": "Buffalo Kids",
+          "link": "https://emirati.top/movies/Buffalo Kids",
+          "image": "https://image.tmdb.org/t/p/original/nRWiUth8Cr5bG9AQkDZHoAS25CW.jpg",
+          "tag": "HD",
           "requested": true,
           "release_year": "2024",
           "genres": [
               "Animation",
-              "Fantasy"
+              "Adventure",
+              "Comedy",
+              "Family"
+          ]
+      },
+      {
+          "title": "Werewolves",
+          "link": "https://emirati.top/movies/Werewolves",
+          "image": "https://image.tmdb.org/t/p/original/elKf8Y5yi6Rl6teKsrQg0GAwaQD.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "The Order",
+          "link": "https://emirati.top/movies/The Order",
+          "image": "https://image.tmdb.org/t/p/original/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Crime",
+              "Drama",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Y2K",
+          "link": "https://emirati.top/movies/Y2K",
+          "image": "https://image.tmdb.org/t/p/original/qndubIQalyxBJI5EBNZKGXEX74q.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Horror",
+              "Science Fiction"
+          ]
+      },
+      {
+          "title": "Mufasa The Lion King",
+          "link": "https://emirati.top/movies/Mufasa The Lion King",
+          "image": "https://image.tmdb.org/t/p/original/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Adventure",
+              "Family",
+              "Drama",
+              "Animation"
           ]
       },
       {
