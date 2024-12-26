@@ -1,6 +1,54 @@
 {
     "movies": [
       {
+          "title": "Panda Plan",
+          "link": "https://emirati.top/movies/Panda Plan",
+          "image": "https://image.tmdb.org/t/p/original/95EiKK6SM5k26cLlP37eGcJHzDQ.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Boy Kaldag",
+          "link": "https://emirati.top/movies/Boy Kaldag",
+          "image": "https://image.tmdb.org/t/p/original/oP7KG48p8dbWFTykZDzrjxu2MUA.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Mamas Boy",
+          "link": "https://emirati.top/movies/Mamas Boy",
+          "image": "https://image.tmdb.org/t/p/original/yhJ0WwZgVsviRGENlMPnq7gD5sd.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "SuperKlaus",
+          "link": "https://emirati.top/movies/SuperKlaus",
+          "image": "https://image.tmdb.org/t/p/original/8LCaJujpsJuWnlhdFUVc0WGWSNq.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Animation",
+              "Comedy",
+              "Family",
+              "Adventure"
+          ]
+      },
+      {
           "title": "Buffalo Kids",
           "link": "https://emirati.top/movies/Buffalo Kids",
           "image": "https://image.tmdb.org/t/p/original/nRWiUth8Cr5bG9AQkDZHoAS25CW.jpg",
@@ -65,18 +113,6 @@
               "Family",
               "Drama",
               "Animation"
-          ]
-      },
-      {
-          "title": "Boy Kaldag",
-          "link": "https://emirati.top/movies/Boy Kaldag",
-          "image": "https://m.media-amazon.com/images/M/MV5BMDM2NjM5MzEtYmQzZS00NGUxLWIxYmUtYjFjMWU0ZDJmZjgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Drama",
-              "Romance"
           ]
       },
       {
