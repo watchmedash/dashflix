@@ -1,6 +1,28 @@
 {
     "movies": [
       {
+          "title": "Climax",
+          "link": "https://emirati.top/movies/Climax",
+          "image": "https://m.media-amazon.com/images/M/MV5BMDQ4NjYyNjEtMDRjNy00MjNhLTkzNTQtZmU3NWZjNmVkNGI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Teachers Pet",
+          "link": "https://emirati.top/movies/Teachers Pet",
+          "image": "https://m.media-amazon.com/images/M/MV5BYjdmNmEyOGEtYTE4MS00ODk2LWE3ZTEtN2RhMDI3ZDViMDExXkEyXkFqcGc@._V1_QL75_UX480_.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
           "title": "Panda Plan",
           "link": "https://emirati.top/movies/Panda Plan",
           "image": "https://image.tmdb.org/t/p/original/95EiKK6SM5k26cLlP37eGcJHzDQ.jpg",
