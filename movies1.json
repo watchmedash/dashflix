@@ -1,14 +1,111 @@
 {
     "movies": [
       {
-          "title": "Climax",
-          "link": "https://emirati.top/movies/Climax",
-          "image": "https://m.media-amazon.com/images/M/MV5BMDQ4NjYyNjEtMDRjNy00MjNhLTkzNTQtZmU3NWZjNmVkNGI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "title": "Kang Mak (from Pee Mak)",
+          "link": "https://emirati.top/movies/Kang Mak (from Pee Mak)",
+          "image": "https://image.tmdb.org/t/p/original/h2k58PFM2dQsHXNxb2D471r3BJp.jpg",
           "tag": "HD",
           "requested": true,
           "release_year": "2024",
           "genres": [
+              "Comedy",
+              "Horror",
+              "Romance",
+              "War"
+          ]
+      },
+      {
+          "title": "Eye for an Eye 2",
+          "link": "https://emirati.top/movies/Eye for an Eye 2",
+          "image": "https://image.tmdb.org/t/p/original/lxGkinl8TwFdIUffEdTOw95lKL7.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
               "Drama"
+          ]
+      },
+      {
+          "title": "Teasing Master Takagi-san",
+          "link": "https://emirati.top/movies/Teasing Master Takagi-san",
+          "image": "https://image.tmdb.org/t/p/original/sBzPJ4z1CSjGxK0wM1n5MUQjDdd.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Romance"
+          ]
+      },
+      {
+          "title": "Nosferatu",
+          "link": "https://emirati.top/movies/Nosferatu",
+          "image": "https://image.tmdb.org/t/p/original/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
+          "tag": "CAM",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Fantasy"
+          ]
+      },
+      {
+          "title": "Love in the Big City",
+          "link": "https://emirati.top/movies/Love in the Big City",
+          "image": "https://image.tmdb.org/t/p/original/fIwEUgdcndOAolZLPqOq9wEMuin.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Romance",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Climax",
+          "link": "https://emirati.top/movies/Climax",
+          "image": "https://image.tmdb.org/t/p/original/oZ3Q2BBOtNYk1UR0gXeMgsUrGOx.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Documentary"
+          ]
+      },
+      {
+          "title": "Cunk on Life",
+          "link": "https://emirati.top/movies/Cunk on Life",
+          "image": "https://image.tmdb.org/t/p/original/29e6KcTFHYKSNoZB8zmWlFuF4vt.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "A Real Pain",
+          "link": "https://emirati.top/movies/A Real Pain",
+          "image": "https://image.tmdb.org/t/p/original/yaTFjMNh8D78dDHrglivOTv5YOx.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Devils Stay",
+          "link": "https://emirati.top/movies/Devils Stay",
+          "image": "https://image.tmdb.org/t/p/original/kQO9BGj2CnLEuT7Xw6eCbV6q2NN.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Mystery"
           ]
       },
       {
