@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="noodle">
         <img src="https://i.postimg.cc/MGX9QPK1/update.webp" alt="Landscape">
         <div class="content">
-          <h2>Breaking News!</h2>
-          <p>Apparently, brains are for thinking. Who knew? Try it sometime!</p>
+          <!--<h2>Breaking News!</h2>
+          <p>Apparently, brains are for thinking. Who knew? Try it sometime!</p>-->
           <button class="close-button" id="closeNoodle">Close</button>
         </div>
       </div>
