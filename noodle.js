@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   noodleOverlay.innerHTML = `
     <div class="noodle-overlay active" id="noodleOverlay">
       <div class="noodle">
-        <img src="https://i.postimg.cc/MGX9QPK1/update.webp" alt="Landscape">
+        <img src="https://i.postimg.cc/LXMbpNgr/Screenshot-2025-01-06-153937.png" alt="Landscape">
         <div class="content">
-          <!--<h2>Breaking News!</h2>
-          <p>Apparently, brains are for thinking. Who knew? Try it sometime!</p>-->
+          <!--<h2>Breaking News!</h2>-->
+        <p>Prefer a bigger screen? Visit dashflix.top on your preferred device.</p>
           <button class="close-button" id="closeNoodle">Close</button>
         </div>
       </div>
