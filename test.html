@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Sliding Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111;
+            color: #fff;
+        }
+
+        .carousel {
+            perspective: 1000px;
+            width: 80%;
+            max-width: 400px; /* Adjust width for portrait orientation */
+            height: 500px; /* Increased height for portrait images */
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .carousel-track {
+            display: flex;
+            transform-style: preserve-3d;
+            transition: transform 0.8s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            flex-shrink: 0;
+            backface-visibility: hidden;
+            transform: translateZ(-200px) rotateY(0deg);
+            transition: transform 0.8s ease;
+        }
+
+        .carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Ensures the image fits within the boundaries without cropping */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+        .carousel-item a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 50%;
+            outline: none;
+        }
+
+        .control:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 600px) {
+    .carousel {
+        height: 400px; /* Adjust for smaller screens */
+    }
+    .carousel-item img {
+        max-height: 90%; /* Ensure images fit */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-track" id="carousel-track">
+            <div class="carousel-item">
+                <a href="https://example.com/link1">
+                  <img src="images/test.jpg" alt="Slide 1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://example.com/link2">
+                  <img src="images/test1.jpg" alt="Slide 1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="https://example.com/link3">
+                    <img src="images/test2.jpg" alt="Slide 1">
+                </a>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="control" id="prev-btn">&#9664;</button>
+            <button class="control" id="next-btn">&#9654;</button>
+        </div>
+    </div>
+
+    <script>
+        const track = document.getElementById('carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const angle = -currentIndex * 120; // 360 / 3 (number of items)
+            track.style.transform = `translateZ(-200px) rotateY(${angle}deg)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        // Initial setup
+        updateCarousel();
+    </script>
+</body>
+</html>
