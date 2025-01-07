@@ -6,7 +6,7 @@ let movies = [];
 let currentPage = 1;
 let searchQuery = "";
 let isLoading = false;
-const blockedMovieIds = [1163258, 179387, 634649];
+const blockedMovieIds = [1163258, 969492, 634649, 957452];
 
 async function fetchMovies(page = 1, append = false) {
   try {
