@@ -1,6 +1,33 @@
 {
     "movies": [
       {
+          "title": "Sonic the Hedgehog 3",
+          "link": "https://emirati.top/movies/Sonic the Hedgehog 3",
+          "image": "https://image.tmdb.org/t/p/original/x7NPbBlrvFRJrpinBSRlMOOUWom.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Science Fiction",
+              "Comedy",
+              "Family"
+          ]
+      },
+      {
+          "title": "Mufasa The Lion King",
+          "link": "https://emirati.top/movies/Mufasa The Lion King",
+          "image": "https://image.tmdb.org/t/p/original/nHhjqeJcaQKOBCd21c1kV2DK5gm.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Adventure",
+              "Family",
+              "Animation"
+          ]
+      },
+      {
           "title": "Baby Assassins Nice Days",
           "link": "https://emirati.top/movies/Baby Assassins Nice Days",
           "image": "https://image.tmdb.org/t/p/original/k8hk9ndfEUoRtAJd5xHSi3xAChj.jpg",
@@ -326,20 +353,6 @@
               "Comedy",
               "Horror",
               "Science Fiction"
-          ]
-      },
-      {
-          "title": "Mufasa The Lion King",
-          "link": "https://emirati.top/movies/Mufasa The Lion King",
-          "image": "https://image.tmdb.org/t/p/original/lurEK87kukWNaHd0zYnsi3yzJrs.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Adventure",
-              "Family",
-              "Drama",
-              "Animation"
           ]
       },
       {
