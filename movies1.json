@@ -1,14 +1,50 @@
 {
     "movies": [
       {
-          "title": "Las Ilusyunadas",
-          "link": "https://emirati.top/movies/Las Ilusyunadas",
-          "image": "https://m.media-amazon.com/images/M/MV5BZTJkNDMwMzUtNTc1OC00ZWEzLWFlNTItYWZjYmYyYmQ1ZWRkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "title": "Baby Assassins Nice Days",
+          "link": "https://emirati.top/movies/Baby Assassins Nice Days",
+          "image": "https://image.tmdb.org/t/p/original/k8hk9ndfEUoRtAJd5xHSi3xAChj.jpg",
           "tag": "HD",
           "requested": true,
           "release_year": "2024",
           "genres": [
-              "Documentary"
+              "Action",
+              "Comedy",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Bushido",
+          "link": "https://emirati.top/movies/Bushido",
+          "image": "https://image.tmdb.org/t/p/original/yUk0gxAMwdMFCHk5w9XICt1olKj.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "History"
+          ]
+      },
+      {
+          "title": "All We Imagine as Light",
+          "link": "https://emirati.top/movies/All We Imagine as Light",
+          "image": "https://image.tmdb.org/t/p/original/6Ee8vZYu5Lndfu9KRhVxSX3uufR.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Las Ilusyunadas",
+          "link": "https://emirati.top/movies/Las Ilusyunadas",
+          "image": "https://image.tmdb.org/t/p/original/eLCoMknSWjYTb5ObQIAmgzqhgSM.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama"
           ]
       },
       {
