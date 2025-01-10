@@ -16,19 +16,13 @@ function renderJoke(index) {
     const jokeContainer = document.getElementById("joke-container");
     const joke = jokes[index].joke;
 
-    // Check if the joke has a question mark to split, otherwise treat it as a single statement
     const [setup, punchline] = joke.includes("?") ? joke.split("? ") : [joke, ""];
 
-    // If there's a punchline, display it in a spoiler, otherwise just the setup
     const formattedJoke = punchline
         ? `${setup}? <span class="spoiler" onclick="revealSpoiler(this)">${punchline}</span>`
         : setup;
 
     jokeContainer.innerHTML = formattedJoke;
-
-    // Update button states
-    document.getElementById("prev").disabled = index === 0;
-    document.getElementById("next").disabled = index === jokes.length - 1;
 }
 
 function revealSpoiler(spoilerElement) {
@@ -43,16 +37,19 @@ function showRandomJoke() {
 document.getElementById("prev").addEventListener("click", () => {
     if (currentIndex > 0) {
         currentIndex -= 1;
-        renderJoke(currentIndex);
+    } else {
+        currentIndex = jokes.length - 1;
     }
+    renderJoke(currentIndex);
 });
 
 document.getElementById("next").addEventListener("click", () => {
     if (currentIndex < jokes.length - 1) {
         currentIndex += 1;
-        renderJoke(currentIndex);
+    } else {
+        currentIndex = 0;
     }
+    renderJoke(currentIndex);
 });
 
-// Load jokes on page load
 fetchJokes();
