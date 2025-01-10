@@ -1,0 +1,3062 @@
+[
+    {
+        "question": "In which year did the Berlin Wall fall?",
+        "options": [
+            "1989",
+            "1992",
+            "1995",
+            "1998"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who wrote the famous novel \"One Hundred Years of Solitude\"?",
+        "options": [
+            "Gabriel Garcia Marquez",
+            "Jorge Luis Borges",
+            "Mario Vargas Llosa",
+            "Isabel Allende"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "options": [
+            "Ag",
+            "Au",
+            "Fe",
+            "Hg"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which planet is known as the \"Red Planet\"?",
+        "options": [
+            "Mars",
+            "Venus",
+            "Jupiter",
+            "Saturn"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who painted the Mona Lisa?",
+        "options": [
+            "Michelangelo",
+            "Leonardo da Vinci",
+            "Raphael",
+            "Donatello"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest mammal on Earth?",
+        "options": [
+            "African Elephant",
+            "Blue Whale",
+            "Giraffe",
+            "Polar Bear"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In which country did the Industrial Revolution begin?",
+        "options": [
+            "Germany",
+            "France",
+            "United States",
+            "Great Britain"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the currency of Japan?",
+        "options": [
+            "Yen",
+            "Won",
+            "Rupee",
+            "Peso"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which famous scientist developed the theory of relativity?",
+        "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Stephen Hawking",
+            "Marie Curie"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the capital of Australia?",
+        "options": [
+            "Sydney",
+            "Canberra",
+            "Melbourne",
+            "Brisbane"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which gas is most abundant in the Earth's atmosphere?",
+        "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon Dioxide",
+            "Argon"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who discovered penicillin?",
+        "options": [
+            "Alexander Fleming",
+            "Marie Curie",
+            "Louis Pasteur",
+            "Gregor Mendel"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In which year did the Titanic sink?",
+        "options": [
+            "1910",
+            "1912",
+            "1914",
+            "1916"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the smallest planet in our solar system?",
+        "options": [
+            "Mercury",
+            "Mars",
+            "Venus",
+            "Pluto"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who wrote the play \"Romeo and Juliet\"?",
+        "options": [
+            "Christopher Marlowe",
+            "William Shakespeare",
+            "John Donne",
+            "Ben Jonson"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which element has the atomic number 1?",
+        "options": [
+            "Oxygen",
+            "Helium",
+            "Hydrogen",
+            "Carbon"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In which year did World War II end?",
+        "options": [
+            "1943",
+            "1945",
+            "1947",
+            "1949"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": [
+            "Gold",
+            "Diamond",
+            "Iron",
+            "Platinum"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which city is known as the \"City of Light\"?",
+        "options": [
+            "London",
+            "Paris",
+            "New York",
+            "Tokyo"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who developed the first successful airplane?",
+        "options": [
+            "Thomas Edison",
+            "Wright brothers",
+            "Nikola Tesla",
+            "Alexander Graham Bell"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "options": [
+            "Brain",
+            "Heart",
+            "Skin",
+            "Liver"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In which country is the Great Barrier Reef located?",
+        "options": [
+            "United States",
+            "Australia",
+            "Canada",
+            "South Africa"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which continent is known as the \"Dark Continent\"?",
+        "options": [
+            "Asia",
+            "Africa",
+            "Europe",
+            "Australia"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "options": [
+            "Toronto",
+            "Ottawa",
+            "Vancouver",
+            "Montreal"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What element is essential for the process of respiration?",
+        "options": [
+            "Nitrogen",
+            "Oxygen",
+            "Hydrogen",
+            "Carbon"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first President of the United States?",
+        "options": [
+            "George Washington",
+            "Thomas Jefferson",
+            "Abraham Lincoln",
+            "John Adams"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the smallest bone in the human body?",
+        "options": [
+            "Stapes",
+            "Femur",
+            "Tibia",
+            "Radius"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which country is the largest producer of coffee in the world?",
+        "options": [
+            "Colombia",
+            "Brazil",
+            "Vietnam",
+            "Indonesia"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In which year did the first man land on the moon?",
+        "options": [
+            "1965",
+            "1967",
+            "1969",
+            "1971"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the capital city of Japan?",
+        "options": [
+            "Tokyo",
+            "Kyoto",
+            "Osaka",
+            "Hiroshima"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who painted the ceiling of the Sistine Chapel?",
+        "options": [
+            "Michelangelo",
+            "Leonardo da Vinci",
+            "Raphael",
+            "Donatello"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which country invented the first paper?",
+        "options": [
+            "China",
+            "Egypt",
+            "Greece",
+            "India"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which is the longest-running TV show in the world?",
+        "options": [
+            "The Simpsons",
+            "The Tonight Show",
+            "Doctor Who",
+            "Sesame Street"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which animal is known as the \"King of the Jungle\"?",
+        "options": [
+            "Tiger",
+            "Lion",
+            "Elephant",
+            "Gorilla"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which is the tallest mountain in the world?",
+        "options": [
+            "Mount Kilimanjaro",
+            "Mount Everest",
+            "Mount McKinley",
+            "Mount Fuji"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the tallest building in the world?",
+        "options": [
+            "Burj Khalifa",
+            "Shanghai Tower",
+            "Empire State Building",
+            "Tokyo Skytree"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who invented the telephone?",
+        "options": [
+            "Nikola Tesla",
+            "Alexander Graham Bell",
+            "Thomas Edison",
+            "Samuel Morse"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest island in the world?",
+        "options": [
+            "Greenland",
+            "New Guinea",
+            "Borneo",
+            "Madagascar"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which element has the chemical symbol \"O\"?",
+        "options": [
+            "Oxygen",
+            "Ozone",
+            "Osmium",
+            "Oleum"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who wrote the novel \"1984\"?",
+        "options": [
+            "George Orwell",
+            "Aldous Huxley",
+            "Ray Bradbury",
+            "J.D. Salinger"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the official language of Brazil?",
+        "options": [
+            "Spanish",
+            "Portuguese",
+            "English",
+            "French"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country is known as the Land of the Rising Sun?",
+        "options": [
+            "China",
+            "Japan",
+            "South Korea",
+            "Thailand"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the capital of France?",
+        "options": [
+            "Paris",
+            "Berlin",
+            "Rome",
+            "Madrid"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which country is home to the Great Wall?",
+        "options": [
+            "Japan",
+            "India",
+            "China",
+            "Vietnam"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the smallest country in the world by area?",
+        "options": [
+            "Monaco",
+            "Vatican City",
+            "Nauru",
+            "San Marino"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first man to travel into space?",
+        "options": [
+            "Neil Armstrong",
+            "Yuri Gagarin",
+            "Buzz Aldrin",
+            "John Glenn"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the capital of Spain?",
+        "options": [
+            "Madrid",
+            "Barcelona",
+            "Valencia",
+            "Seville"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In which city can you find the Colosseum?",
+        "options": [
+            "Athens",
+            "Rome",
+            "Paris",
+            "Istanbul"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest ocean on Earth?",
+        "options": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the main ingredient in guacamole?",
+        "options": [
+            "Tomato",
+            "Avocado",
+            "Onion",
+            "Lemon"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What year did World War I begin?",
+        "options": [
+            "1905",
+            "1912",
+            "1914",
+            "1918"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the chemical symbol for water?",
+        "options": [
+            "H2O",
+            "O2",
+            "CO2",
+            "H2"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who was the first woman to fly solo across the Atlantic?",
+        "options": [
+            "Amelia Earhart",
+            "Sally Ride",
+            "Bessie Coleman",
+            "Jacqueline Cochran"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the capital of Italy?",
+        "options": [
+            "Milan",
+            "Florence",
+            "Rome",
+            "Venice"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which metal is liquid at room temperature?",
+        "options": [
+            "Mercury",
+            "Silver",
+            "Iron",
+            "Gold"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the longest river in the United States?",
+        "options": [
+            "Colorado River",
+            "Mississippi River",
+            "Missouri River",
+            "Ohio River"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who is known as the \"Father of Computers\"?",
+        "options": [
+            "Charles Babbage",
+            "Alan Turing",
+            "Bill Gates",
+            "Steve Jobs"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which planet is closest to the Sun?",
+        "options": [
+            "Earth",
+            "Venus",
+            "Mercury",
+            "Mars"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the primary ingredient in traditional Japanese sushi?",
+        "options": [
+            "Rice",
+            "Seaweed",
+            "Fish",
+            "Soy Sauce"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who was the first emperor of China?",
+        "options": [
+            "Qin Shi Huang",
+            "Kangxi",
+            "Genghis Khan",
+            "Confucius"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the largest continent by land area?",
+        "options": [
+            "Africa",
+            "Asia",
+            "North America",
+            "Europe"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the primary source of energy for the Sun?",
+        "options": [
+            "Nuclear fusion",
+            "Combustion",
+            "Electric energy",
+            "Gravitational energy"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In what year did the first manned moon landing take place?",
+        "options": [
+            "1965",
+            "1969",
+            "1971",
+            "1973"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country is the largest by land area?",
+        "options": [
+            "China",
+            "United States",
+            "Russia",
+            "Canada"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the chemical symbol for silver?",
+        "options": [
+            "Ag",
+            "Si",
+            "Au",
+            "Sb"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the most populous city in the world?",
+        "options": [
+            "Tokyo",
+            "Shanghai",
+            "New Delhi",
+            "Sao Paulo"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the largest species of shark?",
+        "options": [
+            "Great White Shark",
+            "Hammerhead Shark",
+            "Whale Shark",
+            "Mako Shark"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which fruit is known for having its seeds on the outside?",
+        "options": [
+            "Apple",
+            "Kiwi",
+            "Strawberry",
+            "Banana"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who discovered America in 1492?",
+        "options": [
+            "Christopher Columbus",
+            "Ferdinand Magellan",
+            "Leif Erikson",
+            "Vasco da Gama"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the largest land animal on Earth?",
+        "options": [
+            "Rhinoceros",
+            "Giraffe",
+            "Elephant",
+            "Hippopotamus"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which element is represented by the symbol \"Na\"?",
+        "options": [
+            "Nitrogen",
+            "Sodium",
+            "Nickel",
+            "Neptunium"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who is the author of \"Harry Potter\" series?",
+        "options": [
+            "J.R.R. Tolkien",
+            "Suzanne Collins",
+            "J.K. Rowling",
+            "George R.R. Martin"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the capital of Germany?",
+        "options": [
+            "Berlin",
+            "Munich",
+            "Hamburg",
+            "Frankfurt"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the currency of the United Kingdom?",
+        "options": [
+            "Dollar",
+            "Pound Sterling",
+            "Euro",
+            "Yen"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest planet in our solar system?",
+        "options": [
+            "Earth",
+            "Jupiter",
+            "Saturn",
+            "Uranus"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who invented the light bulb?",
+        "options": [
+            "Alexander Graham Bell",
+            "Thomas Edison",
+            "Nikola Tesla",
+            "Michael Faraday"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the tallest mountain in Africa?",
+        "options": [
+            "Mount Everest",
+            "Mount Kilimanjaro",
+            "Mount Fuji",
+            "Mount McKinley"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In which country would you find the ancient pyramids of Giza?",
+        "options": [
+            "Egypt",
+            "Greece",
+            "Mexico",
+            "Peru"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the longest-running musical on Broadway?",
+        "options": [
+            "Les Miserables",
+            "The Phantom of the Opera",
+            "Hamilton",
+            "Cats"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the famous toy company that created Lego?",
+        "options": [
+            "Mattel",
+            "Hasbro",
+            "Fisher-Price",
+            "LEGO Group"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the capital of Brazil?",
+        "options": [
+            "Sao Paulo",
+            "Rio de Janeiro",
+            "Brasilia",
+            "Salvador"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which country is the largest producer of chocolate?",
+        "options": [
+            "Belgium",
+            "Switzerland",
+            "Germany",
+            "Ivory Coast"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who was the first African American president of the United States?",
+        "options": [
+            "Barack Obama",
+            "Martin Luther King Jr.",
+            "Colin Powell",
+            "Jesse Jackson"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the capital of Egypt?",
+        "options": [
+            "Cairo",
+            "Alexandria",
+            "Luxor",
+            "Aswan"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the speed of light?",
+        "options": [
+            "299,792 km/s",
+            "150,000 km/s",
+            "400,000 km/s",
+            "150,000 m/s"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the famous clock tower in London?",
+        "options": [
+            "Elizabeth Tower",
+            "Tower Bridge",
+            "London Eye",
+            "Buckingham Palace"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which animal is known for its ability to change colors?",
+        "options": [
+            "Chameleon",
+            "Octopus",
+            "Elephant",
+            "Peacock"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the national flower of Japan?",
+        "options": [
+            "Orchid",
+            "Rose",
+            "Cherry Blossom",
+            "Lily"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the chemical formula for methane?",
+        "options": [
+            "CH4",
+            "CO2",
+            "C2H6",
+            "H2O"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which sport is known as \"the beautiful game\"?",
+        "options": [
+            "Cricket",
+            "Tennis",
+            "Basketball",
+            "Soccer"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "In which year was the Declaration of Independence signed?",
+        "options": [
+            "1776",
+            "1781",
+            "1801",
+            "1790"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the longest river in South America?",
+        "options": [
+            "Orinoco",
+            "Amazon",
+            "Parana",
+            "Mississippi"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first woman to receive a Nobel Prize?",
+        "options": [
+            "Marie Curie",
+            "Rosalind Franklin",
+            "Dorothy Crowfoot Hodgkin",
+            "Lise Meitner"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the capital of New Zealand?",
+        "options": [
+            "Wellington",
+            "Auckland",
+            "Christchurch",
+            "Hamilton"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which element is a liquid at room temperature and commonly used in thermometers?",
+        "options": [
+            "Mercury",
+            "Gallium",
+            "Bromine",
+            "Sodium"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the main language spoken in Argentina?",
+        "options": [
+            "Portuguese",
+            "Spanish",
+            "Italian",
+            "French"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the only country that is also a continent?",
+        "options": [
+            "Australia",
+            "United States",
+            "Brazil",
+            "Canada"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the most abundant gas in Earth's atmosphere?",
+        "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon Dioxide",
+            "Hydrogen"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which philosopher wrote \"The Republic\"?",
+        "options": [
+            "Aristotle",
+            "Plato",
+            "Socrates",
+            "Confucius"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which African country was never colonized by a European power?",
+        "options": [
+            "Kenya",
+            "Ghana",
+            "Liberia",
+            "Ethiopia"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which chemical element has the atomic number 79?",
+        "options": [
+            "Gold",
+            "Silver",
+            "Platinum",
+            "Copper"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which artist is famous for the painting \"Starry Night\"?",
+        "options": [
+            "Pablo Picasso",
+            "Claude Monet",
+            "Vincent van Gogh",
+            "Leonardo da Vinci"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who is known as the \"Father of Modern Physics\"?",
+        "options": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Niels Bohr",
+            "Galileo Galilei"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the official language of Switzerland?",
+        "options": [
+            "German",
+            "Italian",
+            "French",
+            "All of the above"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the currency used in South Korea?",
+        "options": [
+            "Yen",
+            "Ringgit",
+            "Won",
+            "Peso"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the name of the largest volcano in the solar system?",
+        "options": [
+            "Mauna Loa",
+            "Mount St. Helens",
+            "Olympus Mons",
+            "Mount Vesuvius"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who wrote the novel \"Moby-Dick\"?",
+        "options": [
+            "Herman Melville",
+            "Mark Twain",
+            "Charles Dickens",
+            "Edgar Allan Poe"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the largest desert in the world, by area?",
+        "options": [
+            "Sahara Desert",
+            "Kalahari Desert",
+            "Atacama Desert",
+            "Antarctic Desert"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which company is known for producing the iPhone?",
+        "options": [
+            "Samsung",
+            "Apple",
+            "Microsoft",
+            "Google"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest island in the Caribbean?",
+        "options": [
+            "Cuba",
+            "Jamaica",
+            "Hispaniola",
+            "Puerto Rico"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the most populous city in the world?",
+        "options": [
+            "Beijing",
+            "Tokyo",
+            "New York City",
+            "Sao Paulo"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who is the founder of SpaceX?",
+        "options": [
+            "Jeff Bezos",
+            "Elon Musk",
+            "Richard Branson",
+            "Mark Zuckerberg"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which company developed the video game Fortnite?",
+        "options": [
+            "Ubisoft",
+            "Epic Games",
+            "Electronic Arts",
+            "Blizzard Entertainment"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the most popular social media platform by active users as of 2024?",
+        "options": [
+            "Facebook",
+            "Instagram",
+            "TikTok",
+            "Twitter"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the name of the first 3D-printed car to be commercially available?",
+        "options": [
+            "Strati",
+            "Model S",
+            "Cybertruck",
+            "i3"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which streaming service produced the hit series \"Stranger Things\"?",
+        "options": [
+            "Netflix",
+            "Hulu",
+            "Disney+",
+            "Amazon Prime"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In which year did the United Kingdom officially leave the European Union (Brexit)?",
+        "options": [
+            "2019",
+            "2020",
+            "2021",
+            "2022"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What cryptocurrency became the first to reach a market cap of over $1 trillion?",
+        "options": [
+            "Bitcoin",
+            "Ethereum",
+            "Dogecoin",
+            "Ripple"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who won the 2022 FIFA World Cup?",
+        "options": [
+            "Brazil",
+            "France",
+            "Argentina",
+            "Germany"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which company released the first foldable smartphone?",
+        "options": [
+            "Samsung",
+            "Apple",
+            "Huawei",
+            "LG"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What year did the COVID-19 pandemic officially begin?",
+        "options": [
+            "2019",
+            "2020",
+            "2021",
+            "2022"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What social media platform did Microsoft acquire in 2016 for $26 billion?",
+        "options": [
+            "LinkedIn",
+            "TikTok",
+            "Instagram",
+            "Skype"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the AI language model developed by OpenAI, capable of producing human-like text?",
+        "options": [
+            "GPT-3",
+            "Watson",
+            "Siri",
+            "Alexa"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which electric vehicle company became the first to reach a market cap of $1 trillion?",
+        "options": [
+            "Rivian",
+            "Tesla",
+            "Lucid Motors",
+            "Nio"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What popular online game was banned in India in 2020 due to national security concerns?",
+        "options": [
+            "Call of Duty",
+            "PUBG Mobile",
+            "Fortnite",
+            "Apex Legends"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country became the first to approve a vaccine for COVID-19 in late 2020?",
+        "options": [
+            "United Kingdom",
+            "United States",
+            "Russia",
+            "China"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What year did Apple first launch the iPhone?",
+        "options": [
+            "2005",
+            "2007",
+            "2010",
+            "2012"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which tech giant acquired the company WhatsApp in 2014 for $19 billion?",
+        "options": [
+            "Facebook",
+            "Google",
+            "Microsoft",
+            "Amazon"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the title of the popular series created by George R. R. Martin that inspired the show \"Game of Thrones\"?",
+        "options": [
+            "The Sword of Fire",
+            "A Song of Ice and Fire",
+            "The Throne of Kings",
+            "Winds of Winter"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who became the youngest billionaire ever, according to Forbes, in 2019?",
+        "options": [
+            "Kylie Jenner",
+            "Mark Zuckerberg",
+            "Evan Spiegel",
+            "Elon Musk"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the first video game to gross over $1 billion in revenue?",
+        "options": [
+            "Fortnite",
+            "World of Warcraft",
+            "Grand Theft Auto V",
+            "Minecraft"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which city hosted the 2024 Summer Olympics?",
+        "options": [
+            "Tokyo",
+            "Paris",
+            "London",
+            "Beijing"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who is the CEO of Amazon as of 2024?",
+        "options": [
+            "Jeff Bezos",
+            "Andy Jassy",
+            "Elon Musk",
+            "Sundar Pichai"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country was the first to legalize cannabis for recreational use nationwide?",
+        "options": [
+            "Canada",
+            "Uruguay",
+            "Netherlands",
+            "United States"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What company created the video game \"The Witcher 3: Wild Hunt\"?",
+        "options": [
+            "Ubisoft",
+            "Naughty Dog",
+            "CD Projekt Red",
+            "Bethesda Softworks"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which country is the largest producer of solar energy in the world as of 2024?",
+        "options": [
+            "United States",
+            "India",
+            "China",
+            "Germany"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which social media platform was launched first?",
+        "options": [
+            "Facebook",
+            "MySpace",
+            "Twitter",
+            "Instagram"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In 2019, which country became the first to send a private company to the moon?",
+        "options": [
+            "United States",
+            "Israel",
+            "India",
+            "Japan"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What streaming platform produced the series \"The Crown\"?",
+        "options": [
+            "Disney+",
+            "Netflix",
+            "Amazon Prime",
+            "Hulu"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which company developed the first commercially successful virtual reality headset?",
+        "options": [
+            "HTC",
+            "Sony",
+            "Oculus",
+            "Samsung"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In 2020, which social media app became popular due to its short video format, especially during the COVID-19 pandemic?",
+        "options": [
+            "Snapchat",
+            "Instagram",
+            "TikTok",
+            "Vine"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the largest social media platform by active users, as of 2024?",
+        "options": [
+            "Facebook",
+            "Instagram",
+            "TikTok",
+            "YouTube"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What was the first country to send humans to space?",
+        "options": [
+            "United States",
+            "Soviet Union",
+            "China",
+            "Japan"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first black woman to win an Oscar for Best Actress?",
+        "options": [
+            "Viola Davis",
+            "Halle Berry",
+            "Octavia Spencer",
+            "Whoopi Goldberg"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the highest-grossing movie franchise of all time as of 2024?",
+        "options": [
+            "Marvel Cinematic Universe",
+            "Harry Potter",
+            "Star Wars",
+            "James Bond"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the name of the world's most popular electric car model?",
+        "options": [
+            "Nissan Leaf",
+            "Tesla Model 3",
+            "Chevy Bolt",
+            "BMW i3"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which tech company was founded by Bill Gates and Paul Allen in 1975?",
+        "options": [
+            "Apple",
+            "Microsoft",
+            "Google",
+            "Intel"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In 2023, which company became the first to reach a $3 trillion market valuation?",
+        "options": [
+            "Amazon",
+            "Microsoft",
+            "Apple",
+            "Tesla"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who became the first woman to serve as Vice President of the United States?",
+        "options": [
+            "Hillary Clinton",
+            "Kamala Harris",
+            "Nancy Pelosi",
+            "Condoleezza Rice"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country was the first to successfully land a probe on Mars in 2021?",
+        "options": [
+            "United States",
+            "China",
+            "Russia",
+            "India"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which tech company developed the popular virtual assistant \"Siri\"?",
+        "options": [
+            "Google",
+            "Microsoft",
+            "Amazon",
+            "Apple"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which city is known as the \"Silicon Valley of India\"?",
+        "options": [
+            "Delhi",
+            "Bengaluru",
+            "Mumbai",
+            "Chennai"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What year did the first iPhone launch?",
+        "options": [
+            "2005",
+            "2007",
+            "2009",
+            "2011"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which company is the parent company of Instagram?",
+        "options": [
+            "Twitter",
+            "Facebook (Meta)",
+            "Google",
+            "Microsoft"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who won the 2021 Nobel Prize in Literature?",
+        "options": [
+            "Kazuo Ishiguro",
+            "Bob Dylan",
+            "Abdulrazak Gurnah",
+            "Svetlana Alexievich"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In 2022, who became the world's wealthiest person for the first time?",
+        "options": [
+            "Elon Musk",
+            "Jeff Bezos",
+            "Bernard Arnault",
+            "Bill Gates"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which country became the first to have a fully functioning 5G network nationwide?",
+        "options": [
+            "United States",
+            "South Korea",
+            "China",
+            "Japan"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who became the first woman to lead a major political party in the UK in 2020?",
+        "options": [
+            "Theresa May",
+            "Nicola Sturgeon",
+            "Keir Starmer",
+            "Annaliese Dodds"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What popular video game was originally developed as a battle royale mode for Fortnite before becoming a standalone game?",
+        "options": [
+            "Apex Legends",
+            "Call of Duty: Warzone",
+            "PUBG",
+            "Fall Guys"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which space agency was responsible for the first successful landing on the far side of the Moon in 2019?",
+        "options": [
+            "NASA",
+            "ESA",
+            "Roscosmos",
+            "CNSA (China National Space Administration)"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the name of the autonomous car project developed by Alphabet (Google's parent company)?",
+        "options": [
+            "Tesla Autopilot",
+            "Waymo",
+            "Cruise",
+            "Aurora"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What was the name of the cryptocurrency that was launched by Facebook (now Meta) in 2020 but failed to launch?",
+        "options": [
+            "Libra",
+            "Bitcoin",
+            "Bitcoin Cash",
+            "Diem"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which 2020 film directed by Christopher Nolan was highly praised for its complex narrative and groundbreaking visuals?",
+        "options": [
+            "Inception",
+            "Tenet",
+            "Dunkirk",
+            "Interstellar"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which streaming service produced the series \"The Mandalorian\"?",
+        "options": [
+            "Netflix",
+            "Hulu",
+            "Disney+",
+            "Amazon Prime"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which technology company is known for producing the Oculus Rift virtual reality headset?",
+        "options": [
+            "Sony",
+            "HTC",
+            "Oculus (Meta)",
+            "Samsung"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who was the first woman to serve as the Prime Minister of New Zealand?",
+        "options": [
+            "Jacinda Ardern",
+            "Helen Clark",
+            "Margaret Thatcher",
+            "Julia Gillard"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What was the first social media platform to reach 1 billion active users?",
+        "options": [
+            "Facebook",
+            "Instagram",
+            "WeChat",
+            "YouTube"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which actor portrayed Tony Stark/Iron Man in the Marvel Cinematic Universe?",
+        "options": [
+            "Chris Hemsworth",
+            "Robert Downey Jr.",
+            "Chris Evans",
+            "Mark Ruffalo"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What company introduced the first personal computer, the Apple I, in 1976?",
+        "options": [
+            "IBM",
+            "Apple",
+            "Microsoft",
+            "Hewlett-Packard"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country became the first to launch a commercial space station in 2023?",
+        "options": [
+            "United States",
+            "China",
+            "Russia",
+            "India"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who became the first female vice president of the United States in 2021?",
+        "options": [
+            "Hillary Clinton",
+            "Nancy Pelosi",
+            "Kamala Harris",
+            "Condoleezza Rice"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In 2021, which company launched the first all-civilian space mission, Inspiration4?",
+        "options": [
+            "SpaceX",
+            "Blue Origin",
+            "Virgin Galactic",
+            "Boeing"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the most popular cryptocurrency by market capitalization as of 2024?",
+        "options": [
+            "Ethereum",
+            "Bitcoin",
+            "Ripple",
+            "Dogecoin"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In 2023, which country became the first to legalize the use of psilocybin mushrooms for medicinal use?",
+        "options": [
+            "United States",
+            "Canada",
+            "Portugal",
+            "Brazil"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which tech company introduced the \"Metaverse\" concept with its rebranding in 2021?",
+        "options": [
+            "Microsoft",
+            "Google",
+            "Apple",
+            "Meta (Facebook)"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which electric vehicle company became the first to reach a market cap of $1 trillion in 2021?",
+        "options": [
+            "Rivian",
+            "Tesla",
+            "Lucid Motors",
+            "Nio"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What 2020 movie won the Academy Award for Best Picture?",
+        "options": [
+            "Joker",
+            "Parasite",
+            "1917",
+            "Once Upon a Time in Hollywood"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the largest tech company in the world by market value as of 2024?",
+        "options": [
+            "Microsoft",
+            "Google",
+            "Apple",
+            "Amazon"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who won the 2023 FIFA Women's World Cup?",
+        "options": [
+            "United States",
+            "Japan",
+            "England",
+            "Spain"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which country became the first to officially recognize cryptocurrency as legal tender in 2021?",
+        "options": [
+            "El Salvador",
+            "Switzerland",
+            "Japan",
+            "United States"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What was the first country to land a rover on Mars in 2021?",
+        "options": [
+            "United States",
+            "China",
+            "Russia",
+            "India"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which social media platform introduced Stories in 2016?",
+        "options": [
+            "Instagram",
+            "Facebook",
+            "Snapchat",
+            "TikTok"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who became the richest person in the world in 2024, surpassing Elon Musk?",
+        "options": [
+            "Jeff Bezos",
+            "Bernard Arnault",
+            "Bill Gates",
+            "Warren Buffet"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What 2021 film directed by Denis Villeneuve is based on a science fiction novel by Frank Herbert?",
+        "options": [
+            "Blade Runner 2049",
+            "Dune",
+            "Interstellar",
+            "Arrival"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What company launched the first commercial 5G network in the United States?",
+        "options": [
+            "Verizon",
+            "AT&T",
+            "T-Mobile",
+            "Sprint"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What company created the popular video game \"Minecraft\"?",
+        "options": [
+            "Epic Games",
+            "Valve",
+            "Mojang",
+            "Blizzard Entertainment"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In 2023, which carmaker announced its intention to become carbon-neutral by 2040?",
+        "options": [
+            "Ford",
+            "General Motors",
+            "BMW",
+            "Toyota"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the most common material used to make paper?",
+        "options": [
+            "Wood",
+            "Bamboo",
+            "Cotton",
+            "Hemp"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the primary ingredient in traditional Japanese miso soup?",
+        "options": [
+            "Soybeans",
+            "Rice",
+            "Seaweed",
+            "Fish"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which precious metal is most commonly used in the production of jewelry?",
+        "options": [
+            "Gold",
+            "Silver",
+            "Platinum",
+            "Titanium"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the main ingredient in guacamole?",
+        "options": [
+            "Tomato",
+            "Avocado",
+            "Onion",
+            "Cilantro"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What type of tree produces acorns?",
+        "options": [
+            "Pine",
+            "Oak",
+            "Maple",
+            "Birch"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the chemical symbol for the element oxygen?",
+        "options": [
+            "O",
+            "Ox",
+            "Om",
+            "O2"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which type of fruit is known for containing the highest amount of vitamin C?",
+        "options": [
+            "Orange",
+            "Strawberry",
+            "Kiwi",
+            "Lemon"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the most common material used for making traditional kitchen knives?",
+        "options": [
+            "Stainless steel",
+            "Aluminum",
+            "Carbon steel",
+            "Plastic"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which fruit is the main ingredient in the classic dessert \"tarte tatin\"?",
+        "options": [
+            "Pear",
+            "Peach",
+            "Apple",
+            "Banana"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which type of stone is most commonly used in the construction of ancient Egyptian pyramids?",
+        "options": [
+            "Marble",
+            "Sandstone",
+            "Limestone",
+            "Granite"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the primary ingredient of hummus?",
+        "options": [
+            "Chickpeas",
+            "Lentils",
+            "Cabbage",
+            "Carrots"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the primary material used to make most modern windows?",
+        "options": [
+            "Plastic",
+            "Wood",
+            "Glass",
+            "Metal"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which of the following is an example of an acidic fruit?",
+        "options": [
+            "Banana",
+            "Watermelon",
+            "Lemon",
+            "Avocado"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the most commonly used material for making airplane windows?",
+        "options": [
+            "Glass",
+            "Plexiglass",
+            "Plastic",
+            "Aluminum"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What material is commonly used to make the inner workings of a watch?",
+        "options": [
+            "Rubber",
+            "Steel",
+            "Gold",
+            "Wood"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which material is primarily used to create most modern smartphones' screens?",
+        "options": [
+            "Plastic",
+            "Glass",
+            "Metal",
+            "Ceramic"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What object is most commonly used to measure temperature?",
+        "options": [
+            "Ruler",
+            "Thermometer",
+            "Stopwatch",
+            "Barometer"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the main ingredient in traditional Italian pesto sauce?",
+        "options": [
+            "Basil",
+            "Parsley",
+            "Garlic",
+            "Spinach"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the material used to make a traditional acoustic guitar's body?",
+        "options": [
+            "Steel",
+            "Wood",
+            "Plastic",
+            "Ceramic"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which of the following is commonly used to produce the fragrance of perfumes?",
+        "options": [
+            "Flowers",
+            "Fruits",
+            "Leather",
+            "Wood"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which mineral is the primary component of glass?",
+        "options": [
+            "Quartz",
+            "Calcite",
+            "Feldspar",
+            "Silica"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What material is commonly used for the production of high-end kitchen knives that resist corrosion?",
+        "options": [
+            "Damascus steel",
+            "Stainless steel",
+            "Carbon steel",
+            "Tungsten carbide"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which element is used in the production of semiconductors and is essential for making computer chips?",
+        "options": [
+            "Silicon",
+            "Gallium",
+            "Lead",
+            "Beryllium"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the primary component of a modern spacecraft's heat shield?",
+        "options": [
+            "Ceramic tiles",
+            "Carbon fiber",
+            "Aluminum alloy",
+            "Kevlar"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the main component of the ink used in modern printers?",
+        "options": [
+            "Water",
+            "Pigment",
+            "Charcoal",
+            "Alcohol"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which material is commonly used for making the delicate filaments in light bulbs?",
+        "options": [
+            "Copper",
+            "Tungsten",
+            "Aluminum",
+            "Platinum"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which type of plastic is most commonly used to manufacture food containers and bottles?",
+        "options": [
+            "Polyethylene",
+            "PVC",
+            "Polypropylene",
+            "Polystyrene"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the term for the natural material used in the production of high-quality, durable leather?",
+        "options": [
+            "Cowhide",
+            "Kangaroo leather",
+            "Alligator skin",
+            "Ostrich skin"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which type of wood is considered the hardest and most durable for furniture making?",
+        "options": [
+            "Oak",
+            "Mahogany",
+            "Teak",
+            "Pine"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which type of glass is most commonly used in the production of eyeglass lenses?",
+        "options": [
+            "Optical glass",
+            "Laminated glass",
+            "Borosilicate glass",
+            "Toughened glass"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What material is typically used for the core of a high-quality chefs knife to provide flexibility and strength?",
+        "options": [
+            "Stainless steel",
+            "Carbon steel",
+            "Titanium",
+            "Damascus steel"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What rare metal is most commonly used for the construction of electrical contacts due to its excellent conductivity?",
+        "options": [
+            "Silver",
+            "Gold",
+            "Copper",
+            "Platinum"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which material is most commonly used to make synthetic diamonds?",
+        "options": [
+            "Silicon carbide",
+            "Carbon",
+            "Boron",
+            "Graphene"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the process called when a metal is intentionally coated with a layer of gold for aesthetic purposes?",
+        "options": [
+            "Electroplating",
+            "Galvanization",
+            "Alloying",
+            "Sintering"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What substance is most commonly used in the production of high-strength carbon fibers?",
+        "options": [
+            "Polyamide",
+            "Polypropylene",
+            "Polyacrylonitrile",
+            "Polystyrene"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which material is primarily used in the construction of modern space suits to protect astronauts from extreme temperatures?",
+        "options": [
+            "Nylon",
+            "Kevlar",
+            "Teflon",
+            "Nomex"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What is the primary material used in the construction of superconducting magnets used in MRI machines?",
+        "options": [
+            "Copper",
+            "Lead",
+            "Niobium-titanium alloy",
+            "Iron"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the term for the metal alloy used in the construction of the body of most modern aircraft?",
+        "options": [
+            "Titanium-aluminum",
+            "Aluminum-lithium",
+            "Magnesium-alloy",
+            "Steel-titanium"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What type of rock is used in the production of cement?",
+        "options": [
+            "Limestone",
+            "Granite",
+            "Sandstone",
+            "Basalt"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What is the primary material used in the creation of most modern electronic circuits?",
+        "options": [
+            "Silicon",
+            "Copper",
+            "Silver",
+            "Iron"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In what year did the United Nations officially adopt the Universal Declaration of Human Rights?",
+        "options": [
+            "1945",
+            "1948",
+            "1951",
+            "1960"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "options": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who is credited with developing the first successful polio vaccine in the 1950s?",
+        "options": [
+            "Edward Jenner",
+            "Albert Sabin",
+            "Jonas Salk",
+            "Louis Pasteur"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "In which country did the Industrial Revolution begin in the late 18th century?",
+        "options": [
+            "United States",
+            "Germany",
+            "Great Britain",
+            "France"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the tallest mountain on Earth, measured from base to summit?",
+        "options": [
+            "Mount Everest",
+            "K2",
+            "Mauna Kea",
+            "Kilimanjaro"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What was the name of the first artificial satellite launched into space?",
+        "options": [
+            "Sputnik 1",
+            "Apollo 11",
+            "Voyager 1",
+            "Hubble"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which city was the first to host the modern Olympic Games?",
+        "options": [
+            "Paris",
+            "Athens",
+            "London",
+            "Rome"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What was the name of the first manned mission to land on the Moon?",
+        "options": [
+            "Apollo 11",
+            "Gemini 4",
+            "Soyuz 11",
+            "Mercury 7"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In what year did the Berlin Wall fall, signaling the end of the Cold War?",
+        "options": [
+            "1987",
+            "1989",
+            "1991",
+            "1993"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first president of the United States?",
+        "options": [
+            "Thomas Jefferson",
+            "Benjamin Franklin",
+            "George Washington",
+            "John Adams"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What element is the most abundant in Earth's atmosphere?",
+        "options": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the world's largest desert?",
+        "options": [
+            "Sahara Desert",
+            "Arabian Desert",
+            "Gobi Desert",
+            "Antarctic Desert"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Who was the first human to travel into space?",
+        "options": [
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "John Glenn",
+            "Valentina Tereshkova"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which ancient civilization built the pyramids of Giza?",
+        "options": [
+            "Ancient Mesopotamians",
+            "Ancient Egyptians",
+            "Ancient Romans",
+            "Ancient Greeks"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who wrote the play \"Romeo and Juliet\"?",
+        "options": [
+            "Charles Dickens",
+            "William Shakespeare",
+            "George Bernard Shaw",
+            "Jane Austen"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the smallest planet in our solar system?",
+        "options": [
+            "Mars",
+            "Mercury",
+            "Venus",
+            "Pluto"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which country is credited with the invention of paper?",
+        "options": [
+            "Egypt",
+            "Greece",
+            "China",
+            "India"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the capital city of Japan?",
+        "options": [
+            "Kyoto",
+            "Osaka",
+            "Tokyo",
+            "Hiroshima"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What year did World War I begin?",
+        "options": [
+            "1912",
+            "1914",
+            "1916",
+            "1918"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who won the first season of \"American Idol\" in 2002?",
+        "options": [
+            "Kelly Clarkson",
+            "Carrie Underwood",
+            "Ruben Studdard",
+            "Fantasia Barrino"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What 2017 film won the Academy Award for Best Picture after a mix-up during the announcement?",
+        "options": [
+            "La La Land",
+            "Moonlight",
+            "The Revenant",
+            "Spotlight"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which artist released the album \"Lemonade\" in 2016?",
+        "options": [
+            "Rihanna",
+            "Beyonce",
+            "Adele",
+            "Nicki Minaj"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the fictional wizarding school in the \"Harry Potter\" series?",
+        "options": [
+            "Durmstrang",
+            "Beauxbatons",
+            "Hogwarts",
+            "Ilvermorny"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which movie featured the famous line, \"Here's looking at you, kid\"?",
+        "options": [
+            "Casablanca",
+            "Gone with the Wind",
+            "Citizen Kane",
+            "The Godfather"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who played the character of The Joker in the 2008 film \"The Dark Knight\"?",
+        "options": [
+            "Jared Leto",
+            "Jack Nicholson",
+            "Heath Ledger",
+            "Tom Hardy"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which song by Lady Gaga became an anthem for the LGBTQ+ community and reached massive chart success in 2008?",
+        "options": [
+            "Poker Face",
+            "Bad Romance",
+            "Just Dance",
+            "Born This Way"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What famous 1990s television series featured a group of friends living in New York City?",
+        "options": [
+            "Friends",
+            "Seinfeld",
+            "The X-Files",
+            "Frasier"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who starred as the titular character in the 2008 film \"Iron Man\"?",
+        "options": [
+            "Chris Hemsworth",
+            "Mark Ruffalo",
+            "Robert Downey Jr.",
+            "Chris Evans"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which band released the iconic album \"Abbey Road\" in 1969?",
+        "options": [
+            "The Rolling Stones",
+            "The Who",
+            "The Beatles",
+            "Pink Floyd"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who is known for the viral dance trend \"The Floss\"?",
+        "options": [
+            "Lil Nas X",
+            "James Charles",
+            "Fortnite dancers",
+            "Backpack Kid"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What 2010 film, directed by Christopher Nolan, involved a dream-stealing heist?",
+        "options": [
+            "The Prestige",
+            "Inception",
+            "Interstellar",
+            "Dunkirk"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the fictional town in the TV series \"Stranger Things\"?",
+        "options": [
+            "Hawkins",
+            "Riverdale",
+            "Twin Peaks",
+            "Sunnydale"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Which artist famously interrupted Taylor Swifts acceptance speech at the 2009 MTV Video Music Awards?",
+        "options": [
+            "Kanye West",
+            "Justin Timberlake",
+            "Eminem",
+            "Jay-Z"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "Who played the character of Walter White in the hit series \"Breaking Bad\"?",
+        "options": [
+            "Aaron Paul",
+            "Bryan Cranston",
+            "Steve Carell",
+            "Matthew McConaughey"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What 2018 animated movie featured a character named \"Miguel\" who travels to the Land of the Dead?",
+        "options": [
+            "Frozen",
+            "Moana",
+            "Coco",
+            "Zootopia"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who directed the \"Lord of the Rings\" film trilogy?",
+        "options": [
+            "Steven Spielberg",
+            "Peter Jackson",
+            "George Lucas",
+            "Ridley Scott"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which famous pop artist created the \"Campbell's Soup Cans\" series of paintings?",
+        "options": [
+            "Pablo Picasso",
+            "Andy Warhol",
+            "Jackson Pollock",
+            "Roy Lichtenstein"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In the \"Star Wars\" franchise, what species is Yoda?",
+        "options": [
+            "Human",
+            "Wookiee",
+            "Droid",
+            "Unknown species"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which singer's real name is Stefani Joanne Angelina Germanotta?",
+        "options": [
+            "Rihanna",
+            "Lady Gaga",
+            "Katy Perry",
+            "Beyonce"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What movie features the fictional character of a time-traveling scientist named Doc Brown?",
+        "options": [
+            "Back to the Future",
+            "The Terminator",
+            "The Matrix",
+            "E.T. the Extra-Terrestrial"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In the Marvel Cinematic Universe, who portrayed the character of Black Panther?",
+        "options": [
+            "Chadwick Boseman",
+            "Michael B. Jordan",
+            "Anthony Mackie",
+            "Don Cheadle"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What popular 2000s reality TV series was set in a house with contestants competing for a million-dollar prize?",
+        "options": [
+            "Big Brother",
+            "The Amazing Race",
+            "Survivor",
+            "The Bachelor"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Who was the first artist to reach one billion streams on Spotify?",
+        "options": [
+            "Ariana Grande",
+            "Taylor Swift",
+            "Drake",
+            "Ed Sheeran"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which film won the Academy Award for Best Picture in 2019?",
+        "options": [
+            "Green Book",
+            "The Favourite",
+            "Black Panther",
+            "Roma"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What was the name of the viral dance move popularized by the song \"Gangnam Style\"?",
+        "options": [
+            "The Harlem Shake",
+            "The Macarena",
+            "The Floss",
+            "The Horse Dance"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "Which rapper released the album \"DAMN.\" in 2017?",
+        "options": [
+            "J. Cole",
+            "Kendrick Lamar",
+            "Drake",
+            "Travis Scott"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which reality show star became known for her social media presence and beauty empire, later becoming a billionaire?",
+        "options": [
+            "Kendall Jenner",
+            "Kim Kardashian",
+            "Khloe Kardashian",
+            "Kylie Jenner"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "In the \"Harry Potter\" series, who is the headmaster of Hogwarts School of Witchcraft and Wizardry?",
+        "options": [
+            "Severus Snape",
+            "Minerva McGonagall",
+            "Albus Dumbledore",
+            "Gilderoy Lockhart"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Which artist is known for the 2013 viral hit song \"Thrift Shop\"?",
+        "options": [
+            "Macklemore & Ryan Lewis",
+            "Post Malone",
+            "Wiz Khalifa",
+            "Drake"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "In the \"Game of Thrones\" TV series, who is the youngest Stark child?",
+        "options": [
+            "Arya Stark",
+            "Bran Stark",
+            "Sansa Stark",
+            "Rickon Stark"
+        ],
+        "correctAnswer": "D"
+    },
+    {
+        "question": "What animated series is set in the underwater city of Bikini Bottom?",
+        "options": [
+            "The Simpsons",
+            "Adventure Time",
+            "SpongeBob SquarePants",
+            "Rick and Morty"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "What is the name of the song by The Weeknd that became a massive hit in 2020, featuring a memorable \"blinding lights\" chorus?",
+        "options": [
+            "Save Your Tears",
+            "Blinding Lights",
+            "Can't Feel My Face",
+            "Starboy"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "In the 1997 film \"Titanic,\" who played the role of Jack Dawson?",
+        "options": [
+            "Johnny Depp",
+            "Leonardo DiCaprio",
+            "Brad Pitt",
+            "Tom Cruise"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the superhero alter-ego of Bruce Wayne in DC Comics?",
+        "options": [
+            "Superman",
+            "Batman",
+            "Flash",
+            "Green Lantern"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Which famous TV series follows the lives of a group of friends living in the fictional town of Hawkins, Indiana?",
+        "options": [
+            "The X-Files",
+            "Stranger Things",
+            "Twin Peaks",
+            "Riverdale"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Who was the first woman to win the Grammy Award for Album of the Year twice?",
+        "options": [
+            "Beyonce",
+            "Taylor Swift",
+            "Adele",
+            "Billie Eilish"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "What is the name of the spaceship in the \"Star Wars\" franchise that Han Solo pilots?",
+        "options": [
+            "Millennium Falcon",
+            "X-Wing",
+            "TIE Fighter",
+            "Death Star"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "What video game series features the character of an Italian plumber?",
+        "options": [
+            "Sonic the Hedgehog",
+            "The Legend of Zelda",
+            "Super Mario",
+            "Halo"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "Emily is twice as old as James. The sum of their ages is 36. How old is James?",
+        "options": [
+            "12",
+            "14",
+            "18",
+            "16"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "A train travels 120 miles in 3 hours. What is its average speed in miles per hour?",
+        "options": [
+            "30 mph",
+            "40 mph",
+            "50 mph",
+            "60 mph"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "Sarah bought 3 books for $15 each and 2 books for $20 each. How much did she spend in total?",
+        "options": [
+            "$75",
+            "$85",
+            "$100",
+            "$95"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A gardener plants 5 rows of trees, with 8 trees in each row. How many trees are there in total?",
+        "options": [
+            "30",
+            "35",
+            "40",
+            "45"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "If a car uses 5 gallons of gas to travel 100 miles, how many gallons will it use to travel 250 miles?",
+        "options": [
+            "10.5",
+            "13.5",
+            "12.5",
+            "15.5"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "A rectangular room has a length of 12 feet and a width of 8 feet. What is the area of the room?",
+        "options": [
+            "80 square feet",
+            "90 square feet",
+            "96 square feet",
+            "100 square feet"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "A box contains 4 red balls, 5 blue balls, and 3 green balls. What is the probability of drawing a blue ball?",
+        "options": [
+            "3/12",
+            "5/12",
+            "5/11",
+            "4/12"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A store sells a jacket for $80. During a sale, the price is reduced by 25%. What is the new price of the jacket?",
+        "options": [
+            "$60",
+            "$55",
+            "$70",
+            "$75"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "An apple tree produces 60 apples in 3 days. How many apples will it produce in 10 days at the same rate?",
+        "options": [
+            "120",
+            "150",
+            "200",
+            "180"
+        ],
+        "correctAnswer": "C"
+    },
+    {
+        "question": "A car rental company charges a $20 per day fee plus a one-time fee of $50. How much will it cost to rent a car for 5 days?",
+        "options": [
+            "$100",
+            "$150",
+            "$200",
+            "$250"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A recipe calls for 3/4 cup of sugar. If you want to make 3 times the recipe, how many cups of sugar will you need?",
+        "options": [
+            "1 1/4 cups",
+            "2 1/4 cups",
+            "2 1/2 cups",
+            "3 cups"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A plane is traveling at a speed of 300 miles per hour. How far will it travel in 5 hours?",
+        "options": [
+            "1000 miles",
+            "1200 miles",
+            "1500 miles",
+            "2000 miles"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "If it takes 4 workers 6 hours to finish a task, how long will it take for 8 workers to finish the same task if they work at the same rate?",
+        "options": [
+            "2 hours",
+            "3 hours",
+            "4 hours",
+            "5 hours"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A bus travels at a speed of 45 miles per hour. How long will it take to travel 180 miles?",
+        "options": [
+            "3 hours",
+            "4 hours",
+            "5 hours",
+            "6 hours"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A rectangle has a perimeter of 24 meters. If its length is 8 meters, what is the width?",
+        "options": [
+            "3 meters",
+            "4 meters",
+            "5 meters",
+            "6 meters"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A shop sells 5 pencils for $1.25. How much would 20 pencils cost?",
+        "options": [
+            "$4.00",
+            "$5.00",
+            "$4.50",
+            "$5.50"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A person has 60% of a certain amount of money. If the total amount is $200, how much money do they have?",
+        "options": [
+            "$100",
+            "$120",
+            "$130",
+            "$150"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A group of friends are sharing a bill for dinner. If the total bill is $96 and there are 8 friends, how much does each person pay?",
+        "options": [
+            "$10",
+            "$12",
+            "$14",
+            "$16"
+        ],
+        "correctAnswer": "B"
+    },
+    {
+        "question": "A train departs at 8:00 AM and travels at 60 miles per hour. How far will it have traveled by 2:00 PM?",
+        "options": [
+            "360 miles",
+            "400 miles",
+            "420 miles",
+            "440 miles"
+        ],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "A bag contains 10 red marbles, 6 blue marbles, and 4 green marbles. If one marble is randomly selected, what is the probability of selecting a red marble?",
+        "options": [
+            "1/2",
+            "1/3",
+            "1/4",
+            "1/5"
+        ],
+        "correctAnswer": "A"
+    }
+]

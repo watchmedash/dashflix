@@ -25,104 +25,41 @@
             margin-top: 20px;
         }
 
-        /* Wheel Container */
-        .wheel-container {
+        /* Poster Container */
+        .poster-container {
             position: relative;
-            width: 400px;
-            height: 400px;
-            margin-bottom: 30px; /* Space for winner text and proceed button */
-        }
-
-        .wheel-container {
-            position: relative;
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 450px;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 30px;
+            overflow: hidden;
         }
 
-        /* Spinning Wheel */
-        .wheel {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: conic-gradient(
-                grey 0% 10%, darkgrey 10% 20%,
-                grey 20% 30%, darkgrey 30% 40%,
-                grey 40% 50%, darkgrey 50% 60%,
-                grey 60% 70%, darkgrey 70% 80%,
-                grey 80% 90%, darkgrey 90% 100%
-            );
-            position: absolute;
-            transform-origin: center;
-            transition: transform 4s cubic-bezier(0.25, 1, 0.5, 1); /* Faster spin */
-            border: 5px solid #fff;
-        }
-
-        /* Pin Positioned at the Top, flipped to point down */
-        .pin {
-            position: absolute;
-            top: 1px;
-            left: 50%;
-            transform: translateX(-50%) rotate(180deg); /* Rotate to point down */
-            width: 40px;
-            height: 60px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 100% 100%, 0% 100%); /* Triangle pointing down */
-            z-index: 20;
-        }
-
-        /* Spin Button */
-        .spin-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: radial-gradient(circle, #ff3333, #cc0000);
-            border: 5px solid #000;
-            border-radius: 50%;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        /* Winner Poster (above wheel) */
+        /* Poster Zoom Effect */
         .poster-zoom {
-            position: absolute;
-            top: -68px; /* Positioned above the wheel */
-            left: 50%;
-            transform: translateX(-50%) scale(1);
-            width: 150px;
-            height: 220px;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 1s ease, transform 1s ease;
-            z-index: 30;
-        }
-
-        .poster-zoom img {
             width: 100%;
             height: auto;
-            object-fit: contain;
+            transition: transform 0.3s ease;
+            cursor: pointer;
         }
 
-        /* Winner Text */
-        .winner-text {
-            font-size: 18px;
-            color: #ffd700;
+        /* Shuffle Button */
+        .shuffle-btn {
             margin-top: 20px;
-            display: none; /* Hidden initially */
+            padding: 10px 20px;
+            background-color: #ff3333;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        .shuffle-btn:hover {
+            background-color: #cc0000;
         }
 
         /* Proceed Button */
@@ -135,122 +72,92 @@
             color: #fff;
             font-size: 16px;
             cursor: pointer;
-            display: none; /* Hidden initially */
+            display: none; /* Hidden by default */
         }
 
         .proceed-btn:hover {
             background-color: #cc0000;
         }
+
     </style>
-    <link rel="stylesheet" href="load.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div id="loaning-screen">
-      <img src="images/logo.webp" alt="Loading..." />
-      <div class="progress-bar">
-          <div class="progress"></div>
-      </div>
-  </div>
-    <div class="wheel-container">
-        <div class="pin"></div> <!-- Pin Indicator -->
-        <div class="wheel" id="roulette-wheel"></div>
-        <div class="spin-btn" onclick="spinRoulette()">SPIN</div>
-        <div class="poster-zoom" id="poster-zoom">
-            <img id="winner-poster" src="" alt="Winner Poster">
-        </div>
+    <div class="poster-container" id="poster-container">
+        <img id="poster-image" class="poster-zoom" src="" alt="Movie Poster" onclick="proceedToPlayer()">
     </div>
-    <div id="winner-text" class="winner-text"></div> <!-- Winner Reveal -->
-    <button id="proceed-btn" class="proceed-btn" onclick="proceedToPlayer()">Proceed to Movie</button>
+    <button id="shuffle-btn" class="shuffle-btn" onclick="shufflePoster()"><i class="fas fa-sync-alt"></i></button>
+    <button id="proceed-btn" class="proceed-btn" onclick="proceedToPlayer()">Watch</button>
 
     <script>
-    const API_KEY = "4f599baa15d072c9de346b2816a131b8";
-const BASE_URL = "https://api.themoviedb.org/3";
-let movieIDs = [];
-let selectedMovieID = null;
-let moviePosterPath = "";
-let selectedMovieTitle = "";
+        const API_KEY = "4f599baa15d072c9de346b2816a131b8";
+        const BASE_URL = "https://api.themoviedb.org/3";
+        let movieIDs = [];
+        let selectedMovieID = null;
+        let moviePosterPath = "";
+        let selectedMovieTitle = "";
+        let shuffleTimeout;
 
-// Fetch popular movie IDs from TMDB
-async function fetchMovieIDs() {
-try {
-    const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
-    const data = await response.json();
-    movieIDs = data.results.map(movie => movie.id);
-    console.log("Movie IDs fetched:", movieIDs);
-} catch (error) {
-    console.error("Error fetching movie IDs:", error);
-}
-}
+        // Fetch popular movie IDs from TMDB
+        async function fetchMovieIDs() {
+            try {
+                const response = await fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+                const data = await response.json();
+                movieIDs = data.results.map(movie => movie.id);
+                shufflePoster(); // Start shuffling immediately after movies are loaded
+            } catch (error) {
+                console.error("Error fetching movie IDs:", error);
+            }
+        }
 
-// Spin the roulette
-function spinRoulette() {
-if (movieIDs.length === 0) {
-    alert("Movies are still loading. Please wait!");
-    return;
-}
+        // Shuffle and pick a random movie poster
+        function shufflePoster() {
+            if (movieIDs.length === 0) {
+                alert("Movies are still loading. Please wait!");
+                return;
+            }
 
-const wheel = document.getElementById("roulette-wheel");
-const winnerText = document.getElementById("winner-text");
-const posterZoom = document.getElementById("poster-zoom");
-const winnerPoster = document.getElementById("winner-poster");
-const proceedBtn = document.getElementById("proceed-btn");
+            // Set up rapid poster switching
+            let shuffleCount = 0;
+            let totalShuffles = 20; // Number of shuffles before stopping
+            shuffleTimeout = setInterval(() => {
+                const randomIndex = Math.floor(Math.random() * movieIDs.length);
+                selectedMovieID = movieIDs[randomIndex];
+                fetchMovieDetails(selectedMovieID); // Fetch movie details on each shuffle
 
-// Reset text and button
-winnerText.textContent = "Spinning...";
-winnerText.style.display = "none";
-proceedBtn.style.display = "none";
+                shuffleCount++;
+                if (shuffleCount >= totalShuffles) {
+                    clearInterval(shuffleTimeout); // Stop shuffling after the set number of iterations
+                    setTimeout(() => {
+                        document.getElementById("shuffle-btn").style.display = "inline-block"; // Show shuffle button
+                        document.getElementById("proceed-btn").style.display = "inline-block"; // Show proceed button
+                    }, 300); // Delay before showing buttons
+                }
+            }, 100); // Shuffle interval (100 ms)
+        }
 
-// Randomize speed and duration
-const randomSpeed = Math.floor(Math.random() * 3 + 3); // Between 3 and 5 seconds
-const randomIndex = Math.floor(Math.random() * movieIDs.length);
-const anglePerSegment = 360 / 30; // 30 segments
-const randomAngle =
-    360 * 5 + // At least 5 full rotations
-    randomIndex * anglePerSegment +
-    anglePerSegment / 2; // Center the pointer in the segment
+        // Fetch movie details
+        async function fetchMovieDetails(movieId) {
+            try {
+                const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`);
+                const movie = await response.json();
+                moviePosterPath = movie.poster_path;
+                selectedMovieTitle = movie.title;  // Save the movie title
 
-selectedMovieID = movieIDs[randomIndex];
+                // Update poster image
+                document.getElementById("poster-image").src = `https://image.tmdb.org/t/p/w500${moviePosterPath}`;
+            } catch (error) {
+                console.error("Error fetching movie details:", error);
+            }
+        }
 
-// Apply spin animation with dynamic speed
-wheel.style.transitionDuration = `${randomSpeed}s`;
-wheel.style.transform = `rotate(${randomAngle}deg)`;
+        // Proceed to the movie player
+        function proceedToPlayer() {
+            window.location.href = `player.html?id=${selectedMovieID}`;
+        }
 
-// Fetch movie details to get the poster and title
-fetchMovieDetails(selectedMovieID);
-
-// Reveal winner after spin
-setTimeout(() => {
-    // Display movie title
-    winnerText.textContent = `${selectedMovieTitle}`;
-    winnerText.style.display = "block"; // Show winner text
-    posterZoom.style.opacity = 1;
-    posterZoom.style.transform = "translateX(-50%) scale(1)"; // Poster zoom effect
-    winnerPoster.src = `https://image.tmdb.org/t/p/w500${moviePosterPath}`;
-    proceedBtn.style.display = "inline-block"; // Show the proceed button
-}, randomSpeed * 1000); // Matches spin duration
-}
-
-// Fetch movie details
-async function fetchMovieDetails(movieId) {
-try {
-    const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`);
-    const movie = await response.json();
-    moviePosterPath = movie.poster_path;
-    selectedMovieTitle = movie.title;  // Save the movie title
-} catch (error) {
-    console.error("Error fetching movie details:", error);
-}
-}
-
-// Redirect to movie player
-function proceedToPlayer() {
-window.location.href = `player.html?id=${selectedMovieID}`;
-}
-
-// Fetch movies on page load
-fetchMovieIDs();
-
+        // Fetch movies on page load
+        fetchMovieIDs();
     </script>
-    <script src="load.js"></script>
 </body>
 </html>
