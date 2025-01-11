@@ -28,6 +28,54 @@
           ]
       },
       {
+          "title": "The End",
+          "link": "https://emirati.top/movies/The End",
+          "image": "https://image.tmdb.org/t/p/original/kYMLpw3DQjQjp2jzNrg3KvNFIr6.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Fantasy",
+              "Science Fiction"
+          ]
+      },
+      {
+          "title": "Get Away",
+          "link": "https://emirati.top/movies/Get Away",
+          "image": "https://image.tmdb.org/t/p/original/ser6ZCKHMXhQISKULYCxz6Saf3I.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Horror",
+              "Comedy"
+          ]
+      },
+      {
+          "title": "Gabriel Iglesias Legend of Fluffy",
+          "link": "https://emirati.top/movies/Gabriel Iglesias Legend of Fluffy",
+          "image": "https://image.tmdb.org/t/p/original/hgOAwoJv2l8HF22lidIslOp2Nhf.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Comedy"
+          ]
+      },
+      {
+          "title": "The Gardener",
+          "link": "https://emirati.top/movies/The Gardener",
+          "image": "https://image.tmdb.org/t/p/original/zvLQXaiHn5g376AuHe8hd0u8tN2.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Comedy"
+          ]
+      },
+      {
           "title": "Baby Assassins Nice Days",
           "link": "https://emirati.top/movies/Baby Assassins Nice Days",
           "image": "https://image.tmdb.org/t/p/original/k8hk9ndfEUoRtAJd5xHSi3xAChj.jpg",
