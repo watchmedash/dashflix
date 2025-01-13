@@ -1,6 +1,17 @@
 {
     "movies": [
       {
+          "title": "Halimuyak",
+          "link": "https://emirati.top/movies/Halimuyak",
+          "image": "https://image.tmdb.org/t/p/original/wnMo89oa5VdfS2rmET4yKWoyeig.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
           "title": "Sonic the Hedgehog 3",
           "link": "https://emirati.top/movies/Sonic the Hedgehog 3",
           "image": "https://image.tmdb.org/t/p/original/x7NPbBlrvFRJrpinBSRlMOOUWom.jpg",
@@ -416,32 +427,6 @@
           ]
       },
       {
-          "title": "Kraven the Hunter",
-          "link": "https://emirati.top/movies/Kraven the Hunter",
-          "image": "https://image.tmdb.org/t/p/original/i47IUSsN126K11JUzqQIOi1Mg1M.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
-          ]
-      },
-      {
-          "title": "Gladiator II",
-          "link": "https://emirati.top/movies/Gladiator II",
-          "image": "https://static.wikia.nocookie.net/gladiator2000/images/4/4c/Gladiator_II_Teaser_Poster.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
-          ]
-      },
-      {
           "title": "Lamas",
           "link": "https://emirati.top/movies/Lamas",
           "image": "https://i.mydramalist.com/O8yD4x_4f.jpg",
@@ -477,31 +462,6 @@
           ]
       },
       {
-          "title": "Anora",
-          "link": "https://emirati.top/movies/Anora",
-          "image": "https://image.tmdb.org/t/p/original/xXz6ScxPlLRzL3MtzceNY52Neuq.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Drama",
-              "Romance"
-          ]
-      },
-      {
-          "title": "The Lord of the Rings The War of the Rohirrim",
-          "link": "https://emirati.top/movies/The Lord of the Rings The War of the Rohirrim",
-          "image": "https://image.tmdb.org/t/p/original/vpghpZ16qRX6Vxm2UUv1awwpwwi.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Animation",
-              "Fantasy"
-          ]
-      },
-      {
           "title": "Getting LOST",
           "link": "https://emirati.top/movies/Getting LOST",
           "image": "https://image.tmdb.org/t/p/original/lc4n406XqcLd2OFhub6QQYLhUkr.jpg",
@@ -524,19 +484,6 @@
           ]
       },
       {
-          "title": "Carry-On",
-          "link": "https://emirati.top/movies/Carry-On",
-          "image": "https://image.tmdb.org/t/p/original/sjMN7DRi4sGiledsmllEw5HJjPy.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Mystery",
-              "Thriller",
-              "Action"
-          ]
-      },
-      {
           "title": "Solo Leveling -ReAwakening-",
           "link": "https://emirati.top/movies/Solo Leveling -ReAwakening-",
           "image": "https://image.tmdb.org/t/p/w500/uzHMp5heVLR68kbbUEXFPsmxYsM.jpg",
@@ -544,19 +491,6 @@
           "requested": true,
           "release_year": "2024",
           "genres": [
-              "Action",
-              "Fantasy"
-          ]
-      },
-      {
-          "title": "Red One",
-          "link": "https://emirati.top/movies/Red One",
-          "image": "https://image.tmdb.org/t/p/original/cdqLnri3NEGcmfnqwk2TSIYtddg.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
               "Action",
               "Fantasy"
           ]
@@ -571,19 +505,6 @@
           "genres": [
               "Drama",
               "Music"
-          ]
-      },
-      {
-          "title": "Venom The Last Dance",
-          "link": "https://emirati.top/movies/Venom The Last Dance",
-          "image": "https://image.tmdb.org/t/p/original/k42Owka8v91trK1qMYwCQCNwJKr.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Science Fiction",
-              "Adventure"
           ]
       },
       {
@@ -680,19 +601,6 @@
           "release_year": "2024",
           "genres": [
               "Drama"
-          ]
-      },
-      {
-          "title": "Weekend in Taipei",
-          "link": "https://emirati.top/movies/Weekend in Taipei",
-          "image": "https://image.tmdb.org/t/p/original/qSc0AUvs8mRy00R9y8QYEHWIAQ9.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Adventure",
-              "Thriller"
           ]
       },
       {
@@ -830,33 +738,6 @@
           ]
       },
       {
-          "title": "Elevation",
-          "link": "https://emirati.top/movies/Elevation",
-          "image": "https://image.tmdb.org/t/p/original/uQhYBxOVFU6s9agD49FnGHwJqG5.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Science Fiction",
-              "Thriller"
-          ]
-      },
-      {
-          "title": "Watchmen Chapter II",
-          "link": "https://emirati.top/movies/Watchmen Chapter II",
-          "image": "https://image.tmdb.org/t/p/original/4rBObJFpiWJOG7aIlRrOUniAkBs.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Animation",
-              "Mystery",
-              "Science Fiction",
-              "Action"
-          ]
-      },
-      {
           "title": "Boss Ma'am",
           "link": "https://emirati.top/movies/Boss Maam",
           "image": "https://m.media-amazon.com/images/M/MV5BNzJlOTU4YmEtZTFjZS00ZjE5LWE1ZDgtMWEzNzU0Mzk4NWY3XkEyXkFqcGc@._V1_QL75_UX190_CR0,2,190,281_.jpg",
@@ -865,18 +746,6 @@
           "release_year": "2024",
           "genres": [
               "Drama"
-          ]
-      },
-      {
-          "title": "Smile 2",
-          "link": "https://emirati.top/movies/Smile 2",
-          "image": "https://image.tmdb.org/t/p/original/aE85MnPIsSoSs3978Noo16BRsKN.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Horror",
-              "Mystery"
           ]
       },
       {
@@ -905,19 +774,6 @@
           ]
       },
       {
-          "title": "Armor",
-          "link": "https://emirati.top/movies/Armor",
-          "image": "https://image.tmdb.org/t/p/original/6wtKfSdx9RTeWGfT2zsYUHM7vDf.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Crime",
-              "Thriller"
-          ]
-      },
-      {
           "title": "Whispers in the Wind",
           "link": "https://emirati.top/movies/Whispers in the Wind",
           "image": "https://image.tmdb.org/t/p/original/4F5lYHfeLxBVBuYNd9TcnXIubOs.jpg",
@@ -940,19 +796,6 @@
           ]
       },
       {
-          "title": "Paddington in Peru",
-          "link": "https://emirati.top/movies/Paddington in Peru",
-          "image": "https://image.tmdb.org/t/p/original/1ffZAucqfvQu36x1C49XfOdjuOG.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Family",
-              "Adventure"
-          ]
-      },
-      {
           "title": "Don't Mess With CEO's Wife",
           "link": "https://emirati.top/movies/Dont Mess With CEOs Wife",
           "image": "https://v-mps.crazymaplestudios.com/images/9dab1720-5a25-11ef-838e-777d81c2a9c7.jpg",
@@ -961,19 +804,6 @@
           "release_year": "2024",
           "genres": [
               "Drama"
-          ]
-      },
-      {
-          "title": "No Country for Old Men",
-          "link": "https://emirati.top/movies/No Country for Old Men",
-          "image": "https://image.tmdb.org/t/p/original/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2007",
-          "genres": [
-              "Crime",
-              "Drama",
-              "Thriller"
           ]
       },
       {
@@ -1080,19 +910,6 @@
           ]
       },
       {
-          "title": "The Wild Robot",
-          "link": "https://emirati.top/movies/The Wild Robot",
-          "image": "https://image.tmdb.org/t/p/original/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Animation",
-              "Science Fiction",
-              "Family"
-          ]
-      },
-      {
           "title": "The Gingerdead Man",
           "link": "https://emirati.top/movies/The Gingerdead Man",
           "image": "https://image.tmdb.org/t/p/original/tZgIllFk4ncvhuzNipLkStjPjqk.jpg",
@@ -1167,18 +984,6 @@
               "Family",
               "Fantasy",
               "Drama"
-          ]
-      },
-      {
-          "title": "The Penguin",
-          "link": "https://emirati.top/tv/The Penguin 194764",
-          "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/hmIjNwPRv01eVW1aLrP0A4WvFCC.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Crime",
-              "Thriller"
           ]
       },
       {
