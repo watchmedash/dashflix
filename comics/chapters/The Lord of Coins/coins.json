@@ -1,0 +1,719 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0001-071.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0002-063.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0003-064.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0004-056.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0005-051.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0006-058.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0007-052.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0008-056.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0009-062.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0010-053.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0011-053.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0012-052.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0013-047.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0014-068.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0015-065.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0016-071.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0017-074.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0018-066.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0019-062.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0020-065.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0021-074.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0022-070.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0023-070.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0024-073.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0025-069.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0026-065.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0027-073.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0028-068.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0029-070.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0030-062.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0031-074.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0032-057.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0033-061.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0034-070.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0035-069.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0036-069.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0037-078.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0038-064.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0039-064.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0040-068.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0041-064.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0042-072.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0043-071.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0044-076.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0045-079.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0046-074.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0047-080.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0048-078.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0049-066.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0050-071.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0051-073.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0052-072.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0053-077.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0054-072.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0055-081.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0056-073.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0057-070.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0058-070.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0059-075.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0060-070.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0061-078.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0062-072.png"
+        },
+        {
+            "id": 63,
+            "name": "Chapter 63",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0063-079.png"
+        },
+        {
+            "id": 64,
+            "name": "Chapter 64",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0064-073.png"
+        },
+        {
+            "id": 65,
+            "name": "Chapter 65",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0065-074.png"
+        },
+        {
+            "id": 66,
+            "name": "Chapter 66",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0066-073.png"
+        },
+        {
+            "id": 67,
+            "name": "Chapter 67",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0067-075.png"
+        },
+        {
+            "id": 68,
+            "name": "Chapter 68",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0068-072.png"
+        },
+        {
+            "id": 69,
+            "name": "Chapter 69",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0069-084.png"
+        },
+        {
+            "id": 70,
+            "name": "Chapter 70",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0070-087.png"
+        },
+        {
+            "id": 71,
+            "name": "Chapter 71",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0071-078.png"
+        },
+        {
+            "id": 72,
+            "name": "Chapter 72",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0072-078.png"
+        },
+        {
+            "id": 73,
+            "name": "Chapter 73",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0073-074.png"
+        },
+        {
+            "id": 74,
+            "name": "Chapter 74",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0074-073.png"
+        },
+        {
+            "id": 75,
+            "name": "Chapter 75",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0075-079.png"
+        },
+        {
+            "id": 76,
+            "name": "Chapter 76",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0076-074.png"
+        },
+        {
+            "id": 77,
+            "name": "Chapter 77",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0077-106.png"
+        },
+        {
+            "id": 78,
+            "name": "Chapter 78",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0078-111.png"
+        },
+        {
+            "id": 79,
+            "name": "Chapter 79",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0079-089.png"
+        },
+        {
+            "id": 80,
+            "name": "Chapter 80",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0080-066.png"
+        },
+        {
+            "id": 81,
+            "name": "Chapter 81",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0081-099.png"
+        },
+        {
+            "id": 82,
+            "name": "Chapter 82",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0082-075.png"
+        },
+        {
+            "id": 83,
+            "name": "Chapter 83",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0083-080.png"
+        },
+        {
+            "id": 84,
+            "name": "Chapter 84",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0084-074.png"
+        },
+        {
+            "id": 85,
+            "name": "Chapter 85",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0085-106.png"
+        },
+        {
+            "id": 86,
+            "name": "Chapter 86",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0086-109.png"
+        },
+        {
+            "id": 87,
+            "name": "Chapter 87",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0087-105.png"
+        },
+        {
+            "id": 88,
+            "name": "Chapter 88",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0088-083.png"
+        },
+        {
+            "id": 89,
+            "name": "Chapter 89",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0089-082.png"
+        },
+        {
+            "id": 90,
+            "name": "Chapter 90",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0090-084.png"
+        },
+        {
+            "id": 91,
+            "name": "Chapter 91",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0091-087.png"
+        },
+        {
+            "id": 92,
+            "name": "Chapter 92",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0092-081.png"
+        },
+        {
+            "id": 93,
+            "name": "Chapter 93",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0093-083.png"
+        },
+        {
+            "id": 94,
+            "name": "Chapter 94",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0094-083.png"
+        },
+        {
+            "id": 95,
+            "name": "Chapter 95",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0095-074.png"
+        },
+        {
+            "id": 96,
+            "name": "Chapter 96",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0096-080.png"
+        },
+        {
+            "id": 97,
+            "name": "Chapter 97",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0097-094.png"
+        },
+        {
+            "id": 98,
+            "name": "Chapter 98",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0098-082.png"
+        },
+        {
+            "id": 99,
+            "name": "Chapter 99",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0099-079.png"
+        },
+        {
+            "id": 100,
+            "name": "Chapter 100",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0100-081.png"
+        },
+        {
+            "id": 101,
+            "name": "Chapter 101",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0101-088.png"
+        },
+        {
+            "id": 102,
+            "name": "Chapter 102",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0102-089.png"
+        },
+        {
+            "id": 103,
+            "name": "Chapter 103",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0103-091.png"
+        },
+        {
+            "id": 104,
+            "name": "Chapter 104",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0104-090.png"
+        },
+        {
+            "id": 105,
+            "name": "Chapter 105",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0105-081.png"
+        },
+        {
+            "id": 106,
+            "name": "Chapter 106",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0106-094.png"
+        },
+        {
+            "id": 107,
+            "name": "Chapter 107",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0107-084.png"
+        },
+        {
+            "id": 108,
+            "name": "Chapter 108",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0108-086.png"
+        },
+        {
+            "id": 109,
+            "name": "Chapter 109",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0109-102.png"
+        },
+        {
+            "id": 110,
+            "name": "Chapter 110",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0110-087.png"
+        },
+        {
+            "id": 111,
+            "name": "Chapter 111",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0111-095.png"
+        },
+        {
+            "id": 112,
+            "name": "Chapter 112",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0112-097.png"
+        },
+        {
+            "id": 113,
+            "name": "Chapter 113",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0113-083.png"
+        },
+        {
+            "id": 114,
+            "name": "Chapter 114",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0114-069.png"
+        },
+        {
+            "id": 115,
+            "name": "Chapter 115",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0115-066.png"
+        },
+        {
+            "id": 116,
+            "name": "Chapter 116",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0116-100.png"
+        },
+        {
+            "id": 117,
+            "name": "Chapter 117",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0117-090.png"
+        },
+        {
+            "id": 118,
+            "name": "Chapter 118",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0118-088.png"
+        },
+        {
+            "id": 119,
+            "name": "Chapter 119",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0119-096.png"
+        },
+        {
+            "id": 120,
+            "name": "Chapter 120",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0120-086.png"
+        },
+        {
+            "id": 121,
+            "name": "Chapter 121",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0121-101.png"
+        },
+        {
+            "id": 122,
+            "name": "Chapter 122",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0122-084.png"
+        },
+        {
+            "id": 123,
+            "name": "Chapter 123",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0123-092.png"
+        },
+        {
+            "id": 124,
+            "name": "Chapter 124",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0124-084.png"
+        },
+        {
+            "id": 125,
+            "name": "Chapter 125",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0125-089.png"
+        },
+        {
+            "id": 126,
+            "name": "Chapter 126",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0126-084.png"
+        },
+        {
+            "id": 127,
+            "name": "Chapter 127",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0127-088.png"
+        },
+        {
+            "id": 128,
+            "name": "Chapter 128",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0128-086.png"
+        },
+        {
+            "id": 129,
+            "name": "Chapter 129",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0129-086.png"
+        },
+        {
+            "id": 130,
+            "name": "Chapter 130",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0130-089.png"
+        },
+        {
+            "id": 131,
+            "name": "Chapter 131",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0131-083.png"
+        },
+        {
+            "id": 132,
+            "name": "Chapter 132",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0132-086.png"
+        },
+        {
+            "id": 133,
+            "name": "Chapter 133",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0133-082.png"
+        },
+        {
+            "id": 134,
+            "name": "Chapter 134",
+            "lastImage": "https://official.lowee.us/manga/The-Lords-Coins-Arent-Decreasing/0134-082.png"
+        },
+        {
+            "id": 135,
+            "name": "Chapter 135",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0135-013.png"
+        },
+        {
+            "id": 136,
+            "name": "Chapter 136",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0136-011.png"
+        },
+        {
+            "id": 137,
+            "name": "Chapter 137",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0137-012.png"
+        },
+        {
+            "id": 138,
+            "name": "Chapter 138",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0138-014.png"
+        },
+        {
+            "id": 139,
+            "name": "Chapter 139",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0139-014.png"
+        },
+        {
+            "id": 140,
+            "name": "Chapter 140",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0140-018.png"
+        },
+        {
+            "id": 141,
+            "name": "Chapter 141",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0141-051.png"
+        },
+        {
+            "id": 142,
+            "name": "Chapter 142",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0142-050.png"
+        },
+        {
+            "id": 143,
+            "name": "Chapter 143",
+            "lastImage": "https://scans.lastation.us/manga/The-Lords-Coins-Arent-Decreasing/0143-052.png"
+        }
+    ]
+}

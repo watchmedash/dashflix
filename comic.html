@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comics</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="comics/style.css">
+</head>
+
+<body>
+<div class="search-container">
+<form>
+<input type="text" id="searchInput" placeholder="Search Title..." autocomplete="off">
+<button type="submit"><i class="fas fa-search"></i></button>
+</form>
+<div id="searchResults"></div>
+</div>
+<script>
+async function loadGallery() {
+  try {
+    const response = await fetch('comics/gallery1.json');
+    const items = await response.json();
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const shuffledItems = shuffle(items);
+
+    const galleryContainer = document.getElementById('ballery');
+    galleryContainer.innerHTML = shuffledItems.map(item => `
+      <figure class="item">
+        <a href="${item.link}">
+          <div class="spinner"></div>
+          <img loading="lazy" src="${item.image}" alt="${item.alt}" height="160" width="120"
+               onerror="this.src='https://cinemojo.netlify.app/assets/no-poster-fallback-96ee2340.png';">
+          ${item.chapter ? `<div class="chapter">${typeof item.chapter === 'string' ? item.chapter : `${item.chapter}`}</div>` : ''}
+          <figcaption>${item.title}</figcaption>
+        </a>
+      </figure>
+    `).join('');
+  } catch (error) {
+    console.error('Error loading gallery:', error);
+  }
+}
+loadGallery();
+</script>
+<div class="gallery" id="ballery"></div>
+<script>
+async function loadGallery() {
+  try {
+    const response = await fetch('comics/gallery.json');
+    const items = await response.json();
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    const shuffledItems = shuffle(items);
+
+    const galleryContainer = document.getElementById('gallery');
+    galleryContainer.innerHTML = shuffledItems.map(item => `
+      <figure class="item">
+        <a href="${item.link}">
+          <div class="spinner"></div>
+          <img loading="lazy" src="${item.image}" alt="${item.alt}" height="160" width="120"
+               onerror="this.src='https://cinemojo.netlify.app/assets/no-poster-fallback-96ee2340.png';">
+          <div class="chapter">${item.chapter}</div>
+          <figcaption>${item.title}</figcaption>
+        </a>
+      </figure>
+    `).join('');
+  } catch (error) {
+    console.error('Error loading gallery:', error);
+  }
+}
+
+loadGallery();
+</script>
+<div class="gallery" id="gallery"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="comics/lazy.js"></script>
+<script src="comics/script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const lazyLoad = (image) => {
+        image.src = image.dataset.src;
+        image.onload = () => {
+            image.previousElementSibling.style.display = 'none';
+        };
+    };
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                lazyLoad(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+
+    lazyImages.forEach(image => {
+        imageObserver.observe(image);
+    });
+});
+</script>
+</body>
+</html>

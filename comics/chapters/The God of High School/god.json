@@ -1,0 +1,2854 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0001-061.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0002-054.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0003-039.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0004-047.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0005-035.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0006-044.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0007-040.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0008-037.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0009-040.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0010-037.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0011-043.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0012-045.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0013-039.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0014-037.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0015-044.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0016-034.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0017-040.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0018-035.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0019-036.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0020-035.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0021-034.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0022-054.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0023-027.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0024-020.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0025-065.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0026-045.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0027-053.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0028-043.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0029-045.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0030-052.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0031-034.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0032-034.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0033-033.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0034-030.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0035-046.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0036-043.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0037-037.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0038-083.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0039-035.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0040-034.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0041-046.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0042-039.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0043-027.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0044-045.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0045-033.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0046-046.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0047-034.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0048-053.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0049-044.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0050-038.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0051-040.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0052-045.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0053-041.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0054-048.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0055-047.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0056-035.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0057-048.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0058-050.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0059-037.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0060-042.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0061-029.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0062-063.png"
+        },
+        {
+            "id": 63,
+            "name": "Chapter 63",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0063-058.png"
+        },
+        {
+            "id": 64,
+            "name": "Chapter 64",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0064-062.png"
+        },
+        {
+            "id": 65,
+            "name": "Chapter 65",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0065-061.png"
+        },
+        {
+            "id": 66,
+            "name": "Chapter 66",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0066-049.png"
+        },
+        {
+            "id": 67,
+            "name": "Chapter 67",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0067-029.png"
+        },
+        {
+            "id": 68,
+            "name": "Chapter 68",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0068-086.png"
+        },
+        {
+            "id": 69,
+            "name": "Chapter 69",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0069-050.png"
+        },
+        {
+            "id": 70,
+            "name": "Chapter 70",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0070-047.png"
+        },
+        {
+            "id": 71,
+            "name": "Chapter 71",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0071-057.png"
+        },
+        {
+            "id": 72,
+            "name": "Chapter 72",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0072-041.png"
+        },
+        {
+            "id": 73,
+            "name": "Chapter 73",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0073-062.png"
+        },
+        {
+            "id": 74,
+            "name": "Chapter 74",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0074-035.png"
+        },
+        {
+            "id": 75,
+            "name": "Chapter 75",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0075-044.png"
+        },
+        {
+            "id": 76,
+            "name": "Chapter 76",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0076-045.png"
+        },
+        {
+            "id": 77,
+            "name": "Chapter 77",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0077-045.png"
+        },
+        {
+            "id": 78,
+            "name": "Chapter 78",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0078-047.png"
+        },
+        {
+            "id": 79,
+            "name": "Chapter 79",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0079-051.png"
+        },
+        {
+            "id": 80,
+            "name": "Chapter 80",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0080-052.png"
+        },
+        {
+            "id": 81,
+            "name": "Chapter 81",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0081-049.png"
+        },
+        {
+            "id": 82,
+            "name": "Chapter 82",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0082-046.png"
+        },
+        {
+            "id": 83,
+            "name": "Chapter 83",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0083-054.png"
+        },
+        {
+            "id": 84,
+            "name": "Chapter 84",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0084-074.png"
+        },
+        {
+            "id": 85,
+            "name": "Chapter 85",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0085-040.png"
+        },
+        {
+            "id": 86,
+            "name": "Chapter 86",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0086-062.png"
+        },
+        {
+            "id": 87,
+            "name": "Chapter 87",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0087-027.png"
+        },
+        {
+            "id": 88,
+            "name": "Chapter 88",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0088-098.png"
+        },
+        {
+            "id": 89,
+            "name": "Chapter 89",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0089-046.png"
+        },
+        {
+            "id": 90,
+            "name": "Chapter 90",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0090-041.png"
+        },
+        {
+            "id": 91,
+            "name": "Chapter 91",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0091-057.png"
+        },
+        {
+            "id": 92,
+            "name": "Chapter 92",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0092-044.png"
+        },
+        {
+            "id": 93,
+            "name": "Chapter 93",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0093-044.png"
+        },
+        {
+            "id": 94,
+            "name": "Chapter 94",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0094-052.png"
+        },
+        {
+            "id": 95,
+            "name": "Chapter 95",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0095-061.png"
+        },
+        {
+            "id": 96,
+            "name": "Chapter 96",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0096-059.png"
+        },
+        {
+            "id": 97,
+            "name": "Chapter 97",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0097-050.png"
+        },
+        {
+            "id": 98,
+            "name": "Chapter 98",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0098-054.png"
+        },
+        {
+            "id": 99,
+            "name": "Chapter 99",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0099-042.png"
+        },
+        {
+            "id": 100,
+            "name": "Chapter 100",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0100-050.png"
+        },
+        {
+            "id": 101,
+            "name": "Chapter 101",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0101-047.png"
+        },
+        {
+            "id": 102,
+            "name": "Chapter 102",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0102-046.png"
+        },
+        {
+            "id": 103,
+            "name": "Chapter 103",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0103-044.png"
+        },
+        {
+            "id": 104,
+            "name": "Chapter 104",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0104-044.png"
+        },
+        {
+            "id": 105,
+            "name": "Chapter 105",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0105-060.png"
+        },
+        {
+            "id": 106,
+            "name": "Chapter 106",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0106-049.png"
+        },
+        {
+            "id": 107,
+            "name": "Chapter 107",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0107-053.png"
+        },
+        {
+            "id": 108,
+            "name": "Chapter 108",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0108-059.png"
+        },
+        {
+            "id": 109,
+            "name": "Chapter 109",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0109-063.png"
+        },
+        {
+            "id": 110,
+            "name": "Chapter 110",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0110-083.png"
+        },
+        {
+            "id": 111,
+            "name": "Chapter 111",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0111-052.png"
+        },
+        {
+            "id": 112,
+            "name": "Chapter 112",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0112-047.png"
+        },
+        {
+            "id": 113,
+            "name": "Chapter 113",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0113-052.png"
+        },
+        {
+            "id": 114,
+            "name": "Chapter 114",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0114-041.png"
+        },
+        {
+            "id": 115,
+            "name": "Chapter 115",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0115-059.png"
+        },
+        {
+            "id": 116,
+            "name": "Chapter 116",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0116-030.png"
+        },
+        {
+            "id": 117,
+            "name": "Chapter 117",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0117-111.png"
+        },
+        {
+            "id": 118,
+            "name": "Chapter 118",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0118-061.png"
+        },
+        {
+            "id": 119,
+            "name": "Chapter 119",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0119-050.png"
+        },
+        {
+            "id": 120,
+            "name": "Chapter 120",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0120-054.png"
+        },
+        {
+            "id": 121,
+            "name": "Chapter 121",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0121-045.png"
+        },
+        {
+            "id": 122,
+            "name": "Chapter 122",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0122-049.png"
+        },
+        {
+            "id": 123,
+            "name": "Chapter 123",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0123-048.png"
+        },
+        {
+            "id": 124,
+            "name": "Chapter 124",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0124-047.png"
+        },
+        {
+            "id": 125,
+            "name": "Chapter 125",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0125-058.png"
+        },
+        {
+            "id": 126,
+            "name": "Chapter 126",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0126-055.png"
+        },
+        {
+            "id": 127,
+            "name": "Chapter 127",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0127-064.png"
+        },
+        {
+            "id": 128,
+            "name": "Chapter 128",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0128-054.png"
+        },
+        {
+            "id": 129,
+            "name": "Chapter 129",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0129-055.png"
+        },
+        {
+            "id": 130,
+            "name": "Chapter 130",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0130-056.png"
+        },
+        {
+            "id": 131,
+            "name": "Chapter 131",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0131-035.png"
+        },
+        {
+            "id": 132,
+            "name": "Chapter 132",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0132-062.png"
+        },
+        {
+            "id": 133,
+            "name": "Chapter 133",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0133-064.png"
+        },
+        {
+            "id": 134,
+            "name": "Chapter 134",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0134-057.png"
+        },
+        {
+            "id": 135,
+            "name": "Chapter 135",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0135-056.png"
+        },
+        {
+            "id": 136,
+            "name": "Chapter 136",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0136-071.png"
+        },
+        {
+            "id": 137,
+            "name": "Chapter 137",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0137-082.png"
+        },
+        {
+            "id": 138,
+            "name": "Chapter 138",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0138-050.png"
+        },
+        {
+            "id": 139,
+            "name": "Chapter 139",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0139-077.png"
+        },
+        {
+            "id": 140,
+            "name": "Chapter 140",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0140-064.png"
+        },
+        {
+            "id": 141,
+            "name": "Chapter 141",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0141-046.png"
+        },
+        {
+            "id": 142,
+            "name": "Chapter 142",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0142-039.png"
+        },
+        {
+            "id": 143,
+            "name": "Chapter 143",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0143-061.png"
+        },
+        {
+            "id": 144,
+            "name": "Chapter 144",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0144-051.png"
+        },
+        {
+            "id": 145,
+            "name": "Chapter 145",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0145-037.png"
+        },
+        {
+            "id": 146,
+            "name": "Chapter 146",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0146-058.png"
+        },
+        {
+            "id": 147,
+            "name": "Chapter 147",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0147-052.png"
+        },
+        {
+            "id": 148,
+            "name": "Chapter 148",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0148-054.png"
+        },
+        {
+            "id": 149,
+            "name": "Chapter 149",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0149-058.png"
+        },
+        {
+            "id": 150,
+            "name": "Chapter 150",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0150-065.png"
+        },
+        {
+            "id": 151,
+            "name": "Chapter 151",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0151-054.png"
+        },
+        {
+            "id": 152,
+            "name": "Chapter 152",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0152-094.png"
+        },
+        {
+            "id": 153,
+            "name": "Chapter 153",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0153-034.png"
+        },
+        {
+            "id": 154,
+            "name": "Chapter 154",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0154-093.png"
+        },
+        {
+            "id": 155,
+            "name": "Chapter 155",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0155-056.png"
+        },
+        {
+            "id": 156,
+            "name": "Chapter 156",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0156-085.png"
+        },
+        {
+            "id": 157,
+            "name": "Chapter 157",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0157-055.png"
+        },
+        {
+            "id": 158,
+            "name": "Chapter 158",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0158-061.png"
+        },
+        {
+            "id": 159,
+            "name": "Chapter 159",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0159-051.png"
+        },
+        {
+            "id": 160,
+            "name": "Chapter 160",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0160-068.png"
+        },
+        {
+            "id": 161,
+            "name": "Chapter 161",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0161-063.png"
+        },
+        {
+            "id": 162,
+            "name": "Chapter 162",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0162-048.png"
+        },
+        {
+            "id": 163,
+            "name": "Chapter 163",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0163-030.png"
+        },
+        {
+            "id": 164,
+            "name": "Chapter 164",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0164-044.png"
+        },
+        {
+            "id": 165,
+            "name": "Chapter 165",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0165-063.png"
+        },
+        {
+            "id": 166,
+            "name": "Chapter 166",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0166-086.png"
+        },
+        {
+            "id": 167,
+            "name": "Chapter 167",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0167-073.png"
+        },
+        {
+            "id": 168,
+            "name": "Chapter 168",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0168-060.png"
+        },
+        {
+            "id": 169,
+            "name": "Chapter 169",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0169-058.png"
+        },
+        {
+            "id": 170,
+            "name": "Chapter 170",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0170-063.png"
+        },
+        {
+            "id": 171,
+            "name": "Chapter 171",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0171-073.png"
+        },
+        {
+            "id": 172,
+            "name": "Chapter 172",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0172-060.png"
+        },
+        {
+            "id": 173,
+            "name": "Chapter 173",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0173-053.png"
+        },
+        {
+            "id": 174,
+            "name": "Chapter 174",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0174-067.png"
+        },
+        {
+            "id": 175,
+            "name": "Chapter 175",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0175-043.png"
+        },
+        {
+            "id": 176,
+            "name": "Chapter 176",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0176-075.png"
+        },
+        {
+            "id": 177,
+            "name": "Chapter 177",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0177-059.png"
+        },
+        {
+            "id": 178,
+            "name": "Chapter 178",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0178-074.png"
+        },
+        {
+            "id": 179,
+            "name": "Chapter 179",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0179-063.png"
+        },
+        {
+            "id": 180,
+            "name": "Chapter 180",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0180-067.png"
+        },
+        {
+            "id": 181,
+            "name": "Chapter 181",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0181-070.png"
+        },
+        {
+            "id": 182,
+            "name": "Chapter 182",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0182-046.png"
+        },
+        {
+            "id": 183,
+            "name": "Chapter 183",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0183-065.png"
+        },
+        {
+            "id": 184,
+            "name": "Chapter 184",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0184-056.png"
+        },
+        {
+            "id": 185,
+            "name": "Chapter 185",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0185-062.png"
+        },
+        {
+            "id": 186,
+            "name": "Chapter 186",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0186-051.png"
+        },
+        {
+            "id": 187,
+            "name": "Chapter 187",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0187-060.png"
+        },
+        {
+            "id": 188,
+            "name": "Chapter 188",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0188-074.png"
+        },
+        {
+            "id": 189,
+            "name": "Chapter 189",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0189-054.png"
+        },
+        {
+            "id": 190,
+            "name": "Chapter 190",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0190-071.png"
+        },
+        {
+            "id": 191,
+            "name": "Chapter 191",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0191-053.png"
+        },
+        {
+            "id": 192,
+            "name": "Chapter 192",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0192-062.png"
+        },
+        {
+            "id": 193,
+            "name": "Chapter 193",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0193-056.png"
+        },
+        {
+            "id": 194,
+            "name": "Chapter 194",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0194-031.png"
+        },
+        {
+            "id": 195,
+            "name": "Chapter 195",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0195-066.png"
+        },
+        {
+            "id": 196,
+            "name": "Chapter 196",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0196-078.png"
+        },
+        {
+            "id": 197,
+            "name": "Chapter 197",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0197-082.png"
+        },
+        {
+            "id": 198,
+            "name": "Chapter 198",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0198-088.png"
+        },
+        {
+            "id": 199,
+            "name": "Chapter 199",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0199-074.png"
+        },
+        {
+            "id": 200,
+            "name": "Chapter 200",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0200-065.png"
+        },
+        {
+            "id": 201,
+            "name": "Chapter 201",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0201-079.png"
+        },
+        {
+            "id": 202,
+            "name": "Chapter 202",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0202-079.png"
+        },
+        {
+            "id": 203,
+            "name": "Chapter 203",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0203-069.png"
+        },
+        {
+            "id": 204,
+            "name": "Chapter 204",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0204-180.png"
+        },
+        {
+            "id": 205,
+            "name": "Chapter 205",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0205-073.png"
+        },
+        {
+            "id": 206,
+            "name": "Chapter 206",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0206-059.png"
+        },
+        {
+            "id": 207,
+            "name": "Chapter 207",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0207-063.png"
+        },
+        {
+            "id": 208,
+            "name": "Chapter 208",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0208-070.png"
+        },
+        {
+            "id": 209,
+            "name": "Chapter 209",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0209-044.png"
+        },
+        {
+            "id": 210,
+            "name": "Chapter 210",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0210-067.png"
+        },
+        {
+            "id": 211,
+            "name": "Chapter 211",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0211-062.png"
+        },
+        {
+            "id": 212,
+            "name": "Chapter 212",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0212-074.png"
+        },
+        {
+            "id": 213,
+            "name": "Chapter 213",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0213-081.png"
+        },
+        {
+            "id": 214,
+            "name": "Chapter 214",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0214-082.png"
+        },
+        {
+            "id": 215,
+            "name": "Chapter 215",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0215-098.png"
+        },
+        {
+            "id": 216,
+            "name": "Chapter 216",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0216-062.png"
+        },
+        {
+            "id": 217,
+            "name": "Chapter 217",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0217-047.png"
+        },
+        {
+            "id": 218,
+            "name": "Chapter 218",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0218-068.png"
+        },
+        {
+            "id": 219,
+            "name": "Chapter 219",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0219-061.png"
+        },
+        {
+            "id": 220,
+            "name": "Chapter 220",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0220-054.png"
+        },
+        {
+            "id": 221,
+            "name": "Chapter 221",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0221-058.png"
+        },
+        {
+            "id": 222,
+            "name": "Chapter 222",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0222-071.png"
+        },
+        {
+            "id": 223,
+            "name": "Chapter 223",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0223-056.png"
+        },
+        {
+            "id": 224,
+            "name": "Chapter 224",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0224-061.png"
+        },
+        {
+            "id": 225,
+            "name": "Chapter 225",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0225-064.png"
+        },
+        {
+            "id": 226,
+            "name": "Chapter 226",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0226-046.png"
+        },
+        {
+            "id": 227,
+            "name": "Chapter 227",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0227-065.png"
+        },
+        {
+            "id": 228,
+            "name": "Chapter 228",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0228-062.png"
+        },
+        {
+            "id": 229,
+            "name": "Chapter 229",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0229-026.png"
+        },
+        {
+            "id": 230,
+            "name": "Chapter 230",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0230-061.png"
+        },
+        {
+            "id": 231,
+            "name": "Chapter 231",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0231-057.png"
+        },
+        {
+            "id": 232,
+            "name": "Chapter 232",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0232-053.png"
+        },
+        {
+            "id": 233,
+            "name": "Chapter 233",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0233-054.png"
+        },
+        {
+            "id": 234,
+            "name": "Chapter 234",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0234-067.png"
+        },
+        {
+            "id": 235,
+            "name": "Chapter 235",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0235-031.png"
+        },
+        {
+            "id": 236,
+            "name": "Chapter 236",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0236-074.png"
+        },
+        {
+            "id": 237,
+            "name": "Chapter 237",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0237-057.png"
+        },
+        {
+            "id": 238,
+            "name": "Chapter 238",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0238-070.png"
+        },
+        {
+            "id": 239,
+            "name": "Chapter 239",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0239-054.png"
+        },
+        {
+            "id": 240,
+            "name": "Chapter 240",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0240-062.png"
+        },
+        {
+            "id": 241,
+            "name": "Chapter 241",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0241-067.png"
+        },
+        {
+            "id": 242,
+            "name": "Chapter 242",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0242-075.png"
+        },
+        {
+            "id": 243,
+            "name": "Chapter 243",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0243-053.png"
+        },
+        {
+            "id": 244,
+            "name": "Chapter 244",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0244-068.png"
+        },
+        {
+            "id": 245,
+            "name": "Chapter 245",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0245-056.png"
+        },
+        {
+            "id": 246,
+            "name": "Chapter 246",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0246-069.png"
+        },
+        {
+            "id": 247,
+            "name": "Chapter 247",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0247-064.png"
+        },
+        {
+            "id": 248,
+            "name": "Chapter 248",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0248-103.png"
+        },
+        {
+            "id": 249,
+            "name": "Chapter 249",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0249-081.png"
+        },
+        {
+            "id": 250,
+            "name": "Chapter 250",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0250-067.png"
+        },
+        {
+            "id": 251,
+            "name": "Chapter 251",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0251-079.png"
+        },
+        {
+            "id": 252,
+            "name": "Chapter 252",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0252-084.png"
+        },
+        {
+            "id": 253,
+            "name": "Chapter 253",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0253-097.png"
+        },
+        {
+            "id": 254,
+            "name": "Chapter 254",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0254-075.png"
+        },
+        {
+            "id": 255,
+            "name": "Chapter 255",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0255-081.png"
+        },
+        {
+            "id": 256,
+            "name": "Chapter 256",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0256-075.png"
+        },
+        {
+            "id": 257,
+            "name": "Chapter 257",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0257-085.png"
+        },
+        {
+            "id": 258,
+            "name": "Chapter 258",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0258-069.png"
+        },
+        {
+            "id": 259,
+            "name": "Chapter 259",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0259-088.png"
+        },
+        {
+            "id": 260,
+            "name": "Chapter 260",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0260-066.png"
+        },
+        {
+            "id": 261,
+            "name": "Chapter 261",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0261-054.png"
+        },
+        {
+            "id": 262,
+            "name": "Chapter 262",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0262-078.png"
+        },
+        {
+            "id": 263,
+            "name": "Chapter 263",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0263-073.png"
+        },
+        {
+            "id": 264,
+            "name": "Chapter 264",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0264-084.png"
+        },
+        {
+            "id": 265,
+            "name": "Chapter 265",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0265-064.png"
+        },
+        {
+            "id": 266,
+            "name": "Chapter 266",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0266-094.png"
+        },
+        {
+            "id": 267,
+            "name": "Chapter 267",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0267-071.png"
+        },
+        {
+            "id": 268,
+            "name": "Chapter 268",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0268-060.png"
+        },
+        {
+            "id": 269,
+            "name": "Chapter 269",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0269-079.png"
+        },
+        {
+            "id": 270,
+            "name": "Chapter 270",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0270-064.png"
+        },
+        {
+            "id": 271,
+            "name": "Chapter 271",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0271-063.png"
+        },
+        {
+            "id": 272,
+            "name": "Chapter 272",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0272-067.png"
+        },
+        {
+            "id": 273,
+            "name": "Chapter 273",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0273-073.png"
+        },
+        {
+            "id": 274,
+            "name": "Chapter 274",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0274-044.png"
+        },
+        {
+            "id": 275,
+            "name": "Chapter 275",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0275-091.png"
+        },
+        {
+            "id": 276,
+            "name": "Chapter 276",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0276-077.png"
+        },
+        {
+            "id": 277,
+            "name": "Chapter 277",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0277-109.png"
+        },
+        {
+            "id": 278,
+            "name": "Chapter 278",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0278-101.png"
+        },
+        {
+            "id": 279,
+            "name": "Chapter 279",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0279-098.png"
+        },
+        {
+            "id": 280,
+            "name": "Chapter 280",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0280-069.png"
+        },
+        {
+            "id": 281,
+            "name": "Chapter 281",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0281-079.png"
+        },
+        {
+            "id": 282,
+            "name": "Chapter 282",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0282-059.png"
+        },
+        {
+            "id": 283,
+            "name": "Chapter 283",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0283-084.png"
+        },
+        {
+            "id": 284,
+            "name": "Chapter 284",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0284-082.png"
+        },
+        {
+            "id": 285,
+            "name": "Chapter 285",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0285-102.png"
+        },
+        {
+            "id": 286,
+            "name": "Chapter 286",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0286-092.png"
+        },
+        {
+            "id": 287,
+            "name": "Chapter 287",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0287-081.png"
+        },
+        {
+            "id": 288,
+            "name": "Chapter 288",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0288-088.png"
+        },
+        {
+            "id": 289,
+            "name": "Chapter 289",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0289-074.png"
+        },
+        {
+            "id": 290,
+            "name": "Chapter 290",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0290-083.png"
+        },
+        {
+            "id": 291,
+            "name": "Chapter 291",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0291-123.png"
+        },
+        {
+            "id": 292,
+            "name": "Chapter 292",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0292-086.png"
+        },
+        {
+            "id": 293,
+            "name": "Chapter 293",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0293-058.png"
+        },
+        {
+            "id": 294,
+            "name": "Chapter 294",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0294-072.png"
+        },
+        {
+            "id": 295,
+            "name": "Chapter 295",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0295-059.png"
+        },
+        {
+            "id": 296,
+            "name": "Chapter 296",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0296-061.png"
+        },
+        {
+            "id": 297,
+            "name": "Chapter 297",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0297-085.png"
+        },
+        {
+            "id": 298,
+            "name": "Chapter 298",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0298-053.png"
+        },
+        {
+            "id": 299,
+            "name": "Chapter 299",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0299-070.png"
+        },
+        {
+            "id": 300,
+            "name": "Chapter 300",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0300-137.png"
+        },
+        {
+            "id": 301,
+            "name": "Chapter 301",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0301-067.png"
+        },
+        {
+            "id": 302,
+            "name": "Chapter 302",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0302-074.png"
+        },
+        {
+            "id": 303,
+            "name": "Chapter 303",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0303-056.png"
+        },
+        {
+            "id": 304,
+            "name": "Chapter 304",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0304-095.png"
+        },
+        {
+            "id": 305,
+            "name": "Chapter 305",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0305-102.png"
+        },
+        {
+            "id": 306,
+            "name": "Chapter 306",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0306-040.png"
+        },
+        {
+            "id": 307,
+            "name": "Chapter 307",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0307-092.png"
+        },
+        {
+            "id": 308,
+            "name": "Chapter 308",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0308-112.png"
+        },
+        {
+            "id": 309,
+            "name": "Chapter 309",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0309-077.png"
+        },
+        {
+            "id": 310,
+            "name": "Chapter 310",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0310-088.png"
+        },
+        {
+            "id": 311,
+            "name": "Chapter 311",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0311-072.png"
+        },
+        {
+            "id": 312,
+            "name": "Chapter 312",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0312-073.png"
+        },
+        {
+            "id": 313,
+            "name": "Chapter 313",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0313-079.png"
+        },
+        {
+            "id": 314,
+            "name": "Chapter 314",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0314-074.png"
+        },
+        {
+            "id": 315,
+            "name": "Chapter 315",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0315-077.png"
+        },
+        {
+            "id": 316,
+            "name": "Chapter 316",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0316-095.png"
+        },
+        {
+            "id": 317,
+            "name": "Chapter 317",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0317-093.png"
+        },
+        {
+            "id": 318,
+            "name": "Chapter 318",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0318-102.png"
+        },
+        {
+            "id": 319,
+            "name": "Chapter 319",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0319-097.png"
+        },
+        {
+            "id": 320,
+            "name": "Chapter 320",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0320-084.png"
+        },
+        {
+            "id": 321,
+            "name": "Chapter 321",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0321-091.png"
+        },
+        {
+            "id": 322,
+            "name": "Chapter 322",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0322-104.png"
+        },
+        {
+            "id": 323,
+            "name": "Chapter 323",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0323-095.png"
+        },
+        {
+            "id": 324,
+            "name": "Chapter 324",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0324-095.png"
+        },
+        {
+            "id": 325,
+            "name": "Chapter 325",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0325-095.png"
+        },
+        {
+            "id": 326,
+            "name": "Chapter 326",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0326-105.png"
+        },
+        {
+            "id": 327,
+            "name": "Chapter 327",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0327-067.png"
+        },
+        {
+            "id": 328,
+            "name": "Chapter 328",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0328-095.png"
+        },
+        {
+            "id": 329,
+            "name": "Chapter 329",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0329-099.png"
+        },
+        {
+            "id": 330,
+            "name": "Chapter 330",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0330-091.png"
+        },
+        {
+            "id": 331,
+            "name": "Chapter 331",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0331-084.png"
+        },
+        {
+            "id": 332,
+            "name": "Chapter 332",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0332-104.png"
+        },
+        {
+            "id": 333,
+            "name": "Chapter 333",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0333-106.png"
+        },
+        {
+            "id": 334,
+            "name": "Chapter 334",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0334-080.png"
+        },
+        {
+            "id": 335,
+            "name": "Chapter 335",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0335-080.png"
+        },
+        {
+            "id": 336,
+            "name": "Chapter 336",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0336-105.png"
+        },
+        {
+            "id": 337,
+            "name": "Chapter 337",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0337-067.png"
+        },
+        {
+            "id": 338,
+            "name": "Chapter 338",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0338-059.png"
+        },
+        {
+            "id": 339,
+            "name": "Chapter 339",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0339-106.png"
+        },
+        {
+            "id": 340,
+            "name": "Chapter 340",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0340-073.png"
+        },
+        {
+            "id": 341,
+            "name": "Chapter 341",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0341-093.png"
+        },
+        {
+            "id": 342,
+            "name": "Chapter 342",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0342-090.png"
+        },
+        {
+            "id": 343,
+            "name": "Chapter 343",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0343-070.png"
+        },
+        {
+            "id": 344,
+            "name": "Chapter 344",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0344-078.png"
+        },
+        {
+            "id": 345,
+            "name": "Chapter 345",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0345-067.png"
+        },
+        {
+            "id": 346,
+            "name": "Chapter 346",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0346-086.png"
+        },
+        {
+            "id": 347,
+            "name": "Chapter 347",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0347-098.png"
+        },
+        {
+            "id": 348,
+            "name": "Chapter 348",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0348-074.png"
+        },
+        {
+            "id": 349,
+            "name": "Chapter 349",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0349-110.png"
+        },
+        {
+            "id": 350,
+            "name": "Chapter 350",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0350-090.png"
+        },
+        {
+            "id": 351,
+            "name": "Chapter 351",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0351-089.png"
+        },
+        {
+            "id": 352,
+            "name": "Chapter 352",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0352-074.png"
+        },
+        {
+            "id": 353,
+            "name": "Chapter 353",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0353-114.png"
+        },
+        {
+            "id": 354,
+            "name": "Chapter 354",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0354-111.png"
+        },
+        {
+            "id": 355,
+            "name": "Chapter 355",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0355-082.png"
+        },
+        {
+            "id": 356,
+            "name": "Chapter 356",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0356-083.png"
+        },
+        {
+            "id": 357,
+            "name": "Chapter 357",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0357-065.png"
+        },
+        {
+            "id": 358,
+            "name": "Chapter 358",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0358-093.png"
+        },
+        {
+            "id": 359,
+            "name": "Chapter 359",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0359-052.png"
+        },
+        {
+            "id": 360,
+            "name": "Chapter 360",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0360-084.png"
+        },
+        {
+            "id": 361,
+            "name": "Chapter 361",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0361-087.png"
+        },
+        {
+            "id": 362,
+            "name": "Chapter 362",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0362-091.png"
+        },
+        {
+            "id": 363,
+            "name": "Chapter 363",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0363-125.png"
+        },
+        {
+            "id": 364,
+            "name": "Chapter 364",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0364-096.png"
+        },
+        {
+            "id": 365,
+            "name": "Chapter 365",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0365-110.png"
+        },
+        {
+            "id": 366,
+            "name": "Chapter 366",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0366-092.png"
+        },
+        {
+            "id": 367,
+            "name": "Chapter 367",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0367-109.png"
+        },
+        {
+            "id": 368,
+            "name": "Chapter 368",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0368-109.png"
+        },
+        {
+            "id": 369,
+            "name": "Chapter 369",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0369-098.png"
+        },
+        {
+            "id": 370,
+            "name": "Chapter 370",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0370-105.png"
+        },
+        {
+            "id": 371,
+            "name": "Chapter 371",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0371-129.png"
+        },
+        {
+            "id": 372,
+            "name": "Chapter 372",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0372-103.png"
+        },
+        {
+            "id": 373,
+            "name": "Chapter 373",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0373-101.png"
+        },
+        {
+            "id": 374,
+            "name": "Chapter 374",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0374-119.png"
+        },
+        {
+            "id": 375,
+            "name": "Chapter 375",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0375-104.png"
+        },
+        {
+            "id": 376,
+            "name": "Chapter 376",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0376-087.png"
+        },
+        {
+            "id": 377,
+            "name": "Chapter 377",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0377-108.png"
+        },
+        {
+            "id": 378,
+            "name": "Chapter 378",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0378-090.png"
+        },
+        {
+            "id": 379,
+            "name": "Chapter 379",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0379-131.png"
+        },
+        {
+            "id": 380,
+            "name": "Chapter 380",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0380-120.png"
+        },
+        {
+            "id": 381,
+            "name": "Chapter 381",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0381-126.png"
+        },
+        {
+            "id": 382,
+            "name": "Chapter 382",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0382-103.png"
+        },
+        {
+            "id": 383,
+            "name": "Chapter 383",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0383-163.png"
+        },
+        {
+            "id": 384,
+            "name": "Chapter 384",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0384-098.png"
+        },
+        {
+            "id": 385,
+            "name": "Chapter 385",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0385-096.png"
+        },
+        {
+            "id": 386,
+            "name": "Chapter 386",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0386-139.png"
+        },
+        {
+            "id": 387,
+            "name": "Chapter 387",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0387-113.png"
+        },
+        {
+            "id": 388,
+            "name": "Chapter 388",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0388-101.png"
+        },
+        {
+            "id": 389,
+            "name": "Chapter 389",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0389-107.png"
+        },
+        {
+            "id": 390,
+            "name": "Chapter 390",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0390-083.png"
+        },
+        {
+            "id": 391,
+            "name": "Chapter 391",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0391-094.png"
+        },
+        {
+            "id": 392,
+            "name": "Chapter 392",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0392-095.png"
+        },
+        {
+            "id": 393,
+            "name": "Chapter 393",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0393-100.png"
+        },
+        {
+            "id": 394,
+            "name": "Chapter 394",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0394-103.png"
+        },
+        {
+            "id": 395,
+            "name": "Chapter 395",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0395-101.png"
+        },
+        {
+            "id": 396,
+            "name": "Chapter 396",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0396-078.png"
+        },
+        {
+            "id": 397,
+            "name": "Chapter 397",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0397-089.png"
+        },
+        {
+            "id": 398,
+            "name": "Chapter 398",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0398-108.png"
+        },
+        {
+            "id": 399,
+            "name": "Chapter 399",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0399-088.png"
+        },
+        {
+            "id": 400,
+            "name": "Chapter 400",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0400-108.png"
+        },
+        {
+            "id": 401,
+            "name": "Chapter 401",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0401-084.png"
+        },
+        {
+            "id": 402,
+            "name": "Chapter 402",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0402-088.png"
+        },
+        {
+            "id": 403,
+            "name": "Chapter 403",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0403-090.png"
+        },
+        {
+            "id": 404,
+            "name": "Chapter 404",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0404-086.png"
+        },
+        {
+            "id": 405,
+            "name": "Chapter 405",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0405-084.png"
+        },
+        {
+            "id": 406,
+            "name": "Chapter 406",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0406-084.png"
+        },
+        {
+            "id": 407,
+            "name": "Chapter 407",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0407-086.png"
+        },
+        {
+            "id": 408,
+            "name": "Chapter 408",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0408-120.png"
+        },
+        {
+            "id": 409,
+            "name": "Chapter 409",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0409-136.png"
+        },
+        {
+            "id": 410,
+            "name": "Chapter 410",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0410-108.png"
+        },
+        {
+            "id": 411,
+            "name": "Chapter 411",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0411-087.png"
+        },
+        {
+            "id": 412,
+            "name": "Chapter 412",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0412-116.png"
+        },
+        {
+            "id": 413,
+            "name": "Chapter 413",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0413-093.png"
+        },
+        {
+            "id": 414,
+            "name": "Chapter 414",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0414-115.png"
+        },
+        {
+            "id": 415,
+            "name": "Chapter 415",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0415-131.png"
+        },
+        {
+            "id": 416,
+            "name": "Chapter 416",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0416-101.png"
+        },
+        {
+            "id": 417,
+            "name": "Chapter 417",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0417-120.png"
+        },
+        {
+            "id": 418,
+            "name": "Chapter 418",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0418-086.png"
+        },
+        {
+            "id": 419,
+            "name": "Chapter 419",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0419-108.png"
+        },
+        {
+            "id": 420,
+            "name": "Chapter 420",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0420-091.png"
+        },
+        {
+            "id": 421,
+            "name": "Chapter 421",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0421-169.png"
+        },
+        {
+            "id": 422,
+            "name": "Chapter 422",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0422-132.png"
+        },
+        {
+            "id": 423,
+            "name": "Chapter 423",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0423-121.png"
+        },
+        {
+            "id": 424,
+            "name": "Chapter 424",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0424-089.png"
+        },
+        {
+            "id": 425,
+            "name": "Chapter 425",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0425-121.png"
+        },
+        {
+            "id": 426,
+            "name": "Chapter 426",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0426-085.png"
+        },
+        {
+            "id": 427,
+            "name": "Chapter 427",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0427-086.png"
+        },
+        {
+            "id": 428,
+            "name": "Chapter 428",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0428-103.png"
+        },
+        {
+            "id": 429,
+            "name": "Chapter 429",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0429-086.png"
+        },
+        {
+            "id": 430,
+            "name": "Chapter 430",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0430-089.png"
+        },
+        {
+            "id": 431,
+            "name": "Chapter 431",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0431-102.png"
+        },
+        {
+            "id": 432,
+            "name": "Chapter 432",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0432-103.png"
+        },
+        {
+            "id": 433,
+            "name": "Chapter 433",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0433-110.png"
+        },
+        {
+            "id": 434,
+            "name": "Chapter 434",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0434-104.png"
+        },
+        {
+            "id": 435,
+            "name": "Chapter 435",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0435-089.png"
+        },
+        {
+            "id": 436,
+            "name": "Chapter 436",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0436-082.png"
+        },
+        {
+            "id": 437,
+            "name": "Chapter 437",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0437-100.png"
+        },
+        {
+            "id": 438,
+            "name": "Chapter 438",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0438-132.png"
+        },
+        {
+            "id": 439,
+            "name": "Chapter 439",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0439-111.png"
+        },
+        {
+            "id": 440,
+            "name": "Chapter 440",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0440-128.png"
+        },
+        {
+            "id": 441,
+            "name": "Chapter 441",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0441-109.png"
+        },
+        {
+            "id": 442,
+            "name": "Chapter 442",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0442-109.png"
+        },
+        {
+            "id": 443,
+            "name": "Chapter 443",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0443-095.png"
+        },
+        {
+            "id": 444,
+            "name": "Chapter 444",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0444-153.png"
+        },
+        {
+            "id": 445,
+            "name": "Chapter 445",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0445-096.png"
+        },
+        {
+            "id": 446,
+            "name": "Chapter 446",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0446-119.png"
+        },
+        {
+            "id": 447,
+            "name": "Chapter 447",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0447-112.png"
+        },
+        {
+            "id": 448,
+            "name": "Chapter 448",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0448-117.png"
+        },
+        {
+            "id": 449,
+            "name": "Chapter 449",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0449-089.png"
+        },
+        {
+            "id": 450,
+            "name": "Chapter 450",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0450-100.png"
+        },
+        {
+            "id": 451,
+            "name": "Chapter 451",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0451-096.png"
+        },
+        {
+            "id": 452,
+            "name": "Chapter 452",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0452-069.png"
+        },
+        {
+            "id": 453,
+            "name": "Chapter 453",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0453-110.png"
+        },
+        {
+            "id": 454,
+            "name": "Chapter 454",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0454-102.png"
+        },
+        {
+            "id": 455,
+            "name": "Chapter 455",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0455-107.png"
+        },
+        {
+            "id": 456,
+            "name": "Chapter 456",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0456-102.png"
+        },
+        {
+            "id": 457,
+            "name": "Chapter 457",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0457-097.png"
+        },
+        {
+            "id": 458,
+            "name": "Chapter 458",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0458-097.png"
+        },
+        {
+            "id": 459,
+            "name": "Chapter 459",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0459-082.png"
+        },
+        {
+            "id": 460,
+            "name": "Chapter 460",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0460-108.png"
+        },
+        {
+            "id": 461,
+            "name": "Chapter 461",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0461-135.png"
+        },
+        {
+            "id": 462,
+            "name": "Chapter 462",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0462-146.png"
+        },
+        {
+            "id": 463,
+            "name": "Chapter 463",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0463-087.png"
+        },
+        {
+            "id": 464,
+            "name": "Chapter 464",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0464-127.png"
+        },
+        {
+            "id": 465,
+            "name": "Chapter 465",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0465-154.png"
+        },
+        {
+            "id": 466,
+            "name": "Chapter 466",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0466-135.png"
+        },
+        {
+            "id": 467,
+            "name": "Chapter 467",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0467-126.png"
+        },
+        {
+            "id": 468,
+            "name": "Chapter 468",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0468-118.png"
+        },
+        {
+            "id": 469,
+            "name": "Chapter 469",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0469-176.png"
+        },
+        {
+            "id": 470,
+            "name": "Chapter 470",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0470-126.png"
+        },
+        {
+            "id": 471,
+            "name": "Chapter 471",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0471-124.png"
+        },
+        {
+            "id": 472,
+            "name": "Chapter 472",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0472-107.png"
+        },
+        {
+            "id": 473,
+            "name": "Chapter 473",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0473-185.png"
+        },
+        {
+            "id": 474,
+            "name": "Chapter 474",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0474-083.png"
+        },
+        {
+            "id": 475,
+            "name": "Chapter 475",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0475-227.png"
+        },
+        {
+            "id": 476,
+            "name": "Chapter 476",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0476-130.png"
+        },
+        {
+            "id": 477,
+            "name": "Chapter 477",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0477-115.png"
+        },
+        {
+            "id": 478,
+            "name": "Chapter 478",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0478-130.png"
+        },
+        {
+            "id": 479,
+            "name": "Chapter 479",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0479-126.png"
+        },
+        {
+            "id": 480,
+            "name": "Chapter 480",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0480-088.png"
+        },
+        {
+            "id": 481,
+            "name": "Chapter 481",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0481-118.png"
+        },
+        {
+            "id": 482,
+            "name": "Chapter 482",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0482-111.png"
+        },
+        {
+            "id": 483,
+            "name": "Chapter 483",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0483-095.png"
+        },
+        {
+            "id": 484,
+            "name": "Chapter 484",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0484-099.png"
+        },
+        {
+            "id": 485,
+            "name": "Chapter 485",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0485-075.png"
+        },
+        {
+            "id": 486,
+            "name": "Chapter 486",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0486-100.png"
+        },
+        {
+            "id": 487,
+            "name": "Chapter 487",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0487-119.png"
+        },
+        {
+            "id": 488,
+            "name": "Chapter 488",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0488-123.png"
+        },
+        {
+            "id": 489,
+            "name": "Chapter 489",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0489-090.png"
+        },
+        {
+            "id": 490,
+            "name": "Chapter 490",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0490-118.png"
+        },
+        {
+            "id": 491,
+            "name": "Chapter 491",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0491-129.png"
+        },
+        {
+            "id": 492,
+            "name": "Chapter 492",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0492-104.png"
+        },
+        {
+            "id": 493,
+            "name": "Chapter 493",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0493-141.png"
+        },
+        {
+            "id": 494,
+            "name": "Chapter 494",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0494-108.png"
+        },
+        {
+            "id": 495,
+            "name": "Chapter 495",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0495-152.png"
+        },
+        {
+            "id": 496,
+            "name": "Chapter 496",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0496-156.png"
+        },
+        {
+            "id": 497,
+            "name": "Chapter 497",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0497-121.png"
+        },
+        {
+            "id": 498,
+            "name": "Chapter 498",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0498-117.png"
+        },
+        {
+            "id": 499,
+            "name": "Chapter 499",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0499-104.png"
+        },
+        {
+            "id": 500,
+            "name": "Chapter 500",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0500-121.png"
+        },
+        {
+            "id": 501,
+            "name": "Chapter 501",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0501-148.png"
+        },
+        {
+            "id": 502,
+            "name": "Chapter 502",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0502-148.png"
+        },
+        {
+            "id": 503,
+            "name": "Chapter 503",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0503-170.png"
+        },
+        {
+            "id": 504,
+            "name": "Chapter 504",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0504-121.png"
+        },
+        {
+            "id": 505,
+            "name": "Chapter 505",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0505-102.png"
+        },
+        {
+            "id": 506,
+            "name": "Chapter 506",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0506-123.png"
+        },
+        {
+            "id": 507,
+            "name": "Chapter 507",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0507-117.png"
+        },
+        {
+            "id": 508,
+            "name": "Chapter 508",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0508-141.png"
+        },
+        {
+            "id": 509,
+            "name": "Chapter 509",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0509-125.png"
+        },
+        {
+            "id": 510,
+            "name": "Chapter 510",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0510-134.png"
+        },
+        {
+            "id": 511,
+            "name": "Chapter 511",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0511-112.png"
+        },
+        {
+            "id": 512,
+            "name": "Chapter 512",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0512-106.png"
+        },
+        {
+            "id": 513,
+            "name": "Chapter 513",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0513-073.png"
+        },
+        {
+            "id": 514,
+            "name": "Chapter 514",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0514-141.png"
+        },
+        {
+            "id": 515,
+            "name": "Chapter 515",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0515-067.png"
+        },
+        {
+            "id": 516,
+            "name": "Chapter 516",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0516-172.png"
+        },
+        {
+            "id": 517,
+            "name": "Chapter 517",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0517-174.png"
+        },
+        {
+            "id": 518,
+            "name": "Chapter 518",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0518-125.png"
+        },
+        {
+            "id": 519,
+            "name": "Chapter 519",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0519-096.png"
+        },
+        {
+            "id": 520,
+            "name": "Chapter 520",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0520-212.png"
+        },
+        {
+            "id": 521,
+            "name": "Chapter 521",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0521-095.png"
+        },
+        {
+            "id": 522,
+            "name": "Chapter 522",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0522-173.png"
+        },
+        {
+            "id": 523,
+            "name": "Chapter 523",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0523-168.png"
+        },
+        {
+            "id": 524,
+            "name": "Chapter 524",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0524-134.png"
+        },
+        {
+            "id": 525,
+            "name": "Chapter 525",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0525-162.png"
+        },
+        {
+            "id": 526,
+            "name": "Chapter 526",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0526-123.png"
+        },
+        {
+            "id": 527,
+            "name": "Chapter 527",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0527-152.png"
+        },
+        {
+            "id": 528,
+            "name": "Chapter 528",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0528-126.png"
+        },
+        {
+            "id": 529,
+            "name": "Chapter 529",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0529-121.png"
+        },
+        {
+            "id": 530,
+            "name": "Chapter 530",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0530-116.png"
+        },
+        {
+            "id": 531,
+            "name": "Chapter 531",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0531-141.png"
+        },
+        {
+            "id": 532,
+            "name": "Chapter 532",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0532-187.png"
+        },
+        {
+            "id": 533,
+            "name": "Chapter 533",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0533-146.png"
+        },
+        {
+            "id": 534,
+            "name": "Chapter 534",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0534-137.png"
+        },
+        {
+            "id": 535,
+            "name": "Chapter 535",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0535-154.png"
+        },
+        {
+            "id": 536,
+            "name": "Chapter 536",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0536-152.png"
+        },
+        {
+            "id": 537,
+            "name": "Chapter 537",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0537-090.png"
+        },
+        {
+            "id": 538,
+            "name": "Chapter 538",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0538-175.png"
+        },
+        {
+            "id": 539,
+            "name": "Chapter 539",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0539-221.png"
+        },
+        {
+            "id": 540,
+            "name": "Chapter 540",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0540-166.png"
+        },
+        {
+            "id": 541,
+            "name": "Chapter 541",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0541-177.png"
+        },
+        {
+            "id": 542,
+            "name": "Chapter 542",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0542-189.png"
+        },
+        {
+            "id": 543,
+            "name": "Chapter 543",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0543-208.png"
+        },
+        {
+            "id": 544,
+            "name": "Chapter 544",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0544-126.png"
+        },
+        {
+            "id": 545,
+            "name": "Chapter 545",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0545-187.png"
+        },
+        {
+            "id": 546,
+            "name": "Chapter 546",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0546-130.png"
+        },
+        {
+            "id": 547,
+            "name": "Chapter 547",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0547-158.png"
+        },
+        {
+            "id": 548,
+            "name": "Chapter 548",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0548-141.png"
+        },
+        {
+            "id": 549,
+            "name": "Chapter 549",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0549-095.png"
+        },
+        {
+            "id": 550,
+            "name": "Chapter 550",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0550-109.png"
+        },
+        {
+            "id": 551,
+            "name": "Chapter 551",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0551-190.png"
+        },
+        {
+            "id": 552,
+            "name": "Chapter 552",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0552-204.png"
+        },
+        {
+            "id": 553,
+            "name": "Chapter 553",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0553-110.png"
+        },
+        {
+            "id": 554,
+            "name": "Chapter 554",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0554-142.png"
+        },
+        {
+            "id": 555,
+            "name": "Chapter 555",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0555-144.png"
+        },
+        {
+            "id": 556,
+            "name": "Chapter 556",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0556-154.png"
+        },
+        {
+            "id": 557,
+            "name": "Chapter 557",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0557-087.png"
+        },
+        {
+            "id": 558,
+            "name": "Chapter 558",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0558-109.png"
+        },
+        {
+            "id": 559,
+            "name": "Chapter 559",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0559-107.png"
+        },
+        {
+            "id": 560,
+            "name": "Chapter 560",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0560-163.png"
+        },
+        {
+            "id": 561,
+            "name": "Chapter 561",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0561-160.png"
+        },
+        {
+            "id": 562,
+            "name": "Chapter 562",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0562-176.png"
+        },
+        {
+            "id": 563,
+            "name": "Chapter 563",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0563-092.png"
+        },
+        {
+            "id": 564,
+            "name": "Chapter 564",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0564-172.png"
+        },
+        {
+            "id": 565,
+            "name": "Chapter 565",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0565-118.png"
+        },
+        {
+            "id": 566,
+            "name": "Chapter 566",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0566-110.png"
+        },
+        {
+            "id": 567,
+            "name": "Chapter 567",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0567-145.png"
+        },
+        {
+            "id": 568,
+            "name": "Chapter 568",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0568-130.png"
+        },
+        {
+            "id": 569,
+            "name": "Chapter 569",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0569-187.png"
+        },
+        {
+            "id": 570,
+            "name": "Chapter 570",
+            "lastImage": "https://official.lowee.us/manga/The-God-Of-High-School/0570-094.png"
+        }
+    ]
+}

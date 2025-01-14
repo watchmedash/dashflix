@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Perks of Working in the Black Magic Industry</title>
+    <link rel="icon" href="https://i.postimg.cc/NM4kLqv2/favicon.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Dark Theme Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center-align the Home button */
+            padding: 10px 20px;
+            background-color: #1f1f1f;
+        }
+
+        .home-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #image-container img {
+            display: block;
+            max-width: 100%;
+            margin: 10px auto;
+        }
+
+        /* Bottom Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1f1f1f;
+            position: sticky;
+            bottom: 0;
+        }
+
+        nav button, nav select {
+            margin: 0 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        nav button:disabled {
+            background-color: #ff4d4d; /* Red for disabled buttons */
+            cursor: not-allowed;
+        }
+
+        nav select {
+            font-size: 16px;
+            border: 1px solid #555;
+        }
+
+        nav i {
+            font-size: 18px;
+        }
+
+        #goToTopBtn {
+            position: fixed;
+            bottom: 70px; /* Positioned above the navbar */
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #goToTopBtn:hover {
+            background-color: #555;
+        }
+
+        .image-contained{width:100%;overflow:hidden}.image-contained img{width:100%;height:auto;display:block}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/comic.html" class="home-btn">
+            <i class="fas fa-home"></i>
+        </a>
+    </header>
+<div class="terra"><div class="image-contained"><a href="https://randoms.top"><img src="https://i.postimg.cc/cJhkkL0g/Visit-Now.png" alt="Discover something new every day"></a></div></div>
+    <div class="container">
+        <!-- Image Container -->
+        <div id="image-container"></div>
+    </div>
+    <div class="image-contained"><a href="https://dashflix.top/">
+        <img src="https://i.postimg.cc/wBNdfBt9/dashflixgif.gif" alt="Dashflix">
+    </a></div>
+    <!-- Bottom Navigation Bar -->
+    <nav>
+        <!-- Next Button (now on the left) -->
+        <button id="nextChapter">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <!-- Chapter Dropdown -->
+        <select id="chapterDropdown"></select>
+
+        <!-- Previous Button (now on the right) -->
+        <button id="prevChapter" disabled>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </nav>
+
+
+    <button id="goToTopBtn"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+    const chaptersPath = './perks.json';
+
+  let currentChapterIndex = parseInt(localStorage.getItem('currentChapterIndex'), 10) || 0;
+  let chaptersData = [];
+
+  fetch(chaptersPath)
+      .then(response => response.json())
+      .then(data => {
+          chaptersData = data.chapters;
+          populateDropdown();
+          loadChapter(currentChapterIndex);
+          updateNavigationButtons();
+      })
+      .catch(error => console.error("Error loading chapters:", error));
+
+  function populateDropdown() {
+      const dropdown = document.getElementById('chapterDropdown');
+      const reversedChapters = [...chaptersData].reverse();
+
+      reversedChapters.forEach((chapter, index) => {
+          const option = document.createElement('option');
+          option.value = index;
+          option.textContent = chapter.name;
+          dropdown.appendChild(option);
+      });
+
+      dropdown.addEventListener('change', (event) => {
+          currentChapterIndex = parseInt(event.target.value, 10);
+          loadChapter(currentChapterIndex);
+          updateNavigationButtons();
+          localStorage.setItem('currentChapterIndex', currentChapterIndex);
+      });
+  }
+
+  function loadChapter(index) {
+      if (index < 0 || index >= chaptersData.length) return;
+
+      const chapter = chaptersData[chaptersData.length - 1 - index];
+      const imageContainer = document.getElementById('image-container');
+      const dropdown = document.getElementById('chapterDropdown');
+
+      imageContainer.innerHTML = '';
+      dropdown.value = index;
+
+      const lastImage = chapter.lastImage;
+      const baseUrl = lastImage.substring(0, lastImage.lastIndexOf('-') + 1);
+      const endIndex = parseInt(lastImage.split('-').pop().split('.')[0], 10);
+
+      for (let i = 1; i <= endIndex; i++) {
+          const imgUrl = `${baseUrl}${i.toString().padStart(3, '0')}.png`;
+          const img = document.createElement('img');
+          img.src = imgUrl;
+          img.alt = `${chapter.name} - Image ${i}`;
+          imageContainer.appendChild(img);
+      }
+  }
+
+  function updateNavigationButtons() {
+      const prevButton = document.getElementById('prevChapter');
+      const nextButton = document.getElementById('nextChapter');
+
+      prevButton.disabled = currentChapterIndex === 0;
+      nextButton.disabled = currentChapterIndex === chaptersData.length - 1;
+  }
+
+  document.getElementById('prevChapter').addEventListener('click', () => {
+      if (currentChapterIndex > 0) {
+          currentChapterIndex--;
+          loadChapter(currentChapterIndex);
+          updateNavigationButtons();
+          localStorage.setItem('currentChapterIndex', currentChapterIndex);
+      }
+  });
+
+  document.getElementById('nextChapter').addEventListener('click', () => {
+      if (currentChapterIndex < chaptersData.length - 1) {
+          currentChapterIndex++;
+          loadChapter(currentChapterIndex);
+          updateNavigationButtons();
+          localStorage.setItem('currentChapterIndex', currentChapterIndex);
+      }
+  });
+
+  const goToTopBtn = document.getElementById('goToTopBtn');
+  goToTopBtn.style.display = 'none';
+
+  window.onscroll = () => {
+      goToTopBtn.style.display = document.documentElement.scrollTop > 100 ? 'block' : 'none';
+  };
+
+  goToTopBtn.addEventListener('click', () => {
+      document.documentElement.scrollTop = 0;
+  });
+    </script>
+</body>
+</html>

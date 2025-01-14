@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="https://temp.compsci88.com/cover/To-Not-Die.jpg" property="og:image"/>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <title>To Not Die</title>
+       <style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+      <div class="image-container"><img src="https://temp.compsci88.com/cover/To-Not-Die.jpg" alt="To Not Die">
+        <h1>To Not Die</h1><p>Description:
+          Im Dajun is a high school student who gets bullied at school every day. He came across an interview on TV just when he was on the verge of giving up on life. It was with a murderer who killed the classmates that bullied him. Dajun becomes inspired by what he saw and decides to take revenge as well.
+
+          His revenge was successful. However, his life steered into an undesired direction. Im Dajun, leaving school, ends up joining a strange Runaway Fam.
+
+          The young runaway, Im Dajun, no longer suffers from the bullies at his school. Instead, he now must survive against even more vicious thugs on the streets.</p></div>
+
+<div class="container">
+
+  <div id="chapters">
+    <ul class="chapter-list">
+<li><a href="../chapters/To Not Die/reader2.html">Season 2</a></li>
+<li><a href="../chapters/To Not Die/reader.html">Season 1</a></li>
+    </ul>
+  </div>
+   </div>
+   <button id="goToTopBtn">Go to Top</button>
+   <script>
+     // Get the button
+     var mybutton = document.getElementById("goToTopBtn");
+
+     window.onscroll = function() {
+       scrollFunction();
+     };
+
+     function scrollFunction() {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+         mybutton.style.display = "block";
+       } else {
+         mybutton.style.display = "none";
+       }
+     }
+
+     mybutton.onclick = function() {
+       document.body.scrollTop = 0;
+       document.documentElement.scrollTop = 0;
+     };
+   </script>
+   <div id="disqus_thread"></div>
+   <script>
+       var disqus_config = function () {
+           this.page.url = window.location.href;  // Use the current page URL
+           this.page.identifier = document.title; // Use the page title as the unique identifier
+       };
+
+       (function() { // DON'T EDIT BELOW THIS LINE
+           var d = document, s = d.createElement('script');
+           s.src = 'https://dashtoons.disqus.com/embed.js';
+           s.setAttribute('data-timestamp', +new Date());
+           (d.head || d.body).appendChild(s);
+       })();
+   </script>
+   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

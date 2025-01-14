@@ -1,0 +1,254 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0001-041.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0002-034.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0003-037.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0004-039.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0005-047.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0006-029.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0007-033.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0008-020.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0009-032.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0010-036.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0011-041.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0012-036.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0013-029.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0014-029.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0015-029.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0016-036.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0017-042.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0018-025.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0019-024.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0020-037.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0021-032.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0022-036.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0023-028.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0024-034.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0025-034.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0026-044.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0027-042.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0028-042.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0029-032.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0030-042.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0031-034.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0032-042.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0033-032.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0034-063.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0035-049.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0036-019.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0037-032.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0038-024.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0039-032.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0040-067.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0041-045.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0042-042.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0043-052.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0044-042.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0045-034.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0046-048.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0047-037.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0048-042.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0049-049.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://scans.lastation.us/manga/Wakamono-no-Kuro-Mahou-Hanare/0050-064.png"
+        }
+    ]
+}

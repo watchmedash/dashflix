@@ -1,0 +1,314 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0001-058.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0002-023.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0003-024.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0004-019.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0005-019.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0006-018.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0007-018.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/Kagurabachi/0008-023.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0009-019.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0010-018.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0011-019.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0012-019.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0013-019.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0014-021.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0015-020.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0016-019.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0017-017.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0018-018.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0019-022.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0020-019.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0021-020.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0022-020.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0023-019.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0024-019.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0025-020.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0026-019.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0027-020.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0028-020.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0029-018.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0030-020.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0031-022.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0032-021.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0033-019.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0034-019.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0035-019.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0036-020.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0037-019.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0038-021.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0039-019.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0040-019.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0041-021.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0042-018.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0043-019.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0044-021.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0045-020.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0046-020.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0047-023.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0048-019.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0049-019.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0050-020.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0051-019.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0052-019.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0053-022.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0054-020.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0055-018.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0056-021.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0057-018.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0058-017.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0059-022.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0060-019.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0061-019.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://scans-hot.planeptune.us/manga/Kagurabachi/0062-019.png"
+        }
+    ]
+}

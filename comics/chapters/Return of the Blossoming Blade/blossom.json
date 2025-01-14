@@ -1,0 +1,764 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0001-237.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0002-190.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0003-163.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0004-230.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0005-160.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0006-159.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0007-148.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0008-151.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0009-181.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0010-188.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0011-135.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0012-125.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0013-140.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0014-166.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0015-139.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0016-118.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0017-142.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0018-204.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0019-163.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0020-151.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0021-008.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0022-170.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0023-217.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0024-154.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0025-157.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0026-163.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0027-171.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0028-147.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0029-011.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0030-167.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0031-169.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0032-168.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0033-181.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0034-200.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0035-157.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0036-230.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0037-202.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0038-194.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0039-162.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0040-163.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0041-145.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0042-189.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0043-166.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0044-162.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0045-205.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0046-185.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0047-181.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0048-133.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0049-014.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0050-210.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0051-160.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0052-153.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0053-173.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0054-176.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0055-159.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0056-210.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0057-190.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0058-152.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0059-182.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0060-172.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0061-177.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0062-199.png"
+        },
+        {
+            "id": 63,
+            "name": "Chapter 63",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0063-164.png"
+        },
+        {
+            "id": 64,
+            "name": "Chapter 64",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0064-162.png"
+        },
+        {
+            "id": 65,
+            "name": "Chapter 65",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0065-160.png"
+        },
+        {
+            "id": 66,
+            "name": "Chapter 66",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0066-157.png"
+        },
+        {
+            "id": 67,
+            "name": "Chapter 67",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0067-165.png"
+        },
+        {
+            "id": 68,
+            "name": "Chapter 68",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0068-125.png"
+        },
+        {
+            "id": 69,
+            "name": "Chapter 69",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0069-127.png"
+        },
+        {
+            "id": 70,
+            "name": "Chapter 70",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0070-139.png"
+        },
+        {
+            "id": 71,
+            "name": "Chapter 71",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0071-116.png"
+        },
+        {
+            "id": 72,
+            "name": "Chapter 72",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0072-163.png"
+        },
+        {
+            "id": 73,
+            "name": "Chapter 73",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0073-078.png"
+        },
+        {
+            "id": 74,
+            "name": "Chapter 74",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0074-104.png"
+        },
+        {
+            "id": 75,
+            "name": "Chapter 75",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0075-099.png"
+        },
+        {
+            "id": 76,
+            "name": "Chapter 76",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0076-096.png"
+        },
+        {
+            "id": 77,
+            "name": "Chapter 77",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0077-091.png"
+        },
+        {
+            "id": 78,
+            "name": "Chapter 78",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0078-120.png"
+        },
+        {
+            "id": 79,
+            "name": "Chapter 79",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0079-098.png"
+        },
+        {
+            "id": 80,
+            "name": "Chapter 80",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0080-115.png"
+        },
+        {
+            "id": 81,
+            "name": "Chapter 81",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0081-089.png"
+        },
+        {
+            "id": 82,
+            "name": "Chapter 82",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0082-121.png"
+        },
+        {
+            "id": 83,
+            "name": "Chapter 83",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0083-093.png"
+        },
+        {
+            "id": 84,
+            "name": "Chapter 84",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0084-117.png"
+        },
+        {
+            "id": 85,
+            "name": "Chapter 85",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0085-103.png"
+        },
+        {
+            "id": 86,
+            "name": "Chapter 86",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0086-108.png"
+        },
+        {
+            "id": 87,
+            "name": "Chapter 87",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0087-127.png"
+        },
+        {
+            "id": 88,
+            "name": "Chapter 88",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0088-128.png"
+        },
+        {
+            "id": 89,
+            "name": "Chapter 89",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0089-104.png"
+        },
+        {
+            "id": 90,
+            "name": "Chapter 90",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0090-142.png"
+        },
+        {
+            "id": 91,
+            "name": "Chapter 91",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0091-099.png"
+        },
+        {
+            "id": 92,
+            "name": "Chapter 92",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0092-124.png"
+        },
+        {
+            "id": 93,
+            "name": "Chapter 93",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0093-134.png"
+        },
+        {
+            "id": 94,
+            "name": "Chapter 94",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0094-135.png"
+        },
+        {
+            "id": 95,
+            "name": "Chapter 95",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0095-138.png"
+        },
+        {
+            "id": 96,
+            "name": "Chapter 96",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0096-138.png"
+        },
+        {
+            "id": 97,
+            "name": "Chapter 97",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0097-149.png"
+        },
+        {
+            "id": 98,
+            "name": "Chapter 98",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0098-117.png"
+        },
+        {
+            "id": 99,
+            "name": "Chapter 99",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0099-117.png"
+        },
+        {
+            "id": 100,
+            "name": "Chapter 100",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0100-110.png"
+        },
+        {
+            "id": 101,
+            "name": "Chapter 101",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0101-102.png"
+        },
+        {
+            "id": 102,
+            "name": "Chapter 102",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0102-108.png"
+        },
+        {
+            "id": 103,
+            "name": "Chapter 103",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0103-126.png"
+        },
+        {
+            "id": 104,
+            "name": "Chapter 104",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0104-130.png"
+        },
+        {
+            "id": 105,
+            "name": "Chapter 105",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0105-108.png"
+        },
+        {
+            "id": 106,
+            "name": "Chapter 106",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0106-113.png"
+        },
+        {
+            "id": 107,
+            "name": "Chapter 107",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0107-120.png"
+        },
+        {
+            "id": 108,
+            "name": "Chapter 108",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0108-128.png"
+        },
+        {
+            "id": 109,
+            "name": "Chapter 109",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0109-132.png"
+        },
+        {
+            "id": 110,
+            "name": "Chapter 110",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0110-097.png"
+        },
+        {
+            "id": 111,
+            "name": "Chapter 111",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0111-147.png"
+        },
+        {
+            "id": 112,
+            "name": "Chapter 112",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0112-130.png"
+        },
+        {
+            "id": 113,
+            "name": "Chapter 113",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0113-109.png"
+        },
+        {
+            "id": 114,
+            "name": "Chapter 114",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0114-113.png"
+        },
+        {
+            "id": 115,
+            "name": "Chapter 115",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0115-092.png"
+        },
+        {
+            "id": 116,
+            "name": "Chapter 116",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0116-115.png"
+        },
+        {
+            "id": 117,
+            "name": "Chapter 117",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0117-103.png"
+        },
+        {
+            "id": 118,
+            "name": "Chapter 118",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0118-126.png"
+        },
+        {
+            "id": 119,
+            "name": "Chapter 119",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0119-111.png"
+        },
+        {
+            "id": 120,
+            "name": "Chapter 120",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0120-122.png"
+        },
+        {
+            "id": 121,
+            "name": "Chapter 121",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0121-118.png"
+        },
+        {
+            "id": 122,
+            "name": "Chapter 122",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0122-118.png"
+        },
+        {
+            "id": 123,
+            "name": "Chapter 123",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0123-114.png"
+        },
+        {
+            "id": 124,
+            "name": "Chapter 124",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0124-098.png"
+        },
+        {
+            "id": 125,
+            "name": "Chapter 125",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0125-093.png"
+        },
+        {
+            "id": 126,
+            "name": "Chapter 126",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0126-097.png"
+        },
+        {
+            "id": 127,
+            "name": "Chapter 127",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0127-120.png"
+        },
+        {
+            "id": 128,
+            "name": "Chapter 128",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0128-120.png"
+        },
+        {
+            "id": 129,
+            "name": "Chapter 129",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0129-116.png"
+        },
+        {
+            "id": 130,
+            "name": "Chapter 130",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0130-111.png"
+        },
+        {
+            "id": 131,
+            "name": "Chapter 131",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0131-118.png"
+        },
+        {
+            "id": 132,
+            "name": "Chapter 132",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0132-103.png"
+        },
+        {
+            "id": 133,
+            "name": "Chapter 133",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0133-099.png"
+        },
+        {
+            "id": 134,
+            "name": "Chapter 134",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0134-123.png"
+        },
+        {
+            "id": 135,
+            "name": "Chapter 135",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0135-110.png"
+        },
+        {
+            "id": 136,
+            "name": "Chapter 136",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0136-113.png"
+        },
+        {
+            "id": 137,
+            "name": "Chapter 137",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0137-110.png"
+        },
+        {
+            "id": 138,
+            "name": "Chapter 138",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0138-116.png"
+        },
+        {
+            "id": 139,
+            "name": "Chapter 139",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0139-118.png"
+        },
+        {
+            "id": 140,
+            "name": "Chapter 140",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0140-095.png"
+        },
+        {
+            "id": 141,
+            "name": "Chapter 141",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0141-119.png"
+        },
+        {
+            "id": 142,
+            "name": "Chapter 142",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0142-097.png"
+        },
+        {
+            "id": 143,
+            "name": "Chapter 143",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0143-090.png"
+        },
+        {
+            "id": 144,
+            "name": "Chapter 144",
+            "lastImage": "https://official.lowee.us/manga/Return-of-the-Blossoming-Blade/0144-113.png"
+        },
+        {
+            "id": 145,
+            "name": "Chapter 145",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0145-011.png"
+        },
+        {
+            "id": 146,
+            "name": "Chapter 146",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0146-012.png"
+        },
+        {
+            "id": 147,
+            "name": "Chapter 147",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0147-012.png"
+        },
+        {
+            "id": 148,
+            "name": "Chapter 148",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0148-011.png"
+        },
+        {
+            "id": 149,
+            "name": "Chapter 149",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0149-012.png"
+        },
+        {
+            "id": 150,
+            "name": "Chapter 150",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0150-013.png"
+        },
+        {
+            "id": 151,
+            "name": "Chapter 151",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0151-013.png"
+        },
+        {
+            "id": 152,
+            "name": "Chapter 152",
+            "lastImage": "https://scans.lastation.us/manga/Return-of-the-Blossoming-Blade/0152-014.png"
+        }
+    ]
+}

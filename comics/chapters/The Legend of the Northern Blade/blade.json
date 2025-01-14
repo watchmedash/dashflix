@@ -1,0 +1,1014 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0001-030.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0002-029.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0003-029.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0004-028.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0005-026.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0006-020.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0007-035.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0008-025.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0009-039.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0010-022.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0011-025.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0012-031.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0013-032.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0014-033.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0015-027.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0016-037.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0017-019.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0018-027.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0019-035.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0020-030.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0021-036.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0022-044.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0023-033.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0024-031.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0025-036.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0026-029.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0027-030.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0028-034.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0029-027.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0030-033.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0031-033.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0032-037.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0033-035.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0034-030.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0035-034.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0036-032.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0037-023.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0038-031.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0039-032.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0040-035.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0041-031.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0042-028.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0043-033.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0044-027.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0045-031.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0046-031.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0047-024.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0048-030.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0049-024.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0050-033.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0051-032.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0052-036.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0053-028.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0054-036.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0055-034.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0056-030.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0057-029.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0058-033.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0059-034.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0060-025.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0061-026.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0062-028.png"
+        },
+        {
+            "id": 63,
+            "name": "Chapter 63",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0063-026.png"
+        },
+        {
+            "id": 64,
+            "name": "Chapter 64",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0064-027.png"
+        },
+        {
+            "id": 65,
+            "name": "Chapter 65",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0065-031.png"
+        },
+        {
+            "id": 66,
+            "name": "Chapter 66",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0066-029.png"
+        },
+        {
+            "id": 67,
+            "name": "Chapter 67",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0067-026.png"
+        },
+        {
+            "id": 68,
+            "name": "Chapter 68",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0068-029.png"
+        },
+        {
+            "id": 69,
+            "name": "Chapter 69",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0069-026.png"
+        },
+        {
+            "id": 70,
+            "name": "Chapter 70",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0070-036.png"
+        },
+        {
+            "id": 71,
+            "name": "Chapter 71",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0071-044.png"
+        },
+        {
+            "id": 72,
+            "name": "Chapter 72",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0072-036.png"
+        },
+        {
+            "id": 73,
+            "name": "Chapter 73",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0073-030.png"
+        },
+        {
+            "id": 74,
+            "name": "Chapter 74",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0074-033.png"
+        },
+        {
+            "id": 75,
+            "name": "Chapter 75",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0075-032.png"
+        },
+        {
+            "id": 76,
+            "name": "Chapter 76",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0076-024.png"
+        },
+        {
+            "id": 77,
+            "name": "Chapter 77",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0077-031.png"
+        },
+        {
+            "id": 78,
+            "name": "Chapter 78",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0078-024.png"
+        },
+        {
+            "id": 79,
+            "name": "Chapter 79",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0079-033.png"
+        },
+        {
+            "id": 80,
+            "name": "Chapter 80",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0080-034.png"
+        },
+        {
+            "id": 81,
+            "name": "Chapter 81",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0081-031.png"
+        },
+        {
+            "id": 82,
+            "name": "Chapter 82",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0082-029.png"
+        },
+        {
+            "id": 83,
+            "name": "Chapter 83",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0083-036.png"
+        },
+        {
+            "id": 84,
+            "name": "Chapter 84",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0084-029.png"
+        },
+        {
+            "id": 85,
+            "name": "Chapter 85",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0085-031.png"
+        },
+        {
+            "id": 86,
+            "name": "Chapter 86",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0086-038.png"
+        },
+        {
+            "id": 87,
+            "name": "Chapter 87",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0087-032.png"
+        },
+        {
+            "id": 88,
+            "name": "Chapter 88",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0088-031.png"
+        },
+        {
+            "id": 89,
+            "name": "Chapter 89",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0089-033.png"
+        },
+        {
+            "id": 90,
+            "name": "Chapter 90",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0090-029.png"
+        },
+        {
+            "id": 91,
+            "name": "Chapter 91",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0091-023.png"
+        },
+        {
+            "id": 92,
+            "name": "Chapter 92",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0092-032.png"
+        },
+        {
+            "id": 93,
+            "name": "Chapter 93",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0093-036.png"
+        },
+        {
+            "id": 94,
+            "name": "Chapter 94",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0094-032.png"
+        },
+        {
+            "id": 95,
+            "name": "Chapter 95",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0095-040.png"
+        },
+        {
+            "id": 96,
+            "name": "Chapter 96",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0096-037.png"
+        },
+        {
+            "id": 97,
+            "name": "Chapter 97",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0097-039.png"
+        },
+        {
+            "id": 98,
+            "name": "Chapter 98",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0098-034.png"
+        },
+        {
+            "id": 99,
+            "name": "Chapter 99",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0099-034.png"
+        },
+        {
+            "id": 100,
+            "name": "Chapter 100",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0100-039.png"
+        },
+        {
+            "id": 101,
+            "name": "Chapter 101",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0101-038.png"
+        },
+        {
+            "id": 102,
+            "name": "Chapter 102",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0102-033.png"
+        },
+        {
+            "id": 103,
+            "name": "Chapter 103",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0103-038.png"
+        },
+        {
+            "id": 104,
+            "name": "Chapter 104",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0104-037.png"
+        },
+        {
+            "id": 105,
+            "name": "Chapter 105",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0105-025.png"
+        },
+        {
+            "id": 106,
+            "name": "Chapter 106",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0106-032.png"
+        },
+        {
+            "id": 107,
+            "name": "Chapter 107",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0107-034.png"
+        },
+        {
+            "id": 108,
+            "name": "Chapter 108",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0108-041.png"
+        },
+        {
+            "id": 109,
+            "name": "Chapter 109",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0109-039.png"
+        },
+        {
+            "id": 110,
+            "name": "Chapter 110",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0110-039.png"
+        },
+        {
+            "id": 111,
+            "name": "Chapter 111",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0111-035.png"
+        },
+        {
+            "id": 112,
+            "name": "Chapter 112",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0112-033.png"
+        },
+        {
+            "id": 113,
+            "name": "Chapter 113",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0113-030.png"
+        },
+        {
+            "id": 114,
+            "name": "Chapter 114",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0114-044.png"
+        },
+        {
+            "id": 115,
+            "name": "Chapter 115",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0115-041.png"
+        },
+        {
+            "id": 116,
+            "name": "Chapter 116",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0116-035.png"
+        },
+        {
+            "id": 117,
+            "name": "Chapter 117",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0117-032.png"
+        },
+        {
+            "id": 118,
+            "name": "Chapter 118",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0118-031.png"
+        },
+        {
+            "id": 119,
+            "name": "Chapter 119",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0119-034.png"
+        },
+        {
+            "id": 120,
+            "name": "Chapter 120",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0120-037.png"
+        },
+        {
+            "id": 121,
+            "name": "Chapter 121",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0121-035.png"
+        },
+        {
+            "id": 122,
+            "name": "Chapter 122",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0122-049.png"
+        },
+        {
+            "id": 123,
+            "name": "Chapter 123",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0123-039.png"
+        },
+        {
+            "id": 124,
+            "name": "Chapter 124",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0124-048.png"
+        },
+        {
+            "id": 125,
+            "name": "Chapter 125",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0125-037.png"
+        },
+        {
+            "id": 126,
+            "name": "Chapter 126",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0126-038.png"
+        },
+        {
+            "id": 127,
+            "name": "Chapter 127",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0127-043.png"
+        },
+        {
+            "id": 128,
+            "name": "Chapter 128",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0128-031.png"
+        },
+        {
+            "id": 129,
+            "name": "Chapter 129",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0129-032.png"
+        },
+        {
+            "id": 130,
+            "name": "Chapter 130",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0130-039.png"
+        },
+        {
+            "id": 131,
+            "name": "Chapter 131",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0131-051.png"
+        },
+        {
+            "id": 132,
+            "name": "Chapter 132",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0132-032.png"
+        },
+        {
+            "id": 133,
+            "name": "Chapter 133",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0133-036.png"
+        },
+        {
+            "id": 134,
+            "name": "Chapter 134",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0134-034.png"
+        },
+        {
+            "id": 135,
+            "name": "Chapter 135",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0135-038.png"
+        },
+        {
+            "id": 136,
+            "name": "Chapter 136",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0136-037.png"
+        },
+        {
+            "id": 137,
+            "name": "Chapter 137",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0137-036.png"
+        },
+        {
+            "id": 138,
+            "name": "Chapter 138",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0138-027.png"
+        },
+        {
+            "id": 139,
+            "name": "Chapter 139",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0139-038.png"
+        },
+        {
+            "id": 140,
+            "name": "Chapter 140",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0140-049.png"
+        },
+        {
+            "id": 141,
+            "name": "Chapter 141",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0141-036.png"
+        },
+        {
+            "id": 142,
+            "name": "Chapter 142",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0142-040.png"
+        },
+        {
+            "id": 143,
+            "name": "Chapter 143",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0143-034.png"
+        },
+        {
+            "id": 144,
+            "name": "Chapter 144",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0144-043.png"
+        },
+        {
+            "id": 145,
+            "name": "Chapter 145",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0145-030.png"
+        },
+        {
+            "id": 146,
+            "name": "Chapter 146",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0146-028.png"
+        },
+        {
+            "id": 147,
+            "name": "Chapter 147",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0147-032.png"
+        },
+        {
+            "id": 148,
+            "name": "Chapter 148",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0148-031.png"
+        },
+        {
+            "id": 149,
+            "name": "Chapter 149",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0149-032.png"
+        },
+        {
+            "id": 150,
+            "name": "Chapter 150",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0150-034.png"
+        },
+        {
+            "id": 151,
+            "name": "Chapter 151",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0151-038.png"
+        },
+        {
+            "id": 152,
+            "name": "Chapter 152",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0152-034.png"
+        },
+        {
+            "id": 153,
+            "name": "Chapter 153",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0153-030.png"
+        },
+        {
+            "id": 154,
+            "name": "Chapter 154",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0154-039.png"
+        },
+        {
+            "id": 155,
+            "name": "Chapter 155",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0155-034.png"
+        },
+        {
+            "id": 156,
+            "name": "Chapter 156",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0156-043.png"
+        },
+        {
+            "id": 157,
+            "name": "Chapter 157",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0157-035.png"
+        },
+        {
+            "id": 158,
+            "name": "Chapter 158",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0158-076.png"
+        },
+        {
+            "id": 159,
+            "name": "Chapter 159",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0159-085.png"
+        },
+        {
+            "id": 160,
+            "name": "Chapter 160",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0160-072.png"
+        },
+        {
+            "id": 161,
+            "name": "Chapter 161",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0161-079.png"
+        },
+        {
+            "id": 162,
+            "name": "Chapter 162",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0162-108.png"
+        },
+        {
+            "id": 163,
+            "name": "Chapter 163",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0163-086.png"
+        },
+        {
+            "id": 164,
+            "name": "Chapter 164",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0164-092.png"
+        },
+        {
+            "id": 165,
+            "name": "Chapter 165",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0165-082.png"
+        },
+        {
+            "id": 166,
+            "name": "Chapter 166",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0166-082.png"
+        },
+        {
+            "id": 167,
+            "name": "Chapter 167",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0167-082.png"
+        },
+        {
+            "id": 168,
+            "name": "Chapter 168",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0168-101.png"
+        },
+        {
+            "id": 169,
+            "name": "Chapter 169",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0169-075.png"
+        },
+        {
+            "id": 170,
+            "name": "Chapter 170",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0170-090.png"
+        },
+        {
+            "id": 171,
+            "name": "Chapter 171",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0171-104.png"
+        },
+        {
+            "id": 172,
+            "name": "Chapter 172",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0172-077.png"
+        },
+        {
+            "id": 173,
+            "name": "Chapter 173",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0173-081.png"
+        },
+        {
+            "id": 174,
+            "name": "Chapter 174",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0174-082.png"
+        },
+        {
+            "id": 175,
+            "name": "Chapter 175",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0175-082.png"
+        },
+        {
+            "id": 176,
+            "name": "Chapter 176",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0176-087.png"
+        },
+        {
+            "id": 177,
+            "name": "Chapter 177",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0177-072.png"
+        },
+        {
+            "id": 178,
+            "name": "Chapter 178",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0178-076.png"
+        },
+        {
+            "id": 179,
+            "name": "Chapter 179",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0179-087.png"
+        },
+        {
+            "id": 180,
+            "name": "Chapter 180",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0180-083.png"
+        },
+        {
+            "id": 181,
+            "name": "Chapter 181",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0181-043.png"
+        },
+        {
+            "id": 182,
+            "name": "Chapter 182",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0182-048.png"
+        },
+        {
+            "id": 183,
+            "name": "Chapter 183",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0183-043.png"
+        },
+        {
+            "id": 184,
+            "name": "Chapter 184",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0184-046.png"
+        },
+        {
+            "id": 185,
+            "name": "Chapter 185",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0185-046.png"
+        },
+        {
+            "id": 186,
+            "name": "Chapter 186",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0186-051.png"
+        },
+        {
+            "id": 187,
+            "name": "Chapter 187",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0187-042.png"
+        },
+        {
+            "id": 188,
+            "name": "Chapter 188",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0188-058.png"
+        },
+        {
+            "id": 189,
+            "name": "Chapter 189",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0189-050.png"
+        },
+        {
+            "id": 190,
+            "name": "Chapter 190",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0190-048.png"
+        },
+        {
+            "id": 191,
+            "name": "Chapter 191",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0191-052.png"
+        },
+        {
+            "id": 192,
+            "name": "Chapter 192",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0192-040.png"
+        },
+        {
+            "id": 193,
+            "name": "Chapter 193",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0193-105.png"
+        },
+        {
+            "id": 194,
+            "name": "Chapter 194",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0194-048.png"
+        },
+        {
+            "id": 195,
+            "name": "Chapter 195",
+            "lastImage": "https://official.lowee.us/manga/Legend-of-the-Northern-Blade/0195-052.png"
+        },
+        {
+            "id": 196,
+            "name": "Chapter 196",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0196-009.png"
+        },
+        {
+            "id": 197,
+            "name": "Chapter 197",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0197-013.png"
+        },
+        {
+            "id": 198,
+            "name": "Chapter 198",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0198-048.png"
+        },
+        {
+            "id": 199,
+            "name": "Chapter 199",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0199-015.png"
+        },
+        {
+            "id": 200,
+            "name": "Chapter 200",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0200-014.png"
+        },
+        {
+            "id": 201,
+            "name": "Chapter 201",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0201-033.png"
+        },
+        {
+            "id": 202,
+            "name": "Chapter 202",
+            "lastImage": "https://scans.lastation.us/manga/Legend-of-the-Northern-Blade/0202-014.png"
+        }
+    ]
+}

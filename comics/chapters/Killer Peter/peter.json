@@ -1,0 +1,319 @@
+{
+    "chapters": [
+        {
+            "id": 1,
+            "name": "Chapter 1",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0001-261.png"
+        },
+        {
+            "id": 2,
+            "name": "Chapter 2",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0002-147.png"
+        },
+        {
+            "id": 3,
+            "name": "Chapter 3",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0003-137.png"
+        },
+        {
+            "id": 4,
+            "name": "Chapter 4",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0004-132.png"
+        },
+        {
+            "id": 5,
+            "name": "Chapter 5",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0005-159.png"
+        },
+        {
+            "id": 6,
+            "name": "Chapter 6",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0006-140.png"
+        },
+        {
+            "id": 7,
+            "name": "Chapter 7",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0007-153.png"
+        },
+        {
+            "id": 8,
+            "name": "Chapter 8",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0008-174.png"
+        },
+        {
+            "id": 9,
+            "name": "Chapter 9",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0009-153.png"
+        },
+        {
+            "id": 10,
+            "name": "Chapter 10",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0010-164.png"
+        },
+        {
+            "id": 11,
+            "name": "Chapter 11",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0011-163.png"
+        },
+        {
+            "id": 12,
+            "name": "Chapter 12",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0012-151.png"
+        },
+        {
+            "id": 13,
+            "name": "Chapter 13",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0013-201.png"
+        },
+        {
+            "id": 14,
+            "name": "Chapter 14",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0014-172.png"
+        },
+        {
+            "id": 15,
+            "name": "Chapter 15",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0015-161.png"
+        },
+        {
+            "id": 16,
+            "name": "Chapter 16",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0016-195.png"
+        },
+        {
+            "id": 17,
+            "name": "Chapter 17",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0017-191.png"
+        },
+        {
+            "id": 18,
+            "name": "Chapter 18",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0018-202.png"
+        },
+        {
+            "id": 19,
+            "name": "Chapter 19",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0019-171.png"
+        },
+        {
+            "id": 20,
+            "name": "Chapter 20",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0020-131.png"
+        },
+        {
+            "id": 21,
+            "name": "Chapter 21",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0021-170.png"
+        },
+        {
+            "id": 22,
+            "name": "Chapter 22",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0022-180.png"
+        },
+        {
+            "id": 23,
+            "name": "Chapter 23",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0023-158.png"
+        },
+        {
+            "id": 24,
+            "name": "Chapter 24",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0024-176.png"
+        },
+        {
+            "id": 25,
+            "name": "Chapter 25",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0025-162.png"
+        },
+        {
+            "id": 26,
+            "name": "Chapter 26",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0026-183.png"
+        },
+        {
+            "id": 27,
+            "name": "Chapter 27",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0027-212.png"
+        },
+        {
+            "id": 28,
+            "name": "Chapter 28",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0028-153.png"
+        },
+        {
+            "id": 29,
+            "name": "Chapter 29",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0029-185.png"
+        },
+        {
+            "id": 30,
+            "name": "Chapter 30",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0030-171.png"
+        },
+        {
+            "id": 31,
+            "name": "Chapter 31",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0031-183.png"
+        },
+        {
+            "id": 32,
+            "name": "Chapter 32",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0032-199.png"
+        },
+        {
+            "id": 33,
+            "name": "Chapter 33",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0033-157.png"
+        },
+        {
+            "id": 34,
+            "name": "Chapter 34",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0034-158.png"
+        },
+        {
+            "id": 35,
+            "name": "Chapter 35",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0035-154.png"
+        },
+        {
+            "id": 36,
+            "name": "Chapter 36",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0036-204.png"
+        },
+        {
+            "id": 37,
+            "name": "Chapter 37",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0037-209.png"
+        },
+        {
+            "id": 38,
+            "name": "Chapter 38",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0038-175.png"
+        },
+        {
+            "id": 39,
+            "name": "Chapter 39",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0039-174.png"
+        },
+        {
+            "id": 40,
+            "name": "Chapter 40",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0040-154.png"
+        },
+        {
+            "id": 41,
+            "name": "Chapter 41",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0041-172.png"
+        },
+        {
+            "id": 42,
+            "name": "Chapter 42",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0042-143.png"
+        },
+        {
+            "id": 43,
+            "name": "Chapter 43",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0043-155.png"
+        },
+        {
+            "id": 44,
+            "name": "Chapter 44",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0044-170.png"
+        },
+        {
+            "id": 45,
+            "name": "Chapter 45",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0045-167.png"
+        },
+        {
+            "id": 46,
+            "name": "Chapter 46",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0046-183.png"
+        },
+        {
+            "id": 47,
+            "name": "Chapter 47",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0047-162.png"
+        },
+        {
+            "id": 48,
+            "name": "Chapter 48",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0048-197.png"
+        },
+        {
+            "id": 49,
+            "name": "Chapter 49",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0049-176.png"
+        },
+        {
+            "id": 50,
+            "name": "Chapter 50",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0050-171.png"
+        },
+        {
+            "id": 51,
+            "name": "Chapter 51",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0051-177.png"
+        },
+        {
+            "id": 52,
+            "name": "Chapter 52",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0052-157.png"
+        },
+        {
+            "id": 53,
+            "name": "Chapter 53",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0053-179.png"
+        },
+        {
+            "id": 54,
+            "name": "Chapter 54",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0054-185.png"
+        },
+        {
+            "id": 55,
+            "name": "Chapter 55",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0055-175.png"
+        },
+        {
+            "id": 56,
+            "name": "Chapter 56",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0056-142.png"
+        },
+        {
+            "id": 57,
+            "name": "Chapter 57",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0057-179.png"
+        },
+        {
+            "id": 58,
+            "name": "Chapter 58",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0058-173.png"
+        },
+        {
+            "id": 59,
+            "name": "Chapter 59",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0059-163.png"
+        },
+        {
+            "id": 60,
+            "name": "Chapter 60",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0060-152.png"
+        },
+        {
+            "id": 61,
+            "name": "Chapter 61",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0061-171.png"
+        },
+        {
+            "id": 62,
+            "name": "Chapter 62",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0062-146.png"
+        },
+        {
+            "id": 63,
+            "name": "Chapter 63",
+            "lastImage": "https://official.lowee.us/manga/Killer-Peter/0063-193.png"
+        }
+    ]
+}
