@@ -58,12 +58,31 @@
               <i class="fas fa-laugh"></i>
                 <span>Dad Jokes</span>
             </a>
+            <a href="adult-content.html" class="option" onclick="checkPassword(event)">
+  <i class="fas fa-cocktail"></i>
+  <span>Adult Content</span>
+</a>
             <!--<a href="index.html" class="option">
                 <i class="fas fa-home"></i>
                 <span>Home</span>
             </a>-->
         </div>
     </div>
+    <script>
+      function checkPassword(event) {
+        event.preventDefault();
+
+        const password = prompt("Please enter dashflix to access content:");
+
+        if (password === "yourPassword") {
+          window.location.href = "adult.html";
+        } else {
+          alert("Incorrect password. Access denied.");
+
+          window.location.href = "home.html";
+        }
+      }
+    </script>
     <script src="load.js"></script>
 </body>
 </html>

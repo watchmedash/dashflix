@@ -1,22 +1,144 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dynamic video player with a playlist">
+  <title>Dark-Themed Video Playlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  <title>OMG</title>
+    .player-container {
+      margin: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
 
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .playlist {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .playlist-item {
+      cursor: pointer;
+      text-align: center;
+      margin: 10px;
+      background-color: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+      width: 120px;
+      transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    }
+
+    .playlist-item:hover {
+      background-color: #333333;
+      transform: scale(1.05);
+    }
+
+    .playlist-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+      margin: auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        height: 300px;
+      }
+
+      .playlist-item {
+        width: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      iframe {
+        height: 250px;
+      }
+
+      .playlist {
+        gap: 10px;
+      }
+
+      .playlist-item {
+        width: 90px;
+      }
+    }
+  </style>
+</head>
 <body>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IICGZ7YOafs?si=atjLJwOfQKO2W--S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="player-container">
+    <iframe id="mainPlayer" src="" title="Video player" allowfullscreen></iframe>
+  </div>
+  <div class="playlist" id="playlist"></div>
 
+  <script>
+    async function loadVideos() {
+      const response = await fetch('videos.json');
+      const videos = await response.json();
+
+      const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+      const mainPlayer = document.getElementById('mainPlayer');
+      mainPlayer.src = randomVideo.link;
+
+      const playlist = document.getElementById('playlist');
+      const placeholderImage = 'https://placehold.co/600x400?text=No+Poster';
+
+      playlist.innerHTML = videos.map(video => `
+        <div class="playlist-item" onclick="changeVideo('${video.link}')">
+          <div class="spinner" style="display: none;" id="spinner-${video.link}"></div>
+          <img src="${video.thumbnail}" alt="Video thumbnail"
+               loading="lazy"
+               onerror="this.src='${placeholderImage}'"
+               onload="document.getElementById('spinner-${video.link}').style.display = 'none';">
+        </div>
+      `).join('');
+    }
+
+    function changeVideo(link) {
+      const mainPlayer = document.getElementById('mainPlayer');
+      mainPlayer.src = link;
+    }
+
+    loadVideos();
+  </script>
 </body>
-
-
-
 </html>
