@@ -5,93 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Destination</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
-    <style>
-    /* Modal Styles */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .modal-content {
-        background-color: #2c1a1a; /* Dark red background */
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-        width: 300px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Slight shadow for contrast */
-    }
-
-    .modal-header {
-        font-size: 18px;
-        font-weight: bold;
-        color: #f1f1f1; /* Light color for the header */
-    }
-
-    .modal-footer {
-        margin-top: 15px;
-    }
-
-    .modal-footer button {
-        padding: 8px 15px;
-        margin: 0 5px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .btn-close {
-        background-color: #8b0000; /* Dark red for the close button */
-        color: #fff; /* White text */
-    }
-
-    .btn-submit {
-        background-color: #a60000; /* Slightly lighter dark red for the submit button */
-        color: #fff; /* White text */
-    }
-
-    .btn-close:hover {
-        background-color: #b22222; /* Slightly lighter red on hover */
-    }
-
-    .btn-submit:hover {
-        background-color: #800000; /* Darker red on hover */
-    }
-
-    /* Input field styling */
-    #passwordInput {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #444; /* Darker border */
-        border-radius: 4px;
-        background-color: #3e1b1b; /* Dark red background for the input */
-        color: #f1f1f1; /* Light text */
-    }
-
-    #passwordInput:focus {
-        outline: none;
-        border: 1px solid #a60000; /* Highlight on focus with dark red */
-    }
-
-    /* Feedback message */
-    #passwordFeedback {
-        font-size: 14px;
-        color: #f00; /* Red color for feedback */
-        margin-top: 10px;
-        text-align: center;
-    }
-</style>
-
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="load.css">
 </head>
 <body>
+  <div id="loaning-screen">
+      <img src="images/logo.webp" alt="Loading..." />
+      <div class="progress-bar">
+          <div class="progress"></div>
+      </div>
+  </div>
+  <script>
+  window.addEventListener("load",()=>{document.body.classList.add("loaded")});document.addEventListener("click",e=>{if(e.target.closest("a")){e.preventDefault(),document.body.style.opacity="0",setTimeout(()=>{window.location.href=e.target.closest("a").href},999)}});
+  </script>
+    <div class="background-animation"></div>
     <div class="container">
         <h1>Welcome to Dashflix</h1>
         <div class="options-container">
@@ -116,74 +43,46 @@
                 <span>Trailers</span>
             </a>
             <a href="comic.html" class="option">
-                <i class="fas fa-book-open"></i>
+              <i class="fas fa-book-open"></i>
                 <span>Comics</span>
             </a>
             <a href="random.html" class="option">
-                <i class="fas fa-spinner"></i>
+              <i class="fas fa-spinner"></i>
                 <span>Random</span>
             </a>
             <a href="fun/iq.html" class="option">
-                <i class="fas fa-brain"></i>
+              <i class="fas fa-brain"></i>
                 <span>IQ Game</span>
             </a>
             <a href="fun/jokes.html" class="option">
-                <i class="fas fa-laugh"></i>
+              <i class="fas fa-laugh"></i>
                 <span>Dad Jokes</span>
             </a>
-            <a href="#" class="option" onclick="showModal(event)">
-                <i class="fas fa-cocktail"></i>
-                <span>Adult Content</span>
-            </a>
+            <a href="adult-content.html" class="option" onclick="checkPassword(event)">
+  <i class="fas fa-cocktail"></i>
+  <span>Adult Content</span>
+</a>
+            <!--<a href="index.html" class="option">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>-->
         </div>
     </div>
-
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">Enter Password</div>
-            <input id="passwordInput" type="password" placeholder="dashflix" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px;">
-            <div class="modal-footer">
-                <button class="btn-close" onclick="closeModal()">Close</button>
-                <button class="btn-submit" onclick="submitPassword()">Submit</button>
-            </div>
-        </div>
-    </div>
-
     <script>
-        let redirectLink = "adult.html";
+      function checkPassword(event) {
+        event.preventDefault();
 
-        function showModal(event) {
-            event.preventDefault();
-            const modal = document.getElementById("passwordModal");
-            modal.style.display = "flex";
-            const feedback = document.getElementById("passwordFeedback");
-            if (feedback) feedback.textContent = "";
+        const password = prompt("Please enter dashflix to access content:");
+
+        if (password === "dashflix") {
+          window.location.href = "adult.html";
+        } else {
+          alert("Incorrect password. Access denied.");
+
+          window.location.href = "home.html";
         }
-
-        function closeModal() {
-            document.getElementById("passwordModal").style.display = "none";
-        }
-
-        function submitPassword() {
-            const password = document.getElementById("passwordInput").value;
-            const feedback = document.getElementById("passwordFeedback");
-
-            if (password === "dashflix") {
-                window.location.href = redirectLink;
-            } else {
-                if (!feedback) {
-                    const feedbackElement = document.createElement("div");
-                    feedbackElement.id = "passwordFeedback";
-                    feedbackElement.style.color = "red";
-                    feedbackElement.style.marginTop = "10px";
-                    feedbackElement.textContent = "Incorrect password. Access denied.";
-                    document.querySelector(".modal-content").appendChild(feedbackElement);
-                } else {
-                    feedback.textContent = "Incorrect password. Access denied.";
-                }
-            }
-        }
+      }
     </script>
-
+    <script src="load.js"></script>
 </body>
 </html>
