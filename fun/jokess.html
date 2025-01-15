@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes</title>
+    <link rel="stylesheet" href="stylt.css"/>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #joke-container {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.5em;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        #joke-container span.spoiler {
+            background-color: #fff;
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #joke-container span.spoiler.revealed {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin-top: 20px;
+        }
+        button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        background-color: #333; /* Dark button background */
+        color: #ffffff;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #555; /* Lighten on hover */
+    }
+    button:disabled {
+        background-color: #222; /* Darker disabled state */
+    }
+
+        #note {
+            margin-top: 20px;
+            color: #bbb;
+            font-size: 1em;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="joke-container">Loading joke...</div>
+    <div class="nav-buttons">
+      <button id="prev" disabled><i class="fas fa-arrow-left"></i></button>
+      <button id="next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div id="note">
+        <p><em>Click</em> the white bars (spoiler covers) to reveal the punchline.</p>
+    </div>
+    <nav class="bottom-nav">
+      <a href="../index.html" class="nav-item">
+        <i class="fas fa-home"></i> Home
+      </a>
+      <a href="../tvplus.html" class="nav-item">
+        <i class="fas fa-broadcast-tower"></i> Live TV
+      </a>
+      <a href="../movies.html" class="nav-item">
+        <i class="fas fa-film"></i> Movies
+      </a>
+      <a href="../shows.html" class="nav-item">
+        <i class="fas fa-tv"></i> Shows
+      </a>
+      <a href="../trailer.html" class="nav-item">
+        <i class="fas fa-video"></i> Trailers
+      </a>
+      <a href="../requested.html" class="nav-item">
+        <i class="fas fa-list"></i> Requested
+      </a>
+    </nav>
+    <script src="moodle.js"></script>
+</body>
+</html>

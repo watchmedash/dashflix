@@ -1,0 +1,647 @@
+[
+  {
+    "question": "Why don't skeletons fight each other?",
+    "response": "Why?",
+    "answer": "They don't have the guts."
+  },
+  {
+    "question": "What’s orange and sounds like a parrot?",
+    "response": "What?",
+    "answer": "A carrot."
+  },
+  {
+    "question": "How does a penguin build its house?",
+    "response": "How?",
+    "answer": "Igloos it together."
+  },
+  {
+    "question": "I told my wife she was drawing her eyebrows too high.",
+    "response": "What did she say?",
+    "answer": "She looked surprised."
+  },
+  {
+    "question": "What do you call fake spaghetti?",
+    "response": "What?",
+    "answer": "An impasta."
+  },
+  {
+    "question": "I only know 25 letters of the alphabet.",
+    "response": "Why?",
+    "answer": "I don’t know y."
+  },
+  {
+    "question": "I’m reading a book on anti-gravity.",
+    "response": "How is it?",
+    "answer": "It’s impossible to put down."
+  },
+  {
+    "question": "Why don't eggs tell jokes?",
+    "response": "Why not?",
+    "answer": "They might crack up."
+  },
+  {
+    "question": "What’s a skeleton’s least favorite room in the house?",
+    "response": "Which one?",
+    "answer": "The living room."
+  },
+  {
+    "question": "I’m afraid for the calendar.",
+    "response": "Why?",
+    "answer": "Its days are numbered."
+  },
+  {
+    "question": "Did you hear about the claustrophobic astronaut?",
+    "response": "What happened?",
+    "answer": "He just needed a little space."
+  },
+  {
+    "question": "Why did the scarecrow win an award?",
+    "response": "Why?",
+    "answer": "Because he was outstanding in his field!"
+  },
+  {
+    "question": "I used to be a baker, but I couldn't make enough dough.",
+    "response": "Why not?",
+    "answer": "Because I kept kneading more!"
+  },
+  {
+    "question": "Why can’t you hear a pterodactyl go to the bathroom?",
+    "response": "Why?",
+    "answer": "Because the P is silent."
+  },
+  {
+    "question": "Why did the dog sit in the shade?",
+    "response": "Why?",
+    "answer": "Because he didn’t want to be a hot dog."
+  },
+  {
+    "question": "Why did the student eat his homework?",
+    "response": "Why?",
+    "answer": "Because his teacher told him it was a piece of cake."
+  },
+  {
+    "question": "Why don’t ghosts like to go out in the rain?",
+    "response": "Why not?",
+    "answer": "It dampens their spirits."
+  },
+  {
+    "question": "Why did the bicycle break up with the unicycle?",
+    "response": "Why?",
+    "answer": "It found it too one-sided."
+  },
+  {
+    "question": "Why did the computer go to the beach?",
+    "response": "Why?",
+    "answer": "It needed to surf the web."
+  },
+  {
+    "question": "Why did the teacher wear sunglasses?",
+    "response": "Why?",
+    "answer": "Because her students were so bright."
+  },
+  {
+    "question": "Why did the mushroom go to the party?",
+    "response": "Why?",
+    "answer": "Because he’s a fun guy."
+  },
+  {
+    "question": "Why did the snowman look worried?",
+    "response": "Why?",
+    "answer": "Because he was about to get the cold shoulder."
+  },
+  {
+    "question": "Why do programmers prefer dark mode?",
+    "response": "Why?",
+    "answer": "Because the light attracts bugs."
+  },
+  {
+    "question": "Why do biologists look forward to casual Fridays?",
+    "response": "Why?",
+    "answer": "Because they’re allowed to wear genes."
+  },
+  {
+    "question": "Why did the philosopher bring a ladder to class?",
+    "response": "Why?",
+    "answer": "To elevate his thinking."
+  },
+  {
+    "question": "Why did the computer break up with the internet?",
+    "response": "Why?",
+    "answer": "There was no connection."
+  },
+  {
+    "question": "Why did the paper get so upset?",
+    "response": "Why?",
+    "answer": "Because it was torn apart."
+  },
+  {
+    "question": "Want to hear a joke about construction?",
+    "response": "Sure, what is it?",
+    "answer": "I’m still working on it."
+  },
+  {
+    "question": "Why did the bicycle fall over?",
+    "response": "Why?",
+    "answer": "Because it was two-tired."
+  },
+  {
+    "question": "How do you organize a space party?",
+    "response": "How?",
+    "answer": "You planet."
+  },
+  {
+    "question": "I couldn’t figure out how to put my seatbelt on.",
+    "response": "Huh..?",
+    "answer": "Then it clicked."
+  },
+  {
+    "question": "Why don't skeletons ever use cell phones?",
+    "response": "Why not?",
+    "answer": "They don’t have the nerve."
+  },
+  {
+    "question": "How does a snowman get around?",
+    "response": "How?",
+    "answer": "By riding an 'icicle'!"
+  },
+  {
+    "question": "Why do cows have hooves instead of feet?",
+    "response": "Why?",
+    "answer": "Because they lactose."
+  },
+  {
+    "question": "I don’t trust stairs.",
+    "response": "Why?",
+    "answer": "They’re always up to something."
+  },
+  {
+    "question": "Why do bees have sticky hair?",
+    "response": "Why?",
+    "answer": "Because they use honeycombs."
+  },
+  {
+    "question": "What did the grape say when it got stepped on?",
+    "response": "What?",
+    "answer": "Nothing, it just let out a little wine."
+  },
+  {
+    "question": "Why did the tomato turn red?",
+    "response": "Why?",
+    "answer": "Because it saw the salad dressing!"
+  },
+  {
+    "question": "What do you call a pile of cats?",
+    "response": "What?",
+    "answer": "A meow-tain."
+  },
+  {
+    "question": "Why don’t oysters donate to charity?",
+    "response": "Why not?",
+    "answer": "Because they are shellfish."
+  },
+  {
+    "question": "I used to be a gardener, but I didn’t have the thyme for it.",
+    "response": "Why not?",
+    "answer": "Because I didn’t have the thyme for it."
+  },
+  {
+    "question": "What’s a skeleton’s least favorite instrument?",
+    "response": "What?",
+    "answer": "The trom-bone."
+  },
+  {
+    "question": "Why did the golfer bring two pairs of pants?",
+    "response": "Why?",
+    "answer": "In case he got a hole in one."
+  },
+  {
+    "question": "What do you call a sleeping bull?",
+    "response": "What?",
+    "answer": "A bulldozer."
+  },
+  {
+    "question": "What’s a frog’s favorite candy?",
+    "response": "What?",
+    "answer": "Lollihops."
+  },
+  {
+    "question": "Why do fish always know how much they weigh?",
+    "response": "Why?",
+    "answer": "Because they have their own scales."
+  },
+  {
+    "question": "Why can’t your nose be 12 inches long?",
+    "response": "Why?",
+    "answer": "Because then it would be a foot."
+  },
+  {
+    "question": "What’s the best way to watch a fly fishing tournament?",
+    "response": "What?",
+    "answer": "Live stream."
+  },
+  {
+    "question": "What’s the longest word in the dictionary?",
+    "response": "What?",
+    "answer": "Smiles. Because there’s a mile between the first and last letters!"
+  },
+  {
+    "question": "Why don’t some couples go to the gym?",
+    "response": "Why?",
+    "answer": "Because some relationships don’t work out."
+  },
+  {
+    "question": "Why did the math book look sad?",
+    "response": "Why?",
+    "answer": "Because it had too many problems."
+  },
+  {
+    "question": "Why do seagulls fly over the bay?",
+    "response": "Why?",
+    "answer": "Because if they flew over the bay, they’d be bagels."
+  },
+  {
+    "question": "What did the ocean say to the beach?",
+    "response": "What?",
+    "answer": "Nothing, it just waved."
+  },
+  {
+    "question": "What do you call a fish that plays guitar?",
+    "response": "What?",
+    "answer": "A bass guitarist."
+  },
+  {
+    "question": "Why did the belt get arrested?",
+    "response": "Why?",
+    "answer": "For holding up a pair of pants."
+  },
+  {
+    "question": "I tried to catch some fog earlier.",
+    "response": "What happened?",
+    "answer": "I mist."
+  },
+  {
+    "question": "Why don’t skeletons ever go trick or treating?",
+    "response": "Why not?",
+    "answer": "Because they have no body to go with."
+  },
+  {
+    "question": "What do you call an alligator in a vest?",
+    "response": "What?",
+    "answer": "An investigator."
+  },
+  {
+    "question": "What did one hat say to the other hat?",
+    "response": "What?",
+    "answer": "Stay here, I’m going on ahead."
+  },
+  {
+    "question": "Why don’t you ever see elephants hiding in trees?",
+    "response": "Why?",
+    "answer": "Because they’re really good at it."
+  },
+  {
+    "question": "Why do cows wear bells?",
+    "response": "Why?",
+    "answer": "Because their horns don’t work."
+  },
+  {
+    "question": "I used to be a butcher, but I couldn’t make the cut.",
+    "response": "Why?",
+    "answer": "I couldn’t make the cut."
+  },
+  {
+    "question": "What do you call a duck that gets all A’s?",
+    "response": "What?",
+    "answer": "A wise quacker."
+  },
+  {
+    "question": "I got a pencil sharpener for my birthday.",
+    "response": "How was it?",
+    "answer": "It was pointless."
+  },
+  {
+    "question": "Why don’t some fish play basketball?",
+    "response": "Why?",
+    "answer": "Because they’re afraid of the net."
+  },
+  {
+    "question": "Why was the broom late?",
+    "response": "Why?",
+    "answer": "It swept in."
+  },
+  {
+    "question": "What kind of shoes do ninjas wear?",
+    "response": "What kind?",
+    "answer": "Sneakers."
+  },
+  {
+    "question": "Why did the coffee file a police report?",
+    "response": "Why?",
+    "answer": "It got mugged."
+  },
+  {
+    "question": "What do you call a dinosaur with an extensive vocabulary?",
+    "response": "What?",
+    "answer": "A thesaurus."
+  },
+  {
+    "question": "What did the stamp say to the envelope?",
+    "response": "What?",
+    "answer": "Stick with me and we’ll go places."
+  },
+  {
+    "question": "What do you call a fish without eyes?",
+    "response": "What?",
+    "answer": "Fsh."
+  },
+  {
+    "question": "I told my wife she should embrace her mistakes.",
+    "response": "What did she do?",
+    "answer": "She hugged me."
+  },
+  {
+    "question": "I made a pencil with two erasers.",
+    "response": "And then?",
+    "answer": "It was pointless."
+  },
+  {
+    "question": "Why are elevator jokes so good?",
+    "response": "Why?",
+    "answer": "They work on many levels."
+  },
+  {
+    "question": "What do you call a bear with no teeth?",
+    "response": "What?",
+    "answer": "A gummy bear."
+  },
+  {
+    "question": "Why can’t you give Elsa a balloon?",
+    "response": "Why?",
+    "answer": "Because she’ll let it go."
+  },
+  {
+    "question": "Why did the banana go to the doctor?",
+    "response": "Why?",
+    "answer": "Because it wasn’t peeling well."
+  },
+  {
+    "question": "Why don’t cannibals eat clowns?",
+    "response": "Why?",
+    "answer": "Because they taste funny."
+  },
+  {
+    "question": "How does the moon cut its hair?",
+    "response": "How?",
+    "answer": "Eclipse it."
+  },
+  {
+    "question": "What did the janitor say when he jumped out of the closet?",
+    "response": "What?",
+    "answer": "Supplies!"
+  },
+  {
+    "question": "Why are ghosts bad liars?",
+    "response": "Why?",
+    "answer": "Because you can see right through them."
+  },
+  {
+    "question": "Why couldn’t the leopard play hide and seek?",
+    "response": "Why?",
+    "answer": "Because he was always spotted."
+  },
+  {
+    "question": "How do trees access the internet?",
+    "response": "How?",
+    "answer": "They log in."
+  },
+  {
+    "question": "Why did the stadium get hot after the game?",
+    "response": "Why?",
+    "answer": "All the fans left."
+  },
+  {
+    "question": "What do you call a belt made of watches?",
+    "response": "What?",
+    "answer": "A waist of time."
+  },
+  {
+    "question": "Why did the invisible man turn down the job offer?",
+    "response": "Why?",
+    "answer": "He couldn’t see himself doing it."
+  },
+  {
+    "question": "What do you call a factory that makes okay products?",
+    "response": "What?",
+    "answer": "A satisfactory."
+  },
+  {
+    "question": "What did the left eye say to the right eye?",
+    "response": "What?",
+    "answer": "Between you and me, something smells."
+  },
+  {
+    "question": "Why are skeletons so calm?",
+    "response": "Why?",
+    "answer": "Because nothing gets under their skin."
+  },
+  {
+    "question": "Why did the man run around his bed?",
+    "response": "Why?",
+    "answer": "To catch up on his sleep."
+  },
+  {
+    "question": "What do you call a magician who loses his magic?",
+    "response": "What?",
+    "answer": "Ian."
+  },
+  {
+    "question": "What do you call a cow with no legs?",
+    "response": "What?",
+    "answer": "Ground beef."
+  },
+  {
+    "question": "Why do ducks have feathers?",
+    "response": "Why?",
+    "answer": "To cover their butt quacks."
+  },
+  {
+    "question": "What do you call a singing computer?",
+    "response": "What?",
+    "answer": "A-Dell."
+  },
+  {
+    "question": "Why did the frog take the bus?",
+    "response": "Why?",
+    "answer": "His car got toad away."
+  },
+  {
+    "question": "What do you call an illegally parked frog?",
+    "response": "What?",
+    "answer": "Toad."
+  },
+  {
+    "question": "Why don’t you play poker in the jungle?",
+    "response": "Why?",
+    "answer": "Too many cheetahs."
+  },
+  {
+    "question": "Why are graveyards so noisy?",
+    "response": "Why?",
+    "answer": "Because of all the coffin."
+  },
+  {
+    "question": "What do you call a pig that does karate?",
+    "response": "What?",
+    "answer": "A pork chop."
+  },
+  {
+    "question": "What do you call a can opener that doesn’t work?",
+    "response": "What?",
+    "answer": "A can’t opener."
+  },
+  {
+    "question": "Why are spiders so smart?",
+    "response": "Why?",
+    "answer": "They can find everything on the web."
+  },
+  {
+    "question": "What’s a snake’s favorite subject in school?",
+    "response": "What?",
+    "answer": "Hiss-tory."
+  },
+  {
+    "question": "Why do bees stay in their hives during the winter?",
+    "response": "Why?",
+    "answer": "Swarm."
+  },
+  {
+    "question": "What’s a dog’s favorite part of a tree?",
+    "response": "What?",
+    "answer": "The bark."
+  },
+  {
+    "question": "What did the fisherman say to the magician?",
+    "response": "What?",
+    "answer": "Pick a cod, any cod."
+  },
+  {
+    "question": "What did the buffalo say to his son when he left for school?",
+    "response": "What?",
+    "answer": "Bison."
+  },
+  {
+    "question": "What do you call an elephant that doesn’t matter?",
+    "response": "What?",
+    "answer": "Irrelephant."
+  },
+  {
+    "question": "Why don’t peppers do archery?",
+    "response": "Why?",
+    "answer": "They don’t habanero."
+  },
+  {
+    "question": "What’s a pirate’s favorite exercise?",
+    "response": "What?",
+    "answer": "The plank."
+  },
+  {
+    "question": "Why did the orange stop rolling down the hill?",
+    "response": "Why?",
+    "answer": "It ran out of juice."
+  },
+  {
+    "question": "Why did the drum take a nap?",
+    "response": "Why?",
+    "answer": "It was beat."
+  },
+  {
+    "question": "What did the digital clock say to the grandfather clock?",
+    "response": "What?",
+    "answer": "Look, no hands!"
+  },
+  {
+    "question": "Why don’t we play hide and seek with mountains?",
+    "response": "Why?",
+    "answer": "They’re always peaking."
+  },
+  {
+    "question": "Why are frogs so happy?",
+    "response": "Why?",
+    "answer": "They eat whatever bugs them."
+  },
+  {
+    "question": "What’s the best thing about Switzerland?",
+    "response": "What?",
+    "answer": "I don’t know, but the flag is a big plus."
+  },
+  {
+    "question": "What do you call a train full of bubble gum?",
+    "response": "What?",
+    "answer": "A chew-chew train."
+  },
+  {
+    "question": "Why did the photo go to jail?",
+    "response": "Why?",
+    "answer": "It was framed."
+  },
+  {
+    "question": "What did the nose say to the finger?",
+    "response": "What?",
+    "answer": "Quit picking on me."
+  },
+  {
+    "question": "Why was the computer cold?",
+    "response": "Why?",
+    "answer": "It left its Windows open."
+  },
+  {
+    "question": "Why did the fish blush?",
+    "response": "Why?",
+    "answer": "Because it saw the ocean’s bottom."
+  },
+  {
+    "question": "Why don’t sharks like fast food?",
+    "response": "Why?",
+    "answer": "Because they can’t catch it."
+  },
+  {
+    "question": "Why did the baker go to therapy?",
+    "response": "Why?",
+    "answer": "He kneaded it."
+  },
+  {
+    "question": "Why don’t koalas count as bears?",
+    "response": "Why?",
+    "answer": "They don’t have the right koalifications."
+  },
+  {
+    "question": "Why don’t skeletons use cell phones?",
+    "response": "Why?",
+    "answer": "They don’t have any body to call."
+  },
+  {
+    "question": "Why did the barber win the race?",
+    "response": "Why?",
+    "answer": "He knew all the shortcuts."
+  },
+  {
+    "question": "What did the fish say when it hit the wall?",
+    "response": "What?",
+    "answer": "Dam."
+  },
+  {
+    "question": "Why did the chicken join a band?",
+    "response": "Why?",
+    "answer": "Because it had the drumsticks."
+  },
+  {
+    "question": "What do you call a group of musical whales?",
+    "response": "What?",
+    "answer": "An orca-stra."
+  },
+  {
+    "question": "What did the traffic light say to the car?",
+    "response": "What?",
+    "answer": "Don’t look, I’m changing!"
+  }
+]
