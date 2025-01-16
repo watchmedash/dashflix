@@ -11,7 +11,7 @@
             background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Smooth dark gradient */
             color: #f5f5f5;
             margin: 0;
-            padding: 0;
+            padding: 10;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -20,13 +20,20 @@
 
         .container {
             text-align: center;
-            padding: 20px;
+            padding: 10px;
             max-width: 600px;
             width: 90%;
             border-radius: 10px;
-            background: rgba(40, 40, 40, 0.95); /* Semi-transparent dark background */
+            background: rgba(40, 40, 40, 0.5); /* Semi-transparent dark background */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
         }
+
+        h1 {
+                    font-size: 2em;
+                    margin-bottom: 20px;
+                    color: #e0e0e0;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+                }
 
         ul {
             list-style: none;
@@ -35,7 +42,7 @@
         }
 
         li {
-            margin: 10px 0;
+            margin: 5px 0;
         }
 
         a.option {
@@ -44,11 +51,11 @@
             justify-content: center;
             text-decoration: none;
             background: #292929;
-            padding: 15px 20px;
-            border-radius: 8px;
+            padding: 8px 10px;
+            border-radius: 5px;
             transition: all 0.3s ease;
             color: #f5f5f5;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
@@ -60,7 +67,7 @@
 
         a.option i {
             margin-right: 15px;
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #fff; /* Icon accent color */
         }
 
@@ -70,7 +77,7 @@
 
         @media (max-width: 600px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
 
             a.option {
@@ -85,6 +92,7 @@
 </head>
 <body>
     <div class="container">
+      <h1>Welcome to Dashflix</h1>
         <ul>
             <li><a href="movies.html" class="option"><i class="fas fa-film"></i>Movies</a></li>
             <li><a href="shows.html" class="option"><i class="fas fa-tv"></i>TV Shows</a></li>
@@ -92,7 +100,7 @@
             <li><a href="requested.html" class="option"><i class="fas fa-search"></i>Requested</a></li>
             <li><a href="trailer.html" class="option"><i class="fas fa-video"></i>Trailers</a></li>
             <li><a href="comic.html" class="option"><i class="fas fa-book-open"></i>Comics</a></li>
-            <li><a href="random.html" class="option"><i class="fas fa-spinner"></i>Random</a></li>
+            <!--<li><a href="random.html" class="option"><i class="fas fa-spinner"></i>Random</a></li>-->
             <li><a href="fun/iq.html" class="option"><i class="fas fa-brain"></i>IQ Game</a></li>
             <li><a href="fun/jokes.html" class="option"><i class="fas fa-laugh"></i>Dad Jokes</a></li>
             <li><a href="stories.html" class="option"><i class="fas fa-book"></i>Stories</a></li>
