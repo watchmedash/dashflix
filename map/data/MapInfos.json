@@ -1,0 +1,11 @@
+[
+null,
+{"id":1,"expanded":false,"name":"Fishing Village","order":6,"parentId":0,"scrollX":2457,"scrollY":1371},
+{"id":2,"expanded":false,"name":"World 1","order":1,"parentId":0,"scrollX":4773.599999999999,"scrollY":4375.2},
+{"id":3,"expanded":false,"name":"Snow Town","order":5,"parentId":0,"scrollX":2457,"scrollY":1371},
+{"id":4,"expanded":false,"name":"Mountain Village","order":7,"parentId":0,"scrollX":2457,"scrollY":1371},
+{"id":5,"expanded":false,"name":"Ruins","order":8,"parentId":0,"scrollX":816,"scrollY":800},
+{"id":6,"expanded":false,"name":"Normal Town","order":2,"parentId":0,"scrollX":1622,"scrollY":1006},
+{"id":7,"expanded":false,"name":"Forest Town","order":3,"parentId":0,"scrollX":5616,"scrollY":3133.7142857142853},
+{"id":8,"expanded":false,"name":"Nomad Camp","order":4,"parentId":0,"scrollX":2457,"scrollY":1371}
+]
