@@ -5,84 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Destination</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="load.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Smooth dark gradient */
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            width: 90%;
+            border-radius: 10px;
+            background: rgba(40, 40, 40, 0.95); /* Semi-transparent dark background */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a.option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: #292929;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            color: #f5f5f5;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        a.option:hover {
+            background: #3b3b3b;
+            transform: scale(1.05);
+        }
+
+        a.option i {
+            margin-right: 15px;
+            font-size: 1.5em;
+            color: #fff; /* Icon accent color */
+        }
+
+        a.option:hover i {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            a.option {
+                font-size: 1em;
+            }
+
+            a.option i {
+                font-size: 1.3em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div id="loaning-screen">
-      <img src="images/logo.webp" alt="Loading..." />
-      <div class="progress-bar">
-          <div class="progress"></div>
-      </div>
-  </div>
-  <script>
-  window.addEventListener("load",()=>{document.body.classList.add("loaded")});document.addEventListener("click",e=>{if(e.target.closest("a")){e.preventDefault(),document.body.style.opacity="0",setTimeout(()=>{window.location.href=e.target.closest("a").href},999)}});
-  </script>
-    <div class="background-animation"></div>
     <div class="container">
-        <!--<h1>Welcome to Dashflix</h1>-->
-        <div class="options-container">
-            <a href="movies.html" class="option">
-                <i class="fas fa-film"></i>
-                <span>Movies</span>
-            </a>
-            <a href="shows.html" class="option">
-                <i class="fas fa-tv"></i>
-                <span>TV Show</span>
-            </a>
-            <a href="tvplus.html" class="option">
-                <i class="fas fa-satellite-dish"></i>
-                <span>Live TV</span>
-            </a>
-            <!--<a href="requested.html" class="option">
-                <i class="fas fa-search"></i>
-                <span>Requested</span>
-            </a>-->
-            <a href="trailer.html" class="option">
-                <i class="fas fa-video"></i>
-                <span>Trailers</span>
-            </a>
-            <a href="comic.html" class="option">
-              <i class="fas fa-book-open"></i>
-                <span>Comics</span>
-            </a>
-            <!--<a href="random.html" class="option">
-              <i class="fas fa-spinner"></i>
-                <span>Random</span>
-            </a>-->
-            <a href="fun/iq.html" class="option">
-              <i class="fas fa-brain"></i>
-                <span>IQ Game</span>
-            </a>
-            <a href="fun/jokes.html" class="option">
-              <i class="fas fa-laugh"></i>
-                <span>Dad Jokes</span>
-            </a>
-            <a href="adult.html" class="option" onclick="checkPassword(event)">
-  <i class="fas fa-cocktail"></i>
-  <span>Adult Content</span>
-</a>
-            <!--<a href="index.html" class="option">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>-->
-        </div>
+        <ul>
+            <li><a href="movies.html" class="option"><i class="fas fa-film"></i>Movies</a></li>
+            <li><a href="shows.html" class="option"><i class="fas fa-tv"></i>TV Shows</a></li>
+            <li><a href="tvplus.html" class="option"><i class="fas fa-satellite-dish"></i>Live TV</a></li>
+            <li><a href="requested.html" class="option"><i class="fas fa-search"></i>Requested</a></li>
+            <li><a href="trailer.html" class="option"><i class="fas fa-video"></i>Trailers</a></li>
+            <li><a href="comic.html" class="option"><i class="fas fa-book-open"></i>Comics</a></li>
+            <li><a href="random.html" class="option"><i class="fas fa-spinner"></i>Random</a></li>
+            <li><a href="fun/iq.html" class="option"><i class="fas fa-brain"></i>IQ Game</a></li>
+            <li><a href="fun/jokes.html" class="option"><i class="fas fa-laugh"></i>Dad Jokes</a></li>
+            <li><a href="stories.html" class="option"><i class="fas fa-book"></i>Stories</a></li>
+            <li><a href="adult.html" class="option" onclick="checkPassword(event)">
+                <i class="fas fa-cocktail"></i>Adult Content
+            </a></li>
+            <li><a href="index.html" class="option"><i class="fas fa-home"></i>Home</a></li>
+        </ul>
     </div>
+
     <script>
-      function checkPassword(event) {
-        event.preventDefault();
-
-        const password = prompt("Please enter dashflix to access content:");
-
-        if (password === "dashflix") {
-          window.location.href = "adult.html";
-        } else {
-          alert("Incorrect password. Access denied.");
-
-          window.location.href = "home.html";
+        function checkPassword(event) {
+            event.preventDefault();
+            const password = prompt("Please enter 'dashflix' to access content:");
+            if (password === "dashflix") {
+                window.location.href = "adult.html";
+            } else {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "home.html";
+            }
         }
-      }
     </script>
-    <script src="load.js"></script>
 </body>
 </html>

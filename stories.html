@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Stories</title>
+    <!-- Google Font for a magical look -->
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Gloock', serif; /* Magical font */
+            background: #121212; /* Very dark background */
+            margin: 0;
+            padding: 0;
+            color: #E0E0E0; /* Light gray text for readability */
+            text-align: center;
+        }
+
+        header {
+            background: #212121; /* Dark gray for header */
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            color: #E0E0E0; /* Light gray text */
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .story-list {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .story-item {
+            background-color: #333333; /* Dark gray for story items */
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .story-item:hover {
+            transform: scale(0.8);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .story-title {
+            font-size: 1.7em;
+            color: #E0E0E0; /* Light text color */
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        .story-title:hover {
+            color: #B0B0B0; /* Slightly lighter gray on hover */
+            text-shadow: 0 4px 6px rgba(176, 176, 176, 0.5);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .floating-home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333333; /* Dark gray for the button */
+            color: #E0E0E0; /* Light gray for the icon */
+            border: none;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 1.5em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .floating-home-button:hover {
+            background: #444444; /* Slightly lighter gray on hover */
+            transform: scale(1.1);
+        }
+
+        .floating-home-button i {
+            pointer-events: none; /* Prevent the icon from interfering with hover/click events */
+        }
+    </style>
+</head>
+<body>
+    <ul class="story-list">
+        <li class="story-item">
+            <a href="stories/Rani Meenakshi - The Sea Princess.html" class="story-title">Rani Meenakshi - The Sea Princess</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Ebony Queen.html" class="story-title">The Ebony Queen</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/Li Mei and the Enchanted Prince.html" class="story-title">Li Mei and the Enchanted Prince</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/Isabella and the Midnight Fiesta.html" class="story-title">Isabella and the Midnight Fiesta</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/Layla and the Tower of Jasmine.html" class="story-title">Layla and the Tower of Jasmine</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Dreaming Dawn.html" class="story-title">The Dreaming Dawn</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Princess and the Lotus Pond.html" class="story-title">The Princess and the Lotus Pond</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Queen of the Storms.html" class="story-title">The Queen of the Storms</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Spirit of the Land.html" class="story-title">The Spirit of the Land</a>
+        </li>
+        <li class="story-item">
+            <a href="stories/The Warrior of the Islands.html" class="story-title">The Warrior of the Islands</a>
+        </li>
+    </ul>
+
+    <!-- Floating Home Button -->
+    <button class="floating-home-button" onclick="window.location.href='home.html'">
+        <i class="fas fa-home"></i>
+    </button>
+</body>
+</html>
