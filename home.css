@@ -14,7 +14,7 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
-    transition: opacity 0.6s ease-in-out; /* Fade-in/out effect */
+    transition: opacity 0.6s ease-in-out;
     opacity: 0;
 }
 
@@ -25,12 +25,10 @@ body.loaded {
 .container {
   visibility: hidden;
     text-align: center;
-    padding: 50px;
+    padding: 1px;
     background: rgba(25, 25, 25, 0.95);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    max-width: 90%;
-    width: 600px;
+    max-width: 480px;
+    width: 100%;
     backdrop-filter: blur(8px);
     animation: fadeIn 1s ease-in-out;
 }
@@ -50,8 +48,8 @@ overflow: hidden;
 border-right: 3px solid #d0d0d0;
 white-space: nowrap;
 width: 100%;
-display: inline-block; /* Ensures the element doesn't stretch */
-text-align: center; /* Keep the text centered */
+display: inline-block;
+text-align: center;
 animation: typing 3.5s steps(30, end) forwards, blink-caret 0.7s step-end infinite;
 }
 
@@ -70,24 +68,23 @@ border-color: transparent;
 }
 }
 
-
-
 .options-container {
-  visibility: visible;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+visibility: visible;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .option {
 background: #222;
 color: #b0b0b0;
 font-size: 1em;
-padding: 15px;
-margin: 10px;
-border-radius: 8px;
-width: 140px;
-height: 140px;
+padding: 2px;
+margin: 3px;
+border-radius: 4px;
+width: 80px;
+height: 80px;
+flex: 1 0 80px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -120,7 +117,6 @@ text-align: center;
 color: #d0d0d0;
 }
 
-
 .background-animation {
 position: absolute;
 top: 0;
@@ -142,8 +138,6 @@ z-index: -1;
 100% { background-position: 0% 0%; }
 }
 
-
-
 @media (max-width: 768px) {
     .container {
         padding: 30px;
@@ -151,13 +145,13 @@ z-index: -1;
     }
 
     .option {
-        width: 120px;
-        height: 120px;
+        width: 70px;
+        height: 70px;
         font-size: 0.9em;
     }
 
     .option i {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     h1 {
