@@ -12,6 +12,17 @@
           ]
       },
       {
+          "title": "Incognito",
+          "link": "https://emirati.top/movies/Incognito",
+          "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8jdXvKWFllqPCD83Yv52WXeWn2N.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action"
+          ]
+      },
+      {
           "title": "Halimuyak",
           "link": "https://emirati.top/movies/Halimuyak",
           "image": "https://image.tmdb.org/t/p/original/wnMo89oa5VdfS2rmET4yKWoyeig.jpg",
