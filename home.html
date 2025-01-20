@@ -104,25 +104,10 @@
             <li><a href="random.html" class="option"><i class="fas fa-spinner"></i>Random</a></li>
             <li><a href="fun/iq.html" class="option"><i class="fas fa-brain"></i>IQ Game</a></li>
             <li><a href="fun/jokes.html" class="option"><i class="fas fa-laugh"></i>Dad Jokes</a></li>
-            <li><a href="adult.html" class="option" onclick="checkPassword(event)">
-                <i class="fas fa-cocktail"></i>Adult Content
-            </a></li>
+            <li><a href="adult.html" class="option"><i class="fas fa-cocktail"></i>Adult Content</a></li>
             <li><a href="index.html" class="option"><i class="fas fa-home"></i>Home</a></li>
         </ul>
     </div>
-
-    <script>
-        function checkPassword(event) {
-            event.preventDefault();
-            const password = prompt("Please enter 'dashflix' to access content:");
-            if (password === "dashflix") {
-                window.location.href = "adult.html";
-            } else {
-                alert("Incorrect password. Access denied.");
-                window.location.href = "home.html";
-            }
-        }
-    </script>
     <script src="noodle.js"></script>
 </body>
 </html>
