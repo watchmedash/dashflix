@@ -1,6 +1,17 @@
 {
     "movies": [
       {
+          "title": "Wow Mani",
+          "link": "https://emirati.top/movies/Wow Mani",
+          "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/44VJD1H12iCBZAVt7hJlsY22IoM.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Comedy"
+          ]
+      },,
+      {
           "title": "Halimuyak",
           "link": "https://emirati.top/movies/Halimuyak",
           "image": "https://image.tmdb.org/t/p/original/wnMo89oa5VdfS2rmET4yKWoyeig.jpg",
