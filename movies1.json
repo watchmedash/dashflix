@@ -1,7 +1,29 @@
 {
     "movies": [
       {
-          "title": "Wow Mani",
+          "title": "Sponsor",
+          "link": "https://emirati.top/movies/Sponsor",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ocKVbFTRPrQnl5CfZxR8CVA3Xu90p3SChg&s",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Hiram na Sandali",
+          "link": "https://emirati.top/movies/Hiram na Sandali",
+          "image": "https://images.justwatch.com/poster/324377211/s718/hiram-na-sandali.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Wow Mani Episode 3",
           "link": "https://emirati.top/movies/Wow Mani",
           "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/44VJD1H12iCBZAVt7hJlsY22IoM.jpg",
           "tag": "HD",
@@ -191,18 +213,6 @@
           "genres": [
               "Comedy",
               "Romance"
-          ]
-      },
-      {
-          "title": "Nosferatu",
-          "link": "https://emirati.top/movies/Nosferatu",
-          "image": "https://image.tmdb.org/t/p/original/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Horror",
-              "Fantasy"
           ]
       },
       {
@@ -506,18 +516,6 @@
           ]
       },
       {
-          "title": "Solo Leveling -ReAwakening-",
-          "link": "https://emirati.top/movies/Solo Leveling -ReAwakening-",
-          "image": "https://image.tmdb.org/t/p/w500/uzHMp5heVLR68kbbUEXFPsmxYsM.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Fantasy"
-          ]
-      },
-      {
           "title": "Maria",
           "link": "https://emirati.top/movies/Maria",
           "image": "https://image.tmdb.org/t/p/original/3oQRG0bwPUqE4N4n8z2kAzr7e40.jpg",
@@ -707,20 +705,6 @@
           "genres": [
               "Action",
               "Drama"
-          ]
-      },
-      {
-          "title": "Moana 2",
-          "link": "https://emirati.top/movies/Moana 2",
-          "image": "https://image.tmdb.org/t/p/original/4YZpsylmjHbqeWzjKpUEF8gcLNW.jpg",
-          "tag": "CAM",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Animation",
-              "Adventure",
-              "Family",
-              "Comedy"
           ]
       },
       {
