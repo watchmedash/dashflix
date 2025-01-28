@@ -65,3 +65,10 @@
 .close-button:hover {
   background: #0056b3;
 }
+
+/* Disabled Close Button */
+.close-button.disabled-button {
+  background: #ccc; /* Light gray background */
+  color: #666; /* Dark gray text */
+  cursor: not-allowed;
+}

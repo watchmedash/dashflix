@@ -1,23 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Create noodle elements
-  const noodleOverlay = document.createElement("div");
-  noodleOverlay.innerHTML = `
-    <div class="moodle-overlay active" id="noodleOverlay">
-      <div class="moodle">
-        <img src="https://i.postimg.cc/xCRJLZg4/Google.png" alt="Dashflix">
-        <div class="content">
-          <!--<h1>Visit our Website!</h1>
-        <p>Google Dashflix now.</p>-->
-          <button class="close-button" id="closeNoodle">Close</button>
+  // Check session storage to see if modal has already been shown
+  if (!sessionStorage.getItem("noodleShown")) {
+    // Create noodle elements
+    const noodleOverlay = document.createElement("div");
+    noodleOverlay.innerHTML = `
+      <div class="moodle-overlay active" id="noodleOverlay">
+        <div class="moodle">
+          <img src="https://i.postimg.cc/xCRJLZg4/Google.png" alt="Dashflix">
+          <div class="content">
+            <button class="close-button disabled-button" id="closeNoodle" disabled>Close (5)</button>
+          </div>
         </div>
       </div>
-    </div>
-  `;
-  document.body.appendChild(noodleOverlay);
-  const closeNoodle = document.getElementById("closeNoodle");
-  const overlay = document.getElementById("noodleOverlay");
+    `;
+    document.body.appendChild(noodleOverlay);
 
-  closeNoodle.addEventListener("click", () => {
-    overlay.classList.remove("active");
-  });
+    const closeNoodle = document.getElementById("closeNoodle");
+    const overlay = document.getElementById("noodleOverlay");
+
+    // Start countdown for the button
+    let countdown = 5; // 5 seconds
+    const countdownInterval = setInterval(() => {
+      countdown -= 1;
+      closeNoodle.textContent = `Close (${countdown})`;
+      if (countdown === 0) {
+        clearInterval(countdownInterval);
+        closeNoodle.textContent = "Close";
+        closeNoodle.disabled = false; // Enable the button
+        closeNoodle.classList.remove("disabled-button"); // Remove disabled styling
+      }
+    }, 1000);
+
+    // Add click event listener for the close button
+    closeNoodle.addEventListener("click", () => {
+      overlay.classList.remove("active");
+      // Save to session storage that modal has been shown
+      sessionStorage.setItem("noodleShown", "true");
+    });
+  }
 });
