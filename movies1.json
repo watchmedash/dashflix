@@ -1,6 +1,34 @@
 {
     "movies": [
       {
+          "title": "Plankton The Movie",
+          "link": "https://emirati.top/movies/Plankton The Movie",
+          "image": "https://image.tmdb.org/t/p/original/dIshvp5DUWPap8bV9bnv8dc8UNy.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Animation",
+              "Adventure",
+              "Comedy",
+              "Family",
+              "Fantasy"
+          ]
+      },
+      {
+          "title": "Mortal Kombat 2",
+          "link": "https://emirati.top/movies/Mortal Kombat 2",
+          "image": "https://image.tmdb.org/t/p/original/yN1bQ8XLh7Q2bEu3YBtp68vUeXl.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Fantasy",
+              "Adventure"
+          ]
+      },
+      {
           "title": "Sponsor",
           "link": "https://emirati.top/movies/Sponsor",
           "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ocKVbFTRPrQnl5CfZxR8CVA3Xu90p3SChg&s",
