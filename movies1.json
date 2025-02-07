@@ -1,6 +1,17 @@
 {
     "movies": [
       {
+          "title": "Belyas",
+          "link": "https://emirati.top/movies/Belyas",
+          "image": "https://nsfwph.org/attachments/3164454",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
           "title": "Plankton The Movie",
           "link": "https://emirati.top/movies/Plankton The Movie",
           "image": "https://image.tmdb.org/t/p/original/dIshvp5DUWPap8bV9bnv8dc8UNy.jpg",
