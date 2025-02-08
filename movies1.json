@@ -107,33 +107,6 @@
           ]
       },
       {
-          "title": "Sonic the Hedgehog 3",
-          "link": "https://emirati.top/movies/Sonic the Hedgehog 3",
-          "image": "https://image.tmdb.org/t/p/original/x7NPbBlrvFRJrpinBSRlMOOUWom.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Science Fiction",
-              "Comedy",
-              "Family"
-          ]
-      },
-      {
-          "title": "Mufasa The Lion King",
-          "link": "https://emirati.top/movies/Mufasa The Lion King",
-          "image": "https://image.tmdb.org/t/p/original/nHhjqeJcaQKOBCd21c1kV2DK5gm.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Adventure",
-              "Family",
-              "Animation"
-          ]
-      },
-      {
           "title": "The End",
           "link": "https://emirati.top/movies/The End",
           "image": "https://image.tmdb.org/t/p/original/kYMLpw3DQjQjp2jzNrg3KvNFIr6.jpg",
@@ -469,32 +442,6 @@
               "Action",
               "Horror",
               "Thriller"
-          ]
-      },
-      {
-          "title": "The Order",
-          "link": "https://emirati.top/movies/The Order",
-          "image": "https://image.tmdb.org/t/p/original/1bJ2652AUnuK1WhlR0GLbJKVqMF.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Crime",
-              "Drama",
-              "Thriller"
-          ]
-      },
-      {
-          "title": "Y2K",
-          "link": "https://emirati.top/movies/Y2K",
-          "image": "https://image.tmdb.org/t/p/original/qndubIQalyxBJI5EBNZKGXEX74q.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Horror",
-              "Science Fiction"
           ]
       },
       {
@@ -1091,19 +1038,6 @@
           ]
       },
       {
-          "title": "Joker Folie a Deux",
-          "link": "https://emirati.top/movies/Joker Folie a Deux",
-          "image": "https://image.tmdb.org/t/p/original/aciP8Km0waTLXEYf5ybFK5CSUxl.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Drama",
-              "Crime",
-              "Thriller"
-          ]
-      },
-      {
           "title": "Piece by Piece",
           "link": "https://emirati.top/movies/Piece by Piece",
           "image": "https://image.tmdb.org/t/p/original/9xSjP8B0iZHRzvrtKcYDkaalomS.jpg",
@@ -1166,21 +1100,6 @@
           "genres": [
               "Drama",
               "Romance"
-          ]
-      },
-      {
-          "title": "Transformers One",
-          "link": "https://emirati.top/movies/Transformers One",
-          "image": "https://image.tmdb.org/t/p/original/qbkAqmmEIZfrCO8ZQAuIuVMlWoV.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Animation",
-              "Science Fiction",
-              "Adventure",
-              "Family",
-              "Action"
           ]
       },
       {
@@ -1439,18 +1358,6 @@
           ]
       },
       {
-          "title": "It Ends with Us",
-          "link": "https://emirati.top/movies/It Ends with Us",
-          "image": "https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_SX300.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Romance",
-              "Drama"
-          ]
-      },
-      {
           "title": "Kiskisan",
           "link": "https://emirati.top/movies/Kiskisan",
           "image": "https://m.media-amazon.com/images/M/MV5BZGYwMmRiMDctMzM5Ny00ZGNlLWE1NjgtMjIwYTkzZmRiMTE1XkEyXkFqcGc@._V1_.jpg",
@@ -1469,19 +1376,6 @@
           "genres": [
               "Drama",
               "Romance"
-          ]
-      },
-      {
-          "title": "Longlegs",
-          "link": "https://emirati.top/movies/Longlegs",
-          "image": "https://m.media-amazon.com/images/M/MV5BMmVkZWY2ODEtYTMyYy00MDg2LWFkMGUtMjYwOTBhOGViODQzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Crime",
-              "Horror",
-              "Thriller"
           ]
       },
       {
