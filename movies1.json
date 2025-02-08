@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "Blue Period",
+          "link": "https://emirati.top/movies/Blue Period",
+          "image": "https://image.tmdb.org/t/p/original/pSXy8iR80tss9YG8vmv6qUjz7Gu.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Drama",
+              "Comedy"
+          ]
+      },
+      {
           "title": "Belyas",
           "link": "https://emirati.top/movies/Belyas",
           "image": "https://m.media-amazon.com/images/M/MV5BZTEwMjhjNjItNzVkMy00ZjhmLWE2ZGItMGMwMzA2ZTBlMTBkXkEyXkFqcGc@._V1_.jpg",
