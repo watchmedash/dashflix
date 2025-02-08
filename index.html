@@ -79,75 +79,53 @@
   </div>
   </div>
   <div class="nav-links">
-  <ul><li><a href="tutorial.html"><i class="fas fa-search"></i> Find</a></li><li><a href="request.html"><i class="fas fa-comments"></i> Request</a></li><li><a href="appdown.html"><i class="fas fa-mobile-alt"></i> App</a></li></ul>
+  <ul><li><a href="appdown.html"><i class="fas fa-mobile-alt"></i></a></li></ul>
   </div>
   </nav>
   </header>
-<div class="glowing-text-container">
+<!--<div class="glowing-text-container">
 Prefer a bigger screen? Visit dashflix.top on your preferred device.
+</div>-->
+<div class="about-container">
+      <p>
+          <strong>Dashflix</strong> offers a unique entertainment experience for movie lovers. By browsing this platform,
+          users can enjoy the convenience of streaming a wide variety of movies right from the website—without
+          the need for any downloads. Here’s what you can expect when you use the site:
+      </p>
+      <ul>
+          <li><strong>Endless Entertainment:</strong> Access a vast collection of movies, ranging from the latest releases
+              to classic hits. Whether you're in the mood for action, drama, comedy, or adventure, there's always something for everyone.</li>
+          <li><strong>Seamless Streaming:</strong> Enjoy smooth, uninterrupted playback thanks to videos embedded from trusted third-party sources.</li>
+          <li><strong>Quick Search:</strong> With a streamlined interface, you can quickly find and stream your favorite titles without
+              unnecessary steps or delays.</li>
+          <li><strong>High-Quality Content:</strong> All the content you find on <strong>Dashflix</strong> is streamed from reliable
+              video hosting sites, ensuring that you get the best possible video quality available for each title.</li>
+          <li><strong>No Downloads Required:</strong> Simply click and watch—no need to worry about large files or storage space.
+              Just stream and enjoy your favorite content directly in your browser.</li>
+          <li><strong>Convenient Access:</strong> Enjoy your favorite movies and shows at any time, from anywhere, with just an internet connection.</li>
+      </ul>
+      <div class="icon-grid">
+  <a href="movies.html"><i class="fas fa-film"></i> Movies</a>
+  <a href="shows.html"><i class="fas fa-tv"></i> Shows</a>
+  <a href="trailer.html"><i class="fas fa-video"></i> Trailers</a>
+  <a href="tvplus.html"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+  <a href="requested.html"><i class="fas fa-list"></i> Requested</a>
+  <a href="request.html"><i class="fas fa-comments"></i> Request</a>
+  <a href="comic.html"><i class="fas fa-book-open"></i> Comics</a>
+  <a href="https://freedomwall.top"><i class="fas fa-otter"></i> Anime</a>
+  <a href="fun/iq.html"><i class="fas fa-brain"></i> IQ Game</a>
+  <a href="fun/jokes.html"><i class="fas fa-laugh"></i> Jokes</a>
+  <a href="donate.html"><i class="fas fa-donate"></i> Donate</a>
+  <a href="#" onclick="showPasswordModal(event)"><i class="fas fa-cocktail"></i> Mature</a>
+</div>
+      <p class="disclaimer">
+          <strong>Disclaimer:</strong> All embedded videos and content on <strong>Dashflix</strong> are sourced from publicly
+          available platforms or sites that allow embedding. The site itself does not verify the copyright status of the
+          materials, nor does it own the rights to any of the media. Users are advised to use the service responsibly and
+          ensure that their viewing aligns with applicable laws in their jurisdiction.
+      </p>
   </div>
-<script>
-    async function loadMessages() {
-        try {
-            const response = await fetch("https://kabayan.top/chat.php");
-            const messages = await response.json();
-            const messagesDiv = document.getElementById("chatMessages");
-
-            // Reverse the messages array for newest at bottom, apply Markdown, and format =spoiler= syntax
-            messagesDiv.innerHTML = messages.reverse().map(msg => {
-                let formattedMessage = marked.parseInline(msg.message);
-
-                // Replace =spoiler= syntax with <span class="spoiler">spoiler text</span>
-                formattedMessage = formattedMessage.replace(
-                    /=([^=]+)=/g,
-                    '<span class="spoiler">$1</span>'
-                );
-                return `<div><strong>${msg.username}</strong>: ${formattedMessage}</div>`;
-            }).join('');
-
-            // Scroll to the bottom of the chat box for new messages
-            messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        } catch (error) {
-            console.error("Error loading messages:", error);
-        }
-    }
-
-    async function sendMessage() {
-        const username = document.getElementById("chatUsername").value.trim();
-        const message = document.getElementById("chatMessage").value.trim();
-
-        if (username && message) {
-            try {
-                await fetch("https://kabayan.top/chat.php", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: `username=${encodeURIComponent(username)}&message=${encodeURIComponent(message)}`
-                });
-                document.getElementById("chatMessage").value = "";
-                loadMessages();
-            } catch (error) {
-                console.error("Error sending message:", error);
-            }
-        }
-    }
-
-    // Load messages initially and every 5 seconds
-    document.addEventListener("DOMContentLoaded", () => {
-        loadMessages();
-        setInterval(loadMessages, 5000);
-    });
-</script>
-<div class="sharethis-inline-share-buttons"></div>
-<div class="terra"><div class="chat-widget-container">
-    <div class="announcement-banner"><p>Dashflix is your ultimate destination for an unparalleled movie-watching experience, offering a wide selection of films from thrilling action to heartwarming dramas.</p></div>
-    <div class="chat-messages" id="chatMessages"></div>
-    <div class="chat-input">
-        <input type="text" id="chatUsername" placeholder="Name" maxlength="15">
-        <input type="text" id="chatMessage" placeholder="Message..." maxlength="500">
-        <button onclick="sendMessage()">Send</button>
-    </div><div class="announcement-banner">
-    <p>Dashflix does not store any files on our servers. We only provide links to media hosted on third-party services. For more details, please refer to our <a href="terms.html">Terms of Service</a>.</p></div></div></div>
-
+  <div class="sharethis-inline-share-buttons"></div>
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
@@ -164,41 +142,6 @@ Prefer a bigger screen? Visit dashflix.top on your preferred device.
 </nav>
 <p class="copyright">Dashflix 2024. All rights reserved.</p>
 </footer>
-<nav class="bottom-nav">
-  <a href="tvplus.html" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="movies.html" class="nav-item">
-    <i class="fas fa-film"></i> Movies
-  </a>
-  <a href="shows.html" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="trailer.html" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
-  <a href="requested.html" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
-  <a href="#" class="nav-item" id="more-menu">
-    <i class="fas fa-ellipsis-h"></i> More
-  </a>
-
-  <div id="more-links" class="more-links">
-    <a href="https://freedomwall.top">
-      <i class="fas fa-otter"></i> Anime
-    </a>
-    <a href="https://dashtoons.top">
-      <i class="fas fa-book-open"></i> Comics
-    </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-🔒 18+
-    </a>
-  </div>
-</nav>
-<script>
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
-</script>
 <div class="modal" id="passwordModal">
     <div class="modal-content">
         <h2>Warning: This page contains adult content.</h2>
