@@ -118,41 +118,49 @@
   <div class="playlist" id="playlist"></div>
 
   <script>
-    async function loadVideos() {
-      const response = await fetch('videos.json');
-      const videos = await response.json();
+  async function loadVideos() {
+    const response = await fetch('videos.json');
+    let videos = await response.json();
 
-      const randomVideo = videos[Math.floor(Math.random() * videos.length)];
-      const mainPlayer = document.getElementById('mainPlayer');
-      mainPlayer.src = randomVideo.link;
-
-      const playlist = document.getElementById('playlist');
-      const placeholderImage = 'https://placehold.co/600x400?text=No+Poster';
-
-      playlist.innerHTML = videos.map(video => `
-        <div class="playlist-item" onclick="changeVideo('${video.link}')">
-          <div class="spinner" style="display: none;" id="spinner-${video.link}"></div>
-          <img src="${video.thumbnail}" alt="Video thumbnail"
-               loading="lazy"
-               onerror="this.src='${placeholderImage}'"
-               onload="document.getElementById('spinner-${video.link}').style.display = 'none';">
-        </div>
-      `).join('');
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = videos.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [videos[i], videos[j]] = [videos[j], videos[i]];
     }
 
-    function changeVideo(link) {
-      const mainPlayer = document.getElementById('mainPlayer');
-      mainPlayer.src = link;
+    // Pick the first video from the shuffled list as the main video
+    const randomVideo = videos[0];
+    const mainPlayer = document.getElementById('mainPlayer');
+    mainPlayer.src = randomVideo.link;
 
-      // Scroll the page to the player
-      const mainPlayerSection = document.getElementById('mainPlayerSection');
-      mainPlayerSection.scrollIntoView({
-        behavior: 'smooth', // Smooth scroll
-        block: 'start' // Align with the top of the viewport
-      });
-    }
+    const playlist = document.getElementById('playlist');
+    const placeholderImage = 'https://placehold.co/600x400?text=No+Poster';
 
-    loadVideos();
+    // Render the shuffled playlist
+    playlist.innerHTML = videos.map(video => `
+      <div class="playlist-item" onclick="changeVideo('${video.link}')">
+        <div class="spinner" style="display: none;" id="spinner-${video.link}"></div>
+        <img src="${video.thumbnail}" alt="Video thumbnail"
+             loading="lazy"
+             onerror="this.src='${placeholderImage}'"
+             onload="document.getElementById('spinner-${video.link}').style.display = 'none';">
+      </div>
+    `).join('');
+  }
+
+  function changeVideo(link) {
+    const mainPlayer = document.getElementById('mainPlayer');
+    mainPlayer.src = link;
+
+    // Scroll the page to the player
+    const mainPlayerSection = document.getElementById('mainPlayerSection');
+    mainPlayerSection.scrollIntoView({
+      behavior: 'smooth', // Smooth scroll
+      block: 'start' // Align with the top of the viewport
+    });
+  }
+
+  loadVideos();
   </script>
 
   <nav class="bottom-nav">
@@ -173,5 +181,4 @@
     </a>
   </nav>
 </body>
-
 </html>
