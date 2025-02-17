@@ -1,9 +1,79 @@
 const channelData = [
   {
+    title: "Akaku",
+    url:
+      "https://s3-us-west-2.amazonaws.com/akaku.castus-vod/live/ch3/video.m3u8",
+    image: "https://cdn.akaku.org/Channel55.png",
+    language: "English"
+  },
+  {
     title: "BBC",
     url:
       "https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist_4300k.m3u8",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg",
+    language: "English"
+  },
+  {
+    title: "EBS Kids",
+    url:
+      "https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/chunklist.m3u8",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjO5fqVcDmYgsvy_2pfxEWzG_f1LIND3uZg&s",
+    language: "English"
+  },
+  {
+    title: "QVC",
+    url:
+      "https://qvc-amd-live.akamaized.net/hls/live/2034113/lsqvc1uscln/medhigh.m3u8",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/QVC_logo_2019.svg/1200px-QVC_logo_2019.svg.png",
+    language: "English"
+  },
+  {
+    title: "3ABN Latino",
+    url:
+      "https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/chunklist_w643679685_b2328000_slen.m3u8?nimblesessionid=156680343",
+    image: "https://www.adventisttv.org/assets/img/main/3ABN_Latino.png",
+    language: "Latino"
+  },
+  {
+    title: "3ABN",
+    url:
+      "https://3abn.bozztv.com/3abn2/3abn_live/smil:3abn_live.smil/chunklist_w424857750_b2628000_slen.m3u8?nimblesessionid=156680337",
+    image: "https://3abn.org/img/3abn-ogg.png",
+    language: "English"
+  },
+  {
+    title: "3ABN Kids",
+    url:
+      "https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/chunklist_w634438310_b2328000_slen.m3u8?nimblesessionid=156679208",
+    image: "https://3abnkids.tv/img/3ABN-KIDS-LOGO.png",
+    language: "English"
+  },
+  {
+    title: "NBC News",
+    url:
+      "https://d2gjhy8g9ziabr.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-samsungtvplus-stitched/9896e224-f455-466a-908d-62d5be955cc4/4.m3u8",
+    image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/NBC_News_%282023%29.svg",
+    language: "English"
+  },
+  {
+    title: "MSNBC",
+    url:
+      "https://livenewsplayer.com:1936/msnbcsd/msnbcsd//chunklist_w96992070_tkc2VjZW5kdGltZT0xNzM5NzgzNDE0JnNlY2hhc2g9OFdscXZsVHFGQVZJZ241eVZ5QUZzakUzUUJqdzhDdHdfTjBicnZZRnYwQT0mc2Vjc3RhcnR0aW1lPTE3Mzk3NzI2MTQ=.m3u8",
+    image: "https://media-cldnry.s-nbcnews.com/image/upload/newsgroup-logos/msnbc/logo-vertical/default-black-498x404.png",
+    language: "English"
+  },
+  {
+    title: "The Weather Channel",
+    url:
+      "https://livenewsplayer.com:1936/weathersd/weathersd//chunklist_w786740579_tkc2VjZW5kdGltZT0xNzM5ODQ3OTIzJnNlY2hhc2g9OTFiVkczM1AzY215X2ZBSndhZF95M2txb1ZZRmZ5WjE0YnBhMThnNUhVUT0mc2Vjc3RhcnR0aW1lPTE3Mzk3NzI5MjM=.m3u8",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/77/The_Weather_Channel_logo_2005-present.svg",
+    language: "English"
+  },
+  {
+    title: "Sky News Australia",
+    url:
+      "https://skynewsau-live.akamaized.net/hls/live/2002691/skynewsau-extra3/master_576p.m3u8",
+    image: "https://content.api.news/v3/images/bin/5b4fdbc3df286aa953bcc0b3a0df5c38",
     language: "English"
   },
   {
