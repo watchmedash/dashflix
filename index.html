@@ -68,6 +68,85 @@
     }
     </script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+    .search-container {
+      margin-top: 20px;
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 0;
+    }
+    .search-container form {
+      padding: 8px;
+      position: relative;
+      display: flex;
+      width: 90%;
+      margin: 10px auto;
+    }
+    .search-container input {
+      flex: 1;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .search-container button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 8px;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+    }
+    .search-container button i {
+      font-size: 20px;
+      color: black;
+    }
+    #searchResults {
+      position: absolute;
+      z-index: 1000;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      background-color: rgba(211, 211, 211, 1);
+      border-radius: 5px;
+      color: black;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-weight: bold;
+    }
+    #searchResults ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    #searchResults li {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+    #searchResults img {
+      width: 50px;
+      height: auto;
+      margin-right: 10px;
+    }
+    #searchResults a {
+      font-weight: bold;
+      text-decoration: none;
+      color: black;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    #searchResults a:hover {
+      text-decoration: underline;
+    }
+    #searchResults p {
+      color: black;
+    }
+  </style>
 </head>
 <body oncontextmenu="return false;">
   <header>
@@ -95,6 +174,15 @@ Prefer a bigger screen? Visit dashflix.top on your preferred device.
 	};
 </script>
 <script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
+<div class="search-container">
+    <form id="searchForm">
+      <input type="text" id="search" placeholder="Search movies...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <div id="searchResults">
+      <ul></ul>
+    </div>
+  </div>
   <div class="sharethis-inline-share-buttons"></div>
 <div class="about-container">
       <p>
@@ -186,6 +274,7 @@ Prefer a bigger screen? Visit dashflix.top on your preferred device.
 function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <script src="search.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
