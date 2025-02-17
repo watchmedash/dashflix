@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylt.css"/>
+    <style>
+        .carousel-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .pagination button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pagination button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div id="carousel" class="carousel">
+        <img id="meme-image" src="" alt="">
+    </div>
+</div>
+
+<nav class="bottom-nav">
+    <a href="#" id="prev" class="nav-item">
+        <i class="fas fa-chevron-left"></i> Previous
+    </a>
+
+    <a href="index.html" class="nav-item">
+        <i class="fas fa-home"></i> Home
+    </a>
+
+    <a href="#" id="next" class="nav-item">
+        <i class="fas fa-chevron-right"></i> Next
+    </a>
+</nav>
+
+<script>
+    let currentIndex = 0;
+    let images = [];
+    let shuffledImages = [];
+    let seenImages = [];
+
+    fetch('images.json')
+        .then(response => response.json())
+        .then(data => {
+            images = data;
+            shuffleImages();
+            loadImage();
+        })
+        .catch(error => console.error('Error loading the JSON:', error));
+
+    function shuffleImages() {
+        shuffledImages = [...images];
+        shuffleArray(shuffledImages);
+        seenImages = [];
+    }
+
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    }
+
+    function loadImage() {
+        if (seenImages.length === images.length) {
+            shuffleImages();
+        }
+
+        let image = shuffledImages[currentIndex];
+        while (seenImages.includes(image)) {
+            currentIndex = (currentIndex + 1) % shuffledImages.length;
+            image = shuffledImages[currentIndex];
+        }
+
+        seenImages.push(image);
+        const memeImage = document.getElementById('meme-image');
+        memeImage.src = image?.src || '';
+        memeImage.alt = image?.alt || 'Meme';
+    }
+
+    function lazyLoadImage(direction) {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % shuffledImages.length;
+        } else if (direction === 'prev') {
+            currentIndex = (currentIndex - 1 + shuffledImages.length) % shuffledImages.length;
+        }
+
+        loadImage();
+
+        let nextIndex = (currentIndex + 1) % shuffledImages.length;
+        let nextImage = new Image();
+        nextImage.src = shuffledImages[nextIndex]?.src;
+    }
+
+    document.getElementById('next').addEventListener('click', (e) => {
+        e.preventDefault();
+        lazyLoadImage('next');
+    });
+
+    document.getElementById('prev').addEventListener('click', (e) => {
+        e.preventDefault();
+        lazyLoadImage('prev');
+    });
+</script>
+
+</body>
+</html>
