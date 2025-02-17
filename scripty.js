@@ -1,12 +1,5 @@
 const channelData = [
   {
-    title: "BBC One",
-    url:
-      "https://rakuten-tvshows-1-eu.rakuten.wurl.tv/3000.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/01/BBC_One_logo_%28box_variant%29.svg",
-    language: "English"
-  },
-  {
     title: "BBC",
     url:
       "https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist_4300k.m3u8",
@@ -21,20 +14,6 @@ const channelData = [
     language: "English"
   },
   {
-    title: "Cartoon Network SEA",
-    url:
-      "https://cdn1.skygo.mn/live/disk1/Cartoon_Network/HLS-FTA/Cartoon_Network.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg",
-    language: "English"
-  },
-  {
-    title: "Cartoon Network",
-    url:
-      "https://dmitnthvll.cdn.mangomolo.com/dubaisports/smil:dubaisports.stream.smil/chunklist_b4000000.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Cartoon_Network_2010_logo.svg",
-    language: "English"
-  },
-  {
     title: "CNBC",
     url:
       "https://liveprodusphoenixeast.global.ssl.fastly.net/USPhx-HD/Channel-TX-USPhx-AWS-virginia-1/Source-USPhx-16k-1-s6lk2-BP-07-03-0Yn1cQZHOtP_live.m3u8",
@@ -42,24 +21,10 @@ const channelData = [
     language: "English"
   },
   {
-    title: "Dubai Sports 1",
-    url:
-      "https://dmitnthvll.cdn.mangomolo.com/dubaisports/smil:dubaisports.stream.smil/chunklist_b4000000.m3u8",
-    image: "https://bx-tv.com/wp-content/uploads/2021/07/Dubai-Sports1.jpg",
-    language: ""
-  },
-  {
     title: "Fox News",
     url:
       "https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8",
     image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Fox_News_Channel_logo.svg",
-    language: "English"
-  },
-  {
-    title: "Rakuten TV",
-    url:
-      "https://rakuten-family-1-eu.rakuten.wurl.tv/3000.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Rakuten_TV_logo.svg",
     language: "English"
   },
   {
@@ -72,7 +37,7 @@ const channelData = [
   {
     title: "MYX",
     url:
-      "https://myxnola-abscbn-ono.amagi.tv/index.m3u8",
+      "https://ott.studentsdemo.com/stream/phcathenatv/myxph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     image: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Myxphlogo.svg",
     language: "English"
   },
@@ -98,20 +63,6 @@ const channelData = [
     language: "English"
   },
   {
-    title: "CBS News",
-    url:
-      "https://dai.google.com/linear/hls/pa/event/Sid4xiTQTkCT1SLu6rjUSQ/stream/be5b302b-0d25-4da1-b940-9d6614f451ed:BRU/variant/df9d5f9fc8201f0878fd4a77927eea3b/bandwidth/3338376.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/1/19/CBS_News.svg",
-    language: "English"
-  },
-  {
-    title: "Newsmax TV",
-    url:
-      "https://nmxlive.akamaized.net/hls/live/529965/Live_1/index5000.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/8/85/Newsmax_logo.svg",
-    language: "English"
-  },
-  {
     title: "Newsnet",
     url:
       "https://2-fss-2.streamhoster.com/pl_138/amlst:201950-1311088/chunklist_b2000000.m3u8",
@@ -130,13 +81,6 @@ const channelData = [
     url:
       "https://livestream.chdrstatic.com/b93e5b0d43ea306310a379971e384964acbe4990ce193c0bd50078275a9a657d/cheddar-42620/cheddarweblive/cheddar/primary/2.m3u8",
     image: "https://variety.com/wp-content/uploads/2024/01/Cheddar.png",
-    language: "English"
-  },
-  {
-    title: "France 24 English",
-    url:
-      "https://cdn.klowdtv.net/803B48A/n1.klowdtv.net/live2/france24_720p/chunks.m3u8",
-    image: "https://seeklogo.com/images/F/France_24-logo-7B73A4DA96-seeklogo.com.png",
     language: "English"
   },
   {
@@ -175,59 +119,10 @@ const channelData = [
     language: ""
   },
   {
-    title: "Russia 24",
-    url:
-      "https://vgtrksmotrim.cdnvideo.ru/hls/russia_24/playlist_3.m3u8?md5=PSXO0zYDsNWYIEHD5CDguA&e=1724151186&hls_proxy_host=70b013ca21e8364cd537747cf862272b",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/66/Rossiya-24_Logo.svg",
-    language: ""
-  },
-  {
-    title: "Channel 13",
-    url:
-      "https://d18b0e6mopany4.cloudfront.net/out/v1/08bc71cf0a0f4712b6b03c732b0e6d25/index_3.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/cd/New_Logo_13_2022.jpg",
-    language: "Israel"
-  },
-  {
-    title: "NBC News",
-    url:
-      "https://d2gjhy8g9ziabr.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-samsungtvplus-stitched/a881a623-4444-4457-8744-4c5d95a8d9d8/4.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9f/NBC_News_2013_logo.png",
-    language: "English"
-  },
-  {
-    title: "ABC News",
-    url:
-      "https://content-aapm1.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be/g.m3u8?rays=hjigfedcba&ad.flex=15&ad.access_level=0&expand=drmOff&v=3&ad.adunit=/abc-news/abcnews.com/web/video&ad.vast3=1&ad.vid=$program_id&ad=abcnews_live&ad.pp=datg-live-vdms&ad.v=2&ad.&pbs=4795d4c6aa174cd8aada496a200d05b1",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/2a/ABC_News_logo_2021.svg",
-    language: "English"
-  },
-  {
     title: "HLN US",
     url:
       "https://turnerlive.warnermediacdn.com/hls/live/586496/cnngo/hln/VIDEO_0_3564000.m3u8",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/HLN_%28TV_network%29_2017_logo.svg",
-    language: "English"
-  },
-  {
-    title: "CBC News",
-    url:
-      "https://lnc-cbc2.tubi.video/master1080P.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/2/29/CBC_News_Logo.svg",
-    language: "English"
-  },
-  {
-    title: "FOX Business",
-    url:
-      "https://stream.livenewspro.com:1936/foxbusiness/foxbusiness//chunklist_w104799145_tkc2VjZW5kdGltZT0xNzI0MjAwNzUwJnNlY2hhc2g9TjAwcHlINVU2SmoyYWRIcEtnQmtJWkx5TE51ZUl0blFCSlhMMzN4WkdVdz0mc2Vjc3RhcnR0aW1lPTE3MjQxMjU3NTA=.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Fox_Business_2017.png",
-    language: "English"
-  },
-  {
-    title: "The Weather Channel",
-    url:
-      "https://livetvde.net/weather/tracks-v1a1/mono.m3u8?token=af4349cee97d4f5cf396d4c4ad93aa557cdd6edf-0d1cd5e25226f33bc6d83fd9495e0283-1724144545-1724133745",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/77/The_Weather_Channel_logo_2005-present.svg",
     language: "English"
   },
   {
@@ -250,41 +145,6 @@ const channelData = [
       "https://cpac-live.cdn.vustreams.com/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/live-video_track=5400000.m3u8",
     image: "https://upload.wikimedia.org/wikipedia/commons/2/2d/2016_CPAC_logo.svg",
     language: "English"
-  },
-  {
-    title: "France 3",
-    url:
-      "https://livetvde.net/france3/tracks-v1a1/mono.m3u8?token=aebae5a93dd6def346e38dffe3ab5b16d005931e-effd223dbd3d14b2a726a0ce61fb29bf-1724148885-1724138085",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/dd/France_3_2018.svg",
-    language: ""
-  },
-  {
-    title: "TF1",
-    url:
-      "https://livetvde.net/tf1/tracks-v1a1/mono.m3u8?token=b0e504842fd8f4a85706334bf7a38d09a6dd651c-40f2cf9c7887b7fab0e62d587ed22a78-1724148970-1724138170",
-    image: "https://companieslogo.com/img/orig/TFI.PA-8c6da426.png",
-    language: ""
-  },
-  {
-    title: "Euronews",
-    url:
-      "https://rakuten-euronews-1-nl.samsung.wurl.tv/32f463ebb125922dd9112b6506d51d94.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews._2016_alternative_logo.png",
-    language: "English"
-  },
-  {
-    title: "AT5",
-    url:
-      "https://n1.cdn.jetstre.am/session/4570fe27fa8901d714511626523def43/sz/atvijf/wowza4/live/live/chunklist.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/9/9c/AT5_Logo.png",
-    language: ""
-  },
-  {
-    title: "RTL",
-    url:
-      "https://livetvde.net/rtl/tracks-v1a1/mono.m3u8?token=218155aea7e8ee90bdba7251175264a3aaf3c006-a7b78319d35b3891d22138d9ef8443b7-1724150129-1724139329",
-    image: "https://upload.wikimedia.org/wikipedia/commons/b/b7/RTL_Logo.svg",
-    language: ""
   },
   {
     title: "HSN",
@@ -315,13 +175,6 @@ const channelData = [
     language: ""
   },
   {
-    title: "FOX 11",
-    url:
-      "https://dcs-live-uw1.mp.lura.live/server/play/vAQozBaC9R1Luz7b/rendition.m3u8?track=video-3&anvsid=m177610536-nf95709b9124b0b55b27ddac75fae19cc&ts=1724144063&anvtrid=988acd1725fa7b39f67193d520d5351c",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Fts-los-angeles-a.svg",
-    language: "English"
-  },
-  {
     title: "24 TV",
     url:
       "https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8",
@@ -348,13 +201,6 @@ const channelData = [
       "https://liveprodapnortheast.akamaized.net/ap1/Channel-APTVqvs-AWS-Tokyo-2/Source-APTVqvs-10000-1-swyg20-BP-HD-4-VmYRYIYETkuD_live.m3u8",
     image: "https://bx-tv.com/wp-content/uploads/2021/05/jp-bloomberg.jpg",
     language: ""
-  },
-  {
-    title: "TBN",
-    url:
-      "https://d7ge95bb03xsu.cloudfront.net/out/v1/0c95a89614194912834019fc37d741ef/tbn-freecast_7.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/TBN_logo_2015.jpg",
-    language: "English"
   },
   {
     title: "Ariana Television Network",
@@ -402,7 +248,7 @@ const channelData = [
     title: "7x Music",
     url:
       "https://stream.e2is.in/hls/7xMusic.m3u8",
-    image: "https://jiotvimages.cdn.jio.com/dare_images/shows/700/-/2024-06-09/2406091871016.jpg",
+    image: "https://bx-tv.com/wp-content/uploads/2022/11/7x-music-Punjabi.jpg",
     language: ""
   },
   {
@@ -411,20 +257,6 @@ const channelData = [
       "https://hnc-free-viewlift.amagi.tv/playlist1080_P.m3u8",
     image: "https://static.wikia.nocookie.net/logopedia/images/3/39/Horse_%26_Country_%282009%29.svg",
     language: "English"
-  },
-  {
-    title: "Buzzr",
-    url:
-      "https://buzzr-samsungus.amagi.tv/1080p-vtt/index.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/Buzzr_logo.svg",
-    language: "English"
-  },
-  {
-    title: "RMC Découverte",
-    url:
-      "https://livetvde.net/rmcdeco/tracks-v1a1/mono.m3u8?token=d9951406be36af17648b4d158d3508f506d26685-70760ff994b160daf51e76f3c91e2aba-1724161891-1724151091",
-    image: "https://upload.wikimedia.org/wikipedia/fr/b/b3/RMC_D%C3%A9couverte_logo_2017.svg",
-    language: ""
   },
   {
     title: "NTV Canada",
@@ -447,14 +279,6 @@ const channelData = [
     image: "https://upload.wikimedia.org/wikipedia/commons/d/de/Sky-news-logo.svg",
     language: "English"
   },
-  {
-    title: "NBC News Now",
-    url:
-      "https://dai2.xumo.com/xumocdn/p=roku/amagi_hls_data_xumo1212A-xumo-nbcnewsnow/CDN/playlist.m3u8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/f/f0/NBC_News_%282023%29.svg",
-    language: "English"
-  },
-
   {
     title: "Global News",
     url:
@@ -528,7 +352,301 @@ const channelData = [
       "https://rrr.sz.xlcdn.com/?account=nhnieuws&file=live&type=live&service=wowza&protocol=https&output=playlist.m3u8",
     image: "https://i.imgur.com/SQPVOwn.png",
     language: "Dutch"
-  }
+  },
+  {
+    title: "UAAP Varsity Channel",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/uaapvarsitychannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/pSLEHMa.png",
+    language: "English"
+  },
+  {
+    title: "UNTV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/untv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/UNTV-Logo-2016.svg/300px-UNTV-Logo-2016.svg.png",
+    language: "English"
+  },
+  {
+    title: "tvN Movies Pinoy",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/tvnmoviespinoy/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/9fKNEHY.png",
+    language: "English"
+  },
+  {
+    title: "TV5",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/tv5/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/jsCBRq0.png",
+    language: "English"
+  },
+  {
+    title: "TV Maria",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/tvmaria/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/logopedia/images/c/cd/TV_MARIA_PH.png/revision/latest?cb=20200421061144",
+    language: "English"
+  },
+  {
+    title: "True FM TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/truefmtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/logopedia/images/a/a0/TRUETV_Logo_2024.png",
+    language: "English"
+  },
+  {
+    title: "TMC",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/tmc/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/2k0yRUd.png",
+    language: "English"
+  },
+  {
+    title: "Teleradyo Serbisyo SD",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/teleradyoserbisyosd/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/TeleRadyo_Serbisyo_logo.svg/500px-TeleRadyo_Serbisyo_logo.svg.png",
+    language: "English"
+  },
+  {
+    title: "Teleradyo Serbisyo HD",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/teleradyoserbisyohd/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/TeleRadyo_Serbisyo_logo.svg/500px-TeleRadyo_Serbisyo_logo.svg.png",
+    language: "English"
+  },
+  {
+    title: "SMNI",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/smni/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/d/df/SMNI39.jpg",
+    language: "English"
+  },
+  {
+    title: "Setanta Sports",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/setantasports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/commons/5/5d/Setanta-logo.jpg",
+    language: "English"
+  },
+  {
+    title: "RPTV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/rptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/IDCHfXm.png",
+    language: "English"
+  },
+  {
+    title: "PTV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/ptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/plyCuAw.png",
+    language: "English"
+  },
+  {
+    title: "PBO",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/pbo/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/oOMAyoX.png",
+    language: "English"
+  },
+  {
+    title: "PBA Rush",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/pbarush/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/tvxCVRr.png",
+    language: "English"
+  },
+  {
+    title: "One Sports +",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/onesports-1/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/nFLt8cN.png",
+    language: "English"
+  },
+  {
+    title: "One Sports",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/onesports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/RrBWZ16.png",
+    language: "English"
+  },
+  {
+    title: "One PH",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/oneph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/OnePHCignal.svg/300px-OnePHCignal.svg.png",
+    language: "English"
+  },
+  {
+    title: "One News",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/onenews/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/flKo7E5.png",
+    language: "English"
+  },
+  {
+    title: "NET25",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/net25/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/russel/images/9/9d/Net_25_Logo_2021.png",
+    language: "English"
+  },
+  {
+    title: "NBA TV Philippines",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/nbatvphilippines/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/g5Q35IH.png",
+    language: "English"
+  },
+  {
+    title: "Metro Channel",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/metrochannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Metro_Channel_logo.png/300px-Metro_Channel_logo.png",
+    language: "English"
+  },
+  {
+    title: "MPTV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/mptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/gomDxSz.png",
+    language: "English"
+  },
+  {
+    title: "Knowledge Channel",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/knowledgechannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/logopedia/images/9/9b/Knowledge-Channel.png",
+    language: "English"
+  },
+  {
+    title: "Kapamilya Channel",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/kapamilyachannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/POt9KB8.png",
+    language: "English"
+  },
+  {
+    title: "Jeepney TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/jeepneytv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Jeepney_TV_Logo_2015.svg/300px-Jeepney_TV_Logo_2015.svg.png",
+    language: "English"
+  },
+  {
+    title: "INC TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/inctv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/INCTV_Logo_With_Shadow.webp/300px-INCTV_Logo_With_Shadow.webp.png",
+    language: "English"
+  },
+  {
+    title: "IBC13",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/ibc13/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/signons-and-signoffs/images/4/45/IBC_13_Logo.png",
+    language: "English"
+  },
+  {
+    title: "GTV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/gtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/geuq18u.png",
+    language: "English"
+  },
+  {
+    title: "GMA",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/gma/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/Cu1tAY8.png",
+    language: "English"
+  },
+  {
+    title: "DZRH TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/dzrhtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/9/99/DZRH_logo_2021.png",
+    language: "English"
+  },
+  {
+    title: "CLTV 36",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/cltv36/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://upload.wikimedia.org/wikipedia/en/b/ba/CLTV-36_Logo.jpeg",
+    language: "English"
+  },
+  {
+    title: "Cinemo",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/cinemo/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/4xDiXMP.png",
+    language: "English"
+  },
+  {
+    title: "Cinema One",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/cinemaone/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/hJ6MBiA.png",
+    language: "English"
+  },
+  {
+    title: "Buko",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/buko/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/c740k3p.png",
+    language: "English"
+  },
+  {
+    title: "Blast Sports",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/blastsports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/XxHlcBN.png",
+    language: "English"
+  },
+  {
+    title: "Billonaryo News Channel",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/billonaryonewschannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/russel/images/a/a8/Bilyonaryo_News_Channel_Logo_2024.png",
+    language: "English"
+  },
+  {
+    title: "Viva Cinema",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/vivacinema/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/5jn4U88.png",
+    language: "English"
+  },
+  {
+    title: "A2Z",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/a2z/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://i.imgur.com/3myn4zH.png",
+    language: "English"
+  },
+  {
+    title: "ALIW TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/aliwtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://alcgroup.com.ph/wp-content/uploads/2024/10/Aliw-Channel-23-e1729733268662-768x252.png",
+    language: "English"
+  },
+  {
+    title: "ALL TV",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/alltv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://brandlogo.org/wp-content/uploads/2024/05/All-TV-Logo-300x300.png.webp",
+    language: "English"
+  },
+  {
+    title: "ANC PH",
+    url:
+      "https://ott.studentsdemo.com/stream/phcathenatv/ancph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
+    image: "https://static.wikia.nocookie.net/russel/images/4/4c/ANC_Logo_2015.png",
+    language: "English"
+  },
 ];
 
 const channelList = document.querySelector(".channel-list");
