@@ -75,16 +75,6 @@ All videos will play within this window!</br>
 If you are redirected to a different window for any reason,</br>
 simply close it and get back here!</br>
 </div>
-<div class="terra"><script type="text/javascript">
-	atOptions = {
-		'key' : '31659dfd382d23627d3b20f3dae9ec68',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//perilastronaut.com/31659dfd382d23627d3b20f3dae9ec68/invoke.js"></script></div>
 <div style="text-align: center; margin-bottom: 20px;">
     <select id="genre-dropdown">
         <option value="" disabled selected>Select Genre</option>
@@ -92,16 +82,6 @@ simply close it and get back here!</br>
         <!-- Genre options will be dynamically populated here -->
     </select>
 </div>
-<div class="terra"><script type="text/javascript">
-	atOptions = {
-		'key' : '6b01e67100c2170e766afcf1bec51d6a',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//perilastronaut.com/6b01e67100c2170e766afcf1bec51d6a/invoke.js"></script></div>
 <div class="gallery" id="gallery-container"></div>
 <script>
 const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON(files){try{const responses=await Promise.all(files.map(file=>fetch(file))),data=await Promise.all(responses.map(response=>response.ok?response.json():(console.error("Error fetching file:",file,response.status),{movies:[]})));return data.flatMap(data=>data.movies)}catch(error){return console.error("Error fetching JSON files:",error),[]}}fetchAndMergeJSON(jsonFiles).then(movies=>{const galleryContainer=document.getElementById("gallery-container"),figures=[],genreSet=new Set,requestedMovies=movies.filter(movie=>movie.requested===!0);requestedMovies.forEach(movie=>{if(!movie.title||!movie.link||!movie.image)return void console.warn("Skipping movie due to missing data:",movie);const genres=Array.isArray(movie.genres)?movie.genres:[],figure=document.createElement("figure");figure.classList.add("movie-figure"),figure.dataset.title=movie.title.toLowerCase(),figure.dataset.genres=genres.join(",").toLowerCase();const anchor=document.createElement("a");anchor.href=movie.link,anchor.className="movie-link";const img=document.createElement("img");img.alt=movie.title,img.dataset.src=movie.image,img.className="defer-image",img.width=240,img.height=320;const spinner=document.createElement("div");spinner.className="spinner",anchor.appendChild(spinner),anchor.appendChild(img),img.onload=()=>{spinner.style.display="none"},img.onerror=()=>{spinner.style.display="none",console.error("Failed to load image:",movie.image)};const span=document.createElement("span");span.className="tag positioned";switch(movie.tag.toLowerCase()){case"hd":span.classList.add("hd"),span.textContent="HD";break;case"ts":span.classList.add("ts"),span.textContent="TS";break;case"cam":span.classList.add("cam"),span.textContent="CAM";break;default:span.textContent=movie.tag||"🔥"}const caption=document.createElement("figcaption");caption.textContent=movie.title,caption.style.cursor="pointer",caption.addEventListener("click",()=>{window.location.href=movie.link}),figure.appendChild(anchor),figure.appendChild(span),figure.appendChild(caption),galleryContainer.appendChild(figure),figures.push(figure),genres.forEach(genre=>genreSet.add(genre.toLowerCase()))});const genreDropdown=document.getElementById("genre-dropdown");genreSet.forEach(genre=>{const option=document.createElement("option");option.value=genre,option.textContent=genre.charAt(0).toUpperCase()+genre.slice(1),genreDropdown.appendChild(option)});const lazyLoad=()=>{document.querySelectorAll(".defer-image").forEach(img=>{img.getBoundingClientRect().top<window.innerHeight&&!img.src&&(img.src=img.dataset.src)})};window.addEventListener("scroll",lazyLoad),lazyLoad(),genreDropdown.addEventListener("change",function(){const selectedGenre=this.value;figures.forEach(figure=>{figure.dataset.genres.split(",").includes(selectedGenre)||"all"===selectedGenre?figure.classList.remove("hidden"):figure.classList.add("hidden")})})}).catch(error=>{console.error("Error processing the JSON data:",error)});
