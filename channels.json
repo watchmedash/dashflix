@@ -1,5 +1,65 @@
 [
   {
+    "title": "Beano",
+    "url": "https://beanostudios-beanotv-1-gb.samsung.wurl.tv/playlist.m3u8",
+    "image": "https://static.wikia.nocookie.net/logopedia/images/3/38/Beano_Studios_RGB.png",
+    "language": "English"
+  },
+  {
+    "title": "ABC AU",
+    "url": "https://c.mjh.nz/abc-nsw.m3u8",
+    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-au.png",
+    "language": "English"
+  },
+  {
+    "title": "ABC Entertains",
+    "url": "https://c.mjh.nz/abc-me.m3u8",
+    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-entertains-au.png",
+    "language": "English"
+  },
+  {
+    "title": "ABC News",
+    "url": "https://c.mjh.nz/abc-news.m3u8",
+    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png",
+    "language": "English"
+  },
+  {
+    "title": "STARZ 1",
+    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz1.east.ca.m3u8",
+    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-1-ca.png?raw=true",
+    "language": "English"
+  },
+  {
+    "title": "STARZ 2",
+    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz2.east.ca.m3u8",
+    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-2-ca.png?raw=true",
+    "language": "English"
+  },
+  {
+    "title": "HBO",
+    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/hbo.ca.m3u8",
+    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/hbo-1-ca.png?raw=true",
+    "language": "English"
+  },
+  {
+    "title": "WOWOW Prime",
+    "url": "https://luong.utako.moe/wprime/index.m3u8",
+    "image": "https://www.lyngsat.com/logo/tv/ww/wowow_prime.png",
+    "language": "English"
+  },
+  {
+    "title": "WOWOW Live",
+    "url": "https://luong.utako.moe/wlive/index.m3u8",
+    "image": "https://www.lyngsat.com/logo/tv/ww/wowow_live.png",
+    "language": "English"
+  },
+  {
+    "title": "TBS Channel 1",
+    "url": "https://luong.utako.moe/tbsch1/index.m3u8",
+    "image": "https://www.lyngsat.com/logo/tv/tt/tbs-channel-1-jp.png",
+    "language": "English"
+  },
+  {
     "title": "Hallmark Channel East",
     "url": "https://fl2.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-channel-us.png",
