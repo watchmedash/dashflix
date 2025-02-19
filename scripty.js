@@ -77,7 +77,8 @@ const searchInput = document.querySelector("#search");
 searchInput.addEventListener("input", (e) => {
   const searchTerm = e.target.value.toLowerCase();
   const filteredChannels = channelsData.filter((channel) => {
-    return channel.title.toLowerCase().includes(searchTerm) || channel.language.toLowerCase().includes(searchTerm);
+    return channel.title.toLowerCase().includes(searchTerm) ||
+           channel.language.toLowerCase().includes(searchTerm);
   });
   renderChannels(filteredChannels);
 });
