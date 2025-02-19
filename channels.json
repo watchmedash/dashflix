@@ -1,13 +1,13 @@
 [
   {
     "title": "FXM",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FX_MOVIE/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FX_MOVIE/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fxm-movie-channel-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "FYI East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FYI/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FYI/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fyi-us.png?raw=true",
     "language": "English"
   },
@@ -25,13 +25,13 @@
   },
   {
     "title": "HBO2 East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/HBO_2/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/HBO_2/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s68140_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "HBO Family East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/HBO_FAMILY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/HBO_FAMILY/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16585_dark_360w_270h.png",
     "language": "English"
   },
@@ -43,25 +43,25 @@
   },
   {
     "title": "HLN",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/HLN/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/HLN/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10145_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "ID (Investigation Discovery) East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16615_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "ION",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/ION_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/ION_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/ion-television-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Lifetime East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/LIFETIME/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/LIFETIME/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/lifetime-us.png",
     "language": "English"
   },
@@ -73,19 +73,19 @@
   },
   {
     "title": "MLB 1",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/MLB_1/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/MLB_1/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mlb-network-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "MLB 2",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/MLB_2/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/MLB_2/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mlb-network-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "MLB 3",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/MLB_3/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/MLB_3/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s62081_dark_360w_270h.png",
     "language": "English"
   },
@@ -97,31 +97,31 @@
   },
   {
     "title": "MotorTrend",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/MOTOR_TREND/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/MOTOR_TREND/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s31046_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "FS1",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FOX_Sports_1/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FOX_Sports_1/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fox-sports-1-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Freeform",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FREE_FORM/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FREE_FORM/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10093_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "FX East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FX/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FX/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14321_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "FXX East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FXX/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FXX/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s17927_dark_360w_270h.png",
     "language": "English"
   },
@@ -133,7 +133,7 @@
   },
   {
     "title": "GRIT TV",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/GRIT_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/GRIT_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/grit-us.png?raw=true",
     "language": "English"
   },
@@ -151,19 +151,19 @@
   },
   {
     "title": "HBO Comedy East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/HBO_COMEDY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/HBO_COMEDY/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18429_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "HSN",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/HSN/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/HSN/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/hsn-us.png",
     "language": "English"
   },
   {
     "title": "INSP TV",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/INSP/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/INSP/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/insp-us.png?raw=true",
     "language": "English"
   },
@@ -175,7 +175,7 @@
   },
   {
     "title": "Lifetime Movies Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18480_dark_360w_270h.png",
     "language": "English"
   },
@@ -187,7 +187,7 @@
   },
   {
     "title": "MeTV",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/ME_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/ME_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/me-tv-us.png?raw=true",
     "language": "English"
   },
@@ -229,19 +229,19 @@
   },
   {
     "title": "National Geographic",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/National_Geographic/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/National_Geographic/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s49438_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "National Geographic Wild",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/Nat_Geo_Wild/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/Nat_Geo_Wild/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s66804_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "NBA TV",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NBA_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NBA_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nba-tv-us.png?raw=true",
     "language": "English"
   },
@@ -253,19 +253,19 @@
   },
   {
     "title": "NBC Golf",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/GOLF_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/GOLF_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14899_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "NewsNation",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NEWS_NATION/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NEWS_NATION/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/news-nation-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "NFL 5",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NFL_5/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NFL_5/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nfl-icon-us.png?raw=true",
     "language": "English"
   },
@@ -283,13 +283,13 @@
   },
   {
     "title": "NHL 1",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NHL_1/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NHL_1/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nhl-network-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "NHL Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NHL_NETWORK/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NHL_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58570_dark_360w_270h.png",
     "language": "English"
   },
@@ -301,13 +301,13 @@
   },
   {
     "title": "NickJr East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NICK_JR/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NICK_JR/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s19211_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "NickMusic USA",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-music-us.png?raw=true",
     "language": "English"
   },
@@ -325,13 +325,13 @@
   },
   {
     "title": "OuterMax",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/OUTER_MAX/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/OUTER_MAX/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cinemax-outermax-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Outside TV",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/OUTSIDE_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/OUTSIDE_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/outside-tv-us.png?raw=true",
     "language": "English"
   },
@@ -355,13 +355,13 @@
   },
   {
     "title": "ReelzChannel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/REELZ/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/REELZ/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s52199_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "Revolt",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/REVOLT/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/REVOLT/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/revolt-us.png?raw=true",
     "language": "English"
   },
@@ -373,31 +373,31 @@
   },
   {
     "title": "Showtime 2 East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SHOWTIME_2/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SHOWTIME_2/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-2-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Showtime Extreme East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-extreme-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Showtime Next",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SHOWTIME_NEXT/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SHOWTIME_NEXT/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-next-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Showtime Women East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SHOWTIME_WOMEN/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-women-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Smithsonian Channel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SMITHSONIAN_CHANNEL/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/smithsonian-channel-us.png?raw=true",
     "language": "English"
   },
@@ -409,31 +409,31 @@
   },
   {
     "title": "Starz East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Starz Comedy East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ_COMEDY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ_COMEDY/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-comedy-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Starz Edge East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ_EDGE/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ_EDGE/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-edge-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Starz Encore East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ_ENCORE/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ_ENCORE/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "Starz Encore Action",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-action-us.png?raw=true",
     "language": "English"
   },
@@ -445,13 +445,13 @@
   },
   {
     "title": "Starz Encore Westerns",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-westerns-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "SYFY East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/SYFY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/SYFY/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/syfy-us.png?raw=true",
     "language": "English"
   },
@@ -469,13 +469,13 @@
   },
   {
     "title": "Tennis Channel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/TENNIS_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/TENNIS_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s33395_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "TLC (The Learning Channel) East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/TLC/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/TLC/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11158_dark_360w_270h.png",
     "language": "English"
   },
@@ -487,13 +487,13 @@
   },
   {
     "title": "Travel Channel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/Travel_Channel/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/Travel_Channel/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/travel-channel-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "truTV East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/TRU_TV/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/TRU_TV/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10153_dark_360w_270h.png",
     "language": "English"
   },
@@ -529,7 +529,7 @@
   },
   {
     "title": "TVLand",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/TV_Land/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/TV_Land/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/tv-land-us.png?raw=true",
     "language": "English"
   },
@@ -541,31 +541,31 @@
   },
   {
     "title": "USA Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/USA_Network/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/USA_Network/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/usa-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "VH1 East",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/VH1/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/VH1/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11218_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "Vice",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/VICELAND/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/VICELAND/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18822_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "W Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/W_NETWORK/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/W_NETWORK/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/w-network-ca.png",
     "language": "English"
   },
   {
     "title": "Weather Channel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/THE_WEATHER_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/THE_WEATHER_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58812_dark_360w_270h.png",
     "language": "English"
   },
@@ -577,13 +577,13 @@
   },
   {
     "title": "WGN",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/WGN/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/WGN/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/wgn-america-us.png",
     "language": "English"
   },
   {
     "title": "World Fishing Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/WORLD_FISHING_NETWORK/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/WORLD_FISHING_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/world-fishing-network-us.png?raw=true",
     "language": "English"
   },
@@ -595,43 +595,43 @@
   },
   {
     "title": "DIY",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/DIY/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/DIY/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/diy-network-ca.png",
     "language": "English"
   },
   {
     "title": "E ENTERTAINMENT TELEVISION",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/E_ENTERTAINMENT_TELEVISION/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/e-entertainment-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "MGM+ Drive-In",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/EPIX_DRIVE_IN/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-drive-in-us.png?raw=true",
     "language": "English"
   },
   {
     "title": "ESPN 2",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/ESPN_2/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/ESPN_2/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12444_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "ESPN NEWS",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/ESPN_NEWS/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/ESPN_NEWS/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16485_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "ESPN U",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/ESPN_U/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/ESPN_U/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s45654_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "FOOD NETWORK",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FOOD_NETWORK/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FOOD_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12574_dark_360w_270h.png",
     "language": "English"
   },
@@ -643,7 +643,7 @@
   },
   {
     "title": "FOX Business Network",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/FOX_Business_Network/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/FOX_Business_Network/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fox-business-us.png?raw=true",
     "language": "English"
   },
@@ -673,13 +673,13 @@
   },
   {
     "title": "Discovery Family",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/DISCOVERY_FAMILY_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/DISCOVERY_FAMILY_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16618_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "Discovery Life",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/DISCOVERY_LIFE/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/DISCOVERY_LIFE/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16125_dark_360w_270h.png",
     "language": "English"
   },
@@ -691,7 +691,7 @@
   },
   {
     "title": "Disney Channel",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/DISNEY_CHANNEL/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/DISNEY_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10171_dark_360w_270h.png",
     "language": "English"
   },
@@ -703,13 +703,13 @@
   },
   {
     "title": "Disney XD",
-    "url": "https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/DISNEY_XD/index.m3u8",
+    "url": "http://fl2.moveonjoy.com/DISNEY_XD/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18279_dark_360w_270h.png",
     "language": "English"
   },
   {
     "title": "CRAVE 4",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CRAVE_4/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CRAVE_4/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-4-ca.png",
     "language": "English"
   },
@@ -721,7 +721,7 @@
   },
   {
     "title": "CRAVE 2",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CRAVE_2/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CRAVE_2/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-2-ca.png",
     "language": "English"
   },
@@ -745,7 +745,7 @@
   },
   {
     "title": "C-SPAN",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/C-SPAN/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/C-SPAN/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10161_dark_360w_270h.png",
     "language": "English"
   },
@@ -769,7 +769,7 @@
   },
   {
     "title": "CNN International",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CNN_INTERNATIONAL/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CNN_INTERNATIONAL/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cnn-us.png?raw=true",
     "language": "English"
   },
@@ -787,7 +787,7 @@
   },
   {
     "title": "Cinemax West",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CINEMAX_WEST/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CINEMAX_WEST/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cinemax-us.png?raw=true",
     "language": "English"
   },
@@ -799,7 +799,7 @@
   },
   {
     "title": "Cinemax East",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CINEMAX_EAST/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CINEMAX_EAST/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cinemax-us.png",
     "language": "English"
   },
@@ -817,7 +817,7 @@
   },
   {
     "title": "CBS East",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/CBSEAST/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/CBSEAST/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10098_dark_360w_270h.png",
     "language": "English"
   },
@@ -853,7 +853,7 @@
   },
   {
     "title": "BET Soul",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/BET_SOUL/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/BET_SOUL/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-soul-us.png?raw=true",
     "language": "English"
   },
@@ -865,7 +865,7 @@
   },
   {
     "title": "BET Gospel",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-gospel-us.png?raw=true",
     "language": "English"
   },
@@ -883,7 +883,7 @@
   },
   {
     "title": "Animal Planet",
-    "url":"https://cors-anywhere.herokuapp.com/http://fl2.moveonjoy.com/Animal_Planet/index.m3u8",
+    "url":"http://fl2.moveonjoy.com/Animal_Planet/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/animal-planet-us.png",
     "language": "English"
   },
