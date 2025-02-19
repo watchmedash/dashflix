@@ -3,6 +3,9 @@ const video = document.querySelector("#player");
 const nowPlayingTitle = document.querySelector("#channel-playing");
 let channelsData = [];
 
+// Set your Cloudflare Worker proxy URL here
+const proxyUrl = "https://hls-proxy.mojazer2017.workers.dev/?url=";
+
 function renderChannels(channels) {
   channelList.innerHTML = "";
   channels.forEach((channel) => {
@@ -39,13 +42,20 @@ function loadStream(channelPlay) {
   document.querySelectorAll(".channel").forEach((channel) => {
     channel.dataset.playing = "false";
   });
+
+  // Get the original m3u8 URL from the element
   const url = channelPlay.dataset.m3u8 || channelPlay.querySelector(".channel-title").dataset.url;
+
+  // Build the proxied URL by prepending the Cloudflare Worker URL and encoding the original URL
+  const proxiedUrl = proxyUrl + encodeURIComponent(url);
+
   const parent = channelPlay.closest("li");
   const title = parent.querySelector(".channel-title").textContent;
   parent.dataset.playing = "true";
+
   if (Hls.isSupported()) {
     const hls = new Hls();
-    hls.loadSource(url);
+    hls.loadSource(proxiedUrl);
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED, () => {
       video.play();
