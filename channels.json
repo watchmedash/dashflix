@@ -3,493 +3,523 @@
     "title": "Beano",
     "url": "https://beanostudios-beanotv-1-gb.samsung.wurl.tv/playlist.m3u8",
     "image": "https://static.wikia.nocookie.net/logopedia/images/3/38/Beano_Studios_RGB.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ABC AU",
     "url": "https://c.mjh.nz/abc-nsw.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-au.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ABC Entertains",
     "url": "https://c.mjh.nz/abc-me.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-entertains-au.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ABC News",
     "url": "https://c.mjh.nz/abc-news.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "STARZ 1",
     "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz1.east.ca.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-1-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "STARZ 2",
     "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz2.east.ca.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-2-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "HBO",
     "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/hbo.ca.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/hbo-1-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "WOWOW Prime",
     "url": "https://luong.utako.moe/wprime/index.m3u8",
     "image": "https://www.lyngsat.com/logo/tv/ww/wowow_prime.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "WOWOW Live",
     "url": "https://luong.utako.moe/wlive/index.m3u8",
     "image": "https://www.lyngsat.com/logo/tv/ww/wowow_live.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TBS Channel 1",
     "url": "https://luong.utako.moe/tbsch1/index.m3u8",
     "image": "https://www.lyngsat.com/logo/tv/tt/tbs-channel-1-jp.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Hallmark Channel East",
     "url": "https://fl2.moveonjoy.com/HALLMARK_CHANNEL/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-channel-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Hallmark Mystery",
     "url": "https://fl2.moveonjoy.com/HALLMARK_MOVIES_MYSTERIES/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/hallmark-mystery-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "HGTV East",
     "url": "https://fl2.moveonjoy.com/HGTV/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s14902_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MGM+",
     "url": "https://fl2.moveonjoy.com/EPIX/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mgm-plus-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MLB Network",
     "url": "https://fl2.moveonjoy.com/MLB_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s62081_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "GAME SHOW NETWORK",
     "url": "https://fl5.moveonjoy.com/GAME_SHOW_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/game-show-network-hz-us.png?raw=true",
-    "language": "English"
+    "language": ""
+  },
+  {
+    "title": "Redbull TV",
+    "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
+    "image": "https://raw.githubusercontent.com/FunctionError/Logos/main/Pirates-Tv.png",
+    "language": ""
+  },
+  {
+    "title": "Colors Infinity SD",
+    "url": "https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8",
+    "image": "https://gd.mdsharifulislamnayon.workers.dev/1:/TV%20LOGO/colors%20infinity.jpeg",
+    "language": ""
+  },
+  {
+    "title": "Zoo Moo",
+    "url": "https://amg01553-blueantmediaasi-zoomoonz-samsungnz-rdufn.amagi.tv/playlist/amg01553-blueantmediaasi-zoomoonz-samsungnz/playlist.m3u8",
+    "image": "https://raw.githubusercontent.com/FunctionError/Logos/main/Pirates-Tv.png",
+    "language": ""
+  },
+  {
+    "title": "Pogo",
+    "url": "https://amg01448-samsungin-pogo-samsungin-dzccl.amagi.tv/playlist/amg01448-samsungin-pogo-samsungin/playlist.m3u8",
+    "image": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/POGO.jpeg",
+    "language": ""
+  },
+  {
+    "title": "Star Sports 1 HD",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+    "image": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Star%20Sports%201%40.jpeg",
+    "language": ""
   },
   {
     "title": "Hallmark Family",
     "url": "https://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/hallmark-family-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "HBO East",
     "url": "https://fl2.moveonjoy.com/HBO/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10240_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Laff TV",
     "url": "https://72.46.118.193/Laff/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/laff-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Love Nature",
     "url": "https://fl1.moveonjoy.com/LOVE_NATURE/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/love-nature-4k-ca.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MSG",
     "url": "https://fl3.moveonjoy.com/MSG/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/msg-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MTV",
     "url": "https://fl2.moveonjoy.com/MTV/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10986_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MTV Live",
     "url": "https://fl2.moveonjoy.com/MTV_LIVE/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-live-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MTV2",
     "url": "https://fl2.moveonjoy.com/MTV_2/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-2-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "mtvU",
     "url": "https://fl2.moveonjoy.com/MTV_U/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-u-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MUCH",
     "url": "https://fl1.moveonjoy.com/MUCH/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/much-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NBC",
     "url": "https://fl1.moveonjoy.com/NBC_EAST/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-logo-flat-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NFL Network",
     "url": "https://fl2.moveonjoy.com/NFL_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nfl-network-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NFL RedZone",
     "url": "https://fl1.moveonjoy.com/NFL_RedZone/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nfl-red-zone-hz-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Nickelodeon East",
     "url": "https://fl1.moveonjoy.com/NICKELODEON/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11006_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NickToons East",
     "url": "https://fl1.moveonjoy.com/NICKTOONS/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nick-toons-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Oprah Winfrey Network (OWN) East",
     "url": "https://fl2.moveonjoy.com/OWN/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/oprah-winfrey-network-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Ovation",
     "url": "https://fl3.moveonjoy.com/Ovation/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/ovation-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Oxygen East",
     "url": "https://fl2.moveonjoy.com/OXYGEN/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/oxygen-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Paramount Network",
     "url": "https://fl2.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/paramount-network-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Showtime East",
     "url": "https://fl2.moveonjoy.com/SHOWTIME/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Start TV",
     "url": "https://fl3.moveonjoy.com/Start_Tv/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/start-tv-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Starz Encore Classic",
     "url": "https://fl5.moveonjoy.com/STARZ_ENCORE_CLASSIC/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-classic-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TBS East",
     "url": "https://fl1.moveonjoy.com/TBS/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11867_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TCM (Turner Classic Movies) East",
     "url": "https://fl1.moveonjoy.com/TCM/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12852_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TNT East",
     "url": "https://fl2.moveonjoy.com/TNT/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11164_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TSN",
     "url": "https://fl5.moveonjoy.com/TSN_1/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-1-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TSN 2",
     "url": "https://fl5.moveonjoy.com/TSN_2/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-2-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TSN 3",
     "url": "https://fl5.moveonjoy.com/TSN_3/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-3-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TSN 4",
     "url": "https://fl5.moveonjoy.com/TSN_4/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-4-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TSN 5",
     "url": "https://fl5.moveonjoy.com/TSN_5/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/tsn-5-ca.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TVOne",
     "url": "https://fl2.moveonjoy.com/TV_ONE/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/indonesia/tv-one-id.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "WeTV",
     "url": "https://fl1.moveonjoy.com/WE_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/we-tv-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "YES Network",
     "url": "https://fl2.moveonjoy.com/YES_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/yes-network-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "FOX (WNYW)",
     "url": "https://fl1.moveonjoy.com/FOX_EAST/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/us-local/fox-5-wnyw-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "FOX SOUL",
     "url": "https://fl1.moveonjoy.com/FOX_SOUL/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/fox-soul-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Curiosity Stream",
     "url": "https://fl3.moveonjoy.com/Curiosity_Stream/index.m3u8",
     "image": "https://i.imgur.com/vRO4e5W.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Destination America",
     "url": "https://fl3.moveonjoy.com/Destination_America/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/destination-america-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Discovery Channel",
     "url": "https://fl3.moveonjoy.com/Discovery_Channel/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-channel-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Discovery Science",
     "url": "https://fl3.moveonjoy.com/Discovery_Science/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/discovery-science-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Disney Jr",
     "url": "https://fl2.moveonjoy.com/DISNEY_JR/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s74796_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CRAVE 3",
     "url":"https://fl3.moveonjoy.com/CRAVE_3/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-3-ca.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CRAVE 1",
     "url":"https://fl3.moveonjoy.com/CRAVE_1/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-1-ca.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "COZI TV",
     "url":"https://fl3.moveonjoy.com/COZI_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cozi-tv-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "COURT TV",
     "url":"https://fl3.moveonjoy.com/COURT_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/court-tv-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cooking Channel",
     "url":"https://fl3.moveonjoy.com/COOKING_CHANNEL/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s30156_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "COMET",
     "url":"https://fl3.moveonjoy.com/COMET/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/comet-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Comedy Central",
     "url":"https://fl3.moveonjoy.com/Comedy_Central/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10149_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CNN",
     "url":"https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_3_1464000.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s58646_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CMT East",
     "url":"https://fl3.moveonjoy.com/CMT/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10138_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Moremax",
     "url":"https://fl3.moveonjoy.com/CINEMAX_MOREMAX/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cinemax-moremax-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cleo TV",
     "url":"https://fl3.moveonjoy.com/Cleo_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cleo-tv-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CBS Sports Network",
     "url":"https://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16365_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cartoon Network",
     "url":"https://cdn2.skygo.mn/live/disk1/Cartoon_Network/HLS-FTA/Cartoon_Network.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s12131_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Buzzr",
     "url":"https://fl3.moveonjoy.com/Buzzr/index.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/united-states/buzzr-us.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Bravo",
     "url":"https://fl2.moveonjoy.com/BRAVO/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10057_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Boomerang",
     "url":"https://fl3.moveonjoy.com/BOOMERANG/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s21883_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Big Ten Network",
     "url":"https://fl3.moveonjoy.com/BIG_TEN_NETWORK/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-soul-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "BET Jams",
     "url":"https://fl3.moveonjoy.com/BET_Jams/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-jams-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "BET East",
     "url":"https://fl2.moveonjoy.com/BET_EAST/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "BEIN Sports",
     "url":"https://fl2.moveonjoy.com/BEIN_SPORTS/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bein-sports-us.png?raw=true",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "American Heroes Channel",
     "url":"https://fl3.moveonjoy.com/American_Heroes_Channel/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s18284_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "AMC Network",
     "url":"https://fl5.moveonjoy.com/AMC_NETWORK/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10021_dark_360w_270h.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Akaku",
     "url":"https://s3-us-west-2.amazonaws.com/akaku.castus-vod/live/ch3/video.m3u8",
     "image": "https://cdn.akaku.org/Channel55.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "BBC",
     "url":"https://d2vnbkvjbims7j.cloudfront.net/containerA/LTN/playlist_4300k.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "EBS Kids",
     "url":"https://ebsonair.ebs.co.kr/ebsufamilypc/familypc1m/chunklist.m3u8",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjO5fqVcDmYgsvy_2pfxEWzG_f1LIND3uZg&s",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "QVC",
     "url":"https://qvc-amd-live.akamaized.net/hls/live/2034113/lsqvc1uscln/medhigh.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/QVC_logo_2019.svg/1200px-QVC_logo_2019.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "3ABN Latino",
@@ -501,73 +531,73 @@
     "title": "3ABN",
     "url":"https://3abn.bozztv.com/3abn2/3abn_live/smil:3abn_live.smil/chunklist_w424857750_b2628000_slen.m3u8?nimblesessionid=156680337",
     "image": "https://3abn.org/img/3abn-ogg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "3ABN Kids",
     "url":"https://3abn.bozztv.com/3abn2/Kids_live/smil:Kids_live.smil/chunklist_w634438310_b2328000_slen.m3u8?nimblesessionid=156679208",
     "image": "https://3abnkids.tv/img/3ABN-KIDS-LOGO.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NBC News",
     "url":"https://d2gjhy8g9ziabr.cloudfront.net/v1/manifest/3fec3e5cac39a52b2132f9c66c83dae043dc17d4/prod-samsungtvplus-stitched/9896e224-f455-466a-908d-62d5be955cc4/4.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/NBC_News_%282023%29.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MSNBC",
     "url":"https://livenewsplayer.com:1936/msnbcsd/msnbcsd//chunklist_w96992070_tkc2VjZW5kdGltZT0xNzM5NzgzNDE0JnNlY2hhc2g9OFdscXZsVHFGQVZJZ241eVZ5QUZzakUzUUJqdzhDdHdfTjBicnZZRnYwQT0mc2Vjc3RhcnR0aW1lPTE3Mzk3NzI2MTQ=.m3u8",
     "image": "https://media-cldnry.s-nbcnews.com/image/upload/newsgroup-logos/msnbc/logo-vertical/default-black-498x404.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "The Weather Channel",
     "url":"https://livenewsplayer.com:1936/weathersd/weathersd//chunklist_w786740579_tkc2VjZW5kdGltZT0xNzM5ODQ3OTIzJnNlY2hhc2g9OTFiVkczM1AzY215X2ZBSndhZF95M2txb1ZZRmZ5WjE0YnBhMThnNUhVUT0mc2Vjc3RhcnR0aW1lPTE3Mzk3NzI5MjM=.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/7/77/The_Weather_Channel_logo_2005-present.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Sky News Australia",
     "url":"https://skynewsau-live.akamaized.net/hls/live/2002691/skynewsau-extra3/master_576p.m3u8",
     "image": "https://content.api.news/v3/images/bin/5b4fdbc3df286aa953bcc0b3a0df5c38",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Bloomberg TV",
     "url":"https://liveprodusphoenixeast.akamaized.net/USPhx-HD/Channel-TX-USPhx-AWS-virginia-1/Source-USPhx-16k-1-s6lk2-BP-07-02-81ykIWnsMsg_live.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Bloomberg_Television_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CNBC",
     "url":"https://liveprodusphoenixeast.global.ssl.fastly.net/USPhx-HD/Channel-TX-USPhx-AWS-virginia-1/Source-USPhx-16k-1-s6lk2-BP-07-03-0Yn1cQZHOtP_live.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Fox News",
     "url":"https://fox-foxnewsnow-samsungus.amagi.tv/playlist720p.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Fox_News_Channel_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MBC 1",
     "url":"https://d3o3cim6uzorb4.cloudfront.net/out/v1/0965e4d7deae49179172426cbfb3bc5e/index_3.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Mbc1logo_%282%29.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MYX",
     "url":"https://ott.studentsdemo.com/stream/phcathenatv/myxph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Myxphlogo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "PBS Kids",
     "url":"https://2-fss-2.streamhoster.com/pl_140/amlst:200914-1298290/chunklist_b2000000.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/PBS_Kids_logo_%282022%29.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Russia Today",
@@ -579,25 +609,25 @@
     "title": "Fox Weather",
     "url":"https://247wlive.foxweather.com/stream/index_1280x720.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Fox_Weather_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Newsnet",
     "url":"https://2-fss-2.streamhoster.com/pl_138/amlst:201950-1311088/chunklist_b2000000.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/98/NewsNetLogo2022.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "QVC",
     "url":"https://qvc-amd-live.akamaized.net/hls/live/2034113/lsqvc1uscln/medhigh.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/QVC_logo_2019.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cheddar News",
     "url":"https://livestream.chdrstatic.com/b93e5b0d43ea306310a379971e384964acbe4990ce193c0bd50078275a9a657d/cheddar-42620/cheddarweblive/cheddar/primary/2.m3u8",
     "image": "https://variety.com/wp-content/uploads/2024/01/Cheddar.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Gulli",
@@ -633,35 +663,35 @@
     "title": "HLN US",
     "url":"https://turnerlive.warnermediacdn.com/hls/live/586496/cnngo/hln/VIDEO_0_3564000.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/HLN_%28TV_network%29_2017_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Global News Calgary",
     "url":
       "https://live.corusdigitaldev.com/groupd/live/8970c668-40cd-4ca9-8c4d-25fd04f619b5/live.isml/live-audio_1=96000-video=2499968.m3u8",
     "image": "https://i1.wp.com/media.globalnews.ca/videostatic/1003/251/GCMN170111_DANIELLE.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Global News Edmonton",
     "url":
       "https://live.corusdigitaldev.com/groupb/live/215422c9-d1b9-4009-aaca-32e403f22b01/live.isml/live-audio_1=96000-video=2499968.m3u8",
     "image": "https://i0.wp.com/media.globalnews.ca/videostatic/50/90/5pmNEWS.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CPAC",
     "url":
       "https://cpac-live.cdn.vustreams.com/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/live-video_track=5400000.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/2016_CPAC_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "HSN",
     "url":
       "https://qvc-amd-live.akamaized.net/hls/live/2034113/lshsn1us/medhigh.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/HSN_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NDR Fernsehen",
@@ -731,7 +761,7 @@
     "url":
       "https://5ed325193d4e1.streamlock.net:444/LiveTV/MTVHD/chunklist_w1126852658.m3u8",
     "image": "https://www.kindpng.com/picc/m/596-5962389_beach-tv-orange-hd-png-download.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "BR Dachmarke",
@@ -766,14 +796,14 @@
     "url":
       "https://hnc-free-viewlift.amagi.tv/playlist1080_P.m3u8",
     "image": "https://static.wikia.nocookie.net/logopedia/images/3/39/Horse_%26_Country_%282009%29.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NTV Canada",
     "url":
       "https://2-fss-1.streamhoster.com/pl_122/201748-1431018-1/chunklist.m3u8",
     "image": "https://ntv.ca/wp-content/uploads/2022/11/home-800x450.jpg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Sharjah Sports",
@@ -787,20 +817,20 @@
     "url":
       "https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/07_1080-30.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Sky-news-logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Global News",
     "url":
       "https://live.corusdigitaldev.com/groupd/live/49a91e7f-1023-430f-8d66-561055f3d0f7/live.isml/master.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Global_News.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ICI RDI",
     "url": "https://rcavlive.akamaized.net/hls/live/704025/xcanrdi/master.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/ICI_RDI_logo.svg/1920px-ICI_RDI_logo.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Al Arabiya",
@@ -819,14 +849,14 @@
     "title": "Al Jazeera English",
     "url": "https://live-hls-web-aje-fa.getaj.net/alternative/AJE/01.m3u8",
     "image": "https://signagelive.com/wp-content/uploads/2024/03/AlJazeera_515-1.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "AMG TV",
     "url":
       "https://2-fss-2.streamhoster.com/pl_138/201660-1270634-1/chunklist.m3u8",
     "image": "https://channels-discourse.s3.dualstack.us-east-1.amazonaws.com/original/2X/4/4afc90f6d1da26dda0d8218b273b14bdd73ffcc0.png",
-    "language": "English"
+    "language": ""
   },
 
   {
@@ -834,7 +864,7 @@
     "url":
       "https://cdns.jp-primehome.com:8000/zhongying/live/playlist.m3u8?cid=bs15",
     "image": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Animax_logo.svg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "RTV Drenthe",
@@ -868,293 +898,311 @@
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/uaapvarsitychannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/pSLEHMa.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "UNTV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/untv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/99/UNTV-Logo-2016.svg/300px-UNTV-Logo-2016.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "tvN Movies Pinoy",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/tvnmoviespinoy/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/9fKNEHY.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TV5",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/tv5/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/jsCBRq0.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TV Maria",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/tvmaria/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/logopedia/images/c/cd/TV_MARIA_PH.png/revision/latest?cb=20200421061144",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "True FM TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/truefmtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/logopedia/images/a/a0/TRUETV_Logo_2024.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "TMC",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/tmc/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/2k0yRUd.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Teleradyo Serbisyo SD",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/teleradyoserbisyosd/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/TeleRadyo_Serbisyo_logo.svg/500px-TeleRadyo_Serbisyo_logo.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Teleradyo Serbisyo HD",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/teleradyoserbisyohd/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2e/TeleRadyo_Serbisyo_logo.svg/500px-TeleRadyo_Serbisyo_logo.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "SMNI",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/smni/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/d/df/SMNI39.jpg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Setanta Sports",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/setantasports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Setanta-logo.jpg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "RPTV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/rptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/IDCHfXm.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "PTV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/ptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/plyCuAw.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "PBO",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/pbo/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/oOMAyoX.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "PBA Rush",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/pbarush/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/tvxCVRr.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "One Sports +",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/onesports-1/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/nFLt8cN.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "One Sports",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/onesports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/RrBWZ16.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "One PH",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/oneph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/OnePHCignal.svg/300px-OnePHCignal.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "One News",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/onenews/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/flKo7E5.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NET25",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/net25/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/russel/images/9/9d/Net_25_Logo_2021.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "NBA TV Philippines",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/nbatvphilippines/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/g5Q35IH.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Metro Channel",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/metrochannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Metro_Channel_logo.png/300px-Metro_Channel_logo.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "MPTV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/mptv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/gomDxSz.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Knowledge Channel",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/knowledgechannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/logopedia/images/9/9b/Knowledge-Channel.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Kapamilya Channel",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/kapamilyachannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/POt9KB8.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Jeepney TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/jeepneytv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Jeepney_TV_Logo_2015.svg/300px-Jeepney_TV_Logo_2015.svg.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "INC TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/inctv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/INCTV_Logo_With_Shadow.webp/300px-INCTV_Logo_With_Shadow.webp.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "IBC13",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/ibc13/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/signons-and-signoffs/images/4/45/IBC_13_Logo.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "GTV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/gtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/geuq18u.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "GMA",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/gma/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/Cu1tAY8.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "DZRH TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/dzrhtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/9/99/DZRH_logo_2021.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "CLTV 36",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/cltv36/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://upload.wikimedia.org/wikipedia/en/b/ba/CLTV-36_Logo.jpeg",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cinemo",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/cinemo/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/4xDiXMP.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Cinema One",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/cinemaone/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/hJ6MBiA.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Buko",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/buko/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/c740k3p.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Blast Sports",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/blastsports/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/XxHlcBN.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Billonaryo News Channel",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/billonaryonewschannel/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/russel/images/a/a8/Bilyonaryo_News_Channel_Logo_2024.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "Viva Cinema",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/vivacinema/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/5jn4U88.png",
-    "language": "English"
+    "language": ""
+  },
+  {
+    "title": "T Sports",
+    "url": "https://iptvcable.netlify.app/Altogether-007/Tsports.m3u8",
+    "image": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/T%20Sports.png",
+    "language": ""
+  },
+  {
+    "title": "Star Sports 1 HD",
+    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
+    "image": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Star%20Sports%201%40.jpeg",
+    "language": ""
+  },
+  {
+    "title": "Astro Cricket",
+    "url": "https://criccoder.pages.dev/astro.m3u8",
+    "image": "https://i.ibb.co.com/QYyCSBm/manik.webp",
+    "language": ""
   },
   {
     "title": "A2Z",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/a2z/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://i.imgur.com/3myn4zH.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ALIW TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/aliwtv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://alcgroup.com.ph/wp-content/uploads/2024/10/Aliw-Channel-23-e1729733268662-768x252.png",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ALL TV",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/alltv/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://brandlogo.org/wp-content/uploads/2024/05/All-TV-Logo-300x300.png.webp",
-    "language": "English"
+    "language": ""
   },
   {
     "title": "ANC PH",
     "url":
       "https://ott.studentsdemo.com/stream/phcathenatv/ancph/master.m3u8?u=phc&p=34110cccc727d627ffe67a3750390af2993c1fd2acea793a0758167fc5f38430",
     "image": "https://static.wikia.nocookie.net/russel/images/4/4c/ANC_Logo_2015.png",
-    "language": "English"
+    "language": ""
   }
 ]
