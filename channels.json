@@ -1,5 +1,77 @@
 [
   {
+    "title": "CNA",
+    "url": "https://amg01082-amg01082c1-cna-worldwide-2842.playouts.now.amagi.tv/cna-cnanews-samsung/playlist720p.m3u8",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/CNA_new_logo.svg/1200px-CNA_new_logo.svg.png",
+    "language": ""
+  },
+  {
+    "title": "Taiwan+",
+    "url": "https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/ap-northeast-1/6282251407001/profile_1/chunklist.m3u8",
+    "image": "https://about.pts.org.tw/en/wp-content/uploads/2021/09/pts-c.png",
+    "language": ""
+  },
+  {
+    "title": "American idol",
+    "url": "https://d2h3esqi6ab3e7.cloudfront.net/index.m3u8",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/American_Idol_logo.svg/2560px-American_Idol_logo.svg.png",
+    "language": ""
+  },
+  {
+    "title": "Animal Planet",
+    "url": "https://ott.djdoolky76.net/stream/iptv/animalplanet/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
+    "image": "https://i.ibb.co/7VNVyTs/animal-planet.png",
+    "language": ""
+  },
+  {
+    "title": "Asian Food Network",
+    "url": "https://ott.djdoolky76.net/stream/iptv/asianfoodnetwork/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Asian_Food_Network.svg/2560px-Asian_Food_Network.svg.png",
+    "language": ""
+  },
+  {
+    "title": "AXN",
+    "url": "https://ott.djdoolky76.net/stream/iptv/axn/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
+    "image": "http://115.146.176.131:80/images/7322e4e74e109cf689b50f143663abaa.jpg",
+    "language": ""
+  },
+  {
+    "title": "Billiard TV",
+    "url": "https://1621590671.rsc.cdn77.org/HLS/BILLIARDTV_SCTE.m3u8",
+    "image": "https://image.xumo.com/v1/channels/channel/8111111/600x600.webp?type=color_onBlack",
+    "language": ""
+  },
+  {
+    "title": "GMA Pinoy TV",
+    "url": "https://ott.udptv.net/stream/iptv/gmapinoytv/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
+    "image": "http://logo.protv.cc/picons/logos/gma_pinoytv.png",
+    "language": ""
+  },
+  {
+    "title": "KBS WORLD",
+    "url": "https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8",
+    "image": "https://www.lyngsat.com/logo/tv/kk/kbs_world_kr.png",
+    "language": ""
+  },
+  {
+    "title": "NHK WORLD JAPAN",
+    "url": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NHK_World.svg/1200px-NHK_World.svg.png",
+    "language": ""
+  },
+  {
+    "title": "Nickelodeon HD",
+    "url": "https://ott.djdoolky76.net/stream/iptv/nickelodeon/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/250px-Nickelodeon_2009_logo.svg.png",
+    "language": ""
+  },
+  {
+    "title": "Outdoor channel",
+    "url": "https://amg00718-outdoorchannela-outdoortvnz-samsungnz-lylq4.amagi.tv/playlist/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8",
+    "image": "https://i.ibb.co/d73Thkh/outdoor-channel-us.png",
+    "language": ""
+  },
+  {
     "title": "Beano",
     "url": "https://beanostudios-beanotv-1-gb.samsung.wurl.tv/playlist.m3u8",
     "image": "https://static.wikia.nocookie.net/logopedia/images/3/38/Beano_Studios_RGB.png",
