@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Check session storage to see if modal has already been shown
   if (!sessionStorage.getItem("noodleShown")) {
-    // Create noodle elements
+    // Create noodle elements (warning message instead of image)
     const noodleOverlay = document.createElement("div");
     noodleOverlay.innerHTML = `
       <div class="moodle-overlay active" id="noodleOverlay">
         <div class="moodle">
-          <img src="https://i.postimg.cc/xCRJLZg4/Google.png" alt="Dashflix">
           <div class="content">
+            <p><strong>Important Notice:</strong> Our site does NOT offer any subscriptions. Please be cautious of ads, especially pop-ups or pop-unders, as we have no control over them.</p>
             <button class="close-button disabled-button" id="closeNoodle" disabled>Close (5)</button>
           </div>
         </div>
