@@ -1,6 +1,18 @@
 {
     "movies": [
       {
+          "title": "My Hero Academia: You're Next",
+          "link": "https://emirati.top/movies/My Hero Academia Youre Next",
+          "image": "https://m.media-amazon.com/images/M/MV5BNGVmZDJhNjItYzdlOC00ODA2LWFkYjctY2NmMzNiZTQ2NTVjXkEyXkFqcGc@._V1_.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Action",
+              "Animation"
+          ]
+      },
+      {
           "title": "Tokyo Nights",
           "link": "https://emirati.top/movies/Tokyo Nights",
           "image": "https://m.media-amazon.com/images/M/MV5BYzNkOTUyNTctZjMwZS00YTVjLWJlNjUtNWRkZDU5MzNiOWQwXkEyXkFqcGc@._V1_.jpg",
