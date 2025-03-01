@@ -1,98 +1,20 @@
 [
   {
-    "title": "A&E US - Eastern Feed",
-    "url": "https://v2.thetvapp.to/hls/AEEast/tracks-v1a1/mono.m3u8?token=CfhJtgx4VABu2gnGU7QCwA&expires=1740157329&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://static.wikia.nocookie.net/maditsmadfunny/images/2/27/AE_Network_logo.png",
-    "language": ""
-  },
-  {
-    "title": "KABC-TV",
-    "url": "https://v16.thetvapp.to/hls/abc-kabc-los-angeles-ca/tracks-v1a1/mono.m3u8?token=Irg2xwMig8_FrzKZ00gWQA&expires=1740157612&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/KABC-TV-Logo-2021.png",
-    "language": ""
-  },
-  {
-    "title": "WABC-TV",
-    "url": "https://v10.thetvapp.to/hls/WABCDT1/tracks-v1a1/mono.m3u8?token=IPXih3ZruKQyv4WLFNZVsA&expires=1740157695&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/WABC-TV-Logo-2021.png",
-    "language": ""
-  },
-  {
-    "title": "ACC Network",
-    "url": "https://v15.thetvapp.to/hls/ACCNetwork/tracks-v1a1/mono.m3u8?token=yxqpjXlYDj2TQif1Br5Dng&expires=1740157755&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/69/ACC_Network_Raycom_Logo.png",
-    "language": ""
-  },
-  {
-    "title": "Altitude Sports Denver",
-    "url": "https://v14.thetvapp.to/hls/altitude-sports-denver/tracks-v1a1/mono.m3u8?token=6wgdUDYX8l_unw4IPsd1Rg&expires=1740157812&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Altitude_Sports_logo.svg/1200px-Altitude_Sports_logo.svg.png",
-    "language": ""
-  },
-  {
-    "title": "AMC - Eastern Feed",
-    "url": "https://v10.thetvapp.to/hls/AMCEast/tracks-v1a1/mono.m3u8?token=qgx0Tehwf5sWzLaLp_rWMA&expires=1740157893&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/AMC_logo_2019.svg",
-    "language": ""
-  },
-  {
-    "title": "American Heroes Channel",
-    "url": "https://v1.thetvapp.to/hls/AmericanHeroesChannel/tracks-v1a1/mono.m3u8?token=5OiBDtYeeL6sG8mBKTJ_Mw&expires=1740157947&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://cordcutting.com/wp-content/uploads/2018/05/american-heroes-channel-logo.png",
-    "language": ""
-  },
-  {
     "title": "CNA",
     "url": "https://amg01082-amg01082c1-cna-worldwide-2842.playouts.now.amagi.tv/cna-cnanews-samsung/playlist720p.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/CNA_new_logo.svg/1200px-CNA_new_logo.svg.png",
     "language": ""
   },
   {
-    "title": "Animal Planet US - East",
-    "url": "https://v12.thetvapp.to/hls/AnimalPlanetEast/tracks-v1a1/mono.m3u8?token=nKrml-oPW4_2FqB2Zx-prw&expires=1740158191&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Animal_Planet_logo.svg/1200px-Animal_Planet_logo.svg.png",
-    "language": ""
-  },
-  {
-    "title": "CBS Los Angeles",
-    "url": "https://v10.thetvapp.to/hls/cbs-kcbs-los-angeles-ca/tracks-v1a1/mono.m3u8?token=eBfPfnxaCu0-Vay0QRdxVA&expires=1740158676&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://www.totaltestingsolutions.com/assets/img/logo/logo-cbs-la.png",
-    "language": ""
-  },
-  {
-    "title": "CBS New York",
-    "url": "https://v2.thetvapp.to/hls/WCBSDT1/tracks-v1a1/mono.m3u8?token=YzTo3UgKcxqUzQQ_dHaK-w&expires=1740158776&user_id=dmRHbzJlUlF3RFRvZWlnb2hGOEl6cFFIR21vc3Eza0RRTDN6M2JuQg==",
-    "image": "https://w7.pngwing.com/pngs/230/988/png-transparent-new-york-city-logo-cbs-news-cbs-logo-television-company-text.png",
-    "language": ""
-  },
-  {
     "title": "Taiwan+",
     "url": "https://bcovlive-a.akamaihd.net/rce33d845cb9e42dfa302c7ac345f7858/ap-northeast-1/ap-northeast-1/6282251407001/profile_1/chunklist.m3u8",
-    "image": "https://about.pts.org.tw/en/wp-content/uploads/2021/09/pts-c.png",
+    "image": "https://seeklogo.com/images/T/taiwan-logo-55EA4050B8-seeklogo.com.png",
     "language": ""
   },
   {
     "title": "American idol",
     "url": "https://d2h3esqi6ab3e7.cloudfront.net/index.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/American_Idol_logo.svg/2560px-American_Idol_logo.svg.png",
-    "language": ""
-  },
-  {
-    "title": "Animal Planet",
-    "url": "https://ott.djdoolky76.net/stream/iptv/animalplanet/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
-    "image": "https://i.ibb.co/7VNVyTs/animal-planet.png",
-    "language": ""
-  },
-  {
-    "title": "Asian Food Network",
-    "url": "https://ott.djdoolky76.net/stream/iptv/asianfoodnetwork/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Asian_Food_Network.svg/2560px-Asian_Food_Network.svg.png",
-    "language": ""
-  },
-  {
-    "title": "AXN",
-    "url": "https://ott.djdoolky76.net/stream/iptv/axn/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
-    "image": "http://115.146.176.131:80/images/7322e4e74e109cf689b50f143663abaa.jpg",
     "language": ""
   },
   {
@@ -108,21 +30,9 @@
     "language": ""
   },
   {
-    "title": "KBS WORLD",
-    "url": "https://kbsworld-ott.akamaized.net/hls/live/2002341/kbsworld/master.m3u8",
-    "image": "https://www.lyngsat.com/logo/tv/kk/kbs_world_kr.png",
-    "language": ""
-  },
-  {
     "title": "NHK WORLD JAPAN",
     "url": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NHK_World.svg/1200px-NHK_World.svg.png",
-    "language": ""
-  },
-  {
-    "title": "Nickelodeon HD",
-    "url": "https://ott.djdoolky76.net/stream/iptv/nickelodeon/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Nickelodeon_2009_logo.svg/250px-Nickelodeon_2009_logo.svg.png",
     "language": ""
   },
   {
@@ -138,12 +48,6 @@
     "language": ""
   },
   {
-    "title": "ABC AU",
-    "url": "https://c.mjh.nz/abc-nsw.m3u8",
-    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-au.png",
-    "language": ""
-  },
-  {
     "title": "ABC Entertains",
     "url": "https://c.mjh.nz/abc-me.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-entertains-au.png",
@@ -153,24 +57,6 @@
     "title": "ABC News",
     "url": "https://c.mjh.nz/abc-news.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png",
-    "language": ""
-  },
-  {
-    "title": "STARZ 1",
-    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz1.east.ca.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-1-ca.png?raw=true",
-    "language": ""
-  },
-  {
-    "title": "STARZ 2",
-    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/starz2.east.ca.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/starz-2-ca.png?raw=true",
-    "language": ""
-  },
-  {
-    "title": "HBO",
-    "url": "https://tvnow.best/api/stream/burns/burns/livetv.epg/hbo.ca.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/hbo-1-ca.png?raw=true",
     "language": ""
   },
   {
@@ -252,12 +138,6 @@
     "language": ""
   },
   {
-    "title": "Star Sports 1 HD",
-    "url": "http://41.205.93.154/STARSPORTS1/index.m3u8",
-    "image": "https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Star%20Sports%201%40.jpeg",
-    "language": ""
-  },
-  {
     "title": "Hallmark Family",
     "url": "https://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/hallmark-family-us.png?raw=true",
@@ -267,12 +147,6 @@
     "title": "HBO East",
     "url": "https://fl2.moveonjoy.com/HBO/index.m3u8",
     "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10240_dark_360w_270h.png",
-    "language": ""
-  },
-  {
-    "title": "Laff TV",
-    "url": "https://72.46.118.193/Laff/index.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/laff-us.png?raw=true",
     "language": ""
   },
   {
