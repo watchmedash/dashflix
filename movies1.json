@@ -25,15 +25,54 @@
           ]
       },
       {
-          "title": "My Hero Academia: You're Next",
+          "title": "Fight or Flight",
+          "link": "https://emirati.top/movies/Fight or Flight",
+          "image": "https://image.tmdb.org/t/p/original/x4nWnfgJvL045rcUCSJzfgIIY9i.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Uppercut",
+          "link": "https://emirati.top/movies/Uppercut",
+          "image": "https://image.tmdb.org/t/p/original/zv4jdLV7wuQGwhwAOeD7qzd8eSF.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Counterattack",
+          "link": "https://emirati.top/movies/Counterattack",
+          "image": "https://image.tmdb.org/t/p/original/lI2uFlSEkwXKljqiry7coaJ6wIS.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Adventure",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "My Hero Academia Youre Next",
           "link": "https://emirati.top/movies/My Hero Academia Youre Next",
-          "image": "https://m.media-amazon.com/images/M/MV5BNGVmZDJhNjItYzdlOC00ODA2LWFkYjctY2NmMzNiZTQ2NTVjXkEyXkFqcGc@._V1_.jpg",
+          "image": "https://image.tmdb.org/t/p/original/8rdB1wkheEMMqcY8qLAKjCMPcnZ.jpg",
           "tag": "HD",
           "requested": true,
           "release_year": "2024",
           "genres": [
+              "Animation",
               "Action",
-              "Animation"
+              "Adventure",
+              "Science Fiction"
           ]
       },
       {
