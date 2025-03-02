@@ -1,6 +1,30 @@
 {
     "movies": [
       {
+          "title": "Kolektor",
+          "link": "https://emirati.top/movies/Kolektor",
+          "image": "https://i.mydramalist.com/oQDmOP_4f.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
+          "title": "Celestina: Burlesk Dancer",
+          "link": "https://emirati.top/movies/Celestina Burlesk Dancer",
+          "image": "https://m.media-amazon.com/images/M/MV5BODdkN2FmYmItMGM2MS00NGVmLThjZjYtOTRiZjZiMDdkZDhmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "My Hero Academia: You're Next",
           "link": "https://emirati.top/movies/My Hero Academia Youre Next",
           "image": "https://m.media-amazon.com/images/M/MV5BNGVmZDJhNjItYzdlOC00ODA2LWFkYjctY2NmMzNiZTQ2NTVjXkEyXkFqcGc@._V1_.jpg",
