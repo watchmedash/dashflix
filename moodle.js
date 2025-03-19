@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="moodle-overlay active" id="noodleOverlay">
         <div class="moodle">
           <div class="content">
-            <p><strong>Important Notice:</strong> Our site does NOT offer any subscriptions. Please be cautious of ads, especially pop-ups or pop-unders, as we have no control over them.</p>
+          <p><strong>Support Us:</strong> Help DashFlix.top grow by spreading the word! Share our website with friends and family to bring in more visitors. Your support means a lot!</p>
             <button class="close-button disabled-button" id="closeNoodle" disabled>Close (5)</button>
           </div>
         </div>
