@@ -1,6 +1,26 @@
 {
     "movies": [
       {
+          "title": "Habal",
+          "link": "https://emirati.top/movies/Habal",
+          "image": "https://nsfwph.org/attachments/3302020/",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": []
+      },
+      {
+          "title": "Malagkit",
+          "link": "https://emirati.top/movies/Malagkit",
+          "image": "https://image.tmdb.org/t/p/original/djM4oi4B3XQ7a4knVbZwlSmdMNk.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Romance"
+          ]
+      },
+      {
           "title": "Kolektor",
           "link": "https://emirati.top/movies/Kolektor",
           "image": "https://i.mydramalist.com/oQDmOP_4f.jpg",
