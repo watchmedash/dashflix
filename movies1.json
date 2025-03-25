@@ -30,6 +30,18 @@
           "genres": []
       },
       {
+          "title": "Delusyon",
+          "link": "https://emirati.top/movies/Delusyon",
+          "image": "https://image.tmdb.org/t/p/original/qEL2ZmXKJZn5QvQc6NwuHEcK999.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "Kolektor",
           "link": "https://emirati.top/movies/Kolektor",
           "image": "https://i.mydramalist.com/oQDmOP_4f.jpg",
