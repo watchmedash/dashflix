@@ -1,6 +1,31 @@
 {
     "movies": [
       {
+          "title": "Novocaine",
+          "link": "https://emirati.top/movies/Novocaine",
+          "image": "https://image.tmdb.org/t/p/original/xmMHGz9dVRaMY6rRAlEX4W0Wdhm.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Comedy",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Puri for Rent",
+          "link": "https://emirati.top/movies/Puri for Rent",
+          "image": "https://image.tmdb.org/t/p/original/ry9AWnoAABgxAEzc3BwLHgf1H1b.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Romance"
+          ]
+      },
+      {
           "title": "Habal",
           "link": "https://emirati.top/movies/Habal",
           "image": "https://nsfwph.org/attachments/3302020/",
