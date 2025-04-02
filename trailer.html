@@ -78,32 +78,6 @@
     <i class="fas fa-ellipsis-h"></i> More
   </a>
 
-  <div id="more-links" class="more-links">
-    <a href="https://freedomwall.top">
-      <i class="fas fa-otter"></i> Anime
-    </a>
-    <a href="https://dashtoons.top">
-      <i class="fas fa-book-open"></i> Comics
-    </a>
-    <a href="#" class="nav-item" onclick="showPasswordModal(event)">
-🔒 18+
-    </a>
-  </div>
 </nav>
-<script>
-document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
-</script>
-<div class="modal" id="passwordModal">
-    <div class="modal-content">
-        <h2>Warning: This page contains adult content.</h2>
-        <p>Please enter GOBILAM to proceed:</p>
-        <input type="text" id="passwordInput" placeholder="Enter GOBILAM">
-        <button onclick="checkPassword()">Submit</button>
-        <button onclick="closeModal()">Cancel</button>
-    </div>
-</div>
-<script>
-function showPasswordModal(e){e.preventDefault(),document.getElementById("passwordModal").style.display="block"}function closeModal(){document.getElementById("passwordModal").style.display="none"}function checkPassword(){const e=document.getElementById("passwordInput").value;"GOBILAM"===e?window.location.href="adult.html":alert("Incorrect password. Access denied.")}
-</script>
 </body>
 </html>
