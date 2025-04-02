@@ -28,53 +28,67 @@ async function fetchShows(page = 1) {
 }
 
 function displayShows(showsList) {
-  const gallery = document.getElementById("gallery");
+    const gallery = document.getElementById("gallery");
 
-  if (currentPage === 1) gallery.innerHTML = "";
+    if (currentPage === 1) gallery.innerHTML = "";
 
-  showsList.forEach(show => {
-    const column = document.createElement("div");
-    column.className = "column";
-    column.style.position = "relative"; // Ensures proper positioning for the play icon
+    showsList.forEach(show => {
+        const column = document.createElement("div");
+        column.className = "column";
+        column.style.position = "relative"; // Ensures proper positioning for elements
 
-    const spinner = document.createElement("div");
-    spinner.className = "spinner";
+        const spinner = document.createElement("div");
+        spinner.className = "spinner";
 
-    const image = document.createElement("img");
-    image.className = "lazy-image";
-    const posterPath = show.poster_path ? IMAGE_BASE_URL + show.poster_path : "https://i.postimg.cc/d3YGThwG/AD.png";
-    image.setAttribute("data-src", posterPath);
-    image.alt = show.name;
+        const image = document.createElement("img");
+        image.className = "lazy-image";
+        const posterPath = show.poster_path ? IMAGE_BASE_URL + show.poster_path : "https://i.postimg.cc/d3YGThwG/AD.png";
+        image.setAttribute("data-src", posterPath);
+        image.alt = show.name;
 
-    image.addEventListener("load", () => {
-      image.classList.add("loaded");
-      spinner.style.display = "none";
+        image.addEventListener("load", () => {
+            image.classList.add("loaded");
+            spinner.style.display = "none";
+        });
+
+        image.addEventListener("error", () => {
+            spinner.style.display = "none";
+            console.error(`Failed to load image for show: ${show.name}`);
+        });
+
+        const link = document.createElement("a");
+        link.href = `players.html?id=${show.id}`;
+        link.target = "_self";
+        link.appendChild(image);
+
+        // Create the play icon
+        const playIcon = document.createElement("i");
+        playIcon.classList.add("fas", "fa-play-circle", "play-icon");
+
+        // Create rating element in the top-left corner
+        const rating = document.createElement("div");
+        rating.className = "show-rating";
+        rating.textContent = show.vote_average.toFixed(1);
+        rating.style.backgroundColor = getRatingColor(show.vote_average);
+
+        // Append elements to the column
+        column.appendChild(spinner);
+        column.appendChild(link);
+        column.appendChild(playIcon);
+        column.appendChild(rating); // Append rating here
+        gallery.appendChild(column);
     });
 
-    image.addEventListener("error", () => {
-      spinner.style.display = "none";
-      console.error(`Failed to load image for show: ${show.name}`);
-    });
-
-    const link = document.createElement("a");
-    link.href = `players.html?id=${show.id}`;
-    link.target = "_self";
-    link.appendChild(image);
-
-    // Create the play icon
-    const playIcon = document.createElement("i");
-    playIcon.classList.add("fas", "fa-play-circle", "play-icon");
-
-    // Append elements to the column
-    column.appendChild(spinner);
-    column.appendChild(link);
-    column.appendChild(playIcon); // Append the play icon
-    gallery.appendChild(column);
-  });
-
-  initializeLazyLoad();
+    initializeLazyLoad();
 }
 
+// Function to determine rating color
+function getRatingColor(rating) {
+    if (rating >= 8) return "#2ecc71"; // Green (Great)
+    if (rating >= 6) return "#f1c40f"; // Yellow (Good)
+    if (rating >= 4) return "#e67e22"; // Orange (Average)
+    return "#e74c3c"; // Red (Bad)
+}
 
 function initializeLazyLoad() {
     const lazyImages = document.querySelectorAll("img.lazy-image");
