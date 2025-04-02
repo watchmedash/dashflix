@@ -99,6 +99,22 @@
         .close-btn:hover {
             background-color: #cc0000;
         }
+        .watchlist-btn {
+            background-color: #007BFF;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .watchlist-btn:hover {
+            opacity: 0.8;
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
      crossorigin="anonymous"></script>
@@ -112,9 +128,9 @@
   </div>
 
   <div class="glowing-text-container">
-  All videos will play within this window!</br>
-  If you are redirected to a different window for any reason,</br>
-  simply close it and get back here!</br>
+      All videos will play within this window!<br>
+      If you are redirected to a different window for any reason,<br>
+      simply close it and get back here!<br>
   </div>
 <div class="tv-show-container">
     <select id="season-dropdown" onchange="fetchEpisodes()">
@@ -129,6 +145,7 @@
         <img id="tv-poster" src="" alt="TV Show Poster">
         <div class="tv-show-info">
             <h2 id="tv-title-info">Loading...</h2>
+            <!--<button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i> Add to Watchlist</button>-->
             <p><strong>First Air Year:</strong> <span id="release-year">Loading...</span></p>
             <p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
             <p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
@@ -141,6 +158,7 @@
 </div>
 <script src="load.js"></script>
 <script src="players.js"></script>
+<script src="ps.js"></script>
 
 </body>
 </html>

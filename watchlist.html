@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="ann.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .watchlist-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .watchlist-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+        }
+        .watchlist-item img {
+            width: 80px;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+        .watchlist-item .info {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .clickable-poster {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.clickable-poster:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.clickable-title {
+    color: white;
+    text-decoration: none;
+}
+
+.clickable-title:hover {
+    text-decoration: underline;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+    color: darkred;
+    transform: scale(1.2);
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loaning-screen">
+      <img src="images/logo.webp" alt="Loading..." />
+      <div class="progress-bar">
+          <div class="progress"></div>
+      </div>
+  </div>
+<div class="watchlist-container">
+    <h1>My Watchlist</h1>
+    <div id="watchlist"></div>
+</div>
+
+<script>
+function loadWatchlist() {
+    const watchlistContainer = document.getElementById("watchlist");
+    watchlistContainer.innerHTML = "";
+
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+    if (watchlist.length === 0) {
+        watchlistContainer.innerHTML = "<p>Your watchlist is empty.</p>";
+        return;
+    }
+
+    watchlist.forEach(movie => {
+        const div = document.createElement("div");
+        div.classList.add("watchlist-item");
+
+        div.innerHTML = `
+            <a href="player.html?id=${movie.id}">
+                <img src="${movie.poster}" alt="${movie.title}" class="clickable-poster">
+            </a>
+            <div class="info">
+                <h3><a href="player.html?id=${movie.id}" class="clickable-title">${movie.title} (${movie.releaseYear})</a></h3>
+                <p>Rating: ${movie.rating}</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWatchlist('${movie.id}')">
+                <i class="fas fa-trash"></i>
+            </button>
+        `;
+
+        watchlistContainer.appendChild(div);
+    });
+}
+
+    function removeFromWatchlist(movieId) {
+        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+        watchlist = watchlist.filter(movie => movie.id !== movieId);
+        localStorage.setItem("watchlist", JSON.stringify(watchlist));
+        loadWatchlist();
+    }
+
+    document.addEventListener("DOMContentLoaded", loadWatchlist);
+</script>
+<nav class="bottom-nav">
+  <a href="https://dashflix.top" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="https://dashflix.top/movies" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+  <a href="https://dashflix.top/shows" class="nav-item">
+    <i class="fas fa-tv"></i> Shows
+  </a>
+  <a href="https://dashflix.top/trailer" class="nav-item">
+    <i class="fas fa-video"></i> Trailers
+  </a>
+  <a href="https://dashflix.top/requested" class="nav-item">
+    <i class="fas fa-list"></i> Requested
+  </a>
+</nav>
+<script src="load.js"></script>
+</body>
+</html>
