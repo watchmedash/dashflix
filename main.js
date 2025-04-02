@@ -74,7 +74,7 @@ function displayMovies(moviesList, append = false) {
   moviesList.forEach(movie => {
     const column = document.createElement("div");
     column.className = "column";
-    column.style.position = "relative"; // Ensure positioning for the play icon
+    column.style.position = "relative"; // Ensure positioning for rating
 
     const spinner = document.createElement("div");
     spinner.className = "spinner";
@@ -103,16 +103,30 @@ function displayMovies(moviesList, append = false) {
     const playIcon = document.createElement("i");
     playIcon.classList.add("fas", "fa-play-circle", "play-icon");
 
+    // Create rating element in the top-left corner
+    const rating = document.createElement("div");
+    rating.className = "movie-rating";
+    rating.textContent = movie.vote_average.toFixed(1);
+    rating.style.backgroundColor = getRatingColor(movie.vote_average);
+
     // Append elements to the column
     column.appendChild(spinner);
     column.appendChild(link);
-    column.appendChild(playIcon); // Append play icon here
+    column.appendChild(playIcon);
+    column.appendChild(rating); // Append rating here
     gallery.appendChild(column);
   });
 
   initializeLazyLoad();
 }
 
+// Function to determine rating color
+function getRatingColor(rating) {
+  if (rating >= 8) return "#2ecc71"; // Green (Great)
+  if (rating >= 6) return "#f1c40f"; // Yellow (Good)
+  if (rating >= 4) return "#e67e22"; // Orange (Average)
+  return "#e74c3c"; // Red (Bad)
+}
 
 function initializeLazyLoad() {
   const lazyImages = document.querySelectorAll("img.lazy-image");
