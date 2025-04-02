@@ -74,6 +74,7 @@ function displayMovies(moviesList, append = false) {
   moviesList.forEach(movie => {
     const column = document.createElement("div");
     column.className = "column";
+    column.style.position = "relative"; // Ensure positioning for the play icon
 
     const spinner = document.createElement("div");
     spinner.className = "spinner";
@@ -98,13 +99,20 @@ function displayMovies(moviesList, append = false) {
     link.target = "_self";
     link.appendChild(image);
 
+    // Create the play icon
+    const playIcon = document.createElement("i");
+    playIcon.classList.add("fas", "fa-play-circle", "play-icon");
+
+    // Append elements to the column
     column.appendChild(spinner);
     column.appendChild(link);
+    column.appendChild(playIcon); // Append play icon here
     gallery.appendChild(column);
   });
 
   initializeLazyLoad();
 }
+
 
 function initializeLazyLoad() {
   const lazyImages = document.querySelectorAll("img.lazy-image");

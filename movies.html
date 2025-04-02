@@ -98,6 +98,22 @@
           transition: opacity 0.3s ease-in-out;
       }
 
+      .play-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 50px;
+          color: white;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+          pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+      }
+
+      .column:hover .play-icon {
+          opacity: 1;
+      }
+
       .spinner {
           position: absolute;
           top: 50%;
@@ -228,5 +244,6 @@ simply close it and get back here!</br>
     </a>
   </nav>
   <script src="main.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </body>
   </html>
