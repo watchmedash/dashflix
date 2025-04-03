@@ -35,12 +35,6 @@
      crossorigin="anonymous"></script>
 </head>
 <body oncontextmenu="return false;">
-  <div id="loaning-screen">
-      <img src="images/logo.webp" alt="Loading..." />
-      <div class="progress-bar">
-          <div class="progress"></div>
-      </div>
-  </div>
   <div class="glowing-text-container">
 Be smart!</br>
 Don't request unreleased movies/shows,</br>
@@ -175,31 +169,6 @@ and use the search funtion!</br>
             <a href="requested.html" class="nav-item">
               <i class="fas fa-list"></i> Requested
             </a>
-            <a href="#" class="nav-item" id="more-menu">
-              <i class="fas fa-ellipsis-h"></i> More
-            </a>
-
-            <div id="more-links" class="more-links">
-              <a href="https://freedomwall.top">
-                <i class="fas fa-otter"></i> Anime
-              </a>
-              <a href="https://dashtoons.top">
-                <i class="fas fa-book-open"></i> Comics
-              </a>
-            </div>
           </nav>
-
-          <script>
-            document.addEventListener('DOMContentLoaded', function() {
-              const moreMenu = document.getElementById('more-menu');
-              const moreLinks = document.getElementById('more-links');
-
-              moreMenu.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default anchor action
-                moreLinks.classList.toggle('show'); // Toggle visibility by adding/removing the 'show' class
-              });
-            });
-          </script>
-          <script src="load.js"></script>
 </body>
 </html>

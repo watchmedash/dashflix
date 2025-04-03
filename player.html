@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Player</title>
-    <link rel="stylesheet" href="load.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="ann.css">
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Player</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -125,51 +123,31 @@
         .watchlist-btn:hover {
             opacity: 0.8;
         }
-
-    </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
-     crossorigin="anonymous"></script>
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
+crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="loaning-screen">
-    <img src="images/logo.webp" alt="Loading..." />
-    <div class="progress-bar">
-        <div class="progress"></div>
-    </div>
-  </div>
-
-<div class="glowing-text-container">
-All videos will play within this window!</br>
-If you are redirected to a different window for any reason,</br>
-simply close it and get back here!</br>
-</div>
 <div class="movie-container">
-    <!-- Dropdown for video source selection -->
-    <select id="video-source" onchange="changeSource()">
-        <option value="">Select Server</option>
-    </select>
-
-    <div class="video-container">
-        <!-- Video iframe -->
-        <iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <div class="movie-details">
-        <img id="movie-poster" src="" alt="Movie Poster">
-        <div class="movie-info">
-    <h2 id="movie-title-info">Loading...</h2>
-    <button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i> Add to Watchlist</button>
-    <p><strong>Release Year:</strong> <span id="release-year">Loading...</span></p>
-    <p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
-    <p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
-    <p><strong>Overview:</strong></p>
-    <p id="movie-overview">Loading...</p>
-    <p><strong>Director:</strong> <span id="director">Loading...</span></p>
+<select id="video-source" onchange="changeSource()">
+<option value="">Select Server</option>
+</select>
+<div class="video-container"><iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+<div class="movie-details">
+<img id="movie-poster" src="" alt="Movie Poster">
+<div class="movie-info">
+<h2 id="movie-title-info">Loading...</h2>
+<button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i> Add to Watchlist</button>
+<p><strong>Release Year:</strong> <span id="release-year">Loading...</span></p>
+<p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
+<p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
+<p><strong>Overview:</strong></p>
+<p id="movie-overview">Loading...</p>
+<p><strong>Director:</strong> <span id="director">Loading...</span></p>
 </div>
-
 </div>
-    <button class="close-btn" onclick="goBack()">Go Back</button>
+<button class="close-btn" onclick="goBack()">Go Back</button>
 </div>
-<script src="load.js"></script>
 <script src="player.js"></script>
 <script src="p.js"></script>
 </body>
