@@ -2,34 +2,41 @@ document.addEventListener("DOMContentLoaded", () => {
     const watchlistContainer = document.getElementById("watchlist");
 
     function loadWatchlist() {
-        watchlistContainer.innerHTML = "";
+    const watchlistContainer = document.getElementById("watchlist");
+    watchlistContainer.innerHTML = "";
 
-        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
-        if (watchlist.length === 0) {
-            watchlistContainer.innerHTML = "<p>Your watchlist is empty.</p>";
-            return;
-        }
-
-        watchlist.forEach(item => {
-            const div = document.createElement("div");
-            div.classList.add("watchlist-item");
-
-            div.innerHTML = `
-                <img src="${item.poster}" alt="${item.title}" class="watchlist-poster" data-id="${item.id}" data-type="${item.type}">
-                <div class="info">
-                    <h3>${item.title} (${item.releaseYear})</h3>
-                    <p>Rating: ${item.rating}</p>
-                </div>
-                <button class="remove-btn" data-id="${item.id}" data-type="${item.type}">
-                    <i class="fas fa-trash"></i>
-                </button>
-            `;
-
-            watchlistContainer.appendChild(div);
-        });
+    if (watchlist.length === 0) {
+        watchlistContainer.innerHTML = "<p>Your watchlist is empty.</p>";
+        return;
     }
 
+    watchlist.forEach(movie => {
+        const page = movie.type === "tv" ? "players.html" : "player.html"; // Choose the correct page
+
+        const div = document.createElement("div");
+        div.classList.add("watchlist-item");
+
+        div.innerHTML = `
+            <a href="${page}?id=${movie.id}">
+                <img src="${movie.poster}" alt="${movie.title}" class="clickable-poster">
+            </a>
+            <div class="info">
+                <h3><a href="${page}?id=${movie.id}" class="clickable-title">${movie.title} (${movie.releaseYear})</a></h3>
+                <p>Rating: ${movie.rating}</p>
+            </div>
+            <button class="remove-btn" onclick="removeFromWatchlist('${movie.id}')">
+                <i class="fas fa-trash"></i>
+            </button>
+        `;
+
+        watchlistContainer.appendChild(div);
+    });
+}
+
+
+    // Click event for posters and remove buttons
     watchlistContainer.addEventListener("click", (e) => {
         const target = e.target;
 
@@ -48,8 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Unknown type:", type);
             }
         }
-    });
-
 
         // Handle remove button click
         if (target.closest(".remove-btn")) {

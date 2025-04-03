@@ -96,49 +96,6 @@
     <h1>My Watchlist</h1>
     <div id="watchlist"></div>
 </div>
-
-<script>
-function loadWatchlist() {
-    const watchlistContainer = document.getElementById("watchlist");
-    watchlistContainer.innerHTML = "";
-
-    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-
-    if (watchlist.length === 0) {
-        watchlistContainer.innerHTML = "<p>Your watchlist is empty.</p>";
-        return;
-    }
-
-    watchlist.forEach(movie => {
-        const div = document.createElement("div");
-        div.classList.add("watchlist-item");
-
-        div.innerHTML = `
-            <a href="player.html?id=${movie.id}">
-                <img src="${movie.poster}" alt="${movie.title}" class="clickable-poster">
-            </a>
-            <div class="info">
-                <h3><a href="player.html?id=${movie.id}" class="clickable-title">${movie.title} (${movie.releaseYear})</a></h3>
-                <p>Rating: ${movie.rating}</p>
-            </div>
-            <button class="remove-btn" onclick="removeFromWatchlist('${movie.id}')">
-                <i class="fas fa-trash"></i>
-            </button>
-        `;
-
-        watchlistContainer.appendChild(div);
-    });
-}
-
-    function removeFromWatchlist(movieId) {
-        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-        watchlist = watchlist.filter(movie => movie.id !== movieId);
-        localStorage.setItem("watchlist", JSON.stringify(watchlist));
-        loadWatchlist();
-    }
-
-    document.addEventListener("DOMContentLoaded", loadWatchlist);
-</script>
 <nav class="bottom-nav">
   <a href="https://dashflix.top" class="nav-item">
     <i class="fas fa-home"></i> Home
@@ -157,5 +114,6 @@ function loadWatchlist() {
   </a>
 </nav>
 <script src="load.js"></script>
+<script src="watchlist.js"></script>
 </body>
 </html>
