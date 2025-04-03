@@ -113,12 +113,32 @@
         .watchlist-btn:hover {
             opacity: 0.8;
         }
+
+        .info-banner {
+                    background-color: #ffcc00;
+                    color: #000;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
 crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="tv-show-container">
+  <div class="info-banner">
+      <i class="fas fa-info-circle"></i> Having trouble? Try switching to a different server.
+  </div>
+<select id="video-source" onchange="changeEpisode()">
+      <option value="https://vidsrc.xyz/embed/tv?tmdb=${tvShowId}&season=${selectedSeason}&episode=${selectedEpisode}">Server 1 (vidsrc.xyz)</option>
+      <option value="https://embed.su/embed/tv/${tvShowId}/${selectedSeason}/${selectedEpisode}">Server 2 (embed.su)</option>
+      <option value="https://moviesapi.to/tv/${tvShowId}-${selectedSeason}-${selectedEpisode}">Server 3 (moviesapi.to)</option>
+      <option value="https://vidsrc.vip/embed/tv/${tvShowId}/${selectedSeason}/${selectedEpisode}">Server 4 (vidsrc.vip)</option>
+      <option value="https://multiembed.mov/directstream.php?video_id=${tvShowId}&tmdb=1&s=${selectedSeason}&e=${selectedEpisode}">Server 5 (multiembed.mov)</option>
+      <option value="https://vidlink.pro/tv/${tvShowId}/${selectedSeason}/${selectedEpisode}">Server 6 (vidlink.pro)</option>
+  </select>
 <select id="season-dropdown" onchange="fetchEpisodes()">
 <option value="">Select Season</option>
 </select>

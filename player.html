@@ -123,12 +123,25 @@
         .watchlist-btn:hover {
             opacity: 0.8;
         }
+
+        .info-banner {
+                    background-color: #ffcc00;
+                    color: #000;
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
 </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
 crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="movie-container">
+  <div class="info-banner">
+    <i class="fas fa-info-circle"></i> Having trouble? Try switching to a different server.
+</div>
+
 <select id="video-source" onchange="changeSource()">
 <option value="">Select Server</option>
 </select>

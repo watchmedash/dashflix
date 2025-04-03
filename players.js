@@ -1,1 +1,135 @@
-const API_KEY="4f599baa15d072c9de346b2816a131b8",BASE_URL="https://api.themoviedb.org/3",IMAGE_BASE_URL="https://image.tmdb.org/t/p/w500",urlParams=new URLSearchParams(window.location.search),tvShowId=urlParams.get("id");async function fetchTvShowDetails(){try{const e=await fetch(`${BASE_URL}/tv/${tvShowId}?api_key=${API_KEY}&language=en-US`),t=await e.json();displayTvShowDetails(t),populateSeasonDropdown(t.seasons)}catch(e){console.error("Error fetching TV show details:",e)}}function displayTvShowDetails(e){document.getElementById("tv-title-info").textContent=e.name,document.getElementById("tv-poster").src=IMAGE_BASE_URL+e.poster_path,document.getElementById("tv-overview").textContent=e.overview,document.getElementById("release-year").textContent=e.first_air_date.split("-")[0],document.getElementById("rating").textContent=e.vote_average,document.getElementById("genres").textContent=e.genres.map(e=>e.name).join(", "),document.getElementById("creator").textContent=e.created_by.map(e=>e.name).join(", ")}function populateSeasonDropdown(e){const t=document.getElementById("season-dropdown"),n=e.find(e=>e.air_date);e.filter(e=>e.air_date).forEach(e=>{const n=document.createElement("option");n.value=e.season_number,n.textContent=`Season ${e.season_number}`,t.appendChild(n)}),n&&(t.value=n.season_number,fetchEpisodes())}async function fetchEpisodes(){const e=document.getElementById("season-dropdown").value;if(e){const t=await fetch(`${BASE_URL}/tv/${tvShowId}/season/${e}?api_key=${API_KEY}&language=en-US`),n=await t.json();populateEpisodeDropdown(n.episodes)}}function populateEpisodeDropdown(e){const t=document.getElementById("episode-dropdown");t.style.display="block",t.innerHTML='<option value="">Select Episode</option>';const n=e.find(e=>e.air_date);e.filter(e=>e.air_date).forEach(e=>{const n=document.createElement("option");n.value=e.episode_number,n.textContent=`Episode ${e.episode_number}: ${e.name}`,t.appendChild(n)}),n&&(t.value=n.episode_number,changeEpisode())}function changeEpisode(){const e=document.getElementById("season-dropdown").value,t=document.getElementById("episode-dropdown").value;e&&t&&(document.getElementById("video-player").src=`https://vidsrc.xyz/embed/tv?tmdb=${tvShowId}&season=${e}&episode=${t}`)}function goBack(){window.location.href="shows.html"}fetchTvShowDetails();
+const API_KEY = "4f599baa15d072c9de346b2816a131b8";
+const BASE_URL = "https://api.themoviedb.org/3";
+const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+
+const urlParams = new URLSearchParams(window.location.search);
+const tvShowId = urlParams.get("id");
+
+async function fetchTvShowDetails() {
+    try {
+        const response = await fetch(`${BASE_URL}/tv/${tvShowId}?api_key=${API_KEY}&language=en-US`);
+        const data = await response.json();
+
+        displayTvShowDetails(data);
+        populateSeasonDropdown(data.seasons);
+    } catch (error) {
+        console.error("Error fetching TV show details:", error);
+    }
+}
+
+function displayTvShowDetails(tvShow) {
+    document.getElementById("tv-title-info").textContent = tvShow.name;
+    document.getElementById("tv-poster").src = IMAGE_BASE_URL + tvShow.poster_path;
+    document.getElementById("tv-overview").textContent = tvShow.overview;
+    document.getElementById("release-year").textContent = tvShow.first_air_date.split("-")[0];
+    document.getElementById("rating").textContent = tvShow.vote_average;
+    document.getElementById("genres").textContent = tvShow.genres.map(genre => genre.name).join(", ");
+    document.getElementById("creator").textContent = tvShow.created_by.map(creator => creator.name).join(", ");
+}
+
+function populateSeasonDropdown(seasons) {
+    const seasonDropdown = document.getElementById("season-dropdown");
+    const firstSeasonWithAirDate = seasons.find(season => season.air_date);
+
+    seasons.filter(season => season.air_date).forEach(season => {
+        const option = document.createElement("option");
+        option.value = season.season_number;
+        option.textContent = `Season ${season.season_number}`;
+        seasonDropdown.appendChild(option);
+    });
+
+    if (firstSeasonWithAirDate) {
+        seasonDropdown.value = firstSeasonWithAirDate.season_number;
+        fetchEpisodes();
+    }
+}
+
+async function fetchEpisodes() {
+    const selectedSeason = document.getElementById("season-dropdown").value;
+
+    if (selectedSeason) {
+        const response = await fetch(`${BASE_URL}/tv/${tvShowId}/season/${selectedSeason}?api_key=${API_KEY}&language=en-US`);
+        const data = await response.json();
+
+        populateEpisodeDropdown(data.episodes);
+    }
+}
+
+function populateEpisodeDropdown(episodes) {
+    const episodeDropdown = document.getElementById("episode-dropdown");
+    episodeDropdown.style.display = "block";
+    episodeDropdown.innerHTML = '<option value="">Select Episode</option>';
+
+    const firstEpisodeWithAirDate = episodes.find(episode => episode.air_date);
+
+    episodes.filter(episode => episode.air_date).forEach(episode => {
+        const option = document.createElement("option");
+        option.value = episode.episode_number;
+        option.textContent = `Episode ${episode.episode_number}: ${episode.name}`;
+        episodeDropdown.appendChild(option);
+    });
+
+    if (firstEpisodeWithAirDate) {
+        episodeDropdown.value = firstEpisodeWithAirDate.episode_number;
+        changeEpisode();
+    }
+}
+
+let currentServerIndex = 0;
+
+function changeEpisode() {
+    const selectedSeason = document.getElementById("season-dropdown").value;
+    const selectedEpisode = document.getElementById("episode-dropdown").value;
+
+    if (selectedSeason && selectedEpisode) {
+        updateVideoSources(selectedSeason, selectedEpisode);
+        updateVideoPlayer();
+    }
+}
+
+function changeServer() {
+    const videoSourceSelect = document.getElementById("video-source");
+    currentServerIndex = videoSourceSelect.selectedIndex;
+    document.getElementById("video-player").src = videoSourceSelect.value;
+}
+
+function updateVideoSources(season, episode) {
+    const videoSources = [
+        `https://vidsrc.xyz/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
+        `https://embed.su/embed/tv/${tvShowId}/${season}/${episode}`,
+        `https://moviesapi.to/tv/${tvShowId}-${season}-${episode}`,
+        `https://vidsrc.vip/embed/tv/${tvShowId}/${season}/${episode}`,
+        `https://multiembed.mov/directstream.php?video_id=${tvShowId}&tmdb=1&s=${season}&e=${episode}`,
+        `https://vidlink.pro/tv/${tvShowId}/${season}/${episode}`
+    ];
+
+    const videoSourceSelect = document.getElementById("video-source");
+    const previousServer = videoSourceSelect.value;
+
+    videoSourceSelect.innerHTML = "";
+    videoSources.forEach((url, index) => {
+        const option = document.createElement("option");
+        option.value = url;
+        option.textContent = `Server ${index + 1}`;
+        videoSourceSelect.appendChild(option);
+    });
+
+    const selectedOptionIndex = videoSources.indexOf(previousServer);
+    if (selectedOptionIndex !== -1) {
+        videoSourceSelect.selectedIndex = selectedOptionIndex;
+    } else {
+        videoSourceSelect.selectedIndex = currentServerIndex;
+    }
+}
+
+function updateVideoPlayer() {
+    const videoSourceSelect = document.getElementById("video-source");
+    document.getElementById("video-player").src = videoSourceSelect.value;
+}
+
+
+function goBack() {
+    window.location.href = "shows.html";
+}
+
+fetchTvShowDetails();
