@@ -30,18 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Use event delegation for better efficiency
     watchlistContainer.addEventListener("click", (e) => {
         const target = e.target;
 
         // Handle poster click
         if (target.classList.contains("watchlist-poster")) {
             const id = target.dataset.id;
-            let type = target.dataset.type;
+            const type = target.dataset.type;
 
-            console.log("Clicked item:", { id, type }); // Debugging line
+            console.log("Clicked on:", { id, type }); // 🐛 Debugging output
 
-            // Ensure type is correctly recognized
             if (type === "movie") {
                 window.location.href = `player.html?id=${id}`;
             } else if (type === "tv") {
@@ -50,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Unknown type:", type);
             }
         }
+    });
+
 
         // Handle remove button click
         if (target.closest(".remove-btn")) {
