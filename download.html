@@ -215,6 +215,23 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
             margin-bottom: 15px;
             text-align: center;
         }
+
+        .search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchBar {
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+  font-size: 16px;
+}
+
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -222,6 +239,9 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
 
   <div class="info-banner">
     <i class="fas fa-info-circle"></i> The downloads only works for browsers, it doesn't work on the APP.
+  </div>
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search file..." oninput="searchItems()">
   </div>
 
   <div class="filter">
@@ -237,40 +257,54 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
   <script>
   let allItems = [];
 
-fetch('downloads.json')
-.then(response => response.json())
-.then(data => {
-  allItems = data;
-  renderItems('all');
-})
-.catch(error => {
-  document.getElementById('downloadList').innerHTML = "<li>Error loading downloads.</li>";
-  console.error('Failed to fetch downloads:', error);
-});
+  // Fetch JSON Data
+  fetch('downloads.json')
+    .then(response => response.json())
+    .then(data => {
+      allItems = data;
+      renderItems('all');
+    })
+    .catch(error => {
+      document.getElementById('downloadList').innerHTML = "<li>Error loading downloads.</li>";
+      console.error('Failed to fetch downloads:', error);
+    });
 
-function renderItems(filterType) {
-const list = document.getElementById('downloadList');
-list.innerHTML = '';
+  // Render Items Function
+  function renderItems(filterType) {
+    const list = document.getElementById('downloadList');
+    list.innerHTML = '';
 
-const filtered = filterType === 'all' ? allItems : allItems.filter(item => item.type === filterType);
+    let filtered = filterType === 'all' ? allItems : allItems.filter(item => item.type === filterType);
 
-filtered.forEach(item => {
-  const li = document.createElement('li');
-  li.className = 'download-item';
-  li.innerHTML = `
-    <a class="download-title" href="${item.url}" target="_blank" download>${item.name}</a>
-    <a class="download-icon" href="${item.url}" target="_blank" download><i class="fas fa-download"></i></a>
-  `;
-  list.appendChild(li);
-});
-}
+    // Apply Search Filter
+    const searchQuery = document.getElementById('searchBar')?.value.toLowerCase();
+    if (searchQuery) {
+      filtered = filtered.filter(item => item.name.toLowerCase().includes(searchQuery));
+    }
 
-function filterItems(type) {
-renderItems(type);
-document.querySelectorAll('.filter button').forEach(btn => btn.classList.remove('active'));
-document.querySelector(`.filter button[onclick*="${type}"]`).classList.add('active');
-}
+    // Display Filtered Items
+    filtered.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'download-item';
+      li.innerHTML = `
+        <a class="download-title" href="${item.url}" target="_blank" download>${item.name}</a>
+        <a class="download-icon" href="${item.url}" target="_blank" download><i class="fas fa-download"></i></a>
+      `;
+      list.appendChild(li);
+    });
+  }
 
+  // Filter Items by Category
+  function filterItems(type) {
+    renderItems(type);
+    document.querySelectorAll('.filter button').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.filter button[onclick*="${type}"]`).classList.add('active');
+  }
+
+  // Search Function
+  function searchItems() {
+    renderItems('all'); // Ensure all categories are included in the search
+  }
   </script>
   <footer>
   <nav class="footer-nav">
