@@ -1,0 +1,6 @@
+[
+  { "name": "Movie Title 1", "url": "movie1.mp4", "type": "movie" },
+  { "name": "Show Episode 1", "url": "show1.mp4", "type": "show" },
+  { "name": "Random PDF File", "url": "file.pdf", "type": "random" },
+  { "name": "Random Zip File", "url": "file.zip", "type": "random" }
+]
