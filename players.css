@@ -72,8 +72,8 @@ body {
 
 .tv-show-details img {
     max-width: 200px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
@@ -106,6 +106,7 @@ body {
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .video-container iframe {
@@ -239,26 +240,6 @@ select {
 
 body.light-theme .theme-toggle .slider::before {
     background-color: #333; /* Dark knob in light mode */
-}
-
-/* ===============================
-   Responsive Design
-   =============================== */
-@media (max-width: 768px) {
-    .tv-show-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .tv-show-info {
-        margin-left: 0;
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .tv-show-details img {
-        max-width: 100%;
-    }
 }
 
 .watchlist-icon-btn {
