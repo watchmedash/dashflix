@@ -5,152 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Movie Player</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        .movie-container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 10px;
-            background-color: #1e1e1e;
-        }
-        .movie-container h1 {
-            text-align: center;
-            color: #fff;
-            margin: 10px 0;
-        }
-        .movie-details {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .movie-details img {
-            max-width: 200px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-        .movie-info {
-            flex: 1;
-            margin-left: 20px;
-        }
-        .movie-info h2 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: #fff;
-        }
-        .movie-info p {
-            font-size: 1rem;
-            margin: 5px 0;
-            color: #bbb;
-        }
-        .movie-info .rating {
-            font-size: 1.2rem;
-            color: #ffd700;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            width: 100%;
-            margin: 0 auto;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 20px 0;
-            background-color: #333;
-            color: #fff;
-            border: 1px solid #444;
-            border-radius: 5px;
-        }
-        .genre-list {
-            list-style: none;
-            padding: 0;
-            margin: 5px 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .genre-list li {
-            margin-right: 10px;
-            background-color: #444;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        .close-btn {
-            background-color: #ff3333;
-            color: #fff;
-            font-size: 1.5rem;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 20px;
-            text-align: center;
-            display: block;
-            width: 100%;
-        }
-        .close-btn:hover {
-            background-color: #cc0000;
-        }
-
-        .watchlist-btn {
-            padding: 10px 15px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: white;
-        }
-
-        .watchlist-btn:hover {
-            opacity: 0.8;
-        }
-
-        .info-banner {
-                    background-color: #ffcc00;
-                    color: #000;
-                    padding: 10px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    margin-bottom: 15px;
-                }
-</style>
+<link rel="stylesheet" href="player.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
 crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
 </head>
 <body>
 <div class="movie-container">
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch">
+    <label for="theme-switch" class="switch">
+      <span class="slider">
+        <i class="fa-solid fa-sun icon"></i>
+      </span>
+    </label>
+  </div>
   <div class="info-banner">
     <i class="fas fa-info-circle"></i> Having trouble? Try switching to a different server.
 </div>
-
 <select id="video-source" onchange="changeSource()">
 <option value="">Select Server</option>
 </select>
 <div class="video-container"><iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+<div class="sharethis-inline-share-buttons"></div>
 <div class="movie-details">
 <img id="movie-poster" src="" alt="Movie Poster">
 <div class="movie-info">
 <h2 id="movie-title-info">Loading...</h2>
 <button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i> Add to Watchlist</button>
+<a href="watchlist.html" id="watchlist-icon-btn" class="watchlist-icon-btn"><i class="fas fa-list"></i></a>
 <p><strong>Release Year:</strong> <span id="release-year">Loading...</span></p>
 <p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
 <p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
@@ -161,6 +44,28 @@ crossorigin="anonymous"></script>
 </div>
 <button class="close-btn" onclick="goBack()">Go Back</button>
 </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const switchInput = document.getElementById("theme-switch");
+    const icon = document.querySelector(".theme-toggle .icon");
+    const body = document.body;
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+        body.classList.add("light-theme");
+        switchInput.checked = true;
+        icon.classList.replace("fa-sun", "fa-moon");
+    }
+
+    switchInput.addEventListener("change", () => {
+        const isLight = switchInput.checked;
+        body.classList.toggle("light-theme", isLight);
+        icon.classList.replace(isLight ? "fa-sun" : "fa-moon", isLight ? "fa-moon" : "fa-sun");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+    });
+});
+</script>
 <script src="player.js"></script>
 <script src="p.js"></script>
 </body>
