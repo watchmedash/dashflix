@@ -42,6 +42,10 @@ crossorigin="anonymous"></script>
 <p><strong>Director:</strong> <span id="director">Loading...</span></p>
 </div>
 </div>
+<div class="related-movies">
+    <div id="related-movies-list" class="movies-list">
+    </div>
+</div>
 <button class="close-btn" onclick="goBack()">Go Back</button>
 </div>
 <script>
@@ -50,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const icon = document.querySelector(".theme-toggle .icon");
     const body = document.body;
 
-    // Load saved theme
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
         body.classList.add("light-theme");
@@ -68,5 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script src="player.js"></script>
 <script src="p.js"></script>
+<script src="related.js"></script>
 </body>
 </html>
