@@ -5,307 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Downloads</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 40px 20px;
-  }
-
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #fff;
-  }
-
-  .filter {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .filter button {
-    background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 10px 16px;
-    margin: 0 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, transform 0.2s;
-    transform: scale(1);
-  }
-
-  .filter button:hover,
-  .filter button.active {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.1);
-  }
-
-  .downloads {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
-
-  .download-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #fff;
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 12px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-    transform: scale(1);
-  }
-
-  .download-item:hover {
-    background-color: #111;
-    transform: scale(1.02);
-  }
-
-
-  .download-title,
-  .download-icon {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.2s, text-decoration 0.2s;
-  }
-
-  .download-title:hover,
-  .download-icon:hover {
-    color: #ccc;
-    text-decoration: underline;
-  }
-
-
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #1a1a1a; /* Dark background */
-  padding: 5px;
-  border-top: 2px solid #333; /* Darker border for contrast */
-  z-index: 1000;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.nav-item {
-  color: #e0e0e0; /* Light gray text for better contrast */
-  text-align: center;
-  text-decoration: none;
-  font-size: 14px;
-  flex-grow: 1;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
-  position: relative;
-}
-
-.nav-item i {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 5px;
-  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
-}
-
-.nav-item:hover {
-  color: #ffffff; /* Change color to normal white on hover */
-  transform: scale(1.1);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
-}
-
-.nav-item:hover i {
-  transform: scale(1.4); /* Enlarge the icon */
-}
-
-footer {
-background: #000000;
-padding: 10px 0;
-width: 100%;
-bottom: 0;
-left: 0;
-}
-
-.footer-nav {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-
-.footer-links,
-.social-icons {
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-width: 100%; // Add this
-}
-
-.footer-links li {
-display: inline-block;
-margin-bottom: 10px;
-}
-
-.footer-links a {
-color: #fff;
-text-decoration: none;
-font-size: 1.5vw;
-display: block;
-min-font-size: 16px;
-font-size: max(min-font-size, 1.5vw);
-}
-
-.footer-links a::before {
-font-family: 'Font Awesome 5 Free';
-font-weight: 900;
-content: attr(data-icon);
-font-size: 1.5vw;
-margin-right: 5px;
-}
-
-.footer-links a:hover {
-color: grey;
-}
-
-.social-icons {
-display: flex;
-margin-top: 10px;
-}
-
-.social-icons a {
-color: #fff;
-font-size: 24px;
-margin: 0 10px;
-text-decoration: none;
-}
-
-.social-icons a:hover {
-color: grey;
-}
-
-@media screen and (max-width: 768px) {
-.footer-nav {
-flex-direction: column;
-align-items: center;
-}
-
-.footer-links a {
-font-size: 16px; /* Adjust the font size for smaller screens */
-}
-}
-
-footer .copyright {
-text-align: center;
-font-size: 14px;
-color: #fff;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apply the "Exo 2" font to the copyright text */
-}
-
-.info-banner {
-            background-color: #ffcc00;
-            color: #000;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .search-container {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#searchBar {
-  width: 80%;
-  max-width: 600px;
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  background: #222;
-  color: #fff;
-  font-size: 16px;
-}
-
-  </style>
+  <link rel="stylesheet" href="download.css">
 </head>
 <body oncontextmenu="return false;">
-  <h1>Download Files</h1>
-
-  <div class="info-banner">
-    <i class="fas fa-info-circle"></i> The downloads only works for browsers, it doesn't work on the APP.
-  </div>
-  <div class="search-container">
-    <input type="text" id="searchBar" placeholder="Search file..." oninput="searchItems()">
-  </div>
-
+<div class="info-banner"><i class="fas fa-info-circle"></i> The downloads only works for browsers, it doesn't work on the APP.</div>
+<div class="search-container"><input type="text" id="searchBar" placeholder="Search file..." oninput="searchItems()"></div>
   <div class="filter">
     <button class="filter-btn active" onclick="filterItems('all')">All</button>
     <button class="filter-btn" onclick="filterItems('movie')">Movies</button>
     <button class="filter-btn" onclick="filterItems('show')">Shows</button>
     <button class="filter-btn" onclick="filterItems('random')">Random</button>
   </div>
-
   <ul class="downloads" id="downloadList">
   </ul>
-
-  <script>
-  let allItems = [];
-
-  // Fetch JSON Data
-  fetch('downloads.json')
-    .then(response => response.json())
-    .then(data => {
-      allItems = data;
-      renderItems('all');
-    })
-    .catch(error => {
-      document.getElementById('downloadList').innerHTML = "<li>Error loading downloads.</li>";
-      console.error('Failed to fetch downloads:', error);
-    });
-
-  // Render Items Function
-  function renderItems(filterType) {
-    const list = document.getElementById('downloadList');
-    list.innerHTML = '';
-
-    let filtered = filterType === 'all' ? allItems : allItems.filter(item => item.type === filterType);
-
-    // Apply Search Filter
-    const searchQuery = document.getElementById('searchBar')?.value.toLowerCase();
-    if (searchQuery) {
-      filtered = filtered.filter(item => item.name.toLowerCase().includes(searchQuery));
-    }
-
-    // Display Filtered Items
-    filtered.forEach(item => {
-      const li = document.createElement('li');
-      li.className = 'download-item';
-      li.innerHTML = `
-        <a class="download-title" href="${item.url}" target="_blank" download>${item.name}</a>
-        <a class="download-icon" href="${item.url}" target="_blank" download><i class="fas fa-download"></i></a>
-      `;
-      list.appendChild(li);
-    });
-  }
-
-  // Filter Items by Category
-  function filterItems(type) {
-    renderItems(type);
-    document.querySelectorAll('.filter button').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.filter button[onclick*="${type}"]`).classList.add('active');
-  }
-
-  // Search Function
-  function searchItems() {
-    renderItems('all'); // Ensure all categories are included in the search
-  }
-  </script>
+  <div id="pagination" class="pagination-controls" style="text-align:center; margin-top: 20px;"></div>
   <footer>
   <nav class="footer-nav">
   <div class="social-icons">
@@ -319,20 +32,16 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "
   </footer>
   <nav class="bottom-nav">
   <a href="https://dashflix.top" class="nav-item">
-  <i class="fas fa-home"></i> Home
-  </a>
+  <i class="fas fa-home"></i> Home</a>
   <a href="https://dashflix.top/movies" class="nav-item">
-  <i class="fas fa-film"></i> Movies
-  </a>
+  <i class="fas fa-film"></i> Movies</a>
   <a href="https://dashflix.top/shows" class="nav-item">
-  <i class="fas fa-tv"></i> Shows
-  </a>
+  <i class="fas fa-tv"></i> Shows</a>
   <a href="https://dashflix.top/trailer" class="nav-item">
-  <i class="fas fa-video"></i> Trailers
-  </a>
+  <i class="fas fa-video"></i> Trailers</a>
   <a href="https://dashflix.top/requested" class="nav-item">
-  <i class="fas fa-list"></i> Requested
-  </a>
+  <i class="fas fa-list"></i> Requested</a>
   </nav>
+  <script src="downloads.js"></script>
   </body>
 </html>
