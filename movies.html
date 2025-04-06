@@ -37,10 +37,6 @@
        crossorigin="anonymous"></script>
   </head>
   <body>
-<!--<div class="glowing-text-container">
-If you are redirected to a different window for any reason,</br>
-simply close it and get back here!</br>
-</div>-->
 <div class="sharethis-inline-share-buttons"></div>
 <div class="filters" style="display: flex; justify-content: center; align-items: center; margin: 10px 0; padding: 10px; border-radius: 8px;">
   <select id="genre-dropdown" style="background-color: #333; color: #fff; border: 1px solid #555; border-radius: 5px; padding: 10px 15px; font-size: 13px; outline: none; cursor: pointer;">
@@ -50,21 +46,17 @@ simply close it and get back here!</br>
   <div class="search-container">
       <input type="text" id="search-bar" placeholder="Search for movies..." oninput="filterMovies()">
   </div>
-  <div class="row" id="gallery"></div> <!-- Dynamically loaded images go here -->
+  <div class="row" id="gallery"></div>
 
   <div id="loading-spinner" style="text-align:center; display: none;">
       <div class="spinner"></div>
       <p>Loading more movies...</p>
   </div>
-  <button id="goToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 60px; right: 20px; background-color: #333; color: #fff; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 99999;">
-      <!-- Upward Arrow Icon (SVG) -->
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="15" style="color: #fff;">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path>
-      </svg>
+  <button id="goToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 60px; right: 20px; background-color: #fff; color: #333; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 99999;">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="15" style="color: #333;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path></svg>
   </button>
 
   <script>
-      // Show the "Go to Top" button when scrolled down 200px
       window.onscroll = function() {
           const button = document.getElementById('goToTop');
           if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
@@ -74,7 +66,6 @@ simply close it and get back here!</br>
           }
       };
 
-      // Scroll to the top of the page when the button is clicked
       function scrollToTop() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
       }
