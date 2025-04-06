@@ -1,4 +1,3 @@
-/* Container styling */
 .glowing-text-container {
   background: linear-gradient(90deg, #ff8a65, #ffd54f, #81c784, #64b5f6, #ff8a65); /* Vibrant gradient colors */
   background-size: 500% 500%; /* Extend gradient for smoother animation */
