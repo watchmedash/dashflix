@@ -145,6 +145,67 @@
     #searchResults p {
       color: black;
     }
+
+    .faq-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #fff;
+  background-color: #1e1e1e;
+  font-family: Arial, sans-serif;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.faq-item {
+  border-top: 1px solid #333;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background-color: #222;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #222;
+  padding: 0 1rem;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+.faq-question .icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -171,9 +232,6 @@
 </div>
 <div class="sharethis-inline-share-buttons"></div>
 <div class="about-container">
-<p><strong>Dashflix</strong> offers a unique entertainment experience for movie lovers. By browsing this platform,
-users can enjoy the convenience of streaming a wide variety of movies right from the website—without
-the need for any downloads. Here’s what you can expect when you use the site:</p>
 <div class="icon-grid">
 <a href="movies.html"><i class="fas fa-film"></i> Movies</a>
 <a href="shows.html"><i class="fas fa-tv"></i> Shows</a>
@@ -188,18 +246,103 @@ the need for any downloads. Here’s what you can expect when you use the site:<
 <a href="fun/iq.html"><i class="fas fa-brain"></i> IQ Game</a>
 <a href="donate.html"><i class="fas fa-donate"></i> Donate</a>
 </div>
-<ul>
-<li><strong>Endless Entertainment:</strong> Access a vast collection of movies, ranging from the latest releases
-to classic hits. Whether you're in the mood for action, drama, comedy, or adventure, there's always something for everyone.</li>
-<li><strong>Seamless Streaming:</strong> Enjoy smooth, uninterrupted playback thanks to videos embedded from trusted third-party sources.</li>
-<li><strong>Quick Search:</strong> With a streamlined interface, you can quickly find and stream your favorite titles without
-unnecessary steps or delays.</li>
-<li><strong>High-Quality Content:</strong> All the content you find on <strong>Dashflix</strong> is streamed from reliable
-video hosting sites, ensuring that you get the best possible video quality available for each title.</li>
-<li><strong>No Downloads Required:</strong> Simply click and watch—no need to worry about large files or storage space.
-Just stream and enjoy your favorite content directly in your browser.</li>
-<li><strong>Convenient Access:</strong> Enjoy your favorite movies and shows at any time, from anywhere, with just an internet connection.</li>
-</ul>
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <button class="faq-question">
+      What is Dashflix?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+Dashflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+You can watch as much as you want, whenever you want without a single commercial - all for one low monthly price. There's always something new to discover and new TV shows and movies are added everyday!
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do I need an account?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      No account is required to watch or download content.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Is this service free?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Yes, everything here is available for free!
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What kind of movies are available?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Access a vast collection of movies, ranging from the latest releases
+      to classic hits. Whether you're in the mood for action, drama, comedy, or adventure, there's always something for everyone.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Will the videos play smoothly?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Enjoy smooth, uninterrupted playback thanks to videos embedded from trusted third-party sources.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How do I find what I want to watch?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      With a streamlined interface, you can quickly find and stream your favorite titles without
+      unnecessary steps or delays.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What is the video quality like?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      All the content you find on <strong>Dashflix</strong> is streamed from reliable
+      video hosting sites, ensuring that you get the best possible video quality available for each title.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do I need to download anything?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      For most titles, you can stream directly in your browser with no downloads required.
+      However, for selected movies and shows, we also provide a download option so you can enjoy them offline at your convenience.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I watch from anywhere?
+      <span class="icon">+</span>
+    </button>
+    <div class="faq-answer">
+      Enjoy your favorite movies and shows at any time, from anywhere, with just an internet connection.
+    </div>
+  </div>
+</section>
 <p class="disclaimer">
 <strong>Disclaimer:</strong> All embedded videos and content on <strong>Dashflix</strong> are sourced from publicly
 available platforms or sites that allow embedding. The site itself does not verify the copyright status of the
@@ -207,6 +350,7 @@ materials, nor does it own the rights to any of the media. Users are advised to 
 ensure that their viewing aligns with applicable laws in their jurisdiction.
 </p>
 </div>
+
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
@@ -223,6 +367,14 @@ ensure that their viewing aligns with applicable laws in their jurisdiction.
 </nav>
 <p class="copyright">Dashflix. All rights reserved.</p>
 </footer>
+<script>
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    item.classList.toggle('active');
+  });
+});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="search.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
