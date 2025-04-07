@@ -1,0 +1,186 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+a {
+  color: #28a745; /* Light green for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b4e64a;
+}
+
+
+/* Navigation Bar Styles */
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  border-bottom: 1px solid #444;
+  margin: 0 auto;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.navbar li a i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 1.2rem; /* Adjust the size of the icon */
+}
+
+.active {
+  background-color: #28a745; /* Active tab color */
+}
+
+/* Content Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.main-content {
+  flex: 7;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border: 1px solid #333;
+}
+
+.main-content img {
+max-width: 300px;
+height: auto;
+margin: 15px auto;  /* Center the image horizontally */
+display: block;     /* Make the image a block-level element */
+}
+
+.main-content a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: #28a745;
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+.main-content a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #218838;
+}
+
+.sidebar {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.popular-posts {
+  flex: 5;
+  background-color: #2a2a2a;
+  padding: 15px;
+}
+
+.popular-posts ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.popular-posts ul li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.popular-posts ul li::before {
+  content: "•";
+  color: #28a745;
+  margin-right: 8px;
+}
+
+.footer, .extra-box {
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 15px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center items */
+  }
+
+  .navbar ul {
+    align-items: center;
+  }
+
+  .main-content,
+  .sidebar {
+    flex: none;
+    margin-left: 0;
+    width: 100%; /* Full width on small screens */
+  }
+}
+
+.logo {
+  max-height: 50px; /* Adjust the size of the logo */
+  margin-right: 7px;
+  vertical-align: middle; /* Aligns the logo with the text */
+}
+
+.butt {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: #28a745; /* Green for the button */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

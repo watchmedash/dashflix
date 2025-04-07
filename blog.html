@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Blogs - Watch Free Movies and TV Series Online</title>
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
+<style>
+.bottom-nav {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+display: flex;
+justify-content: space-around;
+background-color: #1a1a1a; /* Dark background */
+padding: 5px;
+border-top: 2px solid #333; /* Darker border for contrast */
+z-index: 1000;
+transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item {
+color: #e0e0e0; /* Light gray text for better contrast */
+text-align: center;
+text-decoration: none;
+font-size: 14px;
+flex-grow: 1;
+transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+position: relative;
+}
+
+.nav-item i {
+display: block;
+font-size: 18px;
+margin-bottom: 5px;
+transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
+}
+
+.nav-item:hover {
+color: #ffffff; /* Change color to normal white on hover */
+transform: scale(1.1);
+text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
+}
+
+.nav-item:hover i {
+transform: scale(1.4); /* Enlarge the icon */
+}
+  </style>
+</head>
+<body>
+  <div class="footed">
+    <div class="search-bar">
+  <input type="text" id="search-input" placeholder="Search...">
+  <button id="search-btn">
+    <i class="fa fa-search"></i>
+  </button>
+</div>
+  </div>
+
+  <div class="container">
+    <div class="main-content">
+      <div class="sharethis-inline-share-buttons"></div>
+      <select id="tag-filter">
+
+      </select>
+      <div id="posts-container">
+
+      </div>
+      <div id="pagination">
+
+      </div>
+    </div>
+  </div>
+
+  <button id="goToTop" class="go-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  <script>
+  function handleScroll() {
+  const goToTopButton = document.getElementById('goToTop');
+
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    goToTopButton.style.display = 'block';
+  } else {
+    goToTopButton.style.display = 'none';
+  }
+  }
+
+  function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+  }
+
+  window.onscroll = handleScroll;
+
+  document.getElementById('goToTop').addEventListener('click', scrollToTop);
+  </script>
+  <nav class="bottom-nav">
+  <a href="/index" class="nav-item">
+  <i class="fas fa-home"></i> Home</a>
+  <a href="/movies" class="nav-item">
+  <i class="fas fa-film"></i> Movies</a>
+  <a href="/shows" class="nav-item">
+  <i class="fas fa-tv"></i> Shows</a>
+  <a href="/trailer" class="nav-item">
+  <i class="fas fa-video"></i> Trailers</a>
+  <a href="/requested" class="nav-item">
+  <i class="fas fa-list"></i> Requested</a>
+  </nav>
+<script src="blog.js"></script>
+</body>
+</html>

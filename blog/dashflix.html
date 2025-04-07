@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <title>Dashflix – Your All-In-One Entertainment Hub</title>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="pages.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+    <li><a class="active" href="/blog.html"><i class="fas fa-blog"></i> Blogs</a></li>
+    <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+    <li><a href="/about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+      </ul>
+    </div>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="extra-box">
+    <div class="sharethis-inline-share-buttons"></div>
+    </div>
+    <div class="top-section">
+      <!-- Main Content -->
+      <div class="main-content">
+        <img src="https://i.postimg.cc/YCWDLrdF/th.webp" alt="Dashflix">
+        <h2>Dashflix – Your All-In-One Entertainment Hub!</h2></br>
+          <p>
+            If you're tired of jumping between different websites just to find something fun to watch or read,
+            <strong>Dashflix</strong> has got your back. It's more than just a movie site – it's an entire universe of entertainment
+            packed into one sleek, easy-to-use platform.
+          </p></br>
+
+          <h3>🍿 Movies, Series &amp; Live TV – All in One Place</h3></br>
+          <p>
+            Whether you're in the mood for a late-night <a href="/movies"><strong>movie</strong></a> marathon, binge-watching a new <a href="/shows"><strong>series</strong></a>, or catching up on <a href="/tvplus"><strong>live TV</strong></a>,
+            Dashflix has something for everyone. With a wide range of genres and regularly updated content, there's always something fresh to discover.
+          </p></br>
+
+          <h3>📥 Downloads Made Easy</h3></br>
+          <p>
+            Want to take your favorite shows and movies on the go? Dashflix has a dedicated <a href="/download"><strong>Download Section</strong></a> so you can save your content
+            and enjoy it anytime, anywhere – no Wi-Fi needed.
+          </p></br>
+
+          <h3>🙋 Request What You Want</h3></br>
+          <p>
+            Can’t find a movie or show? No worries – Dashflix lets users <a href="/request"><strong>request</strong></a> what they want to see. Just fill out a simple form,
+            and the team will do their best to add it ASAP.
+          </p></br>
+
+          <h3>😂 Dad Jokes &amp; Comics</h3></br>
+          <p>
+            Sometimes you just need a quick laugh. Dashflix has a fun <a href="/fun/jokes"><strong>Dad Jokes Section</strong></a>
+            for those classic groan-worthy punchlines. And if you're into visuals, check out the <a href="/comic"><strong>Comics Section</strong></a> – a great way to chill and scroll through short, funny stories.
+          </p></br>
+
+          <h3>🔞 Adult Section</h3></br>
+          <p>
+            For mature audiences, Dashflix includes an <a href="/adult"><strong>Adult Section</strong></a> with age-restricted content. It’s securely separated from the main platform,
+            so only viewers of legal age can access it.
+          </p></br>
+
+          <h3>🎉 Why Dashflix?</h3></br>
+          <p>
+            Dashflix is built for people who love entertainment in all its forms. Movies, shows, live TV, laughs, downloads – it’s all here.
+            The interface is smooth, the library is stacked, and the extras (like jokes and comics) make it way more fun than your average streaming site.
+          </p></br>
+          <p>
+            So if you haven’t checked it out yet, what are you waiting for?
+          </p></br>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="popular-posts">
+          <h3>Popular Posts</h3>
+          <ul id="popular-posts-list">
+
+          </ul>
+        </div>
+
+        <script>
+          fetch('/blog.json')
+            .then(response => response.json())
+            .then(data => {
+              const postsList = document.getElementById('popular-posts-list');
+              const shuffled = data.sort(() => 0.5 - Math.random()); // Shuffle the array
+              const popularPosts = shuffled.slice(0, 15); // Select the first 12
+
+              popularPosts.forEach(post => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = post.link;
+                link.textContent = post.title;
+                listItem.appendChild(link);
+                postsList.appendChild(listItem);
+              });
+            })
+            .catch(error => console.error('Error fetching the blog.json:', error));
+        </script>
+</div>
+
+<div class="extra-box">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+      this.page.url = window.location.href; // Current page URL
+      this.page.identifier = document.title; // Use the page's title as a unique identifier
+  };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://randoms-3.disqus.com/embed.js'; // Replace 'randoms-3' with your Disqus shortname
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>
+      Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</div>
+
+<div class="footer">
+<p>&copy; Dashflix.top. All rights reserved.</p>
+</div>
+
+</body>
+</html>
