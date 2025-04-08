@@ -21,13 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
         let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
         if (watchlist.some(item => item.id === movieId && item.type === "movie")) {
-            watchlistBtn.textContent = "Remove from Watchlist";
-            watchlistBtn.style.backgroundColor = "#ff4444";
+            // Remove from Watchlist
+            watchlistBtn.innerHTML = '<i class="fas fa-trash"></i>'; // Only trash icon for removal
+            watchlistBtn.style.backgroundColor = "#ff4444"; // Red color for removal
+            watchlistBtn.title = "Remove from Watchlist"; // Tooltip text for removal
         } else {
-            watchlistBtn.textContent = "Add to Watchlist";
-            watchlistBtn.style.backgroundColor = "#007BFF";
+            // Add to Watchlist
+            watchlistBtn.innerHTML = '<i class="fas fa-plus"></i>'; // Only plus icon for adding
+            watchlistBtn.style.backgroundColor = "#007BFF"; // Default blue for adding
+            watchlistBtn.title = "Add to Watchlist"; // Tooltip text for adding
         }
     }
+
 
     function toggleWatchlist() {
         let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
