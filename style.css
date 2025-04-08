@@ -1384,3 +1384,37 @@ margin: 0 5px; /* Adjust the value as per your design preference */
 .filter-button.genre-button {
 margin: 5px;/* Adding margins to all sides for spacing */
 }
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #ff0000;
+    border-top: 1px solid #444;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  .icon-grid a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .icon-grid a:hover {
+    background: #444;
+  }
+  .icon-grid i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
