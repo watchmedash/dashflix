@@ -334,6 +334,33 @@
   height: 200px; /* Match the poster height */
 }
 
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  .icon-grid a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  .icon-grid a:hover {
+    background: #444;
+  }
+  .icon-grid i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
   </style>
 </head>
 <body oncontextmenu="return false;">
