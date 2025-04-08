@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function getMovieDetails() {
         return {
             id: movieId,
-            type: "movie", // To differentiate between movies and shows
+            type: "movie",
             title: document.getElementById("movie-title-info").textContent,
             poster: document.getElementById("movie-poster").src,
             releaseYear: document.getElementById("release-year").textContent,
@@ -21,18 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
         if (watchlist.some(item => item.id === movieId && item.type === "movie")) {
-            // Remove from Watchlist
-            watchlistBtn.innerHTML = '<i class="fas fa-trash"></i>'; // Only trash icon for removal
-            watchlistBtn.style.backgroundColor = "#ff4444"; // Red color for removal
-            watchlistBtn.title = "Remove from Watchlist"; // Tooltip text for removal
+            watchlistBtn.innerHTML = '<i class="fas fa-trash"></i>';
+            watchlistBtn.style.backgroundColor = "#ff4444";
+            watchlistBtn.title = "Remove from Watchlist";
         } else {
-            // Add to Watchlist
-            watchlistBtn.innerHTML = '<i class="fas fa-plus"></i>'; // Only plus icon for adding
-            watchlistBtn.style.backgroundColor = "#007BFF"; // Default blue for adding
-            watchlistBtn.title = "Add to Watchlist"; // Tooltip text for adding
+            watchlistBtn.innerHTML = '<i class="fas fa-plus"></i>';
+            watchlistBtn.style.backgroundColor = "#007BFF";
+            watchlistBtn.title = "Add to Watchlist";
         }
     }
-
 
     function toggleWatchlist() {
         let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
