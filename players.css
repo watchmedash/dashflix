@@ -267,6 +267,11 @@ body.light-theme .theme-toggle .slider::before {
 .related-tv-shows h2 {
     color: #fff;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+body.light-theme .related-tv-shows h2 {
+    color: #111; /* or any dark color */
 }
 
 .tv-shows-list {
@@ -322,3 +327,15 @@ body.light-theme .theme-toggle .slider::before {
         height: 120px; /* Adjust height for mobile to keep aspect ratio */
     }
 }
+
+#comments-wrapper {
+        background-color: #2e2e2e; /* dark gray */
+        padding: 1rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+    }
+
+    /* Optional: Lighter gray for light theme */
+    body.light-theme #comments-wrapper {
+        background-color: #2e2e2e;
+    }

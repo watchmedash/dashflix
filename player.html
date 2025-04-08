@@ -60,9 +60,35 @@
 </div>
 </div>
 <div class="related-movies">
+  <h2>Related Movies</h2>
     <div id="related-movies-list" class="movies-list">
     </div>
 </div>
+<div id="comments-wrapper">
+    <div id="disqus_thread"></div>
+</div>
+
+<script>
+    var disqus_config = function () {
+        const params = new URLSearchParams(window.location.search);
+        const movieId = params.get("id");
+
+        this.page.url = window.location.href; // Use the full URL as the unique page URL
+        this.page.identifier = movieId;       // Unique TMDB ID as the identifier
+    };
+
+    (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://watchmenow.disqus.com/embed.js'; // Replace with your Disqus shortname if different
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 <button class="close-btn" onclick="goBack()">Go Back</button>
 </div>
 <script>
