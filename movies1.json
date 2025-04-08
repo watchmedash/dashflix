@@ -1,6 +1,19 @@
 {
     "movies": [
       {
+          "title": "In the Lost Lands",
+          "link": "https://dashflix.top/player?id=324544",
+          "image": "https://image.tmdb.org/t/p/original/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Fantasy",
+              "Adventure",
+              "Action"
+          ]
+      },
+      {
           "title": "Bangkera",
           "link": "https://emirati.top/movies/Bangkera",
           "image": "https://image.tmdb.org/t/p/original/ctW36O4SZh08TWrEo7ewPDypfB2.jpg",
