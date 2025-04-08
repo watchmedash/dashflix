@@ -10,6 +10,7 @@ async function fetchTvShowDetails() {
         const response = await fetch(`${BASE_URL}/tv/${tvShowId}?api_key=${API_KEY}&language=en-US`);
         const data = await response.json();
 
+        // Populate the page and meta tags after data is fetched
         displayTvShowDetails(data);
         populateSeasonDropdown(data.seasons);
     } catch (error) {
@@ -25,6 +26,40 @@ function displayTvShowDetails(tvShow) {
     document.getElementById("rating").textContent = tvShow.vote_average;
     document.getElementById("genres").textContent = tvShow.genres.map(genre => genre.name).join(", ");
     document.getElementById("creator").textContent = tvShow.created_by.map(creator => creator.name).join(", ");
+
+    // Full URL and image URL for meta tags
+    const fullUrl = `https://dashflix.top/players.html?id=${tvShow.id}`;
+    const imageUrl = IMAGE_BASE_URL + tvShow.poster_path;
+
+    // Meta Tags for Social Sharing - Add them to the <head> after data is fetched
+    const metaTags = [
+        { property: "og:image", content: imageUrl },
+        { property: "og:image:alt", content: `${tvShow.name} Poster` },
+        { property: "og:url", content: fullUrl },
+        { name: "twitter:image", content: imageUrl },
+        { name: "twitter:image:alt", content: `${tvShow.name} Poster` },
+        { property: "og:title", content: `${tvShow.name} - Watch Now on Dashflix` },
+        { name: "twitter:title", content: `${tvShow.name} - Watch Now on Dashflix` },
+        { property: "og:description", content: tvShow.overview },
+        { name: "twitter:description", content: tvShow.overview }
+    ];
+
+    metaTags.forEach(tag => {
+        const meta = document.createElement("meta");
+        if (tag.property) meta.setAttribute("property", tag.property);
+        if (tag.name) meta.setAttribute("name", tag.name);
+        meta.setAttribute("content", tag.content);
+        document.head.appendChild(meta);
+    });
+
+    // Canonical link
+    const canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    canonical.setAttribute("href", fullUrl);
+    document.head.appendChild(canonical);
+
+    // Page Title
+    document.title = `${tvShow.name} - Watch Now on Dashflix`;
 }
 
 function populateSeasonDropdown(seasons) {
@@ -126,7 +161,6 @@ function updateVideoPlayer() {
     const videoSourceSelect = document.getElementById("video-source");
     document.getElementById("video-player").src = videoSourceSelect.value;
 }
-
 
 function goBack() {
     window.location.href = "shows.html";

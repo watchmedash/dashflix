@@ -12,27 +12,9 @@
     "language": ""
   },
   {
-    "title": "American idol",
-    "url": "https://d2h3esqi6ab3e7.cloudfront.net/index.m3u8",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/American_Idol_logo.svg/2560px-American_Idol_logo.svg.png",
-    "language": ""
-  },
-  {
     "title": "Billiard TV",
     "url": "https://1621590671.rsc.cdn77.org/HLS/BILLIARDTV_SCTE.m3u8",
     "image": "https://image.xumo.com/v1/channels/channel/8111111/600x600.webp?type=color_onBlack",
-    "language": ""
-  },
-  {
-    "title": "GMA Pinoy TV",
-    "url": "https://ott.udptv.net/stream/iptv/gmapinoytv/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859",
-    "image": "https://static.wikia.nocookie.net/gmanetwork/images/f/f8/GMA_Network.png",
-    "language": ""
-  },
-  {
-    "title": "NHK WORLD JAPAN",
-    "url": "https://nhkwlive-ojp.akamaized.net/hls/live/2003459/nhkwlive-ojp-en/index.m3u8",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NHK_World.svg/1200px-NHK_World.svg.png",
     "language": ""
   },
   {
@@ -57,18 +39,6 @@
     "title": "ABC News",
     "url": "https://c.mjh.nz/abc-news.m3u8",
     "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/australia/abc-news-au.png",
-    "language": ""
-  },
-  {
-    "title": "WOWOW Prime",
-    "url": "https://luong.utako.moe/wprime/index.m3u8",
-    "image": "https://www.lyngsat.com/logo/tv/ww/wowow_prime.png",
-    "language": ""
-  },
-  {
-    "title": "WOWOW Live",
-    "url": "https://luong.utako.moe/wlive/index.m3u8",
-    "image": "https://www.lyngsat.com/logo/tv/ww/wowow_live.png",
     "language": ""
   },
   {
@@ -108,12 +78,6 @@
     "language": ""
   },
   {
-    "title": "GAME SHOW NETWORK",
-    "url": "https://fl5.moveonjoy.com/GAME_SHOW_NETWORK/index.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/game-show-network-hz-us.png?raw=true",
-    "language": ""
-  },
-  {
     "title": "Redbull TV",
     "url": "https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_3360.m3u8",
     "image": "https://raw.githubusercontent.com/FunctionError/Logos/main/Pirates-Tv.png",
@@ -141,12 +105,6 @@
     "title": "Hallmark Family",
     "url": "https://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/hallmark-family-us.png?raw=true",
-    "language": ""
-  },
-  {
-    "title": "HBO East",
-    "url": "https://fl2.moveonjoy.com/HBO/index.m3u8",
-    "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10240_dark_360w_270h.png",
     "language": ""
   },
   {
@@ -183,12 +141,6 @@
     "title": "mtvU",
     "url": "https://fl2.moveonjoy.com/MTV_U/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/mtv-u-us.png?raw=true",
-    "language": ""
-  },
-  {
-    "title": "MUCH",
-    "url": "https://fl1.moveonjoy.com/MUCH/index.m3u8",
-    "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/canada/much-ca.png?raw=true",
     "language": ""
   },
   {
@@ -372,18 +324,6 @@
     "language": ""
   },
   {
-    "title": "CRAVE 3",
-    "url":"https://fl3.moveonjoy.com/CRAVE_3/index.m3u8",
-    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-3-ca.png",
-    "language": ""
-  },
-  {
-    "title": "CRAVE 1",
-    "url":"https://fl3.moveonjoy.com/CRAVE_1/index.m3u8",
-    "image": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/crave-1-ca.png",
-    "language": ""
-  },
-  {
     "title": "COZI TV",
     "url":"https://fl3.moveonjoy.com/COZI_TV/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cozi-tv-us.png?raw=true",
@@ -471,12 +411,6 @@
     "title": "BET Jams",
     "url":"https://fl3.moveonjoy.com/BET_Jams/index.m3u8",
     "image": "https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-jams-us.png?raw=true",
-    "language": ""
-  },
-  {
-    "title": "BET East",
-    "url":"https://fl2.moveonjoy.com/BET_EAST/index.m3u8",
-    "image": "https://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png",
     "language": ""
   },
   {
@@ -670,7 +604,7 @@
     "title": "24 TV",
     "url":
       "https://turkmedya-live.ercdn.net/tv24/tv24_720p.m3u8",
-    "image": "https://seeklogo.com/images/1/24-tv-logo-33D3C57D1B-seeklogo.com.png",
+    "image": "https://upload.wikimedia.org/wikipedia/tr/a/a6/24_TV_logosu.png",
     "language": ""
   },
   {
@@ -734,13 +668,6 @@
     "url":
       "https://yletvworld.akamaized.net/hls/live/622540/yletv1w/yletv_video1080p50.m3u8",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Yle_TV1_logo.svg",
-    "language": ""
-  },
-  {
-    "title": "7x Music",
-    "url":
-      "https://stream.e2is.in/hls/7xMusic.m3u8",
-    "image": "https://bx-tv.com/wp-content/uploads/2022/11/7x-music-Punjabi.jpg",
     "language": ""
   },
   {
