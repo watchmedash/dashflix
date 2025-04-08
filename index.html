@@ -66,7 +66,6 @@
         "description": "Stream free movies, TV series, live news, sports, and anime online with Dashflix. Explore a variety of genres and enjoy high-quality content."
     }
     </script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZXCQM5KLH"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -242,21 +241,43 @@
 
 .trending-card img {
   width: auto;
-  height: 200px;
-  border-radius: 12px;
+  max-height: 200px;
+  border-radius: 5px;
   display: block;
 }
+
+.media-type {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.trending-card:hover .media-type {
+  opacity: 1;
+}
+
 
 .rank-badge {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   top: 1px;
   left: 6px;
-  color: black; /* White text */
-  font-size: 4.5rem; /* Font size */
+  color: black;
+  font-size: 4.5rem;
   font-weight: bold;
   padding: 1px 6px;
-  background: transparent; /* No background */
+  background: transparent;
   text-align: center;
   line-height: 1.2;
   display: flex;
@@ -266,7 +287,7 @@
     -1px -1px 0px white,
     1px -1px 0px white,
     -1px 1px 0px white,
-    1px 1px 0px white; /* Outline effect for the text */
+    1px 1px 0px white;
 }
 
 .scroll-btn {

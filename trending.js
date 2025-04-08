@@ -1,5 +1,5 @@
 const container = document.getElementById('trending-container');
-const tmdbApiKey = '4f599baa15d072c9de346b2816a131b8'; // Replace this
+const tmdbApiKey = '4f599baa15d072c9de346b2816a131b8';
 const trendingWrapper = document.querySelector('.trending-wrapper');
 
 fetch('trending.json')
@@ -25,13 +25,13 @@ fetch('trending.json')
       card.className = 'trending-card';
       card.innerHTML = `
         <span class="rank-badge">${item.rank}</span>
-        <img src="${item.poster}" alt="${item.title}">
+        <img src="${item.poster}" alt="${item.title}" loading="lazy">
+        <span class="media-type">${item.type === 'movie' ? 'Movie' : 'TV Show'}</span>
       `;
       container.appendChild(card);
     });
   });
 
-// Scroll controls
 document.querySelector('.scroll-btn.left').addEventListener('click', () => {
   container.scrollBy({ left: -400, behavior: 'smooth' });
 });
