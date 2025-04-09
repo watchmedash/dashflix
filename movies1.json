@@ -639,7 +639,7 @@
       },
       {
           "title": "Halinghing",
-          "link": "https://emirati.top/movies/Halinghing",
+          "link": "https://dashflix.top/player?id=1337402",
           "image": "https://image.tmdb.org/t/p/original/8eMW4CSTjTAyPf1Zt70myJFXx7f.jpg",
           "tag": "HD",
           "requested": true,
@@ -832,7 +832,7 @@
       },
       {
           "title": "Daddysitter",
-          "link": "https://emirati.top/movies/Daddysitter",
+          "link": "https://dashflix.top/requested/Daddysitter",
           "image": "https://m.media-amazon.com/images/M/MV5BYjMyMDdlYTMtNWQ5OC00ZDc1LThlY2EtZWU4ZWM0ZTFlNDEwXkEyXkFqcGc@._V1_SX300.jpg",
           "tag": "HD",
           "requested": true,
@@ -921,7 +921,7 @@
       },
       {
           "title": "Cita",
-          "link": "https://emirati.top/movies/Cita",
+          "link": "https://dashflix.top/requested/Cita",
           "image": "https://i.postimg.cc/mgqQRJ4Q/000000718.png",
           "tag": "HD",
           "requested": true,
@@ -1106,7 +1106,7 @@
       },
       {
           "title": "Dayo",
-          "link": "https://emirati.top/movies/Dayo",
+          "link": "https://dashflix.top/requested/Dayo",
           "image": "https://i.postimg.cc/xdmVm8h7/000000616.webp",
           "tag": "HD",
           "requested": true,
@@ -1152,7 +1152,7 @@
       },
       {
           "title": "Cheaters",
-          "link": "https://emirati.top/movies/Cheaters",
+          "link": "https://dashflix.top/requested/Cheaters",
           "image": "https://i.postimg.cc/RFdvGcrk/000000600.jpg",
           "tag": "HD",
           "requested": true,
@@ -1312,7 +1312,7 @@
       },
       {
           "title": "Dilig",
-          "link": "https://emirati.top/movies/Dilig",
+          "link": "https://dashflix.top/requested/Dilig",
           "image": "https://i.postimg.cc/L8ZQkzNr/000000512.jpg",
           "tag": "HD",
           "requested": true,
@@ -1501,7 +1501,7 @@
       },
       {
           "title": "Dos Marias",
-          "link": "https://emirati.top/movies/Dos Marias",
+          "link": "https://dashflix.top/requested/Dos Marias",
           "image": "https://i.postimg.cc/DySxLT8F/000000337.webp",
           "tag": "HD",
           "requested": true,
@@ -1533,8 +1533,30 @@
       },
       {
           "title": "Haliparot",
-          "link": "https://emirati.top/movies/Haliparot",
+          "link": "https://dashflix.top/requested/Haliparot",
           "image": "https://i.postimg.cc/GthPC1JG/000000322.webp",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2023",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Foursome",
+          "link": "https://dashflix.top/requested/Foursome",
+          "image": "https://i.postimg.cc/mgH3Xf4L/000000435.webp",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2023",
+          "genres": [
+              "Drama"
+          ]
+      },
+      {
+          "title": "Ganti-Ganti",
+          "link": "https://dashflix.top/requested/Ganti-Ganti",
+          "image": "https://i.postimg.cc/nhYcDqr8/000000379.webp",
           "tag": "HD",
           "requested": true,
           "release_year": "2023",
@@ -1549,6 +1571,18 @@
           "tag": "HD",
           "requested": true,
           "release_year": "2023",
+          "genres": [
+              "Thriller",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Haslers",
+          "link": "https://dashflix.top/requested/Haslers",
+          "image": "https://i.postimg.cc/MKc7pj8Q/000000397.webp",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
           "genres": [
               "Thriller",
               "Drama"
@@ -1788,7 +1822,7 @@
       },
       {
           "title": "Fall Guy",
-          "link": "https://emirati.top/movies/Fall Guy",
+          "link": "https://dashflix.top/requested/Fall Guy",
           "image": "https://i.postimg.cc/J7Bd6NYq/000000179.webp",
           "tag": "HD",
           "requested": true,
