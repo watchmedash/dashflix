@@ -25,6 +25,55 @@
           ]
       },
       {
+          "title": "The Alto Knights",
+          "link": "https://dashflix.top/player?id=1013601",
+          "image": "https://image.tmdb.org/t/p/original/95KmR0xNuZZ6DNESDwLKWGIBvMg.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Crime"
+          ]
+      },
+      {
+          "title": "Gunslingers",
+          "link": "https://dashflix.top/player?id=1293286",
+          "image": "https://image.tmdb.org/t/p/original/O7REXWPANWXvX2jhQydHjAq2DV.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Western"
+          ]
+      },
+      {
+          "title": "G20",
+          "link": "https://dashflix.top/player?id=1045938",
+          "image": "https://image.tmdb.org/t/p/original/tSee9gbGLfqwvjoWoCQgRZ4Sfky.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Mystery",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Chhorii 2",
+          "link": "https://dashflix.top/player?id=1084031",
+          "image": "https://image.tmdb.org/t/p/original/fnbJbisEy4zoCecirO4WNje6opw.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Horror",
+              "Drama"
+          ]
+      },
+      {
           "title": "Bangkera",
           "link": "https://dashflix.top/requested/Bangkera",
           "image": "https://image.tmdb.org/t/p/original/ctW36O4SZh08TWrEo7ewPDypfB2.jpg",
