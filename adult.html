@@ -59,7 +59,6 @@
       [videos[i], videos[j]] = [videos[j], videos[i]];
     }
 
-    // Pick the first video from the shuffled list as the main video
     const randomVideo = videos[0];
     const mainPlayer = document.getElementById('mainPlayer');
     mainPlayer.src = randomVideo.link;
@@ -84,8 +83,8 @@
 
     const mainPlayerSection = document.getElementById('mainPlayerSection');
     mainPlayerSection.scrollIntoView({
-      behavior: 'smooth', // Smooth scroll
-      block: 'start' // Align with the top of the viewport
+      behavior: 'smooth',
+      block: 'start'
     });
   }
 
