@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Image Grid with Lazy Loading and Search</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/watchmedash/dassets/load.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/watchmedash/dassets/sty.css"/>
+    <link rel="stylesheet" href="load.css"/>
+    <link rel="stylesheet" href="sty.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <style>
     * {
@@ -186,7 +186,7 @@ body {
 
 
 <script>
-const jsonPaths = ['https://cdn.jsdelivr.net/gh/watchmedash/dassets/movies1.json', 'https://cdn.jsdelivr.net/gh/watchmedash/dassets/movies2.json']; // Paths to your JSON files
+const jsonPaths = ['movies1.json', 'movies2.json']; // Paths to your JSON files
 let allMovies = [];
 
 // Function to fetch and combine movies from multiple JSON files
@@ -278,7 +278,7 @@ function filterMovies() {
 // Fetch movies when the page loads
 fetchMovies();
 </script>
-<script src="https://cdn.jsdelivr.net/gh/watchmedash/dassets/load.js"></script>
+<script src="load.js"></script>
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <nav class="bottom-nav">
@@ -313,5 +313,6 @@ fetchMovies();
 <script>
 document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("more-menu"),t=document.getElementById("more-links");e.addEventListener("click",function(e){e.preventDefault(),t.classList.toggle("show")})});
 </script>
+<script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
 </body>
 </html>
