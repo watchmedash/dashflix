@@ -22,6 +22,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
   <link rel="stylesheet" href="players.css">
+  <link rel="stylesheet" href="play.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
@@ -61,8 +62,11 @@
 <img id="tv-poster" src="" alt="TV Show Poster">
 <div class="tv-show-info">
 <h2 id="tv-title-info">Loading...</h2>
+<div class="watchlist-buttons">
 <button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i></button>
 <a href="/watchlist" id="watchlist-icon-btn" class="watchlist-icon-btn"><i class="fas fa-bookmark"></i></a>
+</div>
+<button class="play-trailer-btn" id="play-trailer-btn">▶ Play Trailer</button>
 <p><strong>First Air Year:</strong> <span id="release-year">Loading...</span></p>
 <p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
 <p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
@@ -70,6 +74,12 @@
 <p id="tv-overview">Loading...</p>
 <p><strong>Creator:</strong> <span id="creator">Loading...</span></p>
 </div>
+</div>
+<div class="trailer-modal" id="trailer-modal">
+  <div class="trailer-content">
+    <button class="blose-btn" id="close-trailer">×</button>
+    <iframe id="trailer-video" src="" allowfullscreen></iframe>
+  </div>
 </div>
 <div class="related-tv-shows">
   <h2>Related Shows</h2>
@@ -125,6 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 <script src="players.js"></script>
+<script src="plays.js"></script>
 <script src="ps.js"></script>
 <script src="relateds.js"></script>
 </body>
