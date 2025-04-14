@@ -24,18 +24,6 @@
           ]
       },
       {
-          "title": "Gunslingers",
-          "link": "https://dashflix.top/player?id=1293286",
-          "image": "https://image.tmdb.org/t/p/original/O7REXWPANWXvX2jhQydHjAq2DV.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Action",
-              "Western"
-          ]
-      },
-      {
           "title": "Chhorii 2",
           "link": "https://dashflix.top/player?id=1084031",
           "image": "https://image.tmdb.org/t/p/original/fnbJbisEy4zoCecirO4WNje6opw.jpg",
@@ -70,19 +58,6 @@
               "Comedy",
               "Adventure",
               "Science Fiction",
-              "Horror"
-          ]
-      },
-      {
-          "title": "Death of a Unicorn",
-          "link": "https://dashflix.top/player?id=1153714",
-          "image": "https://image.tmdb.org/t/p/original/66sec2j6gubu2rD9hsXshomq7ix.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Comedy",
-              "Fantasy",
               "Horror"
           ]
       },
