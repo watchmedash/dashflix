@@ -12,6 +12,31 @@
           ]
       },
       {
+          "title": "Lifeline",
+          "link": "https://dashflix.top/player?id=1078812",
+          "image": "https://image.tmdb.org/t/p/original/epOQz87kzBnxDZMrgYCmFuDZXNx.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Mystery",
+              "Thriller",
+              "Drama"
+          ]
+      },
+      {
+          "title": "Trigger Happy",
+          "link": "https://dashflix.top/player?id=1234422",
+          "image": "https://image.tmdb.org/t/p/original/5YDdMeKhKCC3ojLM9WLioLZEDDx.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2024",
+          "genres": [
+              "Comedy",
+              "Thriller"
+          ]
+      },
+      {
           "title": "The Alto Knights",
           "link": "https://dashflix.top/player?id=1013601",
           "image": "https://image.tmdb.org/t/p/original/95KmR0xNuZZ6DNESDwLKWGIBvMg.jpg",
