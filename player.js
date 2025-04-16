@@ -104,10 +104,6 @@ function changeSource() {
   player.src = sourceSelector.value;
 }
 
-function goBack() {
-  window.location.href = "movies.html";
-}
-
 if (movieId) {
   fetchMovieDetails(movieId);
 }

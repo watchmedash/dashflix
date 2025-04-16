@@ -162,8 +162,4 @@ function updateVideoPlayer() {
     document.getElementById("video-player").src = videoSourceSelect.value;
 }
 
-function goBack() {
-    window.location.href = "shows.html";
-}
-
 fetchTvShowDetails();
