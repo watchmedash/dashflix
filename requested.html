@@ -18,6 +18,7 @@
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="ann.css">
+  <link rel="stylesheet" href="bottom-search.css">
   <title>Requested Movies - Watch Free Movies and TV Series Online</title>
   <style>
       body {
@@ -104,21 +105,22 @@ const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON
 <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <nav class="bottom-nav">
-  <a href="/index" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="/tvplus" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="/movies" class="nav-item">
-    <i class="fas fa-film"></i> Movies
-  </a>
-  <a href="/shows" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="/trailer" class="nav-item">
-    <i class="fas fa-video"></i> Trailers
-  </a>
+  <a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
+  <a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
+  <a href="/tvplus" class="nav-item"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+  <a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
+  <a href="/shows" class="nav-item"><i class="fas fa-tv"></i> Shows</a>
+  <a href="/trailer" class="nav-item"><i class="fas fa-video"></i> Trailers</a>
 </nav>
+<div class="nav-search-container" id="navSearchContainer">
+  <form id="navSearchForm">
+    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+  </form>
+  <div id="navSearchResults">
+    <p>No results found</p>
+  </div>
+</div>
+<div id="navSearchOverlay"></div>
+<script src="bottom-search.js"></script>
 </body>
 </html>

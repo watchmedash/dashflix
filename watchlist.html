@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watchlist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bottom-search.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -105,6 +106,7 @@
 <nav class="bottom-nav">
 <a href="/index" class="nav-item">
 <i class="fas fa-home"></i> Home</a>
+<a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
 <a href="/movies" class="nav-item">
 <i class="fas fa-film"></i> Movies</a>
 <a href="/shows" class="nav-item">
@@ -114,6 +116,16 @@
 <a href="/requested" class="nav-item">
 <i class="fas fa-list"></i> Requested</a>
 </nav>
+<div class="nav-search-container" id="navSearchContainer">
+  <form id="navSearchForm">
+    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+  </form>
+  <div id="navSearchResults">
+    <p>No results found</p>
+  </div>
+</div>
+<div id="navSearchOverlay"></div>
+<script src="bottom-search.js"></script>
 <script src="watchlist.js"></script>
 </body>
 </html>

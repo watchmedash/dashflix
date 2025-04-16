@@ -27,6 +27,7 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>TV Shows - Watch Free TV Series Online</title>
   <link rel="stylesheet" href="shows.css">
+  <link rel="stylesheet" href="bottom-search.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
@@ -64,22 +65,23 @@
   <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
 
   <nav class="bottom-nav">
-    <a href="/index" class="nav-item">
-      <i class="fas fa-home"></i> Home
-    </a>
-    <a href="/tvplus" class="nav-item">
-      <i class="fas fa-broadcast-tower"></i> Live TV
-    </a>
-    <a href="/movies" class="nav-item">
-      <i class="fas fa-film"></i> Movies
-    </a>
-    <a href="/trailer" class="nav-item">
-      <i class="fas fa-video"></i> Trailers
-    </a>
-    <a href="/requested" class="nav-item">
-      <i class="fas fa-list"></i> Requested
-    </a>
+    <a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
+    <a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
+    <a href="/tvplus" class="nav-item"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+    <a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
+    <a href="/trailer" class="nav-item"><i class="fas fa-video"></i> Trailers</a>
+    <a href="/requested" class="nav-item"><i class="fas fa-list"></i> Requested</a>
   </nav>
+  <div class="nav-search-container" id="navSearchContainer">
+    <form id="navSearchForm">
+      <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+    </form>
+    <div id="navSearchResults">
+      <p>No results found</p>
+    </div>
+  </div>
+  <div id="navSearchOverlay"></div>
+<script src="bottom-search.js"></script>
 <script src="mains.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

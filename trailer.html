@@ -15,6 +15,7 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>Trailers - Watch Movie and TV Show Trailers for Free</title>
   <link rel="stylesheet" href="trailer.css">
+  <link rel="stylesheet" href="bottom-search.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baselayer.css@latest/dist/baselayer.css">
@@ -43,21 +44,22 @@
   </main>
 <script src="trailer.js"></script>
 <nav class="bottom-nav">
-  <a href="/index" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="/tvplus" class="nav-item">
-    <i class="fas fa-broadcast-tower"></i> Live TV
-  </a>
-  <a href="/movies" class="nav-item">
-    <i class="fas fa-film"></i> Movies
-  </a>
-  <a href="/shows" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="/requested" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
+  <a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
+  <a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
+  <a href="/tvplus" class="nav-item"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+  <a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
+  <a href="/shows" class="nav-item"><i class="fas fa-tv"></i> Shows</a>
+  <a href="/requested" class="nav-item"><i class="fas fa-list"></i> Requested</a>
 </nav>
+<div class="nav-search-container" id="navSearchContainer">
+  <form id="navSearchForm">
+    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+  </form>
+  <div id="navSearchResults">
+    <p>No results found</p>
+  </div>
+</div>
+<div id="navSearchOverlay"></div>
+<script src="bottom-search.js"></script>
 </body>
 </html>
