@@ -1,29 +1,29 @@
 .glowing-text-container {
-  background: linear-gradient(90deg, #ff8a65, #ffd54f, #81c784, #64b5f6, #ff8a65); /* Vibrant gradient colors */
-  background-size: 500% 500%; /* Extend gradient for smoother animation */
-  animation: glowing-colors 8s ease infinite; /* Animate color transition */
-  padding: 15px 0;
-  color: #ffffff; /* White text color for contrast */
+  background: linear-gradient(90deg, #d3d3d3, #b0bec5, #cfd8dc, #b0bec5, #d3d3d3); /* Neutral gradient colors */
+  background-size: 500% 500%;
+  animation: glowing-colors 8s ease infinite;
+  padding: 5px 0;
+  color: #333333; /* Dark gray text for readability */
   text-align: center;
   font-size: 17px;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif; /* Modern font */
-  border: 2px solid #ffffff; /* Bright border to frame the container */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); /* Stronger glowing shadow effect */
+  font-family: 'Roboto', sans-serif;
+  border: 2px solid #cccccc; /* Soft border */
+  box-shadow: 0 0 15px rgba(200, 200, 200, 0.4); /* Subtle glowing effect */
 }
 
 /* Link styling */
 .glowing-text-container a {
-  color: #ffffff; /* Keep links white */
+  color: #333333; /* Match text color */
   text-decoration: none;
-  transition: color 0.3s ease; /* Smooth color transition on hover */
+  transition: color 0.3s ease;
 }
 
 .glowing-text-container a:hover {
-  color: #000000; /* Bright yellow on hover */
+  color: #000000; /* Darker on hover */
 }
 
-/* Keyframes for glowing colors */
+/* Keyframes remain the same */
 @keyframes glowing-colors {
   0% {
     background-position: 0% 50%;
