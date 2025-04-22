@@ -1,6 +1,31 @@
 {
     "movies": [
       {
+          "title": "Locked",
+          "link": "https://dashflix.top/player?id=1083968",
+          "image": "https://image.tmdb.org/t/p/original/hhkiqXpfpufwxVrdSftzeKIANl3.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Horror",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Ash",
+          "link": "https://dashflix.top/player?id=931349",
+          "image": "https://image.tmdb.org/t/p/original/vmTg5jt6sXsv6GNcAnwqclarFgQ.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Horror",
+              "Science Fiction",
+              "Thriller"
+          ]
+      },
+      {
           "title": "Tampipi",
           "link": "https://dashflix.top/requested/Tampipi",
           "image": "https://www.themoviedb.org/t/p/w1280/5ghYHjFdnf2QvEHawU7SfG50Z1y.jpg",
@@ -8,20 +33,6 @@
           "requested": true,
           "release_year": "2025",
           "genres": []
-      },
-      {
-          "title": "Dark Nuns",
-          "link": "https://dashflix.top/player?id=1224993",
-          "image": "https://image.tmdb.org/t/p/original/2Abt2GgscAGtGAXTrhH44qPhugI.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Thriller",
-              "Horror",
-              "Mystery",
-              "Drama"
-          ]
       },
       {
           "title": "Kingdom IV Return of the Great General",
@@ -36,42 +47,6 @@
           ]
       },
       {
-          "title": "The Seven Sorrows of Mary",
-          "link": "https://dashflix.top/player?id=541557",
-          "image": "https://image.tmdb.org/t/p/original/7h9UGihMUlX49utTa9TE42zMl3f.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Crime",
-              "Drama"
-          ]
-      },
-      {
-          "title": "Woodwalkers",
-          "link": "https://dashflix.top/player?id=1241894",
-          "image": "https://image.tmdb.org/t/p/original/bC1r04ohuxv5feaGDzQ0lXz7Bbl.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Family",
-              "Fantasy"
-          ]
-      },
-      {
-          "title": "Handsome Guys",
-          "link": "https://dashflix.top/player?id=736720",
-          "image": "https://image.tmdb.org/t/p/original/5yUPKpy6ijvEBI5b6L0kJC30NHm.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Horror"
-          ]
-      },
-      {
           "title": "The Prosecutor",
           "link": "https://dashflix.top/player?id=1128650",
           "image": "https://image.tmdb.org/t/p/original/l4CWAZFsO017v4K07P5NtajqqeV.jpg",
@@ -83,18 +58,6 @@
               "Drama",
               "Crime",
               "Thriller"
-          ]
-      },
-      {
-          "title": "The Wizard of the Emerald City Part 1",
-          "link": "https://dashflix.top/player?id=658224",
-          "image": "https://image.tmdb.org/t/p/original/ue3mp7z2EdoZuumtZNj2xEE4CN4.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Drama",
-              "Fantasy"
           ]
       },
       {
@@ -121,84 +84,9 @@
           ]
       },
       {
-          "title": "Lifeline",
-          "link": "https://dashflix.top/player?id=1078812",
-          "image": "https://image.tmdb.org/t/p/original/epOQz87kzBnxDZMrgYCmFuDZXNx.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Mystery",
-              "Thriller",
-              "Drama"
-          ]
-      },
-      {
-          "title": "Trigger Happy",
-          "link": "https://dashflix.top/player?id=1234422",
-          "image": "https://image.tmdb.org/t/p/original/5YDdMeKhKCC3ojLM9WLioLZEDDx.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Comedy",
-              "Thriller"
-          ]
-      },
-      {
-          "title": "The Alto Knights",
-          "link": "https://dashflix.top/player?id=1013601",
-          "image": "https://image.tmdb.org/t/p/original/95KmR0xNuZZ6DNESDwLKWGIBvMg.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Drama",
-              "Crime"
-          ]
-      },
-      {
-          "title": "Chhorii 2",
-          "link": "https://dashflix.top/player?id=1084031",
-          "image": "https://image.tmdb.org/t/p/original/fnbJbisEy4zoCecirO4WNje6opw.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Horror",
-              "Drama"
-          ]
-      },
-      {
           "title": "Bangkera",
           "link": "https://dashflix.top/requested/Bangkera",
           "image": "https://image.tmdb.org/t/p/original/ctW36O4SZh08TWrEo7ewPDypfB2.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Drama"
-          ]
-      },
-      {
-          "title": "Night of the Zoopocalypse",
-          "link": "https://dashflix.top/player?id=1205229",
-          "image": "https://image.tmdb.org/t/p/original/nCejOVZcOxKS27nnbh28NKXOdXF.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Animation",
-              "Comedy",
-              "Adventure",
-              "Science Fiction",
-              "Horror"
-          ]
-      },
-      {
-          "title": "Rule Breakers",
-          "link": "https://dashflix.top/player?id=1379520",
-          "image": "https://image.tmdb.org/t/p/original/zJ6yH7e7XFsVTbF1gZnERCVeQJn.jpg",
           "tag": "HD",
           "requested": true,
           "release_year": "2025",
