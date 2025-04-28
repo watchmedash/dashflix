@@ -1,6 +1,58 @@
 {
     "movies": [
       {
+          "title": "The Accountant 2",
+          "link": "https://dashflix.top/player?id=870028",
+          "image": "https://image.tmdb.org/t/p/original/ieYaJz2nzs4wcqpWaofagzGoGPi.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Crime",
+              "Thriller",
+              "Action"
+          ]
+      },
+      {
+          "title": "Havoc",
+          "link": "https://dashflix.top/player?id=668489",
+          "image": "https://image.tmdb.org/t/p/original/bEiJBcwdR4oOTCgstLkqTUja58p.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Neighborhood Watch",
+          "link": "https://dashflix.top/player?id=1208983",
+          "image": "https://image.tmdb.org/t/p/original/1YkVZRCngFXAmS3bDRcRbDYYOIj.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Crime",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Bullet Train Explosion",
+          "link": "https://dashflix.top/player?id=1276073",
+          "image": "https://image.tmdb.org/t/p/original/qkTKtOHK9JEEOHgPQZ0dFtzs5ML.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Action",
+              "Thriller",
+              "Crime",
+              "Drama"
+          ]
+      },
+      {
           "title": "Locked",
           "link": "https://dashflix.top/player?id=1083968",
           "image": "https://image.tmdb.org/t/p/original/hhkiqXpfpufwxVrdSftzeKIANl3.jpg",
@@ -13,19 +65,6 @@
           ]
       },
       {
-          "title": "Ash",
-          "link": "https://dashflix.top/player?id=931349",
-          "image": "https://image.tmdb.org/t/p/original/vmTg5jt6sXsv6GNcAnwqclarFgQ.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Horror",
-              "Science Fiction",
-              "Thriller"
-          ]
-      },
-      {
           "title": "Tampipi",
           "link": "https://dashflix.top/requested/Tampipi",
           "image": "https://www.themoviedb.org/t/p/w1280/5ghYHjFdnf2QvEHawU7SfG50Z1y.jpg",
@@ -33,18 +72,6 @@
           "requested": true,
           "release_year": "2025",
           "genres": []
-      },
-      {
-          "title": "Kingdom IV Return of the Great General",
-          "link": "https://dashflix.top/player?id=1241320",
-          "image": "https://image.tmdb.org/t/p/original/qZKKwXyZ92K0mIRpf2FbCkQa7oO.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2024",
-          "genres": [
-              "Action",
-              "Adventure"
-          ]
       },
       {
           "title": "The Prosecutor",
