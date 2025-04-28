@@ -14,19 +14,6 @@
           ]
       },
       {
-          "title": "Havoc",
-          "link": "https://dashflix.top/player?id=668489",
-          "image": "https://image.tmdb.org/t/p/original/bEiJBcwdR4oOTCgstLkqTUja58p.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Action",
-              "Crime",
-              "Thriller"
-          ]
-      },
-      {
           "title": "Neighborhood Watch",
           "link": "https://dashflix.top/player?id=1208983",
           "image": "https://image.tmdb.org/t/p/original/1YkVZRCngFXAmS3bDRcRbDYYOIj.jpg",
@@ -35,32 +22,6 @@
           "release_year": "2025",
           "genres": [
               "Crime",
-              "Thriller"
-          ]
-      },
-      {
-          "title": "Bullet Train Explosion",
-          "link": "https://dashflix.top/player?id=1276073",
-          "image": "https://image.tmdb.org/t/p/original/qkTKtOHK9JEEOHgPQZ0dFtzs5ML.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Action",
-              "Thriller",
-              "Crime",
-              "Drama"
-          ]
-      },
-      {
-          "title": "Locked",
-          "link": "https://dashflix.top/player?id=1083968",
-          "image": "https://image.tmdb.org/t/p/original/hhkiqXpfpufwxVrdSftzeKIANl3.jpg",
-          "tag": "HD",
-          "requested": true,
-          "release_year": "2025",
-          "genres": [
-              "Horror",
               "Thriller"
           ]
       },
