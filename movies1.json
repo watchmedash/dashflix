@@ -1,6 +1,30 @@
 {
     "movies": [
       {
+          "title": "Sabik",
+          "link": "https://dashflix.top/requested/Sabik",
+          "image": "https://image.tmdb.org/t/p/original/vdhLdZQdvllHW5PR7lCmiB6z1Ig.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Drama",
+              "Romance",
+              "Thriller"
+          ]
+      },
+      {
+          "title": "Deep Inside Angeli Khang",
+          "link": "https://dashflix.top/requested/Deep Inside Angeli Khang",
+          "image": "https://image.tmdb.org/t/p/original/lKP9okBAtcBYHPNb24LQJqoAMCo.jpg",
+          "tag": "HD",
+          "requested": true,
+          "release_year": "2025",
+          "genres": [
+              "Documentary"
+          ]
+      },
+      {
           "title": "The Accountant 2",
           "link": "https://dashflix.top/player?id=870028",
           "image": "https://image.tmdb.org/t/p/original/ieYaJz2nzs4wcqpWaofagzGoGPi.jpg",
