@@ -6,7 +6,7 @@ let shows = [],
     currentPage = 1,
     searchQuery = "",
     isLoading = false,
-    blockedShowIdsSet = new Set([81329, 94722, 112470]);
+    blockedShowIdsSet = new Set([81329, 94722, 259288, 112470]);
 
 async function fetchShows(page = 1) {
     try {
