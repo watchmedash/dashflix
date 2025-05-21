@@ -77,6 +77,17 @@
     <div id="related-movies-list" class="movies-list">
     </div>
 </div>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+
+  const blockedIds = ["1163258", "969492", "634649", "957452"];
+
+  if (blockedIds.includes(id)) {
+    document.body.innerHTML = "<h1>Access Denied</h1><p>This content is not available.</p>";
+  }
+</script>
+
 <div id="comments-wrapper">
     <div id="disqus_thread"></div>
 </div>
