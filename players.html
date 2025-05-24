@@ -31,7 +31,16 @@
        crossorigin="anonymous"></script>
   <title>TV Show Player - Watch Free Full Episodes Online on Dashflix</title>
 </head>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+  const blockedIds = ["123456","259288"];
 
+  if (blockedIds.includes(id)) {
+    // Redirect to homepage or a custom warning page
+    window.location.href = "https://dashflix.top";
+  }
+</script>
 <body>
 <div class="tv-show-container">
   <div class="theme-toggle">
