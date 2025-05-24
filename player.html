@@ -30,6 +30,17 @@
        crossorigin="anonymous"></script>
   <title>Dashflix - Watch Free Full Movies Online</title>
 </head>
+<script>
+  (function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    const blockedIds = ["969492", "634649", "957452", "1163258"];
+
+    if (id && blockedIds.includes(id)) {
+      window.location.replace("https://dashflix.top/movies");
+    }
+  })();
+</script>
 <body>
 <div class="movie-container">
   <div class="theme-toggle">
