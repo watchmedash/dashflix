@@ -22,27 +22,21 @@
 <div class="image-contained"><a href="../contact.html"><img src="https://i.postimg.cc/90FG1H9h/YOURAD.gif" alt="Watch TV Shows Online Free"></a></div>
 <div class="content"></div>
 
-<!-- Plyr styles and script -->
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-<script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+<select id="video-source" onchange="changeSource()">
+<option value="https://voe.sx/e/3f97watmbg5s">Server 1</option>
+<option value="https://voe.sx/e/3f97watmbg5s">Server 2</option>
+<option value="https://voe.sx/e/3f97watmbg5s">Server 3</option>
+<option value="https://voe.sx/e/3f97watmbg5s">Server 4</option>
+<option value="https://voe.sx/e/3f97watmbg5s">Server 5</option>
+<option value="https://voe.sx/e/3f97watmbg5s">Server 6</option>
+</select>
 
-<!-- Video HTML -->
-<video id="video-player" controls playsinline>
-  <source src="http://207.180.219.76/assets/videos/Sorority%202025.mp4" type="video/mp4" />
-</video>
-
-<script>
-  const player = new Plyr('#video-player');
-
-  function changeSource() {
-    const url = document.getElementById('video-source').value;
-    player.source = {
-      type: 'video',
-      sources: [{ src: url, type: 'video/mp4' }]
-    };
-  }
-</script>
-
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 95%; margin: 0 auto;">
+<iframe id="video-player" allow="autoplay" allowfullscreen="true" referrerpolicy="origin" frameborder="0"
+src="https://voe.sx/e/3f97watmbg5s"
+style="width: 100%; height: 100%; position: absolute;">
+</iframe>
+</div>
 
 <div class="button-container">
 <a class="watch-now-bur" href="../contact.html">Report Error</a>
