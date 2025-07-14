@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liquid Glass Music Player</title>
+    <title>3D Liquid Glass Slot Machine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -13,867 +13,595 @@
         }
 
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            perspective: 1000px;
         }
 
-        .player-container {
-            width: 420px;
-            height: 650px;
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(30px);
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 35px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .player-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: shimmer 4s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-
-        .player-view {
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-
-        .player-view.hidden {
-            transform: translateX(-100%);
-        }
-
-        .playlist-view {
-            position: absolute;
-            top: 35px;
-            left: 35px;
-            right: 35px;
-            bottom: 35px;
+        .slot-machine {
             background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+            position: relative;
+        }
+
+        .title {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            background: linear-gradient(45deg, #fff, #a8d8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .credits-display {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
             border-radius: 20px;
             padding: 20px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            overflow-y: auto;
-        }
-
-        .playlist-view.show {
-            transform: translateX(0);
-        }
-
-        .playlist-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .playlist-title {
-            font-size: 18px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.4em;
             font-weight: 600;
-            color: rgba(60, 60, 60, 0.9);
+            box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.1);
         }
 
-        .back-btn {
-            background: rgba(255, 255, 255, 0.3);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: rgba(80, 80, 80, 0.8);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .back-btn:hover {
-            background: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .playlist-items {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .playlist-item {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            color: rgba(80, 80, 80, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .playlist-item:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .playlist-item.active {
-            background: rgba(255, 255, 255, 0.35);
-            color: rgba(60, 60, 60, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .playlist-item-info {
-            flex: 1;
-        }
-
-        .playlist-item-title {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .playlist-item-artist {
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
-        .playlist-item-duration {
-            font-size: 12px;
-            opacity: 0.7;
-        }
-
-        .visualizer {
-            width: 100%;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .slot-grid-container {
             position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 30px 0;
         }
 
-        .bars {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2px;
-            height: 70px;
-        }
-
-        .bar {
-            width: 3px;
-            background: linear-gradient(to top,
-                rgba(100, 100, 100, 0.4),
-                rgba(150, 150, 150, 0.6),
-                rgba(200, 200, 200, 0.8));
-            border-radius: 2px;
-            animation: pulse 0.8s ease-in-out infinite alternate;
-        }
-
-        .album-art {
-            width: 180px;
-            height: 180px;
+        .slot-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 25px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 0 auto 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            perspective: 1000px;
+            box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slot-container {
+            position: relative;
+            aspect-ratio: 1;
+            perspective: 300px;
+        }
+
+        .slot {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
-            color: rgba(80, 80, 80, 0.8);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1),
-                        inset 0 1px 0 rgba(255, 255, 255, 0.6);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s ease;
+            font-size: 2.2em;
+            color: rgba(255, 255, 255, 0.95);
+            transition: all 0.3s ease;
+            box-shadow:
+                inset 0 4px 10px rgba(255, 255, 255, 0.2),
+                0 8px 25px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
         }
 
-        .album-art::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: rotate 3s linear infinite;
+        .slot.spinning {
+            animation: realSpin 0.1s linear infinite;
         }
 
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        @keyframes realSpin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
         }
 
-        .track-info {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .track-title {
-            font-size: 18px;
-            font-weight: 600;
-            color: rgba(60, 60, 60, 0.9);
-            margin-bottom: 5px;
-        }
-
-        .track-artist {
-            font-size: 14px;
-            color: rgba(100, 100, 100, 0.7);
-        }
-
-        .progress-container {
-            margin-bottom: 25px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 4px;
-            overflow: hidden;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            position: relative;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg,
-                rgba(120, 120, 120, 0.7),
-                rgba(180, 180, 180, 0.8));
-            border-radius: 4px;
-            width: 0%;
-            transition: width 0.1s ease;
-        }
-
-        .progress-thumb {
-            position: absolute;
-            top: 50%;
-            left: 0%;
-            width: 16px;
-            height: 16px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            transition: left 0.1s ease;
-        }
-
-        .time-display {
-            display: flex;
-            justify-content: space-between;
-            color: rgba(80, 80, 80, 0.8);
-            font-size: 12px;
-            margin-top: 8px;
-            font-weight: 500;
+        .slot:hover {
+            transform: translateZ(10px) scale(1.05);
+            box-shadow:
+                inset 0 6px 15px rgba(255, 255, 255, 0.3),
+                0 15px 35px rgba(0, 0, 0, 0.2);
         }
 
         .controls {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .bet-controls {
+            display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px;
         }
 
-        .control-btn {
-            width: 45px;
-            height: 45px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            color: rgba(80, 80, 80, 0.8);
+        .bet-display {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            padding: 12px 20px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+            box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            color: rgba(255, 255, 255, 0.95);
+            padding: 15px 25px;
+            font-size: 1.1em;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
         }
 
-        .control-btn:hover {
-            background: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
         }
 
-        .control-btn:active {
-            transform: translateY(0);
-        }
-
-        .play-btn {
-            width: 55px;
-            height: 55px;
-            font-size: 20px;
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        .secondary-controls {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .secondary-btn {
-            width: 40px;
-            height: 40px;
-            border: none;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
-            color: rgba(80, 80, 80, 0.7);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .secondary-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
+        .btn:active {
             transform: translateY(-1px);
         }
 
-        .secondary-btn.active {
-            background: rgba(255, 255, 255, 0.5);
-            color: rgba(60, 60, 60, 0.9);
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none;
         }
 
-        .volume-control {
+        .spin-btn {
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            font-size: 1.3em;
+            padding: 18px 35px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 600;
+            min-height: 50px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            transition: all 0.4s ease;
+            font-size: 1.1em;
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .volume-slider {
-            flex: 1;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 3px;
-            outline: none;
-            appearance: none;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+        .message.win {
+            background: rgba(46, 204, 113, 0.25);
+            color: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(46, 204, 113, 0.4);
+            animation: winPulse 0.6s ease-in-out;
         }
 
-        .volume-slider::-webkit-slider-thumb {
-            appearance: none;
-            width: 14px;
-            height: 14px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        .message.lose {
+            background: rgba(231, 76, 60, 0.25);
+            color: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(231, 76, 60, 0.4);
         }
 
-        .volume-icon {
-            color: rgba(80, 80, 80, 0.8);
-            font-size: 16px;
+        .message.info {
+            background: rgba(52, 152, 219, 0.25);
+            color: rgba(255, 255, 255, 0.95);
+            border: 2px solid rgba(52, 152, 219, 0.4);
         }
 
-        @keyframes pulse {
-            0% { height: 15px; }
-            100% { height: 50px; }
+        @keyframes winPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        .liquid-bg {
+        .matching-symbol {
+            background: linear-gradient(45deg, rgba(46, 204, 113, 0.6), rgba(46, 204, 113, 0.8)) !important;
+            border: 3px solid rgba(46, 204, 113, 1) !important;
+            box-shadow:
+                0 0 30px rgba(46, 204, 113, 0.8),
+                inset 0 4px 15px rgba(255, 255, 255, 0.4) !important;
+            animation: symbolGlow 1s ease-in-out infinite alternate;
+            transform: scale(1.1) !important;
+        }
+
+        @keyframes symbolGlow {
+            0% {
+                box-shadow: 0 0 30px rgba(46, 204, 113, 0.8), inset 0 4px 15px rgba(255, 255, 255, 0.4);
+            }
+            100% {
+                box-shadow: 0 0 50px rgba(46, 204, 113, 1), inset 0 4px 15px rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .win-info {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-                        radial-gradient(circle at 20% 70%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
-            animation: liquidMove 12s ease-in-out infinite;
+            top: 10px;
+            right: 10px;
+            background: rgba(46, 204, 113, 0.9);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 0.9em;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.3s ease;
+            z-index: 100;
         }
 
-        @keyframes liquidMove {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            33% { transform: scale(1.05) rotate(120deg); }
-            66% { transform: scale(0.95) rotate(240deg); }
+        .win-info.show {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .mode-indicator {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            font-size: 12px;
-            color: rgba(80, 80, 80, 0.6);
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 8px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .symbol-count {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .symbol-count-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .symbol-count-item.winning {
+            background: rgba(46, 204, 113, 0.3);
+            border-color: rgba(46, 204, 113, 0.6);
+            color: rgba(255, 255, 255, 0.95);
         }
     </style>
 </head>
 <body>
-    <div class="player-container">
-        <div class="liquid-bg"></div>
-        <div class="mode-indicator" id="modeIndicator">Normal</div>
+    <div class="slot-machine">
+        <h1 class="title"><i class="fas fa-gem"></i> Liquid Glass Slots</h1>
 
-        <div class="player-view" id="playerView">
-            <div class="visualizer">
-                <div class="bars" id="visualizer"></div>
-            </div>
-
-            <div class="album-art">
-                <i class="fas fa-music"></i>
-            </div>
-
-            <div class="track-info">
-                <div class="track-title" id="trackTitle">Chill Vibes</div>
-                <div class="track-artist" id="trackArtist">Liquid Sounds</div>
-            </div>
-
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar">
-                    <div class="progress-fill" id="progressFill"></div>
-                    <div class="progress-thumb" id="progressThumb"></div>
-                </div>
-                <div class="time-display">
-                    <span id="currentTime">0:00</span>
-                    <span id="totalTime">3:30</span>
-                </div>
-            </div>
-
-            <div class="controls">
-                <button class="control-btn" id="prevBtn">
-                    <i class="fas fa-step-backward"></i>
-                </button>
-                <button class="control-btn play-btn" id="playBtn">
-                    <i class="fas fa-play"></i>
-                </button>
-                <button class="control-btn" id="nextBtn">
-                    <i class="fas fa-step-forward"></i>
-                </button>
-            </div>
-
-            <div class="secondary-controls">
-                <button class="secondary-btn" id="shuffleBtn" title="Shuffle">
-                    <i class="fas fa-random"></i>
-                </button>
-                <button class="secondary-btn" id="repeatBtn" title="Repeat">
-                    <i class="fas fa-redo"></i>
-                </button>
-                <button class="secondary-btn" id="playlistBtn" title="Show Playlist">
-                    <i class="fas fa-list"></i>
-                </button>
-            </div>
-
-            <div class="volume-control">
-                <span class="volume-icon" id="volumeIcon">
-                    <i class="fas fa-volume-up"></i>
-                </span>
-                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
-            </div>
+        <div class="credits-display">
+            <i class="fas fa-coins"></i> Credits: <span id="credits">200</span>
         </div>
 
-        <div class="playlist-view" id="playlistView">
-            <div class="playlist-header">
-                <span class="playlist-title">Playlist</span>
-                <button class="back-btn" id="backBtn">
-                    <i class="fas fa-arrow-left"></i>
+        <div class="slot-grid-container">
+            <div class="slot-grid" id="slotGrid">
+                <!-- 5x5 grid will be generated by JavaScript -->
+            </div>
+            <div class="win-info" id="winInfo"></div>
+        </div>
+
+        <div class="controls">
+            <div class="bet-controls">
+                <button class="btn" id="betDown">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <div class="bet-display">
+                    <i class="fas fa-dollar-sign"></i> Bet: <span id="betAmount">10</span>
+                </div>
+                <button class="btn" id="betUp">
+                    <i class="fas fa-plus"></i>
                 </button>
             </div>
-            <div class="playlist-items" id="playlistItems">
-                <!-- Playlist items will be populated here -->
-            </div>
+
+            <button class="btn spin-btn" id="spinBtn">
+                <i class="fas fa-play"></i> SPIN
+            </button>
+        </div>
+
+        <div class="message info" id="message">
+            <i class="fas fa-info-circle"></i> Get 5+ matching symbols to win!
+        </div>
+
+        <div class="symbol-count" id="symbolCount">
+            <!-- Symbol counts will be displayed here -->
         </div>
     </div>
 
     <script>
-        class LiquidMusicPlayer {
+        class SlotMachine {
             constructor() {
-                this.isPlaying = false;
-                this.currentTrack = 0;
-                this.currentTime = 0;
-                this.duration = 210;
-                this.volume = 50;
-                this.isShuffled = false;
-                this.repeatMode = 'none'; // 'none', 'all', 'one'
-                this.playlistVisible = false;
-                this.shuffleOrder = [];
-                this.shuffleIndex = 0;
-                this.isDragging = false;
+                this.credits = 200;
+                this.bet = 10;
+                this.spinning = false;
 
-                this.tracks = [
-                    { title: "Chill Vibes", artist: "Liquid Sounds", duration: 210 },
-                    { title: "Ocean Waves", artist: "Ambient Pro", duration: 180 },
-                    { title: "Neon Dreams", artist: "Synth Master", duration: 240 },
-                    { title: "Morning Dew", artist: "Nature Sounds", duration: 195 },
-                    { title: "City Lights", artist: "Urban Beats", duration: 220 }
+                // Symbols with their base payouts and spawn chances (lower chance = higher payout)
+                this.symbols = [
+                    { icon: 'fas fa-gem', payout: 50, chance: 0.05 },        // Rarest, highest payout
+                    { icon: 'fas fa-crown', payout: 35, chance: 0.08 },      // Very rare
+                    { icon: 'fas fa-diamond', payout: 25, chance: 0.12 },    // Rare
+                    { icon: 'fas fa-star', payout: 18, chance: 0.15 },       // Uncommon
+                    { icon: 'fas fa-clover', payout: 12, chance: 0.20 },     // Common
+                    { icon: 'fas fa-bell', payout: 8, chance: 0.25 },        // Common
+                    { icon: 'fas fa-heart', payout: 5, chance: 0.30 },       // Very common
+                    { icon: 'fas fa-coins', payout: 3, chance: 0.35 }        // Most common, lowest payout
                 ];
 
-                this.initializeElements();
-                this.setupEventListeners();
-                this.generateVisualizer();
-                this.startVisualization();
-                this.generateShuffleOrder();
-                this.populatePlaylist();
+                this.grid = [];
+                this.containers = [];
+                this.currentSymbols = [];
+
+                this.init();
             }
 
-            initializeElements() {
-                this.playBtn = document.getElementById('playBtn');
-                this.prevBtn = document.getElementById('prevBtn');
-                this.nextBtn = document.getElementById('nextBtn');
-                this.shuffleBtn = document.getElementById('shuffleBtn');
-                this.repeatBtn = document.getElementById('repeatBtn');
-                this.playlistBtn = document.getElementById('playlistBtn');
-                this.backBtn = document.getElementById('backBtn');
-                this.playerView = document.getElementById('playerView');
-                this.playlistView = document.getElementById('playlistView');
-                this.progressBar = document.getElementById('progressBar');
-                this.progressFill = document.getElementById('progressFill');
-                this.progressThumb = document.getElementById('progressThumb');
-                this.currentTimeEl = document.getElementById('currentTime');
-                this.totalTimeEl = document.getElementById('totalTime');
-                this.volumeSlider = document.getElementById('volumeSlider');
-                this.volumeIcon = document.getElementById('volumeIcon');
-                this.trackTitle = document.getElementById('trackTitle');
-                this.trackArtist = document.getElementById('trackArtist');
-                this.playlistItems = document.getElementById('playlistItems');
-                this.visualizer = document.getElementById('visualizer');
-                this.modeIndicator = document.getElementById('modeIndicator');
-                this.albumArt = document.querySelector('.album-art');
+            init() {
+                this.createGrid();
+                this.bindEvents();
+                this.updateDisplay();
+                this.updateSymbolCount();
             }
 
-            setupEventListeners() {
-                this.playBtn.addEventListener('click', () => this.togglePlay());
-                this.prevBtn.addEventListener('click', () => this.previousTrack());
-                this.nextBtn.addEventListener('click', () => this.nextTrack());
-                this.shuffleBtn.addEventListener('click', () => this.toggleShuffle());
-                this.repeatBtn.addEventListener('click', () => this.toggleRepeat());
-                this.playlistBtn.addEventListener('click', () => this.showPlaylist());
-                this.backBtn.addEventListener('click', () => this.hidePlaylist());
-                this.volumeSlider.addEventListener('input', (e) => this.setVolume(e.target.value));
+            createGrid() {
+                const grid = document.getElementById('slotGrid');
+                grid.innerHTML = '';
 
-                // Progress bar seeking
-                this.progressBar.addEventListener('click', (e) => this.seek(e));
-                this.progressThumb.addEventListener('mousedown', (e) => this.startDrag(e));
-                document.addEventListener('mousemove', (e) => this.drag(e));
-                document.addEventListener('mouseup', () => this.stopDrag());
+                for (let i = 0; i < 25; i++) {
+                    const container = document.createElement('div');
+                    container.className = 'slot-container';
 
-                // Playlist item clicks
-                this.playlistItems.addEventListener('click', (e) => {
-                    const item = e.target.closest('.playlist-item');
-                    if (item) {
-                        const trackIndex = parseInt(item.getAttribute('data-track'));
-                        this.selectTrack(trackIndex);
-                        this.hidePlaylist();
-                    }
-                });
-            }
+                    const slot = document.createElement('div');
+                    slot.className = 'slot';
+                    slot.id = `slot-${i}`;
 
-            generateVisualizer() {
-                this.visualizer.innerHTML = '';
-                for (let i = 0; i < 80; i++) {
-                    const bar = document.createElement('div');
-                    bar.className = 'bar';
-                    bar.style.height = '15px';
-                    bar.style.animationDelay = `${i * 0.03}s`;
-                    this.visualizer.appendChild(bar);
+                    const symbol = this.getRandomSymbol();
+                    slot.innerHTML = `<i class="${symbol}"></i>`;
+                    this.currentSymbols[i] = symbol;
+
+                    container.appendChild(slot);
+                    grid.appendChild(container);
+
+                    this.containers.push(container);
+                    this.grid.push(slot);
                 }
             }
 
-            startVisualization() {
-                const bars = this.visualizer.querySelectorAll('.bar');
+            getRandomSymbol() {
+                const rand = Math.random();
+                let cumulativeChance = 0;
 
-                const animate = () => {
-                    bars.forEach((bar, index) => {
-                        const height = this.isPlaying ?
-                            Math.random() * 45 + 15 :
-                            15 + Math.sin(Date.now() * 0.001 + index * 0.3) * 3;
-                        bar.style.height = `${height}px`;
-
-                        const intensity = (height - 15) / 45;
-                        const alpha = 0.4 + intensity * 0.4;
-                        bar.style.background = `linear-gradient(to top,
-                            rgba(100, 100, 100, ${alpha}),
-                            rgba(150, 150, 150, ${alpha + 0.2}),
-                            rgba(200, 200, 200, ${alpha + 0.4}))`;
-                    });
-
-                    requestAnimationFrame(animate);
-                };
-
-                animate();
-            }
-
-            populatePlaylist() {
-                this.playlistItems.innerHTML = '';
-                this.tracks.forEach((track, index) => {
-                    const item = document.createElement('div');
-                    item.className = 'playlist-item';
-                    item.setAttribute('data-track', index);
-                    if (index === this.currentTrack) {
-                        item.classList.add('active');
-                    }
-
-                    item.innerHTML = `
-                        <div class="playlist-item-info">
-                            <div class="playlist-item-title">${track.title}</div>
-                            <div class="playlist-item-artist">${track.artist}</div>
-                        </div>
-                        <div class="playlist-item-duration">${this.formatTime(track.duration)}</div>
-                    `;
-
-                    this.playlistItems.appendChild(item);
-                });
-            }
-
-            showPlaylist() {
-                this.playlistVisible = true;
-                this.playlistView.classList.add('show');
-                this.playerView.classList.add('hidden');
-            }
-
-            hidePlaylist() {
-                this.playlistVisible = false;
-                this.playlistView.classList.remove('show');
-                this.playerView.classList.remove('hidden');
-            }
-
-            startDrag(e) {
-                this.isDragging = true;
-                e.preventDefault();
-            }
-
-            drag(e) {
-                if (!this.isDragging) return;
-
-                const rect = this.progressBar.getBoundingClientRect();
-                const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
-                const percentage = x / rect.width;
-
-                this.currentTime = Math.floor(percentage * this.duration);
-                this.updateProgress();
-            }
-
-            stopDrag() {
-                this.isDragging = false;
-            }
-
-            seek(e) {
-                if (this.isDragging) return;
-
-                const rect = this.progressBar.getBoundingClientRect();
-                const clickX = e.clientX - rect.left;
-                const percentage = clickX / rect.width;
-                this.currentTime = Math.floor(percentage * this.duration);
-                this.updateProgress();
-            }
-
-            generateShuffleOrder() {
-                this.shuffleOrder = [...Array(this.tracks.length).keys()];
-                for (let i = this.shuffleOrder.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [this.shuffleOrder[i], this.shuffleOrder[j]] = [this.shuffleOrder[j], this.shuffleOrder[i]];
-                }
-                this.shuffleIndex = this.shuffleOrder.indexOf(this.currentTrack);
-            }
-
-            togglePlay() {
-                this.isPlaying = !this.isPlaying;
-                const icon = this.playBtn.querySelector('i');
-                icon.className = this.isPlaying ? 'fas fa-pause' : 'fas fa-play';
-
-                if (this.isPlaying) {
-                    this.startProgress();
-                } else {
-                    this.stopProgress();
-                }
-            }
-
-            toggleShuffle() {
-                this.isShuffled = !this.isShuffled;
-                this.shuffleBtn.classList.toggle('active', this.isShuffled);
-                if (this.isShuffled) {
-                    this.generateShuffleOrder();
-                }
-                this.updateModeIndicator();
-            }
-
-            toggleRepeat() {
-                const modes = ['none', 'all', 'one'];
-                const currentIndex = modes.indexOf(this.repeatMode);
-                this.repeatMode = modes[(currentIndex + 1) % modes.length];
-
-                this.repeatBtn.classList.toggle('active', this.repeatMode !== 'none');
-
-                const icon = this.repeatBtn.querySelector('i');
-                if (this.repeatMode === 'one') {
-                    icon.className = 'fas fa-redo-alt';
-                } else {
-                    icon.className = 'fas fa-redo';
-                }
-
-                this.updateModeIndicator();
-            }
-
-            updateModeIndicator() {
-                let mode = '';
-                if (this.isShuffled) mode += 'Shuffle ';
-                if (this.repeatMode === 'all') mode += 'Repeat All';
-                else if (this.repeatMode === 'one') mode += 'Repeat One';
-
-                this.modeIndicator.textContent = mode || 'Normal';
-            }
-
-            startProgress() {
-                this.progressInterval = setInterval(() => {
-                    if (this.currentTime < this.duration) {
-                        this.currentTime++;
-                        this.updateProgress();
-                    } else {
-                        this.handleTrackEnd();
-                    }
-                }, 1000);
-            }
-
-            stopProgress() {
-                if (this.progressInterval) {
-                    clearInterval(this.progressInterval);
-                }
-            }
-
-            handleTrackEnd() {
-                if (this.repeatMode === 'one') {
-                    this.currentTime = 0;
-                    this.updateProgress();
-                } else if (this.repeatMode === 'all') {
-                    this.nextTrack();
-                } else {
-                    const isLastTrack = this.isShuffled ?
-                        this.shuffleIndex === this.tracks.length - 1 :
-                        this.currentTrack === this.tracks.length - 1;
-
-                    if (isLastTrack) {
-                        this.isPlaying = false;
-                        const icon = this.playBtn.querySelector('i');
-                        icon.className = 'fas fa-play';
-                        this.stopProgress();
-                    } else {
-                        this.nextTrack();
+                for (let symbol of this.symbols) {
+                    cumulativeChance += symbol.chance;
+                    if (rand <= cumulativeChance) {
+                        return symbol.icon;
                     }
                 }
+
+                // Fallback to most common symbol
+                return this.symbols[this.symbols.length - 1].icon;
             }
 
-            updateProgress() {
-                const progress = (this.currentTime / this.duration) * 100;
-                this.progressFill.style.width = `${progress}%`;
-                this.progressThumb.style.left = `${progress}%`;
-                this.currentTimeEl.textContent = this.formatTime(this.currentTime);
-                this.totalTimeEl.textContent = this.formatTime(this.duration);
+            bindEvents() {
+                document.getElementById('spinBtn').addEventListener('click', () => this.spin());
+                document.getElementById('betUp').addEventListener('click', () => this.increaseBet());
+                document.getElementById('betDown').addEventListener('click', () => this.decreaseBet());
             }
 
-            formatTime(seconds) {
-                const minutes = Math.floor(seconds / 60);
-                const remainingSeconds = seconds % 60;
-                return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
-            }
-
-            setVolume(value) {
-                this.volume = value;
-                const icon = this.volumeIcon.querySelector('i');
-
-                if (value == 0) {
-                    icon.className = 'fas fa-volume-mute';
-                } else if (value < 30) {
-                    icon.className = 'fas fa-volume-down';
-                } else if (value < 70) {
-                    icon.className = 'fas fa-volume-up';
-                } else {
-                    icon.className = 'fas fa-volume-up';
+            increaseBet() {
+                if (this.bet < this.credits && this.bet < 100) {
+                    this.bet += 10;
+                    this.updateDisplay();
                 }
             }
 
-            selectTrack(index) {
-                            if (index < 0 || index >= this.tracks.length) return;
+            decreaseBet() {
+                if (this.bet > 10) {
+                    this.bet -= 10;
+                    this.updateDisplay();
+                }
+            }
 
-                            this.currentTrack = index;
-                            this.currentTime = 0;
-                            this.duration = this.tracks[index].duration;
-                            this.trackTitle.textContent = this.tracks[index].title;
-                            this.trackArtist.textContent = this.tracks[index].artist;
-                            this.updateProgress();
-                            this.highlightActiveTrack();
+            spin() {
+                if (this.spinning || this.credits < this.bet) return;
 
-                            if (this.isPlaying) {
-                                this.stopProgress();
-                                this.startProgress();
-                            }
+                this.spinning = true;
+                this.credits -= this.bet;
+                this.updateDisplay();
+                this.clearMatchingSymbols();
+
+                // Show spinning message
+                this.showMessage('<i class="fas fa-spinner fa-spin"></i> Spinning...', 'info');
+
+                // Start spinning all slots
+                this.grid.forEach((slot, index) => {
+                    slot.classList.add('spinning');
+
+                    // Change symbols rapidly during spin
+                    const spinInterval = setInterval(() => {
+                        const newSymbol = this.getRandomSymbol();
+                        slot.innerHTML = `<i class="${newSymbol}"></i>`;
+                    }, 100);
+
+                    // Stop spinning with staggered timing
+                    setTimeout(() => {
+                        clearInterval(spinInterval);
+                        slot.classList.remove('spinning');
+
+                        // Set final symbol
+                        const finalSymbol = this.getRandomSymbol();
+                        slot.innerHTML = `<i class="${finalSymbol}"></i>`;
+                        this.currentSymbols[index] = finalSymbol;
+
+                        // Check for wins after last slot stops
+                        if (index === 24) {
+                            setTimeout(() => {
+                                this.checkWins();
+                                this.updateSymbolCount();
+                            }, 500);
                         }
+                    }, 1500 + (index * 80));
+                });
+            }
 
-                        highlightActiveTrack() {
-                            const items = this.playlistItems.querySelectorAll('.playlist-item');
-                            items.forEach((item, idx) => {
-                                item.classList.toggle('active', idx === this.currentTrack);
+            checkWins() {
+                // Count each symbol type
+                const symbolCounts = {};
+                this.currentSymbols.forEach(symbol => {
+                    symbolCounts[symbol] = (symbolCounts[symbol] || 0) + 1;
+                });
+
+                let totalWin = 0;
+                let hasWin = false;
+                const winningSymbols = [];
+
+                // Check each symbol type for wins (5+ matching symbols)
+                for (let symbolIcon in symbolCounts) {
+                    const count = symbolCounts[symbolIcon];
+                    if (count >= 5) {
+                        hasWin = true;
+                        winningSymbols.push(symbolIcon);
+
+                        // Find the symbol data
+                        const symbolData = this.symbols.find(s => s.icon === symbolIcon);
+                        if (symbolData) {
+                            // Base win is symbol payout multiplied by bet
+                            let win = symbolData.payout * (this.bet / 10); // Normalize to bet amount
+
+                            // Add 10% bonus for each symbol over 5
+                            if (count > 5) {
+                                const bonusMultiplier = 1 + ((count - 5) * 0.1);
+                                win *= bonusMultiplier;
+                            }
+
+                            totalWin += Math.floor(win);
+
+                            // Highlight matching symbols
+                            this.currentSymbols.forEach((symbol, index) => {
+                                if (symbol === symbolIcon) {
+                                    this.grid[index].classList.add('matching-symbol');
+                                }
                             });
                         }
+                    }
+                }
 
-                        previousTrack() {
-                            if (this.isShuffled) {
-                                this.shuffleIndex = (this.shuffleIndex - 1 + this.shuffleOrder.length) % this.shuffleOrder.length;
-                                this.selectTrack(this.shuffleOrder[this.shuffleIndex]);
-                            } else {
-                                this.currentTrack = (this.currentTrack - 1 + this.tracks.length) % this.tracks.length;
-                                this.selectTrack(this.currentTrack);
-                            }
-                        }
+                this.credits += totalWin;
+                this.spinning = false;
+                this.updateDisplay();
 
-                        nextTrack() {
-                            if (this.isShuffled) {
-                                this.shuffleIndex = (this.shuffleIndex + 1) % this.shuffleOrder.length;
-                                this.selectTrack(this.shuffleOrder[this.shuffleIndex]);
-                            } else {
-                                this.currentTrack = (this.currentTrack + 1) % this.tracks.length;
-                                this.selectTrack(this.currentTrack);
-                            }
+                if (hasWin) {
+                    const winInfo = document.getElementById('winInfo');
+                    winInfo.innerHTML = `+${totalWin} Credits!`;
+                    winInfo.classList.add('show');
+
+                    setTimeout(() => {
+                        winInfo.classList.remove('show');
+                    }, 4000);
+
+                    // Create detailed win message
+                    let winDetails = [];
+                    for (let symbolIcon of winningSymbols) {
+                        const count = symbolCounts[symbolIcon];
+                        const symbolData = this.symbols.find(s => s.icon === symbolIcon);
+                        if (symbolData) {
+                            winDetails.push(`${count} ${symbolData.icon.split(' ')[2]}`);
                         }
                     }
 
-                    // Initialize the music player
-                    window.addEventListener('DOMContentLoaded', () => {
-                        new LiquidMusicPlayer();
-                    });
-                </script>
-            </body>
-            </html>
+                    this.showMessage(`<i class="fas fa-trophy"></i> WIN! ${totalWin} credits from ${winDetails.join(', ')}!`, 'win');
+                } else {
+                    this.showMessage(`<i class="fas fa-dice"></i> No wins this time. Need 5+ matching symbols!`, 'lose');
+                }
+
+                // Check for game over
+                if (this.credits < 10) {
+                    setTimeout(() => {
+                        this.showMessage('<i class="fas fa-skull"></i> Game Over! Refresh to play again.', 'lose');
+                    }, 2000);
+                }
+            }
+
+            updateSymbolCount() {
+                const symbolCounts = {};
+                this.currentSymbols.forEach(symbol => {
+                    symbolCounts[symbol] = (symbolCounts[symbol] || 0) + 1;
+                });
+
+                const symbolCountDiv = document.getElementById('symbolCount');
+                symbolCountDiv.innerHTML = '';
+
+                this.symbols.forEach(symbolData => {
+                    const count = symbolCounts[symbolData.icon] || 0;
+                    const item = document.createElement('div');
+                    item.className = 'symbol-count-item';
+
+                    if (count >= 5) {
+                        item.classList.add('winning');
+                    }
+
+                    item.innerHTML = `<i class="${symbolData.icon}"></i> ${count}`;
+                    symbolCountDiv.appendChild(item);
+                });
+            }
+
+            clearMatchingSymbols() {
+                // Remove matching highlights
+                this.grid.forEach(slot => {
+                    slot.classList.remove('matching-symbol');
+                });
+            }
+
+            updateDisplay() {
+                document.getElementById('credits').textContent = this.credits;
+                document.getElementById('betAmount').textContent = this.bet;
+
+                const spinBtn = document.getElementById('spinBtn');
+                spinBtn.disabled = this.spinning || this.credits < this.bet;
+
+                const betUpBtn = document.getElementById('betUp');
+                betUpBtn.disabled = this.bet >= this.credits || this.bet >= 100;
+
+                const betDownBtn = document.getElementById('betDown');
+                betDownBtn.disabled = this.bet <= 10;
+            }
+
+            showMessage(html, type) {
+                const message = document.getElementById('message');
+                message.innerHTML = html;
+                message.className = `message ${type}`;
+
+                if (type !== 'info') {
+                    setTimeout(() => {
+                        message.className = 'message info';
+                        message.innerHTML = '<i class="fas fa-info-circle"></i> Get 5+ matching symbols to win!';
+                    }, 5000);
+                }
+            }
+        }
+
+        new SlotMachine();
+    </script>
+</body>
+</html>
