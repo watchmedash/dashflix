@@ -1,271 +1,823 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support Us | Dashflix</title>
-  <meta name="description" content="Help keep Dashflix running by supporting our server and domain costs.">
-  <meta name="keywords" content="Dashflix donate, support free movies, help streaming site">
-  <meta property="og:title" content="Support Dashflix">
-  <meta property="og:description" content="Help us keep bringing you free movies and TV series by supporting our server costs.">
-  <meta property="og:url" content="https://dashflix.top/donate">
-  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp">
-  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bottom-search.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us with Cryptocurrency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .donate-container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-    .donate-hero {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-      padding: 3rem 2rem;
-      border-radius: 15px;
-      margin-bottom: 2rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
+        /* Animated background grid */
+        .grid-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+            z-index: -2;
+        }
 
-    .donate-hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(60px, 60px); }
+        }
 
-    .donate-hero .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 2rem;
-    }
+        /* Subtle floating particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
 
-    .coffee-icon {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      color: #ffd700;
-      animation: pulse 2s infinite;
-    }
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: particleFloat 25s infinite linear;
+        }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(50px) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-    .donation-card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
+        /* Subtle geometric shapes */
+        .shape {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            animation: shapeFloat 20s infinite ease-in-out;
+            z-index: -1;
+        }
 
-    .donation-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.2);
-    }
+        .shape:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
 
-    .donation-amount {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #ffd700;
-      margin-bottom: 0.5rem;
-    }
+        .shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 20%;
+            animation-delay: 7s;
+        }
 
-    .donation-description {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: 14s;
+        }
 
-    .donate-button {
-      background: linear-gradient(135deg, #333333 0%, #555555 100%);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      margin: 1rem;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+        @keyframes shapeFloat {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(20px, -20px) rotate(120deg); }
+            66% { transform: translate(-15px, 15px) rotate(240deg); }
+        }
 
-    .donate-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      background: linear-gradient(135deg, #444444 0%, #666666 100%);
-    }
+        /* Animated border lines */
+        .border-line {
+            position: fixed;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: lineMove 12s infinite ease-in-out;
+            z-index: -1;
+        }
 
-    .impact-section {
-      margin: 3rem 0;
-      padding: 2rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
+        .border-line.horizontal {
+            height: 1px;
+            width: 100%;
+            left: 0;
+        }
 
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+        .border-line.vertical {
+            width: 1px;
+            height: 100%;
+            top: 0;
+        }
 
-    .impact-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
+        .border-line:nth-child(1) { top: 20%; animation-delay: 0s; }
+        .border-line:nth-child(2) { top: 80%; animation-delay: 6s; }
+        .border-line:nth-child(3) { left: 20%; animation-delay: 3s; }
+        .border-line:nth-child(4) { right: 20%; animation-delay: 9s; }
 
-    .impact-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #888888;
-    }
+        @keyframes lineMove {
+            0%, 100% { opacity: 0; transform: scaleX(0); }
+            50% { opacity: 1; transform: scaleX(1); }
+        }
 
-    .impact-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
+        .container {
+            background: rgba(40, 40, 40, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: containerBreathe 6s infinite ease-in-out;
+        }
 
-    .thank-you {
-      margin: 3rem 0;
-      padding: 2rem;
-      background: linear-gradient(135deg, #1a4d1a 0%, #2d5a2d 100%);
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
+        @keyframes containerBreathe {
+            0%, 100% { transform: scale(1); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+            50% { transform: scale(1.01); box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15); }
+        }
 
-  </style>
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: topBorderMove 8s infinite ease-in-out;
+        }
+
+        @keyframes topBorderMove {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .header {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            animation: titleGlow 4s infinite ease-in-out;
+            position: relative;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+            50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.2); }
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #aaa;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .description {
+            font-size: 16px;
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+
+        .crypto-section {
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.9s forwards;
+        }
+
+        .crypto-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .crypto-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #666, #888);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            animation: iconPulse 3s infinite ease-in-out;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 255, 255, 0.2); }
+        }
+
+        .crypto-icon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: iconShimmer 4s infinite;
+        }
+
+        @keyframes iconShimmer {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .crypto-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            animation: nameFloat 5s infinite ease-in-out;
+        }
+
+        @keyframes nameFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .wallet-section {
+            background: rgba(50, 50, 50, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wallet-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: walletShimmer 6s infinite;
+        }
+
+        @keyframes walletShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .wallet-section:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .wallet-label {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .wallet-address-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .wallet-address {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            background: rgba(0, 0, 0, 0.4);
+            color: #ddd;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            flex: 1;
+            word-break: break-all;
+            position: relative;
+            overflow: hidden;
+            animation: addressGlow 8s infinite ease-in-out;
+        }
+
+        @keyframes addressGlow {
+            0%, 100% { box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05); }
+            50% { box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.08); }
+        }
+
+        .copy-button {
+            background: linear-gradient(45deg, #555, #777);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 80px;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            animation: buttonFloat 6s infinite ease-in-out;
+        }
+
+        @keyframes buttonFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); }
+        }
+
+        .copy-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: buttonShimmer 3s infinite;
+        }
+
+        @keyframes buttonShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .copy-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #666, #888);
+        }
+
+        .copy-button:active {
+            transform: translateY(0) scale(1);
+        }
+
+        .copy-button.copied {
+            background: linear-gradient(45deg, #4a9, #6bb);
+            animation: copiedPulse 0.5s ease-out;
+        }
+
+        @keyframes copiedPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .qr-section {
+            margin-bottom: 30px;
+        }
+
+        .qr-container {
+            display: inline-block;
+            background: rgba(50, 50, 50, 0.6);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 16px;
+            position: relative;
+            overflow: hidden;
+            animation: qrFloat 8s infinite ease-in-out;
+        }
+
+        @keyframes qrFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(0.5deg); }
+        }
+
+        .qr-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            background-size: 400% 400%;
+            border-radius: 18px;
+            z-index: -1;
+            animation: qrBorderMove 10s infinite ease-in-out;
+        }
+
+        @keyframes qrBorderMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            display: block;
+            border-radius: 8px;
+            filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+            animation: qrPulse 6s infinite ease-in-out;
+        }
+
+        @keyframes qrPulse {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1)); }
+            50% { filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.15)); }
+        }
+
+        .qr-label {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.2s forwards;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+
+        .action-button {
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-button {
+            background: linear-gradient(45deg, #555, #777);
+            color: white;
+            border: none;
+            animation: primaryFloat 7s infinite ease-in-out;
+        }
+
+        @keyframes primaryFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .primary-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: primaryShimmer 4s infinite;
+        }
+
+        @keyframes primaryShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .primary-button:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #666, #888);
+        }
+
+        .secondary-button {
+            background: transparent;
+            color: #ccc;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        .secondary-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(45deg, #555, #777);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .secondary-button:hover::before {
+            width: 100%;
+        }
+
+        .secondary-button:hover {
+            color: white;
+            transform: translateY(-2px) scale(1.05);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: #888;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.8s forwards;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #4a9, #6bb);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+            animation: notificationSlide 0.5s ease-out;
+        }
+
+        @keyframes notificationSlide {
+            0% { transform: translateX(400px) rotate(5deg); }
+            100% { transform: translateX(0) rotate(0deg); }
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffffff, #ddd);
+            width: 0%;
+            transition: width 3s linear;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .wallet-address-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .copy-button {
+                width: 100%;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-<body oncontextmenu="return false;">
-<div class="donate-container">
-  <div class="donate-hero">
-    <div class="coffee-icon">
-      <i class="fas fa-pizza-slice"></i>
+<body>
+    <div class="grid-background"></div>
+
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+
+    <div class="border-line horizontal"></div>
+    <div class="border-line horizontal"></div>
+    <div class="border-line vertical"></div>
+    <div class="border-line vertical"></div>
+
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Support Our Mission</h1>
+            <p class="subtitle">Every contribution helps us grow</p>
+        </div>
+
+        <p class="description">
+            We're grateful for your support! Your cryptocurrency donation helps us continue providing valuable services and improving our platform for everyone.
+        </p>
+
+        <div class="crypto-section">
+            <div class="crypto-header">
+                <div class="crypto-icon">₮</div>
+                <div class="crypto-name">USDT (Tether)</div>
+            </div>
+
+            <div class="wallet-section">
+                <div class="wallet-label">Wallet Address</div>
+                <div class="wallet-address-container">
+                    <div class="wallet-address" id="usdtAddress">
+                        TTq2PFjeXUTcKSHqddSPKZPiqWpt9BYvdx
+                    </div>
+                    <button class="copy-button" onclick="copyToClipboard('usdtAddress', this)">
+                        <span class="copy-text">Copy</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="qr-section">
+                <div class="qr-label">Or scan this QR code</div>
+                <div class="qr-container">
+                    <img src="https://i.postimg.cc/Vvf8KZ2v/Untitled-1.png" alt="USDT Wallet QR Code" class="qr-code">
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-button primary-button" onclick="shareWallet()">
+                📤 Share
+            </button>
+            <a href="index.html" class="action-button secondary-button">
+                🏠 Home
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>🙏 Thank you for supporting us!</p>
+        </div>
     </div>
-    <h1>Buy Us a Pizza</h1>
-    <p class="subtitle">Help keep Dashflix running and completely free for everyone!</p>
-    <p>Your support helps us cover server costs, domain renewals, and keeps our platform accessible to movie lovers worldwide.</p>
-  </div>
 
-  <div class="custom-amount">
-    <h3>Support Dashflix:</h3>
-<a href="https://www.buymeacoffee.com/dashflix"><img src="https://img.buymeacoffee.com/button-api/?text=Buy us a pizza&emoji=🍕&slug=dashflix&button_colour=BD5FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
-  </div>
-
-  <div class="impact-section">
-    <h2>Your Impact</h2>
-    <p>Every donation, no matter the size, makes a real difference in keeping Dashflix alive and thriving.</p>
-
-    <div class="impact-grid">
-      <div class="impact-item">
-        <div class="impact-icon">
-          <i class="fas fa-server"></i>
+    <div class="notification" id="notification">
+        <span id="notificationText">Copied to clipboard!</span>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
         </div>
-        <div class="impact-title">Server Maintenance</div>
-        <div class="impact-description">Keep our servers running 24/7 for uninterrupted streaming</div>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-icon">
-          <i class="fas fa-globe"></i>
-        </div>
-        <div class="impact-title">Domain & Hosting</div>
-        <div class="impact-description">Maintain our web presence and accessibility</div>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-icon">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <div class="impact-title">Security & Updates</div>
-        <div class="impact-description">Keep the platform secure and up-to-date</div>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-icon">
-          <i class="fas fa-users"></i>
-        </div>
-        <div class="impact-title">Free Access</div>
-        <div class="impact-description">Ensure Dashflix remains free for everyone</div>
-      </div>
     </div>
-  </div>
 
-  <div class="thank-you">
-    <h2><i class="fas fa-heart"></i> Thank You!</h2>
-    <p>Thanks to supporters like you, Dashflix has been serving the community since July 2024. Your contribution helps us continue providing free, high-quality entertainment to movie lovers around the world.</p>
-    <p>We're grateful for every single donation, and we promise to use your support responsibly to keep Dashflix running smoothly.</p>
-  </div>
+    <script>
+        // Create subtle particle system
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 40;
 
-  <div style="margin-top: 2rem;">
-    <p><strong>Questions about donations?</strong> Feel free to <a href="/contact" style="color: #667eea; text-decoration: underline;">contact us</a> anytime.</p>
-  </div>
-</div>
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 25 + 's';
+                particle.style.animationDuration = (Math.random() * 15 + 20) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-<nav class="bottom-nav">
-  <a href="/index" class="nav-item">
-    <i class="fas fa-home"></i> Home
-  </a>
-  <a href="#" class="nav-item" id="navSearchToggle">
-    <i class="fas fa-search"></i> Search
-  </a>
-  <a href="/movies" class="nav-item">
-    <i class="fas fa-film"></i> Movies
-  </a>
-  <a href="/shows" class="nav-item">
-    <i class="fas fa-tv"></i> Shows
-  </a>
-  <a href="/requested" class="nav-item">
-    <i class="fas fa-list"></i> Requested
-  </a>
-</nav>
+        function copyToClipboard(elementId, button) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent.trim();
 
-<div class="nav-search-container" id="navSearchContainer">
-  <form id="navSearchForm">
-    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
-  </form>
-  <div id="navSearchResults">
-    <p>No results found</p>
-  </div>
-</div>
-<div id="navSearchOverlay"></div>
+            navigator.clipboard.writeText(text).then(function() {
+                showNotification('Address copied to clipboard! ✅');
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.donation-card');
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px) scale(1.02)';
-      });
+                // Update button state
+                const copyText = button.querySelector('.copy-text');
+                const originalText = copyText.textContent;
+                button.classList.add('copied');
+                copyText.textContent = 'Copied!';
 
-      card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-      });
-    });
-  });
-</script>
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    copyText.textContent = originalText;
+                }, 2000);
 
-<script src="bottom-search.js"></script>
+            }).catch(function(err) {
+                console.error('Failed to copy: ', err);
+                showNotification('Failed to copy address ❌');
+            });
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            const progressFill = document.getElementById('progressFill');
+
+            notificationText.textContent = message;
+            notification.classList.add('show');
+
+            // Animate progress bar
+            setTimeout(() => {
+                progressFill.style.width = '100%';
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                progressFill.style.width = '0%';
+            }, 3000);
+        }
+
+        function shareWallet() {
+            const walletAddress = document.getElementById('usdtAddress').textContent.trim();
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Support Us with USDT',
+                    text: `Help support our mission! Send USDT to: ${walletAddress}`,
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                copyToClipboard('usdtAddress', document.querySelector('.copy-button'));
+            }
+        }
+
+        // Add keyboard support for copy button
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'c' && (e.ctrlKey || e.metaKey)) {
+                const focused = document.activeElement;
+                if (focused.classList.contains('wallet-address')) {
+                    e.preventDefault();
+                    copyToClipboard(focused.id, document.querySelector('.copy-button'));
+                }
+            }
+        });
+
+        // Initialize particles on page load
+        window.addEventListener('load', createParticles);
+
+        // Add smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
 </body>
 </html>
