@@ -1,144 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Us with Cryptocurrency</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            margin-top: 20px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .wallet-address-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .wallet-address {
-            font-family: monospace;
-            background-color: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-wrap: break-word;
-            display: inline-block;
-            margin-right: 10px;
-        }
-        .copy-icon {
-            cursor: pointer;
-            font-size: 20px;
-            color: #333;
-            background-color: #eee;
-            padding: 8px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .copy-icon:hover {
-            background-color: #ddd;
-        }
-        .qr-code img {
-            width: 200px;
-            height: 200px;
-            margin: 20px 0;
-        }
-        .footer {
-            font-size: 12px;
-            color: #888;
-        }
-        .notification {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 14px;
-            z-index: 1000;
-        }
-        .go-back-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .go-back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us | Dashflix</title>
+  <meta name="description" content="Help keep Dashflix running by supporting our server and domain costs.">
+  <meta name="keywords" content="Dashflix donate, support free movies, help streaming site">
+  <meta property="og:title" content="Support Dashflix">
+  <meta property="og:description" content="Help us keep bringing you free movies and TV series by supporting our server costs.">
+  <meta property="og:url" content="https://dashflix.top/donate">
+  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp">
+  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bottom-search.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
 
+    .donate-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .donate-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .donate-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .donate-hero .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .coffee-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: #ffd700;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .donation-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .donation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .donation-amount {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 0.5rem;
+    }
+
+    .donation-description {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .donate-button {
+      background: linear-gradient(135deg, #333333 0%, #555555 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .donate-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #444444 0%, #666666 100%);
+    }
+
+    .impact-section {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .impact-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .impact-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #888888;
+    }
+
+    .impact-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .thank-you {
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, #1a4d1a 0%, #2d5a2d 100%);
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Help Us Keep Going</h1>
-        <p>We appreciate your support! If you enjoy our service and want to help us continue, please consider making a USDT donation:</p>
-        <div class="wallet-address-container">
-            <div class="wallet-address" id="btcAddress">
-                TTq2PFjeXUTcKSHqddSPKZPiqWpt9BYvdx
-            </div>
-            <div class="copy-icon" onclick="copyToClipboard()">
-                📋
-            </div>
-        </div>
-        <div class="qr-code">
-            <img src="https://i.postimg.cc/Vvf8KZ2v/Untitled-1.png" alt="QR Code for Crypto Wallet">
-        </div>
-        <p>Scan the QR code or copy the wallet address to send your donation.</p>
-        <a href="/index" class="go-back-button">Home</a>
+<body oncontextmenu="return false;">
+<div class="donate-container">
+  <div class="donate-hero">
+    <div class="coffee-icon">
+      <i class="fas fa-pizza-slice"></i>
     </div>
-    <div class="footer">
-        <p>Thank you for your support!</p>
-    </div>
-    <div class="notification" id="notification">Copied the wallet address!</div>
+    <h1>Buy Us a Pizza</h1>
+    <p class="subtitle">Help keep Dashflix running and completely free for everyone!</p>
+    <p>Your support helps us cover server costs, domain renewals, and keeps our platform accessible to movie lovers worldwide.</p>
+  </div>
 
-    <script>
-        function copyToClipboard() {
-            var copyText = document.getElementById("btcAddress").textContent;
-            navigator.clipboard.writeText(copyText).then(function() {
-                var notification = document.getElementById("notification");
-                notification.style.display = "block";
-                setTimeout(function() {
-                    notification.style.display = "none";
-                }, 2000); // Hide notification after 2 seconds
-            }, function(err) {
-                console.error("Failed to copy: ", err);
-            });
-        }
-    </script>
+  <div class="custom-amount">
+    <h3>Support Dashflix:</h3>
+<a href="https://www.buymeacoffee.com/dashflix"><img src="https://img.buymeacoffee.com/button-api/?text=Buy us a pizza&emoji=🍕&slug=dashflix&button_colour=BD5FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
+  </div>
+
+  <div class="impact-section">
+    <h2>Your Impact</h2>
+    <p>Every donation, no matter the size, makes a real difference in keeping Dashflix alive and thriving.</p>
+
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <div class="impact-title">Server Maintenance</div>
+        <div class="impact-description">Keep our servers running 24/7 for uninterrupted streaming</div>
+      </div>
+
+      <div class="impact-item">
+        <div class="impact-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <div class="impact-title">Domain & Hosting</div>
+        <div class="impact-description">Maintain our web presence and accessibility</div>
+      </div>
+
+      <div class="impact-item">
+        <div class="impact-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="impact-title">Security & Updates</div>
+        <div class="impact-description">Keep the platform secure and up-to-date</div>
+      </div>
+
+      <div class="impact-item">
+        <div class="impact-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="impact-title">Free Access</div>
+        <div class="impact-description">Ensure Dashflix remains free for everyone</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="thank-you">
+    <h2><i class="fas fa-heart"></i> Thank You!</h2>
+    <p>Thanks to supporters like you, Dashflix has been serving the community since July 2024. Your contribution helps us continue providing free, high-quality entertainment to movie lovers around the world.</p>
+    <p>We're grateful for every single donation, and we promise to use your support responsibly to keep Dashflix running smoothly.</p>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <p><strong>Questions about donations?</strong> Feel free to <a href="/contact" style="color: #667eea; text-decoration: underline;">contact us</a> anytime.</p>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a href="/index" class="nav-item">
+    <i class="fas fa-home"></i> Home
+  </a>
+  <a href="#" class="nav-item" id="navSearchToggle">
+    <i class="fas fa-search"></i> Search
+  </a>
+  <a href="/movies" class="nav-item">
+    <i class="fas fa-film"></i> Movies
+  </a>
+  <a href="/shows" class="nav-item">
+    <i class="fas fa-tv"></i> Shows
+  </a>
+  <a href="/requested" class="nav-item">
+    <i class="fas fa-list"></i> Requested
+  </a>
+</nav>
+
+<div class="nav-search-container" id="navSearchContainer">
+  <form id="navSearchForm">
+    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+  </form>
+  <div id="navSearchResults">
+    <p>No results found</p>
+  </div>
+</div>
+<div id="navSearchOverlay"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.donation-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+      });
+
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  });
+</script>
+
+<script src="bottom-search.js"></script>
 </body>
 </html>

@@ -1,0 +1,124 @@
+.donate-button-container {
+  text-align: center;
+}
+
+.donate-button {
+  position: relative;
+  display: inline-block;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 50%, #ffa8a8 100%);
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  box-shadow:
+    0 8px 25px rgba(255, 107, 107, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.donate-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(-45deg);
+  animation: shine 3s ease-in-out infinite;
+}
+
+.donate-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 15px 40px rgba(255, 107, 107, 0.6),
+    0 0 30px rgba(255, 107, 107, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #ff5252 0%, #ff7979 50%, #ff9999 100%);
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+.donate-button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.donate-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.donate-text {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffd700;
+  border-radius: 50%;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.sparkle:nth-child(2) { top: 60%; left: 80%; animation-delay: 0.5s; }
+.sparkle:nth-child(3) { top: 80%; left: 30%; animation-delay: 1s; }
+.sparkle:nth-child(4) { top: 30%; left: 70%; animation-delay: 1.5s; }
+
+
+
+@keyframes glow {
+  0% { box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+  100% { box-shadow: 0 8px 25px rgba(255, 107, 107, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.2); }
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+@keyframes pulse {
+  0% { transform: translateY(-3px) scale(1.05); }
+  100% { transform: translateY(-3px) scale(1.08); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .donate-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  .donate-icon {
+    font-size: 18px;
+  }
+}
