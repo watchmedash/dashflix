@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Unlimited - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header-section {
+            text-align: center;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .header-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: #a29bfe;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: #6c5ce7;
+            width: 16px;
+        }
+
+        .summary {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #6c5ce7;
+            font-size: 1.2rem;
+        }
+
+        .experience-item,
+        .education-item,
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .experience-item:last-child,
+        .education-item:last-child,
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .item-company,
+        .item-school {
+            color: #a29bfe;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .item-date {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        .item-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .skill-info {
+            flex: 1;
+        }
+
+        .skill-name {
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+        }
+
+        .skill-level {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievement-item {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        .achievement-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background: #6c5ce7;
+            border-radius: 50%;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .print-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .liquid-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: rgba(108, 92, 231, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        @media (max-width: 768px) {
+            .resume-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            .print-button {
+                top: 20px;
+                right: 20px;
+                padding: 10px 15px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            .glass {
+                background: white;
+                border: 1px solid #ddd;
+                box-shadow: none;
+            }
+
+            .floating-shapes,
+            .liquid-cursor,
+            .print-button {
+                display: none;
+            }
+
+            .name,
+            .section-title,
+            .item-title {
+                color: black;
+            }
+
+            .contact-item,
+            .item-description,
+            .achievement-item {
+                color: #333;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="liquid-cursor"></div>
+
+    <button class="print-button" onclick="window.print()">
+        <i class="fas fa-print"></i> Print Resume
+    </button>
+
+    <div class="resume-container">
+        <section class="header-section glass">
+            <div class="profile-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1 class="name">Dash Unlimited</h1>
+            <p class="title">Creative Graphic Designer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dash@unlimited.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+971 50 123 4567</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Sharjah, UAE</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/dashunlimited</span>
+                </div>
+            </div>
+            <p class="summary">
+                Creative and passionate graphic designer with expertise in Adobe Creative Suite and modern design tools.
+                Specialized in brand identity, digital graphics, and visual storytelling with a keen eye for detail and innovation.
+            </p>
+        </section>
+
+        <div class="resume-grid">
+            <section class="section glass">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Experience
+                </h2>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Senior Graphic Designer</div>
+                            <div class="item-company">Creative Studios Inc.</div>
+                        </div>
+                        <div class="item-date">2022 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        Lead designer for brand identity projects, social media campaigns, and digital marketing materials.
+                        Managed multiple client projects simultaneously while maintaining high quality standards.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Graphic Designer</div>
+                            <div class="item-company">Digital Agency Pro</div>
+                        </div>
+                        <div class="item-date">2020 - 2022</div>
+                    </div>
+                    <div class="item-description">
+                        Created visual content for web and print media, collaborated with marketing teams,
+                        and developed brand guidelines for various clients across different industries.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Junior Designer</div>
+                            <div class="item-company">StartUp Design Hub</div>
+                        </div>
+                        <div class="item-date">2019 - 2020</div>
+                    </div>
+                    <div class="item-description">
+                        Assisted senior designers in creating logos, brochures, and digital assets.
+                        Gained experience in client communication and project management.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section glass">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Bachelor of Fine Arts</div>
+                            <div class="item-school">University of Creative Arts</div>
+                        </div>
+                        <div class="item-date">2015 - 2019</div>
+                    </div>
+                    <div class="item-description">
+                        Specialized in Visual Communication Design with focus on digital media and branding.
+                        Graduated with honors and received the Dean's Award for Excellence in Design.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Adobe Certified Expert</div>
+                            <div class="item-school">Adobe Certification Program</div>
+                        </div>
+                        <div class="item-date">2020</div>
+                    </div>
+                    <div class="item-description">
+                        Advanced certification in Adobe Photoshop and Illustrator, demonstrating
+                        proficiency in professional design workflows and advanced techniques.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section glass full-width">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Technical Skills
+                </h2>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fa-regular fa-file"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Adobe Photoshop</div>
+                            <div class="skill-level">Expert Level</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Canva</div>
+                            <div class="skill-level">Advanced Level</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-vector-square"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Adobe Illustrator</div>
+                            <div class="skill-level">Intermediate Level</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Premiere Pro</div>
+                            <div class="skill-level">Basic Level</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Microsoft Office</div>
+                            <div class="skill-level">Intermediate Level</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="skill-info">
+                            <div class="skill-name">Brand Design</div>
+                            <div class="skill-level">Advanced Level</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section glass">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Key Projects
+                </h2>
+
+                <div class="project-item">
+                    <div class="item-title">Stellar Coffee Co. Rebrand</div>
+                    <div class="item-description">
+                        Complete brand identity overhaul including logo design, packaging, and marketing materials.
+                        Increased brand recognition by 40%.
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-title">Urban Fitness Social Campaign</div>
+                    <div class="item-description">
+                        Designed viral social media campaign that generated 2M+ impressions and
+                        increased membership by 25%.
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="item-title">Tech Innovators Magazine</div>
+                    <div class="item-description">
+                        Art direction and layout design for quarterly publication reaching
+                        50,000+ tech professionals.
+                    </div>
+                </div>
+            </section>
+
+            <section class="section glass">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    Achievements
+                </h2>
+
+                <ul class="achievements-list">
+                    <li class="achievement-item">
+                        Winner of Creative Design Award 2023 for Brand Identity Excellence
+                    </li>
+                    <li class="achievement-item">
+                        Featured in Design Magazine's "30 Under 30" rising designers list
+                    </li>
+                    <li class="achievement-item">
+                        Increased client retention rate by 35% through innovative design solutions
+                    </li>
+                    <li class="achievement-item">
+                        Mentored 5 junior designers in professional development program
+                    </li>
+                    <li class="achievement-item">
+                        Completed 200+ successful projects across various industries
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Liquid cursor effect
+        const cursor = document.querySelector('.liquid-cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+        });
+
+        // Parallax effect for floating shapes
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.5;
+                const x = (mouseX - 0.5) * speed * 50;
+                const y = (mouseY - 0.5) * speed * 50;
+                shape.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Smooth hover effects
+        document.querySelectorAll('.glass').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'translateY(-5px) scale(1.01)';
+            });
+
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add animation delay to sections
+        document.querySelectorAll('.section').forEach((section, index) => {
+            section.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
