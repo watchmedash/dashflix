@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* Animated background elements */
         body::before {
             content: '';
             position: fixed;
@@ -317,7 +316,6 @@
             }
         }
 
-        /* Floating particles */
         .particle {
             position: fixed;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%);
@@ -406,10 +404,8 @@
         const countdownElement = document.getElementById('countdown');
         const progressElement = document.getElementById('progress');
 
-        // Set initial progress to 100%
         progressElement.style.width = '100%';
 
-        // Create floating particles
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -425,18 +421,15 @@
             }, 10000);
         }
 
-        // Create particles periodically
         setInterval(createParticle, 800);
 
         const timer = setInterval(() => {
             timeLeft--;
             countdownElement.textContent = timeLeft;
 
-            // Update progress bar
             const progressPercentage = (timeLeft / 15) * 100;
             progressElement.style.width = progressPercentage + '%';
 
-            // Add pulse effect on countdown
             countdownElement.classList.add('pulse');
             setTimeout(() => {
                 countdownElement.classList.remove('pulse');
@@ -444,18 +437,15 @@
 
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                // Get the target URL from URL parameters or default to player.html
                 const urlParams = new URLSearchParams(window.location.search);
                 const targetUrl = urlParams.get('target') || 'player.html';
 
-                // Preserve the movie ID parameter when redirecting
                 const movieId = urlParams.get('id');
                 const finalUrl = movieId ? `${targetUrl}?id=${movieId}` : targetUrl;
                 window.location.href = finalUrl;
             }
         }, 1000);
 
-        // Handle page visibility to pause/resume timer when tab is not active
         let isVisible = true;
         let pausedTime = null;
 
@@ -466,9 +456,7 @@
             } else {
                 isVisible = true;
                 if (pausedTime) {
-                    // Resume from where we left off
                     const pauseDuration = Math.floor((Date.now() - pausedTime) / 1000);
-                    // Don't adjust time if pause was short
                     if (pauseDuration < 2) {
                         pausedTime = null;
                     }
