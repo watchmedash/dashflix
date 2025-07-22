@@ -214,6 +214,63 @@
             left: 100%;
         }
 
+        .proceed-button {
+            backdrop-filter: blur(15px);
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.3) 0%, rgba(196, 113, 237, 0.3) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 60px;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.95);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+            display: none;
+            font-family: inherit;
+            outline: none;
+            text-decoration: none;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .proceed-button.show {
+            display: inline-block;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .proceed-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.5) 0%, rgba(196, 113, 237, 0.5) 100%);
+            box-shadow:
+                0 0 40px rgba(255, 107, 157, 0.4),
+                0 15px 35px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+        .proceed-button:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .proceed-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .proceed-button:hover::before {
+            left: 100%;
+        }
+
         .progress-container {
             width: 100%;
             max-width: 450px;
@@ -342,6 +399,10 @@
             }
         }
 
+        .hidden {
+            display: none !important;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.2rem;
@@ -351,7 +412,7 @@
                 font-size: 1rem;
             }
 
-            .countdown-display {
+            .countdown-display, .proceed-button {
                 font-size: 1.4rem;
                 padding: 1rem 2rem;
             }
@@ -381,7 +442,7 @@
         <div class="video-container">
             <div class="video-wrapper">
                 <iframe
-                    src="https://www.youtube.com/embed/cU3lSREUwEg?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=cU3lSREUwEg"
+                    src="https://www.youtube.com/embed/cU3lSREUwEg?autoplay=1&mute=1&controls=1&showinfo=0&rel=0&modestbranding=1&loop=1"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -389,9 +450,10 @@
         </div>
 
         <div class="countdown-section">
-            <div class="countdown-text">Redirecting to player in:</div>
+            <div class="countdown-text" id="countdownText">Redirecting to player in:</div>
             <div class="countdown-display" id="countdown">15</div>
-            <div class="progress-container">
+            <button class="proceed-button" id="proceedBtn" onclick="proceedToDestination()">Proceed</button>
+            <div class="progress-container" id="progressContainer">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress"></div>
                 </div>
@@ -403,6 +465,9 @@
         let timeLeft = 15;
         const countdownElement = document.getElementById('countdown');
         const progressElement = document.getElementById('progress');
+        const proceedButton = document.getElementById('proceedBtn');
+        const countdownText = document.getElementById('countdownText');
+        const progressContainer = document.getElementById('progressContainer');
 
         progressElement.style.width = '100%';
 
@@ -423,6 +488,15 @@
 
         setInterval(createParticle, 800);
 
+        function proceedToDestination() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const targetUrl = urlParams.get('target') || 'player.html';
+
+            const movieId = urlParams.get('id');
+            const finalUrl = movieId ? `${targetUrl}?id=${movieId}` : targetUrl;
+            window.location.href = finalUrl;
+        }
+
         const timer = setInterval(() => {
             timeLeft--;
             countdownElement.textContent = timeLeft;
@@ -437,12 +511,12 @@
 
             if (timeLeft <= 0) {
                 clearInterval(timer);
-                const urlParams = new URLSearchParams(window.location.search);
-                const targetUrl = urlParams.get('target') || 'player.html';
 
-                const movieId = urlParams.get('id');
-                const finalUrl = movieId ? `${targetUrl}?id=${movieId}` : targetUrl;
-                window.location.href = finalUrl;
+                // Hide countdown elements and show proceed button
+                countdownElement.classList.add('hidden');
+                countdownText.textContent = 'Ready to continue?';
+                progressContainer.classList.add('hidden');
+                proceedButton.classList.add('show');
             }
         }, 1000);
 
