@@ -1,0 +1,40 @@
+<div>
+  <h3>Leave a Comment</h3>
+  <form id="commentForm">
+    <input type="text" name="name" placeholder="Your name" required>
+    <textarea name="comment" placeholder="Your comment" required></textarea>
+    <button type="submit">Post</button>
+  </form>
+
+  <h4>Comments</h4>
+  <div id="comments"></div>
+</div>
+
+<script>
+const ENDPOINT = "https://tagger.top/comments.php";
+
+async function loadComments() {
+  const res = await fetch(ENDPOINT);
+  const comments = await res.json();
+  const container = document.getElementById("comments");
+  container.innerHTML = '';
+  comments.forEach(c => {
+    const div = document.createElement('div');
+    div.innerHTML = `<strong>${c.name}</strong>: ${c.comment}`;
+    container.appendChild(div);
+  });
+}
+
+document.getElementById('commentForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  await fetch(ENDPOINT, {
+    method: 'POST',
+    body: formData
+  });
+  e.target.reset();
+  loadComments();
+});
+
+loadComments();
+</script>
