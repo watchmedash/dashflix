@@ -441,19 +441,21 @@
 
         <div class="video-container">
             <div class="video-wrapper">
-              <iframe
-  src="https://www.youtube.com/embed/4lzYN-0XsyI?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&loop=1&playlist=4lzYN-0XsyI"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+                <iframe
+                    id="videoFrame"
+                    src="https://www.youtube.com/embed/4lzYN-0XsyI?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1&loop=1&enablejsapi=1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
-<!--https://youtu.be/gmVev7x-P9c?si=lH-rndVHeoaALD5K-->
+
         <div class="countdown-section">
-            <div class="countdown-text" id="countdownText">Redirecting to player in:</div>
-            <div class="countdown-display" id="countdown">15</div>
-            <button class="proceed-button" id="proceedBtn" onclick="proceedToDestination()">Proceed</button>
-            <div class="progress-container" id="progressContainer">
+            <button class="proceed-button show" id="startBtn" onclick="startCountdown()">Proceed</button>
+            <div class="countdown-text hidden" id="countdownText">Redirecting to player in:</div>
+            <div class="countdown-display hidden" id="countdown">15</div>
+            <button class="proceed-button" id="proceedBtn" onclick="proceedToDestination()">Start Watching</button>
+            <div class="progress-container hidden" id="progressContainer">
                 <div class="progress-bar">
                     <div class="progress-fill" id="progress"></div>
                 </div>
@@ -463,11 +465,15 @@
 
     <script>
         let timeLeft = 15;
+        let timerStarted = false;
+        let timer = null;
         const countdownElement = document.getElementById('countdown');
         const progressElement = document.getElementById('progress');
         const proceedButton = document.getElementById('proceedBtn');
+        const startButton = document.getElementById('startBtn');
         const countdownText = document.getElementById('countdownText');
         const progressContainer = document.getElementById('progressContainer');
+        const videoFrame = document.getElementById('videoFrame');
 
         progressElement.style.width = '100%';
 
@@ -488,6 +494,46 @@
 
         setInterval(createParticle, 800);
 
+        function startCountdown() {
+            if (timerStarted) return;
+
+            timerStarted = true;
+
+            // Hide start button and show countdown elements
+            startButton.classList.add('hidden');
+            countdownText.classList.remove('hidden');
+            countdownElement.classList.remove('hidden');
+            progressContainer.classList.remove('hidden');
+
+            // Start video playback by changing src to include autoplay
+            const currentSrc = videoFrame.src;
+            videoFrame.src = currentSrc.replace('autoplay=0', 'autoplay=1').replace('mute=0', 'mute=0');
+
+            // Start countdown timer
+            timer = setInterval(() => {
+                timeLeft--;
+                countdownElement.textContent = timeLeft;
+
+                const progressPercentage = (timeLeft / 15) * 100;
+                progressElement.style.width = progressPercentage + '%';
+
+                countdownElement.classList.add('pulse');
+                setTimeout(() => {
+                    countdownElement.classList.remove('pulse');
+                }, 400);
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+
+                    // Hide countdown elements and show proceed button
+                    countdownElement.classList.add('hidden');
+                    countdownText.textContent = 'Ready to continue?';
+                    progressContainer.classList.add('hidden');
+                    proceedButton.classList.add('show');
+                }
+            }, 1000);
+        }
+
         function proceedToDestination() {
             const urlParams = new URLSearchParams(window.location.search);
             const targetUrl = urlParams.get('target') || 'player.html';
@@ -496,29 +542,6 @@
             const finalUrl = movieId ? `${targetUrl}?id=${movieId}` : targetUrl;
             window.location.href = finalUrl;
         }
-
-        const timer = setInterval(() => {
-            timeLeft--;
-            countdownElement.textContent = timeLeft;
-
-            const progressPercentage = (timeLeft / 15) * 100;
-            progressElement.style.width = progressPercentage + '%';
-
-            countdownElement.classList.add('pulse');
-            setTimeout(() => {
-                countdownElement.classList.remove('pulse');
-            }, 400);
-
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-
-                // Hide countdown elements and show proceed button
-                countdownElement.classList.add('hidden');
-                countdownText.textContent = 'Ready to continue?';
-                progressContainer.classList.add('hidden');
-                proceedButton.classList.add('show');
-            }
-        }, 1000);
 
         let isVisible = true;
         let pausedTime = null;
