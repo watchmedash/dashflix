@@ -525,35 +525,30 @@
 
         progressElement.style.width = '100%';
 
-        // Parse URL parameters and decode destination
         function initializePage() {
             const urlParams = new URLSearchParams(window.location.search);
 
-            // Try multiple parameter names for flexibility
             const encodedUrl = urlParams.get('url') || urlParams.get('target') || urlParams.get('destination') || urlParams.get('link');
 
             if (encodedUrl) {
                 try {
-                    // First try to decode as base64
                     try {
                         const decoded = atob(encodedUrl);
-                        // Check if decoded result looks like a URL
+
                         if (decoded.includes('.') && (decoded.startsWith('http') || decoded.includes('://'))) {
                             destinationUrl = decoded;
                         } else {
                             throw new Error('Not base64 URL');
                         }
                     } catch (e) {
-                        // If base64 fails, try URL decoding
+
                         destinationUrl = decodeURIComponent(encodedUrl);
                     }
 
-                    // Ensure URL has protocol
                     if (!destinationUrl.startsWith('http://') && !destinationUrl.startsWith('https://')) {
                         destinationUrl = 'https://' + destinationUrl;
                     }
 
-                    // Display generic message instead of actual URL
                     destinationInfo.classList.remove('hidden');
                     destinationUrlElement.textContent = 'Content ready for viewing';
 
@@ -603,11 +598,9 @@
             countdownElement.classList.remove('hidden');
             progressContainer.classList.remove('hidden');
 
-            // Start video playback
             const currentSrc = videoFrame.src;
             videoFrame.src = currentSrc.replace('autoplay=0', 'autoplay=1');
 
-            // Start countdown timer
             timer = setInterval(() => {
                 timeLeft--;
                 countdownElement.textContent = timeLeft;
@@ -623,7 +616,6 @@
                 if (timeLeft <= 0) {
                     clearInterval(timer);
 
-                    // Hide countdown elements and show proceed button
                     countdownElement.classList.add('hidden');
                     countdownText.textContent = 'Ready to continue?';
                     progressContainer.classList.add('hidden');
@@ -634,12 +626,10 @@
 
         function proceedToDestination() {
             if (destinationUrl) {
-                // Open in the same tab
                 window.location.href = destinationUrl;
             }
         }
 
-        // Prevent tab switching tricks
         let isVisible = true;
         let pausedTime = null;
 
@@ -658,7 +648,6 @@
             }
         });
 
-        // Initialize the page
         initializePage();
     </script>
 </body>
