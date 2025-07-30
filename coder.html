@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder Generator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', monospace;
+            background: radial-gradient(ellipse at center, #0f0f23 0%, #050505 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 255, 0.02) 2px,
+                    rgba(0, 255, 255, 0.02) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 255, 0.02) 2px,
+                    rgba(0, 255, 255, 0.02) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            background: linear-gradient(145deg, rgba(13, 13, 32, 0.95), rgba(8, 8, 20, 0.95));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow:
+                0 0 50px rgba(0, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 650px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0.3;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.6; }
+        }
+
+        h1 {
+            text-align: center;
+            color: #00ffff;
+            margin-bottom: 40px;
+            font-size: 2.8rem;
+            font-weight: 900;
+            font-family: 'Orbitron', monospace;
+            text-shadow:
+                0 0 10px rgba(0, 255, 255, 0.5),
+                0 0 20px rgba(0, 255, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.1);
+            letter-spacing: 3px;
+            animation: titlePulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes titlePulse {
+            0% { text-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3), 0 0 30px rgba(0, 255, 255, 0.1); }
+            100% { text-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 25px rgba(0, 255, 255, 0.5), 0 0 35px rgba(0, 255, 255, 0.3); }
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            color: #ff00ff;
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 18px 25px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            font-size: 16px;
+            transition: all 0.4s ease;
+            background: linear-gradient(145deg, rgba(10, 10, 25, 0.8), rgba(5, 5, 15, 0.8));
+            color: #00ffff;
+            font-family: 'Rajdhani', monospace;
+            font-weight: 400;
+        }
+
+        input[type="url"]::placeholder {
+            color: rgba(0, 255, 255, 0.4);
+        }
+
+        input[type="url"]:focus {
+            outline: none;
+            border-color: #00ffff;
+            background: linear-gradient(145deg, rgba(15, 15, 30, 0.9), rgba(8, 8, 20, 0.9));
+            box-shadow:
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .encode-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(145deg, #ff00ff, #00ffff);
+            color: #000;
+            border: none;
+            border-radius: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .encode-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .encode-btn:hover::before {
+            left: 100%;
+        }
+
+        .encode-btn:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 15px 35px rgba(255, 0, 255, 0.3),
+                0 0 30px rgba(0, 255, 255, 0.3);
+            filter: brightness(1.2);
+        }
+
+        .encode-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .result-section {
+            margin-top: 30px;
+        }
+
+        .result-box {
+            background: linear-gradient(145deg, rgba(5, 5, 15, 0.9), rgba(10, 10, 25, 0.9));
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            min-height: 80px;
+            word-break: break-all;
+            font-family: 'Rajdhani', monospace;
+            font-size: 16px;
+            line-height: 1.6;
+            position: relative;
+            transition: all 0.4s ease;
+            color: #00ffff;
+        }
+
+        .result-box.has-content {
+            background: linear-gradient(145deg, rgba(0, 20, 20, 0.9), rgba(0, 30, 30, 0.9));
+            border-color: #00ff00;
+            box-shadow:
+                0 0 20px rgba(0, 255, 0, 0.2),
+                inset 0 0 20px rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(145deg, #00ff00, #00ffff);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'Orbitron', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .copy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        .placeholder-text {
+            color: rgba(0, 255, 255, 0.4);
+            font-style: italic;
+            font-family: 'Rajdhani', monospace;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .success-message {
+            background: linear-gradient(145deg, rgba(0, 50, 0, 0.9), rgba(0, 30, 0, 0.9));
+            color: #00ff00;
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            display: none;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: successGlow 0.5s ease-in-out;
+        }
+
+        @keyframes successGlow {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Alien tech particle effect */
+        .particle {
+            position: fixed;
+            width: 2px;
+            height: 2px;
+            background: #00ffff;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.6;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-10px) translateX(100px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>◈ XENOCODER ◈</h1>
+
+        <div class="input-group">
+            <label for="urlInput">Enter URL to encode:</label>
+            <input type="url" id="urlInput" placeholder="https://example.com/path" />
+        </div>
+
+        <button class="encode-btn" onclick="encodeURL()">Encode URL</button>
+
+        <div class="result-section">
+            <label>Generated URL:</label>
+            <div class="result-box" id="resultBox">
+                <div class="placeholder-text">Your encoded URL will appear here...</div>
+            </div>
+            <div class="success-message" id="successMessage">
+                URL copied to clipboard!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + 'vw';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    document.body.appendChild(particle);
+
+                    setTimeout(() => {
+                        if (particle.parentNode) {
+                            particle.parentNode.removeChild(particle);
+                        }
+                    }, 8000);
+                }, i * 400);
+            }
+        }
+
+        // Create particles on load and periodically
+        createParticles();
+        setInterval(createParticles, 8000);
+
+        function encodeURL() {
+            const urlInput = document.getElementById('urlInput');
+            const resultBox = document.getElementById('resultBox');
+            const url = urlInput.value.trim();
+
+            // Validate URL
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+
+            try {
+                // Validate URL format
+                new URL(url);
+
+                // Encode URL to base64
+                const encodedURL = btoa(url);
+
+                // Create the final URL
+                const finalURL = `https://dashflix.top/red?url=${encodedURL}`;
+
+                // Display result
+                resultBox.innerHTML = `
+                    ${finalURL}
+                    <button class="copy-btn" onclick="copyToClipboard('${finalURL}')">Copy</button>
+                `;
+                resultBox.classList.add('has-content');
+
+            } catch (error) {
+                alert('Please enter a valid URL (including http:// or https://)');
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            }).catch(function(err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            });
+        }
+
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                encodeURL();
+            }
+        });
+    </script>
+</body>
+</html>
