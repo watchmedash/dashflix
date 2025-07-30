@@ -57,7 +57,7 @@ function displayShows(showsList) {
         });
 
         const link = document.createElement("a");
-        link.href = `redirect.html?id=${show.id}&target=players.html&type=show`;
+        link.href = `players.html?id=${show.id}`;
         link.target = "_self";
         link.appendChild(image);
 
