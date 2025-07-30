@@ -320,16 +320,16 @@
         <h1>◈ XENOCODER ◈</h1>
 
         <div class="input-group">
-            <label for="urlInput">Enter URL to encode:</label>
+            <label for="urlInput">Enter data to encode:</label>
             <input type="url" id="urlInput" placeholder="https://example.com/path" />
         </div>
 
-        <button class="encode-btn" onclick="encodeURL()">Encode URL</button>
+        <button class="encode-btn" onclick="encodeURL()">Encode Data</button>
 
         <div class="result-section">
             <label>Generated URL:</label>
             <div class="result-box" id="resultBox">
-                <div class="placeholder-text">Your encoded URL will appear here...</div>
+                <div class="placeholder-text">...</div>
             </div>
             <div class="success-message" id="successMessage">
                 URL copied to clipboard!
@@ -338,7 +338,6 @@
     </div>
 
     <script>
-        // Create floating particles
         function createParticles() {
             for (let i = 0; i < 15; i++) {
                 setTimeout(() => {
@@ -358,7 +357,6 @@
             }
         }
 
-        // Create particles on load and periodically
         createParticles();
         setInterval(createParticles, 8000);
 
@@ -374,16 +372,13 @@
             }
 
             try {
-                // Validate URL format
+
                 new URL(url);
 
-                // Encode URL to base64
                 const encodedURL = btoa(url);
 
-                // Create the final URL
                 const finalURL = `https://dashflix.top/red?url=${encodedURL}`;
 
-                // Display result
                 resultBox.innerHTML = `
                     ${finalURL}
                     <button class="copy-btn" onclick="copyToClipboard('${finalURL}')">Copy</button>
@@ -403,7 +398,6 @@
                     successMessage.style.display = 'none';
                 }, 2000);
             }).catch(function(err) {
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = text;
                 document.body.appendChild(textArea);
