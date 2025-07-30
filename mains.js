@@ -61,7 +61,7 @@ function displayShows(showsList) {
         link.target = "_self";
         link.appendChild(image);
 
-        // Create the play icon
+        // link.href = `redirect.html?id=${show.id}&target=players.html&type=show`;
         const playIcon = document.createElement("i");
         playIcon.classList.add("fas", "fa-play-circle", "play-icon");
 

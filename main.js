@@ -99,7 +99,7 @@ function displayMovies(moviesList, append = false) {
     link.target = "_self";
     link.appendChild(image);
 
-    // Create the play icon
+    // link.href = `redirect.html?id=${movie.id}&target=player.html&type=movie`;
     const playIcon = document.createElement("i");
     playIcon.classList.add("fas", "fa-play-circle", "play-icon");
 
