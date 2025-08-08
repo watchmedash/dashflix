@@ -31,6 +31,7 @@
   <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
   <title>Movies - Watch Free Movies and TV Series Online</title>
   <link rel="stylesheet" href="movies.css">
+  <link rel="stylesheet" href="pop.css">
   <link rel="stylesheet" href="bottom-search.css">
   <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -51,8 +52,8 @@
   </head>
 <body oncontextmenu="return false;">
   <div class="into-banner">
-    <p><strong>Want to watch offline?</strong>
-Download from<a href="https://tagger.top/t/download" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;"> Here!</a></p>
+    <p><strong>Want to enjoy watching ad-free? Go to </strong>
+  <a href="https://dashtube.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">Dashtube</a></p>
   </div>
 <div class="sharethis-inline-share-buttons"></div>
 <div class="filters" style="display: flex; justify-content: center; align-items: center; margin: 10px 0; padding: 10px; border-radius: 8px;">
@@ -72,7 +73,16 @@ Download from<a href="https://tagger.top/t/download" style="color: #ffffff; back
   <button id="goToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 60px; right: 20px; background-color: #fff; color: #333; border: none; padding: 15px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 99999;">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="15" style="color: #333;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path></svg>
   </button>
-
+  <div class="dt-modal" role="document" aria-labelledby="dashtube-title">
+    <button class="dt-close" id="dt-close" aria-label="Close announcement">&times;</button>
+    <h2 id="dashtube-title">Want to enjoy watching ad-free?</h2>
+    <p>Head over to <strong>Dashtube</strong> for a smoother viewing experience.
+    </p>
+    <div class="dt-actions">
+      <button class="dt-btn dt-btn-ghost" id="dt-later">Later</button>
+      <button class="dt-btn dt-btn-primary" id="dt-go" title="Open Dashtube in a new tab">Go</button>
+    </div>
+  </div>
   <script>
       window.onscroll = function() {
           const button = document.getElementById('goToTop');
@@ -110,6 +120,7 @@ Download from<a href="https://tagger.top/t/download" style="color: #ffffff; back
   <div id="navSearchOverlay"></div>
 <script src="bottom-search.js"></script>
   <script src="main.js"></script>
+  <script src="pop.js"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </body>
   </html>

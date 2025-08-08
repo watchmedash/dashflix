@@ -1,0 +1,85 @@
+.dt-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+  }
+  .dt-modal-backdrop.dt-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Modal box */
+  .dt-modal {
+    background: #0f1724;
+    color: #e6eef8;
+    width: min(520px, calc(100% - 40px));
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+    padding: 20px;
+    transform: translateY(10px) scale(.99);
+    transition: transform 220ms cubic-bezier(.2,.9,.3,1);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  .dt-modal-backdrop.dt-visible .dt-modal {
+    transform: translateY(0) scale(1);
+  }
+
+  .dt-modal h2 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    letter-spacing: -0.2px;
+  }
+  .dt-modal p {
+    margin: 0 0 14px 0;
+    line-height: 1.45;
+    color: #cfe7ff;
+    opacity: 0.95;
+  }
+
+  .dt-modal .dt-actions {
+    display:flex;
+    gap:10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .dt-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .dt-btn-primary {
+    background: linear-gradient(180deg,#00a3ff,#0077cc);
+    color: white;
+    box-shadow: 0 6px 16px rgba(0,115,204,0.24);
+  }
+  .dt-btn-ghost {
+    background: transparent;
+    color: #cfe7ff;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .dt-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    color: #bcd8ff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dt-modal, .dt-modal-backdrop { transition: none; }
+  }

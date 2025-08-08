@@ -46,6 +46,7 @@ Free Online TV Shows, Top Rated Movies Free">
 <meta name="twitter:image:alt" content="Dashflix - Stream Free Movies and TV Series" />
 <link rel="canonical" href="https://dashflix.top/" />
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pop.css">
 <link rel="stylesheet" href="bottom-search.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -388,8 +389,8 @@ gtag('config', 'G-ZZXCQM5KLH');
 </nav>
 </header>
 <div class="into-banner">
-  <p><strong>Help keep Dashflix free!</strong>
-  <a href="donate.html" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">Donate Here</a> to support our servers!</p>
+  <p><strong>Want to enjoy watching ad-free? Go to </strong>
+<a href="https://dashtube.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">Dashtube</a></p>
 </div>
 <div class="search-container">
 <form id="searchForm">
@@ -474,6 +475,18 @@ However, for selected movies and shows, we also provide a download option so you
   <em>All content is intended for informational and educational purposes only.</em> Users are solely responsible for ensuring their use of this service complies with local laws and regulations.
 </p>
 </div>
+<div id="dashtube-announcement" class="dt-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" style="display:none;">
+  <div class="dt-modal" role="document" aria-labelledby="dashtube-title">
+    <button class="dt-close" id="dt-close" aria-label="Close announcement">&times;</button>
+    <h2 id="dashtube-title">Want to enjoy watching ad-free?</h2>
+    <p>Head over to <strong>Dashtube</strong> for a smoother viewing experience.
+    </p>
+    <div class="dt-actions">
+      <button class="dt-btn dt-btn-ghost" id="dt-later">Later</button>
+      <button class="dt-btn dt-btn-primary" id="dt-go" title="Open Dashtube in a new tab">Go</button>
+    </div>
+  </div>
+</div>
 <footer>
 <nav class="footer-nav">
 <ul class="footer-links">
@@ -519,6 +532,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="search.js"></script>
 <script src="trending.js"></script>
+<script src="pop.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
