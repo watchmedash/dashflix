@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="Requested Movies - Watch Free Movies and TV Series Online"/>
+  <meta property="og:description" content="Explore a world of free requested movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+  <meta property="og:url" content="https://dashflix.top/requested"/>
+  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+  <meta name="description" content="Watch free requested movies and TV series online at Dashflix. Discover your favorite genres, from classics to the latest releases, all available for streaming."/>
+  <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres,
+    Latest releases, Classic films, Requested movies, Popular TV shows,
+    Free streaming, Watch requested content, Film requests, TV series requests,
+    Stream movies, Online movie platform, Movie requests, Trending movies"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap"/>
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="bottom-search.css">
+  <title>Requested Movies - Watch Free Movies and TV Series Online</title>
+  <style>
+      body {
+          background-color: #121212;
+          color: #fff;
+          font-family: Arial, sans-serif;
+      }
+
+      .gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+
+      .movie-figure {
+          margin: 10px;
+          text-align: center;
+          transition: transform 0.2s;
+      }
+
+      .movie-figure:hover {
+          transform: scale(1.05);
+      }
+
+      .tag {
+          display: block;
+          margin-top: 5px;
+          font-weight: bold;
+      }
+
+      .hidden {
+          display: none;
+      }
+
+      #page-dropdown,
+      #genre-dropdown {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #333;
+          background-color: #121212;
+          color: #fff;
+          margin: 10px;
+      }
+
+      .into-banner {
+                background-color: #ffcc00;
+                color: #000;
+                padding: 5px;
+                border-radius: 1px;
+                font-size: 14px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+  </style>
+  <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
+   crossorigin="anonymous"></script>-->
+<script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
+</head>
+<body oncontextmenu="return false;">
+  <div class="into-banner">
+    <p><strong>Want to watch offline?</strong>
+Download from<a href="https://tagger.top/t/download" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;"> Here!</a></p>
+  </div>
+<div class="sharethis-inline-share-buttons"></div>
+<div style="text-align: center; margin-bottom: 20px;">
+    <select id="genre-dropdown">
+        <option value="" disabled selected>Select Genre</option>
+        <option value="all">All</option>
+    </select>
+</div>
+<div class="gallery" id="gallery-container"></div>
+<script>
+const jsonFiles=["movies1.json","movies2.json"];async function fetchAndMergeJSON(files){try{const responses=await Promise.all(files.map(file=>fetch(file))),data=await Promise.all(responses.map(response=>response.ok?response.json():(console.error("Error fetching file:",file,response.status),{movies:[]})));return data.flatMap(data=>data.movies)}catch(error){return console.error("Error fetching JSON files:",error),[]}}fetchAndMergeJSON(jsonFiles).then(movies=>{const galleryContainer=document.getElementById("gallery-container"),figures=[],genreSet=new Set,requestedMovies=movies.filter(movie=>movie.requested===!0);requestedMovies.forEach(movie=>{if(!movie.title||!movie.link||!movie.image)return void console.warn("Skipping movie due to missing data:",movie);const genres=Array.isArray(movie.genres)?movie.genres:[],figure=document.createElement("figure");figure.classList.add("movie-figure"),figure.dataset.title=movie.title.toLowerCase(),figure.dataset.genres=genres.join(",").toLowerCase();const anchor=document.createElement("a");anchor.href=movie.link,anchor.className="movie-link";const img=document.createElement("img");img.alt=movie.title,img.dataset.src=movie.image,img.className="defer-image",img.width=240,img.height=320;const spinner=document.createElement("div");spinner.className="spinner",anchor.appendChild(spinner),anchor.appendChild(img),img.onload=()=>{spinner.style.display="none"},img.onerror=()=>{spinner.style.display="none",console.error("Failed to load image:",movie.image)};const span=document.createElement("span");span.className="tag positioned";switch(movie.tag.toLowerCase()){case"hd":span.classList.add("hd"),span.textContent="HD";break;case"ts":span.classList.add("ts"),span.textContent="TS";break;case"cam":span.classList.add("cam"),span.textContent="CAM";break;default:span.textContent=movie.tag||"🔥"}const caption=document.createElement("figcaption");caption.textContent=movie.title,caption.style.cursor="pointer",caption.addEventListener("click",()=>{window.location.href=movie.link}),figure.appendChild(anchor),figure.appendChild(span),figure.appendChild(caption),galleryContainer.appendChild(figure),figures.push(figure),genres.forEach(genre=>genreSet.add(genre.toLowerCase()))});const genreDropdown=document.getElementById("genre-dropdown");genreSet.forEach(genre=>{const option=document.createElement("option");option.value=genre,option.textContent=genre.charAt(0).toUpperCase()+genre.slice(1),genreDropdown.appendChild(option)});const lazyLoad=()=>{document.querySelectorAll(".defer-image").forEach(img=>{img.getBoundingClientRect().top<window.innerHeight&&!img.src&&(img.src=img.dataset.src)})};window.addEventListener("scroll",lazyLoad),lazyLoad(),genreDropdown.addEventListener("change",function(){const selectedGenre=this.value;figures.forEach(figure=>{figure.dataset.genres.split(",").includes(selectedGenre)||"all"===selectedGenre?figure.classList.remove("hidden"):figure.classList.add("hidden")})})}).catch(error=>{console.error("Error processing the JSON data:",error)});
+</script>
+ <div id="go-to-top-button" class="floating-button">
+ <div class="arrow-up"></div>
+ </div>
+<footer>
+<nav class="footer-nav">
+<ul class="footer-links">
+<li><a href="/contact">Contact Us</a></li>
+<li><a href="/privacy policy">Privacy Policy</a></li>
+<li><a href="/dmca">DMCA</a></li>
+</ul>
+<div class="social-icons">
+<a class="social-icon" href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541"><i class="fab fa-instagram"></i></a>
+<a class="social-icon" href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541"><i class="fab fa-youtube"></i></a>
+<a class="social-icon" href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541"><i class="fab fa-facebook"></i></a>
+<a class="social-icon" href="https://perilastronaut.com/drgbi6nk3?key=b9a8423ba82179e793ae4a5b1096f541"><i class="fab fa-twitter"></i></a>
+</div>
+</nav>
+<p class="copyright">Dashflix. All rights reserved.</p>
+</footer>
+<script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<nav class="bottom-nav">
+  <a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
+  <a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
+  <a href="/tvplus" class="nav-item"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+  <a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
+  <a href="/shows" class="nav-item"><i class="fas fa-tv"></i> Shows</a>
+  <a href="/trailer" class="nav-item"><i class="fas fa-video"></i> Trailers</a>
+</nav>
+<div class="nav-search-container" id="navSearchContainer">
+  <form id="navSearchForm">
+    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+  </form>
+  <div id="navSearchResults">
+    <p>No results found</p>
+  </div>
+</div>
+<div id="navSearchOverlay"></div>
+<script src="bottom-search.js"></script>
+</body>
+</html>
