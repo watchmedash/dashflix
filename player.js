@@ -41,7 +41,8 @@ function displayMovieDetails(movie) {
     `https://moviesapi.to/movie/${movie.id}`,
     `https://vidsrc.vip/embed/movie/${movie.id}`,
     `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
-    `https://vidlink.pro/movie/${movie.id}`
+    `https://vidlink.pro/movie/${movie.id}`,
+    `https://vidfast.pro/movie/${movie.id}?autoPlay=true`
   ];
 
   const sourceSelector = document.getElementById("video-source");
