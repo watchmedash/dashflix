@@ -37,12 +37,18 @@ function displayMovieDetails(movie) {
 
   const servers = [
     `https://vidsrc.me/embed/movie/${movie.id}`,
-    `https://embed.su/embed/movie/${movie.id}`,
     `https://moviesapi.to/movie/${movie.id}`,
     `https://vidsrc.vip/embed/movie/${movie.id}`,
     `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
     `https://vidlink.pro/movie/${movie.id}`,
-    `https://vidfast.pro/movie/${movie.id}?autoPlay=true`
+    `https://player.videasy.net/movie/${movie.id}`,
+    `https://vidfast.pro/movie/${movie.id}?autoPlay=true`,
+    `https://player.vidzee.wtf/embed/movie/${movie.id}?server=1`,
+    `https://vidsrc.rip/embed/movie/${movie.id}`,
+    `https://player.vidpro.top/embed/movie/${movie.id}`,
+    `https://player.autoembed.cc/embed/movie/${movie.id}`,
+    `https://iframe.pstream.org/embed/tmdb-movie-${movie.id}`,
+    `https://player.vidsrc.co/embed/movie/${movie.id}`
   ];
 
   const sourceSelector = document.getElementById("video-source");
