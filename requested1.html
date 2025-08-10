@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Requested</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta property="og:title" content="Requested Movies - Watch Free Movies and TV Series Online"/>
+  <meta property="og:description" content="Explore a world of free requested movies and TV series online at Dashflix. Enjoy a variety of genres, from classics to the latest releases, all available for streaming."/>
+  <meta property="og:url" content="https://dashflix.top/requested"/>
+  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp"/>
+  <meta name="description" content="Watch free requested movies and TV series online at Dashflix. Discover your favorite genres, from classics to the latest releases, all available for streaming."/>
+  <meta name="keywords" content="Free movies, Watch free TV series, Online streaming, Movie genres,
+    Latest releases, Classic films, Requested movies, Popular TV shows,
+    Free streaming, Watch requested content, Film requests, TV series requests,
+    Stream movies, Online movie platform, Movie requests, Trending movies"/>
+  <link rel="icon" href="https://i.postimg.cc/g2n9TLBn/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap"/>
+  <script async src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons"></script>
+  <link rel="stylesheet" href="req.css">
+  <link rel="stylesheet" href="bottom-search.css">
+  <script type='text/javascript' src='//perilastronaut.com/4a/56/8a/4a568a636496ba88af9fcab657ba2e49.js'></script>
+  <style>
+      .into-banner {
+                background-color: #ffcc00;
+                color: #000;
+                padding: 5px;
+                border-radius: 1px;
+                font-size: 14px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+            .bottom-nav {
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              display: flex;
+              justify-content: space-around;
+              background-color: #1a1a1a; /* Dark background */
+              padding: 5px;
+              border-top: 2px solid #333; /* Darker border for contrast */
+              z-index: 1000;
+              transition: background-color 0.3s ease-in-out;
+            }
+
+            .nav-item {
+              color: #e0e0e0; /* Light gray text for better contrast */
+              text-align: center;
+              text-decoration: none;
+              font-size: 14px;
+              flex-grow: 1;
+              transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
+              position: relative;
+            }
+
+            .nav-item i {
+              display: block;
+              font-size: 18px;
+              margin-bottom: 5px;
+              transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
+            }
+
+            .nav-item:hover {
+              color: #ffffff; /* Change color to normal white on hover */
+              transform: scale(1.1);
+              text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
+            }
+
+            .nav-item:hover i {
+              transform: scale(1.4); /* Enlarge the icon */
+            }
+  </style>
+  </head>
+  <body oncontextmenu="return false;">
+    <div class="into-banner">
+      <p><strong>Want to watch offline?</strong>
+  Download from<a href="https://tagger.top/t/download" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;"> Here!</a></p>
+    </div>
+  <div class="sharethis-inline-share-buttons"></div>
+  <header>
+    <div class="logo"><i class="fas fa-list"></i> Requested</div>
+    <div class="header-controls">
+      <div class="search-group">
+        <input id="search" type="text" placeholder="Search videos..."/>
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+  <main id="main-content"></main>
+  <script>function isInViewport(e){const t=e.getBoundingClientRect();return t.top>=0&&t.left>=0&&t.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&t.right<=(window.innerWidth||document.documentElement.clientWidth)}function loadImages(){document.querySelectorAll(".defer-image").forEach(e=>{if(isInViewport(e)){const t=e.getAttribute("data-src");if(t){const n=new Image;n.src=t,n.onload=()=>{e.setAttribute("src",t),e.classList.remove("defer-image")}}}})}window.addEventListener("scroll",loadImages),window.addEventListener("resize",loadImages),loadImages();</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <nav class="bottom-nav">
+    <a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
+    <a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
+    <a href="/tvplus" class="nav-item"><i class="fas fa-broadcast-tower"></i> Live TV</a>
+    <a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
+    <a href="/shows" class="nav-item"><i class="fas fa-tv"></i> Shows</a>
+    <a href="/trailer" class="nav-item"><i class="fas fa-video"></i> Trailers</a>
+  </nav>
+  <div class="nav-search-container" id="navSearchContainer">
+    <form id="navSearchForm">
+      <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
+    </form>
+    <div id="navSearchResults">
+      <p>No results found</p>
+    </div>
+  </div>
+  <div id="navSearchOverlay"></div>
+  <script src="bottom-search.js"></script>
+  <script src="req.js"></script>
+</body>
+</html>
