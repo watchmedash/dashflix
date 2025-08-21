@@ -37,6 +37,7 @@ function displayMovieDetails(movie) {
 
   const servers = [
     `https://vidsrc.me/embed/movie/${movie.id}`,
+    `https://vidjoy.pro/embed/movie/${movie.id}`,
     `https://moviesapi.to/movie/${movie.id}`,
     `https://vidsrc.vip/embed/movie/${movie.id}`,
     `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
