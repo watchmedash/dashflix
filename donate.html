@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Us with Cryptocurrency</title>
+    <title>Support Us</title>
     <style>
         * {
             margin: 0;
@@ -674,16 +674,14 @@
     <div class="container">
         <div class="header">
             <h1>Support Our Mission</h1>
-            <p class="subtitle">Every contribution helps us grow</p>
         </div>
 
         <p class="description">
-            We're grateful for your support! Your cryptocurrency donation helps us continue providing valuable services and improving our platform for everyone.
+            Your donation will let us remove those annoying ads.
         </p>
 
         <div class="crypto-section">
             <div class="crypto-header">
-                <div class="crypto-icon">₮</div>
                 <div class="crypto-name">USDT (Tether)</div>
             </div>
 
@@ -709,15 +707,15 @@
 
         <div class="action-buttons">
             <button class="action-button primary-button" onclick="shareWallet()">
-                📤 Share
+                Share
             </button>
             <a href="index.html" class="action-button secondary-button">
-                🏠 Home
+                Home
             </a>
         </div>
 
         <div class="footer">
-            <p>🙏 Thank you for supporting us!</p>
+            <p>Thank you for supporting us!</p>
         </div>
     </div>
 
@@ -729,7 +727,6 @@
     </div>
 
     <script>
-        // Create subtle particle system
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 40;
@@ -776,7 +773,6 @@
             notificationText.textContent = message;
             notification.classList.add('show');
 
-            // Animate progress bar
             setTimeout(() => {
                 progressFill.style.width = '100%';
             }, 100);
@@ -797,12 +793,10 @@
                     url: window.location.href
                 }).catch(console.error);
             } else {
-                // Fallback for browsers that don't support Web Share API
                 copyToClipboard('usdtAddress', document.querySelector('.copy-button'));
             }
         }
 
-        // Add keyboard support for copy button
         document.addEventListener('keydown', function(e) {
             if (e.key === 'c' && (e.ctrlKey || e.metaKey)) {
                 const focused = document.activeElement;
@@ -813,10 +807,8 @@
             }
         });
 
-        // Initialize particles on page load
         window.addEventListener('load', createParticles);
 
-        // Add smooth scroll behavior
         document.documentElement.style.scrollBehavior = 'smooth';
     </script>
 </body>
