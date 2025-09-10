@@ -662,8 +662,8 @@ transform: scale(1.05);
 
 .terra {
 display: flex;
-justify-content: center; /* centers horizontally */
-align-items: center; /* centers vertically */
+justify-content: center;
+align-items: center;
 margin-bottom: 5px;
 margin-top: 5px;
 }
