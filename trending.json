@@ -1,4 +1,5 @@
 [
+  { "id": 110316, "type": "show" },
   { "id": 1311031, "type": "movie" },
   { "id": 1038392, "type": "movie" },
   { "id": 110492, "type": "show" },
@@ -7,6 +8,5 @@
   { "id": 1035259, "type": "movie" },
   { "id": 119051, "type": "show" },
   { "id": 617126, "type": "movie" },
-  { "id": 1061474, "type": "movie" },
-  { "id": 1234821, "type": "movie" }
+  { "id": 1061474, "type": "movie" }
 ]
