@@ -36,7 +36,7 @@ function displayMovieDetails(movie) {
   document.getElementById("genres").textContent = genres;
 
   const servers = [
-    `https://vidsrc.me/embed/movie/${movie.id}`,
+    `https://vidsrc-embed.ru/embed/movie/${movie.id}`,
     `https://moviesapi.to/movie/${movie.id}`,
     `https://vidsrc.vip/embed/movie/${movie.id}`,
     `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,

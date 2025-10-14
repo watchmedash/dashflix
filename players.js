@@ -10,7 +10,6 @@ async function fetchTvShowDetails() {
         const response = await fetch(`${BASE_URL}/tv/${tvShowId}?api_key=${API_KEY}&language=en-US`);
         const data = await response.json();
 
-        // Populate the page and meta tags after data is fetched
         displayTvShowDetails(data);
         populateSeasonDropdown(data.seasons);
     } catch (error) {
@@ -27,11 +26,9 @@ function displayTvShowDetails(tvShow) {
     document.getElementById("genres").textContent = tvShow.genres.map(genre => genre.name).join(", ");
     document.getElementById("creator").textContent = tvShow.created_by.map(creator => creator.name).join(", ");
 
-    // Full URL and image URL for meta tags
     const fullUrl = `https://dashflix.top/players.html?id=${tvShow.id}`;
     const imageUrl = IMAGE_BASE_URL + tvShow.poster_path;
 
-    // Meta Tags for Social Sharing - Add them to the <head> after data is fetched
     const metaTags = [
         { property: "og:image", content: imageUrl },
         { property: "og:image:alt", content: `${tvShow.name} Poster` },
@@ -52,13 +49,11 @@ function displayTvShowDetails(tvShow) {
         document.head.appendChild(meta);
     });
 
-    // Canonical link
     const canonical = document.createElement("link");
     canonical.setAttribute("rel", "canonical");
     canonical.setAttribute("href", fullUrl);
     document.head.appendChild(canonical);
 
-    // Page Title
     document.title = `${tvShow.name} - Watch Now on Dashflix`;
 }
 
@@ -130,7 +125,7 @@ function changeServer() {
 
 function updateVideoSources(season, episode) {
     const videoSources = [
-        `https://vidsrc.xyz/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
+        `https://vidsrc-embed.ru/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
         `https://embed.su/embed/tv/${tvShowId}/${season}/${episode}`,
         `https://moviesapi.to/tv/${tvShowId}-${season}-${episode}`,
         `https://vidsrc.vip/embed/tv/${tvShowId}/${season}/${episode}`,
