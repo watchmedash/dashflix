@@ -170,7 +170,6 @@ function showGameOverButtons(message, type) {
     `;
 }
 
-// Start practice mode
 function startPracticeMode() {
     practiceMode = true;
     currentWord = getRandomWord();
@@ -227,7 +226,6 @@ function initKeyboard() {
             button.classList.add('key');
             button.setAttribute('data-key', key);
 
-            // Use icon for BACK key
             if (key === 'BACK') {
                 button.innerHTML = '<i class="fas fa-backspace"></i>';
             } else {
