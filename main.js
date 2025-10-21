@@ -95,7 +95,7 @@ function displayMovies(moviesList, append = false) {
     });
 
     const link = document.createElement("a");
-    link.href = `player.html?id=${movie.id}`;
+    link.href = `info.html?id=${movie.id}`;
     link.target = "_self";
     link.appendChild(image);
 
