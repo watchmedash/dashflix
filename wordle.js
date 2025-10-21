@@ -11,7 +11,7 @@ const MAX_GUESSES = 6;
 const keys = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
     ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-    ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'BACK']
+    ['BACK', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'ENTER']
 ];
 
 function getTodayDateKey() {
@@ -213,6 +213,7 @@ function initBoard() {
     }
 }
 
+// Initialize keyboard
 function initKeyboard() {
     const keyboard = document.getElementById('keyboard');
     keyboard.innerHTML = '';
@@ -224,8 +225,14 @@ function initKeyboard() {
         row.forEach(key => {
             const button = document.createElement('button');
             button.classList.add('key');
-            button.textContent = key;
             button.setAttribute('data-key', key);
+
+            // Use icon for BACK key
+            if (key === 'BACK') {
+                button.innerHTML = '<i class="fas fa-backspace"></i>';
+            } else {
+                button.textContent = key;
+            }
 
             if (key === 'ENTER' || key === 'BACK') {
                 button.classList.add('wide');
