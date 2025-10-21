@@ -273,3 +273,6 @@ h1 {
         justify-content: center;
     }
 }
+.key i {
+    font-size: 20px;
+}

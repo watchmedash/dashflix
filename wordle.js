@@ -170,6 +170,7 @@ function showGameOverButtons(message, type) {
     `;
 }
 
+// Start practice mode
 function startPracticeMode() {
     practiceMode = true;
     currentWord = getRandomWord();
@@ -213,7 +214,6 @@ function initBoard() {
     }
 }
 
-// Initialize keyboard
 function initKeyboard() {
     const keyboard = document.getElementById('keyboard');
     keyboard.innerHTML = '';
@@ -396,6 +396,7 @@ document.addEventListener('keydown', (e) => {
 
 async function init() {
     await loadWords();
+    currentWord = getDailyWord();
     initBoard();
     initKeyboard();
 
