@@ -26,9 +26,7 @@ function loadImages() {
     });
 }
 
-// Attach the loadImages function to scroll and resize events
 window.addEventListener('scroll', loadImages);
 window.addEventListener('resize', loadImages);
 
-// Initial load
 loadImages();
