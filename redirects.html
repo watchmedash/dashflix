@@ -275,9 +275,9 @@
 
         function proceedToDestination() {
             const urlParams = new URLSearchParams(window.location.search);
-            const movieId = urlParams.get('id');
+            const showId = urlParams.get('id');
 
-            const finalUrl = movieId ? `player.html?id=${movieId}` : 'player.html';
+            const finalUrl = showId ? `players.html?id=${showId}` : 'players.html';
             window.location.href = finalUrl;
         }
     </script>
