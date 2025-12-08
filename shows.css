@@ -351,3 +351,15 @@ padding: 30px; /* Add 10px padding to the top and bottom, and 20px padding to th
 height: 80px;
  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Set the fixed height of the navigation bar */
 }
+
+.terra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terra img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
