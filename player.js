@@ -44,7 +44,6 @@ function displayMovieDetails(movie) {
     `https://player.videasy.net/movie/${movie.id}`,
     `https://vidfast.pro/movie/${movie.id}?autoPlay=true`,
     `https://player.vidzee.wtf/embed/movie/${movie.id}?server=1`,
-    `https://vidsrc.rip/embed/movie/${movie.id}`,
     `https://player.vidsrc.co/embed/movie/${movie.id}`
   ];
 
