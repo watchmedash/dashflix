@@ -1,4 +1,13 @@
 Sitemap: https://dashflix.top/sitemap.xml
 
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
 User-agent: ia_archiver
 Disallow: /
