@@ -125,7 +125,7 @@ function changeServer() {
 
 function updateVideoSources(season, episode) {
     const videoSources = [
-        `https://vsrc.su/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
+        `https://vidsrcme.su/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
         `https://vidrock.net/tv/${tvShowId}/${season}/${episode}`,
         `https://moviesapi.to/tv/${tvShowId}-${season}-${episode}`,
         `https://vidsrc.vip/embed/tv/${tvShowId}/${season}/${episode}`,
