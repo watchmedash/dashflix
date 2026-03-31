@@ -219,125 +219,6 @@ gtag('config', 'G-ZZXCQM5KLH');
   transform: rotate(45deg);
 }
 
-.trending-row {
-  display: flex;
-  overflow-x: auto;
-  gap: 0.5rem;
-  scroll-behavior: smooth;
-  padding: 0 2rem 10px;
-}
-
-.trending-row::-webkit-scrollbar {
-  display: none;
-}
-
-.trending-card {
-  position: relative;
-  min-width: 180px;
-  flex-shrink: 0;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.trending-card:hover {
-  transform: scale(1.05);
-}
-
-.trending-card img {
-  width: auto;
-  max-height: 200px;
-  border-radius: 5px;
-  display: block;
-}
-
-.media-type {
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  bottom: 10px;
-  right: 60px;
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-  font-size: 0.85rem;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  text-transform: uppercase;
-}
-
-.trending-card:hover .media-type {
-  opacity: 1;
-}
-
-.rank-badge {
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  top: 1px;
-  left: 6px;
-  color: black;
-  font-size: 4.5rem;
-  font-weight: bold;
-  padding: 1px 6px;
-  background: transparent;
-  text-align: center;
-  line-height: 1.2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow:
-    -1px -1px 0px white,
-    1px -1px 0px white,
-    -1px 1px 0px white,
-    1px 1px 0px white;
-}
-
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  background: rgba(0, 0, 0, 0.6);
-  border: none;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  font-size: 1.1rem;
-}
-
-.scroll-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.scroll-btn.left {
-  left: 5px;
-}
-
-.scroll-btn.right {
-  right: 5px;
-}
-
-.trending-section h2 {
-  color: white;
-  position: relative;
-  left: 30px;
-}
-
-.trending-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 200px;
-}
-
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -390,10 +271,10 @@ gtag('config', 'G-ZZXCQM5KLH');
 </div>
 </nav>
 </header>
-<!--<div class="into-banner">
+<div class="into-banner">
   <p><strong>Download Movies and TV Episodes here <i class="fas fa-arrow-right"></i></strong>
-<a href="https://tagger.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">TAGGER.TOP</a></p>
-</div>-->
+<a href="https://dashnews.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">DASHNEWS.TOP</a></p>
+</div>
 <div class="search-container">
 <form id="searchForm">
 <input type="text" id="search" placeholder="Search...">
@@ -404,21 +285,11 @@ gtag('config', 'G-ZZXCQM5KLH');
 </div>
 </div>
 <div class="sharethis-inline-share-buttons"></div>
-<section class="trending-section">
-<h2>Trending Now</h2>
-<div class="trending-wrapper">
-<button class="scroll-btn left"><i class="fas fa-arrow-left"></i></button>
-<div id="trending-container" class="trending-row"></div>
-<button class="scroll-btn right"><i class="fas fa-arrow-right"></i></button>
-</div>
-</section>
 <div class="about-container">
 <div class="icon-grid">
 <a href="/watchlist"><i class="fas fa-bookmark"></i> Watchlist</a>
 <a href="/request"><i class="fas fa-comments"></i> Request</a>
 <a href="/wordle"><i class="fas fa-spell-check"></i> Wordle</a>
-<!--<a href="/chat"><i class="fas fa-comment"></i> Chat</a>
-<a href="/blog"><i class="fas fa-blog"></i> Blogs</a>-->
 <a href="https://dashflix.top/Dashflix-v1.0.5.apk"><i class="fab fa-android"></i> Android App</a>
 <a href="/donate"><i class="fas fa-donate"></i> Support Us</a>
 </div>
@@ -516,7 +387,6 @@ document.querySelectorAll('.faq-question').forEach(button => {
 <script src="bottom-search.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="search.js"></script>
-<script src="trending.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
