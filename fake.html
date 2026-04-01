@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>URGENT: You've Won $1,000,000!!!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Chewy&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --red: #ff2424;
+      --yellow: #ffe600;
+      --blue: #1a6cff;
+      --green: #00d94a;
+      --bg: #0a0a0a;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Comic Neue', cursive;
+      overflow-x: hidden;
+      cursor: crosshair;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Scrolling ticker */
+    .ticker-wrap {
+      width: 100%;
+      background: var(--red);
+      padding: 8px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .ticker {
+      display: inline-block;
+      animation: ticker 18s linear infinite;
+      font-family: 'Boogaloo', cursive;
+      font-size: 1rem;
+      color: var(--yellow);
+      letter-spacing: 0.05em;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(100vw); }
+      100% { transform: translateX(-100%); }
+    }
+
+    /* Stars background */
+    .stars {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .star {
+      position: absolute;
+      font-size: 1.2rem;
+      animation: floatStar linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes floatStar {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 48px 24px 0;
+      max-width: 780px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--green);
+      color: #000;
+      font-family: 'Boogaloo', cursive;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      animation: pulse 1s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+
+    h1 {
+      font-family: 'Chewy', cursive;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      line-height: 1;
+      color: var(--yellow);
+      text-shadow:
+        4px 4px 0 var(--red),
+        8px 8px 0 #7a0000;
+      animation: wobble 2.5s ease-in-out infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes wobble {
+      0%, 100% { transform: rotate(-1.5deg); }
+      50% { transform: rotate(1.5deg); }
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: var(--white);
+      margin-bottom: 10px;
+      opacity: 0.85;
+    }
+
+    /* Timer */
+    .timer-box {
+      display: inline-flex;
+      gap: 10px;
+      background: #111;
+      border: 3px solid var(--yellow);
+      border-radius: 12px;
+      padding: 14px 24px;
+      margin: 24px auto;
+    }
+    .timer-unit {
+      text-align: center;
+    }
+    .timer-digits {
+      font-family: 'Boogaloo', cursive;
+      font-size: 2.8rem;
+      color: var(--red);
+      display: block;
+      line-height: 1;
+      min-width: 56px;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 50% { opacity: 0.5; } }
+    .timer-label {
+      font-size: 0.68rem;
+      color: #aaa;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .timer-sep {
+      font-family: 'Boogaloo', cursive;
+      font-size: 2.8rem;
+      color: var(--yellow);
+      align-self: center;
+      line-height: 1;
+    }
+
+    /* Prize card */
+    .prize-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      border: 3px dashed var(--yellow);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin: 28px auto;
+      max-width: 540px;
+      position: relative;
+      overflow: hidden;
+    }
+    .prize-card::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      background: linear-gradient(90deg, var(--yellow), var(--red), var(--blue), var(--green), var(--yellow));
+      background-size: 300%;
+      z-index: -1;
+      border-radius: 22px;
+      animation: borderAnim 4s linear infinite;
+      opacity: 0.5;
+    }
+    @keyframes borderAnim {
+      0% { background-position: 0%; }
+      100% { background-position: 300%; }
+    }
+    .prize-amount {
+      font-family: 'Chewy', cursive;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      color: var(--green);
+      text-shadow: 3px 3px 0 #005520;
+      display: block;
+      animation: moneyShake 0.4s ease-in-out infinite alternate;
+    }
+    @keyframes moneyShake {
+      0% { transform: translateX(-2px); }
+      100% { transform: translateX(2px); }
+    }
+    .prize-desc {
+      color: #ccc;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+    .prize-stars {
+      font-size: 1.4rem;
+      margin: 8px 0;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 20px auto;
+    }
+
+    .btn-main {
+      display: inline-block;
+      font-family: 'Boogaloo', cursive;
+      font-size: 1.5rem;
+      letter-spacing: 0.04em;
+      background: var(--yellow);
+      color: #000;
+      padding: 16px 48px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #a09000, 0 8px 24px rgba(255,230,0,0.35);
+      transition: transform 0.1s, box-shadow 0.1s;
+      animation: jump 1.8s ease-in-out infinite;
+      text-decoration: none;
+    }
+    @keyframes jump {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .btn-main:hover {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 #a09000, 0 4px 12px rgba(255,230,0,0.2);
+    }
+
+    .btn-secondary {
+      font-family: 'Comic Neue', cursive;
+      font-size: 0.8rem;
+      color: #555;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline dotted;
+    }
+    .btn-secondary:hover { color: #888; }
+
+    /* Trust badges */
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .trust-badge {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.78rem;
+      color: #aaa;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 28px auto;
+      max-width: 720px;
+      padding: 0 16px;
+    }
+    .testimonial {
+      background: #141414;
+      border-left: 4px solid var(--blue);
+      border-radius: 10px;
+      padding: 14px 18px;
+      max-width: 300px;
+      text-align: left;
+    }
+    .testimonial p {
+      font-size: 0.88rem;
+      color: #ccc;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+    .testimonial .name {
+      font-size: 0.75rem;
+      color: #666;
+      font-style: normal;
+    }
+    .stars-small { color: var(--yellow); font-size: 0.75rem; }
+
+    /* Reveal section */
+    .reveal {
+      text-align: center;
+      padding: 40px 20px 60px;
+      position: relative;
+      z-index: 1;
+    }
+    .reveal h2 {
+      font-family: 'Chewy', cursive;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--red);
+      margin-bottom: 14px;
+    }
+    .reveal p {
+      font-size: 1.1rem;
+      color: #aaa;
+      max-width: 480px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .big-emoji {
+      font-size: 4rem;
+      display: block;
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .fine-print {
+      font-size: 0.6rem;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      padding: 0 20px 40px;
+      text-align: center;
+    }
+
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .modal-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .modal {
+      background: #111;
+      border: 3px solid var(--yellow);
+      border-radius: 20px;
+      padding: 40px 36px;
+      max-width: 420px;
+      text-align: center;
+      position: relative;
+      animation: popIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    @keyframes popIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .modal-emoji { font-size: 3.5rem; display: block; margin-bottom: 14px; }
+    .modal h2 {
+      font-family: 'Chewy', cursive;
+      font-size: 2.2rem;
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+    .modal p {
+      color: #bbb;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .modal .btn-main { font-size: 1.1rem; padding: 12px 36px; }
+  </style>
+</head>
+<body>
+
+  <!-- Ticker -->
+  <div class="ticker-wrap">
+    <span class="ticker">
+      🎉 CONGRATULATIONS! YOU ARE OUR 1,000,000TH VISITOR! &nbsp;&nbsp;&nbsp; 🏆 CLAIM YOUR PRIZE NOW BEFORE IT EXPIRES! &nbsp;&nbsp;&nbsp; 💰 LIMITED TIME OFFER — ACT FAST! &nbsp;&nbsp;&nbsp; 🚨 YOUR IP HAS BEEN SELECTED AT RANDOM! &nbsp;&nbsp;&nbsp; ⏰ OFFER EXPIRES IN SECONDS! &nbsp;&nbsp;&nbsp;
+    </span>
+  </div>
+
+  <!-- Floating stars -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge">🔴 LIVE — ONLY 3 PRIZES REMAINING</div>
+
+    <h1>YOU WON!!!</h1>
+    <p class="subtitle">Our algorithm has chosen YOUR device.<br>This is 100% real. Definitely not a scam. We promise.</p>
+
+    <!-- Countdown timer -->
+    <div class="timer-box">
+      <div class="timer-unit">
+        <span class="timer-digits" id="t-min">09</span>
+        <span class="timer-label">mins</span>
+      </div>
+      <span class="timer-sep">:</span>
+      <div class="timer-unit">
+        <span class="timer-digits" id="t-sec">59</span>
+        <span class="timer-label">secs</span>
+      </div>
+    </div>
+
+    <!-- Prize card -->
+    <div class="prize-card">
+      <div class="prize-stars">⭐⭐⭐⭐⭐</div>
+      <span class="prize-amount">$1,000,000</span>
+      <p class="prize-desc">PLUS a free iPhone 99 Pro Max Ultra<br>PLUS a lifetime supply of pizza<br>PLUS one (1) pet giraffe 🦒</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="btn-group">
+      <button class="btn-main" onclick="showModal()">🎁 CLAIM MY PRIZE NOW</button>
+      <button class="btn-secondary" onclick="showModal()">No thanks, I hate free money and pizza</button>
+    </div>
+
+    <!-- Trust badges -->
+    <div class="trust-row">
+      <div class="trust-badge">✅ 100% Legit</div>
+      <div class="trust-badge">🔒 SSL Secured (probably)</div>
+      <div class="trust-badge">🏅 Award Winning Scam</div>
+      <div class="trust-badge">📜 BBB Rated F+</div>
+      <div class="trust-badge">🤖 Approved by robots</div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"I claimed my prize and now I'm rich! The giraffe was a bit unexpected though."</p>
+      <div class="stars-small">★★★★★</div>
+      <span class="name">— TotallyRealPerson_1987</span>
+    </div>
+    <div class="testimonial">
+      <p>"Very fast delivery! The million dollars arrived via email as a PNG image. 10/10."</p>
+      <div class="stars-small">★★★★★</div>
+      <span class="name">— NotABot_Steve</span>
+    </div>
+    <div class="testimonial">
+      <p>"My friend said it was fake but jokes on them, I got TWO giraffes."</p>
+      <div class="stars-small">★★★★★</div>
+      <span class="name">— GiraffeOwner_2026</span>
+    </div>
+  </div>
+
+  <!-- Reveal section -->
+  <div class="reveal">
+    <h2>April Fools! 🎉</h2>
+    <span class="big-emoji">🤡</span>
+    <p>
+      You've been had! There's no million dollars, no iPhone, and definitely no giraffe.
+      But hey — you fell for it, which means this page is working perfectly.
+      Happy April 1st!
+    </p>
+    <a class="btn-main" href="#" onclick="location.reload(); return false;">🔄 Fool Someone Else</a>
+  </div>
+
+  <p class="fine-print">
+    *This is a joke. No actual prize exists. By clicking anything you agree to receive zero dollars, zero iPhones, and zero giraffes. The timer is fake and loops forever because we really don't want you to relax. Any resemblance to actual scam websites is purely satirical. Please do not give us your credit card number. Or do. We won't do anything with it. Because this isn't real. Happy April Fools Day.
+  </p>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <span class="modal-emoji">🤡</span>
+      <h2>APRIL FOOLS!</h2>
+      <p>
+        Ha! You clicked the button.<br>
+        There's no prize — but you ARE a winner at being gullible.
+        Share this page and trick your friends!
+      </p>
+      <button class="btn-main" onclick="hideModal()">😂 OK Fine, You Got Me</button>
+    </div>
+  </div>
+
+  <script>
+    // Floating stars
+    const emojis = ['⭐','🌟','💫','✨','🎉','🎊','💰','🏆','🎁'];
+    const starsContainer = document.getElementById('stars');
+    for (let i = 0; i < 28; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.fontSize = (0.9 + Math.random() * 1.4) + 'rem';
+      const dur = 6 + Math.random() * 10;
+      s.style.animationDuration = dur + 's';
+      s.style.animationDelay = (Math.random() * dur) + 's';
+      starsContainer.appendChild(s);
+    }
+
+    // Fake countdown that loops
+    let totalSeconds = 9 * 60 + 59;
+    const minEl = document.getElementById('t-min');
+    const secEl = document.getElementById('t-sec');
+    setInterval(() => {
+      totalSeconds--;
+      if (totalSeconds < 0) totalSeconds = 9 * 60 + 59;
+      const m = Math.floor(totalSeconds / 60);
+      const s = totalSeconds % 60;
+      minEl.textContent = String(m).padStart(2, '0');
+      secEl.textContent = String(s).padStart(2, '0');
+    }, 1000);
+
+    // Modal
+    function showModal() {
+      document.getElementById('modalOverlay').classList.add('show');
+    }
+    function hideModal() {
+      document.getElementById('modalOverlay').classList.remove('show');
+    }
+    document.getElementById('modalOverlay').addEventListener('click', function(e) {
+      if (e.target === this) hideModal();
+    });
+  </script>
+</body>
+</html>
