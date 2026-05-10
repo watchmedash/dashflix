@@ -1,326 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Us</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #1a1a1a;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: #e0e0e0;
-        }
-
-        .container {
-            background: #242424;
-            border: 1px solid #333;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 440px;
-            width: 100%;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #fff;
-            margin-bottom: 8px;
-        }
-
-        .description {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 28px;
-            line-height: 1.5;
-        }
-
-        .crypto-name {
-            font-size: 16px;
-            font-weight: 500;
-            color: #fff;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .crypto-name::before {
-            content: '●';
-            color: #4a9;
-            font-size: 12px;
-        }
-
-        .wallet-section {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 20px;
-        }
-
-        .wallet-label {
-            font-size: 11px;
-            color: #666;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 500;
-        }
-
-        .wallet-address-container {
-            display: flex;
-            gap: 8px;
-        }
-
-        .wallet-address {
-            font-family: 'Courier New', monospace;
-            background: #0d0d0d;
-            color: #ccc;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            border: 1px solid #222;
-            flex: 1;
-            word-break: break-all;
-        }
-
-        .copy-button {
-            background: #333;
-            color: #fff;
-            border: 1px solid #444;
-            border-radius: 8px;
-            padding: 10px 16px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.2s;
-            white-space: nowrap;
-        }
-
-        .copy-button:hover {
-            background: #444;
-            border-color: #555;
-        }
-
-        .copy-button:active {
-            transform: scale(0.98);
-        }
-
-        .copy-button.copied {
-            background: #4a9;
-            border-color: #4a9;
-        }
-
-        .qr-container {
-            background: #1a1a1a;
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid #333;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .qr-code {
-            width: 160px;
-            height: 160px;
-            display: block;
-            border-radius: 6px;
-        }
-
-        .qr-label {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .action-button {
-            padding: 11px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            flex: 1;
-            text-align: center;
-        }
-
-        .primary-button {
-            background: #4a9;
-            color: #fff;
-            border: none;
-        }
-
-        .primary-button:hover {
-            background: #5ba;
-        }
-
-        .secondary-button {
-            background: transparent;
-            color: #aaa;
-            border: 1px solid #444;
-        }
-
-        .secondary-button:hover {
-            border-color: #555;
-            color: #ccc;
-        }
-
-        .footer {
-            padding-top: 16px;
-            border-top: 1px solid #2a2a2a;
-            font-size: 13px;
-            color: #666;
-            text-align: center;
-        }
-
-        .notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4a9;
-            color: #fff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 500;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            transform: translateX(400px);
-            transition: transform 0.3s;
-        }
-
-        .notification.show {
-            transform: translateX(0);
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 24px 20px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            .wallet-address-container {
-                flex-direction: column;
-            }
-
-            .copy-button {
-                width: 100%;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Dashflix — Donate &amp; Keep Free Streaming Alive</title>
+<meta name="description" content="Support Dashflix and help keep free HD movie and TV show streaming alive. Donate with USDT crypto — every contribution is appreciated.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Dashflix">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://dashflix.top/donate.html">
+<meta property="og:title" content="Support Dashflix — Donate &amp; Keep Free Streaming Alive">
+<meta property="og:description" content="Help keep Dashflix free for everyone. Donate with USDT crypto — every contribution is appreciated.">
+<meta property="og:image" content="https://dashflix.top/og.webp">
+<meta property="og:url" content="https://dashflix.top/donate.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dashflix">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="donate.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
+ crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Support Our Mission</h1>
-        <p class="description">Your donation will let us remove those annoying ads.</p>
 
-        <div class="crypto-name">USDT (Tether)</div>
+<header class="don-hdr">
+  <a href="index.html" class="logo">
+    <span class="logo-text" style="font-size:16px;letter-spacing:2px;">DASHFLIX</span>
+  </a>
+</header>
 
-        <div class="wallet-section">
-            <div class="wallet-label">Wallet Address</div>
-            <div class="wallet-address-container">
-                <div class="wallet-address" id="usdtAddress">TTq2PFjeXUTcKSHqddSPKZPiqWpt9BYvdx</div>
-                <button class="copy-button" onclick="copyToClipboard('usdtAddress', this)">
-                    <span class="copy-text">Copy</span>
-                </button>
-            </div>
-        </div>
+<div class="donate-wrap">
+  <div class="donate-card">
+    <div class="donate-icon"><i class="fas fa-heart"></i></div>
+    <h1 class="donate-title">Support Dashflix</h1>
+    <p class="donate-desc">Dashflix is free for everyone — no account, no subscription, no paywalls. If it has saved you money or brought you joy, a small donation helps cover hosting costs and keeps the service alive.</p>
 
-        <div class="qr-label">Or scan this QR code</div>
-        <center>
-            <div class="qr-container">
-                <img src="https://i.postimg.cc/Vvf8KZ2v/Untitled-1.png" alt="USDT Wallet QR Code" class="qr-code">
-            </div>
-        </center>
-
-        <div class="action-buttons">
-            <button class="action-button primary-button" onclick="shareWallet()">Share</button>
-            <a href="index.html" class="action-button secondary-button">Home</a>
-        </div>
-
-        <div class="footer">
-            <p>Thank you for supporting us!</p>
-        </div>
+    <div class="donate-crypto">
+      <div class="coin-badge"><i class="fas fa-circle-dot"></i> USDT · TRC20 (Tether)</div>
+      <img
+        class="donate-qr"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=TTq2PFjeXUTcKSHqddSPKZPiqWpt9BYvdx&bgcolor=ffffff&color=000000&margin=2"
+        alt="Scan to donate USDT"
+        loading="lazy"
+        width="180" height="180"
+      >
+      <div class="donate-addr-wrap">
+        <code class="donate-addr" id="dAddr">TTq2PFjeXUTcKSHqddSPKZPiqWpt9BYvdx</code>
+        <button class="copy-btn" id="copyBtn"><i class="fas fa-copy"></i> Copy</button>
+      </div>
+      <p class="donate-note"><i class="fas fa-triangle-exclamation"></i> TRC20 network only. Sending on a different network may result in permanent loss of funds.</p>
     </div>
+  </div>
+</div>
 
-    <div class="notification" id="notification">
-        <span id="notificationText">Copied to clipboard!</span>
-    </div>
+<nav class="bottom-nav">
+  <a href="index.html"     class="nav-item"><i class="fas fa-home"></i>Home</a>
+  <a href="movies.html"    class="nav-item"><i class="fas fa-film"></i>Movies</a>
+  <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
+  <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
+</nav>
 
-    <script>
-        function copyToClipboard(elementId, button) {
-            const element = document.getElementById(elementId);
-            const text = element.textContent.trim();
-
-            navigator.clipboard.writeText(text).then(() => {
-                showNotification('Address copied to clipboard! ✅');
-
-                const copyText = button.querySelector('.copy-text');
-                button.classList.add('copied');
-                copyText.textContent = 'Copied!';
-
-                setTimeout(() => {
-                    button.classList.remove('copied');
-                    copyText.textContent = 'Copy';
-                }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy: ', err);
-                showNotification('Failed to copy address ❌');
-            });
-        }
-
-        function showNotification(message) {
-            const notification = document.getElementById('notification');
-            const notificationText = document.getElementById('notificationText');
-
-            notificationText.textContent = message;
-            notification.classList.add('show');
-
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000);
-        }
-
-        function shareWallet() {
-            const walletAddress = document.getElementById('usdtAddress').textContent.trim();
-
-            if (navigator.share) {
-                navigator.share({
-                    title: 'Support Us with USDT',
-                    text: `Help support our mission! Send USDT to: ${walletAddress}`,
-                    url: window.location.href
-                }).catch(console.error);
-            } else {
-                copyToClipboard('usdtAddress', document.querySelector('.copy-button'));
-            }
-        }
-    </script>
+<script src="app.js"></script>
+<script src="donate.js"></script>
 </body>
 </html>

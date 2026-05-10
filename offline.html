@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're Offline — Dashflix</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<style>
+  .offline-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100dvh - 56px - 56px);
+    padding: 32px 24px;
+    text-align: center;
+    gap: 12px;
+  }
+  .offline-icon {
+    font-size: 56px;
+    opacity: 0.18;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .offline-wrap h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+  }
+  .offline-wrap p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 300px;
+  }
+  .offline-btn {
+    margin-top: 8px;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .offline-btn:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<header class="page-hdr">
+  <a href="index.html" class="logo">
+    <span class="logo-text" style="font-size:16px;letter-spacing:2px;">DASHFLIX</span>
+  </a>
+</header>
+
+<div class="offline-wrap">
+  <div class="offline-icon">&#x1F4F5;</div>
+  <h1>You're offline</h1>
+  <p>Check your internet connection and try again.</p>
+  <button class="offline-btn" onclick="location.reload()">Try again</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,165 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Watch full movies online for free on Dashflix. Stream high-quality movies across all genres including action, drama, comedy, horror, and anime. No signup required.">
-  <meta name="keywords" content="Watch Free Movies, Stream Movies Online, Full Movies Free, Dashflix, Action Movies, Comedy, Horror, Drama, Anime, Online Movie Player, Free Streaming, Watch Without Sign Up, Movie Watch Online, HD Movies, Free Movie Site">
-  <meta name="robots" content="index, follow">
-  <meta property="og:description" content="Stream your favorite full-length movies online for free. No subscription needed. Enjoy HD quality movies anytime on Dashflix." />
-  <meta property="og:url" content="https://dashflix.top/player" />
-  <meta property="og:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
-  <meta property="og:image:alt" content="Dashflix - Stream Full Movies Free" />
-  <meta property="og:type" content="video.movie" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" content="Enjoy streaming free full-length movies in high quality. Watch now without registration on Dashflix." />
-  <meta name="twitter:image" content="https://i.postimg.cc/YCWDLrdF/th.webp" />
-  <meta name="twitter:image:alt" content="Dashflix - Stream Full Movies Free" />
-  <link rel="canonical" href="https://dashflix.top/player" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-  <link rel="stylesheet" href="player.css">
-  <link rel="stylesheet" href="play.css">
-  <link rel="stylesheet" href="bottom-search.css">
-  <link rel="stylesheet" href="quotes.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watch Movie – Dashflix</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="player.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
-   crossorigin="anonymous"></script>
-   <!--<script data-cfasync="false" async type="text/javascript" src="//aj.furredunedged.com/r0fVEfFKiWWjnx/138742"></script>-->
-<!--<script>(function(s){s.dataset.zone='10628457',s.src='https://llvpn.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-<script>(function(s){s.dataset.zone='10628463',s.src='https://dd133.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>-->
-  <title>Dashflix - Watch Free Full Movies Online</title>
-<style>
-.into-banner {
-          background-color: #ffcc00;
-          color: #000;
-          padding: 5px;
-          border-radius: 1px;
-          font-size: 14px;
-          margin-bottom: 5px;
-          text-align: center;
-      }
-</style>
-<script>
-  (function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get("id");
-    const blockedIds = ["969492", "634649", "957452", "1163258", "299534"];
-
-    if (id && blockedIds.includes(id)) {
-      window.location.replace("https://dashflix.top/movies");
-    }
-  })();
-</script>
+ crossorigin="anonymous"></script>
 </head>
-<body oncontextmenu="return false;">
-  <div class="into-banner">
-    <p><strong>Download Movies and TV Episodes here <i class="fas fa-arrow-right"></i></strong>
-  <a href="https://dashnews.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">DASHNEWS.TOP</a></p>
+<body>
+
+<!-- PLAYER HEADER -->
+<div class="ph">
+  <a href="index.html" class="logo">
+    <span class="logo-text" style="font-size:16px;letter-spacing:2px;">DASHFLIX</span>
+  </a>
+</div>
+
+<!-- INFO BANNER -->
+<div class="info-bar">
+  <i class="fas fa-info-circle"></i>
+  Having trouble? Switch to a different server below.
+</div>
+
+<!-- SERVER SELECT -->
+<div class="srv-wrap">
+  <div class="srv-label"><i class="fas fa-server"></i> Server</div>
+  <select class="srv-select" id="srvSel" onchange="changeServer()">
+    <option value="0">Server 1</option>
+    <option value="1">Server 2</option>
+    <option value="2">Server 3</option>
+    <option value="3">Server 4</option>
+    <option value="4">Server 5</option>
+    <option value="5">Server 6</option>
+    <option value="6">Server 7</option>
+  </select>
+</div>
+
+<!-- VIDEO PLAYER -->
+<div class="vid-wrap">
+  <iframe id="vidPlayer" src="" allowfullscreen allow="autoplay; fullscreen"></iframe>
+</div>
+
+<!-- ACTION BUTTONS -->
+<div class="act-row">
+  <button class="act-btn primary" id="trlBtn" style="display:none;">
+    <i class="fas fa-play"></i> Trailer
+  </button>
+  <button class="act-btn sec" id="wlBtn">
+    <i class="fas fa-bookmark"></i> Add to Watchlist
+  </button>
+  <a class="act-btn sec" id="dlBtn" href="#" target="_blank" rel="noopener">
+    <i class="fas fa-download"></i> Download
+  </a>
+</div>
+<p class="dl-note"><i class="fas fa-info-circle"></i> Download doesn't work in the Android app — use a browser instead.</p>
+
+<!-- MOVIE DETAILS -->
+<div class="details" id="details">
+  <div class="det-poster"><div class="skel" style="width:80px;aspect-ratio:2/3;"></div></div>
+  <div class="det-info" style="flex:1;">
+    <div class="skel" style="height:20px;width:60%;margin-bottom:10px;"></div>
+    <div class="skel" style="height:12px;width:88%;margin-bottom:6px;"></div>
+    <div class="skel" style="height:12px;width:50%;"></div>
   </div>
-<div class="movie-container">
-  <div class="theme-toggle">
-    <input type="checkbox" id="theme-switch">
-    <label for="theme-switch" class="switch">
-      <span class="slider">
-        <i class="fa-solid fa-sun icon"></i>
-      </span>
-    </label>
-  </div>
-  <div class="info-banner">
-    <i class="fas fa-info-circle"></i> Having trouble? Try switching to a different server.
 </div>
-<select id="video-source" onchange="changeSource()">
-<option value="">Select Server</option>
-</select>
-<div class="video-container"><iframe id="video-player" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-<div class="sharethis-inline-share-buttons"></div>
-<div class="sharethis-inline-reaction-buttons"></div>
-<div class="movie-details">
-<img id="movie-poster" src="" alt="Movie Poster">
-<div class="movie-info">
-<h2 id="movie-title-info">Loading...</h2>
-<div class="watchlist-buttons">
-<button id="watchlist-btn" class="watchlist-btn"><i class="fas fa-plus"></i></button>
-<a href="/watchlist" id="watchlist-icon-btn" class="watchlist-icon-btn"><i class="fas fa-bookmark"></i></a>
+
+<!-- RELATED MOVIES -->
+<div class="section-header" style="margin-top:8px;">
+  <h2 class="section-title">Related <span>Movies</span></h2>
 </div>
-<button class="play-trailer-btn" id="play-trailer-btn">Watch Trailer</button>
-<p><strong>Release Year:</strong> <span id="release-year">Loading...</span></p>
-<p><strong>Genres:</strong> <span id="genres">Loading...</span></p>
-<p><strong>Rating:</strong> <span id="rating" class="rating">Loading...</span></p>
-<p><strong>Overview:</strong></p>
-<p id="movie-overview">Loading...</p>
-<p><strong>Director:</strong> <span id="director">Loading...</span></p>
-</div>
-</div>
-<div class="trailer-modal" id="trailer-modal">
-  <div class="trailer-content">
-    <button class="blose-btn" id="close-trailer">×</button>
-    <iframe id="trailer-video" src="" allowfullscreen></iframe>
+<div class="rel-grid" id="relGrid"></div>
+
+<!-- TRAILER MODAL -->
+<div class="trl-modal" id="trlModal">
+  <div class="trl-inner">
+    <button class="trl-close" id="trlClose"><i class="fas fa-times"></i></button>
+    <iframe id="trlFrame" src="" allowfullscreen></iframe>
   </div>
 </div>
-<div class="related-movies">
-  <h2>Related Movies</h2>
-    <div id="related-movies-list" class="movies-list">
-    </div>
-</div>
-<div class="quotes-box">
-  <div class="quote-display">
-    <div class="quote-text" id="quoteText">Loading a moment of wisdom...</div>
-  </div>
-</div>
-</div>
-<div class="into-banner">
-  <p><strong>Want to watch ad-free? Visit <i class="fas fa-arrow-right"></i></strong>
-<a href="https://dashtube.top" style="color: #ffffff; background: #ff6b6b; padding: 4px 12px; border-radius: 15px; text-decoration: none; font-weight: bold;">Dashtube</a></p>
-</div>
+
+<!-- BOTTOM NAV (mobile) -->
 <nav class="bottom-nav">
-<a href="/index" class="nav-item"><i class="fas fa-home"></i> Home</a>
-<a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
-<a href="/movies" class="nav-item"><i class="fas fa-film"></i> Movies</a>
-<a href="/shows" class="nav-item"><i class="fas fa-tv"></i> Shows</a>
-<a href="/requested" class="nav-item"><i class="fas fa-list"></i> Requested</a>
+  <a href="index.html"     class="nav-item"><i class="fas fa-home"></i>Home</a>
+  <a href="movies.html"    class="nav-item active"><i class="fas fa-film"></i>Movies</a>
+  <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
+  <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
 </nav>
-<div class="nav-search-container" id="navSearchContainer">
-<form id="navSearchForm">
-<input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
-</form>
-<div id="navSearchResults">
-<p>No results found</p>
-</div>
-</div>
-<div id="navSearchOverlay"></div>
-<script src="bottom-search.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const switchInput = document.getElementById("theme-switch");
-    const icon = document.querySelector(".theme-toggle .icon");
-    const body = document.body;
 
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "light") {
-        body.classList.add("light-theme");
-        switchInput.checked = true;
-        icon.classList.replace("fa-sun", "fa-moon");
-    }
-
-    switchInput.addEventListener("change", () => {
-        const isLight = switchInput.checked;
-        body.classList.toggle("light-theme", isLight);
-        icon.classList.replace(isLight ? "fa-sun" : "fa-moon", isLight ? "fa-moon" : "fa-sun");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
-    });
-});
-</script>
+<script src="app.js"></script>
 <script src="player.js"></script>
-<script src="play.js"></script>
-<script src="p.js"></script>
-<script src="related.js"></script>
-<script src="quotes.js"></script>
-
 </body>
 </html>

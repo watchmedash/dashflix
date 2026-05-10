@@ -7,11 +7,12 @@ const fYear    = document.getElementById("fYear");
 const fSort    = document.getElementById("fSort");
 const sentinel = document.getElementById("sentinel");
 
+const TODAY = new Date().toISOString().slice(0, 10);
 let page = 1, busy = false, done = false, query = "";
 
 async function initFilters() {
   try {
-    const r = await fetch(`${BASE}/genre/tv/list?api_key=${API_KEY}&language=en-US`);
+    const r = await fetch(`${BASE}/genre/movie/list?api_key=${API_KEY}&language=en-US`);
     const d = await r.json();
     (d.genres || []).forEach(g => {
       const o = document.createElement("option");
@@ -23,30 +24,30 @@ async function initFilters() {
   if (_g) fGenre.value = _g;
   if (_s) fSort.value = _s;
   if (_q) { sBar.value = _q; query = _q; }
-  fetchShows(false);
+  fetchMovies(false);
 }
 initFilters();
 
 function yearParams(v) {
   if (!v) return {};
-  if (/^\d{4}$/.test(v)) return { "first_air_date_year": v };
-  if (v === "2010s") return { "first_air_date.gte": "2010-01-01", "first_air_date.lte": "2019-12-31" };
-  if (v === "2000s") return { "first_air_date.gte": "2000-01-01", "first_air_date.lte": "2009-12-31" };
-  if (v === "older") return { "first_air_date.lte": "1999-12-31" };
+  if (/^\d{4}$/.test(v)) return { "primary_release_year": v };
+  if (v === "2010s") return { "primary_release_date.gte": "2010-01-01", "primary_release_date.lte": "2019-12-31" };
+  if (v === "2000s") return { "primary_release_date.gte": "2000-01-01", "primary_release_date.lte": "2009-12-31" };
+  if (v === "older") return { "primary_release_date.lte": "1999-12-31" };
   return {};
 }
 
-function updateShowTitle() {
+function updateMovieTitle() {
   const genreOpt = fGenre.options[fGenre.selectedIndex];
   const genre = fGenre.value && genreOpt ? genreOpt.textContent : "";
-  if (query) document.title = `"${query}" Shows — Dashflix`;
-  else if (genre) document.title = `Free ${genre} Shows Online | Dashflix`;
-  else document.title = "Free TV Shows Online — Browse & Stream HD | Dashflix";
+  if (query) document.title = `"${query}" Movies — Dashflix`;
+  else if (genre) document.title = `Free ${genre} Movies Online | Dashflix`;
+  else document.title = "Free Movies Online — Browse & Stream HD | Dashflix";
 }
 
-async function fetchShows(append = false) {
+async function fetchMovies(append = false) {
   if (busy || done) return;
-  updateShowTitle();
+  updateMovieTitle();
   busy = true;
   loader.style.display = "flex";
   empty.style.display  = "none";
@@ -55,26 +56,30 @@ async function fetchShows(append = false) {
   try {
     let url;
     if (query) {
-      url = `${BASE}/search/tv?api_key=${API_KEY}&language=en-US&query=${encodeURIComponent(query)}&page=${page}`;
+      url = `${BASE}/search/movie?api_key=${API_KEY}&language=en-US&query=${encodeURIComponent(query)}&page=${page}`;
     } else {
       const yp = yearParams(fYear.value);
       const p  = new URLSearchParams({
         api_key: API_KEY, language: "en-US", page,
+        "release_date.lte": TODAY,
         sort_by: fSort.value,
+        include_adult: "false",
         ...(fGenre.value ? { with_genres: fGenre.value } : {}),
         ...yp
       });
-      url = `${BASE}/discover/tv?${p}`;
+      url = `${BASE}/discover/movie?${p}`;
     }
 
     const res     = await fetch(url);
     const data    = await res.json();
-    const results = (data.results || []).filter(s => !BLOCKED_SHOWS.has(s.id));
+    const results = (data.results || []).filter(m =>
+      !BLOCKED_MOVIES.has(m.id) && m.release_date && m.release_date <= TODAY
+    );
 
     if (!results.length && !append) {
       empty.style.display = "flex";
     } else {
-      results.forEach(s => grid.appendChild(buildCard({ ...s, type: "tv" })));
+      results.forEach(m => grid.appendChild(buildCard({ ...m, type: "movie" })));
     }
     if (!data.total_pages || page >= data.total_pages) done = true;
   } catch (e) { console.error(e); }
@@ -84,11 +89,11 @@ async function fetchShows(append = false) {
 }
 
 const scrollObs = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting && !busy && !done) { page++; fetchShows(true); }
+  if (entries[0].isIntersecting && !busy && !done) { page++; fetchMovies(true); }
 }, { rootMargin: "300px" });
 scrollObs.observe(sentinel);
 
-function reset() { page = 1; done = false; query = sBar.value.trim(); fetchShows(false); }
+function reset() { page = 1; done = false; query = sBar.value.trim(); fetchMovies(false); }
 
 sBar.addEventListener("input",    () => { clearTimeout(sBar._t); sBar._t = setTimeout(reset, 380); });
 fGenre.addEventListener("change", reset);

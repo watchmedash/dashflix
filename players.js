@@ -1,160 +1,154 @@
-const API_KEY = "4f599baa15d072c9de346b2816a131b8";
-const BASE_URL = "https://api.themoviedb.org/3";
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const params = new URLSearchParams(location.search);
+const showId = params.get("id");
 
-const urlParams = new URLSearchParams(window.location.search);
-const tvShowId = urlParams.get("id");
+if (!showId || BLOCKED_SHOWS.has(parseInt(showId))) location.replace("shows.html");
 
-async function fetchTvShowDetails() {
-    try {
-        const response = await fetch(`${BASE_URL}/tv/${tvShowId}?api_key=${API_KEY}&language=en-US`);
-        const data = await response.json();
+let selSeason = 1, selEpisode = 1;
 
-        displayTvShowDetails(data);
-        populateSeasonDropdown(data.seasons);
-    } catch (error) {
-        console.error("Error fetching TV show details:", error);
-    }
+const SERVERS = [
+  (id, s, e) => `https://vidrock.ru/tv/${id}/${s}/${e}`,
+  (id, s, e) => `https://vidsrcme.su/embed/tv?tmdb=${id}&season=${s}&episode=${e}`,
+  (id, s, e) => `https://moviesapi.to/tv/${id}-${s}-${e}`,
+  (id, s, e) => `https://vidsrc.vip/embed/tv/${id}/${s}/${e}`,
+  (id, s, e) => `https://vidlink.pro/tv/${id}/${s}/${e}`,
+];
+
+function setPlayer() {
+  const idx = parseInt(document.getElementById("srvSel").value);
+  document.getElementById("vidPlayer").src = SERVERS[idx](showId, selSeason, selEpisode);
+  document.getElementById("dlBtn").href = `https://vidvault.ru/tv/${showId}/${selSeason}/${selEpisode}`;
 }
+function changeServer() { setPlayer(); }
 
-function displayTvShowDetails(tvShow) {
-    document.getElementById("tv-title-info").textContent = tvShow.name;
-    document.getElementById("tv-poster").src = IMAGE_BASE_URL + tvShow.poster_path;
-    document.getElementById("tv-overview").textContent = tvShow.overview;
-    document.getElementById("release-year").textContent = tvShow.first_air_date.split("-")[0];
-    document.getElementById("rating").textContent = tvShow.vote_average;
-    document.getElementById("genres").textContent = tvShow.genres.map(genre => genre.name).join(", ");
-    document.getElementById("creator").textContent = tvShow.created_by.map(creator => creator.name).join(", ");
+const seasonSel = document.getElementById("seasonSel");
+const epGrid    = document.getElementById("epGrid");
 
-    const fullUrl = `https://dashflix.top/players.html?id=${tvShow.id}`;
-    const imageUrl = IMAGE_BASE_URL + tvShow.poster_path;
+async function loadEpisodes(season) {
+  selSeason = season; selEpisode = 1;
+  epGrid.innerHTML = "";
+  try {
+    const r = await fetch(`${BASE}/tv/${showId}/season/${season}?api_key=${API_KEY}&language=en-US`);
+    const d = await r.json();
+    const eps = (d.episodes || []).filter(e => e.episode_number > 0);
 
-    const metaTags = [
-        { property: "og:image", content: imageUrl },
-        { property: "og:image:alt", content: `${tvShow.name} Poster` },
-        { property: "og:url", content: fullUrl },
-        { name: "twitter:image", content: imageUrl },
-        { name: "twitter:image:alt", content: `${tvShow.name} Poster` },
-        { property: "og:title", content: `${tvShow.name} - Watch Now on Dashflix` },
-        { name: "twitter:title", content: `${tvShow.name} - Watch Now on Dashflix` },
-        { property: "og:description", content: tvShow.overview },
-        { name: "twitter:description", content: tvShow.overview }
-    ];
-
-    metaTags.forEach(tag => {
-        const meta = document.createElement("meta");
-        if (tag.property) meta.setAttribute("property", tag.property);
-        if (tag.name) meta.setAttribute("name", tag.name);
-        meta.setAttribute("content", tag.content);
-        document.head.appendChild(meta);
+    eps.forEach(ep => {
+      const btn = document.createElement("button");
+      btn.className = "ep-btn" + (ep.episode_number === 1 ? " cur" : "");
+      btn.textContent = ep.episode_number;
+      btn.title = ep.name;
+      btn.addEventListener("click", () => {
+        selEpisode = ep.episode_number;
+        document.querySelectorAll(".ep-btn").forEach(b => b.classList.remove("cur"));
+        btn.classList.add("cur");
+        setPlayer();
+      });
+      epGrid.appendChild(btn);
     });
-
-    const canonical = document.createElement("link");
-    canonical.setAttribute("rel", "canonical");
-    canonical.setAttribute("href", fullUrl);
-    document.head.appendChild(canonical);
-
-    document.title = `${tvShow.name} - Watch Now on Dashflix`;
+    setPlayer();
+  } catch (e) { console.error(e); }
 }
 
-function populateSeasonDropdown(seasons) {
-    const seasonDropdown = document.getElementById("season-dropdown");
-    const firstSeasonWithAirDate = seasons.find(season => season.air_date);
+seasonSel.addEventListener("change", () => loadEpisodes(parseInt(seasonSel.value)));
 
-    seasons.filter(season => season.air_date).forEach(season => {
-        const option = document.createElement("option");
-        option.value = season.season_number;
-        option.textContent = `Season ${season.season_number}`;
-        seasonDropdown.appendChild(option);
-    });
+async function loadDetails() {
+  try {
+    const [dRes, vRes] = await Promise.all([
+      fetch(`${BASE}/tv/${showId}?api_key=${API_KEY}&language=en-US`),
+      fetch(`${BASE}/tv/${showId}/videos?api_key=${API_KEY}`),
+    ]);
+    const show   = await dRes.json();
+    const videos = await vRes.json();
+    document.title = `${show.name} – Dashflix`;
+    RW.add({ ...show, type: "tv" });
 
-    if (firstSeasonWithAirDate) {
-        seasonDropdown.value = firstSeasonWithAirDate.season_number;
-        fetchEpisodes();
+    const schema = {
+      "@context": "https://schema.org", "@type": "TVSeries",
+      "name": show.name,
+      "description": show.overview || "",
+      "datePublished": show.first_air_date || "",
+      "url": `https://dashflix.top/players.html?id=${show.id}`,
+      "genre": (show.genres || []).map(g => g.name),
+      "numberOfSeasons": show.number_of_seasons || 1,
+      ...(show.poster_path && { "image": `${IMG}w500${show.poster_path}` }),
+      ...(show.vote_average && { "aggregateRating": { "@type": "AggregateRating", "ratingValue": show.vote_average.toFixed(1), "ratingCount": show.vote_count || 1, "bestRating": "10", "worstRating": "0" } }),
+    };
+    const ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.textContent = JSON.stringify(schema);
+    document.head.appendChild(ld);
+
+    const numSeasons = show.number_of_seasons || 1;
+    seasonSel.innerHTML = "";
+    for (let s = 1; s <= numSeasons; s++) {
+      const o = document.createElement("option");
+      o.value = s; o.textContent = `Season ${s}`; seasonSel.appendChild(o);
     }
-}
+    await loadEpisodes(1);
 
-async function fetchEpisodes() {
-    const selectedSeason = document.getElementById("season-dropdown").value;
+    const year    = (show.first_air_date || "").slice(0, 4);
+    const genres  = (show.genres || []).map(g => g.name).join(", ");
+    const rating  = (show.vote_average || 0).toFixed(1);
+    const creator = (show.created_by || [])[0];
 
-    if (selectedSeason) {
-        const response = await fetch(`${BASE_URL}/tv/${tvShowId}/season/${selectedSeason}?api_key=${API_KEY}&language=en-US`);
-        const data = await response.json();
+    document.getElementById("details").innerHTML = `
+      <div class="det-poster">
+        ${show.poster_path
+          ? `<img src="${IMG}${show.poster_path}" alt="${show.name}">`
+          : `<div class="det-ph"><i class="fas fa-tv"></i></div>`}
+      </div>
+      <div class="det-info">
+        <div class="det-title">${show.name}</div>
+        <div class="chips">
+          ${year ? `<span class="chip"><i class="fas fa-calendar-alt"></i>${year}</span>` : ""}
+          <span class="chip"><i class="fas fa-star"></i>${rating}</span>
+          <span class="chip"><i class="fas fa-layer-group"></i>${numSeasons} Season${numSeasons !== 1 ? "s" : ""}</span>
+        </div>
+        ${genres ? `<div class="det-genres">${genres}</div>` : ""}
+        <div class="det-overview">${show.overview || "No overview available."}</div>
+        ${creator ? `<div class="det-creator"><i class="fas fa-user"></i>Created by ${creator.name}</div>` : ""}
+      </div>`;
 
-        populateEpisodeDropdown(data.episodes);
+    const trailer = (videos.results || []).find(v => v.type === "Trailer" && v.site === "YouTube");
+    const trlBtn  = document.getElementById("trlBtn");
+    if (trailer) {
+      trlBtn.style.display = "flex";
+      trlBtn.onclick = () => {
+        document.getElementById("trlFrame").src = `https://www.youtube.com/embed/${trailer.key}?autoplay=1`;
+        document.getElementById("trlModal").classList.add("open");
+      };
     }
+
+    const wlBtn = document.getElementById("wlBtn");
+    const syncWL = () => {
+      const inWL = WL.has(show.id, "tv");
+      wlBtn.className = `act-btn ${inWL ? "inWL" : "sec"}`;
+      wlBtn.innerHTML = `<i class="fas fa-${inWL ? "check" : "bookmark"}"></i> ${inWL ? "In Watchlist" : "Add to Watchlist"}`;
+    };
+    syncWL();
+    wlBtn.onclick = () => {
+      WL.has(show.id, "tv") ? WL.remove(show.id, "tv") : WL.add({ ...show, type: "tv" });
+      syncWL();
+    };
+  } catch (e) { console.error(e); }
 }
 
-function populateEpisodeDropdown(episodes) {
-    const episodeDropdown = document.getElementById("episode-dropdown");
-    episodeDropdown.style.display = "block";
-    episodeDropdown.innerHTML = '<option value="">Select Episode</option>';
-
-    const firstEpisodeWithAirDate = episodes.find(episode => episode.air_date);
-
-    episodes.filter(episode => episode.air_date).forEach(episode => {
-        const option = document.createElement("option");
-        option.value = episode.episode_number;
-        option.textContent = `Episode ${episode.episode_number}: ${episode.name}`;
-        episodeDropdown.appendChild(option);
-    });
-
-    if (firstEpisodeWithAirDate) {
-        episodeDropdown.value = firstEpisodeWithAirDate.episode_number;
-        changeEpisode();
-    }
+async function loadRelated() {
+  try {
+    const r = await fetch(`${BASE}/tv/${showId}/similar?api_key=${API_KEY}&language=en-US&page=1`);
+    const d = await r.json();
+    const items = (d.results || []).filter(s => !BLOCKED_SHOWS.has(s.id)).slice(0, 12);
+    const grid  = document.getElementById("relGrid");
+    items.forEach(s => grid.appendChild(buildCard({ ...s, type: "tv" })));
+  } catch (e) { console.error(e); }
 }
 
-let currentServerIndex = 0;
-
-function changeEpisode() {
-    const selectedSeason = document.getElementById("season-dropdown").value;
-    const selectedEpisode = document.getElementById("episode-dropdown").value;
-
-    if (selectedSeason && selectedEpisode) {
-        updateVideoSources(selectedSeason, selectedEpisode);
-        updateVideoPlayer();
-    }
+const trlModal = document.getElementById("trlModal");
+function closeTrailer() {
+  document.getElementById("trlFrame").src = "";
+  trlModal.classList.remove("open");
 }
+document.getElementById("trlClose").onclick = closeTrailer;
+trlModal.addEventListener("click", e => { if (e.target === trlModal) closeTrailer(); });
 
-function changeServer() {
-    const videoSourceSelect = document.getElementById("video-source");
-    currentServerIndex = videoSourceSelect.selectedIndex;
-    document.getElementById("video-player").src = videoSourceSelect.value;
-}
-
-function updateVideoSources(season, episode) {
-    const videoSources = [
-      `https://vidrock.ru/tv/${tvShowId}/${season}/${episode}`,
-        `https://vidsrcme.su/embed/tv?tmdb=${tvShowId}&season=${season}&episode=${episode}`,
-        `https://moviesapi.to/tv/${tvShowId}-${season}-${episode}`,
-        `https://vidsrc.vip/embed/tv/${tvShowId}/${season}/${episode}`,
-        `https://multiembed.mov/directstream.php?video_id=${tvShowId}&tmdb=1&s=${season}&e=${episode}`,
-        `https://vidlink.pro/tv/${tvShowId}/${season}/${episode}`
-    ];
-
-    const videoSourceSelect = document.getElementById("video-source");
-    const previousServer = videoSourceSelect.value;
-
-    videoSourceSelect.innerHTML = "";
-    videoSources.forEach((url, index) => {
-        const option = document.createElement("option");
-        option.value = url;
-        option.textContent = `Server ${index + 1}`;
-        videoSourceSelect.appendChild(option);
-    });
-
-    const selectedOptionIndex = videoSources.indexOf(previousServer);
-    if (selectedOptionIndex !== -1) {
-        videoSourceSelect.selectedIndex = selectedOptionIndex;
-    } else {
-        videoSourceSelect.selectedIndex = currentServerIndex;
-    }
-}
-
-function updateVideoPlayer() {
-    const videoSourceSelect = document.getElementById("video-source");
-    document.getElementById("video-player").src = videoSourceSelect.value;
-}
-
-fetchTvShowDetails();
+loadDetails();
+loadRelated();

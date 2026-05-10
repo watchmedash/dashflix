@@ -1,0 +1,52 @@
+.wl-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 12px 8px;
+}
+.clear-btn {
+  background: none; border: 1px solid var(--border);
+  color: var(--text-muted); border-radius: var(--r);
+  padding: 6px 12px; font-size: 12px;
+  display: flex; align-items: center; gap: 6px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.clear-btn:hover { color: var(--text); border-color: var(--border2); }
+
+.tab-row {
+  display: flex; gap: 5px; padding: 0 12px 10px;
+}
+.wl-tab {
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text-muted); border-radius: var(--r);
+  padding: 6px 14px; font-size: 12px; font-family: inherit;
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; gap: 5px;
+}
+.wl-tab.active {
+  background: var(--accent-dim); border-color: rgba(128,128,128,0.35);
+  color: var(--text);
+}
+.wl-count {
+  text-align: center; font-size: 11px;
+  color: var(--text-muted); padding: 0 0 6px;
+}
+
+.rm-btn {
+  position: absolute; top: 5px; right: 5px; z-index: 10;
+  width: 22px; height: 22px; background: rgba(0,0,0,0.78);
+  border: 1px solid var(--border); color: var(--text-sub);
+  border-radius: 3px; font-size: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.rm-btn:hover { background: rgba(0,0,0,0.95); color: var(--text); }
+
+.browse-links {
+  display: flex; gap: 8px; justify-content: center; margin-top: 14px;
+}
+.browse-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid var(--border); border-radius: var(--r);
+  padding: 7px 16px; font-size: 12px; color: var(--text-muted);
+  transition: color 0.15s, border-color 0.15s;
+}
+.browse-link:hover { color: var(--text); border-color: var(--border2); }

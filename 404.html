@@ -1,63 +1,46 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-<title>404</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
-<style>
-.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
-}
-.page_404  img{ width:100%;}
-.four_zero_four_bg{
- background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-    height: 400px;
-    background-position: center;
- }
- .four_zero_four_bg h1{
- font-size:80px;
- }
-  .four_zero_four_bg h3{
-			 font-size:80px;
-			 }
-			 .link_404{
-	color: #fff!important;
-    padding: 10px 20px;
-    background: #39ac31;
-    margin: 20px 0;
-    display: inline-block;}
-	.contant_box_404{ margin-top:-50px;}
-</style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 – Page Not Found · Dashflix</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
+ crossorigin="anonymous"></script>
 </head>
+<body>
 
-<body translate="no">
-  <section class="page_404">
-	<div class="container">
-		<div class="row">
-		<div class="col-sm-12 ">
-		<div class="col-sm-10 col-sm-offset-1  text-center">
-		<div class="four_zero_four_bg">
-			<h1 class="text-center ">404</h1>
+<header class="page-hdr">
+  <a href="index.html" class="logo">
+    <span class="logo-text" style="font-size:16px;letter-spacing:2px;">DASHFLIX</span>
+  </a>
+</header>
 
+<div class="not-found">
+  <div class="not-found-code">404</div>
+  <div class="not-found-title">Page Not Found</div>
+  <p class="not-found-text">The page you're looking for doesn't exist or may have been moved. Head back and find something to watch.</p>
+  <div class="not-found-links">
+    <a href="index.html" class="primary"><i class="fas fa-home"></i> Home</a>
+    <a href="movies.html"><i class="fas fa-film"></i> Movies</a>
+    <a href="shows.html"><i class="fas fa-tv"></i> Shows</a>
+  </div>
+</div>
 
-		</div>
+<nav class="bottom-nav">
+  <a href="index.html"     class="nav-item"><i class="fas fa-home"></i>Home</a>
+  <a href="movies.html"    class="nav-item"><i class="fas fa-film"></i>Movies</a>
+  <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
+  <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
+</nav>
 
-		<div class="contant_box_404">
-		<h3 class="h2">
-		Look like you're lost
-		</h3>
-
-		<p>the page you are looking for is not avaible!</p>
-
-		<a href="index.html" class="link_404">Go Home</a>
-	</div>
-		</div>
-		</div>
-		</div>
-	</div>
-</section>
+<script src="app.js"></script>
 </body>
 </html>

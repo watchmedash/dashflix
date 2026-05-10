@@ -1,53 +1,73 @@
-<?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-<loc>https://dashflix.top/movies</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/index</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/contact</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/home</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/about</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/privacy%20policy</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/dmca</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/tvplus</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://dashflix.top/terms</loc>
-<lastmod>2023-11-19T08:25:24.403906+00:00</lastmod>
-<priority>1.00</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://dashflix.top/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2026-05-10</lastmod>
+    <image:image>
+      <image:loc>https://dashflix.top/og.webp</image:loc>
+      <image:title>Dashflix — Free HD Movies &amp; TV Shows</image:title>
+      <image:caption>Stream thousands of free HD movies and TV shows. No sign-up required.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/movies.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/shows.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/donate.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/dmca.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
+  <url>
+    <loc>https://dashflix.top/tos.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-05-10</lastmod>
+  </url>
+
 </urlset>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <!-- Replace with your actual logo -->
+  <!-- Icon: white square with play triangle -->
+  <rect x="0" y="4" width="32" height="32" rx="4" fill="#ffffff"/>
+  <polygon points="11,12 26,20 11,28" fill="#0a0a0a"/>
+  <!-- Wordmark -->
+  <text x="40" y="28" font-family="'Bebas Neue', sans-serif" font-size="26" fill="#ffffff" letter-spacing="3">DASHFLIX</text>
+</svg>

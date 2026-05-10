@@ -1,0 +1,54 @@
+{
+  "name": "Dashflix",
+  "short_name": "Dashflix",
+  "description": "Free HD movies and TV shows — no sign-up, no subscription.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f5f5",
+  "theme_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Movies",
+      "short_name": "Movies",
+      "url": "./movies.html",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "TV Shows",
+      "short_name": "Shows",
+      "url": "./shows.html",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Watchlist",
+      "short_name": "Watchlist",
+      "url": "./watchlist.html",
+      "icons": [{ "src": "logo.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "og.webp",
+      "sizes": "1200x628",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Dashflix — Free HD Movies & TV Shows"
+    }
+  ]
+}

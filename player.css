@@ -1,486 +1,165 @@
-/* ===============================
-   Root Theme Variables (Dark Default)
-   =============================== */
-:root {
-    --bg-color: #121212;
-    --container-bg: #1e1e1e;
-    --text-color: #ffffff;
-    --secondary-text: #bbbbbb;
-    --highlight: #ffd700;
-    --select-bg: #333333;
-    --select-border: #444444;
-    --genre-bg: #444444;
-    --close-bg: #ff3333;
-    --close-hover: #cc0000;
-    --banner-bg: #ffcc00;
-    --banner-text: #000000;
-    --watchlist-btn-bg: #28a745;
+/* ── PLAYER HEADER ── */
+.ph {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.back-btn {
+  width: 32px; height: 32px; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: var(--r);
+  color: var(--text-sub); display: flex; align-items: center;
+  justify-content: center; font-size: 13px; flex-shrink: 0;
+  transition: border-color 0.15s, color 0.15s;
+}
+.back-btn:hover { border-color: var(--border2); color: var(--text); }
+
+/* ── INFO BANNER ── */
+.info-bar {
+  margin: 8px 12px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 7px 12px;
+  font-size: 12px; color: var(--text-muted);
+  display: flex; align-items: center; gap: 8px;
+}
+.info-bar i { color: var(--text-sub); font-size: 12px; flex-shrink: 0; }
+
+/* ── SERVER SELECT ── */
+.srv-wrap { padding: 0 12px 8px; }
+.srv-label {
+  font-size: 11px; color: var(--text-muted); margin-bottom: 4px;
+  display: flex; align-items: center; gap: 5px;
+}
+.srv-select {
+  width: 100%; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--r); color: var(--text); padding: 9px 30px 9px 11px;
+  font-family: inherit; font-size: 13px; outline: none; cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23737373'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 10px center;
+  transition: border-color 0.15s;
+}
+.srv-select:focus { border-color: var(--border2); }
+
+/* ── VIDEO ── */
+.vid-wrap { width: 100%; aspect-ratio: 16/9; background: #000; }
+.vid-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* ── DETAILS ── */
+.details {
+  display: flex; gap: 12px; padding: 12px 12px 6px;
+  align-items: flex-start;
+}
+.det-poster {
+  flex-shrink: 0; width: 80px; border-radius: var(--r);
+  overflow: hidden; background: var(--surface2);
+}
+.det-poster img { width: 80px; aspect-ratio: 2/3; object-fit: cover; display: block; }
+.det-ph {
+  width: 80px; aspect-ratio: 2/3; display: flex;
+  align-items: center; justify-content: center;
+  color: var(--surface4); font-size: 22px;
+}
+.det-info { flex: 1; min-width: 0; }
+.det-title {
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px;
+  letter-spacing: 0.5px; line-height: 1.2; margin-bottom: 8px; color: var(--text);
+}
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 3px; padding: 2px 8px; font-size: 10px; color: var(--text-muted);
+}
+.chip i { font-size: 9px; color: var(--text-sub); }
+.det-genres { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+.det-overview {
+  font-size: 12px; color: var(--text-muted); line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden;
+}
+.det-director, .det-creator {
+  font-size: 11px; color: var(--text-muted); margin-top: 6px;
+}
+.det-director i, .det-creator i { color: var(--text-sub); margin-right: 4px; }
+
+/* ── ACTION ROW ── */
+.act-row { display: flex; gap: 7px; padding: 6px 12px 4px; flex-wrap: wrap; }
+.dl-note { padding: 0 12px 10px; font-size: 11px; color: var(--text-muted); margin: 0; }
+.act-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: var(--r); font-size: 12px;
+  font-family: inherit; border: 1px solid var(--border);
+  font-weight: 500; transition: all 0.15s;
+}
+.act-btn.primary {
+  background: var(--text); border-color: var(--text); color: var(--bg);
+}
+.act-btn.primary:hover { background: var(--text-sub); border-color: var(--text-sub); }
+.act-btn.sec { background: var(--surface2); color: var(--text-sub); }
+.act-btn.sec:hover { border-color: var(--border2); color: var(--text); }
+.act-btn.inWL {
+  background: var(--accent-dim); border-color: rgba(255,255,255,0.3); color: var(--text);
 }
 
-/* ===============================
-   Light Theme Overrides
-   =============================== */
-body.light-theme {
-    --bg-color: #f9f9f9;
-    --container-bg: #ffffff;
-    --text-color: #000000;
-    --secondary-text: #333333;
-    --highlight: #d35400;
-    --select-bg: #e0e0e0;
-    --select-border: #cccccc;
-    --genre-bg: #dddddd;
-    --close-bg: #e74c3c;
-    --close-hover: #c0392b;
-    --banner-bg: #f1c40f;
-    --banner-text: #000000;
-    --watchlist-btn-bg: #3498db;
+/* ── EPISODE SELECTORS (TV player) ── */
+.ep-selectors { display: flex; gap: 7px; padding: 0 12px 8px; }
+.ep-sel {
+  flex: 1; background: var(--surface2); border: 1px solid var(--border);
+  border-radius: var(--r); color: var(--text); padding: 9px 28px 9px 10px;
+  font-family: inherit; font-size: 13px; outline: none; cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23737373'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 8px center;
+  transition: border-color 0.15s;
+}
+.ep-sel:focus { border-color: var(--border2); }
+
+.ep-grid { display: flex; flex-wrap: wrap; gap: 5px; padding: 0 12px 8px; }
+.ep-btn {
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text-muted); border-radius: var(--r);
+  padding: 5px 0; font-size: 11px; font-family: inherit;
+  cursor: pointer; min-width: 36px; text-align: center;
+  transition: all 0.14s;
+}
+.ep-btn:hover { border-color: var(--border2); color: var(--text); }
+.ep-btn.cur {
+  background: var(--accent-dim); border-color: rgba(255,255,255,0.3);
+  color: var(--text); font-weight: 600;
 }
 
-/* ===============================
-   Base Styles
-   =============================== */
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+/* ── TRAILER MODAL ── */
+.trl-modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.94);
+  z-index: 3000; display: none; align-items: center;
+  justify-content: center; padding: 16px;
 }
-
-.movie-container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid var(--select-border);
-    border-radius: 10px;
-    background-color: var(--container-bg);
-    transition: background-color 0.3s, border-color 0.3s;
+.trl-modal.open { display: flex; }
+.trl-inner {
+  width: 100%; max-width: 720px; position: relative;
+  background: #000; border-radius: var(--r); overflow: hidden; aspect-ratio: 16/9;
 }
-
-.movie-container h1 {
-    text-align: center;
-    color: var(--text-color);
-    margin: 10px 0;
+.trl-inner iframe { width: 100%; height: 100%; border: none; }
+.trl-close {
+  position: fixed; top: 12px; right: 12px;
+  background: rgba(20,20,20,0.9); border: 1px solid var(--border2);
+  color: var(--text); width: 34px; height: 34px; border-radius: var(--r);
+  font-size: 15px; display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
 }
+.trl-close:hover { background: var(--surface3); }
 
-.movie-details {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
+/* ── RELATED GRID ── */
+.rel-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 6px; padding: 0 10px 14px;
 }
+@media (min-width: 420px) { .rel-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 600px) { .rel-grid { grid-template-columns: repeat(5, 1fr); } }
+@media (min-width: 800px) { .rel-grid { grid-template-columns: repeat(6, 1fr); } }
+@media (min-width: 900px) { .rel-grid { padding: 0 12px 16px; } }
 
-.movie-details img {
-    max-width: 200px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+/* ── SKELETON ── */
+.skel {
+  background: linear-gradient(90deg, var(--surface2) 25%, var(--surface3) 50%, var(--surface2) 75%);
+  background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: var(--r);
 }
-
-.movie-info {
-    flex: 1;
-    margin-left: 20px;
-}
-
-.movie-info h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--text-color);
-}
-
-.movie-info p {
-    font-size: 1rem;
-    margin: 5px 0;
-    color: var(--secondary-text);
-}
-
-.movie-info .rating {
-    font-size: 1.2rem;
-    color: var(--highlight);
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: var(--select-bg);
-    color: var(--text-color);
-    border: 1px solid var(--select-border);
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.genre-list {
-    list-style: none;
-    padding: 0;
-    margin: 5px 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.genre-list li {
-    margin-right: 10px;
-    background-color: var(--genre-bg);
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.genre-list li:hover {
-    background-color: #666;
-    cursor: pointer;
-}
-
-.close-btn {
-    background-color: var(--close-bg);
-    color: #fff;
-    font-size: 1.5rem;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    display: block;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-.close-btn:hover {
-    background-color: var(--close-hover);
-}
-
-.watchlist-btn {
-    background-color: var(--watchlist-btn-bg);
-    padding: 10px 15px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    transition: opacity 0.3s;
-}
-
-.watchlist-btn:hover {
-    opacity: 0.8;
-}
-
-.info-banner {
-    background-color: var(--banner-bg);
-    color: var(--banner-text);
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* Theme Toggle Button Style */
-.theme-toggle {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px 20px;
-}
-
-.theme-toggle input {
-    display: none; /* Hide checkbox */
-}
-
-.theme-toggle .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
-}
-
-.theme-toggle .slider {
-    background-color: #3faa44;
-    border-radius: 30px;
-    position: absolute;
-    top: 0; left: 0;
-    right: 0; bottom: 0;
-    transition: background-color 0.3s ease;
-}
-
-/* The slider knob */
-.theme-toggle .slider::before {
-    content: "";
-    position: absolute;
-    height: 24px;
-    width: 24px;
-    left: 3px;
-    bottom: 3px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: transform 0.4s ease;
-    z-index: 1;
-}
-
-/* The icon is placed on top of the knob */
-.theme-toggle .icon {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    left: 3px;
-    bottom: 3px;
-    line-height: 24px;
-    text-align: center;
-    font-size: 14px;
-    color: #000;
-    z-index: 2;
-    pointer-events: none;
-    transition: transform 0.4s ease, color 0.4s ease;
-}
-
-.theme-toggle input:checked + .switch .slider::before {
-    transform: translateX(30px);
-}
-
-.theme-toggle input:checked + .switch .slider .icon {
-    transform: translateX(30px);
-    color: #fff;
-}
-
-body.light-theme .theme-toggle .slider::before {
-    background-color: #333; /* Dark knob in light mode */
-}
-
-.watchlist-icon-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
-    background-color: #28a745;
-    color: #fff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline */
-}
-
-.watchlist-icon-btn:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
-.related-movies {
-    margin-top: 10px;
-}
-
-.related-movies h2 {
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-body.light-theme .related-movies h2 {
-    color: #111; /* or any dark color */
-}
-
-.movies-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.movie-card {
-    position: relative;
-    width: 100px; /* Reduced width for smaller posters */
-    height: 150px; /* Set height to maintain aspect ratio */
-    background-color: #444;
-    border-radius: 5px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.movie-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the poster fills the box while maintaining the aspect ratio */
-    transition: opacity 0.3s ease-in-out;
-}
-
-.movie-card:hover {
-    transform: scale(1.05); /* Slightly scale up on hover */
-}
-
-.movie-card .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px; /* Smaller size for play button */
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.movie-card:hover .play-button {
-    opacity: 1; /* Show play button on hover */
-}
-
-@media (max-width: 768px) {
-    .movie-card {
-        width: 80px; /* Even smaller size for mobile screens */
-        height: 120px; /* Adjust height for mobile to keep aspect ratio */
-    }
-}
-
-#comments-wrapper {
-        background-color: #2e2e2e; /* dark gray */
-        padding: 1rem;
-        border-radius: 12px;
-        margin-top: 2rem;
-    }
-
-    /* Optional: Lighter gray for light theme */
-    body.light-theme #comments-wrapper {
-        background-color: #2e2e2e;
-    }
-
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-around;
-      background-color: #1a1a1a; /* Dark background */
-      padding: 5px;
-      border-top: 2px solid #333; /* Darker border for contrast */
-      z-index: 1000;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .nav-item {
-      color: #e0e0e0; /* Light gray text for better contrast */
-      text-align: center;
-      text-decoration: none;
-      font-size: 14px;
-      flex-grow: 1;
-      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
-      position: relative;
-    }
-
-    .nav-item i {
-      display: block;
-      font-size: 18px;
-      margin-bottom: 5px;
-      transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smooth bounce effect */
-    }
-
-    .nav-item:hover {
-      color: #ffffff; /* Change color to normal white on hover */
-      transform: scale(1.1);
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
-    }
-
-    .nav-item:hover i {
-      transform: scale(1.4); /* Enlarge the icon */
-    }
-
-    .more-links {
-      display: none;
-      position: absolute;
-      bottom: 80px;
-      left: 0;
-      right: 0;
-      background-color: #1a1a1a; /* Dark background */
-      padding: 10px;
-      border: 1px solid #333; /* Darker border for contrast */
-      z-index: 1001;
-      opacity: 0;
-      transform: translateY(30px); /* More exaggerated start position */
-      transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-    }
-
-    .more-links a {
-      display: block;
-      color: #e0e0e0; /* Light gray for links */
-      padding: 3px 0;
-      text-decoration: none;
-      text-align: center;
-      transition: color 0.3s ease-in-out, transform 0.3s, text-shadow 0.3s ease-in-out; /* Added text-shadow transition */
-    }
-
-    .more-links a:hover {
-      color: #ffffff; /* Light teal color on hover */
-      transform: scale(1.05); /* Slight scaling for links */
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6); /* Normal white glow effect */
-    }
-
-    .more-links.show {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-    }
-
-    @keyframes slideIn {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .more-links.show {
-      animation: slideIn 0.5s forwards ease-in-out;
-    }
-
-    .nav-item:hover {
-      animation: pulse 1s infinite;
-    }
-
-    .bottom-nav:hover {
-      background-color: #2a2a2a; /* Slightly lighter on hover */
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow effect on hover */
-    }
-
-    nav {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background: #000000;
-    color: #e2e2e2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px; /* Add 10px padding to the top and bottom, and 20px padding to the left and right */
-    height: 80px;
-     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Set the fixed height of the navigation bar */
-    }
+@keyframes shimmer { to { background-position: -200% 0; } }

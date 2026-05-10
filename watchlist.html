@@ -1,133 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watchlist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="bottom-search.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .watchlist-container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-        .watchlist-item {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            border-bottom: 1px solid #444;
-            padding-bottom: 10px;
-        }
-        .watchlist-item img {
-            width: 80px;
-            border-radius: 5px;
-            margin-right: 15px;
-        }
-        .watchlist-item .info {
-            flex-grow: 1;
-            text-align: left;
-        }
-        .remove-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .clickable-poster {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.clickable-poster:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-}
-
-.clickable-title {
-    color: white;
-    text-decoration: none;
-}
-
-.clickable-title:hover {
-    text-decoration: underline;
-}
-
-.remove-btn {
-    background: none;
-    border: none;
-    color: red;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 5px;
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.remove-btn:hover {
-    color: darkred;
-    transform: scale(1.2);
-}
-
-.info-banner {
-            background-color: #ffcc00;
-            color: #000;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Watchlist – Dashflix</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="watchlist.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085"
-     crossorigin="anonymous"></script>
-     <!--<script data-cfasync="false" async type="text/javascript" src="//aj.furredunedged.com/r0fVEfFKiWWjnx/138742"></script>-->
+ crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="watchlist-container">
-    <h1>My Watchlist</h1>
-    <div class="info-banner">
-            <i class="fas fa-info-circle"></i> Your watchlist is stored locally in your browser and will not sync across devices.
-        </div>
-    <div id="watchlist"></div>
-</div>
-<nav class="bottom-nav">
-<a href="/index" class="nav-item">
-<i class="fas fa-home"></i> Home</a>
-<a href="#" class="nav-item" id="navSearchToggle"><i class="fas fa-search"></i> Search</a>
-<a href="/movies" class="nav-item">
-<i class="fas fa-film"></i> Movies</a>
-<a href="/shows" class="nav-item">
-<i class="fas fa-tv"></i> Shows</a>
-<a href="/trailer" class="nav-item">
-<i class="fas fa-video"></i> Trailers</a>
-<a href="/requested" class="nav-item">
-<i class="fas fa-list"></i> Requested</a>
-</nav>
-<div class="nav-search-container" id="navSearchContainer">
-  <form id="navSearchForm">
-    <input type="text" id="navSearchInput" placeholder="Search movies or shows..." />
-  </form>
-  <div id="navSearchResults">
-    <p>No results found</p>
-  </div>
-</div>
-<div id="navSearchOverlay"></div>
-<script src="bottom-search.js"></script>
-<script src="watchlist.js"></script>
+<div class="shell">
 
+  <!-- CONTENT -->
+  <main class="content">
+
+    <div class="wl-top">
+      <a href="index.html" class="logo">
+        <span class="logo-text">DASHFLIX</span>
+      </a>
+      <button class="clear-btn" id="clearBtn"><i class="fas fa-trash-alt"></i> Clear All</button>
+    </div>
+
+    <div class="section-header" style="padding-top:2px;">
+      <h2 class="section-title">My <span>Watchlist</span></h2>
+    </div>
+
+    <div class="tab-row">
+      <button class="wl-tab active" data-f="all"><i class="fas fa-th"></i> All</button>
+      <button class="wl-tab" data-f="movie"><i class="fas fa-film"></i> Movies</button>
+      <button class="wl-tab" data-f="tv"><i class="fas fa-tv"></i> Shows</button>
+    </div>
+    <div class="wl-count" id="wlCount"></div>
+
+    <div class="grid" id="grid"></div>
+
+    <div class="empty-state" id="empty" style="display:none;">
+      <i class="fas fa-bookmark"></i>
+      <p>Your watchlist is empty.<br>Right-click any poster to save something.</p>
+      <div class="browse-links">
+        <a href="movies.html" class="browse-link"><i class="fas fa-film"></i> Movies</a>
+        <a href="shows.html"  class="browse-link"><i class="fas fa-tv"></i> Shows</a>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav">
+  <a href="index.html"     class="nav-item"><i class="fas fa-home"></i>Home</a>
+  <a href="movies.html"    class="nav-item"><i class="fas fa-film"></i>Movies</a>
+  <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
+  <a href="watchlist.html" class="nav-item active"><i class="fas fa-bookmark"></i>Watchlist</a>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
+</nav>
+
+<script src="app.js"></script>
+<script src="watchlist.js"></script>
 </body>
 </html>

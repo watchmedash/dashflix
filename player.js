@@ -1,112 +1,121 @@
-const API_KEY = "4f599baa15d072c9de346b2816a131b8";
-const BASE_URL = "https://api.themoviedb.org/3";
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const params  = new URLSearchParams(location.search);
+const movieId = params.get("id");
 
-const urlParams = new URLSearchParams(window.location.search);
-const movieId = urlParams.get("id");
+if (!movieId || BLOCKED_MOVIES.has(parseInt(movieId))) location.replace("movies.html");
 
-async function fetchMovieDetails(id) {
+document.getElementById("dlBtn").href = `https://vidvault.ru/movie/${movieId}`;
+
+const SERVERS = [
+  id => `https://vsembed.ru/embed/movie/${id}`,
+  id => `https://moviesapi.to/movie/${id}`,
+  id => `https://vidsrc.vip/embed/movie/${id}`,
+  id => `https://vidlink.pro/movie/${id}`,
+  id => `https://player.videasy.net/movie/${id}`,
+  id => `https://vidfast.pro/movie/${id}?autoPlay=true`,
+  id => `https://player.vidzee.wtf/embed/movie/${id}?server=1`,
+];
+
+function changeServer() {
+  const idx = parseInt(document.getElementById("srvSel").value);
+  document.getElementById("vidPlayer").src = SERVERS[idx](movieId);
+}
+changeServer();
+
+async function loadDetails() {
   try {
-    const response = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=en-US`);
-    const data = await response.json();
-    displayMovieDetails(data);
-  } catch (error) {
-    console.error("Error fetching movie details:", error);
-  }
+    const [dRes, cRes, vRes] = await Promise.all([
+      fetch(`${BASE}/movie/${movieId}?api_key=${API_KEY}&language=en-US`),
+      fetch(`${BASE}/movie/${movieId}/credits?api_key=${API_KEY}`),
+      fetch(`${BASE}/movie/${movieId}/videos?api_key=${API_KEY}`),
+    ]);
+    const movie   = await dRes.json();
+    const credits = await cRes.json();
+    const videos  = await vRes.json();
+
+    document.title = `${movie.title} – Dashflix`;
+    RW.add({ ...movie, type: "movie" });
+
+    const schema = {
+      "@context": "https://schema.org", "@type": "Movie",
+      "name": movie.title,
+      "description": movie.overview || "",
+      "datePublished": movie.release_date || "",
+      "url": `https://dashflix.top/player.html?id=${movie.id}`,
+      "genre": (movie.genres || []).map(g => g.name),
+      ...(movie.poster_path && { "image": `${IMG}w500${movie.poster_path}` }),
+      ...(movie.runtime && { "duration": `PT${movie.runtime}M` }),
+      ...(movie.vote_average && { "aggregateRating": { "@type": "AggregateRating", "ratingValue": movie.vote_average.toFixed(1), "ratingCount": movie.vote_count || 1, "bestRating": "10", "worstRating": "0" } }),
+    };
+    const ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.textContent = JSON.stringify(schema);
+    document.head.appendChild(ld);
+
+    const director = (credits.crew || []).find(c => c.job === "Director");
+    const year     = (movie.release_date || "").slice(0, 4);
+    const genres   = (movie.genres || []).map(g => g.name).join(", ");
+    const rating   = (movie.vote_average || 0).toFixed(1);
+    const runtime  = movie.runtime;
+
+    document.getElementById("details").innerHTML = `
+      <div class="det-poster">
+        ${movie.poster_path
+          ? `<img src="${IMG}${movie.poster_path}" alt="${movie.title}">`
+          : `<div class="det-ph"><i class="fas fa-film"></i></div>`}
+      </div>
+      <div class="det-info">
+        <div class="det-title">${movie.title}</div>
+        <div class="chips">
+          ${year ? `<span class="chip"><i class="fas fa-calendar-alt"></i>${year}</span>` : ""}
+          <span class="chip"><i class="fas fa-star"></i>${rating}</span>
+          ${runtime ? `<span class="chip"><i class="fas fa-clock"></i>${runtime}m</span>` : ""}
+        </div>
+        ${genres ? `<div class="det-genres">${genres}</div>` : ""}
+        <div class="det-overview">${movie.overview || "No overview available."}</div>
+        ${director ? `<div class="det-director"><i class="fas fa-video"></i>Dir. ${director.name}</div>` : ""}
+      </div>`;
+
+    const trailer = (videos.results || []).find(v => v.type === "Trailer" && v.site === "YouTube");
+    const trlBtn  = document.getElementById("trlBtn");
+    if (trailer) {
+      trlBtn.style.display = "flex";
+      trlBtn.onclick = () => {
+        document.getElementById("trlFrame").src = `https://www.youtube.com/embed/${trailer.key}?autoplay=1`;
+        document.getElementById("trlModal").classList.add("open");
+      };
+    }
+
+    const wlBtn = document.getElementById("wlBtn");
+    const syncWL = () => {
+      const inWL = WL.has(movie.id, "movie");
+      wlBtn.className = `act-btn ${inWL ? "inWL" : "sec"}`;
+      wlBtn.innerHTML = `<i class="fas fa-${inWL ? "check" : "bookmark"}"></i> ${inWL ? "In Watchlist" : "Add to Watchlist"}`;
+    };
+    syncWL();
+    wlBtn.onclick = () => {
+      WL.has(movie.id, "movie") ? WL.remove(movie.id, "movie") : WL.add({ ...movie, type: "movie" });
+      syncWL();
+    };
+  } catch (e) { console.error(e); }
 }
 
-async function fetchMovieCredits(id) {
+async function loadRelated() {
   try {
-    const response = await fetch(`${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}&language=en-US`);
-    const data = await response.json();
-    displayMovieCredits(data);
-  } catch (error) {
-    console.error("Error fetching movie credits:", error);
-  }
+    const r = await fetch(`${BASE}/movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`);
+    const d = await r.json();
+    const items = (d.results || []).filter(m => !BLOCKED_MOVIES.has(m.id)).slice(0, 12);
+    const grid  = document.getElementById("relGrid");
+    items.forEach(m => grid.appendChild(buildCard({ ...m, type: "movie" })));
+  } catch (e) { console.error(e); }
 }
 
-function displayMovieDetails(movie) {
-  document.getElementById("movie-title-info").textContent = movie.title;
-  document.getElementById("movie-poster").src = IMAGE_BASE_URL + movie.poster_path;
-  document.getElementById("movie-overview").textContent = movie.overview;
-  document.getElementById("release-year").textContent = movie.release_date.split("-")[0];
-  document.getElementById("rating").textContent = movie.vote_average;
-
-  const genres = movie.genres.map(g => g.name).join(", ");
-  document.getElementById("genres").textContent = genres;
-
-  const servers = [
-    `https://vsembed.ru/embed/movie/${movie.id}`,
-    `https://moviesapi.to/movie/${movie.id}`,
-    `https://vidsrc.vip/embed/movie/${movie.id}`,
-    `https://multiembed.mov/directstream.php?video_id=${movie.id}&tmdb=1`,
-    `https://vidlink.pro/movie/${movie.id}`,
-    `https://player.videasy.net/movie/${movie.id}`,
-    `https://vidfast.pro/movie/${movie.id}?autoPlay=true`,
-    `https://player.vidzee.wtf/embed/movie/${movie.id}?server=1`,
-    `https://player.vidsrc.co/embed/movie/${movie.id}`
-  ];
-
-  const sourceSelector = document.getElementById("video-source");
-  sourceSelector.innerHTML = "";
-
-  servers.forEach((url, index) => {
-    const option = document.createElement("option");
-    option.value = url;
-    option.textContent = `Server ${index + 1}`;
-    sourceSelector.appendChild(option);
-  });
-
-  if (servers.length > 0) {
-    document.getElementById("video-player").src = servers[0];
-  }
-
-  fetchMovieCredits(movie.id);
-
-  const fullUrl = `https://dashflix.top/player.html?id=${movie.id}`;
-  const imageUrl = IMAGE_BASE_URL + movie.poster_path;
-
-  const metaTags = [
-    { property: "og:image", content: imageUrl },
-    { property: "og:image:alt", content: movie.title + " Poster" },
-    { property: "og:url", content: fullUrl },
-    { name: "twitter:image", content: imageUrl },
-    { name: "twitter:image:alt", content: movie.title + " Poster" },
-    { property: "og:title", content: `${movie.title} - Watch Now on Dashflix` },
-    { name: "twitter:title", content: `${movie.title} - Watch Now on Dashflix` },
-    { property: "og:description", content: movie.overview },
-    { name: "twitter:description", content: movie.overview }
-  ];
-
-  metaTags.forEach(tag => {
-    const meta = document.createElement("meta");
-    if (tag.property) meta.setAttribute("property", tag.property);
-    if (tag.name) meta.setAttribute("name", tag.name);
-    meta.setAttribute("content", tag.content);
-    document.head.appendChild(meta);
-  });
-
-  // Canonical link
-  const canonical = document.createElement("link");
-  canonical.setAttribute("rel", "canonical");
-  canonical.setAttribute("href", fullUrl);
-  document.head.appendChild(canonical);
-
-  // Page Title
-  document.title = `${movie.title} - Watch Now on Dashflix`;
+const trlModal = document.getElementById("trlModal");
+function closeTrailer() {
+  document.getElementById("trlFrame").src = "";
+  trlModal.classList.remove("open");
 }
+document.getElementById("trlClose").onclick = closeTrailer;
+trlModal.addEventListener("click", e => { if (e.target === trlModal) closeTrailer(); });
 
-function displayMovieCredits(credits) {
-  const director = credits.crew.find(member => member.job === "Director");
-  document.getElementById("director").textContent = director ? director.name : "Unknown";
-}
-
-function changeSource() {
-  const player = document.getElementById("video-player");
-  const sourceSelector = document.getElementById("video-source");
-  player.src = sourceSelector.value;
-}
-
-if (movieId) {
-  fetchMovieDetails(movieId);
-}
+loadDetails();
+loadRelated();

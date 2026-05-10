@@ -1,59 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const watchlistContainer = document.getElementById("watchlist");
+let filter = "all";
 
-    function loadWatchlist() {
-        watchlistContainer.innerHTML = "";
+function renderWatchlist() {
+  const grid  = document.getElementById("grid");
+  const empty = document.getElementById("empty");
+  const count = document.getElementById("wlCount");
+  grid.innerHTML = "";
 
-        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+  let list = WL.get();
+  const total = list.length;
+  if (filter !== "all") list = list.filter(i => i.type === filter);
+  count.textContent = total ? `${total} item${total !== 1 ? "s" : ""} saved` : "";
 
-        if (watchlist.length === 0) {
-            watchlistContainer.innerHTML = "<p>Your watchlist is empty.</p>";
-            return;
-        }
+  if (!list.length) { empty.style.display = "flex"; return; }
+  empty.style.display = "none";
 
-        watchlist.forEach(movie => {
-            const page = movie.type === "tv" ? "players.html" : "player.html"; // Choose the correct page
-
-            const div = document.createElement("div");
-            div.classList.add("watchlist-item");
-
-            div.innerHTML = `
-                <a href="${page}?id=${movie.id}">
-                    <img src="${movie.poster}" alt="${movie.title}" class="clickable-poster">
-                </a>
-                <div class="info">
-                    <h3><a href="${page}?id=${movie.id}" class="clickable-title">${movie.title} (${movie.releaseYear})</a></h3>
-                    <p>Rating: ${movie.rating}</p>
-                </div>
-                <button class="remove-btn" data-id="${movie.id}" data-type="${movie.type}">
-                    <i class="fas fa-trash"></i>
-                </button>
-            `;
-
-            watchlistContainer.appendChild(div);
-        });
-    }
-
-    // Event delegation for remove button
-    watchlistContainer.addEventListener("click", (e) => {
-        const target = e.target.closest(".remove-btn"); // Find the closest remove button
-
-        if (target) {
-            const id = target.dataset.id;
-            const type = target.dataset.type;
-
-            console.log(`Removing: ID=${id}, Type=${type}`); // Debugging
-
-            removeFromWatchlist(id, type);
-        }
+  list.forEach(item => {
+    const card = buildCard(item);
+    const rm = document.createElement("button");
+    rm.className = "rm-btn";
+    rm.innerHTML = '<i class="fas fa-times"></i>';
+    rm.title = "Remove";
+    rm.addEventListener("click", e => {
+      e.stopPropagation();
+      WL.remove(item.id, item.type);
+      renderWatchlist();
     });
+    card.querySelector(".card-poster-wrap").appendChild(rm);
+    grid.appendChild(card);
+  });
+}
 
-    function removeFromWatchlist(id, type) {
-        let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-        watchlist = watchlist.filter(item => !(item.id === id && item.type === type));
-        localStorage.setItem("watchlist", JSON.stringify(watchlist));
-        loadWatchlist(); // Reload watchlist after removal
-    }
-
-    loadWatchlist();
+document.querySelectorAll(".wl-tab").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".wl-tab").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    filter = btn.dataset.f;
+    renderWatchlist();
+  });
 });
+
+document.getElementById("clearBtn").addEventListener("click", () => {
+  if (!WL.get().length) return;
+  if (confirm("Clear your entire watchlist?")) {
+    localStorage.removeItem("df_wl");
+    renderWatchlist();
+    showToast('<i class="fas fa-trash-alt"></i> Watchlist cleared');
+  }
+});
+
+renderWatchlist();
