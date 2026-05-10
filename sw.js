@@ -1,29 +1,9 @@
-const CACHE = "dashflix-v2";
-const PRECACHE = [
-  "./",
-  "./index.html",
-  "./movies.html",
-  "./shows.html",
-  "./watchlist.html",
-  "./about.html",
-  "./contact.html",
-  "./offline.html",
-  "./app.js",
-  "./index.js",
-  "./movies.js",
-  "./shows.js",
-  "./watchlist.js",
-  "./style.css",
-  "./index.css",
-  "./logo.png",
-  "./manifest.json",
-];
+const CACHE = "dashflix-v3";
+const OFFLINE = "./offline.html";
 
 self.addEventListener("install", e => {
   self.skipWaiting();
-  e.waitUntil(
-    caches.open(CACHE).then(c => c.addAll(PRECACHE).catch(() => {}))
-  );
+  e.waitUntil(caches.open(CACHE).then(c => c.add(OFFLINE).catch(() => {})));
 });
 
 self.addEventListener("activate", e => {
@@ -35,21 +15,8 @@ self.addEventListener("activate", e => {
 });
 
 self.addEventListener("fetch", e => {
-  const url = new URL(e.request.url);
-  if (e.request.method !== "GET" || url.origin !== self.location.origin) return;
+  if (e.request.mode !== "navigate") return;
   e.respondWith(
-    caches.match(e.request).then(cached => {
-      if (cached) return cached;
-      return fetch(e.request).then(res => {
-        if (res.ok) {
-          const clone = res.clone();
-          caches.open(CACHE).then(c => c.put(e.request, clone));
-        }
-        return res;
-      }).catch(() => {
-        if (e.request.destination === "document") return caches.match("./offline.html");
-        return Response.error();
-      });
-    })
+    fetch(e.request).catch(() => caches.match(OFFLINE))
   );
 });
