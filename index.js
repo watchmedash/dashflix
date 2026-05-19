@@ -3,8 +3,7 @@ async function loadStrip(type, containerId) {
   const blocked = type === "movie" ? BLOCKED_MOVIES : BLOCKED_SHOWS;
   const ep = type === "movie" ? "movie/popular" : "tv/popular";
   try {
-    const res  = await fetch(`${BASE}/${ep}?api_key=${API_KEY}&language=en-US&page=1`);
-    const data = await res.json();
+    const data = await cachedFetch(`${BASE}/${ep}?api_key=${API_KEY}&language=en-US&page=1`);
     const list = (data.results || []).filter(x => !blocked.has(x.id)).slice(0, 10);
     const wrap = document.getElementById(containerId);
     list.forEach((item, i) => {

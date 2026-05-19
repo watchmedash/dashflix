@@ -11,16 +11,16 @@ let page = 1, busy = false, done = false, query = "";
 
 async function initFilters() {
   try {
-    const r = await fetch(`${BASE}/genre/tv/list?api_key=${API_KEY}&language=en-US`);
-    const d = await r.json();
+    const d = await cachedFetch(`${BASE}/genre/tv/list?api_key=${API_KEY}&language=en-US`);
     (d.genres || []).forEach(g => {
       const o = document.createElement("option");
       o.value = g.id; o.textContent = g.name; fGenre.appendChild(o);
     });
   } catch {}
   const sp = new URLSearchParams(location.search);
-  const _q = sp.get("q"), _g = sp.get("genre"), _s = sp.get("sort");
+  const _q = sp.get("q"), _g = sp.get("genre"), _y = sp.get("year"), _s = sp.get("sort");
   if (_g) fGenre.value = _g;
+  if (_y) fYear.value = _y;
   if (_s) fSort.value = _s;
   if (_q) { sBar.value = _q; query = _q; }
   fetchShows(false);
@@ -50,7 +50,10 @@ async function fetchShows(append = false) {
   busy = true;
   loader.style.display = "flex";
   empty.style.display  = "none";
-  if (!append) grid.innerHTML = "";
+  if (!append) {
+    grid.innerHTML = "";
+    for (let i = 0; i < 20; i++) grid.appendChild(buildSkeleton());
+  }
 
   try {
     let url;
@@ -71,10 +74,15 @@ async function fetchShows(append = false) {
     const data    = await res.json();
     const results = (data.results || []).filter(s => !BLOCKED_SHOWS.has(s.id));
 
+    if (!append) grid.innerHTML = "";
     if (!results.length && !append) {
       empty.style.display = "flex";
     } else {
       results.forEach(s => grid.appendChild(buildCard({ ...s, type: "tv" })));
+      if (!append) {
+        const saved = +sessionStorage.getItem("scroll:" + location.pathname);
+        if (saved) { sessionStorage.removeItem("scroll:" + location.pathname); requestAnimationFrame(() => window.scrollTo(0, saved)); }
+      }
     }
     if (!data.total_pages || page >= data.total_pages) done = true;
   } catch (e) { console.error(e); }
@@ -88,7 +96,16 @@ const scrollObs = new IntersectionObserver(entries => {
 }, { rootMargin: "300px" });
 scrollObs.observe(sentinel);
 
-function reset() { page = 1; done = false; query = sBar.value.trim(); fetchShows(false); }
+function reset() {
+  page = 1; done = false; query = sBar.value.trim();
+  const sp = new URLSearchParams();
+  if (query) sp.set("q", query);
+  if (fGenre.value) sp.set("genre", fGenre.value);
+  if (fYear.value) sp.set("year", fYear.value);
+  if (fSort.value !== "popularity.desc") sp.set("sort", fSort.value);
+  history.replaceState(null, "", sp.toString() ? "?" + sp : location.pathname);
+  fetchShows(false);
+}
 
 sBar.addEventListener("input",    () => { clearTimeout(sBar._t); sBar._t = setTimeout(reset, 380); });
 fGenre.addEventListener("change", reset);

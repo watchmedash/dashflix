@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem("df_theme")||"light";if(t!=="dark")document.documentElement.setAttribute("data-theme",t);})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashflix — Watch Free Movies &amp; TV Shows Online</title>
+<title>Dashflix — Watch Free Movies &amp; TV Shows Online | No Sign-Up</title>
 <meta name="description" content="Stream thousands of free HD movies and TV shows on Dashflix. No account, no subscription — just browse and watch instantly. New titles updated daily.">
 <meta name="keywords" content="dashflix, free movies online, watch movies free, free streaming, HD movies, TV shows online free, no sign up streaming, free movie streaming site 2026">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -28,14 +29,102 @@
 <meta name="twitter:image:alt" content="Dashflix — Free HD Movies &amp; TV Shows">
 <link rel="preconnect" href="https://api.themoviedb.org">
 <link rel="preconnect" href="https://image.tmdb.org">
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" fetchpriority="high">
+<style>
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 900; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-solid-900.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-regular-400.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Brands"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-brands-400.woff2") format("woff2"); }
+</style>
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="index.css">
+<style>
+/* ── HERO ── */
+.hero {
+  position: relative; min-height: 50vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 48px 20px 32px;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%),
+    var(--bg);
+}
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.025;
+  background-image:
+    linear-gradient(var(--surface3) 1px, transparent 1px),
+    linear-gradient(90deg, var(--surface3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.hero-content { position: relative; z-index: 1; width: 100%; max-width: 520px; }
+.hero-logo { display: flex; justify-content: center; margin-bottom: 20px; }
+.hero-logo .logo-img { width: 52px; height: 52px; }
+.hero-logo .logo-text { font-size: 34px; letter-spacing: 5px; }
+.hero-tag { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; line-height: 1.8; }
+.hero-tag strong { color: var(--text-sub); font-weight: 500; }
+.hero-search { width: 100%; margin: 0 auto 16px; position: relative; }
+.hero-search .search-input { padding: 13px 14px 13px 38px; font-size: 14px; background: var(--surface2); border-color: var(--border2); }
+.hero-search .search-input:focus { border-color: rgba(255,255,255,0.35); }
+.srp-drop { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: var(--surface2); border: 1px solid var(--border2); border-radius: var(--r); overflow: hidden; z-index: 200; max-height: 340px; overflow-y: auto; display: none; }
+.srp-drop.open { display: block; }
+.srp-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; cursor: pointer; border-bottom: 1px solid var(--border); transition: background 0.1s; }
+.srp-item:last-child { border-bottom: none; }
+.srp-item:hover { background: var(--surface3); }
+.srp-thumb { width: 30px; height: 44px; border-radius: 3px; object-fit: cover; background: var(--surface3); flex-shrink: 0; }
+.srp-thumb-ph { width: 30px; height: 44px; border-radius: 3px; background: var(--surface3); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 11px; flex-shrink: 0; }
+.srp-info { flex: 1; min-width: 0; }
+.srp-info h4 { font-size: 13px; font-weight: 600; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.srp-info span { font-size: 11px; color: var(--text-muted); }
+.srp-badge { font-size: 10px; padding: 2px 7px; border-radius: var(--r); background: var(--surface3); color: var(--text-muted); flex-shrink: 0; }
+.srp-empty { padding: 18px; text-align: center; color: var(--text-muted); font-size: 13px; }
+.hero-pills { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.hpill { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); border-radius: var(--r); padding: 7px 16px; font-size: 12px; color: var(--text-muted); transition: color 0.15s, border-color 0.15s, background 0.15s; }
+.hpill:hover { color: var(--text); border-color: rgba(255,255,255,0.3); background: var(--accent-dim); }
+.hpill i { font-size: 11px; }
+.hero-apps { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; align-items: center; margin-top: 14px; }
+.app-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--text); color: var(--bg); padding: 9px 20px; border-radius: var(--r); font-size: 13px; font-weight: 600; transition: opacity 0.15s; }
+.app-btn:hover { opacity: 0.85; }
+.app-btn i { font-size: 20px; }
+.app-btn span { display: flex; flex-direction: column; line-height: 1.3; text-align: left; }
+.app-btn small { font-size: 9px; font-weight: 400; opacity: 0.65; }
+.donate-pill { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--border); border-radius: var(--r); padding: 9px 16px; font-size: 12px; color: var(--text-muted); transition: color 0.15s, border-color 0.15s; }
+.donate-pill:hover { color: var(--text); border-color: var(--border2); }
+.donate-pill i { font-size: 11px; }
+.hero-content .sharethis-inline-share-buttons { margin-top: 18px; }
+.stats-row { display: flex; margin: 14px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+.stat { flex: 1; text-align: center; padding: 14px 8px; border-right: 1px solid var(--border); }
+.stat:last-child { border-right: none; }
+.stat-val { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--text); letter-spacing: 1px; line-height: 1; }
+.stat-lbl { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+.t-strip { display: flex; gap: 8px; padding: 0 12px 4px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.t-strip::-webkit-scrollbar { display: none; }
+.t-card { flex-shrink: 0; width: 108px; position: relative; border-radius: var(--r); overflow: hidden; cursor: pointer; transition: transform 0.18s; }
+.t-card:hover { transform: scale(1.05); }
+.t-card img, .t-ph { width: 108px; height: 162px; object-fit: cover; display: block; background: var(--surface2); }
+.t-ph { display: flex; align-items: center; justify-content: center; color: var(--surface4); font-size: 24px; }
+.t-num { position: absolute; bottom: 0; left: 0; font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: 1; color: rgba(255,255,255,0.1); padding: 0 4px; pointer-events: none; user-select: none; }
+.t-lbl { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 6px 5px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); font-size: 10px; font-weight: 600; color: #fff; line-height: 1.3; }
+@media (min-width: 480px) { .t-card { width: 116px; } .t-card img, .t-ph { width: 116px; height: 174px; } }
+@media (min-width: 900px) { .t-strip { display: grid; grid-template-columns: repeat(10, 1fr); overflow-x: hidden; padding: 0 24px 4px; gap: 10px; } .t-card { width: auto; flex-shrink: unset; } .t-card img, .t-ph { width: 100%; height: auto; aspect-ratio: 2/3; } }
+.faq-wrap { padding: 0 12px 20px; }
+@media (min-width: 900px) { .faq-wrap { padding: 0 24px 24px; } }
+.faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); margin-bottom: 5px; overflow: hidden; }
+.faq-q { width: 100%; background: none; border: none; color: var(--text-sub); font-family: inherit; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: space-between; padding: 13px 14px; text-align: left; cursor: pointer; transition: color 0.15s; }
+.faq-q:hover { color: var(--text); }
+.faq-q i { font-size: 10px; color: var(--text-muted); transition: transform 0.25s; margin-left: 10px; flex-shrink: 0; }
+.faq-item.open .faq-q { color: var(--text); }
+.faq-item.open .faq-q i { transform: rotate(180deg); }
+.faq-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-item.open .faq-body { max-height: 240px; }
+.faq-body-inner { padding: 0 14px 13px; font-size: 12px; color: var(--text-muted); line-height: 1.75; }
+</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=64b0f5079f35fb00121494d9&product=sticky-share-buttons" async></script>
 <script type="application/ld+json">
@@ -212,7 +301,7 @@
   <a href="movies.html"    class="nav-item"><i class="fas fa-film"></i>Movies</a>
   <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
   <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
-  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i><span class="theme-label">Dark</span></button>
 </nav>
 
 <script src="app.js"></script>

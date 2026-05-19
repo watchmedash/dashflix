@@ -147,6 +147,38 @@
 }
 .trl-close:hover { background: var(--surface3); }
 
+/* ── CAST ROW ── */
+.cast-row {
+  display: flex; gap: 8px; padding: 0 12px 4px;
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.cast-row::-webkit-scrollbar { display: none; }
+.cast-card {
+  flex-shrink: 0; width: 72px; cursor: pointer;
+  transition: opacity 0.15s;
+}
+.cast-card:hover { opacity: 0.75; }
+.cast-photo {
+  width: 72px; height: 72px; border-radius: 50%;
+  object-fit: cover; background: var(--surface2);
+  border: 1px solid var(--border); display: block;
+}
+.cast-photo-ph {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--surface4); font-size: 22px;
+}
+.cast-name {
+  font-size: 10px; font-weight: 600; color: var(--text-sub);
+  margin-top: 5px; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.cast-char {
+  font-size: 9px; color: var(--text-muted); text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
 /* ── RELATED GRID ── */
 .rel-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);

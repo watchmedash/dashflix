@@ -1,9 +1,19 @@
-const CACHE = "dashflix-v3";
+const CACHE = "dashflix-v5";
 const OFFLINE = "./offline.html";
+const STATIC = [
+  "./offline.html",
+  "./app.js", "./style.css",
+  "./index.html", "./index.css", "./index.js",
+  "./movies.html", "./movies.js", "./pages.css",
+  "./shows.html", "./shows.js",
+  "./watchlist.html", "./watchlist.css", "./watchlist.js",
+  "./player.html", "./player.css", "./player.js",
+  "./players.html", "./players.js",
+];
 
 self.addEventListener("install", e => {
   self.skipWaiting();
-  e.waitUntil(caches.open(CACHE).then(c => c.add(OFFLINE).catch(() => {})));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(STATIC).catch(() => {})));
 });
 
 self.addEventListener("activate", e => {
@@ -15,8 +25,18 @@ self.addEventListener("activate", e => {
 });
 
 self.addEventListener("fetch", e => {
-  if (e.request.mode !== "navigate") return;
-  e.respondWith(
-    fetch(e.request).catch(() => caches.match(OFFLINE))
-  );
+  const url = new URL(e.request.url);
+  if (url.origin === self.location.origin) {
+    e.respondWith(
+      caches.match(e.request).then(hit =>
+        hit || fetch(e.request).catch(() =>
+          e.request.mode === "navigate" ? caches.match(OFFLINE) : Response.error()
+        )
+      )
+    );
+    return;
+  }
+  if (e.request.mode === "navigate") {
+    e.respondWith(fetch(e.request).catch(() => caches.match(OFFLINE)));
+  }
 });

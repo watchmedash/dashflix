@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem("df_theme")||"light";if(t!=="dark")document.documentElement.setAttribute("data-theme",t);})()</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Movies Online — Browse &amp; Stream HD | Dashflix</title>
 <meta name="description" content="Browse and stream thousands of free HD movies on Dashflix. Filter by genre, year, and rating. No account needed — watch any movie instantly.">
@@ -24,11 +25,16 @@
 <meta name="twitter:image" content="https://dashflix.top/og.webp">
 <link rel="preconnect" href="https://api.themoviedb.org">
 <link rel="preconnect" href="https://image.tmdb.org">
-<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" fetchpriority="high">
+<style>
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 900; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-solid-900.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-regular-400.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Brands"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-brands-400.woff2") format("woff2"); }
+</style>
 <link rel="stylesheet" href="style.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085" crossorigin="anonymous"></script>
 <script type="application/ld+json">
@@ -114,7 +120,7 @@
   <a href="movies.html"    class="nav-item active"><i class="fas fa-film"></i>Movies</a>
   <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
   <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
-  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i>Theme</button>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i><span class="theme-label">Dark</span></button>
 </nav>
 
 <script src="app.js"></script>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem("df_theme")||"light";if(t!=="dark")document.documentElement.setAttribute("data-theme",t);})()</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Person – Dashflix</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://api.themoviedb.org">
+<link rel="preconnect" href="https://image.tmdb.org">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" fetchpriority="high">
+<style>
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 900; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-solid-900.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-regular-400.woff2") format("woff2"); }
+  @font-face { font-family: "Font Awesome 6 Brands"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/webfonts/fa-brands-400.woff2") format("woff2"); }
+</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="player.css">
+<style>
+.person-header {
+  display: flex; gap: 14px; padding: 14px 12px 10px; align-items: flex-start;
+}
+.person-photo {
+  flex-shrink: 0; width: 90px; height: 90px; border-radius: 50%;
+  object-fit: cover; background: var(--surface2); border: 1px solid var(--border);
+}
+.person-photo-ph {
+  flex-shrink: 0; width: 90px; height: 90px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--surface4); font-size: 32px;
+}
+.person-meta { flex: 1; min-width: 0; }
+.person-name {
+  font-family: 'Bebas Neue', sans-serif; font-size: 22px;
+  letter-spacing: 0.5px; line-height: 1.15; color: var(--text); margin-bottom: 6px;
+}
+.person-known { font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+.person-bio {
+  font-size: 12px; color: var(--text-muted); line-height: 1.7; margin-top: 8px; padding: 0 12px;
+  display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+}
+.person-bio.expanded { -webkit-line-clamp: unset; }
+.bio-toggle {
+  font-size: 11px; color: var(--text-sub); padding: 4px 12px 10px;
+  background: none; border: none; cursor: pointer; font-family: inherit;
+  display: none;
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5412699736062085" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="ph">
+  <a href="javascript:history.back()" class="back-btn"><i class="fas fa-chevron-left"></i></a>
+  <a href="index.html" class="logo">
+    <span class="logo-text" style="font-size:16px;letter-spacing:2px;">DASHFLIX</span>
+  </a>
+</div>
+
+<!-- PERSON INFO -->
+<div class="person-header" id="personHeader">
+  <div class="person-photo-ph"><i class="fas fa-user"></i></div>
+  <div class="person-meta">
+    <div class="skel" style="height:20px;width:55%;margin-bottom:8px;"></div>
+    <div class="skel" style="height:11px;width:40%;margin-bottom:6px;"></div>
+    <div class="skel" style="height:11px;width:70%;"></div>
+  </div>
+</div>
+<p class="person-bio" id="personBio"></p>
+<button class="bio-toggle" id="bioToggle" onclick="toggleBio()">Show more</button>
+
+<!-- MOVIES -->
+<div class="section-header" id="moviesHeader" style="margin-top:6px;display:none;">
+  <h2 class="section-title">Movies</h2>
+</div>
+<div class="rel-grid" id="moviesGrid"></div>
+
+<!-- TV SHOWS -->
+<div class="section-header" id="showsHeader" style="margin-top:4px;display:none;">
+  <h2 class="section-title">TV <span>Shows</span></h2>
+</div>
+<div class="rel-grid" id="showsGrid"></div>
+
+<!-- BOTTOM NAV (mobile) -->
+<nav class="bottom-nav">
+  <a href="index.html"     class="nav-item"><i class="fas fa-home"></i>Home</a>
+  <a href="movies.html"    class="nav-item"><i class="fas fa-film"></i>Movies</a>
+  <a href="shows.html"     class="nav-item"><i class="fas fa-tv"></i>Shows</a>
+  <a href="watchlist.html" class="nav-item"><i class="fas fa-bookmark"></i>Watchlist</a>
+  <button class="nav-item" onclick="toggleTheme()"><i class="fas fa-sun theme-icon"></i><span class="theme-label">Dark</span></button>
+</nav>
+
+<script src="app.js"></script>
+<script src="person.js"></script>
+</body>
+</html>

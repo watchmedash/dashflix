@@ -23,14 +23,11 @@ changeServer();
 
 async function loadDetails() {
   try {
-    const [dRes, cRes, vRes] = await Promise.all([
-      fetch(`${BASE}/movie/${movieId}?api_key=${API_KEY}&language=en-US`),
-      fetch(`${BASE}/movie/${movieId}/credits?api_key=${API_KEY}`),
-      fetch(`${BASE}/movie/${movieId}/videos?api_key=${API_KEY}`),
+    const [movie, credits, videos] = await Promise.all([
+      cachedFetch(`${BASE}/movie/${movieId}?api_key=${API_KEY}&language=en-US`),
+      cachedFetch(`${BASE}/movie/${movieId}/credits?api_key=${API_KEY}`),
+      cachedFetch(`${BASE}/movie/${movieId}/videos?api_key=${API_KEY}`),
     ]);
-    const movie   = await dRes.json();
-    const credits = await cRes.json();
-    const videos  = await vRes.json();
 
     document.title = `${movie.title} – Dashflix`;
     RW.add({ ...movie, type: "movie" });
@@ -60,7 +57,7 @@ async function loadDetails() {
     document.getElementById("details").innerHTML = `
       <div class="det-poster">
         ${movie.poster_path
-          ? `<img src="${IMG}${movie.poster_path}" alt="${movie.title}">`
+          ? `<img src="${IMG}${movie.poster_path}" alt="${movie.title}" loading="lazy">`
           : `<div class="det-ph"><i class="fas fa-film"></i></div>`}
       </div>
       <div class="det-info">
@@ -74,6 +71,8 @@ async function loadDetails() {
         <div class="det-overview">${movie.overview || "No overview available."}</div>
         ${director ? `<div class="det-director"><i class="fas fa-video"></i>Dir. ${director.name}</div>` : ""}
       </div>`;
+
+    renderCast(credits.cast || []);
 
     const trailer = (videos.results || []).find(v => v.type === "Trailer" && v.site === "YouTube");
     const trlBtn  = document.getElementById("trlBtn");
@@ -99,10 +98,24 @@ async function loadDetails() {
   } catch (e) { console.error(e); }
 }
 
+function renderCast(cast) {
+  const row = document.getElementById("castRow");
+  if (!row) return;
+  cast.slice(0, 20).forEach(p => {
+    const card = document.createElement("a");
+    card.className = "cast-card";
+    card.href = `person.html?id=${p.id}`;
+    card.innerHTML = p.profile_path
+      ? `<img class="cast-photo" src="https://image.tmdb.org/t/p/w185${p.profile_path}" alt="${p.name}" loading="lazy">`
+      : `<div class="cast-photo-ph"><i class="fas fa-user"></i></div>`;
+    card.innerHTML += `<div class="cast-name">${p.name}</div><div class="cast-char">${p.character || ""}</div>`;
+    row.appendChild(card);
+  });
+}
+
 async function loadRelated() {
   try {
-    const r = await fetch(`${BASE}/movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`);
-    const d = await r.json();
+    const d = await cachedFetch(`${BASE}/movie/${movieId}/similar?api_key=${API_KEY}&language=en-US&page=1`);
     const items = (d.results || []).filter(m => !BLOCKED_MOVIES.has(m.id)).slice(0, 12);
     const grid  = document.getElementById("relGrid");
     items.forEach(m => grid.appendChild(buildCard({ ...m, type: "movie" })));

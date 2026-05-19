@@ -1,23 +1,49 @@
 // ── THEME ──
+const THEMES = [
+  { name: "light",      icon: "fa-sun",          label: "Light"     },
+  { name: "dark",       icon: "fa-moon",         label: "Dark"      },
+  { name: "matrix",     icon: "fa-terminal",     label: "Matrix"    },
+  { name: "neon",       icon: "fa-bolt",         label: "Neon"      },
+  { name: "futuristic", icon: "fa-rocket",       label: "Cyber"     },
+  { name: "sunset",     icon: "fa-fire",         label: "Sunset"    },
+  { name: "ocean",      icon: "fa-water",        label: "Ocean"     },
+  { name: "gold",       icon: "fa-crown",        label: "Gold"      },
+  { name: "cyberpunk",  icon: "fa-microchip",    label: "Cyberpunk" },
+  { name: "synthwave",  icon: "fa-music",        label: "Synthwave" },
+  { name: "vhs",        icon: "fa-video",        label: "VHS"       },
+  { name: "blood",      icon: "fa-skull",        label: "Blood"     },
+  { name: "rose",       icon: "fa-heart",        label: "Rose"      },
+  { name: "mint",       icon: "fa-leaf",         label: "Mint"      },
+  { name: "vaporwave",  icon: "fa-star",         label: "Vapor"     },
+  { name: "forest",     icon: "fa-tree",         label: "Forest"    },
+  { name: "terminal",   icon: "fa-greater-than", label: "Terminal"  },
+  { name: "midnight",   icon: "fa-moon",         label: "Midnight"  },
+];
 (function() {
-  if (localStorage.getItem("df_theme") !== "dark")
-    document.documentElement.setAttribute("data-theme", "light");
+  const saved = localStorage.getItem("df_theme") || "light";
+  if (saved !== "dark") document.documentElement.setAttribute("data-theme", saved);
 })();
 function toggleTheme() {
-  const isLight = document.documentElement.getAttribute("data-theme") === "light";
-  if (isLight) {
+  const cur = document.documentElement.getAttribute("data-theme") || "dark";
+  const idx = THEMES.findIndex(t => t.name === cur);
+  const next = THEMES[(idx + 1) % THEMES.length];
+  if (next.name === "dark") {
     document.documentElement.removeAttribute("data-theme");
-    localStorage.setItem("df_theme", "dark");
   } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.removeItem("df_theme");
+    document.documentElement.setAttribute("data-theme", next.name);
   }
+  localStorage.setItem("df_theme", next.name);
   _syncThemeIcons();
 }
 function _syncThemeIcons() {
-  const isLight = document.documentElement.getAttribute("data-theme") === "light";
+  const cur = document.documentElement.getAttribute("data-theme") || "dark";
+  const idx = THEMES.findIndex(x => x.name === cur);
+  const next = THEMES[(idx + 1) % THEMES.length];
   document.querySelectorAll(".theme-icon").forEach(el => {
-    el.className = `fas ${isLight ? "fa-moon" : "fa-sun"} theme-icon`;
+    el.className = `fas ${next.icon} theme-icon`;
+  });
+  document.querySelectorAll(".theme-label").forEach(el => {
+    el.textContent = next.label;
   });
 }
 document.addEventListener("DOMContentLoaded", _syncThemeIcons);
@@ -26,8 +52,26 @@ document.addEventListener("DOMContentLoaded", _syncThemeIcons);
 const API_KEY = "4f599baa15d072c9de346b2816a131b8";
 const BASE    = "https://api.themoviedb.org/3";
 const IMG     = "https://image.tmdb.org/t/p/w500";
+const IMG_SM  = "https://image.tmdb.org/t/p/w185";
 const BLOCKED_MOVIES = new Set([1163258, 969492, 634649, 957452, 299534]);
 const BLOCKED_SHOWS  = new Set([81329, 94722, 112470, 259288]);
+
+// ── CACHED FETCH (localStorage, 12h TTL) ──
+function cachedFetch(url, ttl = 43200000) {
+  const k = "cf:" + url;
+  try {
+    const raw = localStorage.getItem(k);
+    if (raw) {
+      const { data, exp } = JSON.parse(raw);
+      if (Date.now() < exp) return Promise.resolve(data);
+      localStorage.removeItem(k);
+    }
+  } catch {}
+  return fetch(url).then(r => r.json()).then(data => {
+    try { localStorage.setItem(k, JSON.stringify({ data, exp: Date.now() + ttl })); } catch {}
+    return data;
+  });
+}
 
 // ── SERVICE WORKER ──
 if ("serviceWorker" in navigator) {
@@ -148,6 +192,20 @@ const imgObs = new IntersectionObserver(entries => {
   });
 }, { rootMargin: "200px" });
 
+// ── SKELETON CARD ──
+function buildSkeleton() {
+  const card = document.createElement("div");
+  card.className = "card";
+  const wrap = document.createElement("div");
+  wrap.className = "card-poster-wrap";
+  card.appendChild(wrap);
+  const info = document.createElement("div");
+  info.className = "card-info";
+  info.innerHTML = '<div class="skel-line wide"></div><div class="skel-line narrow"></div>';
+  card.appendChild(info);
+  return card;
+}
+
 // ── BUILD CARD ──
 function buildCard(item) {
   const isMovie = item.type === "movie";
@@ -162,7 +220,7 @@ function buildCard(item) {
   const wrap = document.createElement("div");
   wrap.className = "card-poster-wrap";
   if (item.poster_path) {
-    wrap.dataset.src = IMG + item.poster_path;
+    wrap.dataset.src = IMG_SM + item.poster_path;
     const img = document.createElement("img");
     img.className = "card-poster"; img.alt = title;
     wrap.appendChild(img);
@@ -210,8 +268,18 @@ function buildCard(item) {
 
   card.appendChild(wrap);
   card.appendChild(info);
-  card.addEventListener("click",       () => location.href = url);
-  card.addEventListener("contextmenu", e  => showCtx(e, { ...item }));
+  card.addEventListener("click", () => {
+    try { sessionStorage.setItem("scroll:" + location.pathname, window.scrollY); } catch {}
+    location.href = url;
+  });
+  card.addEventListener("contextmenu", e => showCtx(e, { ...item }));
+  card.addEventListener("pointerenter", () => {
+    const href = isMovie ? "player.html" : "players.html";
+    if (!document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
+      const l = document.createElement("link"); l.rel = "prefetch"; l.href = href;
+      document.head.appendChild(l);
+    }
+  }, { once: true });
   return card;
 }
 
