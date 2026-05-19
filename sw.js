@@ -1,20 +1,20 @@
-const CACHE = "dashflix-v6";
+const CACHE = "dashflix-v7";
 const OFFLINE = "./offline.html";
-const STATIC = [
+const STATIC_ASSETS = [
   "./offline.html",
   "./app.js", "./style.css",
-  "./index.html", "./index.css", "./index.js",
-  "./movies.html", "./movies.js", "./pages.css",
-  "./shows.html", "./shows.js",
-  "./watchlist.html", "./watchlist.css", "./watchlist.js",
-  "./player.html", "./player.css", "./player.js",
-  "./players.html", "./players.js",
-  "./person.html", "./person.js",
+  "./index.css", "./index.js",
+  "./movies.js", "./pages.css",
+  "./shows.js",
+  "./watchlist.css", "./watchlist.js",
+  "./player.css", "./player.js",
+  "./players.js",
+  "./person.js",
 ];
 
 self.addEventListener("install", e => {
   self.skipWaiting();
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(STATIC).catch(() => {})));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(STATIC_ASSETS).catch(() => {})));
 });
 
 self.addEventListener("activate", e => {
@@ -27,17 +27,29 @@ self.addEventListener("activate", e => {
 
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
-  if (url.origin === self.location.origin) {
+
+  // Never intercept non-GET or external requests (TMDB API, CDN, ads)
+  if (e.request.method !== "GET" || url.origin !== self.location.origin) return;
+
+  // HTML navigation — always network-first, never serve stale pages
+  if (e.request.mode === "navigate") {
     e.respondWith(
-      caches.match(e.request).then(hit =>
-        hit || fetch(e.request).catch(() =>
-          e.request.mode === "navigate" ? caches.match(OFFLINE) : Response.error()
-        )
-      )
+      fetch(e.request).catch(() => caches.match(OFFLINE))
     );
     return;
   }
-  if (e.request.mode === "navigate") {
-    e.respondWith(fetch(e.request).catch(() => caches.match(OFFLINE)));
-  }
+
+  // Static assets (JS, CSS) — cache-first
+  e.respondWith(
+    caches.match(e.request).then(hit => {
+      if (hit) return hit;
+      return fetch(e.request).then(res => {
+        if (res.ok) {
+          const clone = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, clone));
+        }
+        return res;
+      }).catch(() => Response.error());
+    })
+  );
 });
