@@ -1,4 +1,4 @@
-const CACHE = "dashflix-v5";
+const CACHE = "dashflix-v6";
 const OFFLINE = "./offline.html";
 const STATIC = [
   "./offline.html",
@@ -9,6 +9,7 @@ const STATIC = [
   "./watchlist.html", "./watchlist.css", "./watchlist.js",
   "./player.html", "./player.css", "./player.js",
   "./players.html", "./players.js",
+  "./person.html", "./person.js",
 ];
 
 self.addEventListener("install", e => {
